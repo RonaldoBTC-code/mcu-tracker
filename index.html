@@ -232,6 +232,38 @@ footer.legal a:hover{text-decoration:underline}
 .row.themed .ttxt{color:var(--thA);transition:color .5s ease}
 header h1 span{transition:color .8s ease}
 .sn.r{transition:color .8s ease}
+
+/* ══ ESCENAS ══ */
+:root{--thC:#9B5DE5}
+.fx{shape-rendering:crispEdges}
+.fx *{stroke:var(--thA);fill:none;vector-effect:non-scaling-stroke}
+.fx .f{fill:var(--thA);stroke:none}
+.fx .f2{fill:var(--thC);stroke:none}
+.fx .fd{fill:#0A0A12;stroke:none}
+.fx .ln{stroke:var(--thA);fill:none}
+.fx .ln2{stroke:var(--thC);fill:none}
+.fx.on{opacity:.62}
+@keyframes twk{0%,100%{opacity:.15}50%{opacity:.95}}
+@keyframes fall{to{transform:translateY(760px)}}
+@keyframes cross{to{transform:translateX(1180px)}}
+@keyframes glowP{0%,100%{opacity:.3}50%{opacity:.9}}
+@keyframes scan{to{transform:translateY(14px)}}
+@keyframes tick{to{transform:rotate(360deg)}}
+@keyframes flick{0%,92%,100%{opacity:.8}94%{opacity:.15}96%{opacity:.7}}
+@keyframes rise{to{transform:translateY(-720px)}}
+@keyframes sway{0%,100%{transform:translateX(0)}50%{transform:translateX(14px)}}
+@media (prefers-reduced-motion: no-preference){
+  .fx-twk{animation:twk 2.6s ease-in-out infinite}
+  .fx-fall{animation:fall 1.5s linear infinite}
+  .fx-cross{animation:cross 18s linear infinite}
+  .fx-glow{animation:glowP 3.2s ease-in-out infinite}
+  .fx-scan{animation:scan .5s linear infinite}
+  .fx-tick{transform-origin:center;animation:tick 12s steps(24) infinite}
+  .fx-tick2{transform-origin:center;animation:tick 3s steps(12) infinite}
+  .fx-flick{animation:flick 4s linear infinite}
+  .fx-rise{animation:rise 9s linear infinite}
+  .fx-sway{animation:sway 7s ease-in-out infinite}
+}
 </style>
 </head>
 <body>
@@ -623,6 +655,7 @@ const CFG = {
 window.Region = (() => {
   const KEY_R = 'mcu_region';
   const LIST = [
+    ['GLOBAL','Global (todo el mundo)'],
     ['EC','Ecuador'],['MX','Mexico'],['CO','Colombia'],['AR','Argentina'],['CL','Chile'],
     ['PE','Peru'],['VE','Venezuela'],['BO','Bolivia'],['PY','Paraguay'],['UY','Uruguay'],
     ['CR','Costa Rica'],['PA','Panama'],['GT','Guatemala'],['HN','Honduras'],['SV','El Salvador'],
@@ -675,132 +708,257 @@ window.Region = (() => {
 
 /* ══ AMBIENTE POR TITULO ══ */
 window.Theme = (() => {
-  const D = ['#E63946', '#9B5DE5', 'rings'];
-  const T = [
-    [/iron man|vengadores|avengers/i,        ['#FFB703','#C1121F','reactor']],
-    [/ant-?man|hormiga|quantumania/i,        ['#E63946','#4CC9F0','reactor']],
-    [/thor/i,                                ['#3A86FF','#B5179E','bolt']],
-    [/loki/i,                                ['#2FBF71','#D4A017','runes']],
-    [/doctor strange|multiverso/i,           ['#F77F00','#7209B7','runes']],
-    [/agatha|bruja escarlata|wandavision|wanda/i, ['#C1121F','#F72585','runes']],
-    [/spider-?man|spiderman/i,               ['#E63946','#3A86FF','web']],
-    [/capit[aá]n am[eé]rica|falcon|soldado/i,['#3A86FF','#C1121F','shield']],
-    [/capitana marvel|marvels/i,             ['#E63946','#3A86FF','cosmic']],
-    [/guardianes|galaxia/i,                  ['#B5179E','#2FBF71','cosmic']],
-    [/eternals|eternos/i,                    ['#D4A017','#4361EE','cosmic']],
-    [/what if|pasar[ií]a si/i,                 ['#7209B7','#4CC9F0','cosmic']],
-    [/viuda negra|black widow/i,             ['#C1121F','#1B1B1E','slashfx']],
-    [/werewolf|hombre lobo/i,                ['#8B8B8B','#1B1B1E','slashfx']],
-    [/marvel zombies/i,                      ['#6A994E','#1B1B1E','slashfx']],
-    [/ironheart/i,                           ['#C1121F','#FFB703','reactor']],
-    [/wonder man/i,                          ['#D4A017','#B5179E','glyph']],
-    [/visionquest|vision quest/i,            ['#EDF2F4','#C1121F','runes']],
-    [/hulk/i,                                ['#6A994E','#7209B7','slashfx']],
-    [/x-?men|logan|lobezno/i,                ['#FFB703','#1D3557','slashfx']],
-    [/deadpool/i,                            ['#C1121F','#1B1B1E','slashfx']],
-    [/daredevil|defensores|blade|echo/i,     ['#8B0000','#1B1B1E','slashfx']],
-    [/pantera negra|wakanda/i,               ['#7209B7','#4CC9F0','glyph']],
-    [/shang-?chi/i,                          ['#2FBF71','#C1121F','glyph']],
-    [/moon knight|caballero luna/i,          ['#EDF2F4','#D4A017','glyph']],
-    [/ms\.? marvel/i,                        ['#E63946','#4361EE','glyph']],
-    [/ojo de halc[oó]n|hawkeye/i,            ['#7209B7','#F77F00','rings']],
-    [/(4|cuatro) fant[aá]sticos|fantastic/i, ['#4361EE','#F77F00','cosmic']],
-    [/venom|simbionte/i,                     ['#2B2D42','#EDF2F4','slashfx']],
-    [/thunderbolts/i,                        ['#C1121F','#2B2D42','glyph']],
-    [/punisher|castigador/i,                 ['#EDF2F4','#1B1B1E','slashfx']],
-    [/invasi[oó]n/i,                          ['#6A994E','#2B2D42','glyph']],
-    [/doomsday/i,                            ['#C1121F','#D4A017','reactor']]
-  ];
 
+  const R = (x, y, w, h, cls, op, extra) =>
+    '<rect class="' + (cls || 'f') + '" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '"' +
+    (op !== undefined ? ' opacity="' + op + '"' : '') + (extra || '') + '/>';
   const rnd = (a, b) => a + Math.random() * (b - a);
+  const ri = (a, b) => Math.round(rnd(a, b));
+  const grid = v => Math.round(v / 8) * 8;
 
-  const FX = {
-    reactor() {
-      let s = '<g class="fx-pulse" transform="translate(760 300)">';
-      for (let i = 1; i <= 5; i++) s += '<circle r="' + (i * 46) + '" stroke-width="1.4" opacity="' + (0.75 - i * 0.1).toFixed(2) + '"/>';
-      s += '<circle r="18" stroke-width="3"/></g>';
-      s += '<g class="fx-spin" transform="translate(760 300)"><circle r="132" stroke-width="6" stroke-dasharray="26 46" opacity=".5"/></g>';
-      return s;
-    },
-    bolt() {
+  function starfield(n, size, opa, cls) {
+    let s = '';
+    for (let i = 0; i < n; i++) {
+      const d = (Math.random() * 2.4).toFixed(1);
+      s += R(grid(rnd(0, 1000)), grid(rnd(0, 700)), size, size, cls || 'f', opa,
+             ' class="' + (cls || 'f') + ' fx-twk" style="animation-delay:' + d + 's"');
+    }
+    return s.replace(/class="f" x/g, 'x');
+  }
+
+  const SCENE = {
+    space() {
       let s = '';
-      for (let i = 0; i < 6; i++) {
-        const x = 120 + i * 150, o = (0.3 + Math.random() * 0.4).toFixed(2);
-        let d = 'M' + x + ' 0';
-        let cx = x, cy = 0;
-        for (let k = 0; k < 7; k++) { cx += rnd(-52, 52); cy += 100; d += ' L' + cx.toFixed(0) + ' ' + cy; }
-        s += '<path class="fx-dash" d="' + d + '" stroke-width="1.6" opacity="' + o + '"/>';
+      for (let i = 0; i < 90; i++) {
+        s += '<rect class="f fx-twk" style="animation-delay:' + (Math.random() * 3).toFixed(1) + 's" x="' +
+             grid(rnd(0, 1000)) + '" y="' + grid(rnd(0, 700)) + '" width="4" height="4" opacity="' + rnd(.3, .9).toFixed(2) + '"/>';
+      }
+      for (let i = 0; i < 26; i++) {
+        s += '<rect class="f2" x="' + grid(rnd(0, 1000)) + '" y="' + grid(rnd(0, 700)) + '" width="8" height="8" opacity="' + rnd(.2, .6).toFixed(2) + '"/>';
+      }
+      s += '<g opacity=".55">';
+      for (let r = 0; r < 14; r++) {
+        const w = Math.round(Math.sqrt(196 - r * r) * 15 / 8) * 8;
+        s += R(820 - w / 2, 560 + r * 8, w, 8, r < 5 ? 'f' : 'f2', (0.85 - r * 0.05).toFixed(2));
+      }
+      s += '</g>';
+      s += '<g opacity=".4"><rect class="f2" x="120" y="120" width="96" height="96"/>' +
+           '<rect class="f" x="88" y="160" width="160" height="8" opacity=".7"/></g>';
+      for (let i = 0; i < 3; i++) {
+        const y = 180 + i * 150, sc = 1 + i * 0.5;
+        s += '<g class="fx-cross" style="animation-duration:' + (14 + i * 7) + 's;animation-delay:' + (i * 4) + 's" transform="translate(-160 ' + y + ') scale(' + sc + ')">' +
+             R(0, 0, 24, 8, 'f', .9) + R(24, -8, 16, 24, 'f', .9) + R(-16, 0, 16, 8, 'f2', .7) + '</g>';
       }
       return s;
     },
-    runes() {
-      let s = '<g class="fx-spin" transform="translate(500 340)">';
-      s += '<circle r="230" stroke-width="1.5" stroke-dasharray="3 15" opacity=".6"/>';
-      s += '<circle r="188" stroke-width="1" opacity=".35"/></g>';
-      s += '<g class="fx-spin-b" transform="translate(500 340)">';
-      s += '<circle r="146" stroke-width="2" stroke-dasharray="34 22" opacity=".55"/>';
-      for (let i = 0; i < 8; i++) {
-        const a = (i / 8) * Math.PI * 2;
-        s += '<line x1="' + (Math.cos(a) * 104).toFixed(0) + '" y1="' + (Math.sin(a) * 104).toFixed(0) +
-             '" x2="' + (Math.cos(a) * 146).toFixed(0) + '" y2="' + (Math.sin(a) * 146).toFixed(0) + '" stroke-width="1.6" opacity=".5"/>';
+
+    retro() {
+      let s = R(0, 0, 1000, 700, 'fd', .35);
+      for (let y = 0; y < 700; y += 14) s += R(0, y, 1000, 2, 'f', .13);
+      s += '<g class="fx-scan">' + R(0, -14, 1000, 3, 'f', .3) + '</g>';
+      s += '<g transform="translate(500 330)">';
+      for (let i = 0; i < 60; i++) {
+        const a = (i / 60) * Math.PI * 2, big = i % 5 === 0;
+        s += R(grid(Math.cos(a) * 200) - 4, grid(Math.sin(a) * 200) - 4, big ? 12 : 6, big ? 12 : 6, 'f', big ? .9 : .45);
+      }
+      s += '<g class="fx-tick">' + R(-4, -150, 8, 152, 'f', .85) + '</g>';
+      s += '<g class="fx-tick2">' + R(-4, -104, 8, 106, 'f2', .8) + '</g>';
+      s += R(-10, -10, 20, 20, 'f', 1) + '</g>';
+      for (let x = 0; x < 1000; x += 64) s += '<line class="ln" x1="' + x + '" y1="620" x2="' + (x < 500 ? x - 300 : x + 300) + '" y2="700" stroke-width="1" opacity=".3"/>';
+      for (let y = 620; y < 700; y += 16) s += '<line class="ln" x1="0" y1="' + y + '" x2="1000" y2="' + y + '" stroke-width="1" opacity=".25"/>';
+      return s;
+    },
+
+    storm() {
+      let s = '';
+      for (let i = 0; i < 60; i++) {
+        s += '<rect class="f fx-fall" style="animation-duration:' + rnd(.7, 1.6).toFixed(2) + 's;animation-delay:-' + rnd(0, 2).toFixed(2) + 's" x="' +
+             grid(rnd(0, 1000)) + '" y="' + grid(rnd(-200, 100)) + '" width="3" height="' + ri(14, 30) + '" opacity="' + rnd(.2, .6).toFixed(2) + '"/>';
+      }
+      for (let k = 0; k < 3; k++) {
+        let x = 180 + k * 300, y = 0, d = 'M' + x + ' 0';
+        for (let i = 0; i < 8; i++) { x += ri(-6, 6) * 8; y += 64; d += ' L' + x + ' ' + y; }
+        s += '<path class="ln fx-flick" style="animation-delay:' + (k * 1.3) + 's" d="' + d + '" stroke-width="4" opacity=".8"/>';
+      }
+      const peaks = [[0, 560], [120, 440], [240, 520], [380, 380], [520, 500], [660, 420], [800, 540], [1000, 470]];
+      let d2 = 'M0 700';
+      peaks.forEach(p => { d2 += ' L' + p[0] + ' ' + p[1]; });
+      s += '<path class="f2" d="' + d2 + ' L1000 700 Z" opacity=".55" stroke="none"/>';
+      return s;
+    },
+
+    city() {
+      let s = '';
+      let x = 0;
+      while (x < 1000) {
+        const w = ri(5, 12) * 8, h = ri(14, 40) * 8;
+        s += R(x, 700 - h, w, h, 'fd', .82);
+        s += R(x, 700 - h, w, 4, 'f', .5);
+        for (let wy = 700 - h + 24; wy < 690; wy += 32) {
+          for (let wx = x + 12; wx < x + w - 12; wx += 28) {
+            if (Math.random() > 0.55) s += R(wx, wy, 10, 12, 'f', rnd(.25, .85).toFixed(2));
+          }
+        }
+        x += w + 8;
+      }
+      s += '<g transform="translate(1000 0)">';
+      for (let i = 0; i <= 8; i++) {
+        const a = Math.PI / 2 + (Math.PI / 2) * (i / 8);
+        s += '<line class="ln" x1="0" y1="0" x2="' + Math.round(Math.cos(a) * 900) + '" y2="' + Math.round(Math.sin(a) * 900) + '" stroke-width="2" opacity=".35"/>';
+      }
+      for (let r = 140; r <= 800; r += 110) s += '<path class="ln" d="M' + (-r) + ' 0 A' + r + ' ' + r + ' 0 0 0 0 ' + r + '" stroke-width="2" opacity=".22"/>';
+      return s + '</g>';
+    },
+
+    lab() {
+      let s = '';
+      for (let i = 0; i < 16; i++) {
+        let x = grid(rnd(0, 1000)), y = grid(rnd(0, 700));
+        let d = 'M' + x + ' ' + y;
+        for (let k = 0; k < 5; k++) {
+          if (k % 2) { x += ri(-8, 8) * 8; } else { y += ri(-6, 6) * 8; }
+          d += ' L' + x + ' ' + y;
+        }
+        s += '<path class="ln" d="' + d + '" stroke-width="2" opacity=".35"/>';
+        s += R(x - 6, y - 6, 12, 12, 'f2', .7);
+      }
+      s += '<g class="fx-glow" transform="translate(780 300)">';
+      for (let r = 8; r <= 15; r++) {
+        const w = Math.round(Math.sqrt(225 - (r - 8) * (r - 8)) * 10 / 8) * 8;
+        s += R(-w / 2, (r - 12) * 16, w, 16, r % 2 ? 'f' : 'f2', (0.7 - (r - 8) * 0.06).toFixed(2));
       }
       return s + '</g>';
     },
-    web() {
-      let s = '<g transform="translate(980 -20)">';
-      for (let i = 0; i <= 9; i++) {
-        const a = (Math.PI / 2) * (i / 9) + Math.PI / 2;
-        s += '<line x1="0" y1="0" x2="' + (Math.cos(a) * 820).toFixed(0) + '" y2="' + (Math.sin(a) * 820).toFixed(0) + '" stroke-width="1" opacity=".4"/>';
+
+    jungle() {
+      let s = '';
+      for (let layer = 0; layer < 3; layer++) {
+        const base = 700 - layer * 40, op = (0.7 - layer * 0.18).toFixed(2);
+        let d = 'M0 700';
+        for (let x = 0; x <= 1000; x += 40) d += ' L' + x + ' ' + (base - Math.abs(Math.sin((x + layer * 90) / 130)) * (90 + layer * 50));
+        s += '<path class="' + (layer % 2 ? 'f2' : 'f') + '" d="' + d + ' L1000 700 Z" opacity="' + op + '" stroke="none"/>';
       }
-      for (let r = 110; r <= 780; r += 96) s += '<path d="M' + (-r) + ' 0 A' + r + ' ' + r + ' 0 0 0 0 ' + r + '" stroke-width="1" opacity=".28"/>';
-      return s + '</g>';
-    },
-    shield() {
-      let s = '<g class="fx-pulse" transform="translate(180 340)">';
-      for (let i = 1; i <= 6; i++) s += '<circle r="' + (i * 42) + '" stroke-width="' + (i % 2 ? 2.4 : 1) + '" opacity="' + (0.7 - i * 0.08).toFixed(2) + '"/>';
-      return s + '</g>';
-    },
-    cosmic() {
-      let s = '<g class="fx-drift">';
-      for (let i = 0; i < 70; i++) {
-        s += '<circle cx="' + rnd(-60, 1060).toFixed(0) + '" cy="' + rnd(-40, 740).toFixed(0) +
-             '" r="' + rnd(0.7, 2.6).toFixed(1) + '" stroke-width="1.4" opacity="' + rnd(0.2, 0.85).toFixed(2) + '"/>';
+      for (let i = 0; i < 26; i++) {
+        s += '<rect class="f fx-rise" style="animation-duration:' + rnd(6, 12).toFixed(1) + 's;animation-delay:-' + rnd(0, 9).toFixed(1) + 's" x="' +
+             grid(rnd(0, 1000)) + '" y="' + grid(rnd(620, 760)) + '" width="6" height="6" opacity="' + rnd(.4, .95).toFixed(2) + '"/>';
       }
-      return s + '</g>';
+      return s;
     },
-    slashfx() {
+
+    mystic() {
+      let s = '<g class="fx-spin" transform="translate(500 330)">';
+      for (let i = 0; i < 48; i++) {
+        const a = (i / 48) * Math.PI * 2;
+        s += R(grid(Math.cos(a) * 240) - 4, grid(Math.sin(a) * 240) - 4, i % 4 ? 6 : 14, i % 4 ? 6 : 14, 'f', i % 4 ? .4 : .85);
+      }
+      s += '</g><g class="fx-spin-b" transform="translate(500 330)">';
+      for (let i = 0; i < 24; i++) {
+        const a = (i / 24) * Math.PI * 2;
+        s += R(grid(Math.cos(a) * 150) - 4, grid(Math.sin(a) * 150) - 4, 10, 10, 'f2', .6);
+      }
+      s += '</g>';
+      for (let i = 0; i < 16; i++) {
+        s += '<rect class="f2 fx-sway" style="animation-delay:-' + rnd(0, 7).toFixed(1) + 's" x="' +
+             grid(rnd(0, 1000)) + '" y="' + grid(rnd(0, 700)) + '" width="' + ri(1, 3) * 8 + '" height="8" opacity="' + rnd(.3, .7).toFixed(2) + '"/>';
+      }
+      return s;
+    },
+
+    grit() {
+      let s = R(0, 0, 1000, 700, 'fd', .3);
+      for (let i = 0; i < 90; i++) {
+        s += '<rect class="f fx-fall" style="animation-duration:' + rnd(.5, 1.1).toFixed(2) + 's;animation-delay:-' + rnd(0, 2).toFixed(2) + 's" x="' +
+             grid(rnd(0, 1000)) + '" y="' + grid(rnd(-160, 60)) + '" width="2" height="' + ri(18, 34) + '" opacity="' + rnd(.15, .5).toFixed(2) + '"/>';
+      }
+      s += R(0, 380, 240, 320, 'fd', .8) + R(760, 340, 240, 360, 'fd', .8);
+      s += R(232, 380, 8, 320, 'f', .35) + R(760, 340, 8, 360, 'f', .35);
+      s += '<g class="fx-flick">' + R(300, 200, 120, 24, 'f', .85) + R(300, 232, 72, 12, 'f2', .6) + '</g>';
+      for (let y = 420; y < 700; y += 56) s += R(70, y, 100, 8, 'f', .25);
+      return s;
+    },
+
+    desert() {
+      let s = '';
+      for (let i = 0; i < 50; i++) s += '<rect class="f fx-twk" style="animation-delay:' + (Math.random() * 3).toFixed(1) + 's" x="' + grid(rnd(0, 1000)) + '" y="' + grid(rnd(0, 340)) + '" width="4" height="4" opacity="' + rnd(.25, .8).toFixed(2) + '"/>';
+      s += '<g class="fx-glow">';
+      for (let r = 0; r < 12; r++) {
+        const w = Math.round(Math.sqrt(144 - r * r) * 12 / 8) * 8;
+        s += R(500 - w / 2, 200 + r * 8, w, 8, 'f2', (.8 - r * .05).toFixed(2));
+        s += R(500 - w / 2, 200 - r * 8, w, 8, 'f2', (.8 - r * .05).toFixed(2));
+      }
+      s += '</g>';
+      for (let layer = 0; layer < 3; layer++) {
+        let d = 'M0 700';
+        const base = 500 + layer * 60;
+        for (let x = 0; x <= 1000; x += 40) d += ' L' + x + ' ' + Math.round(base - Math.sin((x + layer * 200) / 180) * 60);
+        s += '<path class="' + (layer % 2 ? 'f' : 'f2') + '" d="' + d + ' L1000 700 Z" opacity="' + (.4 + layer * .15).toFixed(2) + '" stroke="none"/>';
+      }
+      return s;
+    },
+
+    arena() {
       let s = '';
       for (let i = 0; i < 4; i++) {
-        const y = 90 + i * 130, x = 120 + i * 60;
-        s += '<line class="fx-slash" style="animation-delay:' + (i * 90) + 'ms" x1="' + x + '" y1="' + y +
-             '" x2="' + (x + 660) + '" y2="' + (y + 190) + '" stroke-width="' + (2.6 - i * 0.4).toFixed(1) + '" opacity=".6"/>';
+        const x = 120 + i * 240;
+        s += '<path class="f2 fx-sway" style="animation-delay:-' + (i * 1.7) + 's" d="M' + x + ' 700 L' + (x - 70) + ' 60 L' + (x + 70) + ' 60 Z" opacity=".2" stroke="none"/>';
       }
+      s += R(0, 620, 1000, 80, 'fd', .8) + R(0, 616, 1000, 6, 'f', .5);
+      for (let i = 0; i < 34; i++) {
+        s += '<rect class="f fx-rise" style="animation-duration:' + rnd(7, 13).toFixed(1) + 's;animation-delay:-' + rnd(0, 10).toFixed(1) + 's" x="' +
+             grid(rnd(0, 1000)) + '" y="' + grid(rnd(600, 740)) + '" width="6" height="6" opacity="' + rnd(.3, .85).toFixed(2) + '"/>';
+      }
+      for (let i = 0; i < 9; i++) s += R(grid(rnd(0, 1000)), grid(rnd(560, 620)), ri(2, 6) * 8, 16, 'fd', .7);
       return s;
-    },
-    glyph() {
-      let s = '<g class="fx-spin-b" transform="translate(500 340)">';
-      for (let i = 0; i < 6; i++) {
-        const r = 90 + i * 44, a = i * 12;
-        s += '<polygon transform="rotate(' + a + ')" points="0,' + (-r) + ' ' + (r * 0.86).toFixed(0) + ',' + (r * 0.5).toFixed(0) +
-             ' ' + (-r * 0.86).toFixed(0) + ',' + (r * 0.5).toFixed(0) + '" stroke-width="1.3" opacity="' + (0.55 - i * 0.06).toFixed(2) + '"/>';
-      }
-      return s + '</g>';
-    },
-    rings() {
-      let s = '<g class="fx-spin" transform="translate(500 340)">';
-      for (let i = 1; i <= 4; i++) s += '<circle r="' + (i * 78) + '" stroke-width="1.2" stroke-dasharray="' + (i * 10) + ' ' + (i * 16) + '" opacity=".4"/>';
-      return s + '</g>';
     }
   };
 
-  function hexToRgba(h, a) {
+
+  const D = ['#E63946', '#9B5DE5', 'space'];
+  const T = [
+    [/iron man|ironheart/i,                  ['#FFB703','#C1121F','lab']],
+    [/vengadores|avengers|doomsday/i,        ['#FFB703','#4361EE','lab']],
+    [/ant-?man|hormiga|quantumania/i,        ['#E63946','#4CC9F0','lab']],
+    [/(4|cuatro) fant[a\u00e1]sticos|fantastic/i, ['#4361EE','#F77F00','lab']],
+    [/thor/i,                                ['#3A86FF','#B5179E','storm']],
+    [/loki/i,                                ['#2FBF71','#D4A017','retro']],
+    [/visionquest|vision quest/i,            ['#EDF2F4','#C1121F','retro']],
+    [/wandavision/i,                         ['#C1121F','#EDF2F4','retro']],
+    [/x-?men|logan|lobezno/i,                ['#FFB703','#1D3557','retro']],
+    [/wonder man/i,                          ['#D4A017','#B5179E','retro']],
+    [/doctor strange|multiverso/i,           ['#F77F00','#7209B7','mystic']],
+    [/agatha|bruja escarlata|wanda/i,        ['#C1121F','#F72585','mystic']],
+    [/werewolf|hombre lobo/i,                ['#8B8B8B','#2FBF71','mystic']],
+    [/spider-?man|spiderman|ara\u00f1a/i,         ['#E63946','#3A86FF','city']],
+    [/venom|simbionte/i,                     ['#2B2D42','#EDF2F4','city']],
+    [/daredevil|defensores|punisher|castigador|blade|echo/i, ['#8B0000','#1B1B1E','grit']],
+    [/deadpool/i,                            ['#C1121F','#F77F00','grit']],
+    [/viuda negra|black widow/i,             ['#C1121F','#1B1B1E','grit']],
+    [/hulk/i,                                ['#6A994E','#7209B7','arena']],
+    [/capit[a\u00e1]n am[e\u00e9]rica|falcon|soldado/i, ['#3A86FF','#C1121F','arena']],
+    [/thunderbolts/i,                        ['#C1121F','#2B2D42','arena']],
+    [/secret invasion|invasi[o\u00f3]n secreta/i,  ['#6A994E','#2B2D42','arena']],
+    [/pantera negra|wakanda/i,               ['#7209B7','#4CC9F0','jungle']],
+    [/shang-?chi/i,                          ['#2FBF71','#C1121F','jungle']],
+    [/moon knight|caballero luna/i,          ['#EDF2F4','#D4A017','desert']],
+    [/ms\.? marvel/i,                        ['#E63946','#4361EE','desert']],
+    [/capitana marvel|marvels/i,             ['#E63946','#3A86FF','space']],
+    [/guardianes|galaxia/i,                  ['#B5179E','#2FBF71','space']],
+    [/eternals|eternos/i,                    ['#D4A017','#4361EE','space']],
+    [/what if|pasar[i\u00ed]a si/i,               ['#7209B7','#4CC9F0','space']],
+    [/marvel zombies/i,                      ['#6A994E','#1B1B1E','space']],
+    [/ojo de halc[o\u00f3]n|hawkeye/i,            ['#7209B7','#F77F00','city']],
+    [/she-hulk/i,                            ['#6A994E','#D4A017','city']],
+    [/eyes of wakanda/i,                     ['#D4A017','#7209B7','jungle']]
+  ];
+
+  const hexToRgba = (h, a) => {
     const n = parseInt(h.slice(1), 16);
     return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
-  }
-  function palette(t) {
+  };
+  const palette = t => {
     for (let i = 0; i < T.length; i++) if (T[i][0].test(t)) return T[i][1];
     return D;
-  }
+  };
 
   let active = null;
 
@@ -808,11 +966,12 @@ window.Theme = (() => {
     const p = palette(title || '');
     const r = document.documentElement.style;
     r.setProperty('--thA', p[0]);
-    r.setProperty('--thB', hexToRgba(p[1], 0.12));
-    r.setProperty('--thGlow', hexToRgba(p[0], 0.15));
+    r.setProperty('--thC', p[1]);
+    r.setProperty('--thB', hexToRgba(p[1], 0.14));
+    r.setProperty('--thGlow', hexToRgba(p[0], 0.16));
     const fx = document.getElementById('fx');
     if (fx) {
-      if (title) { fx.innerHTML = (FX[p[2]] || FX.rings)(); fx.classList.add('on'); }
+      if (title) { fx.innerHTML = (SCENE[p[2]] || SCENE.space)(); fx.classList.add('on'); }
       else { fx.classList.remove('on'); setTimeout(() => { if (!active) fx.innerHTML = ''; }, 900); }
     }
     if (animate && title) {
@@ -829,7 +988,7 @@ window.Theme = (() => {
     if (el) el.classList.add('themed');
   }
 
-  return { select, apply, get active() { return active; } };
+  return { select, apply, palette, SCENE, get active() { return active; } };
 })();
 
 /* ══ PROVEEDORES (TMDB, region dinamica) ══ */
@@ -878,16 +1037,32 @@ window.Providers = (() => {
     return '<a class="prov-chip ' + cls + '" href="' + link + '" target="_blank" rel="noopener nofollow">' + logo + p.provider_name + '</a>';
   }
 
+  function globalMerge(all) {
+    if (!all) return null;
+    const fl = {}, rt = {}; let n = 0, link = null;
+    Object.keys(all).forEach(k => {
+      const r = all[k]; n++;
+      if (!link) link = r.link;
+      (r.flatrate || []).forEach(p => { fl[p.provider_id] = fl[p.provider_id] || { p: p, c: 0 }; fl[p.provider_id].c++; });
+      [].concat(r.rent || [], r.buy || []).forEach(p => { rt[p.provider_id] = rt[p.provider_id] || { p: p, c: 0 }; rt[p.provider_id].c++; });
+    });
+    if (!n) return null;
+    const top = o => Object.keys(o).map(k => o[k]).sort((a, b) => b.c - a.c).map(x => x.p);
+    return { link: link, flatrate: top(fl), rent: top(rt), buy: [], countries: n };
+  }
+
   function paint(el, all) {
-    const reg = all ? all[window.Region.get()] : null;
-    if (!reg) { el.innerHTML = '<span class="prov-none">Sin disponibilidad en tu pais</span>'; return; }
+    const isG = window.Region.get() === 'GLOBAL';
+    const reg = isG ? globalMerge(all) : (all ? all[window.Region.get()] : null);
+    if (!reg) { el.innerHTML = '<span class="prov-none">' + (isG ? 'Sin datos de streaming todavia' : 'No disponible aqui \u2014 prueba Global') + '</span>'; return; }
     const parts = [], seen = new Set();
     (reg.flatrate || []).slice(0, 3).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); parts.push(chip(p, reg.link, '')); } });
     if (parts.length) parts.unshift('<span class="prov-lbl">Incluido</span>');
     const rp = [];
     [].concat(reg.rent || [], reg.buy || []).slice(0, 2).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); rp.push(chip(p, reg.link, 'rent')); } });
     if (rp.length) { parts.push('<span class="prov-lbl">Alquilar</span>'); rp.forEach(x => parts.push(x)); }
-    el.innerHTML = parts.length ? parts.join('') : '<span class="prov-none">Sin disponibilidad en tu pais</span>';
+    if (isG && reg.countries) parts.push('<span class="prov-lbl">en ' + reg.countries + ' paises</span>');
+    el.innerHTML = parts.length ? parts.join('') : '<span class="prov-none">Sin datos de streaming todavia</span>';
   }
 
   const store = new Map();
