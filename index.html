@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCU Tracker â€” Rumbo a Doomsday</title>
+<title>MCU Tracker — Rumbo a Doomsday</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -145,32 +145,65 @@ input.sr:focus{border-color:var(--red)}
   .phase-tag{display:none}
 }
 
-/* â”€â”€ NUBE + PROVEEDORES â”€â”€ */
+/* ══ AMBIENTE POR PELICULA ══ */
+:root{--thA:#E63946;--thB:#9B5DE5;--thGlow:rgba(230,57,70,.10)}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 55% at 12% -8%, var(--thGlow) 0%, transparent 58%),
+    radial-gradient(ellipse 65% 45% at 88% 108%, var(--thB) 0%, transparent 55%);
+  opacity:.42;transition:background 1.1s ease, opacity 1.1s ease}
+.thbar{position:fixed;top:0;left:0;right:0;height:2px;z-index:60;
+  background:linear-gradient(90deg,var(--thA),var(--thB),var(--thA));
+  background-size:200% 100%;opacity:.85;transition:background 1s ease}
+
+/* ══ MOTION ══ */
+@keyframes rowIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@media (prefers-reduced-motion: no-preference){
+  .row{animation:rowIn .32s cubic-bezier(.22,.61,.36,1) both}
+  .thbar{animation:shimmer 7s linear infinite}
+}
+.row{transition:border-color .35s ease, background .35s ease, transform .18s ease}
+.row.themed{border-left:2px solid var(--thA);background:linear-gradient(90deg,var(--thGlow),transparent 42%)}
+.row:hover{transform:translateX(2px)}
+.prog-fill{transition:width .55s cubic-bezier(.22,.61,.36,1)}
+.sec-title{transition:color .5s ease}
+
+/* ══ BARRA NUBE + REGION ══ */
 .cloudbar{position:relative;z-index:10;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:9px 32px;background:var(--panel);border-bottom:1px solid var(--border);font-size:12px;color:var(--muted)}
-.cloudbar .cb-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0}
-.cloudbar .cb-dot.on{background:var(--done)}
-.cloudbar .cb-dot.sync{background:var(--gold)}
-.cb-btn{background:rgba(230,57,70,.14);border:1px solid rgba(230,57,70,.4);color:#fff;border-radius:5px;padding:6px 12px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
-.cb-btn:hover{background:rgba(230,57,70,.26)}
+.cb-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background .3s}
+.cb-dot.on{background:var(--done)}
+.cb-dot.sync{background:var(--gold)}
+.cb-btn{background:rgba(230,57,70,.14);border:1px solid rgba(230,57,70,.4);color:#fff;border-radius:5px;padding:6px 12px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.cb-btn:hover{background:rgba(230,57,70,.28)}
 .cb-btn.ghost{background:transparent;border-color:var(--border);color:var(--muted)}
-.cb-in{background:var(--darker);border:1px solid var(--border);color:var(--text);border-radius:5px;padding:6px 10px;font-family:'Rajdhani',sans-serif;font-size:13px;min-width:190px}
+.cb-in{background:var(--darker);border:1px solid var(--border);color:var(--text);border-radius:5px;padding:6px 10px;font-family:'Rajdhani',sans-serif;font-size:13px;min-width:180px}
 .cb-in:focus{outline:none;border-color:var(--red)}
 .cb-mail{color:var(--text);letter-spacing:1px}
+.cb-sep{flex:1;min-width:8px}
+.cb-reg{background:var(--darker);border:1px solid var(--border);color:var(--text);border-radius:5px;padding:6px 9px;font-family:'Rajdhani',sans-serif;font-size:12px;cursor:pointer}
+.cb-reg:focus{outline:none;border-color:var(--ext)}
+
+/* ══ PROVEEDORES ══ */
 .prov{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:6px;min-height:18px}
-.prov-chip{display:inline-flex;align-items:center;gap:5px;background:rgba(155,93,229,.10);border:1px solid rgba(155,93,229,.28);border-radius:4px;padding:2px 7px;font-size:11px;color:#C9A6F5;text-decoration:none;letter-spacing:.5px}
-.prov-chip:hover{background:rgba(155,93,229,.2)}
+.prov-chip{display:inline-flex;align-items:center;gap:5px;background:rgba(155,93,229,.10);border:1px solid rgba(155,93,229,.28);border-radius:4px;padding:2px 7px;font-size:11px;color:#C9A6F5;text-decoration:none;letter-spacing:.5px;transition:background .2s,transform .15s}
+.prov-chip:hover{background:rgba(155,93,229,.22);transform:translateY(-1px)}
 .prov-chip img{width:14px;height:14px;border-radius:3px;display:block}
 .prov-chip.rent{background:rgba(255,183,3,.08);border-color:rgba(255,183,3,.26);color:var(--gold)}
+.prov-chip.rent:hover{background:rgba(255,183,3,.2)}
 .prov-lbl{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
 .prov-none{font-size:11px;color:var(--muted);font-style:italic}
+.prov-skel{width:90px;height:15px;border-radius:4px;background:linear-gradient(90deg,var(--border),var(--panel),var(--border));background-size:200% 100%;animation:shimmer 1.4s linear infinite}
+
+/* ══ PIE ══ */
 footer.legal{position:relative;z-index:10;margin-top:32px;padding:22px 32px 40px;border-top:1px solid var(--border);background:var(--panel);font-size:11px;color:var(--muted);line-height:1.7;letter-spacing:.4px}
 footer.legal a{color:var(--ext);text-decoration:none}
 footer.legal a:hover{text-decoration:underline}
 .f-row{max-width:900px;margin:0 auto;display:flex;gap:26px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start}
 .f-col{flex:1;min-width:230px}
 .f-h{font-size:10px;letter-spacing:3px;color:var(--red);text-transform:uppercase;font-weight:700;margin-bottom:7px;display:block}
-.kofi{display:inline-flex;align-items:center;gap:7px;background:rgba(255,183,3,.10);border:1px solid rgba(255,183,3,.30);border-radius:5px;padding:7px 13px;color:var(--gold);text-decoration:none;font-size:12px;letter-spacing:1px;margin-top:4px}
-.kofi:hover{background:rgba(255,183,3,.2);text-decoration:none}
+.kofi{display:inline-flex;align-items:center;gap:7px;background:rgba(255,183,3,.10);border:1px solid rgba(255,183,3,.30);border-radius:5px;padding:7px 13px;color:var(--gold);text-decoration:none;font-size:12px;letter-spacing:1px;margin-top:4px;transition:background .2s,transform .15s}
+.kofi:hover{background:rgba(255,183,3,.22);transform:translateY(-1px);text-decoration:none}
 </style>
 </head>
 <body>
@@ -179,29 +212,34 @@ footer.legal a:hover{text-decoration:underline}
 <header>
   <div class="hd">
     <div>
-      <span class="brand-sub"><span class="ld"></span>MCU Watch Tracker â€” Orden CronolÃ³gico</span>
+      <span class="brand-sub"><span class="ld"></span>MCU Watch Tracker — Orden Cronológico</span>
       <h1>RUMBO A <span>DOOMSDAY</span></h1>
     </div>
     <div class="pill">
-      <span class="lbl">ðŸŽ¬ Objetivo final</span>
-      <span class="dt">Avengers: Doomsday â€” 2026</span>
+      <span class="lbl">🎬 Objetivo final</span>
+      <span class="dt">Avengers: Doomsday — 2026</span>
     </div>
   </div>
 </header>
 
+<div class="ambient" id="ambient"></div>
+<div class="thbar" id="thbar"></div>
 <div class="cloudbar" id="cloudbar">
   <span class="cb-dot" id="cbDot"></span>
   <span id="cbMsg">Progreso guardado solo en este navegador</span>
   <span id="cbAuth" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
     <button class="cb-btn" id="cbStart">Guardar en la nube</button>
   </span>
+  <span class="cb-sep"></span>
+  <label for="cbRegion" style="letter-spacing:2px;text-transform:uppercase;font-size:10px">Pais</label>
+  <select class="cb-reg" id="cbRegion"></select>
 </div>
 <div class="stats">
   <div class="stat"><span class="sn g" id="s-done">0</span><span class="sl">Vistos</span></div>
   <div class="stat"><span class="sn" id="s-left">53</span><span class="sl">Pendientes</span></div>
-  <div class="stat"><span class="sn r" id="s-crucial">0</span><span class="sl">Cruciales âœ“</span></div>
-  <div class="stat"><span class="sn p" id="s-ext">0</span><span class="sl">Extendido âœ“</span></div>
-  <div class="stat"><span class="sn o" id="s-mcu">0</span><span class="sl">MCU âœ“</span></div>
+  <div class="stat"><span class="sn r" id="s-crucial">0</span><span class="sl">Cruciales ✓</span></div>
+  <div class="stat"><span class="sn p" id="s-ext">0</span><span class="sl">Extendido ✓</span></div>
+  <div class="stat"><span class="sn o" id="s-mcu">0</span><span class="sl">MCU ✓</span></div>
   <div class="stat"><span class="sn" id="s-total">53</span><span class="sl">Total</span></div>
 </div>
 
@@ -219,7 +257,7 @@ footer.legal a:hover{text-decoration:underline}
   <button class="fb pur" data-f="ext">Solo Extendido</button>
   <button class="fb" data-f="mcu">Solo MCU</button>
   <span class="sp"></span>
-  <div class="sw"><span class="si">ðŸ”</span><input class="sr" type="text" id="q" placeholder="Buscar..."></div>
+  <div class="sw"><span class="si">🔍</span><input class="sr" type="text" id="q" placeholder="Buscar..."></div>
 </div>
 
 <div class="main" id="mc"></div>
@@ -248,104 +286,104 @@ footer.legal a:hover{text-decoration:underline}
       <span class="f-h">Apoyar</span>
       Si te sirvio, puedes invitarme un cafe. Eso mantiene el proyecto gratis y sin anuncios invasivos.
       <br>
-      <a class="kofi" href="https://ko-fi.com/TU-USUARIO" target="_blank" rel="noopener">Invitar un cafe</a>
+      <a class="kofi" href="https://ko-fi.com/ronaldoramos71004" target="_blank" rel="noopener">Invitar un cafe</a>
     </div>
   </div>
 </footer>
 
 <script>
-// â”€â”€â”€ DATOS UNIFICADOS EN ORDEN CRONOLÃ“GICO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ─── DATOS UNIFICADOS EN ORDEN CRONOLÓGICO ───────────────────────────────────
 // kind: 'mcu' | 'ext'
 // bridge: texto de separador antes del bloque extendido (solo en el primero del grupo)
-// group: agrupaciÃ³n para colapsar
+// group: agrupación para colapsar
 const LIST = [
-  // â•â•â•â•â•â•â•â•â•â• FASE 1 â•â•â•â•â•â•â•â•â•â•
-  { id:1,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: El primer vengador', year:2011, imp:'Crucial' },
-  { id:2,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Capitana Marvel', year:2019, imp:'Media', note:'CronolÃ³gicamente ocurre en 1995' },
-  { id:3,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Iron Man', year:2008, imp:'Crucial' },
-  { id:4,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Iron Man 2', year:2010, imp:'Media' },
-  { id:5,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Thor', year:2011, imp:'Crucial' },
-  { id:6,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'The Avengers', year:2012, imp:'Crucial' },
-  // â•â•â•â•â•â•â•â•â•â• FASE 2 â•â•â•â•â•â•â•â•â•â•
-  { id:7,  phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Thor: Un mundo oscuro', year:2013, imp:'Media' },
-  { id:8,  phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: El Soldado del Invierno', year:2014, imp:'Crucial' },
-  { id:9,  phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Guardianes de la Galaxia', year:2014, imp:'Crucial' },
-  { id:10, phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Era de UltrÃ³n', year:2015, imp:'Crucial' },
-  { id:11, phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Ant-Man: El hombre hormiga', year:2015, imp:'Media' },
-  // â•â•â•â•â•â•â•â•â•â• FASE 3 â•â•â•â•â•â•â•â•â•â•
-  { id:12, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: Civil War', year:2016, imp:'Crucial' },
-  { id:13, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Doctor Strange: Hechicero supremo', year:2016, imp:'Crucial' },
-  { id:14, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: De regreso a casa', year:2017, imp:'Media' },
-  { id:15, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Thor: Ragnarok', year:2017, imp:'Crucial' },
-  { id:16, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Pantera Negra', year:2018, imp:'Media' },
-  { id:17, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Infinity War', year:2018, imp:'Crucial' },
-  { id:18, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Ant-Man and the Wasp', year:2018, imp:'Media' },
-  { id:19, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Endgame', year:2019, imp:'Crucial' },
-  { id:20, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: Lejos de casa', year:2019, imp:'Media' },
-  // â•â•â•â•â•â•â•â•â•â• FASE 4 â€” INICIO â•â•â•â•â•â•â•â•â•â•
+  // ══════════ FASE 1 ══════════
+  { id:1,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitán América: El primer vengador', year:2011, imp:'Crucial' },
+  { id:2,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitana Marvel', year:2019, imp:'Media', note:'Cronológicamente ocurre en 1995' },
+  { id:3,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man', year:2008, imp:'Crucial' },
+  { id:4,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man 2', year:2010, imp:'Media' },
+  { id:5,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Thor', year:2011, imp:'Crucial' },
+  { id:6,  phase:'Fase 1', kind:'mcu', type:'Película', title:'The Avengers', year:2012, imp:'Crucial' },
+  // ══════════ FASE 2 ══════════
+  { id:7,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Thor: Un mundo oscuro', year:2013, imp:'Media' },
+  { id:8,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Capitán América: El Soldado del Invierno', year:2014, imp:'Crucial' },
+  { id:9,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia', year:2014, imp:'Crucial' },
+  { id:10, phase:'Fase 2', kind:'mcu', type:'Película', title:'Avengers: Era de Ultrón', year:2015, imp:'Crucial' },
+  { id:11, phase:'Fase 2', kind:'mcu', type:'Película', title:'Ant-Man: El hombre hormiga', year:2015, imp:'Media' },
+  // ══════════ FASE 3 ══════════
+  { id:12, phase:'Fase 3', kind:'mcu', type:'Película', title:'Capitán América: Civil War', year:2016, imp:'Crucial' },
+  { id:13, phase:'Fase 3', kind:'mcu', type:'Película', title:'Doctor Strange: Hechicero supremo', year:2016, imp:'Crucial' },
+  { id:14, phase:'Fase 3', kind:'mcu', type:'Película', title:'Spider-Man: De regreso a casa', year:2017, imp:'Media' },
+  { id:15, phase:'Fase 3', kind:'mcu', type:'Película', title:'Thor: Ragnarok', year:2017, imp:'Crucial' },
+  { id:16, phase:'Fase 3', kind:'mcu', type:'Película', title:'Pantera Negra', year:2018, imp:'Media' },
+  { id:17, phase:'Fase 3', kind:'mcu', type:'Película', title:'Avengers: Infinity War', year:2018, imp:'Crucial' },
+  { id:18, phase:'Fase 3', kind:'mcu', type:'Película', title:'Ant-Man and the Wasp', year:2018, imp:'Media' },
+  { id:19, phase:'Fase 3', kind:'mcu', type:'Película', title:'Avengers: Endgame', year:2019, imp:'Crucial' },
+  { id:20, phase:'Fase 3', kind:'mcu', type:'Película', title:'Spider-Man: Lejos de casa', year:2019, imp:'Media' },
+  // ══════════ FASE 4 — INICIO ══════════
   { id:21, phase:'Fase 4', kind:'mcu', type:'Serie', title:'WandaVision', year:2021, imp:'Crucial' },
   { id:22, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Falcon y el Soldado del Invierno', year:2021, imp:'Media' },
   { id:23, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Loki (Temporada 1)', year:2021, imp:'Crucial' },
-  { id:24, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Shang-Chi y la leyenda de los diez anillos', year:2021, imp:'Media' },
-  // â•â•â•â•â•â•â•â•â•â• EXT: SPIDER-MAN (antes de No Way Home) â•â•â•â•â•â•â•â•â•â•
+  { id:24, phase:'Fase 4', kind:'mcu', type:'Película', title:'Shang-Chi y la leyenda de los diez anillos', year:2021, imp:'Media' },
+  // ══════════ EXT: SPIDER-MAN (antes de No Way Home) ══════════
   {
-    id:25, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Spider-Man (Raimi)', year:2002, imp:'Crucial',
+    id:25, phase:'Extendido', kind:'ext', type:'Película', title:'Spider-Man (Raimi)', year:2002, imp:'Crucial',
     universe:'Sony / Raimi',
-    bridge:'ðŸ•·ï¸ BLOQUE SPIDER-MAN â€” Ver antes de No Way Home',
-    bridgeText:'Tobey Maguire y Andrew Garfield <strong>aparecen fÃ­sicamente</strong> en No Way Home. Sin conocer sus historias el reencuentro no emociona.',
+    bridge:'🕷️ BLOQUE SPIDER-MAN — Ver antes de No Way Home',
+    bridgeText:'Tobey Maguire y Andrew Garfield <strong>aparecen físicamente</strong> en No Way Home. Sin conocer sus historias el reencuentro no emociona.',
     reason:'Origen de Tobey. Su arco en NWH depende de conocerlo.'
   },
-  { id:26, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Spider-Man 2 (Raimi)', year:2004, imp:'Crucial', universe:'Sony / Raimi', reason:'La mejor de Raimi. Consolida a Tobey antes de NWH.' },
-  { id:27, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Spider-Man 3 (Raimi)', year:2007, imp:'Media', universe:'Sony / Raimi', reason:'Sandman aparece en NWH. Recomendable pero no crÃ­tica.' },
-  { id:28, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'The Amazing Spider-Man', year:2012, imp:'Media', universe:'Sony / Garfield', reason:'Contexto del Spider-Man de Garfield.' },
-  { id:29, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'The Amazing Spider-Man 2', year:2014, imp:'Crucial', universe:'Sony / Garfield', reason:'La muerte de Gwen Stacy es el momento emocional central de Garfield en NWH. Sin esto no impacta igual.' },
+  { id:26, phase:'Extendido', kind:'ext', type:'Película', title:'Spider-Man 2 (Raimi)', year:2004, imp:'Crucial', universe:'Sony / Raimi', reason:'La mejor de Raimi. Consolida a Tobey antes de NWH.' },
+  { id:27, phase:'Extendido', kind:'ext', type:'Película', title:'Spider-Man 3 (Raimi)', year:2007, imp:'Media', universe:'Sony / Raimi', reason:'Sandman aparece en NWH. Recomendable pero no crítica.' },
+  { id:28, phase:'Extendido', kind:'ext', type:'Película', title:'The Amazing Spider-Man', year:2012, imp:'Media', universe:'Sony / Garfield', reason:'Contexto del Spider-Man de Garfield.' },
+  { id:29, phase:'Extendido', kind:'ext', type:'Película', title:'The Amazing Spider-Man 2', year:2014, imp:'Crucial', universe:'Sony / Garfield', reason:'La muerte de Gwen Stacy es el momento emocional central de Garfield en NWH. Sin esto no impacta igual.' },
   {
-    id:30, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Venom', year:2018, imp:'Media',
+    id:30, phase:'Extendido', kind:'ext', type:'Película', title:'Venom', year:2018, imp:'Media',
     universe:'Sony / SSU',
-    bridge:'ðŸ¦  VENOM â€” Ver justo antes de No Way Home',
-    bridgeText:'En el post-crÃ©ditos de NWH, Eddie Brock deja un <strong>fragmento del simbionte en el MCU</strong>. No es esencial pero cierra mejor la escena.',
+    bridge:'🦠 VENOM — Ver justo antes de No Way Home',
+    bridgeText:'En el post-créditos de NWH, Eddie Brock deja un <strong>fragmento del simbionte en el MCU</strong>. No es esencial pero cierra mejor la escena.',
     reason:'El simbionte que queda en el MCU al final de NWH.'
   },
-  // â•â•â•â•â•â•â•â•â•â• FASE 4 â€” CONTINUACIÃ“N â•â•â•â•â•â•â•â•â•â•
-  { id:31, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: Sin camino a casa', year:2021, imp:'Crucial' },
-  { id:32, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Doctor Strange en el multiverso de la locura', year:2022, imp:'Crucial' },
+  // ══════════ FASE 4 — CONTINUACIÓN ══════════
+  { id:31, phase:'Fase 4', kind:'mcu', type:'Película', title:'Spider-Man: Sin camino a casa', year:2021, imp:'Crucial' },
+  { id:32, phase:'Fase 4', kind:'mcu', type:'Película', title:'Doctor Strange en el multiverso de la locura', year:2022, imp:'Crucial' },
   { id:33, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Ms. Marvel', year:2022, imp:'Media' },
-  { id:34, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Pantera Negra: Wakanda por siempre', year:2022, imp:'Media' },
-  // â•â•â•â•â•â•â•â•â•â• EXT: DEADPOOL/WOLVERINE/X-MEN (antes de D&W) â•â•â•â•â•â•â•â•â•â•
+  { id:34, phase:'Fase 4', kind:'mcu', type:'Película', title:'Pantera Negra: Wakanda por siempre', year:2022, imp:'Media' },
+  // ══════════ EXT: DEADPOOL/WOLVERINE/X-MEN (antes de D&W) ══════════
   {
-    id:35, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'X-Men: Days of Future Past', year:2014, imp:'Media',
+    id:35, phase:'Extendido', kind:'ext', type:'Película', title:'X-Men: Days of Future Past', year:2014, imp:'Media',
     universe:'Fox / X-Men',
-    bridge:'ðŸª“ BLOQUE DEADPOOL & WOLVERINE â€” Ver antes de la pelÃ­cula',
-    bridgeText:'Deadpool & Wolverine asume que conoces a Deadpool y que <strong>Logan ya muriÃ³</strong>. Sin estas pelis pierdes la capa emocional entera.',
+    bridge:'🪓 BLOQUE DEADPOOL & WOLVERINE — Ver antes de la película',
+    bridgeText:'Deadpool & Wolverine asume que conoces a Deadpool y que <strong>Logan ya murió</strong>. Sin estas pelis pierdes la capa emocional entera.',
     reason:'Mejor film X-Men. Introduce el viaje temporal y el rol de Wolverine.'
   },
-  { id:36, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Deadpool', year:2016, imp:'Crucial', universe:'Fox / Deadpool', reason:'Base esencial del personaje. Sin esto Deadpool & Wolverine pierde la mitad.' },
-  { id:37, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Logan', year:2017, imp:'Crucial', universe:'Fox / X-Men', reason:'D&W la referencia directamente. Toda su tensiÃ³n emocional depende de haber visto esta.' },
-  { id:38, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Deadpool 2', year:2018, imp:'Media', universe:'Fox / Deadpool', reason:'Introduce Cable y la X-Force. Contexto adicional para D&W.' },
-  // â•â•â•â•â•â•â•â•â•â• FASE 5 â•â•â•â•â•â•â•â•â•â•
-  { id:39, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Ant-Man and the Wasp: Quantumania', year:2023, imp:'Crucial' },
-  { id:40, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Guardianes de la Galaxia Vol. 3', year:2023, imp:'Media' },
+  { id:36, phase:'Extendido', kind:'ext', type:'Película', title:'Deadpool', year:2016, imp:'Crucial', universe:'Fox / Deadpool', reason:'Base esencial del personaje. Sin esto Deadpool & Wolverine pierde la mitad.' },
+  { id:37, phase:'Extendido', kind:'ext', type:'Película', title:'Logan', year:2017, imp:'Crucial', universe:'Fox / X-Men', reason:'D&W la referencia directamente. Toda su tensión emocional depende de haber visto esta.' },
+  { id:38, phase:'Extendido', kind:'ext', type:'Película', title:'Deadpool 2', year:2018, imp:'Media', universe:'Fox / Deadpool', reason:'Introduce Cable y la X-Force. Contexto adicional para D&W.' },
+  // ══════════ FASE 5 ══════════
+  { id:39, phase:'Fase 5', kind:'mcu', type:'Película', title:'Ant-Man and the Wasp: Quantumania', year:2023, imp:'Crucial' },
+  { id:40, phase:'Fase 5', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia Vol. 3', year:2023, imp:'Media' },
   { id:41, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Loki (Temporada 2)', year:2023, imp:'Crucial' },
-  { id:42, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'The Marvels', year:2023, imp:'Media' },
-  { id:43, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Deadpool & Wolverine', year:2024, imp:'Crucial' },
-  { id:44, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: un nuevo mundo', year:2025, imp:'Crucial' },
-  { id:45, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Thunderbolts*', year:2025, imp:'Media' },
-  // â•â•â•â•â•â•â•â•â•â• EXT: DAREDEVIL NETFLIX (antes de Born Again) â•â•â•â•â•â•â•â•â•â•
+  { id:42, phase:'Fase 5', kind:'mcu', type:'Película', title:'The Marvels', year:2023, imp:'Media' },
+  { id:43, phase:'Fase 5', kind:'mcu', type:'Película', title:'Deadpool & Wolverine', year:2024, imp:'Crucial' },
+  { id:44, phase:'Fase 5', kind:'mcu', type:'Película', title:'Capitán América: un nuevo mundo', year:2025, imp:'Crucial' },
+  { id:45, phase:'Fase 5', kind:'mcu', type:'Película', title:'Thunderbolts*', year:2025, imp:'Media' },
+  // ══════════ EXT: DAREDEVIL NETFLIX (antes de Born Again) ══════════
   {
-    id:46, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil â€” Temporada 1 (Netflix)', year:2015, imp:'Crucial',
+    id:46, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil — Temporada 1 (Netflix)', year:2015, imp:'Crucial',
     universe:'Netflix / Marvel',
-    bridge:'ðŸ˜ˆ BLOQUE DAREDEVIL â€” Ver antes de Born Again',
-    bridgeText:'Born Again <strong>continÃºa directamente</strong> la historia de la serie Netflix. Asume que ya conoces a Matt Murdock, Wilson Fisk y Elektra en profundidad.',
+    bridge:'😈 BLOQUE DAREDEVIL — Ver antes de Born Again',
+    bridgeText:'Born Again <strong>continúa directamente</strong> la historia de la serie Netflix. Asume que ya conoces a Matt Murdock, Wilson Fisk y Elektra en profundidad.',
     reason:'Presenta a Matt Murdock y a Kingpin. Base imprescindible para Born Again.'
   },
-  { id:47, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil â€” Temporada 2 (Netflix)', year:2016, imp:'Crucial', universe:'Netflix / Marvel', reason:'Introduce al Punisher y a Elektra, ambos activos en el MCU actual.' },
-  { id:48, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil â€” Temporada 3 (Netflix)', year:2018, imp:'Crucial', universe:'Netflix / Marvel', reason:'El mejor arco de Kingpin. Born Again lo continÃºa casi directamente.' },
+  { id:47, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil — Temporada 2 (Netflix)', year:2016, imp:'Crucial', universe:'Netflix / Marvel', reason:'Introduce al Punisher y a Elektra, ambos activos en el MCU actual.' },
+  { id:48, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil — Temporada 3 (Netflix)', year:2018, imp:'Crucial', universe:'Netflix / Marvel', reason:'El mejor arco de Kingpin. Born Again lo continúa casi directamente.' },
   { id:49, phase:'Extendido', kind:'ext', type:'Serie', title:'The Punisher (Netflix)', year:'2017-2019', imp:'Media', universe:'Netflix / Marvel', reason:'Profundiza a Frank Castle. Recomendable si aparece en fases futuras.' },
-  // â•â•â•â•â•â•â•â•â•â• FASE 6 â•â•â•â•â•â•â•â•â•â•
-  { id:50, phase:'Fase 6', kind:'mcu', type:'PelÃ­cula', title:'Los 4 FantÃ¡sticos: primeros pasos', year:2025, imp:'Crucial' },
+  // ══════════ FASE 6 ══════════
+  { id:50, phase:'Fase 6', kind:'mcu', type:'Película', title:'Los 4 Fantásticos: primeros pasos', year:2025, imp:'Crucial' },
   { id:51, phase:'Fase 6', kind:'mcu', type:'Serie', title:'Daredevil: Born Again (Temp 1 y 2)', year:'2025-2026', imp:'Media' },
-  { id:52, phase:'Fase 6', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: Brand New Day', year:2026, imp:'Crucial' },
-  { id:53, phase:'Fase 6', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Doomsday', year:2026, imp:'Crucial', dday:true },
+  { id:52, phase:'Fase 6', kind:'mcu', type:'Película', title:'Spider-Man: Brand New Day', year:2026, imp:'Crucial' },
+  { id:53, phase:'Fase 6', kind:'mcu', type:'Película', title:'Avengers: Doomsday', year:2026, imp:'Crucial', dday:true },
 ];
 
 const KEY = 'mcu_v4';
@@ -357,8 +395,8 @@ const save = () => { localStorage.setItem(KEY, JSON.stringify([...watched])); if
 function toggle(title) {
   watched.has(title) ? watched.delete(title) : watched.add(title);
   save(); updateStats(); renderList();
-  const name = title.split(':')[0].split('(')[0].split('â€”')[0].trim();
-  toast(watched.has(title) ? 'âœ… '+name+' â€” Â¡Visto!' : 'âŒ '+name+' â€” Desmarcado');
+  const name = title.split(':')[0].split('(')[0].split('—')[0].trim();
+  toast(watched.has(title) ? '✅ '+name+' — ¡Visto!' : '❌ '+name+' — Desmarcado');
 }
 
 function updateStats() {
@@ -421,7 +459,7 @@ function renderList() {
       <span class="sec-title${isExt?' pur':''}">${phase}</span>
       <div class="sec-line${isExt?' pur':''}"></div>
       <span class="sec-info">${doneInGroup}/${items.length} vistos</span>
-      <span class="sec-arr">â–¼</span>`;
+      <span class="sec-arr">▼</span>`;
     hdr.onclick = () => { hdr.classList.toggle('collapsed'); };
 
     const rows = document.createElement('div');
@@ -445,8 +483,8 @@ function renderList() {
       const row = document.createElement('div');
       row.className = 'row'+(isDone?' done':'')+(m.kind==='ext'?' ext-row':'')+(m.dday?' dday':'');
       const impCls = m.imp==='Crucial'?'c':'m';
-      const tIcon = m.type==='Serie'?'ðŸ“º':'ðŸŽ¬';
-      const numDisplay = m.dday ? 'ðŸŽ¯' : '#'+m.id;
+      const tIcon = m.type==='Serie'?'📺':'🎬';
+      const numDisplay = m.dday ? '🎯' : '#'+m.id;
       const tagHtml = m.kind==='ext'
         ? `<span class="univ">${m.universe}</span>`
         : `<span class="imp ${impCls}">${m.imp}</span>`;
@@ -468,7 +506,9 @@ function renderList() {
         </div>
         ${tagHtml}
         <div class="phase-tag">${m.kind==='mcu'?m.phase:'Extendido'}</div>
-        <div>${isDone?'<span class="sdone">âœ“</span>':'<span class="spend">â€”</span>'}</div>`;
+        <div>${isDone?'<span class="sdone">✓</span>':'<span class="spend">—</span>'}</div>`;
+      row.style.animationDelay = (Math.min(vis.indexOf(m),12)*28) + 'ms';
+      row.addEventListener('click', ev => { if (ev.target.closest('.chk, a')) return; window.Theme.select(m.title, row); });
       rows.appendChild(row);
     });
 
@@ -478,7 +518,7 @@ function renderList() {
   });
 
   if (!anyVis) {
-    mc.innerHTML = '<div class="empty vis"><div class="ei">ðŸ¦¸</div><p style="letter-spacing:3px;font-size:12px;text-transform:uppercase">Sin resultados</p></div>';
+    mc.innerHTML = '<div class="empty vis"><div class="ei">🦸</div><p style="letter-spacing:3px;font-size:12px;text-transform:uppercase">Sin resultados</p></div>';
   }
   if (window.Providers) window.Providers.observe();
 }
@@ -517,76 +557,193 @@ function toast(msg) {
 
 updateStats(); renderList();
 
-/* â•â• CONFIGURACION â€” rellena estos 3 valores â•â• */
+/* ══ CONFIGURACION ══ */
 const CFG = {
   SUPABASE_URL: 'https://apxgkmllektcmrstuirw.supabase.co',
   SUPABASE_ANON_KEY: 'sb_publishable_9uXrFJNgi89niSvsCRlG6g_s7qvBhq6',
   TMDB_TOKEN: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MzkzNTI1MDg5ZThlZTUzZGI3NDJjN2NhNmQxMjFmNyIsIm5iZiI6MTc4NTcxODg1MS41OTAwMDAyLCJzdWIiOiI2YTZmZTg0M2YxY2ZmYTE4NTEzNzg4OGIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.xDTd864EOyuudc91Iw_LYkulL8GVWrlCNayfJTEJygE',
-  REGION: 'EC',
   LANG: 'es-ES'
 };
 
-/* â•â• PROVEEDORES (TMDB) â•â• */
+/* ══ REGION (mundial) ══ */
+window.Region = (() => {
+  const KEY_R = 'mcu_region';
+  const LIST = [
+    ['EC','Ecuador'],['MX','Mexico'],['CO','Colombia'],['AR','Argentina'],['CL','Chile'],
+    ['PE','Peru'],['VE','Venezuela'],['BO','Bolivia'],['PY','Paraguay'],['UY','Uruguay'],
+    ['CR','Costa Rica'],['PA','Panama'],['GT','Guatemala'],['HN','Honduras'],['SV','El Salvador'],
+    ['NI','Nicaragua'],['DO','Rep. Dominicana'],['CU','Cuba'],['PR','Puerto Rico'],
+    ['ES','Espana'],['US','Estados Unidos'],['CA','Canada'],['BR','Brasil'],
+    ['GB','Reino Unido'],['FR','Francia'],['DE','Alemania'],['IT','Italia'],['PT','Portugal'],
+    ['NL','Paises Bajos'],['BE','Belgica'],['CH','Suiza'],['AT','Austria'],['SE','Suecia'],
+    ['NO','Noruega'],['DK','Dinamarca'],['FI','Finlandia'],['IE','Irlanda'],['PL','Polonia'],
+    ['AU','Australia'],['NZ','Nueva Zelanda'],['JP','Japon'],['KR','Corea del Sur'],
+    ['IN','India'],['ID','Indonesia'],['PH','Filipinas'],['TH','Tailandia'],['SG','Singapur'],
+    ['ZA','Sudafrica'],['TR','Turquia'],['IL','Israel'],['AE','Emiratos Arabes']
+  ];
+  const TZ = {
+    'America/Guayaquil':'EC','America/Bogota':'CO','America/Lima':'PE','America/Mexico_City':'MX',
+    'America/Santiago':'CL','America/Argentina/Buenos_Aires':'AR','America/Caracas':'VE',
+    'America/La_Paz':'BO','America/Asuncion':'PY','America/Montevideo':'UY','America/Sao_Paulo':'BR',
+    'America/Costa_Rica':'CR','America/Panama':'PA','America/Guatemala':'GT','America/Tegucigalpa':'HN',
+    'America/El_Salvador':'SV','America/Managua':'NI','America/Santo_Domingo':'DO','America/Havana':'CU',
+    'America/Puerto_Rico':'PR','Europe/Madrid':'ES','Europe/London':'GB','Europe/Paris':'FR',
+    'Europe/Berlin':'DE','Europe/Rome':'IT','Europe/Lisbon':'PT','Europe/Amsterdam':'NL',
+    'Europe/Brussels':'BE','Europe/Zurich':'CH','Europe/Vienna':'AT','Europe/Stockholm':'SE',
+    'Europe/Oslo':'NO','Europe/Copenhagen':'DK','Europe/Helsinki':'FI','Europe/Dublin':'IE',
+    'Europe/Warsaw':'PL','Asia/Tokyo':'JP','Asia/Seoul':'KR','Asia/Kolkata':'IN','Asia/Calcutta':'IN',
+    'Asia/Jakarta':'ID','Asia/Manila':'PH','Asia/Bangkok':'TH','Asia/Singapore':'SG',
+    'Asia/Dubai':'AE','Asia/Jerusalem':'IL','Europe/Istanbul':'TR','Africa/Johannesburg':'ZA',
+    'Australia/Sydney':'AU','Pacific/Auckland':'NZ','America/Toronto':'CA','America/Vancouver':'CA'
+  };
+  function detect() {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (TZ[tz]) return TZ[tz];
+      if (tz && tz.indexOf('America/') === 0) return 'US';
+    } catch (e) {}
+    const l = (navigator.language || '').split('-')[1];
+    if (l && l.length === 2) return l.toUpperCase();
+    return 'US';
+  }
+  let current = localStorage.getItem(KEY_R) || detect();
+  const get = () => current;
+  function mount(onChange) {
+    const sel = document.getElementById('cbRegion');
+    if (!sel) return;
+    sel.innerHTML = LIST.map(c => '<option value="' + c[0] + '">' + c[1] + '</option>').join('');
+    if (!LIST.some(c => c[0] === current)) current = 'US';
+    sel.value = current;
+    sel.onchange = () => { current = sel.value; localStorage.setItem(KEY_R, current); onChange(); };
+  }
+  return { get, mount };
+})();
+
+/* ══ AMBIENTE POR TITULO ══ */
+window.Theme = (() => {
+  const D = ['#E63946','#9B5DE5'];
+  const T = [
+    [/iron man|vengadores|avengers/i, ['#FFB703','#C1121F']],
+    [/loki/i,                          ['#2FBF71','#D4A017']],
+    [/thor/i,                          ['#3A86FF','#B5179E']],
+    [/hulk/i,                          ['#6A994E','#7209B7']],
+    [/capit[aá]n am[eé]rica|falcon|soldado/i, ['#3A86FF','#C1121F']],
+    [/capitana marvel|marvels/i,       ['#E63946','#3A86FF']],
+    [/pantera negra|wakanda/i,         ['#7209B7','#4CC9F0']],
+    [/doctor strange|multiverso/i,     ['#F77F00','#7209B7']],
+    [/guardianes|galaxia/i,            ['#B5179E','#2FBF71']],
+    [/spider-?man|spiderman/i,         ['#E63946','#3A86FF']],
+    [/deadpool/i,                      ['#C1121F','#1B1B1E']],
+    [/x-?men|logan|lobezno/i,          ['#FFB703','#1D3557']],
+    [/ant-?man|hormiga|quantumania/i,  ['#E63946','#4CC9F0']],
+    [/bruja escarlata|wandavision|wanda/i, ['#C1121F','#F72585']],
+    [/eternals|eternos/i,              ['#D4A017','#4361EE']],
+    [/shang-?chi/i,                    ['#2FBF71','#C1121F']],
+    [/moon knight|caballero luna/i,    ['#EDF2F4','#D4A017']],
+    [/ms\.? marvel/i,                  ['#E63946','#4361EE']],
+    [/ojo de halc[oó]n|hawkeye/i,      ['#7209B7','#F77F00']],
+    [/what if|y si/i,                  ['#7209B7','#4CC9F0']],
+    [/daredevil|defensores/i,          ['#8B0000','#1B1B1E']],
+    [/blade/i,                         ['#8B0000','#2B2D42']],
+    [/cuatro fant[aá]sticos|fantastic/i, ['#4361EE','#F77F00']],
+    [/agatha/i,                        ['#2FBF71','#7209B7']],
+    [/echo|invasi[oó]n/i,              ['#6A994E','#2B2D42']],
+    [/doomsday/i,                      ['#C1121F','#D4A017']]
+  ];
+  function hexToRgba(h, a) {
+    const n = parseInt(h.slice(1), 16);
+    return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+  function palette(title) {
+    for (let i = 0; i < T.length; i++) if (T[i][0].test(title)) return T[i][1];
+    return D;
+  }
+  let active = null;
+  function apply(title) {
+    const p = palette(title || '');
+    const r = document.documentElement.style;
+    r.setProperty('--thA', p[0]);
+    r.setProperty('--thB', hexToRgba(p[1], .10));
+    r.setProperty('--thGlow', hexToRgba(p[0], .13));
+    active = title || null;
+    document.querySelectorAll('.row.themed').forEach(el => el.classList.remove('themed'));
+  }
+  function select(title, el) {
+    if (active === title) { apply(null); return; }
+    apply(title);
+    if (el) el.classList.add('themed');
+  }
+  return { select, apply, get active() { return active; } };
+})();
+
+/* ══ PROVEEDORES (TMDB, region dinamica) ══ */
 window.Providers = (() => {
-  const CACHE_KEY = 'tmdb_cache_v1';
+  const CACHE_KEY = 'tmdb_cache_v2';
   const TTL = 7 * 24 * 60 * 60 * 1000;
   let cache = {};
-  try { cache = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}'); } catch(e) { cache = {}; }
-  const saveCache = () => { try { localStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch(e){} };
-  const ready = () => CFG.TMDB_TOKEN && !CFG.TMDB_TOKEN.startsWith('TU_');
+  try { cache = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}'); } catch (e) { cache = {}; }
+  const saveCache = () => { try { localStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch (e) {} };
+  const ready = () => CFG.TMDB_TOKEN && CFG.TMDB_TOKEN.indexOf('PLACEHOLDER') === -1;
   const headers = () => ({ Authorization: 'Bearer ' + CFG.TMDB_TOKEN, accept: 'application/json' });
 
   let inFlight = 0;
   const queue = [];
-  const pump = () => {
-    while (inFlight < 4 && queue.length) { inFlight++; queue.shift()().finally(() => { inFlight--; pump(); }); }
-  };
+  const pump = () => { while (inFlight < 4 && queue.length) { inFlight++; queue.shift()().finally(() => { inFlight--; pump(); }); } };
   const enqueue = fn => new Promise(res => { queue.push(() => fn().then(res)); pump(); });
 
-  async function resolve(title, year, kind) {
-    const key = kind + '|' + title + '|' + year;
-    const hit = cache[key];
-    if (hit && Date.now() - hit.ts < TTL) return hit.data;
+  async function findId(title, year, kind) {
+    const k = 'id|' + kind + '|' + title + '|' + year;
+    if (cache[k] && Date.now() - cache[k].ts < TTL) return cache[k].v;
     const yq = kind === 'movie' ? 'year' : 'first_air_date_year';
     const url = 'https://api.themoviedb.org/3/search/' + kind + '?query=' + encodeURIComponent(title) + '&language=' + CFG.LANG + '&' + yq + '=' + year;
-    let data = null;
+    let id = null;
     try {
       const r = await fetch(url, { headers: headers() });
-      if (r.ok) {
-        const j = await r.json();
-        const first = (j.results || [])[0];
-        if (first) {
-          const p = await fetch('https://api.themoviedb.org/3/' + kind + '/' + first.id + '/watch/providers', { headers: headers() });
-          if (p.ok) {
-            const pj = await p.json();
-            const reg = (pj.results || {})[CFG.REGION] || null;
-            data = reg ? { link: reg.link, flatrate: reg.flatrate || [], rent: reg.rent || [], buy: reg.buy || [] } : { empty: true };
-          }
-        }
-      }
+      if (r.ok) { const j = await r.json(); const f = (j.results || [])[0]; if (f) id = f.id; }
     } catch (e) { return null; }
-    cache[key] = { ts: Date.now(), data }; saveCache();
-    return data;
+    cache[k] = { ts: Date.now(), v: id }; saveCache();
+    return id;
+  }
+
+  async function findProviders(id, kind) {
+    const k = 'pv|' + kind + '|' + id;
+    if (cache[k] && Date.now() - cache[k].ts < TTL) return cache[k].v;
+    let all = null;
+    try {
+      const p = await fetch('https://api.themoviedb.org/3/' + kind + '/' + id + '/watch/providers', { headers: headers() });
+      if (p.ok) { const pj = await p.json(); all = pj.results || {}; }
+    } catch (e) { return null; }
+    cache[k] = { ts: Date.now(), v: all }; saveCache();
+    return all;
   }
 
   function chip(p, link, cls) {
-    const logo = p.logo_path ? '<img src="https://image.tmdb.org/t/p/w45' + p.logo_path + '" alt="">' : '';
+    const logo = p.logo_path ? '<img src="https://image.tmdb.org/t/p/w45' + p.logo_path + '" alt="" loading="lazy">' : '';
     return '<a class="prov-chip ' + cls + '" href="' + link + '" target="_blank" rel="noopener nofollow">' + logo + p.provider_name + '</a>';
   }
 
-  function paint(el, data) {
-    if (!data || data.empty) { el.innerHTML = '<span class="prov-none">Sin disponibilidad en Ecuador</span>'; return; }
-    const parts = [];
-    const seen = new Set();
-    (data.flatrate || []).slice(0, 3).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); parts.push(chip(p, data.link, '')); } });
+  function paint(el, all) {
+    const reg = all ? all[window.Region.get()] : null;
+    if (!reg) { el.innerHTML = '<span class="prov-none">Sin disponibilidad en tu pais</span>'; return; }
+    const parts = [], seen = new Set();
+    (reg.flatrate || []).slice(0, 3).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); parts.push(chip(p, reg.link, '')); } });
     if (parts.length) parts.unshift('<span class="prov-lbl">Incluido</span>');
-    const rentParts = [];
-    [].concat(data.rent || [], data.buy || []).slice(0, 2).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); rentParts.push(chip(p, data.link, 'rent')); } });
-    if (rentParts.length) { parts.push('<span class="prov-lbl">Alquilar</span>'); rentParts.forEach(x => parts.push(x)); }
-    el.innerHTML = parts.length ? parts.join('') : '<span class="prov-none">Sin disponibilidad en Ecuador</span>';
+    const rp = [];
+    [].concat(reg.rent || [], reg.buy || []).slice(0, 2).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); rp.push(chip(p, reg.link, 'rent')); } });
+    if (rp.length) { parts.push('<span class="prov-lbl">Alquilar</span>'); rp.forEach(x => parts.push(x)); }
+    el.innerHTML = parts.length ? parts.join('') : '<span class="prov-none">Sin disponibilidad en tu pais</span>';
   }
 
+  const store = new Map();
   let io = null;
+
+  function repaintAll() {
+    document.querySelectorAll('.prov').forEach(el => {
+      const key = el.dataset.title + '|' + el.dataset.year;
+      if (store.has(key)) paint(el, store.get(key));
+    });
+  }
+
   function observe() {
     if (!ready()) return;
     if (io) io.disconnect();
@@ -595,18 +752,24 @@ window.Providers = (() => {
         if (!en.isIntersecting) return;
         const el = en.target;
         io.unobserve(el);
-        if (el.dataset.loaded) return;
-        el.dataset.loaded = '1';
         const title = decodeURIComponent(el.dataset.title);
-        enqueue(() => resolve(title, el.dataset.year, el.dataset.kind)).then(d => paint(el, d));
+        const key = el.dataset.title + '|' + el.dataset.year;
+        if (store.has(key)) { paint(el, store.get(key)); return; }
+        if (el.dataset.loading) return;
+        el.dataset.loading = '1';
+        el.innerHTML = '<span class="prov-skel"></span>';
+        enqueue(async () => {
+          const id = await findId(title, el.dataset.year, el.dataset.kind);
+          return id ? await findProviders(id, el.dataset.kind) : null;
+        }).then(all => { store.set(key, all); paint(el, all); el.dataset.loading = ''; });
       });
-    }, { rootMargin: '200px' });
+    }, { rootMargin: '250px' });
     document.querySelectorAll('.prov').forEach(el => io.observe(el));
   }
-  return { observe };
+  return { observe, repaintAll };
 })();
 
-/* â•â• SINCRONIZACION (Supabase) â•â• */
+/* ══ SINCRONIZACION (Supabase) ══ */
 window.CloudSync = (() => {
   let sb = null, user = null, timer = null;
   const dot = () => document.getElementById('cbDot');
@@ -614,27 +777,24 @@ window.CloudSync = (() => {
   const box = () => document.getElementById('cbAuth');
   const configured = () => CFG.SUPABASE_URL && CFG.SUPABASE_URL.indexOf('TU-PROYECTO') === -1;
 
-  function setState(text, cls) {
-    if (msg()) msg().textContent = text;
-    if (dot()) dot().className = 'cb-dot' + (cls ? ' ' + cls : '');
+  function setState(t, c) {
+    if (msg()) msg().textContent = t;
+    if (dot()) dot().className = 'cb-dot' + (c ? ' ' + c : '');
   }
-
-  function renderLoggedOut() {
+  function renderOut() {
     setState('Progreso guardado solo en este navegador', '');
     box().innerHTML = '<button class="cb-btn" id="cbStart">Guardar en la nube</button>';
     document.getElementById('cbStart').onclick = renderForm;
   }
-
   function renderForm() {
     box().innerHTML = '<input class="cb-in" id="cbEmail" type="email" placeholder="tu@correo.com" autocomplete="email">' +
       '<button class="cb-btn" id="cbSend">Enviar enlace</button>' +
       '<button class="cb-btn ghost" id="cbCancel">Cancelar</button>';
-    document.getElementById('cbCancel').onclick = renderLoggedOut;
+    document.getElementById('cbCancel').onclick = renderOut;
     document.getElementById('cbSend').onclick = sendLink;
-    document.getElementById('cbEmail').focus();
-    document.getElementById('cbEmail').onkeydown = e => { if (e.key === 'Enter') sendLink(); };
+    const e = document.getElementById('cbEmail');
+    e.focus(); e.onkeydown = ev => { if (ev.key === 'Enter') sendLink(); };
   }
-
   async function sendLink() {
     const el = document.getElementById('cbEmail');
     const email = el ? el.value : '';
@@ -644,18 +804,16 @@ window.CloudSync = (() => {
     box().innerHTML = '<span class="cb-mail">Revisa tu correo y abre el enlace</span>';
     setState('Enlace enviado', 'sync');
   }
-
-  function renderLoggedIn() {
+  function renderIn() {
     setState('Progreso sincronizado', 'on');
     box().innerHTML = '<span class="cb-mail">' + user.email + '</span><button class="cb-btn ghost" id="cbOut">Salir</button>';
-    document.getElementById('cbOut').onclick = async () => { await sb.auth.signOut(); user = null; renderLoggedOut(); };
+    document.getElementById('cbOut').onclick = async () => { await sb.auth.signOut(); user = null; renderOut(); };
   }
 
   async function pull() {
     const { data } = await sb.from('mcu_progress').select('watched').eq('user_id', user.id).maybeSingle();
     return (data && data.watched) || [];
   }
-
   async function push(list) {
     if (!sb || !user) return;
     clearTimeout(timer);
@@ -666,11 +824,10 @@ window.CloudSync = (() => {
       setState(error ? 'Error al guardar' : 'Progreso sincronizado', error ? '' : 'on');
     }, 700);
   }
-
   async function onSession(session) {
-    if (!session) { renderLoggedOut(); return; }
+    if (!session) { renderOut(); return; }
     user = session.user;
-    renderLoggedIn();
+    renderIn();
     const cloud = await pull();
     const local = Array.from(watched);
     const union = Array.from(new Set([].concat(cloud, local)));
@@ -679,22 +836,22 @@ window.CloudSync = (() => {
     updateStats(); renderList();
     if (union.length !== cloud.length) push(union);
   }
-
   async function init() {
     if (!configured()) { setState('Progreso guardado solo en este navegador', ''); box().innerHTML = ''; return; }
-    const mod = await import('https://esm.sh/@supabase/supabase-js@2');
-    sb = mod.createClient(CFG.SUPABASE_URL, CFG.SUPABASE_ANON_KEY);
-    const { data } = await sb.auth.getSession();
-    await onSession(data.session);
-    sb.auth.onAuthStateChange((_e, s) => onSession(s));
+    try {
+      const mod = await import('https://esm.sh/@supabase/supabase-js@2');
+      sb = mod.createClient(CFG.SUPABASE_URL, CFG.SUPABASE_ANON_KEY);
+      const { data } = await sb.auth.getSession();
+      await onSession(data.session);
+      sb.auth.onAuthStateChange((_e, s) => onSession(s));
+    } catch (e) { setState('Sincronizacion no disponible', ''); box().innerHTML = ''; }
   }
-
   document.addEventListener('DOMContentLoaded', () => {
-    const start = document.getElementById('cbStart');
-    if (start) start.onclick = renderForm;
+    const s = document.getElementById('cbStart');
+    if (s) s.onclick = renderForm;
+    window.Region.mount(() => window.Providers.repaintAll());
     init();
   });
-
   return { push };
 })();
 
