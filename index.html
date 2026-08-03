@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCU Tracker — Rumbo a Doomsday</title>
+<title>MCU Tracker â€” Rumbo a Doomsday</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -145,7 +145,7 @@ input.sr:focus{border-color:var(--red)}
   .phase-tag{display:none}
 }
 
-/* ── NUBE + PROVEEDORES ── */
+/* â”€â”€ NUBE + PROVEEDORES â”€â”€ */
 .cloudbar{position:relative;z-index:10;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:9px 32px;background:var(--panel);border-bottom:1px solid var(--border);font-size:12px;color:var(--muted)}
 .cloudbar .cb-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0}
 .cloudbar .cb-dot.on{background:var(--done)}
@@ -179,12 +179,12 @@ footer.legal a:hover{text-decoration:underline}
 <header>
   <div class="hd">
     <div>
-      <span class="brand-sub"><span class="ld"></span>MCU Watch Tracker — Orden Cronológico</span>
+      <span class="brand-sub"><span class="ld"></span>MCU Watch Tracker â€” Orden CronolÃ³gico</span>
       <h1>RUMBO A <span>DOOMSDAY</span></h1>
     </div>
     <div class="pill">
-      <span class="lbl">🎬 Objetivo final</span>
-      <span class="dt">Avengers: Doomsday — 2026</span>
+      <span class="lbl">ðŸŽ¬ Objetivo final</span>
+      <span class="dt">Avengers: Doomsday â€” 2026</span>
     </div>
   </div>
 </header>
@@ -199,9 +199,9 @@ footer.legal a:hover{text-decoration:underline}
 <div class="stats">
   <div class="stat"><span class="sn g" id="s-done">0</span><span class="sl">Vistos</span></div>
   <div class="stat"><span class="sn" id="s-left">53</span><span class="sl">Pendientes</span></div>
-  <div class="stat"><span class="sn r" id="s-crucial">0</span><span class="sl">Cruciales ✓</span></div>
-  <div class="stat"><span class="sn p" id="s-ext">0</span><span class="sl">Extendido ✓</span></div>
-  <div class="stat"><span class="sn o" id="s-mcu">0</span><span class="sl">MCU ✓</span></div>
+  <div class="stat"><span class="sn r" id="s-crucial">0</span><span class="sl">Cruciales âœ“</span></div>
+  <div class="stat"><span class="sn p" id="s-ext">0</span><span class="sl">Extendido âœ“</span></div>
+  <div class="stat"><span class="sn o" id="s-mcu">0</span><span class="sl">MCU âœ“</span></div>
   <div class="stat"><span class="sn" id="s-total">53</span><span class="sl">Total</span></div>
 </div>
 
@@ -219,7 +219,7 @@ footer.legal a:hover{text-decoration:underline}
   <button class="fb pur" data-f="ext">Solo Extendido</button>
   <button class="fb" data-f="mcu">Solo MCU</button>
   <span class="sp"></span>
-  <div class="sw"><span class="si">🔍</span><input class="sr" type="text" id="q" placeholder="Buscar..."></div>
+  <div class="sw"><span class="si">ðŸ”</span><input class="sr" type="text" id="q" placeholder="Buscar..."></div>
 </div>
 
 <div class="main" id="mc"></div>
@@ -254,98 +254,98 @@ footer.legal a:hover{text-decoration:underline}
 </footer>
 
 <script>
-// ─── DATOS UNIFICADOS EN ORDEN CRONOLÓGICO ───────────────────────────────────
+// â”€â”€â”€ DATOS UNIFICADOS EN ORDEN CRONOLÃ“GICO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // kind: 'mcu' | 'ext'
 // bridge: texto de separador antes del bloque extendido (solo en el primero del grupo)
-// group: agrupación para colapsar
+// group: agrupaciÃ³n para colapsar
 const LIST = [
-  // ══════════ FASE 1 ══════════
-  { id:1,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitán América: El primer vengador', year:2011, imp:'Crucial' },
-  { id:2,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitana Marvel', year:2019, imp:'Media', note:'Cronológicamente ocurre en 1995' },
-  { id:3,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man', year:2008, imp:'Crucial' },
-  { id:4,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man 2', year:2010, imp:'Media' },
-  { id:5,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Thor', year:2011, imp:'Crucial' },
-  { id:6,  phase:'Fase 1', kind:'mcu', type:'Película', title:'The Avengers', year:2012, imp:'Crucial' },
-  // ══════════ FASE 2 ══════════
-  { id:7,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Thor: Un mundo oscuro', year:2013, imp:'Media' },
-  { id:8,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Capitán América: El Soldado del Invierno', year:2014, imp:'Crucial' },
-  { id:9,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia', year:2014, imp:'Crucial' },
-  { id:10, phase:'Fase 2', kind:'mcu', type:'Película', title:'Avengers: Era de Ultrón', year:2015, imp:'Crucial' },
-  { id:11, phase:'Fase 2', kind:'mcu', type:'Película', title:'Ant-Man: El hombre hormiga', year:2015, imp:'Media' },
-  // ══════════ FASE 3 ══════════
-  { id:12, phase:'Fase 3', kind:'mcu', type:'Película', title:'Capitán América: Civil War', year:2016, imp:'Crucial' },
-  { id:13, phase:'Fase 3', kind:'mcu', type:'Película', title:'Doctor Strange: Hechicero supremo', year:2016, imp:'Crucial' },
-  { id:14, phase:'Fase 3', kind:'mcu', type:'Película', title:'Spider-Man: De regreso a casa', year:2017, imp:'Media' },
-  { id:15, phase:'Fase 3', kind:'mcu', type:'Película', title:'Thor: Ragnarok', year:2017, imp:'Crucial' },
-  { id:16, phase:'Fase 3', kind:'mcu', type:'Película', title:'Pantera Negra', year:2018, imp:'Media' },
-  { id:17, phase:'Fase 3', kind:'mcu', type:'Película', title:'Avengers: Infinity War', year:2018, imp:'Crucial' },
-  { id:18, phase:'Fase 3', kind:'mcu', type:'Película', title:'Ant-Man and the Wasp', year:2018, imp:'Media' },
-  { id:19, phase:'Fase 3', kind:'mcu', type:'Película', title:'Avengers: Endgame', year:2019, imp:'Crucial' },
-  { id:20, phase:'Fase 3', kind:'mcu', type:'Película', title:'Spider-Man: Lejos de casa', year:2019, imp:'Media' },
-  // ══════════ FASE 4 — INICIO ══════════
+  // â•â•â•â•â•â•â•â•â•â• FASE 1 â•â•â•â•â•â•â•â•â•â•
+  { id:1,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: El primer vengador', year:2011, imp:'Crucial' },
+  { id:2,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Capitana Marvel', year:2019, imp:'Media', note:'CronolÃ³gicamente ocurre en 1995' },
+  { id:3,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Iron Man', year:2008, imp:'Crucial' },
+  { id:4,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Iron Man 2', year:2010, imp:'Media' },
+  { id:5,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'Thor', year:2011, imp:'Crucial' },
+  { id:6,  phase:'Fase 1', kind:'mcu', type:'PelÃ­cula', title:'The Avengers', year:2012, imp:'Crucial' },
+  // â•â•â•â•â•â•â•â•â•â• FASE 2 â•â•â•â•â•â•â•â•â•â•
+  { id:7,  phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Thor: Un mundo oscuro', year:2013, imp:'Media' },
+  { id:8,  phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: El Soldado del Invierno', year:2014, imp:'Crucial' },
+  { id:9,  phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Guardianes de la Galaxia', year:2014, imp:'Crucial' },
+  { id:10, phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Era de UltrÃ³n', year:2015, imp:'Crucial' },
+  { id:11, phase:'Fase 2', kind:'mcu', type:'PelÃ­cula', title:'Ant-Man: El hombre hormiga', year:2015, imp:'Media' },
+  // â•â•â•â•â•â•â•â•â•â• FASE 3 â•â•â•â•â•â•â•â•â•â•
+  { id:12, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: Civil War', year:2016, imp:'Crucial' },
+  { id:13, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Doctor Strange: Hechicero supremo', year:2016, imp:'Crucial' },
+  { id:14, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: De regreso a casa', year:2017, imp:'Media' },
+  { id:15, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Thor: Ragnarok', year:2017, imp:'Crucial' },
+  { id:16, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Pantera Negra', year:2018, imp:'Media' },
+  { id:17, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Infinity War', year:2018, imp:'Crucial' },
+  { id:18, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Ant-Man and the Wasp', year:2018, imp:'Media' },
+  { id:19, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Endgame', year:2019, imp:'Crucial' },
+  { id:20, phase:'Fase 3', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: Lejos de casa', year:2019, imp:'Media' },
+  // â•â•â•â•â•â•â•â•â•â• FASE 4 â€” INICIO â•â•â•â•â•â•â•â•â•â•
   { id:21, phase:'Fase 4', kind:'mcu', type:'Serie', title:'WandaVision', year:2021, imp:'Crucial' },
   { id:22, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Falcon y el Soldado del Invierno', year:2021, imp:'Media' },
   { id:23, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Loki (Temporada 1)', year:2021, imp:'Crucial' },
-  { id:24, phase:'Fase 4', kind:'mcu', type:'Película', title:'Shang-Chi y la leyenda de los diez anillos', year:2021, imp:'Media' },
-  // ══════════ EXT: SPIDER-MAN (antes de No Way Home) ══════════
+  { id:24, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Shang-Chi y la leyenda de los diez anillos', year:2021, imp:'Media' },
+  // â•â•â•â•â•â•â•â•â•â• EXT: SPIDER-MAN (antes de No Way Home) â•â•â•â•â•â•â•â•â•â•
   {
-    id:25, phase:'Extendido', kind:'ext', type:'Película', title:'Spider-Man (Raimi)', year:2002, imp:'Crucial',
+    id:25, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Spider-Man (Raimi)', year:2002, imp:'Crucial',
     universe:'Sony / Raimi',
-    bridge:'🕷️ BLOQUE SPIDER-MAN — Ver antes de No Way Home',
-    bridgeText:'Tobey Maguire y Andrew Garfield <strong>aparecen físicamente</strong> en No Way Home. Sin conocer sus historias el reencuentro no emociona.',
+    bridge:'ðŸ•·ï¸ BLOQUE SPIDER-MAN â€” Ver antes de No Way Home',
+    bridgeText:'Tobey Maguire y Andrew Garfield <strong>aparecen fÃ­sicamente</strong> en No Way Home. Sin conocer sus historias el reencuentro no emociona.',
     reason:'Origen de Tobey. Su arco en NWH depende de conocerlo.'
   },
-  { id:26, phase:'Extendido', kind:'ext', type:'Película', title:'Spider-Man 2 (Raimi)', year:2004, imp:'Crucial', universe:'Sony / Raimi', reason:'La mejor de Raimi. Consolida a Tobey antes de NWH.' },
-  { id:27, phase:'Extendido', kind:'ext', type:'Película', title:'Spider-Man 3 (Raimi)', year:2007, imp:'Media', universe:'Sony / Raimi', reason:'Sandman aparece en NWH. Recomendable pero no crítica.' },
-  { id:28, phase:'Extendido', kind:'ext', type:'Película', title:'The Amazing Spider-Man', year:2012, imp:'Media', universe:'Sony / Garfield', reason:'Contexto del Spider-Man de Garfield.' },
-  { id:29, phase:'Extendido', kind:'ext', type:'Película', title:'The Amazing Spider-Man 2', year:2014, imp:'Crucial', universe:'Sony / Garfield', reason:'La muerte de Gwen Stacy es el momento emocional central de Garfield en NWH. Sin esto no impacta igual.' },
+  { id:26, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Spider-Man 2 (Raimi)', year:2004, imp:'Crucial', universe:'Sony / Raimi', reason:'La mejor de Raimi. Consolida a Tobey antes de NWH.' },
+  { id:27, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Spider-Man 3 (Raimi)', year:2007, imp:'Media', universe:'Sony / Raimi', reason:'Sandman aparece en NWH. Recomendable pero no crÃ­tica.' },
+  { id:28, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'The Amazing Spider-Man', year:2012, imp:'Media', universe:'Sony / Garfield', reason:'Contexto del Spider-Man de Garfield.' },
+  { id:29, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'The Amazing Spider-Man 2', year:2014, imp:'Crucial', universe:'Sony / Garfield', reason:'La muerte de Gwen Stacy es el momento emocional central de Garfield en NWH. Sin esto no impacta igual.' },
   {
-    id:30, phase:'Extendido', kind:'ext', type:'Película', title:'Venom', year:2018, imp:'Media',
+    id:30, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Venom', year:2018, imp:'Media',
     universe:'Sony / SSU',
-    bridge:'🦠 VENOM — Ver justo antes de No Way Home',
-    bridgeText:'En el post-créditos de NWH, Eddie Brock deja un <strong>fragmento del simbionte en el MCU</strong>. No es esencial pero cierra mejor la escena.',
+    bridge:'ðŸ¦  VENOM â€” Ver justo antes de No Way Home',
+    bridgeText:'En el post-crÃ©ditos de NWH, Eddie Brock deja un <strong>fragmento del simbionte en el MCU</strong>. No es esencial pero cierra mejor la escena.',
     reason:'El simbionte que queda en el MCU al final de NWH.'
   },
-  // ══════════ FASE 4 — CONTINUACIÓN ══════════
-  { id:31, phase:'Fase 4', kind:'mcu', type:'Película', title:'Spider-Man: Sin camino a casa', year:2021, imp:'Crucial' },
-  { id:32, phase:'Fase 4', kind:'mcu', type:'Película', title:'Doctor Strange en el multiverso de la locura', year:2022, imp:'Crucial' },
+  // â•â•â•â•â•â•â•â•â•â• FASE 4 â€” CONTINUACIÃ“N â•â•â•â•â•â•â•â•â•â•
+  { id:31, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: Sin camino a casa', year:2021, imp:'Crucial' },
+  { id:32, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Doctor Strange en el multiverso de la locura', year:2022, imp:'Crucial' },
   { id:33, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Ms. Marvel', year:2022, imp:'Media' },
-  { id:34, phase:'Fase 4', kind:'mcu', type:'Película', title:'Pantera Negra: Wakanda por siempre', year:2022, imp:'Media' },
-  // ══════════ EXT: DEADPOOL/WOLVERINE/X-MEN (antes de D&W) ══════════
+  { id:34, phase:'Fase 4', kind:'mcu', type:'PelÃ­cula', title:'Pantera Negra: Wakanda por siempre', year:2022, imp:'Media' },
+  // â•â•â•â•â•â•â•â•â•â• EXT: DEADPOOL/WOLVERINE/X-MEN (antes de D&W) â•â•â•â•â•â•â•â•â•â•
   {
-    id:35, phase:'Extendido', kind:'ext', type:'Película', title:'X-Men: Days of Future Past', year:2014, imp:'Media',
+    id:35, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'X-Men: Days of Future Past', year:2014, imp:'Media',
     universe:'Fox / X-Men',
-    bridge:'🪓 BLOQUE DEADPOOL & WOLVERINE — Ver antes de la película',
-    bridgeText:'Deadpool & Wolverine asume que conoces a Deadpool y que <strong>Logan ya murió</strong>. Sin estas pelis pierdes la capa emocional entera.',
+    bridge:'ðŸª“ BLOQUE DEADPOOL & WOLVERINE â€” Ver antes de la pelÃ­cula',
+    bridgeText:'Deadpool & Wolverine asume que conoces a Deadpool y que <strong>Logan ya muriÃ³</strong>. Sin estas pelis pierdes la capa emocional entera.',
     reason:'Mejor film X-Men. Introduce el viaje temporal y el rol de Wolverine.'
   },
-  { id:36, phase:'Extendido', kind:'ext', type:'Película', title:'Deadpool', year:2016, imp:'Crucial', universe:'Fox / Deadpool', reason:'Base esencial del personaje. Sin esto Deadpool & Wolverine pierde la mitad.' },
-  { id:37, phase:'Extendido', kind:'ext', type:'Película', title:'Logan', year:2017, imp:'Crucial', universe:'Fox / X-Men', reason:'D&W la referencia directamente. Toda su tensión emocional depende de haber visto esta.' },
-  { id:38, phase:'Extendido', kind:'ext', type:'Película', title:'Deadpool 2', year:2018, imp:'Media', universe:'Fox / Deadpool', reason:'Introduce Cable y la X-Force. Contexto adicional para D&W.' },
-  // ══════════ FASE 5 ══════════
-  { id:39, phase:'Fase 5', kind:'mcu', type:'Película', title:'Ant-Man and the Wasp: Quantumania', year:2023, imp:'Crucial' },
-  { id:40, phase:'Fase 5', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia Vol. 3', year:2023, imp:'Media' },
+  { id:36, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Deadpool', year:2016, imp:'Crucial', universe:'Fox / Deadpool', reason:'Base esencial del personaje. Sin esto Deadpool & Wolverine pierde la mitad.' },
+  { id:37, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Logan', year:2017, imp:'Crucial', universe:'Fox / X-Men', reason:'D&W la referencia directamente. Toda su tensiÃ³n emocional depende de haber visto esta.' },
+  { id:38, phase:'Extendido', kind:'ext', type:'PelÃ­cula', title:'Deadpool 2', year:2018, imp:'Media', universe:'Fox / Deadpool', reason:'Introduce Cable y la X-Force. Contexto adicional para D&W.' },
+  // â•â•â•â•â•â•â•â•â•â• FASE 5 â•â•â•â•â•â•â•â•â•â•
+  { id:39, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Ant-Man and the Wasp: Quantumania', year:2023, imp:'Crucial' },
+  { id:40, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Guardianes de la Galaxia Vol. 3', year:2023, imp:'Media' },
   { id:41, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Loki (Temporada 2)', year:2023, imp:'Crucial' },
-  { id:42, phase:'Fase 5', kind:'mcu', type:'Película', title:'The Marvels', year:2023, imp:'Media' },
-  { id:43, phase:'Fase 5', kind:'mcu', type:'Película', title:'Deadpool & Wolverine', year:2024, imp:'Crucial' },
-  { id:44, phase:'Fase 5', kind:'mcu', type:'Película', title:'Capitán América: un nuevo mundo', year:2025, imp:'Crucial' },
-  { id:45, phase:'Fase 5', kind:'mcu', type:'Película', title:'Thunderbolts*', year:2025, imp:'Media' },
-  // ══════════ EXT: DAREDEVIL NETFLIX (antes de Born Again) ══════════
+  { id:42, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'The Marvels', year:2023, imp:'Media' },
+  { id:43, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Deadpool & Wolverine', year:2024, imp:'Crucial' },
+  { id:44, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'CapitÃ¡n AmÃ©rica: un nuevo mundo', year:2025, imp:'Crucial' },
+  { id:45, phase:'Fase 5', kind:'mcu', type:'PelÃ­cula', title:'Thunderbolts*', year:2025, imp:'Media' },
+  // â•â•â•â•â•â•â•â•â•â• EXT: DAREDEVIL NETFLIX (antes de Born Again) â•â•â•â•â•â•â•â•â•â•
   {
-    id:46, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil — Temporada 1 (Netflix)', year:2015, imp:'Crucial',
+    id:46, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil â€” Temporada 1 (Netflix)', year:2015, imp:'Crucial',
     universe:'Netflix / Marvel',
-    bridge:'😈 BLOQUE DAREDEVIL — Ver antes de Born Again',
-    bridgeText:'Born Again <strong>continúa directamente</strong> la historia de la serie Netflix. Asume que ya conoces a Matt Murdock, Wilson Fisk y Elektra en profundidad.',
+    bridge:'ðŸ˜ˆ BLOQUE DAREDEVIL â€” Ver antes de Born Again',
+    bridgeText:'Born Again <strong>continÃºa directamente</strong> la historia de la serie Netflix. Asume que ya conoces a Matt Murdock, Wilson Fisk y Elektra en profundidad.',
     reason:'Presenta a Matt Murdock y a Kingpin. Base imprescindible para Born Again.'
   },
-  { id:47, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil — Temporada 2 (Netflix)', year:2016, imp:'Crucial', universe:'Netflix / Marvel', reason:'Introduce al Punisher y a Elektra, ambos activos en el MCU actual.' },
-  { id:48, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil — Temporada 3 (Netflix)', year:2018, imp:'Crucial', universe:'Netflix / Marvel', reason:'El mejor arco de Kingpin. Born Again lo continúa casi directamente.' },
+  { id:47, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil â€” Temporada 2 (Netflix)', year:2016, imp:'Crucial', universe:'Netflix / Marvel', reason:'Introduce al Punisher y a Elektra, ambos activos en el MCU actual.' },
+  { id:48, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil â€” Temporada 3 (Netflix)', year:2018, imp:'Crucial', universe:'Netflix / Marvel', reason:'El mejor arco de Kingpin. Born Again lo continÃºa casi directamente.' },
   { id:49, phase:'Extendido', kind:'ext', type:'Serie', title:'The Punisher (Netflix)', year:'2017-2019', imp:'Media', universe:'Netflix / Marvel', reason:'Profundiza a Frank Castle. Recomendable si aparece en fases futuras.' },
-  // ══════════ FASE 6 ══════════
-  { id:50, phase:'Fase 6', kind:'mcu', type:'Película', title:'Los 4 Fantásticos: primeros pasos', year:2025, imp:'Crucial' },
+  // â•â•â•â•â•â•â•â•â•â• FASE 6 â•â•â•â•â•â•â•â•â•â•
+  { id:50, phase:'Fase 6', kind:'mcu', type:'PelÃ­cula', title:'Los 4 FantÃ¡sticos: primeros pasos', year:2025, imp:'Crucial' },
   { id:51, phase:'Fase 6', kind:'mcu', type:'Serie', title:'Daredevil: Born Again (Temp 1 y 2)', year:'2025-2026', imp:'Media' },
-  { id:52, phase:'Fase 6', kind:'mcu', type:'Película', title:'Spider-Man: Brand New Day', year:2026, imp:'Crucial' },
-  { id:53, phase:'Fase 6', kind:'mcu', type:'Película', title:'Avengers: Doomsday', year:2026, imp:'Crucial', dday:true },
+  { id:52, phase:'Fase 6', kind:'mcu', type:'PelÃ­cula', title:'Spider-Man: Brand New Day', year:2026, imp:'Crucial' },
+  { id:53, phase:'Fase 6', kind:'mcu', type:'PelÃ­cula', title:'Avengers: Doomsday', year:2026, imp:'Crucial', dday:true },
 ];
 
 const KEY = 'mcu_v4';
@@ -357,8 +357,8 @@ const save = () => { localStorage.setItem(KEY, JSON.stringify([...watched])); if
 function toggle(title) {
   watched.has(title) ? watched.delete(title) : watched.add(title);
   save(); updateStats(); renderList();
-  const name = title.split(':')[0].split('(')[0].split('—')[0].trim();
-  toast(watched.has(title) ? '✅ '+name+' — ¡Visto!' : '❌ '+name+' — Desmarcado');
+  const name = title.split(':')[0].split('(')[0].split('â€”')[0].trim();
+  toast(watched.has(title) ? 'âœ… '+name+' â€” Â¡Visto!' : 'âŒ '+name+' â€” Desmarcado');
 }
 
 function updateStats() {
@@ -421,7 +421,7 @@ function renderList() {
       <span class="sec-title${isExt?' pur':''}">${phase}</span>
       <div class="sec-line${isExt?' pur':''}"></div>
       <span class="sec-info">${doneInGroup}/${items.length} vistos</span>
-      <span class="sec-arr">▼</span>`;
+      <span class="sec-arr">â–¼</span>`;
     hdr.onclick = () => { hdr.classList.toggle('collapsed'); };
 
     const rows = document.createElement('div');
@@ -445,8 +445,8 @@ function renderList() {
       const row = document.createElement('div');
       row.className = 'row'+(isDone?' done':'')+(m.kind==='ext'?' ext-row':'')+(m.dday?' dday':'');
       const impCls = m.imp==='Crucial'?'c':'m';
-      const tIcon = m.type==='Serie'?'📺':'🎬';
-      const numDisplay = m.dday ? '🎯' : '#'+m.id;
+      const tIcon = m.type==='Serie'?'ðŸ“º':'ðŸŽ¬';
+      const numDisplay = m.dday ? 'ðŸŽ¯' : '#'+m.id;
       const tagHtml = m.kind==='ext'
         ? `<span class="univ">${m.universe}</span>`
         : `<span class="imp ${impCls}">${m.imp}</span>`;
@@ -468,7 +468,7 @@ function renderList() {
         </div>
         ${tagHtml}
         <div class="phase-tag">${m.kind==='mcu'?m.phase:'Extendido'}</div>
-        <div>${isDone?'<span class="sdone">✓</span>':'<span class="spend">—</span>'}</div>`;
+        <div>${isDone?'<span class="sdone">âœ“</span>':'<span class="spend">â€”</span>'}</div>`;
       rows.appendChild(row);
     });
 
@@ -478,7 +478,7 @@ function renderList() {
   });
 
   if (!anyVis) {
-    mc.innerHTML = '<div class="empty vis"><div class="ei">🦸</div><p style="letter-spacing:3px;font-size:12px;text-transform:uppercase">Sin resultados</p></div>';
+    mc.innerHTML = '<div class="empty vis"><div class="ei">ðŸ¦¸</div><p style="letter-spacing:3px;font-size:12px;text-transform:uppercase">Sin resultados</p></div>';
   }
   if (window.Providers) window.Providers.observe();
 }
@@ -517,16 +517,16 @@ function toast(msg) {
 
 updateStats(); renderList();
 
-/* ══ CONFIGURACION — rellena estos 3 valores ══ */
+/* â•â• CONFIGURACION â€” rellena estos 3 valores â•â• */
 const CFG = {
-  SUPABASE_URL: 'https://TU-PROYECTO.supabase.co',
-  SUPABASE_ANON_KEY: 'TU_ANON_KEY',
-  TMDB_TOKEN: 'TU_TMDB_READ_ACCESS_TOKEN',
+  SUPABASE_URL: 'https://apxgkmllektcmrstuirw.supabase.co',
+  SUPABASE_ANON_KEY: 'sb_publishable_9uXrFJNgi89niSvsCRlG6g_s7qvBhq6',
+  TMDB_TOKEN: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MzkzNTI1MDg5ZThlZTUzZGI3NDJjN2NhNmQxMjFmNyIsIm5iZiI6MTc4NTcxODg1MS41OTAwMDAyLCJzdWIiOiI2YTZmZTg0M2YxY2ZmYTE4NTEzNzg4OGIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.xDTd864EOyuudc91Iw_LYkulL8GVWrlCNayfJTEJygE',
   REGION: 'EC',
   LANG: 'es-ES'
 };
 
-/* ══ PROVEEDORES (TMDB) ══ */
+/* â•â• PROVEEDORES (TMDB) â•â• */
 window.Providers = (() => {
   const CACHE_KEY = 'tmdb_cache_v1';
   const TTL = 7 * 24 * 60 * 60 * 1000;
@@ -606,7 +606,7 @@ window.Providers = (() => {
   return { observe };
 })();
 
-/* ══ SINCRONIZACION (Supabase) ══ */
+/* â•â• SINCRONIZACION (Supabase) â•â• */
 window.CloudSync = (() => {
   let sb = null, user = null, timer = null;
   const dot = () => document.getElementById('cbDot');
