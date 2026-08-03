@@ -204,6 +204,34 @@ footer.legal a:hover{text-decoration:underline}
 .f-h{font-size:10px;letter-spacing:3px;color:var(--red);text-transform:uppercase;font-weight:700;margin-bottom:7px;display:block}
 .kofi{display:inline-flex;align-items:center;gap:7px;background:rgba(255,183,3,.10);border:1px solid rgba(255,183,3,.30);border-radius:5px;padding:7px 13px;color:var(--gold);text-decoration:none;font-size:12px;letter-spacing:1px;margin-top:4px;transition:background .2s,transform .15s}
 .kofi:hover{background:rgba(255,183,3,.22);transform:translateY(-1px);text-decoration:none}
+
+/* ══ EFECTOS DE AMBIENTE ══ */
+.ambient{overflow:hidden}
+.fx{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .9s ease}
+.fx.on{opacity:.5}
+.fx *{stroke:var(--thA);fill:none;vector-effect:non-scaling-stroke}
+.fx .soft{stroke:var(--thA);opacity:.35}
+.flash{position:fixed;inset:0;z-index:55;pointer-events:none;opacity:0;
+  background:radial-gradient(circle at 50% 50%, var(--thA) 0%, transparent 62%)}
+@keyframes flashPop{0%{opacity:0;transform:scale(.85)}22%{opacity:.34}100%{opacity:0;transform:scale(1.25)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinBack{to{transform:rotate(-360deg)}}
+@keyframes pulseR{0%,100%{opacity:.25;transform:scale(.94)}50%{opacity:.8;transform:scale(1.06)}}
+@keyframes dashRun{to{stroke-dashoffset:-260}}
+@keyframes drift{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-42px,-30px,0)}}
+@keyframes slash{0%{stroke-dashoffset:420;opacity:0}35%{opacity:.85}100%{stroke-dashoffset:0;opacity:.2}}
+@media (prefers-reduced-motion: no-preference){
+  .flash.go{animation:flashPop .85s ease-out}
+  .fx-spin{transform-origin:center;animation:spin 34s linear infinite}
+  .fx-spin-b{transform-origin:center;animation:spinBack 26s linear infinite}
+  .fx-pulse{transform-origin:center;animation:pulseR 3.4s ease-in-out infinite}
+  .fx-dash{stroke-dasharray:14 12;animation:dashRun 3.2s linear infinite}
+  .fx-drift{animation:drift 15s linear infinite alternate}
+  .fx-slash{stroke-dasharray:420;animation:slash 1.5s ease-out forwards}
+}
+.row.themed .ttxt{color:var(--thA);transition:color .5s ease}
+header h1 span{transition:color .8s ease}
+.sn.r{transition:color .8s ease}
 </style>
 </head>
 <body>
@@ -222,7 +250,8 @@ footer.legal a:hover{text-decoration:underline}
   </div>
 </header>
 
-<div class="ambient" id="ambient"></div>
+<div class="ambient" id="ambient"><svg class="fx" id="fx" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+<div class="flash" id="flash" aria-hidden="true"></div>
 <div class="thbar" id="thbar"></div>
 <div class="cloudbar" id="cloudbar">
   <span class="cb-dot" id="cbDot"></span>
@@ -621,58 +650,154 @@ window.Region = (() => {
 
 /* ══ AMBIENTE POR TITULO ══ */
 window.Theme = (() => {
-  const D = ['#E63946','#9B5DE5'];
+  const D = ['#E63946', '#9B5DE5', 'rings'];
   const T = [
-    [/iron man|vengadores|avengers/i, ['#FFB703','#C1121F']],
-    [/loki/i,                          ['#2FBF71','#D4A017']],
-    [/thor/i,                          ['#3A86FF','#B5179E']],
-    [/hulk/i,                          ['#6A994E','#7209B7']],
-    [/capit[aá]n am[eé]rica|falcon|soldado/i, ['#3A86FF','#C1121F']],
-    [/capitana marvel|marvels/i,       ['#E63946','#3A86FF']],
-    [/pantera negra|wakanda/i,         ['#7209B7','#4CC9F0']],
-    [/doctor strange|multiverso/i,     ['#F77F00','#7209B7']],
-    [/guardianes|galaxia/i,            ['#B5179E','#2FBF71']],
-    [/spider-?man|spiderman/i,         ['#E63946','#3A86FF']],
-    [/deadpool/i,                      ['#C1121F','#1B1B1E']],
-    [/x-?men|logan|lobezno/i,          ['#FFB703','#1D3557']],
-    [/ant-?man|hormiga|quantumania/i,  ['#E63946','#4CC9F0']],
-    [/bruja escarlata|wandavision|wanda/i, ['#C1121F','#F72585']],
-    [/eternals|eternos/i,              ['#D4A017','#4361EE']],
-    [/shang-?chi/i,                    ['#2FBF71','#C1121F']],
-    [/moon knight|caballero luna/i,    ['#EDF2F4','#D4A017']],
-    [/ms\.? marvel/i,                  ['#E63946','#4361EE']],
-    [/ojo de halc[oó]n|hawkeye/i,      ['#7209B7','#F77F00']],
-    [/what if|y si/i,                  ['#7209B7','#4CC9F0']],
-    [/daredevil|defensores/i,          ['#8B0000','#1B1B1E']],
-    [/blade/i,                         ['#8B0000','#2B2D42']],
-    [/cuatro fant[aá]sticos|fantastic/i, ['#4361EE','#F77F00']],
-    [/agatha/i,                        ['#2FBF71','#7209B7']],
-    [/echo|invasi[oó]n/i,              ['#6A994E','#2B2D42']],
-    [/doomsday/i,                      ['#C1121F','#D4A017']]
+    [/iron man|vengadores|avengers/i,        ['#FFB703','#C1121F','reactor']],
+    [/ant-?man|hormiga|quantumania/i,        ['#E63946','#4CC9F0','reactor']],
+    [/thor/i,                                ['#3A86FF','#B5179E','bolt']],
+    [/loki/i,                                ['#2FBF71','#D4A017','runes']],
+    [/doctor strange|multiverso/i,           ['#F77F00','#7209B7','runes']],
+    [/agatha|bruja escarlata|wandavision|wanda/i, ['#C1121F','#F72585','runes']],
+    [/spider-?man|spiderman/i,               ['#E63946','#3A86FF','web']],
+    [/capit[aá]n am[eé]rica|falcon|soldado/i,['#3A86FF','#C1121F','shield']],
+    [/capitana marvel|marvels/i,             ['#E63946','#3A86FF','cosmic']],
+    [/guardianes|galaxia/i,                  ['#B5179E','#2FBF71','cosmic']],
+    [/eternals|eternos/i,                    ['#D4A017','#4361EE','cosmic']],
+    [/what if|y si/i,                        ['#7209B7','#4CC9F0','cosmic']],
+    [/hulk/i,                                ['#6A994E','#7209B7','slashfx']],
+    [/x-?men|logan|lobezno/i,                ['#FFB703','#1D3557','slashfx']],
+    [/deadpool/i,                            ['#C1121F','#1B1B1E','slashfx']],
+    [/daredevil|defensores|blade|echo/i,     ['#8B0000','#1B1B1E','slashfx']],
+    [/pantera negra|wakanda/i,               ['#7209B7','#4CC9F0','glyph']],
+    [/shang-?chi/i,                          ['#2FBF71','#C1121F','glyph']],
+    [/moon knight|caballero luna/i,          ['#EDF2F4','#D4A017','glyph']],
+    [/ms\.? marvel/i,                        ['#E63946','#4361EE','glyph']],
+    [/ojo de halc[oó]n|hawkeye/i,            ['#7209B7','#F77F00','rings']],
+    [/(4|cuatro) fant[aá]sticos|fantastic/i, ['#4361EE','#F77F00','cosmic']],
+    [/venom|simbionte/i,                     ['#2B2D42','#EDF2F4','slashfx']],
+    [/thunderbolts/i,                        ['#C1121F','#2B2D42','glyph']],
+    [/punisher|castigador/i,                 ['#EDF2F4','#1B1B1E','slashfx']],
+    [/invasi[oó]n/i,                          ['#6A994E','#2B2D42','glyph']],
+    [/doomsday/i,                            ['#C1121F','#D4A017','reactor']]
   ];
+
+  const rnd = (a, b) => a + Math.random() * (b - a);
+
+  const FX = {
+    reactor() {
+      let s = '<g class="fx-pulse" transform="translate(760 300)">';
+      for (let i = 1; i <= 5; i++) s += '<circle r="' + (i * 46) + '" stroke-width="1.4" opacity="' + (0.75 - i * 0.1).toFixed(2) + '"/>';
+      s += '<circle r="18" stroke-width="3"/></g>';
+      s += '<g class="fx-spin" transform="translate(760 300)"><circle r="132" stroke-width="6" stroke-dasharray="26 46" opacity=".5"/></g>';
+      return s;
+    },
+    bolt() {
+      let s = '';
+      for (let i = 0; i < 6; i++) {
+        const x = 120 + i * 150, o = (0.3 + Math.random() * 0.4).toFixed(2);
+        let d = 'M' + x + ' 0';
+        let cx = x, cy = 0;
+        for (let k = 0; k < 7; k++) { cx += rnd(-52, 52); cy += 100; d += ' L' + cx.toFixed(0) + ' ' + cy; }
+        s += '<path class="fx-dash" d="' + d + '" stroke-width="1.6" opacity="' + o + '"/>';
+      }
+      return s;
+    },
+    runes() {
+      let s = '<g class="fx-spin" transform="translate(500 340)">';
+      s += '<circle r="230" stroke-width="1.5" stroke-dasharray="3 15" opacity=".6"/>';
+      s += '<circle r="188" stroke-width="1" opacity=".35"/></g>';
+      s += '<g class="fx-spin-b" transform="translate(500 340)">';
+      s += '<circle r="146" stroke-width="2" stroke-dasharray="34 22" opacity=".55"/>';
+      for (let i = 0; i < 8; i++) {
+        const a = (i / 8) * Math.PI * 2;
+        s += '<line x1="' + (Math.cos(a) * 104).toFixed(0) + '" y1="' + (Math.sin(a) * 104).toFixed(0) +
+             '" x2="' + (Math.cos(a) * 146).toFixed(0) + '" y2="' + (Math.sin(a) * 146).toFixed(0) + '" stroke-width="1.6" opacity=".5"/>';
+      }
+      return s + '</g>';
+    },
+    web() {
+      let s = '<g transform="translate(980 -20)">';
+      for (let i = 0; i <= 9; i++) {
+        const a = (Math.PI / 2) * (i / 9) + Math.PI / 2;
+        s += '<line x1="0" y1="0" x2="' + (Math.cos(a) * 820).toFixed(0) + '" y2="' + (Math.sin(a) * 820).toFixed(0) + '" stroke-width="1" opacity=".4"/>';
+      }
+      for (let r = 110; r <= 780; r += 96) s += '<path d="M' + (-r) + ' 0 A' + r + ' ' + r + ' 0 0 0 0 ' + r + '" stroke-width="1" opacity=".28"/>';
+      return s + '</g>';
+    },
+    shield() {
+      let s = '<g class="fx-pulse" transform="translate(180 340)">';
+      for (let i = 1; i <= 6; i++) s += '<circle r="' + (i * 42) + '" stroke-width="' + (i % 2 ? 2.4 : 1) + '" opacity="' + (0.7 - i * 0.08).toFixed(2) + '"/>';
+      return s + '</g>';
+    },
+    cosmic() {
+      let s = '<g class="fx-drift">';
+      for (let i = 0; i < 70; i++) {
+        s += '<circle cx="' + rnd(-60, 1060).toFixed(0) + '" cy="' + rnd(-40, 740).toFixed(0) +
+             '" r="' + rnd(0.7, 2.6).toFixed(1) + '" stroke-width="1.4" opacity="' + rnd(0.2, 0.85).toFixed(2) + '"/>';
+      }
+      return s + '</g>';
+    },
+    slashfx() {
+      let s = '';
+      for (let i = 0; i < 4; i++) {
+        const y = 90 + i * 130, x = 120 + i * 60;
+        s += '<line class="fx-slash" style="animation-delay:' + (i * 90) + 'ms" x1="' + x + '" y1="' + y +
+             '" x2="' + (x + 660) + '" y2="' + (y + 190) + '" stroke-width="' + (2.6 - i * 0.4).toFixed(1) + '" opacity=".6"/>';
+      }
+      return s;
+    },
+    glyph() {
+      let s = '<g class="fx-spin-b" transform="translate(500 340)">';
+      for (let i = 0; i < 6; i++) {
+        const r = 90 + i * 44, a = i * 12;
+        s += '<polygon transform="rotate(' + a + ')" points="0,' + (-r) + ' ' + (r * 0.86).toFixed(0) + ',' + (r * 0.5).toFixed(0) +
+             ' ' + (-r * 0.86).toFixed(0) + ',' + (r * 0.5).toFixed(0) + '" stroke-width="1.3" opacity="' + (0.55 - i * 0.06).toFixed(2) + '"/>';
+      }
+      return s + '</g>';
+    },
+    rings() {
+      let s = '<g class="fx-spin" transform="translate(500 340)">';
+      for (let i = 1; i <= 4; i++) s += '<circle r="' + (i * 78) + '" stroke-width="1.2" stroke-dasharray="' + (i * 10) + ' ' + (i * 16) + '" opacity=".4"/>';
+      return s + '</g>';
+    }
+  };
+
   function hexToRgba(h, a) {
     const n = parseInt(h.slice(1), 16);
     return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
   }
-  function palette(title) {
-    for (let i = 0; i < T.length; i++) if (T[i][0].test(title)) return T[i][1];
+  function palette(t) {
+    for (let i = 0; i < T.length; i++) if (T[i][0].test(t)) return T[i][1];
     return D;
   }
+
   let active = null;
-  function apply(title) {
+
+  function apply(title, animate) {
     const p = palette(title || '');
     const r = document.documentElement.style;
     r.setProperty('--thA', p[0]);
-    r.setProperty('--thB', hexToRgba(p[1], .10));
-    r.setProperty('--thGlow', hexToRgba(p[0], .13));
+    r.setProperty('--thB', hexToRgba(p[1], 0.12));
+    r.setProperty('--thGlow', hexToRgba(p[0], 0.15));
+    const fx = document.getElementById('fx');
+    if (fx) {
+      if (title) { fx.innerHTML = (FX[p[2]] || FX.rings)(); fx.classList.add('on'); }
+      else { fx.classList.remove('on'); setTimeout(() => { if (!active) fx.innerHTML = ''; }, 900); }
+    }
+    if (animate && title) {
+      const f = document.getElementById('flash');
+      if (f) { f.classList.remove('go'); void f.offsetWidth; f.classList.add('go'); }
+    }
     active = title || null;
     document.querySelectorAll('.row.themed').forEach(el => el.classList.remove('themed'));
   }
+
   function select(title, el) {
-    if (active === title) { apply(null); return; }
-    apply(title);
+    if (active === title) { apply(null, false); return; }
+    apply(title, true);
     if (el) el.classList.add('themed');
   }
+
   return { select, apply, get active() { return active; } };
 })();
 
