@@ -331,6 +331,7 @@ const LIST = [
   { id:2,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitana Marvel', year:2019, imp:'Media', note:'Cronológicamente ocurre en 1995' },
   { id:3,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man', year:2008, imp:'Crucial' },
   { id:4,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man 2', year:2010, imp:'Media' },
+  { id:54, phase:'Fase 1', kind:'mcu', type:'Película', title:'El Increíble Hulk', year:2008, imp:'Media', note:'Cron. antes de Iron Man 2. Vuelve Ross en Un nuevo mundo' },
   { id:5,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Thor', year:2011, imp:'Crucial' },
   { id:6,  phase:'Fase 1', kind:'mcu', type:'Película', title:'The Avengers', year:2012, imp:'Crucial' },
   // ══════════ FASE 2 ══════════
@@ -353,7 +354,11 @@ const LIST = [
   { id:21, phase:'Fase 4', kind:'mcu', type:'Serie', title:'WandaVision', year:2021, imp:'Crucial' },
   { id:22, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Falcon y el Soldado del Invierno', year:2021, imp:'Media' },
   { id:23, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Loki (Temporada 1)', year:2021, imp:'Crucial' },
+  { id:55, phase:'Fase 4', kind:'mcu', type:'Película', title:'Viuda Negra', year:2021, imp:'Media' },
+  { id:56, phase:'Fase 4', kind:'mcu', type:'Serie', title:'¿Qué pasaría si...? (T1)', year:2021, imp:'Media', note:'Multiverso animado' },
   { id:24, phase:'Fase 4', kind:'mcu', type:'Película', title:'Shang-Chi y la leyenda de los diez anillos', year:2021, imp:'Media' },
+  { id:57, phase:'Fase 4', kind:'mcu', type:'Película', title:'Eternals', year:2021, imp:'Media' },
+  { id:58, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Ojo de Halcón', year:2021, imp:'Media', note:'Presenta a Kate Bishop y Yelena' },
   // ══════════ EXT: SPIDER-MAN (antes de No Way Home) ══════════
   {
     id:25, phase:'Extendido', kind:'ext', type:'Película', title:'Spider-Man (Raimi)', year:2002, imp:'Crucial',
@@ -375,9 +380,14 @@ const LIST = [
   },
   // ══════════ FASE 4 — CONTINUACIÓN ══════════
   { id:31, phase:'Fase 4', kind:'mcu', type:'Película', title:'Spider-Man: Sin camino a casa', year:2021, imp:'Crucial' },
+  { id:59, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Moon Knight', year:2022, imp:'Media' },
   { id:32, phase:'Fase 4', kind:'mcu', type:'Película', title:'Doctor Strange en el multiverso de la locura', year:2022, imp:'Crucial' },
   { id:33, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Ms. Marvel', year:2022, imp:'Media' },
+  { id:60, phase:'Fase 4', kind:'mcu', type:'Película', title:'Thor: Love and Thunder', year:2022, imp:'Media' },
+  { id:61, phase:'Fase 4', kind:'mcu', type:'Serie', title:'She-Hulk: Defensora de héroes', year:2022, imp:'Media' },
+  { id:62, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Werewolf by Night', year:2022, imp:'Media', note:'Especial. Lado sobrenatural' },
   { id:34, phase:'Fase 4', kind:'mcu', type:'Película', title:'Pantera Negra: Wakanda por siempre', year:2022, imp:'Media' },
+  { id:63, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Especial de Felices Fiestas de los Guardianes', year:2022, imp:'Media' },
   // ══════════ EXT: DEADPOOL/WOLVERINE/X-MEN (antes de D&W) ══════════
   {
     id:35, phase:'Extendido', kind:'ext', type:'Película', title:'X-Men: Days of Future Past', year:2014, imp:'Media',
@@ -392,11 +402,22 @@ const LIST = [
   // ══════════ FASE 5 ══════════
   { id:39, phase:'Fase 5', kind:'mcu', type:'Película', title:'Ant-Man and the Wasp: Quantumania', year:2023, imp:'Crucial' },
   { id:40, phase:'Fase 5', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia Vol. 3', year:2023, imp:'Media' },
+  { id:64, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Secret Invasion', year:2023, imp:'Media', note:'Skrulls y Nick Fury' },
   { id:41, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Loki (Temporada 2)', year:2023, imp:'Crucial' },
   { id:42, phase:'Fase 5', kind:'mcu', type:'Película', title:'The Marvels', year:2023, imp:'Media' },
+  { id:65, phase:'Fase 5', kind:'mcu', type:'Serie', title:'¿Qué pasaría si...? (T2)', year:2023, imp:'Media' },
+  { id:66, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Echo', year:2024, imp:'Media', note:'Conecta con Daredevil y Kingpin' },
+  { id:67, phase:'Fase 5', kind:'mcu', type:'Serie', title:'X-Men \'97 (T1)', year:2024, imp:'Media', note:'Animada. Continua la serie de los 90' },
   { id:43, phase:'Fase 5', kind:'mcu', type:'Película', title:'Deadpool & Wolverine', year:2024, imp:'Crucial' },
+  { id:68, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Agatha, ¿quién si no?', year:2024, imp:'Media', note:'Secuela de WandaVision' },
+  { id:69, phase:'Fase 5', kind:'mcu', type:'Serie', title:'¿Qué pasaría si...? (T3)', year:2024, imp:'Media' },
+  { id:70, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Tu amistoso vecino Spider-Man (T1)', year:2025, imp:'Media', note:'Animada' },
   { id:44, phase:'Fase 5', kind:'mcu', type:'Película', title:'Capitán América: un nuevo mundo', year:2025, imp:'Crucial' },
   { id:45, phase:'Fase 5', kind:'mcu', type:'Película', title:'Thunderbolts*', year:2025, imp:'Media' },
+  { id:71, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Ironheart', year:2025, imp:'Media', note:'Riri Williams, tras Wakanda por siempre' },
+  { id:72, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Eyes of Wakanda', year:2025, imp:'Media', note:'Animada' },
+  { id:73, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Marvel Zombies', year:2025, imp:'Media', note:'Animada, spin-off de Que pasaria si' },
+  { id:74, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Wonder Man', year:2025, imp:'Media' },
   // ══════════ EXT: DAREDEVIL NETFLIX (antes de Born Again) ══════════
   {
     id:46, phase:'Extendido', kind:'ext', type:'Serie', title:'Daredevil — Temporada 1 (Netflix)', year:2015, imp:'Crucial',
@@ -411,6 +432,10 @@ const LIST = [
   // ══════════ FASE 6 ══════════
   { id:50, phase:'Fase 6', kind:'mcu', type:'Película', title:'Los 4 Fantásticos: primeros pasos', year:2025, imp:'Crucial' },
   { id:51, phase:'Fase 6', kind:'mcu', type:'Serie', title:'Daredevil: Born Again (Temp 1 y 2)', year:'2025-2026', imp:'Media' },
+  { id:75, phase:'Fase 6', kind:'mcu', type:'Serie', title:'The Punisher: One Last Kill', year:2026, imp:'Media', note:'Especial. Prepara a Frank Castle para Brand New Day' },
+  { id:76, phase:'Fase 6', kind:'mcu', type:'Serie', title:'X-Men \'97 (T2)', year:2026, imp:'Media', note:'Apocalipsis y tres lineas temporales' },
+  { id:77, phase:'Fase 6', kind:'mcu', type:'Serie', title:'Tu amistoso vecino Spider-Man (T2)', year:2026, imp:'Media' },
+  { id:78, phase:'Fase 6', kind:'mcu', type:'Serie', title:'VisionQuest', year:2026, imp:'Crucial', note:'Cierra la trilogia WandaVision - Agatha - Vision' },
   { id:52, phase:'Fase 6', kind:'mcu', type:'Película', title:'Spider-Man: Brand New Day', year:2026, imp:'Crucial' },
   { id:53, phase:'Fase 6', kind:'mcu', type:'Película', title:'Avengers: Doomsday', year:2026, imp:'Crucial', dday:true },
 ];
@@ -663,7 +688,13 @@ window.Theme = (() => {
     [/capitana marvel|marvels/i,             ['#E63946','#3A86FF','cosmic']],
     [/guardianes|galaxia/i,                  ['#B5179E','#2FBF71','cosmic']],
     [/eternals|eternos/i,                    ['#D4A017','#4361EE','cosmic']],
-    [/what if|y si/i,                        ['#7209B7','#4CC9F0','cosmic']],
+    [/what if|pasar[ií]a si/i,                 ['#7209B7','#4CC9F0','cosmic']],
+    [/viuda negra|black widow/i,             ['#C1121F','#1B1B1E','slashfx']],
+    [/werewolf|hombre lobo/i,                ['#8B8B8B','#1B1B1E','slashfx']],
+    [/marvel zombies/i,                      ['#6A994E','#1B1B1E','slashfx']],
+    [/ironheart/i,                           ['#C1121F','#FFB703','reactor']],
+    [/wonder man/i,                          ['#D4A017','#B5179E','glyph']],
+    [/visionquest|vision quest/i,            ['#EDF2F4','#C1121F','runes']],
     [/hulk/i,                                ['#6A994E','#7209B7','slashfx']],
     [/x-?men|logan|lobezno/i,                ['#FFB703','#1D3557','slashfx']],
     [/deadpool/i,                            ['#C1121F','#1B1B1E','slashfx']],
