@@ -264,6 +264,15 @@ header h1 span{transition:color .8s ease}
   .fx-rise{animation:rise 9s linear infinite}
   .fx-sway{animation:sway 7s ease-in-out infinite}
 }
+
+/* ══ ATMOSFERA: profundidad para todas las escenas ══ */
+.ambient::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 78% 66% at 50% 46%, transparent 34%, rgba(5,5,12,.55) 78%, rgba(5,5,12,.85) 100%)}
+.ambient::before{content:'';position:absolute;left:0;right:0;bottom:0;height:42%;pointer-events:none;
+  background:linear-gradient(to top, rgba(5,5,12,.5), transparent)}
+.fx{opacity:0}
+.fx.on{opacity:.68}
+@media (max-width:760px){ .fx.on{opacity:.5} }
 </style>
 </head>
 <body>
@@ -1223,6 +1232,115 @@ window.Theme = (() => {
     for (let i = 0; i < 18; i++) s += RA(rr(0, 1000), rr(560, 700), 6, 6, 'f', rr(.3, .85).toFixed(2), 'fx-rise', rr(6, 12).toFixed(1), (-rr(0, 10)).toFixed(1));
     return s;
   };
+  // AZOTEAS: tejados nocturnos, tanques de agua y antenas
+  SCENE.rooftop = function () {
+    let s = sky(220);
+    s += skyline(430, 8, 18, 'fd', .45, true);
+    let x = -40;
+    while (x < 1040) {
+      const w = ri(14, 26) * 8, h = ri(10, 22) * 8, top = 700 - h;
+      s += R(x, top, w, h, 'fd', .93) + R(x - 8, top, w + 16, 12, 'f2', .45);
+      for (let wy = top + 60; wy < 690; wy += 46) for (let wx = x + 16; wx < x + w - 16; wx += 36) if (rn() > .5) s += R(wx, wy, 12, 18, 'f', rr(.2, .7).toFixed(2));
+      if (rn() > .45) { const tx = x + ri(2, 8) * 8; s += R(tx, top - 56, 56, 48, 'fd', .95) + R(tx - 6, top - 60, 68, 8, 'f2', .55); for (let k = 0; k < 3; k++) s += R(tx + 4 + k * 20, top - 8, 8, 12, 'fd', .95); }
+      if (rn() > .5) { const ax = x + ri(6, 14) * 8; s += R(ax, top - 90, 6, 90, 'f2', .6); for (let k = 1; k < 4; k++) s += R(ax - k * 6, top - 90 + k * 18, 6 + k * 12, 5, 'f2', .45); s += RA(ax - 4, top - 100, 14, 14, 'f', '.9', 'fx-flick', '3', rn().toFixed(1)); }
+      if (rn() > .6) s += R(x + ri(3, 10) * 8, top - 30, ri(3, 6) * 8, 30, 'fd', .95);
+      x += w + ri(1, 3) * 8;
+    }
+    for (let i = 0; i < 18; i++) s += RA(rr(0, 1000), rr(60, 300), 4, 4, 'f', rr(.2, .6).toFixed(2), 'fx-twk', rr(2, 5).toFixed(1), rr(0, 4).toFixed(1));
+    return s;
+  };
+
+  // NAVE: interior gotico con vitrales y columnas
+  SCENE.church = function () {
+    let s = R(0, 0, 1000, 700, 'fd', .55);
+    for (let i = 0; i < 5; i++) {
+      const x = 40 + i * 230;
+      s += R(x, 120, 34, 500, 'fd', .92) + R(x - 10, 108, 54, 16, 'f2', .45) + R(x - 10, 612, 54, 16, 'f2', .45);
+    }
+    for (let i = 0; i < 4; i++) {
+      const cx = 190 + i * 230, w = 120, top = 150;
+      s += '<path class="ln" d="M' + (cx - w / 2) + ' 420 L' + (cx - w / 2) + ' ' + (top + 60) + ' Q' + cx + ' ' + (top - 40) + ' ' + (cx + w / 2) + ' ' + (top + 60) + ' L' + (cx + w / 2) + ' 420" stroke-width="6" opacity=".6" fill="none"/>';
+      for (let r = 0; r < 6; r++) for (let c = 0; c < 4; c++) {
+        const px = cx - w / 2 + 12 + c * 24, py = top + 76 + r * 54;
+        if (py < 410) s += R(px, py, 20, 44, r % 2 ? 'f' : 'f2', rr(.18, .55).toFixed(2));
+      }
+      s += '<path class="f" d="M' + (cx - w / 2) + ' 420 L' + (cx - w) + ' 700 L' + (cx + w) + ' 700 L' + (cx + w / 2) + ' 420 Z" opacity=".05" stroke="none"/>';
+    }
+    s += '<g class="fx-spin" transform="translate(500 110)">';
+    for (let i = 0; i < 24; i++) { const a = (i / 24) * 6.283; s += R(Math.cos(a) * 66 - 4, Math.sin(a) * 66 - 4, i % 3 ? 6 : 12, i % 3 ? 6 : 12, 'f', i % 3 ? .35 : .8); }
+    s += '</g>';
+    s += R(0, 620, 1000, 80, 'fd', .85) + R(0, 614, 1000, 8, 'f2', .3);
+    for (let x = 0; x < 1000; x += 64) s += R(x, 628, 48, 8, 'f2', .12);
+    for (let i = 0; i < 8; i++) { const x = 120 + i * 110; s += R(x, 540, 80, 14, 'fd', .9) + R(x + 6, 554, 8, 60, 'fd', .9); }
+    return s;
+  };
+
+  // NIEVE: bosque nevado, ventisca y luces lejanas
+  SCENE.snow = function () {
+    let s = R(0, 0, 1000, 700, 'fd', .42);
+    for (let i = 0; i < 5; i++) s += R(0, 20 + i * 28, 1000, 28, 'f2', (.12 - i * .018).toFixed(2));
+    s += ridge(400, 80, 40, 'fd', '.45', 260) + ridge(470, 56, 40, 'fd', '.7', 60);
+    for (let l = 0; l < 2; l++) {
+      const base = 520 + l * 60, sc = 1 + l * .5;
+      for (let x = -40; x < 1040; x += ri(6, 12) * 8) {
+        const h = ri(10, 20) * 8 * sc;
+        s += '<path class="fd" d="M' + x + ' ' + base + ' L' + (x + 26 * sc) + ' ' + (base - h) + ' L' + (x + 52 * sc) + ' ' + base + ' Z" opacity="' + (.55 + l * .3).toFixed(2) + '" stroke="none"/>';
+      }
+    }
+    s += R(0, 578, 1000, 122, 'f2', .16) + R(0, 574, 1000, 8, 'f', .2);
+    for (let i = 0; i < 6; i++) { const x = rr(100, 900); s += RA(x, rr(430, 520), 10, 12, 'f', rr(.4, .9).toFixed(2), 'fx-flick', rr(3, 6).toFixed(1), rn().toFixed(1)); }
+    for (let i = 0; i < 120; i++) s += RA(rr(0, 1000), rr(-200, 60), ri(1, 2) * 4, ri(1, 2) * 4, 'f', rr(.25, .8).toFixed(2), 'fx-fall', rr(2.2, 4.5).toFixed(2), (-rr(0, 4)).toFixed(2));
+    return s;
+  };
+
+  // OFICINA: pasillo corporativo infinito con puertas y reloj
+  SCENE.office = function () {
+    let s = R(0, 0, 1000, 700, 'fd', .5);
+    for (let d = 5; d >= 1; d--) {
+      const k = d / 5, w = 1000 * k, h = 620 * k, x = 500 - w / 2, y = 340 - h / 2;
+      s += '<rect class="fd" x="' + g8(x) + '" y="' + g8(y) + '" width="' + g8(w) + '" height="' + g8(h) + '" opacity="' + (.2 + (1 - k) * .5).toFixed(2) + '"/>';
+      s += '<rect class="ln" x="' + g8(x) + '" y="' + g8(y) + '" width="' + g8(w) + '" height="' + g8(h) + '" stroke-width="2" opacity="' + (.5 - d * .06).toFixed(2) + '" fill="none"/>';
+      if (d > 1) {
+        const dh = h * .34, dw = w * .06;
+        s += R(x + w * .06, y + h - dh, dw, dh, 'f2', (.5 - d * .05).toFixed(2));
+        s += R(x + w * .88, y + h - dh, dw, dh, 'f2', (.5 - d * .05).toFixed(2));
+        s += R(x + w * .2, y + 10, w * .1, 10, 'f', (.4 - d * .05).toFixed(2));
+        s += R(x + w * .7, y + 10, w * .1, 10, 'f', (.4 - d * .05).toFixed(2));
+      }
+    }
+    s += '<g transform="translate(500 320)">';
+    for (let i = 0; i < 36; i++) { const a = (i / 36) * 6.283, big = i % 3 === 0; s += R(Math.cos(a) * 96 - 4, Math.sin(a) * 96 - 4, big ? 10 : 5, big ? 10 : 5, 'f', big ? .85 : .35); }
+    s += '<g class="fx-tick">' + R(-4, -74, 8, 76, 'f', .9) + '</g>';
+    s += '<g class="fx-tick2">' + R(-4, -52, 8, 54, 'f2', .8) + '</g>';
+    s += R(-8, -8, 16, 16, 'f', 1) + '</g>';
+    for (let y = 40; y < 660; y += 10) s += R(0, y, 1000, 2, 'f', .07);
+    s += '<g class="fx-scan">' + R(0, -14, 1000, 4, 'f', .22) + '</g>';
+    return s;
+  };
+
+  // CARRETERA: ruta desierta al atardecer con postes
+  SCENE.road = function () {
+    let s = '';
+    for (let i = 0; i < 9; i++) s += R(0, i * 34, 1000, 34, 'f', (.28 - i * .028).toFixed(2));
+    s += '<g class="fx-glow">';
+    for (let r = 0; r < 10; r++) { const w = Math.round(Math.sqrt(100 - r * r) * 11 / 8) * 8; s += R(500 - w, 330 + r * 8, w * 2, 8, 'f2', (.45 - r * .04).toFixed(2)); if (r) s += R(500 - w, 330 - r * 8, w * 2, 8, 'f2', (.45 - r * .04).toFixed(2)); }
+    s += '</g>';
+    s += ridge(400, 44, 40, 'fd', '.5', 180);
+    s += '<path class="fd" d="M420 400 L0 700 L1000 700 L580 400 Z" opacity=".85" stroke="none"/>';
+    for (let i = 0; i < 9; i++) {
+      const t = i / 9, y = 400 + t * 300, w = 8 + t * 40, h = 6 + t * 26;
+      s += R(500 - w / 2, y, w, h, 'f', (.35 + t * .5).toFixed(2));
+    }
+    for (let i = 0; i < 7; i++) {
+      const t = i / 7, y = 410 + t * 280, sc = .3 + t, sx = 500 - (140 + t * 460);
+      s += R(sx, y - 120 * sc, 8 * sc + 4, 120 * sc, 'fd', (.5 + t * .4).toFixed(2));
+      s += R(sx - 20 * sc, y - 120 * sc, 44 * sc, 8 * sc + 3, 'fd', (.5 + t * .4).toFixed(2));
+      s += R(500 + (140 + t * 460), y - 120 * sc, 8 * sc + 4, 120 * sc, 'fd', (.5 + t * .4).toFixed(2));
+    }
+    for (let i = 0; i < 12; i++) s += R(rr(0, 380), rr(420, 690), ri(1, 3) * 8, 10, 'fd', rr(.4, .8).toFixed(2));
+    for (let i = 0; i < 12; i++) s += R(rr(620, 1000), rr(420, 690), ri(1, 3) * 8, 10, 'fd', rr(.4, .8).toFixed(2));
+    return s;
+  };
   const D = ['#E63946', '#9B5DE5', 'deep'];
   const T = [
     [/^Iron Man$|Iron Man \(/i,              ['#FFB703','#C1121F','outpost']],
@@ -1230,6 +1348,11 @@ window.Theme = (() => {
     [/^Iron Man 2/i,                         ['#FFB703','#4CC9F0','dome']],
     [/^Iron Man 3/i,                         ['#F77F00','#C1121F','mansion']],
     [/^Thor$|^Thor \(|^Thor: El mundo/i,     ['#3A86FF','#B5179E','bridge']],
+    [/daredevil|defensores/i,                 ['#8B0000','#EDF2F4','church']],
+    [/viuda negra|black widow/i,              ['#C1121F','#EDF2F4','snow']],
+    [/^loki/i,                                ['#2FBF71','#D4A017','office']],
+    [/logan|lobezno/i,                        ['#FFB703','#8B4513','road']],
+    [/ojo de halc[oó]n|hawkeye|she-hulk|echo/i, ['#7209B7','#F77F00','rooftop']],
     [/primer vengador|first avenger/i,       ['#3A86FF','#C1121F','bunker']],
     [/soldado de invierno|winter soldier/i,  ['#3A86FF','#8B8B8B','carrier']],
     [/^Ant-Man$|^Ant-Man y la avispa$/i,     ['#E63946','#4CC9F0','bedroom']],
