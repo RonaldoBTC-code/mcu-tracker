@@ -315,6 +315,36 @@ header h1 span{transition:color .8s ease}
 .mapsvg .dot.me{fill:var(--red);stroke:#200409}
 .mapsvg .lbl{fill:#93A0C8;font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:1px;font-weight:600}
 .mapsvg{background:#080C1A}
+
+/* ══ MAPA CON ZOOM ══ */
+.zoommap{width:100%;height:min(62vh,540px);border-radius:8px;overflow:hidden;border:1px solid var(--border);
+  filter:saturate(.55) brightness(.78) contrast(1.08)}
+.maphint{font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:9px;line-height:1.6}
+.maphint b{color:var(--text)}
+.pin{width:15px;height:15px;border-radius:50%;cursor:pointer;border:2px solid #0A0F1E;
+  box-shadow:0 0 0 2px rgba(0,0,0,.45);transition:transform .16s ease}
+.pin:hover{transform:scale(1.35)}
+.pin.rodaje{background:var(--red)}
+.pin.ficcion{background:var(--ext)}
+.maplibregl-popup-content{background:var(--panel);color:var(--text);border:1px solid var(--border);
+  border-radius:8px;padding:11px 13px;font-family:'Rajdhani',sans-serif;max-width:250px}
+.maplibregl-popup-tip{border-top-color:var(--panel);border-bottom-color:var(--panel)}
+.maplibregl-popup-close-button{color:var(--muted);font-size:17px;padding:2px 7px}
+.pop b{display:block;font-size:14px;letter-spacing:1px;color:var(--text);margin-bottom:2px}
+.pop-film{display:block;font-size:11px;color:var(--gold);letter-spacing:1.5px;margin-bottom:6px}
+.pop-tag{display:inline-block;font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  padding:2px 7px;border-radius:3px;margin-bottom:6px}
+.pop-tag.rodaje{background:rgba(230,57,70,.18);color:#FF8A94;border:1px solid rgba(230,57,70,.4)}
+.pop-tag.ficcion{background:rgba(155,93,229,.16);color:#C9A6F5;border:1px solid rgba(155,93,229,.4)}
+.pop p{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
+
+/* ══ PESTANAS DEL MODAL ══ */
+.tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tab{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:5px;
+  padding:6px 13px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;cursor:pointer;transition:all .2s}
+.tab:hover{color:var(--text)}
+.tab.sel{background:rgba(230,57,70,.16);border-color:rgba(230,57,70,.45);color:#fff}
 </style>
 </head>
 <body>
@@ -377,7 +407,7 @@ header h1 span{transition:color .8s ease}
 <div class="toast" id="toast"></div>
 
 
-<div class="mapwrap" id="mapwrap"><div class="mapbox"><div class="maphd"><span class="maptitle">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div id="mapbody"></div></div></div>
+<div class="mapwrap" id="mapwrap"><div class="mapbox"><div class="maphd"><span class="maptitle">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
 <footer class="legal">
   <div class="f-row">
     <div class="f-col">
@@ -704,6 +734,7 @@ const CFG = {
   SUPABASE_URL: 'https://apxgkmllektcmrstuirw.supabase.co',
   SUPABASE_ANON_KEY: 'sb_publishable_9uXrFJNgi89niSvsCRlG6g_s7qvBhq6',
   TMDB_TOKEN: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MzkzNTI1MDg5ZThlZTUzZGI3NDJjN2NhNmQxMjFmNyIsIm5iZiI6MTc4NTcxODg1MS41OTAwMDAyLCJzdWIiOiI2YTZmZTg0M2YxY2ZmYTE4NTEzNzg4OGIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.xDTd864EOyuudc91Iw_LYkulL8GVWrlCNayfJTEJygE',
+  MAPTILER_KEY: 'TU_MAPTILER_KEY_OPCIONAL',
   LANG: 'es-ES'
 };
 
@@ -869,6 +900,111 @@ window.Reviews = (() => {
 })();
 
 
+/* ══ ESCENARIOS: lugares reales de rodaje y ubicaciones de la ficcion ══ */
+window.Places = (() => {
+  // [lat, lon, nombre, pelicula, tipo, nota]
+  // tipo: 'rodaje' = se filmo ahi de verdad | 'ficcion' = ahi ocurre en la historia
+  const P = [
+    [51.4826, -0.0077, 'Old Royal Naval College', 'Thor: El mundo oscuro', 'rodaje', 'Batalla final contra Malekith, en Greenwich, Londres'],
+    [54.7733, -1.5764, 'Catedral de Durham', 'Avengers: Endgame', 'rodaje', 'Hizo de palacio de Asgard'],
+    [55.9010, -2.1370, 'St Abbs', 'Avengers: Endgame', 'rodaje', 'Nuevo Asgard. El pueblo puso un cartel de hermanamiento'],
+    [40.7527, -73.9772, 'Grand Central Terminal', 'The Avengers', 'rodaje', 'Vestibulo principal en la Batalla de Nueva York'],
+    [40.7740, -73.9709, 'Bethesda Terrace', 'The Avengers', 'rodaje', 'Thor se lleva a Loki de vuelta a Asgard'],
+    [41.4993, -81.6944, 'Public Square, Cleveland', 'The Avengers', 'rodaje', 'Hizo de Stuttgart cuando Loki somete a la multitud'],
+    [41.5005, -81.6870, 'East 9th Street, Cleveland', 'The Avengers', 'rodaje', 'Vestida de Midtown Manhattan para la batalla final'],
+    [51.5095, -0.0985, 'Millennium Bridge', 'Guardianes de la Galaxia', 'rodaje', 'Calle de Xandar'],
+    [51.1295, 1.3213, 'Castillo de Dover', 'Avengers: Age of Ultron', 'rodaje', 'Base de Hydra en Sokovia'],
+    [52.9700, 0.8100, 'Holkham Beach', 'Deadpool & Wolverine', 'rodaje', 'Combates en el Vacio'],
+    [33.9416, -118.3690, 'Randy\u0027s Donuts', 'Iron Man 2', 'rodaje', 'Tony dentro del donut gigante'],
+    [33.4735, -84.5760, 'Trilith Studios', 'Varias', 'rodaje', 'Antes Pinewood Atlanta. Centro de produccion del MCU'],
+    [33.3968, -84.5963, 'Peachtree City', 'Avengers: Endgame', 'rodaje', 'La sede de SANY America hizo de cuartel de los Vengadores'],
+    [33.3540, -84.6560, 'Sharpsburg, Georgia', 'Avengers: Endgame', 'rodaje', 'La granja de Clint Barton'],
+    [55.9508, -3.1900, 'Edimburgo', 'Avengers: Infinity War', 'rodaje', 'Persecucion de Wanda y Vision por la Royal Mile'],
+    [55.8610, -4.2650, 'Glasgow', 'Avengers: Infinity War', 'rodaje', 'Bothwell Street doblo a Nueva York'],
+    [35.0966, 129.0306, 'Mercado Jagalchi, Busan', 'Black Panther', 'rodaje', 'Casino y persecucion en coche'],
+    [37.4979, 127.0276, 'Seul', 'Avengers: Age of Ultron', 'rodaje', 'Persecucion con el cetro por Gangnam'],
+    [34.0446, -118.2530, 'Los Angeles Theatre', 'Agent Carter', 'rodaje', 'Cine neoyorquino de los anos 40'],
+    [48.7758, 9.1829, 'Stuttgart', 'The Avengers', 'ficcion', 'Loki obliga a la gente a arrodillarse'],
+    [51.4239, 12.2364, 'Aeropuerto de Leipzig', 'Capitan America: Civil War', 'ficcion', 'El enfrentamiento entre los dos equipos'],
+    [59.2675, 10.4076, 'T\u00f8nsberg, Noruega', 'Capitan America: El primer vengador', 'ficcion', 'Donde Hydra encuentra el Teseracto'],
+    [40.7290, -74.0010, 'Bleecker St, Nueva York', 'Doctor Strange', 'ficcion', 'El Sanctum Sanctorum'],
+    [40.7282, -73.7949, 'Queens, Nueva York', 'Spider-Man', 'ficcion', 'El barrio de Peter Parker'],
+    [38.8965, -77.0630, 'Isla Theodore Roosevelt', 'El soldado de invierno', 'ficcion', 'Ubicacion del Triskelion'],
+    [22.2820, 114.1580, 'Hong Kong', 'Doctor Strange', 'ficcion', 'El Sanctum destruido y el tiempo revertido'],
+    [27.7172, 85.3240, 'Katmandu', 'Doctor Strange', 'ficcion', 'Kamar-Taj'],
+    [34.0006, -118.8062, 'Point Dume, Malibu', 'Iron Man 3', 'ficcion', 'El acantilado de la mansion de Stark'],
+    [-1.0000, 30.0000, 'Wakanda', 'Black Panther', 'ficcion', 'Nacion ficticia situada en Africa oriental']
+  ];
+  const list = () => P;
+  const byType = t => P.filter(p => p[4] === t);
+  return { list, byType };
+})();
+
+
+/* ══ MAPA CON ZOOM (MapLibre + OpenFreeMap, sin clave ni tarjeta) ══ */
+window.ZoomMap = (() => {
+  let map = null, loaded = false;
+  const STYLE = () => (CFG.MAPTILER_KEY && CFG.MAPTILER_KEY.indexOf('TU_') === -1)
+    ? 'https://api.maptiler.com/maps/streets-v2-dark/style.json?key=' + CFG.MAPTILER_KEY
+    : 'https://tiles.openfreemap.org/styles/positron';
+
+  function loadLib() {
+    if (loaded) return Promise.resolve();
+    return new Promise((res, rej) => {
+      const css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css';
+      document.head.appendChild(css);
+      const s = document.createElement('script');
+      s.src = 'https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js';
+      s.onload = () => { loaded = true; res(); };
+      s.onerror = () => rej(new Error('no se pudo cargar MapLibre'));
+      document.head.appendChild(s);
+    });
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+
+  async function render(container) {
+    container.innerHTML = '<div id="zoommap" class="zoommap"></div>' +
+      '<p class="maphint">Toca un punto para ver la escena. Acerca hasta el nivel de calle. ' +
+      '<b>Rojo</b> = rodaje real \u00b7 <b>Morado</b> = ubicaci\u00f3n de la historia.</p>';
+    try { await loadLib(); } catch (e) {
+      container.innerHTML = '<p class="prov-none">No se pudo cargar el mapa. Revisa tu conexi\u00f3n.</p>';
+      return;
+    }
+    const el = document.getElementById('zoommap');
+    map = new maplibregl.Map({
+      container: el,
+      style: STYLE(),
+      center: [-20, 30],
+      zoom: 1.4,
+      attributionControl: { compact: true }
+    });
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+
+    window.Places.list().forEach(p => {
+      const [lat, lon, name, film, tipo, nota] = p;
+      const d = document.createElement('div');
+      d.className = 'pin ' + tipo;
+      d.title = name;
+      const pop = new maplibregl.Popup({ offset: 14, closeButton: true }).setHTML(
+        '<div class="pop"><b>' + esc(name) + '</b>' +
+        '<span class="pop-film">' + esc(film) + '</span>' +
+        '<span class="pop-tag ' + tipo + '">' + (tipo === 'rodaje' ? 'Rodaje real' : 'En la historia') + '</span>' +
+        '<p>' + esc(nota) + '</p></div>'
+      );
+      new maplibregl.Marker({ element: d }).setLngLat([lon, lat]).setPopup(pop).addTo(map);
+    });
+
+    // centrar en el pais del usuario si lo conocemos
+    let me = window.Region ? window.Region.get() : null;
+    if ((!me || me === 'GLOBAL') && window.Region && window.Region.detect) me = window.Region.detect();
+    map.once('load', () => { setTimeout(() => map.resize(), 60); });
+  }
+
+  return { render };
+})();
 /* ══ MAPA MUNDIAL ══ */
 window.WorldMap = (() => {
   const C = {
@@ -1349,7 +1485,14 @@ window.CloudSync = (() => {
     if (s) s.onclick = renderForm;
     window.Region.mount(() => window.Providers.repaintAll());
     const mo = document.getElementById('mapOpen'), mc = document.getElementById('mapClose'), mw = document.getElementById('mapwrap');
-    if (mo) mo.onclick = () => window.WorldMap.open();
+    const tc = document.getElementById('tabCom'), te = document.getElementById('tabEsc');
+    const sel = which => {
+      if (tc) tc.classList.toggle('sel', which === 'com');
+      if (te) te.classList.toggle('sel', which === 'esc');
+    };
+    if (mo) mo.onclick = () => { sel('com'); window.WorldMap.open(); };
+    if (tc) tc.onclick = () => { sel('com'); window.WorldMap.open(); };
+    if (te) te.onclick = () => { sel('esc'); window.ZoomMap.render(document.getElementById('mapbody')); };
     if (mc) mc.onclick = () => window.WorldMap.close();
     if (mw) mw.onclick = e => { if (e.target === mw) window.WorldMap.close(); };
     document.addEventListener('keydown', e => { if (e.key === 'Escape') window.WorldMap.close(); });
