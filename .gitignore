@@ -2,3 +2,8 @@
 node_modules/
 .env
 *.local
+
+_audit.ps1
+_*.py
+_*.js
+_bak.html
