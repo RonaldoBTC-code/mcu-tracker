@@ -1028,6 +1028,7 @@ window.ZoomMap = (() => {
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
   async function render(container) {
+    if (map) { try { map.remove(); } catch (e) {} map = null; }
     container.innerHTML = '<div id="zoommap" class="zoommap"></div>' +
       '<p class="maphint">Toca un punto para ver la escena. Acerca hasta el nivel de calle. ' +
       '<b>Rojo</b> = rodaje real \u00b7 <b>Morado</b> = ubicaci\u00f3n de la historia.</p>';
@@ -1047,18 +1048,18 @@ window.ZoomMap = (() => {
       return;
     }
 
+    // el contenedor debe tener su tamano final antes de medir
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
     map = new maplibregl.Map({
       container: el,
       style: STYLE(),
       center: [-20, 25],
       zoom: 1.5,
-      minZoom: 1.2,
       maxZoom: 18,
       renderWorldCopies: false,
       dragRotate: false,
       pitchWithRotate: false,
-      touchZoomRotate: true,
-      maxBounds: [[-180, -72], [180, 84]],
       attributionControl: { compact: true }
     });
     map.touchZoomRotate.disableRotation();
@@ -1091,10 +1092,6 @@ window.ZoomMap = (() => {
     // centrar en el pais del usuario si lo conocemos
     let me = window.Region ? window.Region.get() : null;
     if ((!me || me === 'GLOBAL') && window.Region && window.Region.detect) me = window.Region.detect();
-    const shade = document.createElement('div');
-    shade.className = 'mapshade';
-    el.appendChild(shade);
-
     map.on('error', ev => {
       const msg = (ev && ev.error && ev.error.message) ? ev.error.message : 'error desconocido';
       const hint = container.querySelector('.maphint');
