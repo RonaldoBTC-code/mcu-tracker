@@ -11,7 +11,7 @@ Tres credenciales, todas gratuitas.
 ## 2. Supabase
 
 1. Proyecto gratuito en `supabase.com`
-2. SQL Editor → New query → pegar `supabase-schema.sql` → Run
+2. SQL Editor → New query → pegar los archivos de `supabase/migrations/` en orden → Run
 3. Authentication → Providers → Email: activar
 4. Authentication → URL Configuration → agregar en *Redirect URLs*:
    - `http://localhost:8000`
