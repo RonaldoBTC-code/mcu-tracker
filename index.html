@@ -260,6 +260,53 @@ header h1 span{transition:color .8s ease}
 .row.themed{border-left:2px solid var(--thA);
   background:linear-gradient(90deg,var(--thGlow),transparent 46%)}
 .prog-fill{transition:width .6s cubic-bezier(.22,.61,.36,1)}
+
+/* ══ ESTRELLAS ══ */
+.rate{display:flex;align-items:center;gap:3px;margin-top:6px;min-height:20px}
+.st{cursor:pointer;font-size:15px;line-height:1;color:var(--border);background:none;border:0;padding:0 1px;
+  transition:color .18s ease, transform .14s ease}
+.st.on{color:var(--gold)}
+.rate:hover .st{color:var(--border)}
+.rate .st:hover, .rate .st:hover ~ .st{color:var(--border)}
+.rate:hover .st.hv{color:var(--gold);transform:scale(1.14)}
+.rate-avg{font-size:10px;letter-spacing:2px;color:var(--muted);margin-left:8px;text-transform:uppercase}
+.rate-hint{font-size:10px;letter-spacing:1.5px;color:var(--muted);font-style:italic}
+
+/* ══ MAPA ══ */
+.mapbtn{background:rgba(155,93,229,.14);border:1px solid rgba(155,93,229,.4);color:#C9A6F5;border-radius:5px;
+  padding:6px 12px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;cursor:pointer;transition:background .2s}
+.mapbtn:hover{background:rgba(155,93,229,.28)}
+.mapwrap{position:fixed;inset:0;z-index:80;background:rgba(4,4,10,.92);display:none;
+  align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(3px)}
+.mapwrap.open{display:flex;animation:fadeIn .3s ease both}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.mapbox{width:min(1100px,96vw);max-height:92vh;overflow:auto;background:var(--panel);
+  border:1px solid var(--border);border-radius:10px;padding:18px 20px 22px;position:relative}
+.maphd{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.maptitle{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;letter-spacing:4px;
+  text-transform:uppercase;color:var(--red)}
+.mapclose{background:none;border:1px solid var(--border);color:var(--muted);border-radius:5px;
+  padding:5px 11px;cursor:pointer;font-family:'Rajdhani',sans-serif;font-size:11px;letter-spacing:2px}
+.mapclose:hover{color:var(--text);border-color:var(--red)}
+.mapsvg{width:100%;height:auto;display:block;background:#080810;border:1px solid var(--border);border-radius:8px}
+.mapsvg .grid{stroke:#1E2338;stroke-width:1;fill:none}
+.mapsvg .dot{fill:var(--ext);opacity:.55;transition:opacity .2s}
+.mapsvg .dot.act{fill:var(--gold)}
+.mapsvg .dot.me{fill:var(--red)}
+.mapsvg .lbl{fill:#7A819B;font-family:'Rajdhani',sans-serif;font-size:9px;letter-spacing:1px}
+@keyframes ping{0%{r:6;opacity:.85}100%{r:26;opacity:0}}
+@media (prefers-reduced-motion: no-preference){ .mapsvg .ring{animation:ping 2.6s ease-out infinite} }
+.mapsvg .ring{fill:none;stroke:var(--red);stroke-width:2}
+.mapstats{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+.mstat{flex:1;min-width:150px;background:var(--darker);border:1px solid var(--border);border-radius:7px;padding:11px 13px}
+.mstat b{display:block;font-family:'Rajdhani',sans-serif;font-size:22px;color:var(--text);letter-spacing:1px}
+.mstat span{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+.toplist{margin-top:14px}
+.toprow{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--border);font-size:13px}
+.toprow em{color:var(--gold);font-style:normal;letter-spacing:1px}
+.toprow span{flex:1;color:var(--text)}
+.toprow i{color:var(--muted);font-style:normal;font-size:11px;letter-spacing:1px}
 </style>
 </head>
 <body>
@@ -290,6 +337,7 @@ header h1 span{transition:color .8s ease}
   <span class="cb-sep"></span>
   <label for="cbRegion" style="letter-spacing:2px;text-transform:uppercase;font-size:10px">Pais</label>
   <select class="cb-reg" id="cbRegion"></select>
+  <button class="mapbtn" id="mapOpen">Mapa mundial</button>
 </div>
 <div class="stats">
   <div class="stat"><span class="sn g" id="s-done">0</span><span class="sl">Vistos</span></div>
@@ -320,6 +368,8 @@ header h1 span{transition:color .8s ease}
 <div class="main" id="mc"></div>
 <div class="toast" id="toast"></div>
 
+
+<div class="mapwrap" id="mapwrap"><div class="mapbox"><div class="maphd"><span class="maptitle">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div id="mapbody"></div></div></div>
 <footer class="legal">
   <div class="f-row">
     <div class="f-col">
@@ -584,6 +634,7 @@ function renderList() {
           </div>
           ${m.reason?`<div class="treason">${m.reason}</div>`:''}
           ${m.note?`<div class="treason" style="color:var(--muted)">${m.note}</div>`:''}
+          <div class="rate" data-title="${encodeURIComponent(m.title)}"></div>
           <div class="prov" data-title="${encodeURIComponent(m.title)}" data-year="${m.year}" data-kind="${m.type==='Serie'?'tv':'movie'}"></div>
         </div>
         ${tagHtml}
@@ -603,6 +654,7 @@ function renderList() {
     mc.innerHTML = '<div class="empty vis"><div class="ei">🦸</div><p style="letter-spacing:3px;font-size:12px;text-transform:uppercase">Sin resultados</p></div>';
   }
   if (window.Providers) window.Providers.observe();
+  if (window.Reviews) { window.Reviews.paintAll(); window.Reviews.loadStats(false); }
 }
 
 // Handle sec-rows height for collapse animation
@@ -735,6 +787,173 @@ window.Analytics = (() => {
   }
   document.addEventListener('DOMContentLoaded', () => setTimeout(track, 1200));
   return { track };
+})();
+/* ══ RESENAS ══ */
+window.Reviews = (() => {
+  const KEY_R = 'mcu_reviews';
+  let mine = {};
+  try { mine = JSON.parse(localStorage.getItem(KEY_R) || '{}'); } catch (e) { mine = {}; }
+  let stats = {};
+
+  const sb = () => (window.CloudSync && window.CloudSync.client) ? window.CloudSync.client() : null;
+  const user = () => (window.CloudSync && window.CloudSync.user) ? window.CloudSync.user() : null;
+
+  function saveLocal() { try { localStorage.setItem(KEY_R, JSON.stringify(mine)); } catch (e) {} }
+  const get = t => mine[t] || 0;
+
+  async function set(title, rating) {
+    mine[title] = rating; saveLocal();
+    const c = sb(), u = user();
+    if (!c || !u) { toast('Puntuacion guardada aqui. Inicia sesion para compartirla'); return; }
+    const country = window.Region ? window.Region.get() : null;
+    const { error } = await c.from('reviews').upsert({
+      user_id: u.id, title: title, rating: rating,
+      country: (country && country !== 'GLOBAL' && country.length === 2) ? country : null,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'user_id,title' });
+    toast(error ? 'No se pudo guardar' : 'Puntuacion guardada');
+    if (!error) loadStats(true);
+  }
+
+  async function pullMine() {
+    const c = sb(), u = user();
+    if (!c || !u) return;
+    const { data } = await c.from('reviews').select('title,rating').eq('user_id', u.id);
+    if (!data) return;
+    data.forEach(r => { mine[r.title] = r.rating; });
+    saveLocal();
+    paintAll();
+  }
+
+  async function loadStats(force) {
+    const c = sb();
+    if (!c) return;
+    if (!force && Object.keys(stats).length) return;
+    const { data } = await c.rpc('get_review_stats');
+    if (!data) return;
+    stats = {};
+    data.forEach(r => { stats[r.title] = { avg: Number(r.avg_rating), votes: r.votes }; });
+    paintAll();
+  }
+
+  function paint(el) {
+    const t = decodeURIComponent(el.dataset.title);
+    const mineV = get(t), st = stats[t];
+    let h = '';
+    for (let i = 1; i <= 5; i++) {
+      h += '<button class="st' + (i <= mineV ? ' on' : '') + '" data-v="' + i + '" ' +
+           'aria-label="Puntuar ' + i + ' de 5" title="' + i + '/5">\u2605</button>';
+    }
+    h += st ? '<span class="rate-avg">' + st.avg.toFixed(1) + ' \u00b7 ' + st.votes + ' voto' + (st.votes === 1 ? '' : 's') + '</span>'
+            : (mineV ? '' : '<span class="rate-hint">puntuala</span>');
+    el.innerHTML = h;
+    el.querySelectorAll('.st').forEach(b => {
+      b.onclick = ev => { ev.stopPropagation(); set(t, Number(b.dataset.v)); paintAll(); };
+      b.onmouseenter = () => { const v = Number(b.dataset.v); el.querySelectorAll('.st').forEach(x => x.classList.toggle('hv', Number(x.dataset.v) <= v)); };
+    });
+    el.onmouseleave = () => el.querySelectorAll('.st').forEach(x => x.classList.remove('hv'));
+  }
+
+  function paintAll() { document.querySelectorAll('.rate').forEach(paint); }
+
+  return { paintAll, loadStats, pullMine, get };
+})();
+
+
+/* ══ MAPA MUNDIAL ══ */
+window.WorldMap = (() => {
+  const C = {
+    EC: [-1.8, -78.2, 'Ecuador'], MX: [23.6, -102.5, 'Mexico'], CO: [4.6, -74.3, 'Colombia'],
+    AR: [-34.6, -58.4, 'Argentina'], CL: [-33.4, -70.6, 'Chile'], PE: [-9.2, -75.0, 'Peru'],
+    VE: [6.4, -66.6, 'Venezuela'], BO: [-16.3, -63.6, 'Bolivia'], PY: [-23.4, -58.4, 'Paraguay'],
+    UY: [-32.5, -55.8, 'Uruguay'], CR: [9.7, -83.8, 'Costa Rica'], PA: [8.5, -80.8, 'Panama'],
+    GT: [15.8, -90.2, 'Guatemala'], HN: [15.2, -86.2, 'Honduras'], SV: [13.8, -88.9, 'El Salvador'],
+    NI: [12.9, -85.2, 'Nicaragua'], DO: [18.7, -70.2, 'Rep. Dom.'], CU: [21.5, -77.8, 'Cuba'],
+    PR: [18.2, -66.6, 'Puerto Rico'], ES: [40.4, -3.7, 'Espana'], US: [39.8, -98.6, 'EE.UU.'],
+    CA: [56.1, -106.3, 'Canada'], BR: [-14.2, -51.9, 'Brasil'], GB: [55.4, -3.4, 'Reino Unido'],
+    FR: [46.2, 2.2, 'Francia'], DE: [51.2, 10.5, 'Alemania'], IT: [41.9, 12.6, 'Italia'],
+    PT: [39.4, -8.2, 'Portugal'], NL: [52.1, 5.3, 'P. Bajos'], BE: [50.5, 4.5, 'Belgica'],
+    CH: [46.8, 8.2, 'Suiza'], AT: [47.5, 14.6, 'Austria'], SE: [60.1, 18.6, 'Suecia'],
+    NO: [60.5, 8.5, 'Noruega'], DK: [56.3, 9.5, 'Dinamarca'], FI: [61.9, 25.7, 'Finlandia'],
+    IE: [53.4, -8.2, 'Irlanda'], PL: [51.9, 19.1, 'Polonia'], AU: [-25.3, 133.8, 'Australia'],
+    NZ: [-40.9, 174.9, 'N. Zelanda'], JP: [36.2, 138.3, 'Japon'], KR: [35.9, 127.8, 'Corea'],
+    IN: [20.6, 79.0, 'India'], ID: [-0.8, 113.9, 'Indonesia'], PH: [12.9, 121.8, 'Filipinas'],
+    TH: [15.9, 101.0, 'Tailandia'], SG: [1.4, 103.8, 'Singapur'], ZA: [-30.6, 22.9, 'Sudafrica'],
+    TR: [39.0, 35.2, 'Turquia'], IL: [31.0, 34.9, 'Israel'], AE: [23.4, 53.8, 'Emiratos']
+  };
+  const W = 1000, H = 500;
+  const px = lon => Math.round((lon + 180) / 360 * W);
+  const py = lat => Math.round((90 - lat) / 180 * H);
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+
+  async function open() {
+    const wrap = document.getElementById('mapwrap');
+    if (!wrap) return;
+    wrap.classList.add('open');
+    const body = document.getElementById('mapbody');
+    body.innerHTML = '<p style="color:var(--muted);font-size:12px;letter-spacing:2px">CARGANDO...</p>';
+
+    const c = (window.CloudSync && window.CloudSync.client) ? window.CloudSync.client() : null;
+    let act = [], visits = [];
+    if (c) {
+      const a = await c.rpc('get_country_activity');
+      act = a.data || [];
+      const v = await c.from('site_visits').select('country,hits');
+      visits = v.data || [];
+    }
+    const byC = {};
+    act.forEach(r => { byC[r.country] = { rev: r.reviews, avg: Number(r.avg_rating) }; });
+    const vis = {};
+    visits.forEach(r => { vis[r.country] = (vis[r.country] || 0) + r.hits; });
+
+    const me = window.Region ? window.Region.get() : null;
+    const maxRev = Math.max(1, ...Object.values(byC).map(x => x.rev));
+
+    let s = '<svg class="mapsvg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Mapa de actividad por pais">';
+    for (let x = 0; x <= W; x += 1000 / 12) s += '<line class="grid" x1="' + Math.round(x) + '" y1="0" x2="' + Math.round(x) + '" y2="' + H + '"/>';
+    for (let y = 0; y <= H; y += 500 / 6) s += '<line class="grid" x1="0" y1="' + Math.round(y) + '" x2="' + W + '" y2="' + Math.round(y) + '"/>';
+    s += '<line class="grid" x1="0" y1="' + py(0) + '" x2="' + W + '" y2="' + py(0) + '" stroke="#2A3050" stroke-width="2"/>';
+
+    Object.keys(C).forEach(k => {
+      const [lat, lon, name] = C[k];
+      const x = px(lon), y = py(lat);
+      const d = byC[k], v = vis[k] || 0;
+      const r = d ? 4 + Math.round((d.rev / maxRev) * 9) : (v ? 4 : 2.5);
+      const cls = 'dot' + (d ? ' act' : '') + (k === me ? ' me' : '');
+      const tip = name + (d ? ' \u2014 ' + d.rev + ' resenas \u00b7 ' + d.avg.toFixed(1) + '/5' : (v ? ' \u2014 ' + v + ' visitas' : ' \u2014 sin actividad'));
+      if (k === me) s += '<circle class="ring" cx="' + x + '" cy="' + y + '" r="6"/>';
+      s += '<circle class="' + cls + '" cx="' + x + '" cy="' + y + '" r="' + r + '"><title>' + esc(tip) + '</title></circle>';
+      if (d || k === me) s += '<text class="lbl" x="' + (x + r + 4) + '" y="' + (y + 3) + '">' + esc(name) + '</text>';
+    });
+    s += '</svg>';
+
+    const totRev = act.reduce((a, b) => a + b.reviews, 0);
+    const totVis = Object.values(vis).reduce((a, b) => a + b, 0);
+    s += '<div class="mapstats">' +
+      '<div class="mstat"><b>' + totVis + '</b><span>Visitas totales</span></div>' +
+      '<div class="mstat"><b>' + Object.keys(vis).length + '</b><span>Paises alcanzados</span></div>' +
+      '<div class="mstat"><b>' + totRev + '</b><span>Resenas</span></div>' +
+      '<div class="mstat"><b>' + (me && C[me] ? C[me][2] : '\u2014') + '</b><span>Tu pais</span></div>' +
+      '</div>';
+
+    let top = [];
+    if (c) { const r = await c.rpc('get_review_stats'); top = (r.data || []).filter(x => x.votes >= 1).sort((a, b) => b.avg_rating - a.avg_rating || b.votes - a.votes).slice(0, 8); }
+    if (top.length) {
+      s += '<div class="toplist"><div class="maptitle" style="margin-bottom:6px">Mejor valoradas</div>';
+      top.forEach((t, i) => {
+        s += '<div class="toprow"><em>' + (i + 1) + '</em><span>' + esc(t.title) + '</span>' +
+             '<i>' + Number(t.avg_rating).toFixed(1) + '/5 \u00b7 ' + t.votes + '</i></div>';
+      });
+      s += '</div>';
+    } else {
+      s += '<p style="color:var(--muted);font-size:12px;margin-top:14px;letter-spacing:1px">Todavia no hay resenas. Puntua una pelicula con las estrellas para estrenar el mapa.</p>';
+    }
+    body.innerHTML = s;
+  }
+
+  function close() { const w = document.getElementById('mapwrap'); if (w) w.classList.remove('open'); }
+  return { open, close };
 })();
 window.Backdrop = (() => {
   const CK = 'tmdb_bd_v2';
@@ -1056,6 +1275,7 @@ window.CloudSync = (() => {
     localStorage.setItem(KEY, JSON.stringify(union));
     updateStats(); renderList();
     if (union.length !== cloud.length) push(union);
+    if (window.Reviews) { window.Reviews.pullMine(); window.Reviews.loadStats(true); }
   }
   async function init() {
     if (!configured()) { setState('Progreso guardado solo en este navegador', ''); box().innerHTML = ''; return; }
@@ -1071,9 +1291,14 @@ window.CloudSync = (() => {
     const s = document.getElementById('cbStart');
     if (s) s.onclick = renderForm;
     window.Region.mount(() => window.Providers.repaintAll());
+    const mo = document.getElementById('mapOpen'), mc = document.getElementById('mapClose'), mw = document.getElementById('mapwrap');
+    if (mo) mo.onclick = () => window.WorldMap.open();
+    if (mc) mc.onclick = () => window.WorldMap.close();
+    if (mw) mw.onclick = e => { if (e.target === mw) window.WorldMap.close(); };
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') window.WorldMap.close(); });
     init();
   });
-  return { push };
+  return { push, client: () => sb, user: () => user };
 })();
 
 </script>
