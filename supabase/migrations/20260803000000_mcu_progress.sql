@@ -1,6 +1,4 @@
--- MCU Tracker - progreso en la nube
--- Pegar en Supabase > SQL Editor > Run
-
+-- Progreso del tracker: que titulos vio cada usuario.
 create table if not exists public.mcu_progress (
   user_id    uuid primary key references auth.users(id) on delete cascade,
   watched    text[] not null default '{}',
