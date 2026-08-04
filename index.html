@@ -157,8 +157,7 @@ input.sr:focus{border-color:var(--red)}
   background-size:200% 100%;opacity:.85;transition:background 1s ease}
 
 /* ══ MOTION ══ */
-@keyframes rowIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
-@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes rowIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}100%{background-position:200% 50%}}
 @media (prefers-reduced-motion: no-preference){
   .row{animation:rowIn .32s cubic-bezier(.22,.61,.36,1) both}
   .thbar{animation:shimmer 7s linear infinite}
@@ -207,72 +206,25 @@ footer.legal a:hover{text-decoration:underline}
 
 /* ══ EFECTOS DE AMBIENTE ══ */
 .ambient{overflow:hidden}
-.fx{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .9s ease}
-.fx.on{opacity:.5}
-.fx *{stroke:var(--thA);fill:none;vector-effect:non-scaling-stroke}
 .fx .soft{stroke:var(--thA);opacity:.35}
 .flash{position:fixed;inset:0;z-index:55;pointer-events:none;opacity:0;
   background:radial-gradient(circle at 50% 50%, var(--thA) 0%, transparent 62%)}
-@keyframes flashPop{0%{opacity:0;transform:scale(.85)}22%{opacity:.34}100%{opacity:0;transform:scale(1.25)}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes spinBack{to{transform:rotate(-360deg)}}
-@keyframes pulseR{0%,100%{opacity:.25;transform:scale(.94)}50%{opacity:.8;transform:scale(1.06)}}
-@keyframes dashRun{to{stroke-dashoffset:-260}}
-@keyframes drift{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-42px,-30px,0)}}
-@keyframes slash{0%{stroke-dashoffset:420;opacity:0}35%{opacity:.85}100%{stroke-dashoffset:0;opacity:.2}}
+@keyframes flashPop{0%{opacity:0;transform:scale(.85)}22%{opacity:.34}100%{opacity:0;transform:scale(1.25)}}}}50%{opacity:.8;transform:scale(1.06)}}}100%{transform:translate3d(-42px,-30px,0)}}35%{opacity:.85}100%{stroke-dashoffset:0;opacity:.2}}
 @media (prefers-reduced-motion: no-preference){
   .flash.go{animation:flashPop .85s ease-out}
-  .fx-spin{transform-origin:center;animation:spin 34s linear infinite}
-  .fx-spin-b{transform-origin:center;animation:spinBack 26s linear infinite}
-  .fx-pulse{transform-origin:center;animation:pulseR 3.4s ease-in-out infinite}
-  .fx-dash{stroke-dasharray:14 12;animation:dashRun 3.2s linear infinite}
-  .fx-drift{animation:drift 15s linear infinite alternate}
-  .fx-slash{stroke-dasharray:420;animation:slash 1.5s ease-out forwards}
 }
 .row.themed .ttxt{color:var(--thA);transition:color .5s ease}
 header h1 span{transition:color .8s ease}
 .sn.r{transition:color .8s ease}
 
 /* ══ ESCENAS ══ */
-:root{--thC:#9B5DE5}
-.fx{shape-rendering:crispEdges}
-.fx *{stroke:var(--thA);fill:none;vector-effect:non-scaling-stroke}
-.fx .f{fill:var(--thA);stroke:none}
-.fx .f2{fill:var(--thC);stroke:none}
-.fx .fd{fill:#0A0A12;stroke:none}
-.fx .ln{stroke:var(--thA);fill:none}
-.fx .ln2{stroke:var(--thC);fill:none}
-.fx.on{opacity:.62}
-@keyframes twk{0%,100%{opacity:.15}50%{opacity:.95}}
-@keyframes fall{to{transform:translateY(760px)}}
-@keyframes cross{to{transform:translateX(1180px)}}
-@keyframes glowP{0%,100%{opacity:.3}50%{opacity:.9}}
-@keyframes scan{to{transform:translateY(14px)}}
-@keyframes tick{to{transform:rotate(360deg)}}
-@keyframes flick{0%,92%,100%{opacity:.8}94%{opacity:.15}96%{opacity:.7}}
-@keyframes rise{to{transform:translateY(-720px)}}
-@keyframes sway{0%,100%{transform:translateX(0)}50%{transform:translateX(14px)}}
-@media (prefers-reduced-motion: no-preference){
-  .fx-twk{animation:twk 2.6s ease-in-out infinite}
-  .fx-fall{animation:fall 1.5s linear infinite}
-  .fx-cross{animation:cross 18s linear infinite}
-  .fx-glow{animation:glowP 3.2s ease-in-out infinite}
-  .fx-scan{animation:scan .5s linear infinite}
-  .fx-tick{transform-origin:center;animation:tick 12s steps(24) infinite}
-  .fx-tick2{transform-origin:center;animation:tick 3s steps(12) infinite}
-  .fx-flick{animation:flick 4s linear infinite}
-  .fx-rise{animation:rise 9s linear infinite}
-  .fx-sway{animation:sway 7s ease-in-out infinite}
-}
+:root{--thC:#9B5DE5}50%{opacity:.95}}}}50%{opacity:.9}}}}94%{opacity:.15}96%{opacity:.7}}}50%{transform:translateX(14px)}}
 
 /* ══ ATMOSFERA: profundidad para todas las escenas ══ */
 .ambient::after{content:'';position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(ellipse 78% 66% at 50% 46%, transparent 34%, rgba(5,5,12,.55) 78%, rgba(5,5,12,.85) 100%)}
 .ambient::before{content:'';position:absolute;left:0;right:0;bottom:0;height:42%;pointer-events:none;
   background:linear-gradient(to top, rgba(5,5,12,.5), transparent)}
-.fx{opacity:0}
-.fx.on{opacity:.68}
-@media (max-width:760px){ .fx.on{opacity:.5} }
 
 /* ══ IMAGEN OFICIAL DE FONDO (TMDB) ══ */
 .bdrop{position:absolute;inset:0;background-size:cover;background-position:center;
@@ -282,6 +234,32 @@ header h1 span{transition:color .8s ease}
 @media (max-width:760px){ .bdrop.on{opacity:.20} }
 .bdrop::after{content:'';position:absolute;inset:0;
   background:linear-gradient(to bottom, rgba(5,5,12,.72) 0%, rgba(5,5,12,.42) 38%, rgba(5,5,12,.86) 100%)}
+
+/* ══ FONDO CINEMATICO ══ */
+.bdrop{position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.2s ease;filter:saturate(.8) contrast(1.06)}
+.bdrop.on{opacity:.42}
+@media (max-width:760px){ .bdrop.on{opacity:.28} }
+.bdrop::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(5,5,12,.70) 0%, rgba(5,5,12,.34) 40%, rgba(5,5,12,.88) 100%)}
+@keyframes kb{0%{transform:scale(1.10) translate3d(0,0,0)}50%{transform:scale(1.16) translate3d(-1.6%,-1.2%,0)}100%{transform:scale(1.10) translate3d(0,0,0)}}
+@media (prefers-reduced-motion: no-preference){ .bdrop.on{animation:kb 26s ease-in-out infinite} }
+@media (prefers-reduced-motion: reduce){ .bdrop.on{transform:scale(1.04)} }
+
+/* grano sutil para que la imagen no se vea plana */
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.05;
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.5) 0 1px,transparent 1px 3px)}
+
+/* ══ MOTION DE LA LISTA ══ */
+@keyframes rowIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: no-preference){
+  .row{animation:rowIn .34s cubic-bezier(.22,.61,.36,1) both}
+}
+.row{transition:border-color .35s ease, background .4s ease, transform .2s cubic-bezier(.22,.61,.36,1)}
+.row:hover{transform:translateX(3px)}
+.row.themed{border-left:2px solid var(--thA);
+  background:linear-gradient(90deg,var(--thGlow),transparent 46%)}
+.prog-fill{transition:width .6s cubic-bezier(.22,.61,.36,1)}
 </style>
 </head>
 <body>
@@ -300,7 +278,7 @@ header h1 span{transition:color .8s ease}
   </div>
 </header>
 
-<div class="ambient" id="ambient"><div class="bdrop" id="bdrop"></div><svg class="fx" id="fx" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg></div>
+<div class="ambient" id="ambient"><div class="bdrop" id="bdrop"></div><div class="grain"></div></div>
 <div class="flash" id="flash" aria-hidden="true"></div>
 <div class="thbar" id="thbar"></div>
 <div class="cloudbar" id="cloudbar">
@@ -734,6 +712,30 @@ window.Region = (() => {
       .replace(/\s{2,}/g, ' ')
       .trim();
   };
+/* ══ VISITAS (agregadas por pais, sin IP ni identificacion) ══ */
+window.Analytics = (() => {
+  const KEY_T = 'mcu_tracked_day';
+  async function track() {
+    try {
+      if (!CFG.SUPABASE_URL || CFG.SUPABASE_URL.indexOf('TU-PROYECTO') !== -1) return;
+      const today = new Date().toISOString().slice(0, 10);
+      if (localStorage.getItem(KEY_T) === today) return;
+      let c = window.Region ? window.Region.get() : null;
+      if (!c || c === 'GLOBAL' || c.length !== 2) {
+        try { c = (navigator.language || '').split('-')[1] || null; } catch (e) { c = null; }
+      }
+      if (!c || c.length !== 2) return;
+      const r = await fetch(CFG.SUPABASE_URL + '/rest/v1/rpc/track_visit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', apikey: CFG.SUPABASE_ANON_KEY, Authorization: 'Bearer ' + CFG.SUPABASE_ANON_KEY },
+        body: JSON.stringify({ p_country: c.toUpperCase() })
+      });
+      if (r.ok) localStorage.setItem(KEY_T, today);
+    } catch (e) {}
+  }
+  document.addEventListener('DOMContentLoaded', () => setTimeout(track, 1200));
+  return { track };
+})();
 window.Backdrop = (() => {
   const CK = 'tmdb_bd_v2';
   const TTL = 14 * 24 * 60 * 60 * 1000;
@@ -801,624 +803,7 @@ window.Theme = (() => {
   const rr = (a, b) => a + rn() * (b - a);
   const ri = (a, b) => Math.round(rr(a, b));
   const g8 = v => Math.round(v / 8) * 8;
-  const R = (x, y, w, h, c, o) => '<rect class="' + c + '" x="' + g8(x) + '" y="' + g8(y) + '" width="' + Math.max(4, g8(w)) + '" height="' + Math.max(4, g8(h)) + '"' + (o !== undefined ? ' opacity="' + o + '"' : '') + '/>';
-  const RA = (x, y, w, h, c, o, cls, dur, del) => '<rect class="' + c + ' ' + cls + '" style="animation-duration:' + dur + 's;animation-delay:' + del + 's" x="' + g8(x) + '" y="' + g8(y) + '" width="' + Math.max(2, w) + '" height="' + Math.max(2, h) + '" opacity="' + o + '"/>';
-
-  // cielo estrellado compuesto: banda galactica + cumulos + estrellas sueltas
-  function sky(h) {
-    let s = '';
-    const by = rr(90, 220);
-    for (let i = 0; i < 150; i++) {
-      const t = rn(), x = t * 1000, y = by + Math.sin(t * 3.1) * 60 + rr(-46, 46);
-      s += R(x, y, 4, 4, 'f2', rr(.12, .4).toFixed(2));
-    }
-    for (let c = 0; c < 5; c++) {
-      const cx = rr(80, 920), cy = rr(40, h * .6), n = ri(4, 7);
-      let px = cx, py = cy;
-      for (let i = 0; i < n; i++) {
-        const nx = px + rr(-70, 70), ny = py + rr(-50, 50);
-        s += '<line class="ln" x1="' + g8(px) + '" y1="' + g8(py) + '" x2="' + g8(nx) + '" y2="' + g8(ny) + '" stroke-width="1" opacity=".22"/>';
-        s += RA(nx - 4, ny - 4, 8, 8, 'f', rr(.5, 1).toFixed(2), 'fx-twk', rr(2, 4).toFixed(1), rr(0, 3).toFixed(1));
-        px = nx; py = ny;
-      }
-      s += RA(cx - 6, cy - 6, 12, 12, 'f', '.95', 'fx-twk', '3', rr(0, 2).toFixed(1));
-    }
-    for (let i = 0; i < 55; i++) s += RA(rr(0, 1000), rr(0, h), 4, 4, 'f', rr(.2, .7).toFixed(2), 'fx-twk', rr(2, 5).toFixed(1), rr(0, 4).toFixed(1));
-    return s;
-  }
-
-  // silueta de terreno con capas
-  function ridge(yBase, amp, step, cls, op, seedShift) {
-    let d = 'M0 700';
-    for (let x = 0; x <= 1000; x += step) {
-      const y = yBase - (Math.sin((x + seedShift) / 190) * amp + Math.sin((x + seedShift) / 71) * amp * .35);
-      d += ' L' + x + ' ' + Math.round(y / 8) * 8;
-    }
-    return '<path class="' + cls + '" d="' + d + ' L1000 700 Z" opacity="' + op + '" stroke="none"/>';
-  }
-
-  // horizonte de edificios
-  function skyline(yBase, minH, maxH, cls, op, lit) {
-    let s = '', x = -20;
-    while (x < 1020) {
-      const w = ri(5, 13) * 8, h = ri(minH, maxH) * 8;
-      s += R(x, yBase - h, w, h, cls, op);
-      if (lit) for (let wy = yBase - h + 24; wy < yBase - 16; wy += 32)
-        for (let wx = x + 12; wx < x + w - 12; wx += 28)
-          if (rn() > .58) s += R(wx, wy, 8, 12, 'f', rr(.25, .8).toFixed(2));
-      x += w + ri(1, 2) * 8;
-    }
-    return s;
-  }
-
-  const SCENE = {
-    // TALLER: interior con suelo, mesas, lamparas y nucleo central
-    workshop() {
-      let s = R(0, 0, 1000, 700, 'fd', .28);
-      for (let x = 0; x < 1000; x += 160) s += R(x, 120, 8, 380, 'f2', .18);
-      s += R(0, 500, 1000, 8, 'f', .5) + R(0, 508, 1000, 192, 'fd', .55);
-      for (let x = 40; x < 1000; x += 96) s += R(x, 508, 4, 192, 'f2', .12);
-      for (let i = 0; i < 3; i++) {
-        const x = 150 + i * 320;
-        s += R(x, 60, 8, 90, 'f2', .4) + R(x - 36, 150, 80, 20, 'f', .7);
-        s += '<path class="f" d="M' + (x - 36) + ' 170 L' + (x - 110) + ' 500 L' + (x + 118) + ' 500 L' + (x + 44) + ' 170 Z" opacity=".07" stroke="none"/>';
-      }
-      for (let i = 0; i < 4; i++) {
-        const x = 60 + i * 250, w = ri(12, 18) * 8;
-        s += R(x, 440, w, 12, 'f2', .55) + R(x + 8, 452, 8, 48, 'fd', .8) + R(x + w - 16, 452, 8, 48, 'fd', .8);
-        for (let k = 0; k < ri(2, 4); k++) s += R(x + 16 + k * 34, 416, ri(2, 3) * 8, 24, 'fd', .75);
-      }
-      for (let i = 0; i < 4; i++) {
-        const x = 700 + (i % 2) * 150, y = 120 + Math.floor(i / 2) * 150;
-        s += R(x, y, 128, 96, 'f2', .16) + R(x, y, 128, 6, 'f', .55);
-        for (let l = 0; l < 4; l++) s += R(x + 12, y + 24 + l * 16, ri(4, 12) * 8, 6, 'f', rr(.25, .6).toFixed(2));
-      }
-      s += '<g class="fx-glow" transform="translate(500 330)">';
-      for (let r = 1; r <= 7; r++) {
-        const w = r * 40;
-        s += R(-w / 2, -w / 2, w, 8, r % 2 ? 'f' : 'f2', (.85 - r * .09).toFixed(2));
-        s += R(-w / 2, w / 2 - 8, w, 8, r % 2 ? 'f' : 'f2', (.85 - r * .09).toFixed(2));
-        s += R(-w / 2, -w / 2, 8, w, r % 2 ? 'f' : 'f2', (.85 - r * .09).toFixed(2));
-        s += R(w / 2 - 8, -w / 2, 8, w, r % 2 ? 'f' : 'f2', (.85 - r * .09).toFixed(2));
-      }
-      return s + R(-16, -16, 32, 32, 'f', 1) + '</g>';
-    },
-
-    // TORRE: skyline con torre central y portal en el cielo
-    tower() {
-      let s = sky(320);
-      s += '<g class="fx-spin" transform="translate(500 180)">';
-      for (let i = 0; i < 40; i++) { const a = (i / 40) * 6.283; s += R(Math.cos(a) * 130 - 5, Math.sin(a) * 130 - 5, i % 3 ? 8 : 16, i % 3 ? 8 : 16, i % 3 ? 'f2' : 'f', i % 3 ? .45 : .9); }
-      s += '</g>';
-      s += '<g class="fx-glow">' + R(484, 180, 32, 260, 'f', .55) + R(492, 180, 16, 260, 'f2', .8) + '</g>';
-      s += skyline(700, 14, 30, 'fd', .85, true);
-      s += R(440, 260, 120, 440, 'fd', .95) + R(440, 260, 120, 8, 'f', .8);
-      for (let y = 292; y < 690; y += 40) for (let x = 456; x < 552; x += 32) if (rn() > .35) s += R(x, y, 12, 16, 'f', rr(.3, .9).toFixed(2));
-      s += R(472, 210, 56, 52, 'fd', .95) + R(488, 176, 24, 36, 'f2', .7);
-      return s;
-    },
-
-    // RUINAS: templo alienigena con columnas y charcos luminosos
-    ruins() {
-      let s = sky(360);
-      s += ridge(470, 70, 40, 'fd', '.5', 400) + ridge(540, 50, 40, 'f2', '.28', 120);
-      for (let i = 0; i < 5; i++) {
-        const x = 90 + i * 200, h = ri(20, 34) * 8, brk = rn() > .5;
-        s += R(x, 620 - h, 56, h, 'fd', .9) + R(x - 8, 620 - h, 72, 12, 'f2', .5);
-        if (!brk) s += R(x - 12, 604 - h, 80, 12, 'f', .35);
-        for (let k = 0; k < 4; k++) s += R(x + 8, 620 - h + 30 + k * 44, 40, 6, 'f', .18);
-      }
-      s += '<path class="f" d="M170 340 L170 300 L390 300 L390 340" opacity=".4" stroke-width="10" fill="none"/>';
-      s += R(0, 616, 1000, 84, 'fd', .8);
-      for (let i = 0; i < 7; i++) {
-        const x = rr(40, 900), w = ri(6, 14) * 8;
-        s += RA(x, 640 + rn() * 40, w, 12, 'f', rr(.35, .8).toFixed(2), 'fx-glow', rr(2.4, 4).toFixed(1), rr(0, 3).toFixed(1));
-      }
-      return s;
-    },
-
-    // ARENA: graderias, arcos y cielo de neon
-    arena() {
-      let s = R(0, 0, 1000, 700, 'fd', .22);
-      for (let i = 0; i < 5; i++) s += R(0, 40 + i * 26, 1000, 10, 'f2', (.3 - i * .05).toFixed(2));
-      for (let t = 0; t < 4; t++) {
-        const y = 250 + t * 46, op = (.3 + t * .16).toFixed(2);
-        s += R(0, y, 1000, 46, 'fd', op);
-        for (let x = 0; x < 1000; x += 16) if (rn() > .3) s += R(x, y + ri(1, 3) * 8, 10, 14, 'f', rr(.12, .38).toFixed(2));
-      }
-      for (let i = 0; i < 6; i++) {
-        const x = 20 + i * 168;
-        s += R(x, 200, 24, 240, 'fd', .9) + R(x, 176, 24, 24, 'f2', .55);
-        s += '<path class="fd" d="M' + (x + 24) + ' 224 Q' + (x + 84) + ' 176 ' + (x + 144) + ' 224 L' + (x + 144) + ' 200 Q' + (x + 84) + ' 152 ' + (x + 24) + ' 200 Z" opacity=".85" stroke="none"/>';
-      }
-      s += R(0, 434, 1000, 12, 'f', .6) + R(0, 446, 1000, 254, 'fd', .5);
-      s += '<ellipse cx="500" cy="590" rx="360" ry="96" class="ln" stroke-width="6" opacity=".35" fill="none"/>';
-      for (let i = 0; i < 26; i++) s += RA(rr(60, 940), rr(470, 700), 6, 6, 'f', rr(.3, .9).toFixed(2), 'fx-rise', rr(6, 12).toFixed(1), (-rr(0, 10)).toFixed(1));
-      return s;
-    }
-  };
-
-  // DUNAS: planeta desertico con lunas agrietadas
-  SCENE.dunes = function () {
-    let s = sky(300);
-    for (let i = 0; i < 3; i++) {
-      const cx = 180 + i * 320, cy = rr(90, 190), rad = ri(5, 11) * 8;
-      for (let r = 0; r < rad / 8; r++) {
-        const w = Math.round(Math.sqrt((rad / 8) * (rad / 8) - r * r)) * 8;
-        s += R(cx - w, cy + r * 8, w * 2, 8, r % 3 ? 'f2' : 'f', (.5 - r * .02).toFixed(2));
-        if (r) s += R(cx - w, cy - r * 8, w * 2, 8, r % 3 ? 'f2' : 'f', (.5 - r * .02).toFixed(2));
-      }
-      s += R(cx - 4, cy - rad, 8, rad * 2, 'fd', .55);
-      s += R(cx - rad, cy - 8, rad * 2, 8, 'fd', .35);
-    }
-    for (let l = 0; l < 4; l++) s += ridge(430 + l * 70, 46 + l * 14, 40, l % 2 ? 'f' : 'f2', (.28 + l * .18).toFixed(2), l * 260);
-    for (let i = 0; i < 14; i++) s += R(rr(0, 1000), rr(520, 690), ri(1, 3) * 8, 8, 'fd', rr(.4, .8).toFixed(2));
-    return s;
-  };
-
-  // BATALLA: ruinas, lluvia y tunel de portal
-  SCENE.battle = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .3);
-    for (let i = 0; i < 6; i++) s += R(0, 30 + i * 34, 1000, 14, 'f2', (.16 - i * .02).toFixed(2));
-    s += '<g class="fx-spin" transform="translate(500 300)">';
-    for (let k = 1; k <= 5; k++) { const rd = k * 34; for (let i = 0; i < 20; i++) { const a = (i / 20) * 6.283 + k; s += R(Math.cos(a) * rd - 4, Math.sin(a) * rd - 4, 8, 8, k % 2 ? 'f' : 'f2', (.9 - k * .12).toFixed(2)); } }
-    s += '</g>' + '<g class="fx-glow">' + R(476, 276, 48, 48, 'f', .9) + '</g>';
-    let x = -20;
-    while (x < 1020) {
-      const w = ri(6, 14) * 8, h = ri(8, 26) * 8, jag = ri(1, 4) * 8;
-      s += R(x, 620 - h, w, h + 8, 'fd', .92);
-      s += R(x, 620 - h, w - jag, 8, 'f', .3);
-      for (let wy = 620 - h + 32; wy < 610; wy += 40) for (let wx = x + 12; wx < x + w - 12; wx += 30) if (rn() > .6) s += R(wx, wy, 10, 14, 'f', rr(.15, .5).toFixed(2));
-      x += w + ri(1, 3) * 8;
-    }
-    s += R(0, 620, 1000, 80, 'fd', .75);
-    for (let i = 0; i < 12; i++) s += R(rr(0, 1000), rr(628, 680), ri(2, 6) * 8, 10, 'fd', .9);
-    for (let i = 0; i < 80; i++) s += RA(rr(0, 1000), rr(-180, 80), 2, ri(16, 32), 'f', rr(.15, .5).toFixed(2), 'fx-fall', rr(.6, 1.3).toFixed(2), (-rr(0, 2)).toFixed(2));
-    return s;
-  };
-
-  // CIUDAD: skyline al atardecer, andamio y grietas en el cielo
-  SCENE.city = function () {
-    let s = '';
-    for (let i = 0; i < 7; i++) s += R(0, 40 + i * 30, 1000, 30, 'f2', (.22 - i * .028).toFixed(2));
-    for (let i = 0; i < 4; i++) {
-      let px = rr(100, 900), py = rr(40, 150), d = 'M' + g8(px) + ' ' + g8(py);
-      for (let k = 0; k < 5; k++) { px += rr(-90, 90); py += rr(20, 60); d += ' L' + g8(px) + ' ' + g8(py); }
-      s += '<path class="ln fx-flick" style="animation-delay:' + (i * .9).toFixed(1) + 's" d="' + d + '" stroke-width="4" opacity=".55" fill="none"/>';
-    }
-    s += skyline(700, 12, 26, 'fd', .7, true);
-    const bx = 700;
-    s += R(bx, 250, 120, 450, 'fd', .95);
-    for (let y = 250; y < 700; y += 40) s += R(bx - 12, y, 144, 6, 'f2', .45);
-    for (let k = 0; k < 4; k++) s += R(bx - 12 + k * 48, 250, 6, 450, 'f2', .45);
-    s += '<g transform="translate(0 0)">';
-    for (let i = 0; i <= 7; i++) { const a = (Math.PI / 2) * (i / 7); s += '<line class="ln" x1="0" y1="0" x2="' + Math.round(Math.cos(a) * 700) + '" y2="' + Math.round(Math.sin(a) * 700) + '" stroke-width="2" opacity=".3"/>'; }
-    for (let rd = 120; rd <= 620; rd += 100) s += '<path class="ln" d="M' + rd + ' 0 A' + rd + ' ' + rd + ' 0 0 1 0 ' + rd + '" stroke-width="2" opacity=".2" fill="none"/>';
-    return s + '</g>';
-  };
-
-  // JUNGLA: dosel en capas y piramide escalonada
-  SCENE.jungle = function () {
-    let s = sky(240);
-    const px = 500, steps = 7;
-    for (let i = 0; i < steps; i++) {
-      const w = 120 + i * 70, y = 620 - (steps - i) * 34;
-      s += R(px - w / 2, y, w, 34, 'fd', .9) + R(px - w / 2, y, w, 6, 'f', (.5 - i * .05).toFixed(2));
-    }
-    s += R(px - 24, 300, 48, 48, 'f2', .7);
-    for (let l = 0; l < 3; l++) {
-      let d = 'M0 700';
-      for (let x = 0; x <= 1000; x += 32) d += ' L' + x + ' ' + g8(700 - l * 46 - Math.abs(Math.sin((x + l * 130) / 120)) * (110 + l * 46));
-      s += '<path class="' + (l % 2 ? 'f2' : 'fd') + '" d="' + d + ' L1000 700 Z" opacity="' + (.5 + l * .18).toFixed(2) + '" stroke="none"/>';
-    }
-    for (let i = 0; i < 30; i++) s += RA(rr(0, 1000), rr(560, 720), 6, 6, 'f', rr(.4, .95).toFixed(2), 'fx-rise', rr(6, 12).toFixed(1), (-rr(0, 9)).toFixed(1));
-    return s;
-  };
-
-  // RETRO: monitor CRT con reloj y rejilla de horizonte
-  SCENE.retro = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .42);
-    s += R(24, 24, 952, 652, 'f2', .12) + R(24, 24, 952, 8, 'f', .5) + R(24, 668, 952, 8, 'f', .5) + R(24, 24, 8, 652, 'f', .5) + R(968, 24, 8, 652, 'f', .5);
-    for (let y = 32; y < 668; y += 12) s += R(32, y, 936, 2, 'f', .1);
-    s += '<g class="fx-scan">' + R(32, -14, 936, 4, 'f', .28) + '</g>';
-    s += '<g transform="translate(500 300)">';
-    for (let i = 0; i < 48; i++) { const a = (i / 48) * 6.283, big = i % 4 === 0; s += R(Math.cos(a) * 176 - 4, Math.sin(a) * 176 - 4, big ? 14 : 6, big ? 14 : 6, 'f', big ? .9 : .4); }
-    for (let i = 0; i < 12; i++) { const a = (i / 12) * 6.283 - 1.5708; s += R(Math.cos(a) * 144 - 5, Math.sin(a) * 144 - 5, 10, 10, 'f2', .55); }
-    s += '<g class="fx-tick">' + R(-5, -132, 10, 134, 'f', .9) + '</g>';
-    s += '<g class="fx-tick2">' + R(-5, -92, 10, 94, 'f2', .85) + '</g>';
-    s += R(-12, -12, 24, 24, 'f', 1) + '</g>';
-    for (let x = 40; x <= 960; x += 64) s += '<line class="ln" x1="' + x + '" y1="540" x2="' + (x < 500 ? x - 420 : x + 420) + '" y2="668" stroke-width="2" opacity=".3"/>';
-    let gy = 540;
-    for (let k = 0; k < 8; k++) { s += '<line class="ln" x1="32" y1="' + Math.round(gy) + '" x2="968" y2="' + Math.round(gy) + '" stroke-width="2" opacity="' + (.14 + k * .03).toFixed(2) + '"/>'; gy += 6 + k * 3.4; }
-    for (let k = 0; k < 3; k++) s += R(56, 56 + k * 22, ri(4, 14) * 8, 10, 'f', rr(.3, .7).toFixed(2));
-    return s;
-  };
-
-  // MISTICO: circulos de runas, arcos y fragmentos flotantes
-  SCENE.mystic = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .2);
-    for (let i = 0; i < 3; i++) {
-      const cx = 200 + i * 300, h = ri(24, 34) * 8;
-      s += '<path class="fd" d="M' + (cx - 70) + ' 700 L' + (cx - 70) + ' ' + (700 - h) + ' Q' + cx + ' ' + (700 - h - 90) + ' ' + (cx + 70) + ' ' + (700 - h) + ' L' + (cx + 70) + ' 700 Z" opacity=".55" stroke="none"/>';
-    }
-    s += '<g class="fx-spin" transform="translate(500 320)">';
-    for (let i = 0; i < 56; i++) { const a = (i / 56) * 6.283, big = i % 7 === 0; s += R(Math.cos(a) * 236 - 4, Math.sin(a) * 236 - 4, big ? 16 : 6, big ? 16 : 6, 'f', big ? .9 : .38); }
-    s += '</g><g class="fx-spin-b" transform="translate(500 320)">';
-    for (let i = 0; i < 28; i++) { const a = (i / 28) * 6.283; s += R(Math.cos(a) * 158 - 5, Math.sin(a) * 158 - 5, 10, 10, 'f2', .6); }
-    for (let i = 0; i < 8; i++) { const a = (i / 8) * 6.283; s += '<line class="ln" x1="' + Math.round(Math.cos(a) * 96) + '" y1="' + Math.round(Math.sin(a) * 96) + '" x2="' + Math.round(Math.cos(a) * 152) + '" y2="' + Math.round(Math.sin(a) * 152) + '" stroke-width="3" opacity=".5"/>'; }
-    s += '</g>';
-    for (let i = 0; i < 18; i++) s += RA(rr(0, 1000), rr(0, 700), ri(1, 3) * 8, 8, 'f2', rr(.3, .75).toFixed(2), 'fx-sway', rr(5, 9).toFixed(1), (-rr(0, 7)).toFixed(1));
-    return s;
-  };
-
-  // CALLEJON: dos muros, escalera de incendios, neon y lluvia
-  SCENE.alley = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .5);
-    for (let i = 0; i < 5; i++) s += R(0, 20 + i * 26, 1000, 12, 'f2', (.14 - i * .02).toFixed(2));
-    s += R(0, 0, 300, 700, 'fd', .92) + R(292, 0, 8, 700, 'f', .3);
-    s += R(720, 0, 280, 700, 'fd', .92) + R(720, 0, 8, 700, 'f', .3);
-    for (let y = 120; y < 620; y += 120) {
-      s += R(300, y, 96, 8, 'f2', .5) + R(300, y - 44, 8, 44, 'f2', .35) + R(388, y - 44, 8, 44, 'f2', .35);
-      for (let k = 0; k < 4; k++) s += R(308 + k * 22, y + 8, 6, 34, 'f2', .28);
-    }
-    for (let i = 0; i < 8; i++) { const y = 80 + i * 76; s += R(ri(2, 24) * 8, y, 40, 56, 'f', rr(.12, .45).toFixed(2)); }
-    s += '<g class="fx-flick">' + R(430, 130, 160, 44, 'f', .85) + R(446, 182, 96, 14, 'f2', .6) + R(500, 100, 8, 30, 'f2', .5) + '</g>';
-    s += R(0, 636, 1000, 64, 'fd', .85) + R(0, 630, 1000, 8, 'f', .25);
-    for (let i = 0; i < 5; i++) { const x = rr(320, 680); s += R(x, 644 + rn() * 30, ri(4, 12) * 8, 10, 'f', rr(.2, .5).toFixed(2)); }
-    for (let i = 0; i < 110; i++) s += RA(rr(0, 1000), rr(-200, 60), 2, ri(18, 34), 'f', rr(.12, .45).toFixed(2), 'fx-fall', rr(.5, 1.1).toFixed(2), (-rr(0, 2)).toFixed(2));
-    return s;
-  };
-
-  // PROFUNDO: nebulosa, planeta y restos a la deriva
-  SCENE.deep = function () {
-    let s = sky(420);
-    for (let b = 0; b < 3; b++) {
-      const y = rr(80, 480);
-      for (let x = 0; x < 1000; x += 8) {
-        const th = 30 + Math.sin((x + b * 300) / 150) * 26;
-        s += R(x, y - th / 2, 8, th, b % 2 ? 'f2' : 'f', rr(.04, .11).toFixed(2));
-      }
-    }
-    const cx = rr(180, 820), cy = 640, rad = 200;
-    for (let r = 0; r < rad / 8; r++) {
-      const w = Math.round(Math.sqrt((rad / 8) * (rad / 8) - r * r)) * 8;
-      s += R(cx - w, cy + r * 8, w * 2, 8, r % 4 ? 'f2' : 'f', (.7 - r * .022).toFixed(2));
-    }
-    s += R(cx - rad - 90, cy - 10, (rad + 90) * 2, 8, 'f', .35);
-    for (let i = 0; i < 16; i++) s += RA(rr(0, 1000), rr(60, 560), ri(1, 3) * 8, 8, 'f2', rr(.25, .7).toFixed(2), 'fx-sway', rr(6, 11).toFixed(1), (-rr(0, 8)).toFixed(1));
-    for (let i = 0; i < 3; i++) s += '<g class="fx-cross" style="animation-duration:' + (16 + i * 8) + 's;animation-delay:' + (i * 5) + 's" transform="translate(-180 ' + Math.round(rr(120, 520)) + ')">' + R(0, 0, 32, 8, 'f', .9) + R(32, -8, 16, 24, 'f', .9) + R(-20, 0, 20, 8, 'f2', .6) + '</g>';
-    return s;
-  };
-
-  // TORMENTA: montanas, lluvia y relampagos ramificados
-  SCENE.storm = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .34);
-    for (let i = 0; i < 5; i++) s += R(0, 20 + i * 30, 1000, 16, 'f2', (.14 - i * .02).toFixed(2));
-    for (let k = 0; k < 3; k++) {
-      let x = 200 + k * 300, y = 40, d = 'M' + g8(x) + ' 40';
-      for (let i = 0; i < 9; i++) { x += ri(-7, 7) * 8; y += 56; d += ' L' + g8(x) + ' ' + y; }
-      s += '<path class="ln fx-flick" style="animation-delay:' + (k * 1.4).toFixed(1) + 's" d="' + d + '" stroke-width="5" opacity=".85" fill="none"/>';
-      for (let br = 0; br < 2; br++) {
-        const sx = x - ri(2, 5) * 56, sy = 40 + ri(3, 6) * 56;
-        s += '<path class="ln fx-flick" style="animation-delay:' + (k * 1.4 + .2).toFixed(1) + 's" d="M' + g8(sx) + ' ' + sy + ' L' + g8(sx + rr(-70, 70)) + ' ' + (sy + 70) + '" stroke-width="3" opacity=".5" fill="none"/>';
-      }
-    }
-    s += ridge(430, 90, 40, 'fd', '.55', 300) + ridge(510, 66, 40, 'fd', '.8', 40);
-    s += R(0, 640, 1000, 60, 'fd', .9);
-    for (let i = 0; i < 90; i++) s += RA(rr(0, 1000), rr(-200, 80), 3, ri(16, 34), 'f', rr(.15, .5).toFixed(2), 'fx-fall', rr(.6, 1.3).toFixed(2), (-rr(0, 2)).toFixed(2));
-    return s;
-  };
-  // PUESTO: desierto militar, humo y sol
-  SCENE.outpost = function () {
-    let s = '';
-    for (let i = 0; i < 6; i++) s += R(0, 20 + i * 26, 1000, 26, 'f', (.16 - i * .022).toFixed(2));
-    s += '<g class="fx-glow">';
-    for (let r = 0; r < 9; r++) { const w = Math.round(Math.sqrt(81 - r * r) * 9 / 8) * 8; s += R(760 - w, 150 + r * 8, w * 2, 8, 'f', (.55 - r * .05).toFixed(2)); if (r) s += R(760 - w, 150 - r * 8, w * 2, 8, 'f', (.55 - r * .05).toFixed(2)); }
-    s += '</g>';
-    for (let l = 0; l < 3; l++) s += ridge(430 + l * 60, 40, 40, l % 2 ? 'f2' : 'fd', (.3 + l * .2).toFixed(2), l * 310);
-    for (let i = 0; i < 4; i++) {
-      const x = 90 + i * 230, w = ri(8, 14) * 8, hh = ri(4, 8) * 8;
-      s += R(x, 600 - hh, w, hh, 'fd', .92) + R(x - 8, 600 - hh, w + 16, 8, 'f2', .5);
-      s += R(x + w / 2 - 4, 600 - hh - 40, 8, 40, 'f2', .4);
-    }
-    for (let k = 0; k < 3; k++) {
-      const x = 180 + k * 300;
-      for (let i = 0; i < 12; i++) s += R(x + Math.sin(i / 2.2) * 34 - i * 2, 580 - i * 44, (14 + i * 2), (14 + i * 2), 'fd', (.55 - i * .04).toFixed(2));
-    }
-    s += R(0, 596, 1000, 104, 'fd', .85);
-    for (let i = 0; i < 20; i++) s += RA(rr(0, 1000), rr(520, 700), 6, 6, 'f', rr(.3, .8).toFixed(2), 'fx-rise', rr(6, 11).toFixed(1), (-rr(0, 9)).toFixed(1));
-    return s;
-  };
-
-  // CALLE: asfalto mojado, luces de patrulla y vehiculo destrozado
-  SCENE.street = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .55);
-    s += skyline(430, 10, 22, 'fd', .9, true);
-    s += R(0, 430, 1000, 8, 'f2', .3) + R(0, 438, 1000, 262, 'fd', .7);
-    for (let x = 60; x < 1000; x += 120) s += R(x, 470, 64, 8, 'f2', .28);
-    for (let i = 0; i < 4; i++) { const x = 120 + i * 240; s += R(x, 250, 8, 190, 'f2', .45) + R(x - 20, 236, 48, 16, 'f', .6); s += '<path class="f" d="M' + (x - 20) + ' 252 L' + (x - 76) + ' 440 L' + (x + 84) + ' 440 L' + (x + 28) + ' 252 Z" opacity=".06" stroke="none"/>'; }
-    s += R(380, 500, 240, 12, 'fd', .95) + R(400, 460, 190, 44, 'fd', .95) + R(420, 468, 60, 26, 'f', .3);
-    s += R(392, 512, 40, 40, 'fd', .95) + R(568, 512, 40, 40, 'fd', .95);
-    s += '<g class="fx-flick">' + R(330, 430, 60, 20, 'f', .9) + '</g>';
-    s += '<g class="fx-flick" style="animation-delay:.5s">' + R(620, 430, 60, 20, 'f2', .9) + '</g>';
-    for (let i = 0; i < 8; i++) s += R(rr(300, 700), rr(540, 660), ri(2, 5) * 8, 8, 'f', rr(.15, .4).toFixed(2));
-    for (let i = 0; i < 100; i++) s += RA(rr(0, 1000), rr(-180, 60), 2, ri(18, 32), 'f2', rr(.12, .42).toFixed(2), 'fx-fall', rr(.5, 1.1).toFixed(2), (-rr(0, 2)).toFixed(2));
-    return s;
-  };
-
-  // DOMO: cupula geodesica de cristal con arboles fuera
-  SCENE.dome = function () {
-    let s = '';
-    for (let i = 0; i < 5; i++) s += R(0, 20 + i * 30, 1000, 30, 'f2', (.14 - i * .02).toFixed(2));
-    for (let i = 0; i < 5; i++) { const x = 60 + i * 220, h = ri(10, 16) * 8; s += R(x, 470 - h, 16, h, 'fd', .5); for (let k = 0; k < 5; k++) s += R(x - 40 + rn() * 90, 470 - h - 30 + rn() * 60, 24, 20, 'f2', rr(.18, .4).toFixed(2)); }
-    s += '<path class="ln" d="M60 500 Q500 60 940 500" stroke-width="8" opacity=".7" fill="none"/>';
-    for (let i = 1; i < 9; i++) { const t = i / 9, x = 60 + t * 880, y = 500 - Math.sin(t * Math.PI) * 440; s += '<line class="ln" x1="' + g8(x) + '" y1="' + g8(y) + '" x2="' + g8(x) + '" y2="500" stroke-width="3" opacity=".28"/>'; }
-    for (let r = 1; r < 4; r++) s += '<path class="ln" d="M' + (60 + r * 40) + ' 500 Q500 ' + (60 + r * 110) + ' ' + (940 - r * 40) + ' 500" stroke-width="2" opacity=".2" fill="none"/>';
-    s += R(0, 500, 1000, 12, 'f', .55) + R(0, 512, 1000, 188, 'fd', .8);
-    for (let x = 0; x < 1000; x += 80) s += R(x, 512, 6, 188, 'f2', .12);
-    for (let i = 0; i < 9; i++) s += RA(rr(120, 880), rr(150, 460), 12, 12, 'f', rr(.4, .9).toFixed(2), 'fx-sway', rr(4, 8).toFixed(1), (-rr(0, 6)).toFixed(1));
-    return s;
-  };
-
-  // PUENTE: calzada luminosa hacia ciudad de agujas
-  SCENE.bridge = function () {
-    let s = sky(300);
-    for (let i = 0; i < 9; i++) { const x = 300 + i * 50, h = ri(14, 30) * 8; s += R(x, 430 - h, ri(2, 4) * 8, h, 'fd', .9) + R(x, 430 - h - 24, 8, 24, 'f', .5); }
-    s += R(280, 424, 460, 14, 'fd', .95);
-    s += '<path class="f" d="M400 700 L470 430 L560 430 L680 700 Z" opacity=".5" stroke="none"/>';
-    for (let i = 0; i < 14; i++) { const t = i / 14, y = 700 - t * 268, w = (140 - t * 100); s += R(500 - w / 2, y - 14, w, 12, i % 2 ? 'f' : 'f2', (.85 - t * .5).toFixed(2)); }
-    for (let i = 0; i < 16; i++) s += RA(rr(340, 660), rr(430, 700), 8, 8, 'f2', rr(.4, .9).toFixed(2), 'fx-rise', rr(5, 10).toFixed(1), (-rr(0, 8)).toFixed(1));
-    return s;
-  };
-
-  // BUNKER: pasillo industrial con tuberias y maquinaria luminosa
-  SCENE.bunker = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .5);
-    for (let i = 0; i < 6; i++) { const x = i * 170; s += R(x, 60, 24, 580, 'fd', .9) + R(x - 10, 40, 44, 24, 'f2', .4); }
-    for (let y = 90; y < 620; y += 90) { s += R(0, y, 1000, 14, 'f2', .3); for (let x = 40; x < 1000; x += 130) s += R(x, y - 8, 20, 30, 'fd', .8); }
-    s += R(0, 120, 1000, 10, 'f', .18) + R(0, 480, 1000, 10, 'f', .18);
-    s += '<g class="fx-glow" transform="translate(500 330)">';
-    for (let r = 1; r <= 5; r++) { const w = r * 44; s += R(-w / 2, -w / 2, w, 8, 'f', (.8 - r * .1).toFixed(2)) + R(-w / 2, w / 2 - 8, w, 8, 'f', (.8 - r * .1).toFixed(2)) + R(-w / 2, -w / 2, 8, w, 'f2', (.8 - r * .1).toFixed(2)) + R(w / 2 - 8, -w / 2, 8, w, 'f2', (.8 - r * .1).toFixed(2)); }
-    s += R(-20, -20, 40, 40, 'f', 1) + '</g>';
-    s += R(0, 620, 1000, 80, 'fd', .95) + R(0, 614, 1000, 8, 'f2', .35);
-    for (let x = 0; x < 1000; x += 56) s += R(x, 622, 40, 8, 'f2', .12);
-    return s;
-  };
-
-  // MANSION: acantilado, casa cayendo y mar al atardecer
-  SCENE.mansion = function () {
-    let s = '';
-    for (let i = 0; i < 9; i++) s += R(0, 20 + i * 26, 1000, 26, 'f', (.3 - i * .03).toFixed(2));
-    s += '<g class="fx-glow">';
-    for (let r = 0; r < 8; r++) { const w = Math.round(Math.sqrt(64 - r * r) * 10 / 8) * 8; s += R(300 - w, 210 + r * 8, w * 2, 8, 'f', (.5 - r * .05).toFixed(2)); if (r) s += R(300 - w, 210 - r * 8, w * 2, 8, 'f', (.5 - r * .05).toFixed(2)); }
-    s += '</g>';
-    s += R(0, 470, 1000, 230, 'f2', .3);
-    for (let y = 480; y < 700; y += 22) for (let x = ri(0, 6) * 8; x < 1000; x += ri(9, 20) * 8) s += R(x, y, ri(3, 8) * 8, 6, 'f', rr(.1, .3).toFixed(2));
-    s += '<path class="fd" d="M560 700 L600 430 L780 380 L1000 400 L1000 700 Z" opacity=".95" stroke="none"/>';
-    s += R(640, 300, 260, 90, 'fd', .95) + R(640, 296, 260, 8, 'f2', .5);
-    for (let k = 0; k < 5; k++) s += R(660 + k * 48, 320, 26, 34, 'f', rr(.3, .8).toFixed(2));
-    s += '<g class="fx-sway">' + R(860, 250, 120, 60, 'fd', .8) + '</g>';
-    for (let i = 0; i < 16; i++) s += R(rr(560, 1000), rr(390, 640), ri(1, 4) * 8, 10, 'fd', rr(.4, .85).toFixed(2));
-    for (let k = 0; k < 3; k++) { const x = 120 + k * 90; s += '<path class="ln fx-flick" style="animation-delay:' + (k * .6) + 's" d="M' + x + ' 700 L' + (x + 180) + ' 330" stroke-width="4" opacity=".6" fill="none"/>'; }
-    for (let i = 0; i < 22; i++) s += RA(rr(600, 1000), rr(260, 420), 8, 8, 'f', rr(.4, .95).toFixed(2), 'fx-rise', rr(4, 9).toFixed(1), (-rr(0, 7)).toFixed(1));
-    return s;
-  };
-
-  // PORTAAVIONES: aeronave gigante cayendo entre nubes
-  SCENE.carrier = function () {
-    let s = '';
-    for (let i = 0; i < 6; i++) s += R(0, 20 + i * 30, 1000, 30, 'f2', (.16 - i * .022).toFixed(2));
-    for (let c = 0; c < 5; c++) { const cx = rr(60, 940), cy = rr(60, 420); for (let k = 0; k < 6; k++) s += R(cx + k * 34 - 90, cy + Math.sin(k) * 16, ri(6, 12) * 8, 24, 'f2', rr(.06, .16).toFixed(2)); }
-    s += '<g transform="rotate(-14 500 380)">';
-    s += R(180, 360, 660, 46, 'fd', .95) + R(180, 356, 660, 8, 'f', .45);
-    s += '<path class="fd" d="M180 406 L280 470 L740 470 L840 406 Z" opacity=".95" stroke="none"/>';
-    s += R(430, 296, 180, 64, 'fd', .95) + R(446, 312, 40, 22, 'f', .5) + R(510, 312, 40, 22, 'f', .35);
-    for (let i = 0; i < 4; i++) { const x = 250 + i * 160; s += R(x, 406, 96, 96, 'fd', .9) + '<g class="fx-spin" transform="translate(' + (x + 48) + ' 454)">' + R(-44, -5, 88, 10, 'f2', .5) + R(-5, -44, 10, 88, 'f2', .5) + '</g>'; }
-    s += '</g>';
-    for (let k = 0; k < 4; k++) { const x = rr(200, 800), y = rr(300, 460); for (let i = 0; i < 9; i++) s += R(x + i * 6 - 30, y - i * 34, 14 + i * 3, 14 + i * 3, 'f', (.6 - i * .06).toFixed(2)); }
-    for (let i = 0; i < 24; i++) s += RA(rr(0, 1000), rr(400, 620), ri(1, 4) * 8, 8, 'fd', rr(.4, .85).toFixed(2), 'fx-fall', rr(1.6, 3).toFixed(1), (-rr(0, 3)).toFixed(1));
-    return s;
-  };
-
-  // HABITACION: escala macro, objetos gigantes y via de tren de juguete
-  SCENE.bedroom = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .35);
-    for (let x = 0; x < 1000; x += 120) s += R(x, 0, 8, 470, 'f2', .12);
-    s += R(0, 462, 1000, 10, 'f', .35) + R(0, 472, 1000, 228, 'fd', .5);
-    for (let x = 0; x < 1000; x += 96) s += R(x, 472, 6, 228, 'f2', .1);
-    s += R(60, 200, 300, 262, 'fd', .92) + R(48, 188, 324, 20, 'f2', .5);
-    for (let k = 0; k < 3; k++) { s += R(76, 226 + k * 82, 268, 8, 'f2', .35); for (let b = 0; b < ri(4, 8); b++) s += R(90 + b * 34, 178 + k * 82 + 48, ri(2, 3) * 8, 42, 'f', rr(.2, .6).toFixed(2)); }
-    s += R(700, 300, 240, 162, 'fd', .92) + R(688, 288, 264, 18, 'f2', .5);
-    s += R(730, 120, 60, 180, 'fd', .9) + R(700, 60, 120, 70, 'f2', .45);
-    s += R(0, 540, 1000, 12, 'f2', .55) + R(0, 592, 1000, 12, 'f2', .55);
-    for (let x = 0; x < 1000; x += 40) s += R(x, 540, 20, 64, 'f2', .22);
-    s += R(320, 496, 130, 46, 'fd', .95) + R(336, 476, 40, 24, 'f', .6) + R(300, 528, 34, 34, 'fd', .95) + R(430, 528, 34, 34, 'fd', .95);
-    s += R(456, 502, 90, 40, 'fd', .9) + R(552, 502, 90, 40, 'fd', .9);
-    for (let i = 0; i < 26; i++) s += RA(rr(0, 1000), rr(60, 460), 4, 4, 'f', rr(.15, .5).toFixed(2), 'fx-twk', rr(2.5, 5).toFixed(1), rr(0, 4).toFixed(1));
-    return s;
-  };
-
-  // PISTA: aeropuerto, aviones y hangares con cielo gris
-  SCENE.runway = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .3);
-    for (let i = 0; i < 7; i++) s += R(0, 20 + i * 24, 1000, 24, 'f2', (.1 - i * .012).toFixed(2));
-    for (let i = 0; i < 4; i++) { const x = 40 + i * 250; s += '<path class="fd" d="M' + x + ' 400 Q' + (x + 90) + ' 330 ' + (x + 180) + ' 400 Z" opacity=".8" stroke="none"/>' + R(x, 396, 180, 12, 'f2', .4); }
-    for (let i = 0; i < 3; i++) {
-      const x = 120 + i * 330, y = 420 + i * 10;
-      s += R(x, y, 220, 26, 'fd', .92) + R(x + 190, y - 34, 34, 40, 'fd', .92);
-      s += '<path class="fd" d="M' + (x + 60) + ' ' + (y + 26) + ' L' + (x + 20) + ' ' + (y + 74) + ' L' + (x + 130) + ' ' + (y + 74) + ' Z" opacity=".9" stroke="none"/>';
-      s += R(x + 40, y + 6, 16, 12, 'f', .45) + R(x + 70, y + 6, 16, 12, 'f', .45);
-    }
-    s += R(0, 520, 1000, 10, 'f2', .35) + R(0, 530, 1000, 170, 'fd', .62);
-    for (let x = 20; x < 1000; x += 150) s += R(x, 592, 96, 12, 'f', .4);
-    for (let x = 60; x < 1000; x += 200) s += R(x, 660, 60, 8, 'f2', .28);
-    for (let i = 0; i < 6; i++) { const x = 90 + i * 170; s += R(x, 498, 8, 32, 'f2', .5) + RA(x - 6, 486, 20, 14, 'f', '.8', 'fx-flick', '4', (i * .5).toFixed(1)); }
-    return s;
-  };
-
-  // MONUMENTO: obelisco alto sobre la ciudad y cielo despejado
-  SCENE.monument = function () {
-    let s = '';
-    for (let i = 0; i < 8; i++) s += R(0, i * 40, 1000, 40, 'f2', (.2 - i * .022).toFixed(2));
-    for (let c = 0; c < 4; c++) { const cx = rr(80, 920), cy = rr(60, 260); for (let k = 0; k < 5; k++) s += R(cx + k * 40 - 80, cy + Math.sin(k) * 14, ri(6, 11) * 8, 26, 'f', rr(.05, .12).toFixed(2)); }
-    s += skyline(660, 6, 14, 'fd', .5, true);
-    const bx = 470;
-    s += '<path class="fd" d="M' + bx + ' 700 L' + (bx + 8) + ' 180 L' + (bx + 52) + ' 180 L' + (bx + 60) + ' 700 Z" opacity=".95" stroke="none"/>';
-    s += '<path class="f" d="M' + (bx + 8) + ' 180 L' + (bx + 30) + ' 116 L' + (bx + 52) + ' 180 Z" opacity=".8" stroke="none"/>';
-    for (let y = 220; y < 690; y += 60) s += R(bx + 6, y, 56, 6, 'f2', .22);
-    s += RA(bx + 22, 128, 16, 16, 'f', '.95', 'fx-twk', '2.2', '0');
-    s += R(0, 660, 1000, 40, 'fd', .85) + R(0, 654, 1000, 8, 'f2', .3);
-    s += '<g transform="translate(1000 0)">';
-    for (let i = 0; i <= 6; i++) { const a = Math.PI / 2 + (Math.PI / 2) * (i / 6); s += '<line class="ln" x1="0" y1="0" x2="' + Math.round(Math.cos(a) * 620) + '" y2="' + Math.round(Math.sin(a) * 620) + '" stroke-width="2" opacity=".25"/>'; }
-    return s + '</g>';
-  };
-
-  // SALON: sala de comedia en blanco y negro con glitch de tubo
-  SCENE.sitcom = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .5);
-    s += R(60, 40, 880, 620, 'f2', .1) + R(60, 40, 880, 8, 'f', .35) + R(60, 652, 880, 8, 'f', .35) + R(60, 40, 8, 620, 'f', .35) + R(932, 40, 8, 620, 'f', .35);
-    for (let x = 100; x < 940; x += 56) s += R(x, 56, 24, 460, 'f2', .1);
-    s += R(60, 500, 880, 10, 'f', .3) + R(60, 510, 880, 150, 'fd', .55);
-    s += R(300, 380, 420, 130, 'fd', .9) + R(288, 366, 444, 20, 'f2', .5);
-    s += R(316, 340, 80, 40, 'f2', .4) + R(624, 340, 80, 40, 'f2', .4);
-    s += R(130, 396, 120, 114, 'fd', .9) + R(122, 384, 136, 16, 'f2', .5);
-    s += R(770, 396, 120, 114, 'fd', .9) + R(762, 384, 136, 16, 'f2', .5);
-    s += R(420, 300, 180, 24, 'fd', .8) + R(500, 324, 20, 60, 'fd', .8);
-    s += R(150, 120, 170, 130, 'fd', .85) + R(140, 110, 190, 16, 'f2', .55);
-    s += R(700, 130, 140, 110, 'fd', .85) + R(690, 120, 160, 14, 'f2', .55);
-    for (let y = 48; y < 656; y += 10) s += R(64, y, 872, 2, 'f', .1);
-    s += '<g class="fx-scan">' + R(64, -14, 872, 5, 'f', .3) + '</g>';
-    for (let i = 0; i < 6; i++) s += RA(64, rr(60, 640), 872, ri(2, 5) * 4, 'f', rr(.1, .3).toFixed(2), 'fx-flick', rr(3, 6).toFixed(1), rr(0, 4).toFixed(1));
-    return s;
-  };
-
-  // TITAN: planeta naranja en ruinas con escombros flotando
-  SCENE.titan = function () {
-    let s = '';
-    for (let i = 0; i < 10; i++) s += R(0, i * 34, 1000, 34, 'f', (.26 - i * .024).toFixed(2));
-    for (let i = 0; i < 3; i++) { const cx = rr(100, 900), cy = rr(50, 180), rad = ri(4, 8) * 8; for (let r = 0; r < rad / 8; r++) { const w = Math.round(Math.sqrt((rad / 8) * (rad / 8) - r * r)) * 8; s += R(cx - w, cy + r * 8, w * 2, 8, 'f2', (.4 - r * .03).toFixed(2)); if (r) s += R(cx - w, cy - r * 8, w * 2, 8, 'f2', (.4 - r * .03).toFixed(2)); } s += R(cx - rad, cy - 4, rad * 2, 8, 'fd', .5); }
-    for (let i = 0; i < 5; i++) {
-      const x = 40 + i * 200, h = ri(16, 30) * 8, tilt = rr(-16, 16);
-      s += '<g transform="rotate(' + tilt.toFixed(1) + ' ' + (x + 40) + ' 600)">' + R(x, 600 - h, 80, h, 'fd', .9) + R(x - 10, 600 - h, 100, 12, 'f2', .45);
-      for (let k = 0; k < 3; k++) s += R(x + 14, 600 - h + 40 + k * 60, 52, 8, 'f', .16);
-      s += '</g>';
-    }
-    s += ridge(560, 60, 40, 'fd', '.85', 210);
-    s += R(0, 640, 1000, 60, 'fd', .92);
-    for (let i = 0; i < 22; i++) s += RA(rr(0, 1000), rr(150, 620), ri(1, 4) * 8, 8, 'f2', rr(.3, .8).toFixed(2), 'fx-sway', rr(5, 10).toFixed(1), (-rr(0, 8)).toFixed(1));
-    for (let i = 0; i < 18; i++) s += RA(rr(0, 1000), rr(560, 700), 6, 6, 'f', rr(.3, .85).toFixed(2), 'fx-rise', rr(6, 12).toFixed(1), (-rr(0, 10)).toFixed(1));
-    return s;
-  };
-  // AZOTEAS: tejados nocturnos, tanques de agua y antenas
-  SCENE.rooftop = function () {
-    let s = sky(220);
-    s += skyline(430, 8, 18, 'fd', .45, true);
-    let x = -40;
-    while (x < 1040) {
-      const w = ri(14, 26) * 8, h = ri(10, 22) * 8, top = 700 - h;
-      s += R(x, top, w, h, 'fd', .93) + R(x - 8, top, w + 16, 12, 'f2', .45);
-      for (let wy = top + 60; wy < 690; wy += 46) for (let wx = x + 16; wx < x + w - 16; wx += 36) if (rn() > .5) s += R(wx, wy, 12, 18, 'f', rr(.2, .7).toFixed(2));
-      if (rn() > .45) { const tx = x + ri(2, 8) * 8; s += R(tx, top - 56, 56, 48, 'fd', .95) + R(tx - 6, top - 60, 68, 8, 'f2', .55); for (let k = 0; k < 3; k++) s += R(tx + 4 + k * 20, top - 8, 8, 12, 'fd', .95); }
-      if (rn() > .5) { const ax = x + ri(6, 14) * 8; s += R(ax, top - 90, 6, 90, 'f2', .6); for (let k = 1; k < 4; k++) s += R(ax - k * 6, top - 90 + k * 18, 6 + k * 12, 5, 'f2', .45); s += RA(ax - 4, top - 100, 14, 14, 'f', '.9', 'fx-flick', '3', rn().toFixed(1)); }
-      if (rn() > .6) s += R(x + ri(3, 10) * 8, top - 30, ri(3, 6) * 8, 30, 'fd', .95);
-      x += w + ri(1, 3) * 8;
-    }
-    for (let i = 0; i < 18; i++) s += RA(rr(0, 1000), rr(60, 300), 4, 4, 'f', rr(.2, .6).toFixed(2), 'fx-twk', rr(2, 5).toFixed(1), rr(0, 4).toFixed(1));
-    return s;
-  };
-
-  // NAVE: interior gotico con vitrales y columnas
-  SCENE.church = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .55);
-    for (let i = 0; i < 5; i++) {
-      const x = 40 + i * 230;
-      s += R(x, 120, 34, 500, 'fd', .92) + R(x - 10, 108, 54, 16, 'f2', .45) + R(x - 10, 612, 54, 16, 'f2', .45);
-    }
-    for (let i = 0; i < 4; i++) {
-      const cx = 190 + i * 230, w = 120, top = 150;
-      s += '<path class="ln" d="M' + (cx - w / 2) + ' 420 L' + (cx - w / 2) + ' ' + (top + 60) + ' Q' + cx + ' ' + (top - 40) + ' ' + (cx + w / 2) + ' ' + (top + 60) + ' L' + (cx + w / 2) + ' 420" stroke-width="6" opacity=".6" fill="none"/>';
-      for (let r = 0; r < 6; r++) for (let c = 0; c < 4; c++) {
-        const px = cx - w / 2 + 12 + c * 24, py = top + 76 + r * 54;
-        if (py < 410) s += R(px, py, 20, 44, r % 2 ? 'f' : 'f2', rr(.18, .55).toFixed(2));
-      }
-      s += '<path class="f" d="M' + (cx - w / 2) + ' 420 L' + (cx - w) + ' 700 L' + (cx + w) + ' 700 L' + (cx + w / 2) + ' 420 Z" opacity=".05" stroke="none"/>';
-    }
-    s += '<g class="fx-spin" transform="translate(500 110)">';
-    for (let i = 0; i < 24; i++) { const a = (i / 24) * 6.283; s += R(Math.cos(a) * 66 - 4, Math.sin(a) * 66 - 4, i % 3 ? 6 : 12, i % 3 ? 6 : 12, 'f', i % 3 ? .35 : .8); }
-    s += '</g>';
-    s += R(0, 620, 1000, 80, 'fd', .85) + R(0, 614, 1000, 8, 'f2', .3);
-    for (let x = 0; x < 1000; x += 64) s += R(x, 628, 48, 8, 'f2', .12);
-    for (let i = 0; i < 8; i++) { const x = 120 + i * 110; s += R(x, 540, 80, 14, 'fd', .9) + R(x + 6, 554, 8, 60, 'fd', .9); }
-    return s;
-  };
-
-  // NIEVE: bosque nevado, ventisca y luces lejanas
-  SCENE.snow = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .42);
-    for (let i = 0; i < 5; i++) s += R(0, 20 + i * 28, 1000, 28, 'f2', (.12 - i * .018).toFixed(2));
-    s += ridge(400, 80, 40, 'fd', '.45', 260) + ridge(470, 56, 40, 'fd', '.7', 60);
-    for (let l = 0; l < 2; l++) {
-      const base = 520 + l * 60, sc = 1 + l * .5;
-      for (let x = -40; x < 1040; x += ri(6, 12) * 8) {
-        const h = ri(10, 20) * 8 * sc;
-        s += '<path class="fd" d="M' + x + ' ' + base + ' L' + (x + 26 * sc) + ' ' + (base - h) + ' L' + (x + 52 * sc) + ' ' + base + ' Z" opacity="' + (.55 + l * .3).toFixed(2) + '" stroke="none"/>';
-      }
-    }
-    s += R(0, 578, 1000, 122, 'f2', .16) + R(0, 574, 1000, 8, 'f', .2);
-    for (let i = 0; i < 6; i++) { const x = rr(100, 900); s += RA(x, rr(430, 520), 10, 12, 'f', rr(.4, .9).toFixed(2), 'fx-flick', rr(3, 6).toFixed(1), rn().toFixed(1)); }
-    for (let i = 0; i < 120; i++) s += RA(rr(0, 1000), rr(-200, 60), ri(1, 2) * 4, ri(1, 2) * 4, 'f', rr(.25, .8).toFixed(2), 'fx-fall', rr(2.2, 4.5).toFixed(2), (-rr(0, 4)).toFixed(2));
-    return s;
-  };
-
-  // OFICINA: pasillo corporativo infinito con puertas y reloj
-  SCENE.office = function () {
-    let s = R(0, 0, 1000, 700, 'fd', .5);
-    for (let d = 5; d >= 1; d--) {
-      const k = d / 5, w = 1000 * k, h = 620 * k, x = 500 - w / 2, y = 340 - h / 2;
-      s += '<rect class="fd" x="' + g8(x) + '" y="' + g8(y) + '" width="' + g8(w) + '" height="' + g8(h) + '" opacity="' + (.2 + (1 - k) * .5).toFixed(2) + '"/>';
-      s += '<rect class="ln" x="' + g8(x) + '" y="' + g8(y) + '" width="' + g8(w) + '" height="' + g8(h) + '" stroke-width="2" opacity="' + (.5 - d * .06).toFixed(2) + '" fill="none"/>';
-      if (d > 1) {
-        const dh = h * .34, dw = w * .06;
-        s += R(x + w * .06, y + h - dh, dw, dh, 'f2', (.5 - d * .05).toFixed(2));
-        s += R(x + w * .88, y + h - dh, dw, dh, 'f2', (.5 - d * .05).toFixed(2));
-        s += R(x + w * .2, y + 10, w * .1, 10, 'f', (.4 - d * .05).toFixed(2));
-        s += R(x + w * .7, y + 10, w * .1, 10, 'f', (.4 - d * .05).toFixed(2));
-      }
-    }
-    s += '<g transform="translate(500 320)">';
-    for (let i = 0; i < 36; i++) { const a = (i / 36) * 6.283, big = i % 3 === 0; s += R(Math.cos(a) * 96 - 4, Math.sin(a) * 96 - 4, big ? 10 : 5, big ? 10 : 5, 'f', big ? .85 : .35); }
-    s += '<g class="fx-tick">' + R(-4, -74, 8, 76, 'f', .9) + '</g>';
-    s += '<g class="fx-tick2">' + R(-4, -52, 8, 54, 'f2', .8) + '</g>';
-    s += R(-8, -8, 16, 16, 'f', 1) + '</g>';
-    for (let y = 40; y < 660; y += 10) s += R(0, y, 1000, 2, 'f', .07);
-    s += '<g class="fx-scan">' + R(0, -14, 1000, 4, 'f', .22) + '</g>';
-    return s;
-  };
-
-  // CARRETERA: ruta desierta al atardecer con postes
-  SCENE.road = function () {
-    let s = '';
-    for (let i = 0; i < 9; i++) s += R(0, i * 34, 1000, 34, 'f', (.28 - i * .028).toFixed(2));
-    s += '<g class="fx-glow">';
-    for (let r = 0; r < 10; r++) { const w = Math.round(Math.sqrt(100 - r * r) * 11 / 8) * 8; s += R(500 - w, 330 + r * 8, w * 2, 8, 'f2', (.45 - r * .04).toFixed(2)); if (r) s += R(500 - w, 330 - r * 8, w * 2, 8, 'f2', (.45 - r * .04).toFixed(2)); }
-    s += '</g>';
-    s += ridge(400, 44, 40, 'fd', '.5', 180);
-    s += '<path class="fd" d="M420 400 L0 700 L1000 700 L580 400 Z" opacity=".85" stroke="none"/>';
-    for (let i = 0; i < 9; i++) {
-      const t = i / 9, y = 400 + t * 300, w = 8 + t * 40, h = 6 + t * 26;
-      s += R(500 - w / 2, y, w, h, 'f', (.35 + t * .5).toFixed(2));
-    }
-    for (let i = 0; i < 7; i++) {
-      const t = i / 7, y = 410 + t * 280, sc = .3 + t, sx = 500 - (140 + t * 460);
-      s += R(sx, y - 120 * sc, 8 * sc + 4, 120 * sc, 'fd', (.5 + t * .4).toFixed(2));
-      s += R(sx - 20 * sc, y - 120 * sc, 44 * sc, 8 * sc + 3, 'fd', (.5 + t * .4).toFixed(2));
-      s += R(500 + (140 + t * 460), y - 120 * sc, 8 * sc + 4, 120 * sc, 'fd', (.5 + t * .4).toFixed(2));
-    }
-    for (let i = 0; i < 12; i++) s += R(rr(0, 380), rr(420, 690), ri(1, 3) * 8, 10, 'fd', rr(.4, .8).toFixed(2));
-    for (let i = 0; i < 12; i++) s += R(rr(620, 1000), rr(420, 690), ri(1, 3) * 8, 10, 'fd', rr(.4, .8).toFixed(2));
-    return s;
-  };
-  const D = ['#E63946', '#9B5DE5', 'deep'];
+  const D = ['#E63946', '#9B5DE5'];
   const T = [
     [/^Iron Man$|Iron Man \(/i,              ['#FFB703','#C1121F','outpost']],
     [/incre.{0,3}ble hulk/i,                  ['#6A994E','#4361EE','street']],
@@ -1471,11 +856,6 @@ window.Theme = (() => {
     r.setProperty('--thC', p[1]);
     r.setProperty('--thB', hexToRgba(p[1], 0.14));
     r.setProperty('--thGlow', hexToRgba(p[0], 0.16));
-    const fx = document.getElementById('fx');
-    if (fx) {
-      if (title) { seed(title); fx.innerHTML = (SCENE[p[2]] || SCENE.deep)(); fx.classList.add('on'); }
-      else { fx.classList.remove('on'); setTimeout(() => { if (!active) fx.innerHTML = ''; }, 900); }
-    }
     if (animate && title) {
       const f = document.getElementById('flash');
       if (f) { f.classList.remove('go'); void f.offsetWidth; f.classList.add('go'); }
@@ -1491,7 +871,7 @@ window.Theme = (() => {
     if (window.Backdrop && meta) window.Backdrop.show(title, meta.year, meta.kind);
   }
 
-  return { select, apply, palette, SCENE, get active() { return active; } };
+  return { select, apply, palette, get active() { return active; } };
 })();
 
 /* ══ PROVEEDORES (TMDB, region dinamica) ══ */
