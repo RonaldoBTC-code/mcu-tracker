@@ -751,7 +751,7 @@ window.Region = (() => {
     sel.value = current;
     sel.onchange = () => { current = sel.value; localStorage.setItem(KEY_R, current); onChange(); };
   }
-  return { get, mount };
+  return { get, mount, detect };
 })();
 
 /* ══ AMBIENTE POR TITULO ══ */
@@ -805,7 +805,8 @@ window.Reviews = (() => {
     mine[title] = rating; saveLocal();
     const c = sb(), u = user();
     if (!c || !u) { toast('Puntuacion guardada aqui. Inicia sesion para compartirla'); return; }
-    const country = window.Region ? window.Region.get() : null;
+    let country = window.Region ? window.Region.get() : null;
+    if ((!country || country === 'GLOBAL') && window.Region && window.Region.detect) country = window.Region.detect();
     const { error } = await c.from('reviews').upsert({
       user_id: u.id, title: title, rating: rating,
       country: (country && country !== 'GLOBAL' && country.length === 2) ? country : null,
@@ -907,7 +908,8 @@ window.WorldMap = (() => {
     const vis = {};
     visits.forEach(r => { vis[r.country] = (vis[r.country] || 0) + r.hits; });
 
-    const me = window.Region ? window.Region.get() : null;
+    let me = window.Region ? window.Region.get() : null;
+    if ((!me || me === 'GLOBAL') && window.Region && window.Region.detect) me = window.Region.detect();
     const maxRev = Math.max(1, ...Object.values(byC).map(x => x.rev));
 
     let s = '<svg class="mapsvg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Mapa de actividad por pais">';
