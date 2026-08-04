@@ -278,7 +278,7 @@ header h1 span{transition:color .8s ease}
   text-transform:uppercase;cursor:pointer;transition:background .2s}
 .mapbtn:hover{background:rgba(155,93,229,.28)}
 .mapwrap{position:fixed;inset:0;z-index:80;background:rgba(4,4,10,.92);display:none;
-  align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(3px)}
+  align-items:center;justify-content:center;padding:20px;backdrop-filter:none}
 .mapwrap.open{display:flex;animation:fadeIn .3s ease both}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .mapbox{width:min(1100px,96vw);max-height:92vh;overflow:auto;background:var(--panel);
@@ -317,8 +317,9 @@ header h1 span{transition:color .8s ease}
 .mapsvg{background:#080C1A}
 
 /* ══ MAPA CON ZOOM ══ */
-.zoommap{width:100%;height:min(62vh,540px);border-radius:8px;overflow:hidden;border:1px solid var(--border);
-  filter:saturate(.55) brightness(.78) contrast(1.08)}
+.zoommap{width:100%;height:min(62vh,540px);border-radius:8px;overflow:hidden;border:1px solid var(--border);position:relative}
+.zoommap canvas{outline:none}
+.mapshade{position:absolute;inset:0;pointer-events:none;background:rgba(8,12,26,.30);mix-blend-mode:multiply;border-radius:8px}
 .maphint{font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:9px;line-height:1.6}
 .maphint b{color:var(--text)}
 .pin{width:15px;height:15px;border-radius:50%;cursor:pointer;border:2px solid #0A0F1E;
@@ -352,6 +353,10 @@ header h1 span{transition:color .8s ease}
   background:rgba(0,0,0,.62);padding:2px 6px;border-radius:3px;text-decoration:none;line-height:1.4}
 .pop-cred:hover{background:rgba(0,0,0,.85)}
 .maplibregl-popup-content{overflow:hidden}
+
+.maperr{background:var(--darker);border:1px solid rgba(230,57,70,.4);border-radius:8px;padding:18px 20px}
+.maperr b{display:block;color:var(--red);font-family:'Rajdhani',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.maperr p{color:var(--muted);font-size:12px;line-height:1.6;margin:0}
 </style>
 </head>
 <body>
@@ -1031,6 +1036,17 @@ window.ZoomMap = (() => {
       return;
     }
     const el = document.getElementById('zoommap');
+
+    // WebGL disponible? Brave y algunos bloqueadores lo desactivan.
+    let gl = null;
+    try { const cv = document.createElement('canvas'); gl = cv.getContext('webgl2') || cv.getContext('webgl'); } catch (e) {}
+    if (!gl) {
+      container.innerHTML = '<div class="maperr"><b>El mapa no puede dibujarse</b>' +
+        '<p>Tu navegador tiene WebGL desactivado. Si usas Brave, baja el escudo (icono del le\u00f3n) para este sitio y recarga. ' +
+        'En Chrome, revisa que la aceleraci\u00f3n por hardware est\u00e9 activada.</p></div>';
+      return;
+    }
+
     map = new maplibregl.Map({
       container: el,
       style: STYLE(),
@@ -1075,7 +1091,21 @@ window.ZoomMap = (() => {
     // centrar en el pais del usuario si lo conocemos
     let me = window.Region ? window.Region.get() : null;
     if ((!me || me === 'GLOBAL') && window.Region && window.Region.detect) me = window.Region.detect();
-    map.once('load', () => { setTimeout(() => map.resize(), 60); });
+    const shade = document.createElement('div');
+    shade.className = 'mapshade';
+    el.appendChild(shade);
+
+    map.on('error', ev => {
+      const msg = (ev && ev.error && ev.error.message) ? ev.error.message : 'error desconocido';
+      const hint = container.querySelector('.maphint');
+      if (hint && !hint.dataset.err) { hint.dataset.err = '1'; hint.innerHTML = '<span style="color:var(--red)">Problema al cargar el mapa: ' + esc(msg) + '</span>'; }
+    });
+
+    const fix = () => { try { map.resize(); } catch (e) {} };
+    map.once('load', () => { fix(); setTimeout(fix, 120); setTimeout(fix, 500); });
+    map.once('idle', fix);
+    if (window.ResizeObserver) { const ro = new ResizeObserver(fix); ro.observe(el); }
+    window.addEventListener('resize', fix);
   }
 
   return { render };
