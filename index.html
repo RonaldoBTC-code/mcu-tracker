@@ -569,6 +569,16 @@ const LIST = [
   { id:53, phase:'Fase 6', kind:'mcu', type:'Película', title:'Avengers: Doomsday', year:2026, imp:'Crucial', dday:true },
 ];
 
+// Reserva: si algo pide traducciones antes de que cargue el modulo real,
+// devuelve el texto en espanol en vez de lanzar un error que corte el script.
+window.Lang = window.Lang || {
+  t: k => ({ vistosDe: 'vistos', incluido: 'Incluido', alquilar: 'Alquilar',
+             sinDatos: 'Sin datos de streaming todavia', puntuala: 'puntuala',
+             voto: 'voto', votos: 'votos' }[k] || k),
+  get: () => 'es', tmdb: () => 'es-ES', apply: () => {}, set: () => {}, mount: () => {}
+};
+window.Titles = window.Titles || { get: m => m.title, ensure: async () => false };
+
 const KEY = 'mcu_v4';
 // La identidad de cada titulo es su id, no su nombre: asi no se rompe al cambiar de idioma.
 const mid = m => 'id:' + m.id;
@@ -656,7 +666,7 @@ function renderList() {
     hdr.innerHTML = `
       <span class="sec-title${isExt?' pur':''}">${phase}</span>
       <div class="sec-line${isExt?' pur':''}"></div>
-      <span class="sec-info">${doneInGroup}/${items.length} ${window.Lang.t('vistosDe')}</span>
+      <span class="sec-info">${doneInGroup}/${items.length} ${(window.Lang && window.Lang.t) ? window.Lang.t('vistosDe') : 'vistos'}</span>
       <span class="sec-arr">▼</span>`;
     hdr.onclick = () => { hdr.classList.toggle('collapsed'); };
 
