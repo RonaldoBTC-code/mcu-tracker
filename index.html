@@ -319,7 +319,6 @@ header h1 span{transition:color .8s ease}
 /* ══ MAPA CON ZOOM ══ */
 .zoommap{width:100%;height:min(62vh,540px);border-radius:8px;overflow:hidden;border:1px solid var(--border);position:relative}
 .zoommap canvas{outline:none}
-.mapshade{position:absolute;inset:0;pointer-events:none;background:rgba(8,12,26,.30);mix-blend-mode:multiply;border-radius:8px}
 .maphint{font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:9px;line-height:1.6}
 .maphint b{color:var(--text)}
 .pin{width:15px;height:15px;border-radius:50%;cursor:pointer;border:2px solid #0A0F1E;
@@ -387,6 +386,8 @@ header h1 span{transition:color .8s ease}
   <span class="cb-sep"></span>
   <label for="cbRegion" style="letter-spacing:2px;text-transform:uppercase;font-size:10px">Pais</label>
   <select class="cb-reg" id="cbRegion"></select>
+  <label for="cbLang" style="letter-spacing:2px;text-transform:uppercase;font-size:10px">Idioma</label>
+  <select class="cb-reg" id="cbLang"></select>
   <button class="mapbtn" id="mapOpen">Mapa mundial</button>
 </div>
 <div class="stats">
@@ -749,6 +750,142 @@ const CFG = {
   MAPTILER_KEY: 'TU_MAPTILER_KEY_OPCIONAL',
   LANG: 'es-ES'
 };
+/* ══ IDIOMAS ══ */
+window.I18n = (() => {
+  const KEY_L = 'mcu_lang';
+  const LANGS = [
+    ['es', 'Espanol', 'es-ES'], ['en', 'English', 'en-US'], ['pt', 'Portugues', 'pt-BR'],
+    ['ru', 'Russkiy', 'ru-RU'], ['fr', 'Francais', 'fr-FR'], ['de', 'Deutsch', 'de-DE']
+  ];
+  const T = {
+    es: {
+      todos: 'Todos', pendientes: 'Pendientes', vistos: 'Vistos', cruciales: 'Cruciales',
+      soloExt: 'Solo extendido', soloMcu: 'Solo MCU', buscar: 'Buscar...',
+      sinRes: 'Sin resultados', vistosDe: 'vistos', progreso: 'Progreso',
+      guardarNube: 'Guardar en la nube', soloNavegador: 'Progreso guardado solo en este navegador',
+      sincronizado: 'Progreso sincronizado', guardando: 'Guardando...', enviarEnlace: 'Enviar enlace',
+      cancelar: 'Cancelar', salir: 'Salir', revisaCorreo: 'Revisa tu correo y abre el enlace',
+      enlaceEnviado: 'Enlace enviado', correoInvalido: 'Correo no valido', pais: 'Pais',
+      mapaMundial: 'Mapa mundial', actividadMundo: 'Actividad en el mundo', cerrar: 'Cerrar',
+      comunidad: 'Comunidad', escenarios: 'Escenarios', cargando: 'Cargando...',
+      visitasTot: 'Visitas totales', paisesAlc: 'Paises alcanzados', resenas: 'Resenas',
+      tuPais: 'Tu pais', mejorValoradas: 'Mejor valoradas', sinResenas: 'Todavia no hay resenas. Puntua una pelicula con las estrellas para estrenar el mapa.',
+      puntuala: 'puntuala', voto: 'voto', votos: 'votos',
+      guardadaAqui: 'Puntuacion guardada aqui. Inicia sesion para compartirla',
+      guardada: 'Puntuacion guardada', noGuardo: 'No se pudo guardar',
+      incluido: 'Incluido', alquilar: 'Alquilar', noDispo: 'No disponible aqui - prueba Global',
+      sinDatos: 'Sin datos de streaming todavia', enPaises: 'en {n} paises',
+      global: 'Global (todo el mundo)', rodajeReal: 'Rodaje real', enHistoria: 'En la historia',
+      pistaMapa: 'Toca un punto para ver la escena. Acerca hasta el nivel de calle.',
+      idioma: 'Idioma', foto: 'Foto: Wikimedia'
+    },
+    en: {
+      todos: 'All', pendientes: 'To watch', vistos: 'Watched', cruciales: 'Essential',
+      soloExt: 'Extended only', soloMcu: 'MCU only', buscar: 'Search...',
+      sinRes: 'No results', vistosDe: 'watched', progreso: 'Progress',
+      guardarNube: 'Save to cloud', soloNavegador: 'Progress saved only in this browser',
+      sincronizado: 'Progress synced', guardando: 'Saving...', enviarEnlace: 'Send link',
+      cancelar: 'Cancel', salir: 'Sign out', revisaCorreo: 'Check your email and open the link',
+      enlaceEnviado: 'Link sent', correoInvalido: 'Invalid email', pais: 'Country',
+      mapaMundial: 'World map', actividadMundo: 'Activity around the world', cerrar: 'Close',
+      comunidad: 'Community', escenarios: 'Locations', cargando: 'Loading...',
+      visitasTot: 'Total visits', paisesAlc: 'Countries reached', resenas: 'Ratings',
+      tuPais: 'Your country', mejorValoradas: 'Top rated', sinResenas: 'No ratings yet. Rate a film with the stars to light up the map.',
+      puntuala: 'rate it', voto: 'vote', votos: 'votes',
+      guardadaAqui: 'Saved locally. Sign in to share it', guardada: 'Rating saved', noGuardo: 'Could not save',
+      incluido: 'Included', alquilar: 'Rent', noDispo: 'Not available here - try Global',
+      sinDatos: 'No streaming data yet', enPaises: 'in {n} countries',
+      global: 'Global (worldwide)', rodajeReal: 'Real filming site', enHistoria: 'In the story',
+      pistaMapa: 'Tap a point to see the scene. Zoom in to street level.',
+      idioma: 'Language', foto: 'Photo: Wikimedia'
+    },
+    pt: {
+      todos: 'Todos', pendientes: 'Pendentes', vistos: 'Vistos', cruciales: 'Essenciais',
+      soloExt: 'So estendido', soloMcu: 'So MCU', buscar: 'Buscar...',
+      sinRes: 'Sem resultados', vistosDe: 'vistos', progreso: 'Progresso',
+      guardarNube: 'Salvar na nuvem', soloNavegador: 'Progresso salvo so neste navegador',
+      sincronizado: 'Progresso sincronizado', guardando: 'Salvando...', enviarEnlace: 'Enviar link',
+      cancelar: 'Cancelar', salir: 'Sair', revisaCorreo: 'Confira seu email e abra o link',
+      enlaceEnviado: 'Link enviado', correoInvalido: 'Email invalido', pais: 'Pais',
+      mapaMundial: 'Mapa mundial', actividadMundo: 'Atividade no mundo', cerrar: 'Fechar',
+      comunidad: 'Comunidade', escenarios: 'Cenarios', cargando: 'Carregando...',
+      visitasTot: 'Visitas totais', paisesAlc: 'Paises alcancados', resenas: 'Avaliacoes',
+      tuPais: 'Seu pais', mejorValoradas: 'Mais bem avaliados', sinResenas: 'Ainda nao ha avaliacoes. Avalie um filme com as estrelas para iniciar o mapa.',
+      puntuala: 'avalie', voto: 'voto', votos: 'votos',
+      guardadaAqui: 'Salvo aqui. Entre para compartilhar', guardada: 'Avaliacao salva', noGuardo: 'Nao foi possivel salvar',
+      incluido: 'Incluido', alquilar: 'Alugar', noDispo: 'Indisponivel aqui - tente Global',
+      sinDatos: 'Sem dados de streaming ainda', enPaises: 'em {n} paises',
+      global: 'Global (mundo todo)', rodajeReal: 'Local de filmagem', enHistoria: 'Na historia',
+      pistaMapa: 'Toque num ponto para ver a cena. Aproxime ate o nivel da rua.',
+      idioma: 'Idioma', foto: 'Foto: Wikimedia'
+    }
+  };
+  return { LANGS, T, KEY_L };
+})();
+
+window.Lang = (() => {
+  const { LANGS, T, KEY_L } = window.I18n;
+  function detect() {
+    const l = (navigator.language || 'es').slice(0, 2).toLowerCase();
+    return LANGS.some(x => x[0] === l) ? l : 'es';
+  }
+  let cur = localStorage.getItem(KEY_L) || detect();
+  if (!T[cur]) cur = 'es';
+
+  const t = k => (T[cur] && T[cur][k]) || T.es[k] || k;
+  const get = () => cur;
+  const tmdb = () => (LANGS.find(x => x[0] === cur) || LANGS[0])[2];
+  const wiki = () => cur;
+
+  function set(l) {
+    if (!T[l]) l = 'es';
+    cur = l;
+    localStorage.setItem(KEY_L, l);
+    CFG.LANG = tmdb();
+    apply();
+    if (window.Providers) { window.Providers.clearCache(); window.Providers.observe(); }
+    if (typeof renderList === 'function') renderList();
+    if (typeof updateStats === 'function') updateStats();
+    if (window.Reviews) window.Reviews.paintAll();
+  }
+
+  // textos fijos del HTML, por selector
+  const MAP = [
+    ['#cbMsg', 'soloNavegador'], ['#mapOpen', 'mapaMundial'], ['#tabCom', 'comunidad'],
+    ['#tabEsc', 'escenarios'], ['#mapClose', 'cerrar'], ['.maptitle', 'actividadMundo'],
+    ['label[for="cbRegion"]', 'pais'], ['label[for="cbLang"]', 'idioma']
+  ];
+
+  function apply() {
+    document.documentElement.lang = cur;
+    MAP.forEach(([sel, key]) => {
+      const el = document.querySelector(sel);
+      if (el && !el.dataset.keep) el.textContent = t(key);
+    });
+    const start = document.getElementById('cbStart');
+    if (start) start.textContent = t('guardarNube');
+    const q = document.querySelector('.search input, #q, input[type="search"]');
+    if (q) q.placeholder = t('buscar');
+    const hint = document.querySelector('.maphint');
+    if (hint && !hint.dataset.err) {
+      hint.innerHTML = t('pistaMapa') + ' <b>' + t('rodajeReal') + '</b> \u00b7 <b>' + t('enHistoria') + '</b>';
+    }
+    const reg = document.getElementById('cbRegion');
+    if (reg && reg.options.length) reg.options[0].textContent = t('global');
+  }
+
+  function mount() {
+    const sel = document.getElementById('cbLang');
+    if (!sel) return;
+    sel.innerHTML = LANGS.map(l => '<option value="' + l[0] + '">' + l[1] + '</option>').join('');
+    sel.value = cur;
+    sel.onchange = () => set(sel.value);
+    CFG.LANG = tmdb();
+    apply();
+  }
+
+  return { t, get, set, mount, apply, tmdb, wiki };
+})();
 
 /* ══ REGION (mundial) ══ */
 window.Region = (() => {
@@ -855,7 +992,7 @@ window.Reviews = (() => {
   async function set(title, rating) {
     mine[title] = rating; saveLocal();
     const c = sb(), u = user();
-    if (!c || !u) { toast('Puntuacion guardada aqui. Inicia sesion para compartirla'); return; }
+    if (!c || !u) { toast(window.Lang.t('guardadaAqui')); return; }
     let country = window.Region ? window.Region.get() : null;
     if ((!country || country === 'GLOBAL') && window.Region && window.Region.detect) country = window.Region.detect();
     const { error } = await c.from('reviews').upsert({
@@ -863,7 +1000,7 @@ window.Reviews = (() => {
       country: (country && country !== 'GLOBAL' && country.length === 2) ? country : null,
       updated_at: new Date().toISOString()
     }, { onConflict: 'user_id,title' });
-    toast(error ? 'No se pudo guardar' : 'Puntuacion guardada');
+    toast(error ? window.Lang.t('noGuardo') : window.Lang.t('guardada'));
     if (!error) loadStats(true);
   }
 
@@ -897,7 +1034,7 @@ window.Reviews = (() => {
            'aria-label="Puntuar ' + i + ' de 5" title="' + i + '/5">\u2605</button>';
     }
     h += st ? '<span class="rate-avg">' + st.avg.toFixed(1) + ' \u00b7 ' + st.votes + ' voto' + (st.votes === 1 ? '' : 's') + '</span>'
-            : (mineV ? '' : '<span class="rate-hint">puntuala</span>');
+            : (mineV ? '' : '<span class="rate-hint">' + window.Lang.t('puntuala') + '</span>');
     el.innerHTML = h;
     el.querySelectorAll('.st').forEach(b => {
       b.onclick = ev => { ev.stopPropagation(); set(t, Number(b.dataset.v)); paintAll(); };
@@ -1007,7 +1144,10 @@ window.ZoomMap = (() => {
     'Point Dume, Malibu': 'Point Dume'
   };
 
-  const imgCache = {};
+  const IMGKEY = 'wiki_img_v1';
+  let imgCache = {};
+  try { imgCache = JSON.parse(localStorage.getItem(IMGKEY) || '{}'); } catch (e) { imgCache = {}; }
+  const saveImgs = () => { try { localStorage.setItem(IMGKEY, JSON.stringify(imgCache)); } catch (e) {} };
   async function photo(name) {
     if (name in imgCache) return imgCache[name];
     const art = WIKI[name];
@@ -1022,7 +1162,16 @@ window.ZoomMap = (() => {
       }
     } catch (e) {}
     imgCache[name] = null;
+    saveImgs();
     return null;
+  }
+
+  async function preload(names) {
+    const falta = names.filter(x => !(x in imgCache));
+    let i = 0;
+    const worker = async () => { while (i < falta.length) { await photo(falta[i++]); } };
+    await Promise.all([worker(), worker(), worker(), worker()]);
+    saveImgs();
   }
 
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
@@ -1065,27 +1214,22 @@ window.ZoomMap = (() => {
     map.touchZoomRotate.disableRotation();
     map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), 'top-right');
 
+    await preload(window.Places.list().map(x => x[2]));
+
     window.Places.list().forEach(p => {
       const [lat, lon, name, film, tipo, nota] = p;
       const d = document.createElement('div');
       d.className = 'pin ' + tipo;
       d.title = name;
-      const pid = 'pop' + Math.random().toString(36).slice(2, 9);
+      const im = imgCache[name] || null;
+      const imgHtml = im ? ('<div class="pop-img"><img src="' + im.src + '" alt="' + esc(name) + '" loading="lazy">' +
+        (im.page ? '<a class="pop-cred" href="' + im.page + '" target="_blank" rel="noopener">' + window.Lang.t('foto') + '</a>' : '') + '</div>') : '';
       const pop = new maplibregl.Popup({ offset: 14, closeButton: true, maxWidth: '270px' }).setHTML(
-        '<div class="pop"><div class="pop-img" id="' + pid + '"></div><b>' + esc(name) + '</b>' +
+        '<div class="pop">' + imgHtml + '<b>' + esc(name) + '</b>' +
         '<span class="pop-film">' + esc(film) + '</span>' +
-        '<span class="pop-tag ' + tipo + '">' + (tipo === 'rodaje' ? 'Rodaje real' : 'En la historia') + '</span>' +
+        '<span class="pop-tag ' + tipo + '">' + (tipo === 'rodaje' ? window.Lang.t('rodajeReal') : window.Lang.t('enHistoria')) + '</span>' +
         '<p>' + esc(nota) + '</p></div>'
       );
-      pop.on('open', async () => {
-        const box = document.getElementById(pid);
-        if (!box || box.dataset.done) return;
-        box.dataset.done = '1';
-        const img = await photo(name);
-        if (!img) { box.remove(); return; }
-        box.innerHTML = '<img src="' + img.src + '" alt="' + esc(name) + '" loading="lazy">' +
-          (img.page ? '<a class="pop-cred" href="' + img.page + '" target="_blank" rel="noopener">Foto: Wikimedia</a>' : '');
-      });
       new maplibregl.Marker({ element: d }).setLngLat([lon, lat]).setPopup(pop).addTo(map);
     });
 
@@ -1226,16 +1370,16 @@ window.WorldMap = (() => {
     const totRev = act.reduce((a, b) => a + b.reviews, 0);
     const totVis = Object.values(vis).reduce((a, b) => a + b, 0);
     s += '<div class="mapstats">' +
-      '<div class="mstat"><b>' + totVis + '</b><span>Visitas totales</span></div>' +
-      '<div class="mstat"><b>' + Object.keys(vis).length + '</b><span>Paises alcanzados</span></div>' +
-      '<div class="mstat"><b>' + totRev + '</b><span>Resenas</span></div>' +
-      '<div class="mstat"><b>' + (me && C[me] ? C[me][2] : '\u2014') + '</b><span>Tu pais</span></div>' +
+      '<div class="mstat"><b>' + totVis + '</b><span>' + window.Lang.t('visitasTot') + '</span></div>' +
+      '<div class="mstat"><b>' + Object.keys(vis).length + '</b><span>' + window.Lang.t('paisesAlc') + '</span></div>' +
+      '<div class="mstat"><b>' + totRev + '</b><span>' + window.Lang.t('resenas') + '</span></div>' +
+      '<div class="mstat"><b>' + (me && C[me] ? C[me][2] : '\u2014') + '</b><span>' + window.Lang.t('tuPais') + '</span></div>' +
       '</div>';
 
     let top = [];
     if (c) { const r = await c.rpc('get_review_stats'); top = (r.data || []).filter(x => x.votes >= 1).sort((a, b) => b.avg_rating - a.avg_rating || b.votes - a.votes).slice(0, 8); }
     if (top.length) {
-      s += '<div class="toplist"><div class="maptitle" style="margin-bottom:6px">Mejor valoradas</div>';
+      s += '<div class="toplist"><div class="maptitle" style="margin-bottom:6px">' + window.Lang.t('mejorValoradas') + '</div>';
       top.forEach((t, i) => {
         s += '<div class="toprow"><em>' + (i + 1) + '</em><span>' + esc(t.title) + '</span>' +
              '<i>' + Number(t.avg_rating).toFixed(1) + '/5 \u00b7 ' + t.votes + '</i></div>';
@@ -1458,15 +1602,15 @@ window.Providers = (() => {
   function paint(el, all) {
     const isG = window.Region.get() === 'GLOBAL';
     const reg = isG ? globalMerge(all) : (all ? all[window.Region.get()] : null);
-    if (!reg) { el.innerHTML = '<span class="prov-none">' + (isG ? 'Sin datos de streaming todavia' : 'No disponible aqui \u2014 prueba Global') + '</span>'; return; }
+    if (!reg) { el.innerHTML = '<span class="prov-none">' + (isG ? window.Lang.t('sinDatos') : window.Lang.t('noDispo')) + '</span>'; return; }
     const parts = [], seen = new Set();
     (reg.flatrate || []).slice(0, 3).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); parts.push(chip(p, reg.link, '')); } });
-    if (parts.length) parts.unshift('<span class="prov-lbl">Incluido</span>');
+    if (parts.length) parts.unshift('<span class="prov-lbl">' + window.Lang.t('incluido') + '</span>');
     const rp = [];
     [].concat(reg.rent || [], reg.buy || []).slice(0, 2).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); rp.push(chip(p, reg.link, 'rent')); } });
-    if (rp.length) { parts.push('<span class="prov-lbl">Alquilar</span>'); rp.forEach(x => parts.push(x)); }
+    if (rp.length) { parts.push('<span class="prov-lbl">' + window.Lang.t('alquilar') + '</span>'); rp.forEach(x => parts.push(x)); }
     if (isG && reg.countries) parts.push('<span class="prov-lbl">en ' + reg.countries + ' paises</span>');
-    el.innerHTML = parts.length ? parts.join('') : '<span class="prov-none">Sin datos de streaming todavia</span>';
+    el.innerHTML = parts.length ? parts.join('') : '<span class="prov-none">' + window.Lang.t('sinDatos') + '</span>';
   }
 
   const store = new Map();
@@ -1501,7 +1645,8 @@ window.Providers = (() => {
     }, { rootMargin: '250px' });
     document.querySelectorAll('.prov').forEach(el => io.observe(el));
   }
-  return { observe, repaintAll };
+  const clearCache = () => { cache = {}; store.clear(); document.querySelectorAll('.prov').forEach(e => { e.dataset.loading = ''; e.innerHTML = ''; }); };
+  return { observe, repaintAll, clearCache };
 })();
 
 /* ══ SINCRONIZACION (Supabase) ══ */
@@ -1533,14 +1678,14 @@ window.CloudSync = (() => {
   async function sendLink() {
     const el = document.getElementById('cbEmail');
     const email = el ? el.value : '';
-    if (!/^\S+@\S+\.\S+$/.test(email)) { toast('Correo no valido'); return; }
+    if (!/^\S+@\S+\.\S+$/.test(email)) { toast(window.Lang.t('correoInvalido')); return; }
     const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.href } });
     if (error) { toast('Error: ' + error.message); return; }
     box().innerHTML = '<span class="cb-mail">Revisa tu correo y abre el enlace</span>';
-    setState('Enlace enviado', 'sync');
+    setState(window.Lang.t('enlaceEnviado'), 'sync');
   }
   function renderIn() {
-    setState('Progreso sincronizado', 'on');
+    setState(window.Lang.t('sincronizado'), 'on');
     box().innerHTML = '<span class="cb-mail">' + user.email + '</span><button class="cb-btn ghost" id="cbOut">Salir</button>';
     document.getElementById('cbOut').onclick = async () => { await sb.auth.signOut(); user = null; renderOut(); };
   }
@@ -1553,10 +1698,10 @@ window.CloudSync = (() => {
     if (!sb || !user) return;
     clearTimeout(timer);
     timer = setTimeout(async () => {
-      setState('Guardando...', 'sync');
+      setState(window.Lang.t('guardando'), 'sync');
       const { error } = await sb.from('mcu_progress')
         .upsert({ user_id: user.id, watched: list, updated_at: new Date().toISOString() }, { onConflict: 'user_id' });
-      setState(error ? 'Error al guardar' : 'Progreso sincronizado', error ? '' : 'on');
+      setState(error ? window.Lang.t('noGuardo') : window.Lang.t('sincronizado'), error ? '' : 'on');
     }, 700);
   }
   async function onSession(session) {
@@ -1585,6 +1730,7 @@ window.CloudSync = (() => {
   document.addEventListener('DOMContentLoaded', () => {
     const s = document.getElementById('cbStart');
     if (s) s.onclick = renderForm;
+    if (window.Lang) window.Lang.mount();
     window.Region.mount(() => window.Providers.repaintAll());
     const mo = document.getElementById('mapOpen'), mc = document.getElementById('mapClose'), mw = document.getElementById('mapwrap');
     const tc = document.getElementById('tabCom'), te = document.getElementById('tabEsc');
