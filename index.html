@@ -570,24 +570,36 @@ const LIST = [
 ];
 
 const KEY = 'mcu_v4';
-let watched = new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
+// La identidad de cada titulo es su id, no su nombre: asi no se rompe al cambiar de idioma.
+const mid = m => 'id:' + m.id;
+const T2ID = {};
+LIST.forEach(m => { T2ID[m.title] = mid(m); });
+const ID2M = {};
+LIST.forEach(m => { ID2M[mid(m)] = m; });
+// Migra lo guardado antes, cuando la clave era el titulo en espanol.
+function migrar(arr) {
+  return (arr || []).map(x => (typeof x === 'string' && x.indexOf('id:') === 0) ? x : (T2ID[x] || x))
+                    .filter((x, i, a) => a.indexOf(x) === i);
+}
+let watched = new Set(migrar(JSON.parse(localStorage.getItem(KEY)||'[]')));
 let filter = 'all', q = '';
 
 const save = () => { localStorage.setItem(KEY, JSON.stringify([...watched])); if (window.CloudSync) window.CloudSync.push([...watched]); };
 
-function toggle(title) {
-  watched.has(title) ? watched.delete(title) : watched.add(title);
+function toggle(k) {
+  const title = k;
+  watched.has(k) ? watched.delete(k) : watched.add(k);
   save(); updateStats(); renderList();
   const name = title.split(':')[0].split('(')[0].split('—')[0].trim();
-  toast(watched.has(title) ? '✅ '+name+' — ¡Visto!' : '❌ '+name+' — Desmarcado');
+  toast(watched.has(k) ? '✅ '+name+' — ¡Visto!' : '❌ '+name+' — Desmarcado');
 }
 
 function updateStats() {
   const all = LIST.filter(m=>!m.dday);
-  const done = all.filter(m=>watched.has(m.title)).length;
-  const ext = LIST.filter(m=>m.kind==='ext'&&watched.has(m.title)).length;
-  const mcu = LIST.filter(m=>m.kind==='mcu'&&!m.dday&&watched.has(m.title)).length;
-  const crucial = all.filter(m=>m.imp==='Crucial'&&watched.has(m.title)).length;
+  const done = all.filter(m=>watched.has(mid(m))).length;
+  const ext = LIST.filter(m=>m.kind==='ext'&&watched.has(mid(m))).length;
+  const mcu = LIST.filter(m=>m.kind==='mcu'&&!m.dday&&watched.has(mid(m))).length;
+  const crucial = all.filter(m=>m.imp==='Crucial'&&watched.has(mid(m))).length;
   const total = all.length;
   document.getElementById('s-done').textContent = done;
   document.getElementById('s-left').textContent = total-done;
@@ -601,13 +613,16 @@ function updateStats() {
 }
 
 function matches(m) {
-  if (filter==='done' && !watched.has(m.title)) return false;
-  if (filter==='pending' && watched.has(m.title)) return false;
+  if (filter==='done' && !watched.has(mid(m))) return false;
+  if (filter==='pending' && watched.has(mid(m))) return false;
   if (filter==='crucial' && m.imp!=='Crucial') return false;
   if (filter==='ext' && m.kind!=='ext') return false;
   if (filter==='mcu' && m.kind!=='ext') return false; // show only mcu
   if (filter==='mcu' && m.kind==='ext') return false;
-  if (q && !m.title.toLowerCase().includes(q)) return false;
+  if (q) {
+    const vis = window.Titles ? window.Titles.get(m) : m.title;
+    if (!m.title.toLowerCase().includes(q) && !String(vis).toLowerCase().includes(q)) return false;
+  }
   return true;
 }
 
@@ -630,7 +645,7 @@ function renderList() {
     if (!vis.length) return;
     anyVis = true;
 
-    const doneInGroup = items.filter(m=>watched.has(m.title)).length;
+    const doneInGroup = items.filter(m=>watched.has(mid(m))).length;
     const isExt = items[0].kind === 'ext';
     const sec = document.createElement('div');
     sec.className = 'sec-block';
@@ -662,7 +677,7 @@ function renderList() {
         rows.appendChild(br);
       }
 
-      const isDone = watched.has(m.title);
+      const isDone = watched.has(mid(m));
       const row = document.createElement('div');
       row.className = 'row'+(isDone?' done':'')+(m.kind==='ext'?' ext-row':'')+(m.dday?' dday':'');
       const impCls = m.imp==='Crucial'?'c':'m';
@@ -674,18 +689,18 @@ function renderList() {
 
       row.innerHTML = `
         <div class="rnum">${numDisplay}</div>
-        <button class="chk" onclick="toggle('${m.title.replace(/'/g,"\\'")}')">
+        <button class="chk" onclick="toggle('${mid(m)}')">
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </button>
         <div class="tarea">
           <div class="ttop">
             <span class="ticon">${tIcon}</span>
-            <span class="ttxt">${m.title}</span>
+            <span class="ttxt">${window.Titles ? window.Titles.get(m) : m.title}</span>
             <span class="tyr">${m.year}</span>
           </div>
           ${m.reason?`<div class="treason">${m.reason}</div>`:''}
           ${m.note?`<div class="treason" style="color:var(--muted)">${m.note}</div>`:''}
-          <div class="rate" data-title="${encodeURIComponent(m.title)}"></div>
+          <div class="rate" data-mid="${mid(m)}" data-title="${encodeURIComponent(m.title)}"></div>
           <div class="prov" data-title="${encodeURIComponent(m.title)}" data-year="${m.year}" data-kind="${m.type==='Serie'?'tv':'movie'}"></div>
         </div>
         ${tagHtml}
@@ -947,6 +962,11 @@ window.Lang = (() => {
     apply();
     if (window.Providers) { window.Providers.clearCache(); window.Providers.observe(); }
     if (typeof renderList === 'function') renderList();
+    if (window.Titles && typeof LIST !== 'undefined') {
+      window.Titles.ensure(LIST).then(cambio => {
+        if (cambio && typeof renderList === 'function') renderList();
+      });
+    }
     if (typeof updateStats === 'function') updateStats();
     if (window.Reviews) window.Reviews.paintAll();
   }
@@ -1146,7 +1166,7 @@ window.Reviews = (() => {
     if (!c || !u) return;
     const { data } = await c.from('reviews').select('title,rating').eq('user_id', u.id);
     if (!data) return;
-    data.forEach(r => { mine[r.title] = r.rating; });
+    data.forEach(r => { mine[(typeof T2ID !== 'undefined' && T2ID[r.title]) || r.title] = r.rating; });
     saveLocal();
     paintAll();
   }
@@ -1158,12 +1178,12 @@ window.Reviews = (() => {
     const { data } = await c.rpc('get_review_stats');
     if (!data) return;
     stats = {};
-    data.forEach(r => { stats[r.title] = { avg: Number(r.avg_rating), votes: r.votes }; });
+    data.forEach(r => { stats[(typeof T2ID !== 'undefined' && T2ID[r.title]) || r.title] = { avg: Number(r.avg_rating), votes: r.votes }; });
     paintAll();
   }
 
   function paint(el) {
-    const t = decodeURIComponent(el.dataset.title);
+    const t = el.dataset.mid || decodeURIComponent(el.dataset.title);
     const mineV = get(t), st = stats[t];
     let h = '';
     for (let i = 1; i <= 5; i++) {
@@ -1531,6 +1551,72 @@ window.WorldMap = (() => {
   function close() { const w = document.getElementById('mapwrap'); if (w) w.classList.remove('open'); }
   return { open, close };
 })();
+/* ══ TITULOS LOCALIZADOS ══
+   La identidad de cada pelicula es su id numerico (estable).
+   El titulo es solo presentacion y cambia con el idioma. */
+window.Titles = (() => {
+  const K = 'tmdb_titles_v2';
+  const TTL = 30 * 24 * 60 * 60 * 1000;
+  let store = {};
+  try { store = JSON.parse(localStorage.getItem(K) || '{}'); } catch (e) { store = {}; }
+  const save = () => { try { localStorage.setItem(K, JSON.stringify(store)); } catch (e) {} };
+  const ready = () => CFG.TMDB_TOKEN && CFG.TMDB_TOKEN.indexOf('PLACEHOLDER') === -1;
+
+  async function fetchOne(m, lang) {
+    const kind = m.type === 'Serie' ? 'tv' : 'movie';
+    const q = window.cleanTitle ? window.cleanTitle(m.title) : m.title;
+    const yq = kind === 'movie' ? 'year' : 'first_air_date_year';
+    const base = 'https://api.themoviedb.org/3/search/' + kind + '?query=' + encodeURIComponent(q) + '&language=' + lang;
+    for (const u of [base + '&' + yq + '=' + m.year, base]) {
+      try {
+        const r = await fetch(u, { headers: { Authorization: 'Bearer ' + CFG.TMDB_TOKEN, accept: 'application/json' } });
+        if (!r.ok) continue;
+        const j = await r.json();
+        const f = (j.results || [])[0];
+        const tt = f && (f.title || f.name);
+        if (tt) return tt;
+      } catch (e) {}
+    }
+    return null;
+  }
+
+  // Devuelve el titulo a mostrar. Si aun no se descargo, usa el original.
+  function get(m) {
+    const l = window.Lang ? window.Lang.get() : 'es';
+    if (l === 'es') return m.title;
+    const b = store[l];
+    return (b && b.map && b.map[m.id]) || m.title;
+  }
+
+  let cargando = null;
+  async function ensure(list) {
+    const l = window.Lang ? window.Lang.get() : 'es';
+    if (l === 'es' || !ready()) return false;
+    const b = store[l];
+    if (b && b.ts && Date.now() - b.ts < TTL && Object.keys(b.map || {}).length >= list.length - 6) return false;
+    if (cargando === l) return false;
+    cargando = l;
+
+    const tmdbLang = window.Lang ? window.Lang.tmdb() : 'en-US';
+    const map = (b && b.map) || {};
+    const falta = list.filter(m => !map[m.id]);
+    let i = 0;
+    const worker = async () => {
+      while (i < falta.length) {
+        const m = falta[i++];
+        const tt = await fetchOne(m, tmdbLang);
+        if (tt) map[m.id] = tt;
+      }
+    };
+    await Promise.all([worker(), worker(), worker(), worker()]);
+    store[l] = { ts: Date.now(), map: map };
+    save();
+    cargando = null;
+    return true;
+  }
+
+  return { get, ensure };
+})();
 window.Backdrop = (() => {
   const CK = 'tmdb_bd_v2';
   const TTL = 14 * 24 * 60 * 60 * 1000;
@@ -1845,7 +1931,7 @@ window.CloudSync = (() => {
     if (!session) { renderOut(); return; }
     user = session.user;
     renderIn();
-    const cloud = await pull();
+    const cloud = migrar(await pull());
     const local = Array.from(watched);
     const union = Array.from(new Set([].concat(cloud, local)));
     watched = new Set(union);
@@ -1868,6 +1954,7 @@ window.CloudSync = (() => {
     const s = document.getElementById('cbStart');
     if (s) s.onclick = renderForm;
     if (window.Lang) window.Lang.mount();
+    if (window.Titles && typeof LIST !== 'undefined') window.Titles.ensure(LIST).then(c => { if (c) renderList(); });
     window.Region.mount(() => window.Providers.repaintAll());
     const mo = document.getElementById('mapOpen'), mc = document.getElementById('mapClose'), mw = document.getElementById('mapwrap');
     const tc = document.getElementById('tabCom'), te = document.getElementById('tabEsc');
