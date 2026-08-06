@@ -379,16 +379,16 @@ header h1 span{transition:color .8s ease}
 <div class="thbar" id="thbar"></div>
 <div class="cloudbar" id="cloudbar">
   <span class="cb-dot" id="cbDot"></span>
-  <span id="cbMsg">Progreso guardado solo en este navegador</span>
+  <span id="cbMsg" data-i18n="soloNavegador">Progreso guardado solo en este navegador</span>
   <span id="cbAuth" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-    <button class="cb-btn" id="cbStart">Guardar en la nube</button>
+    <button class="cb-btn" id="cbStart" data-i18n="guardarNube">Guardar en la nube</button>
   </span>
   <span class="cb-sep"></span>
   <label for="cbRegion" style="letter-spacing:2px;text-transform:uppercase;font-size:10px">Pais</label>
   <select class="cb-reg" id="cbRegion"></select>
   <label for="cbLang" style="letter-spacing:2px;text-transform:uppercase;font-size:10px">Idioma</label>
   <select class="cb-reg" id="cbLang"></select>
-  <button class="mapbtn" id="mapOpen">Mapa mundial</button>
+  <button class="mapbtn" id="mapOpen" data-i18n="mapaMundial">Mapa mundial</button>
 </div>
 <div class="stats">
   <div class="stat"><span class="sn g" id="s-done">0</span><span class="sl">Vistos</span></div>
@@ -400,7 +400,7 @@ header h1 span{transition:color .8s ease}
 </div>
 
 <div class="prog-wrap">
-  <span class="prog-lbl">PROGRESO TOTAL</span>
+  <span class="prog-lbl" data-i18n="progresoTotal">PROGRESO TOTAL</span>
   <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
   <span class="prog-pct" id="pp">0%</span>
 </div>
@@ -420,19 +420,19 @@ header h1 span{transition:color .8s ease}
 <div class="toast" id="toast"></div>
 
 
-<div class="mapwrap" id="mapwrap"><div class="mapbox"><div class="maphd"><span class="maptitle">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
+<div class="mapwrap" id="mapwrap"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
 <footer class="legal">
   <div class="f-row">
     <div class="f-col">
-      <span class="f-h">Sobre este proyecto</span>
+      <span class="f-h" data-i18n="fSobre">Sobre este proyecto</span>
       Rastreador no oficial hecho por un fan, para ver el MCU en orden.
       Sin relacion con Marvel Studios ni con The Walt Disney Company.
       Los titulos y fechas son informacion factual de dominio publico.
       <br><br>
-      <a href="https://github.com/RonaldoBTC-code/mcu-tracker" target="_blank" rel="noopener">Codigo abierto en GitHub</a>
+      <a href="https://github.com/RonaldoBTC-code/mcu-tracker" target="_blank" rel="noopener" data-i18n="fGithub">Codigo abierto en GitHub</a>
     </div>
     <div class="f-col">
-      <span class="f-h">Disponibilidad</span>
+      <span class="f-h" data-i18n="fDispo">Disponibilidad</span>
       Los datos de donde ver cada titulo provienen de
       <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a> y
       <a href="https://www.justwatch.com/" target="_blank" rel="noopener">JustWatch</a>.
@@ -441,10 +441,10 @@ header h1 span{transition:color .8s ease}
       Enlazamos unicamente a plataformas oficiales. Este sitio no aloja ni reproduce peliculas.
     </div>
     <div class="f-col">
-      <span class="f-h">Apoyar</span>
+      <span class="f-h" data-i18n="fApoyar">Apoyar</span>
       Si te sirvio, puedes invitarme un cafe. Eso mantiene el proyecto gratis y sin anuncios invasivos.
       <br>
-      <a class="kofi" href="https://ko-fi.com/ronaldoramos71004" target="_blank" rel="noopener">Invitar un cafe</a>
+      <a class="kofi" href="https://ko-fi.com/ronaldoramos71004" target="_blank" rel="noopener" data-i18n="fCafe">Invitar un cafe</a>
     </div>
   </div>
 </footer>
@@ -641,7 +641,7 @@ function renderList() {
     hdr.innerHTML = `
       <span class="sec-title${isExt?' pur':''}">${phase}</span>
       <div class="sec-line${isExt?' pur':''}"></div>
-      <span class="sec-info">${doneInGroup}/${items.length} vistos</span>
+      <span class="sec-info">${doneInGroup}/${items.length} ${window.Lang.t('vistosDe')}</span>
       <span class="sec-arr">▼</span>`;
     hdr.onclick = () => { hdr.classList.toggle('collapsed'); };
 
@@ -706,6 +706,7 @@ function renderList() {
   }
   if (window.Providers) window.Providers.observe();
   if (window.Reviews) { window.Reviews.paintAll(); window.Reviews.loadStats(false); }
+  if (window.Lang) window.Lang.apply();
 }
 
 // Handle sec-rows height for collapse animation
@@ -759,65 +760,166 @@ window.I18n = (() => {
   ];
   const T = {
     es: {
+      tagline: 'MCU Watch Tracker \u2014 Orden Cronol\u00f3gico', objetivoFinal: 'Objetivo final',
       todos: 'Todos', pendientes: 'Pendientes', vistos: 'Vistos', cruciales: 'Cruciales',
-      soloExt: 'Solo extendido', soloMcu: 'Solo MCU', buscar: 'Buscar...',
-      sinRes: 'Sin resultados', vistosDe: 'vistos', progreso: 'Progreso',
+      soloExt: 'Solo Extendido', soloMcu: 'Solo MCU', buscar: 'Buscar...', extendido: 'Extendido',
+      mcu: 'MCU', total: 'Total', progresoTotal: 'Progreso total', vistosDe: 'vistos',
+      sinRes: 'Sin resultados',
       guardarNube: 'Guardar en la nube', soloNavegador: 'Progreso guardado solo en este navegador',
       sincronizado: 'Progreso sincronizado', guardando: 'Guardando...', enviarEnlace: 'Enviar enlace',
       cancelar: 'Cancelar', salir: 'Salir', revisaCorreo: 'Revisa tu correo y abre el enlace',
-      enlaceEnviado: 'Enlace enviado', correoInvalido: 'Correo no valido', pais: 'Pais',
-      mapaMundial: 'Mapa mundial', actividadMundo: 'Actividad en el mundo', cerrar: 'Cerrar',
-      comunidad: 'Comunidad', escenarios: 'Escenarios', cargando: 'Cargando...',
-      visitasTot: 'Visitas totales', paisesAlc: 'Paises alcanzados', resenas: 'Resenas',
-      tuPais: 'Tu pais', mejorValoradas: 'Mejor valoradas', sinResenas: 'Todavia no hay resenas. Puntua una pelicula con las estrellas para estrenar el mapa.',
-      puntuala: 'puntuala', voto: 'voto', votos: 'votos',
-      guardadaAqui: 'Puntuacion guardada aqui. Inicia sesion para compartirla',
-      guardada: 'Puntuacion guardada', noGuardo: 'No se pudo guardar',
-      incluido: 'Incluido', alquilar: 'Alquilar', noDispo: 'No disponible aqui - prueba Global',
-      sinDatos: 'Sin datos de streaming todavia', enPaises: 'en {n} paises',
+      enlaceEnviado: 'Enlace enviado', correoInvalido: 'Correo no v\u00e1lido', pais: 'Pa\u00eds',
+      idioma: 'Idioma', mapaMundial: 'Mapa mundial', actividadMundo: 'Actividad en el mundo',
+      cerrar: 'Cerrar', comunidad: 'Comunidad', escenarios: 'Escenarios', cargando: 'Cargando...',
+      visitasTot: 'Visitas totales', paisesAlc: 'Pa\u00edses alcanzados', resenas: 'Rese\u00f1as',
+      tuPais: 'Tu pa\u00eds', mejorValoradas: 'Mejor valoradas',
+      sinResenas: 'Todav\u00eda no hay rese\u00f1as. Punt\u00faa una pel\u00edcula con las estrellas para estrenar el mapa.',
+      puntuala: 'punt\u00faala', voto: 'voto', votos: 'votos',
+      guardadaAqui: 'Puntuaci\u00f3n guardada aqu\u00ed. Inicia sesi\u00f3n para compartirla',
+      guardada: 'Puntuaci\u00f3n guardada', noGuardo: 'No se pudo guardar',
+      incluido: 'Incluido', alquilar: 'Alquilar', noDispo: 'No disponible aqu\u00ed \u2014 prueba Global',
+      sinDatos: 'Sin datos de streaming todav\u00eda', enPaises: 'en {n} pa\u00edses',
       global: 'Global (todo el mundo)', rodajeReal: 'Rodaje real', enHistoria: 'En la historia',
       pistaMapa: 'Toca un punto para ver la escena. Acerca hasta el nivel de calle.',
-      idioma: 'Idioma', foto: 'Foto: Wikimedia'
+      foto: 'Foto: Wikimedia',
+      fSobre: 'Sobre este proyecto', fGithub: 'C\u00f3digo abierto en GitHub',
+      fDispo: 'Disponibilidad', fDatos: 'Los datos de d\u00f3nde ver cada t\u00edtulo provienen de',
+      fApoyar: 'Apoyar', fCafe: 'Invitar un caf\u00e9'
     },
     en: {
+      tagline: 'MCU Watch Tracker \u2014 Chronological Order', objetivoFinal: 'Final target',
       todos: 'All', pendientes: 'To watch', vistos: 'Watched', cruciales: 'Essential',
-      soloExt: 'Extended only', soloMcu: 'MCU only', buscar: 'Search...',
-      sinRes: 'No results', vistosDe: 'watched', progreso: 'Progress',
+      soloExt: 'Extended only', soloMcu: 'MCU only', buscar: 'Search...', extendido: 'Extended',
+      mcu: 'MCU', total: 'Total', progresoTotal: 'Total progress', vistosDe: 'watched',
+      sinRes: 'No results',
       guardarNube: 'Save to cloud', soloNavegador: 'Progress saved only in this browser',
       sincronizado: 'Progress synced', guardando: 'Saving...', enviarEnlace: 'Send link',
       cancelar: 'Cancel', salir: 'Sign out', revisaCorreo: 'Check your email and open the link',
       enlaceEnviado: 'Link sent', correoInvalido: 'Invalid email', pais: 'Country',
-      mapaMundial: 'World map', actividadMundo: 'Activity around the world', cerrar: 'Close',
-      comunidad: 'Community', escenarios: 'Locations', cargando: 'Loading...',
+      idioma: 'Language', mapaMundial: 'World map', actividadMundo: 'Activity around the world',
+      cerrar: 'Close', comunidad: 'Community', escenarios: 'Locations', cargando: 'Loading...',
       visitasTot: 'Total visits', paisesAlc: 'Countries reached', resenas: 'Ratings',
-      tuPais: 'Your country', mejorValoradas: 'Top rated', sinResenas: 'No ratings yet. Rate a film with the stars to light up the map.',
+      tuPais: 'Your country', mejorValoradas: 'Top rated',
+      sinResenas: 'No ratings yet. Rate a film with the stars to light up the map.',
       puntuala: 'rate it', voto: 'vote', votos: 'votes',
-      guardadaAqui: 'Saved locally. Sign in to share it', guardada: 'Rating saved', noGuardo: 'Could not save',
-      incluido: 'Included', alquilar: 'Rent', noDispo: 'Not available here - try Global',
+      guardadaAqui: 'Saved locally. Sign in to share it',
+      guardada: 'Rating saved', noGuardo: 'Could not save',
+      incluido: 'Included', alquilar: 'Rent', noDispo: 'Not available here \u2014 try Global',
       sinDatos: 'No streaming data yet', enPaises: 'in {n} countries',
       global: 'Global (worldwide)', rodajeReal: 'Real filming site', enHistoria: 'In the story',
       pistaMapa: 'Tap a point to see the scene. Zoom in to street level.',
-      idioma: 'Language', foto: 'Photo: Wikimedia'
+      foto: 'Photo: Wikimedia',
+      fSobre: 'About this project', fGithub: 'Open source on GitHub',
+      fDispo: 'Availability', fDatos: 'Where-to-watch data comes from',
+      fApoyar: 'Support', fCafe: 'Buy me a coffee'
     },
     pt: {
+      tagline: 'MCU Watch Tracker \u2014 Ordem Cronol\u00f3gica', objetivoFinal: 'Objetivo final',
       todos: 'Todos', pendientes: 'Pendentes', vistos: 'Vistos', cruciales: 'Essenciais',
-      soloExt: 'So estendido', soloMcu: 'So MCU', buscar: 'Buscar...',
-      sinRes: 'Sem resultados', vistosDe: 'vistos', progreso: 'Progresso',
-      guardarNube: 'Salvar na nuvem', soloNavegador: 'Progresso salvo so neste navegador',
+      soloExt: 'S\u00f3 Estendido', soloMcu: 'S\u00f3 MCU', buscar: 'Buscar...', extendido: 'Estendido',
+      mcu: 'MCU', total: 'Total', progresoTotal: 'Progresso total', vistosDe: 'vistos',
+      sinRes: 'Sem resultados',
+      guardarNube: 'Salvar na nuvem', soloNavegador: 'Progresso salvo s\u00f3 neste navegador',
       sincronizado: 'Progresso sincronizado', guardando: 'Salvando...', enviarEnlace: 'Enviar link',
       cancelar: 'Cancelar', salir: 'Sair', revisaCorreo: 'Confira seu email e abra o link',
-      enlaceEnviado: 'Link enviado', correoInvalido: 'Email invalido', pais: 'Pais',
-      mapaMundial: 'Mapa mundial', actividadMundo: 'Atividade no mundo', cerrar: 'Fechar',
-      comunidad: 'Comunidade', escenarios: 'Cenarios', cargando: 'Carregando...',
-      visitasTot: 'Visitas totais', paisesAlc: 'Paises alcancados', resenas: 'Avaliacoes',
-      tuPais: 'Seu pais', mejorValoradas: 'Mais bem avaliados', sinResenas: 'Ainda nao ha avaliacoes. Avalie um filme com as estrelas para iniciar o mapa.',
+      enlaceEnviado: 'Link enviado', correoInvalido: 'Email inv\u00e1lido', pais: 'Pa\u00eds',
+      idioma: 'Idioma', mapaMundial: 'Mapa mundial', actividadMundo: 'Atividade no mundo',
+      cerrar: 'Fechar', comunidad: 'Comunidade', escenarios: 'Cen\u00e1rios', cargando: 'Carregando...',
+      visitasTot: 'Visitas totais', paisesAlc: 'Pa\u00edses alcan\u00e7ados', resenas: 'Avalia\u00e7\u00f5es',
+      tuPais: 'Seu pa\u00eds', mejorValoradas: 'Mais bem avaliados',
+      sinResenas: 'Ainda n\u00e3o h\u00e1 avalia\u00e7\u00f5es. Avalie um filme com as estrelas para iniciar o mapa.',
       puntuala: 'avalie', voto: 'voto', votos: 'votos',
-      guardadaAqui: 'Salvo aqui. Entre para compartilhar', guardada: 'Avaliacao salva', noGuardo: 'Nao foi possivel salvar',
-      incluido: 'Incluido', alquilar: 'Alugar', noDispo: 'Indisponivel aqui - tente Global',
-      sinDatos: 'Sem dados de streaming ainda', enPaises: 'em {n} paises',
-      global: 'Global (mundo todo)', rodajeReal: 'Local de filmagem', enHistoria: 'Na historia',
-      pistaMapa: 'Toque num ponto para ver a cena. Aproxime ate o nivel da rua.',
-      idioma: 'Idioma', foto: 'Foto: Wikimedia'
+      guardadaAqui: 'Salvo aqui. Entre para compartilhar',
+      guardada: 'Avalia\u00e7\u00e3o salva', noGuardo: 'N\u00e3o foi poss\u00edvel salvar',
+      incluido: 'Inclu\u00eddo', alquilar: 'Alugar', noDispo: 'Indispon\u00edvel aqui \u2014 tente Global',
+      sinDatos: 'Sem dados de streaming ainda', enPaises: 'em {n} pa\u00edses',
+      global: 'Global (mundo todo)', rodajeReal: 'Local de filmagem', enHistoria: 'Na hist\u00f3ria',
+      pistaMapa: 'Toque num ponto para ver a cena. Aproxime at\u00e9 o n\u00edvel da rua.',
+      foto: 'Foto: Wikimedia',
+      fSobre: 'Sobre este projeto', fGithub: 'C\u00f3digo aberto no GitHub',
+      fDispo: 'Disponibilidade', fDatos: 'Os dados de onde ver cada t\u00edtulo v\u00eam de',
+      fApoyar: 'Apoiar', fCafe: 'Pague um caf\u00e9'
+    },
+    ru: {
+      tagline: 'MCU Watch Tracker \u2014 \u0445\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u043e\u0440\u044f\u0434\u043e\u043a', objetivoFinal: '\u0424\u0438\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u0446\u0435\u043b\u044c',
+      todos: '\u0412\u0441\u0435', pendientes: '\u041a \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0443', vistos: '\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u043e', cruciales: '\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435',
+      soloExt: '\u0422\u043e\u043b\u044c\u043a\u043e \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u043d\u044b\u0435', soloMcu: '\u0422\u043e\u043b\u044c\u043a\u043e MCU', buscar: '\u041f\u043e\u0438\u0441\u043a...', extendido: '\u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u043d\u044b\u0435',
+      mcu: 'MCU', total: '\u0412\u0441\u0435\u0433\u043e', progresoTotal: '\u041e\u0431\u0449\u0438\u0439 \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441', vistosDe: '\u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u043e',
+      sinRes: '\u041d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e',
+      guardarNube: '\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u0432 \u043e\u0431\u043b\u0430\u043a\u0435', soloNavegador: '\u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u0441\u043e\u0445\u0440\u0430\u043d\u0451\u043d \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u044d\u0442\u043e\u043c \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435',
+      sincronizado: '\u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d', guardando: '\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435...', enviarEnlace: '\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0443',
+      cancelar: '\u041e\u0442\u043c\u0435\u043d\u0430', salir: '\u0412\u044b\u0439\u0442\u0438', revisaCorreo: '\u041f\u0440\u043e\u0432\u0435\u0440\u044c\u0442\u0435 \u043f\u043e\u0447\u0442\u0443 \u0438 \u043e\u0442\u043a\u0440\u043e\u0439\u0442\u0435 \u0441\u0441\u044b\u043b\u043a\u0443',
+      enlaceEnviado: '\u0421\u0441\u044b\u043b\u043a\u0430 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0430', correoInvalido: '\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 email', pais: '\u0421\u0442\u0440\u0430\u043d\u0430',
+      idioma: '\u042f\u0437\u044b\u043a', mapaMundial: '\u041a\u0430\u0440\u0442\u0430 \u043c\u0438\u0440\u0430', actividadMundo: '\u0410\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442\u044c \u0432 \u043c\u0438\u0440\u0435',
+      cerrar: '\u0417\u0430\u043a\u0440\u044b\u0442\u044c', comunidad: '\u0421\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e', escenarios: '\u041b\u043e\u043a\u0430\u0446\u0438\u0438', cargando: '\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430...',
+      visitasTot: '\u0412\u0441\u0435\u0433\u043e \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u0439', paisesAlc: '\u041e\u0445\u0432\u0430\u0447\u0435\u043d\u043e \u0441\u0442\u0440\u0430\u043d', resenas: '\u041e\u0446\u0435\u043d\u043a\u0438',
+      tuPais: '\u0412\u0430\u0448\u0430 \u0441\u0442\u0440\u0430\u043d\u0430', mejorValoradas: '\u041b\u0443\u0447\u0448\u0438\u0435 \u043f\u043e \u043e\u0446\u0435\u043d\u043a\u0435',
+      sinResenas: '\u041e\u0446\u0435\u043d\u043e\u043a \u043f\u043e\u043a\u0430 \u043d\u0435\u0442. \u041e\u0446\u0435\u043d\u0438\u0442\u0435 \u0444\u0438\u043b\u044c\u043c \u0437\u0432\u0451\u0437\u0434\u0430\u043c\u0438, \u0447\u0442\u043e\u0431\u044b \u0437\u0430\u0436\u0435\u0447\u044c \u043a\u0430\u0440\u0442\u0443.',
+      puntuala: '\u043e\u0446\u0435\u043d\u0438\u0442\u044c', voto: '\u0433\u043e\u043b\u043e\u0441', votos: '\u0433\u043e\u043b\u043e\u0441\u043e\u0432',
+      guardadaAqui: '\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u043e \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e. \u0412\u043e\u0439\u0434\u0438\u0442\u0435, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f',
+      guardada: '\u041e\u0446\u0435\u043d\u043a\u0430 \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0430', noGuardo: '\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0441\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c',
+      incluido: '\u0412\u043a\u043b\u044e\u0447\u0435\u043d\u043e', alquilar: '\u0410\u0440\u0435\u043d\u0434\u0430', noDispo: '\u0417\u0434\u0435\u0441\u044c \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e \u2014 \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 Global',
+      sinDatos: '\u041f\u043e\u043a\u0430 \u043d\u0435\u0442 \u0434\u0430\u043d\u043d\u044b\u0445 \u043e \u0441\u0442\u0440\u0438\u043c\u0438\u043d\u0433\u0435', enPaises: '\u0432 {n} \u0441\u0442\u0440\u0430\u043d\u0430\u0445',
+      global: 'Global (\u0432\u0435\u0441\u044c \u043c\u0438\u0440)', rodajeReal: '\u041c\u0435\u0441\u0442\u043e \u0441\u044a\u0451\u043c\u043e\u043a', enHistoria: '\u041f\u043e \u0441\u044e\u0436\u0435\u0442\u0443',
+      pistaMapa: '\u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u0442\u043e\u0447\u043a\u0443, \u0447\u0442\u043e\u0431\u044b \u0443\u0432\u0438\u0434\u0435\u0442\u044c \u0441\u0446\u0435\u043d\u0443. \u041f\u0440\u0438\u0431\u043b\u0438\u0437\u044c\u0442\u0435 \u0434\u043e \u0443\u0440\u043e\u0432\u043d\u044f \u0443\u043b\u0438\u0446\u044b.',
+      foto: '\u0424\u043e\u0442\u043e: Wikimedia',
+      fSobre: '\u041e\u0431 \u044d\u0442\u043e\u043c \u043f\u0440\u043e\u0435\u043a\u0442\u0435', fGithub: '\u041e\u0442\u043a\u0440\u044b\u0442\u044b\u0439 \u043a\u043e\u0434 \u043d\u0430 GitHub',
+      fDispo: '\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u044c', fDatos: '\u0414\u0430\u043d\u043d\u044b\u0435 \u043e \u0442\u043e\u043c, \u0433\u0434\u0435 \u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c, \u0432\u0437\u044f\u0442\u044b \u0438\u0437',
+      fApoyar: '\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u0430\u0442\u044c', fCafe: '\u041a\u0443\u043f\u0438\u0442\u044c \u043a\u043e\u0444\u0435'
+    },
+    fr: {
+      tagline: 'MCU Watch Tracker \u2014 Ordre Chronologique', objetivoFinal: 'Objectif final',
+      todos: 'Tous', pendientes: '\u00c0 voir', vistos: 'Vus', cruciales: 'Essentiels',
+      soloExt: '\u00c9tendu seulement', soloMcu: 'MCU seulement', buscar: 'Rechercher...', extendido: '\u00c9tendu',
+      mcu: 'MCU', total: 'Total', progresoTotal: 'Progression totale', vistosDe: 'vus',
+      sinRes: 'Aucun r\u00e9sultat',
+      guardarNube: 'Sauvegarder en ligne', soloNavegador: 'Progression enregistr\u00e9e uniquement dans ce navigateur',
+      sincronizado: 'Progression synchronis\u00e9e', guardando: 'Enregistrement...', enviarEnlace: 'Envoyer le lien',
+      cancelar: 'Annuler', salir: 'Se d\u00e9connecter', revisaCorreo: 'Consultez votre email et ouvrez le lien',
+      enlaceEnviado: 'Lien envoy\u00e9', correoInvalido: 'Email invalide', pais: 'Pays',
+      idioma: 'Langue', mapaMundial: 'Carte du monde', actividadMundo: 'Activit\u00e9 dans le monde',
+      cerrar: 'Fermer', comunidad: 'Communaut\u00e9', escenarios: 'Lieux', cargando: 'Chargement...',
+      visitasTot: 'Visites totales', paisesAlc: 'Pays atteints', resenas: 'Notes',
+      tuPais: 'Votre pays', mejorValoradas: 'Les mieux not\u00e9s',
+      sinResenas: 'Aucune note pour le moment. Notez un film avec les \u00e9toiles pour allumer la carte.',
+      puntuala: 'notez-le', voto: 'vote', votos: 'votes',
+      guardadaAqui: 'Enregistr\u00e9 ici. Connectez-vous pour le partager',
+      guardada: 'Note enregistr\u00e9e', noGuardo: 'Impossible d\u0027enregistrer',
+      incluido: 'Inclus', alquilar: 'Louer', noDispo: 'Indisponible ici \u2014 essayez Global',
+      sinDatos: 'Pas encore de donn\u00e9es de streaming', enPaises: 'dans {n} pays',
+      global: 'Global (monde entier)', rodajeReal: 'Lieu de tournage', enHistoria: 'Dans l\u0027histoire',
+      pistaMapa: 'Touchez un point pour voir la sc\u00e8ne. Zoomez jusqu\u0027au niveau de la rue.',
+      foto: 'Photo : Wikimedia',
+      fSobre: '\u00c0 propos de ce projet', fGithub: 'Code ouvert sur GitHub',
+      fDispo: 'Disponibilit\u00e9', fDatos: 'Les donn\u00e9es sur o\u00f9 regarder proviennent de',
+      fApoyar: 'Soutenir', fCafe: 'Offrir un caf\u00e9'
+    },
+    de: {
+      tagline: 'MCU Watch Tracker \u2014 Chronologische Reihenfolge', objetivoFinal: 'Endziel',
+      todos: 'Alle', pendientes: 'Offen', vistos: 'Gesehen', cruciales: 'Wesentlich',
+      soloExt: 'Nur Erweitert', soloMcu: 'Nur MCU', buscar: 'Suchen...', extendido: 'Erweitert',
+      mcu: 'MCU', total: 'Gesamt', progresoTotal: 'Gesamtfortschritt', vistosDe: 'gesehen',
+      sinRes: 'Keine Ergebnisse',
+      guardarNube: 'In der Cloud speichern', soloNavegador: 'Fortschritt nur in diesem Browser gespeichert',
+      sincronizado: 'Fortschritt synchronisiert', guardando: 'Speichern...', enviarEnlace: 'Link senden',
+      cancelar: 'Abbrechen', salir: 'Abmelden', revisaCorreo: 'Pr\u00fcfe deine E-Mail und \u00f6ffne den Link',
+      enlaceEnviado: 'Link gesendet', correoInvalido: 'Ung\u00fcltige E-Mail', pais: 'Land',
+      idioma: 'Sprache', mapaMundial: 'Weltkarte', actividadMundo: 'Aktivit\u00e4t weltweit',
+      cerrar: 'Schlie\u00dfen', comunidad: 'Community', escenarios: 'Drehorte', cargando: 'L\u00e4dt...',
+      visitasTot: 'Besuche gesamt', paisesAlc: 'Erreichte L\u00e4nder', resenas: 'Bewertungen',
+      tuPais: 'Dein Land', mejorValoradas: 'Bestbewertet',
+      sinResenas: 'Noch keine Bewertungen. Bewerte einen Film mit den Sternen, um die Karte zu beleben.',
+      puntuala: 'bewerten', voto: 'Stimme', votos: 'Stimmen',
+      guardadaAqui: 'Lokal gespeichert. Melde dich an, um sie zu teilen',
+      guardada: 'Bewertung gespeichert', noGuardo: 'Konnte nicht gespeichert werden',
+      incluido: 'Enthalten', alquilar: 'Leihen', noDispo: 'Hier nicht verf\u00fcgbar \u2014 versuche Global',
+      sinDatos: 'Noch keine Streaming-Daten', enPaises: 'in {n} L\u00e4ndern',
+      global: 'Global (weltweit)', rodajeReal: 'Echter Drehort', enHistoria: 'In der Geschichte',
+      pistaMapa: 'Tippe auf einen Punkt, um die Szene zu sehen. Zoome bis auf Stra\u00dfenniveau.',
+      foto: 'Foto: Wikimedia',
+      fSobre: '\u00dcber dieses Projekt', fGithub: 'Open Source auf GitHub',
+      fDispo: 'Verf\u00fcgbarkeit', fDatos: 'Die Daten dazu, wo man schauen kann, stammen von',
+      fApoyar: 'Unterst\u00fctzen', fCafe: 'Einen Kaffee spendieren'
     }
   };
   return { LANGS, T, KEY_L };
@@ -849,23 +951,59 @@ window.Lang = (() => {
     if (window.Reviews) window.Reviews.paintAll();
   }
 
-  // textos fijos del HTML, por selector
-  const MAP = [
-    ['#cbMsg', 'soloNavegador'], ['#mapOpen', 'mapaMundial'], ['#tabCom', 'comunidad'],
-    ['#tabEsc', 'escenarios'], ['#mapClose', 'cerrar'], ['.maptitle', 'actividadMundo'],
-    ['label[for="cbRegion"]', 'pais'], ['label[for="cbLang"]', 'idioma']
-  ];
 
   function apply() {
     document.documentElement.lang = cur;
-    MAP.forEach(([sel, key]) => {
-      const el = document.querySelector(sel);
-      if (el && !el.dataset.keep) el.textContent = t(key);
+
+    // elementos ya marcados con data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.dataset.i18n;
+      if (k) el.textContent = t(k);
     });
-    const start = document.getElementById('cbStart');
-    if (start) start.textContent = t('guardarNube');
-    const q = document.querySelector('.search input, #q, input[type="search"]');
+
+    // etiquetas de estadisticas, respetando el simbolo final
+    const SL = ['vistos', 'pendientes', 'cruciales', 'extendido', 'mcu', 'total'];
+    document.querySelectorAll('.stats .sl').forEach((el, i) => {
+      if (i >= SL.length) return;
+      const tick = /\u2713/.test(el.textContent) ? ' \u2713' : '';
+      el.textContent = t(SL[i]) + tick;
+    });
+
+    // botones de filtro, por su atributo data-f
+    const FB = { all: 'todos', pending: 'pendientes', done: 'vistos', crucial: 'cruciales', ext: 'soloExt', mcu: 'soloMcu' };
+    document.querySelectorAll('.fb[data-f]').forEach(b => {
+      const k = FB[b.dataset.f];
+      if (k) b.textContent = t(k);
+    });
+
+    // cabecera: conserva el punto animado y el emoji
+    const bs = document.querySelector('.brand-sub');
+    if (bs) {
+      const ld = bs.querySelector('.ld');
+      bs.textContent = '';
+      if (ld) bs.appendChild(ld);
+      bs.appendChild(document.createTextNode(t('tagline')));
+    }
+    const lbl = document.querySelector('.pill .lbl');
+    if (lbl) lbl.textContent = '\ud83c\udfac ' + t('objetivoFinal');
+
+    // controles sueltos
+    const setTxt = (sel, k) => { const e = document.querySelector(sel); if (e) e.textContent = t(k); };
+    setTxt('#mapOpen', 'mapaMundial');
+    setTxt('#tabCom', 'comunidad');
+    setTxt('#tabEsc', 'escenarios');
+    setTxt('#mapClose', 'cerrar');
+    setTxt('.maptitle', 'actividadMundo');
+    setTxt('label[for="cbRegion"]', 'pais');
+    setTxt('label[for="cbLang"]', 'idioma');
+    setTxt('#cbStart', 'guardarNube');
+
+    const msg = document.getElementById('cbMsg');
+    if (msg && !msg.dataset.live) msg.textContent = t('soloNavegador');
+
+    const q = document.getElementById('q');
     if (q) q.placeholder = t('buscar');
+
     const hint = document.querySelector('.maphint');
     if (hint && !hint.dataset.err) {
       hint.innerHTML = t('pistaMapa') + ' <b>' + t('rodajeReal') + '</b> \u00b7 <b>' + t('enHistoria') + '</b>';
@@ -873,7 +1011,6 @@ window.Lang = (() => {
     const reg = document.getElementById('cbRegion');
     if (reg && reg.options.length) reg.options[0].textContent = t('global');
   }
-
   function mount() {
     const sel = document.getElementById('cbLang');
     if (!sel) return;
@@ -1609,7 +1746,7 @@ window.Providers = (() => {
     const rp = [];
     [].concat(reg.rent || [], reg.buy || []).slice(0, 2).forEach(p => { if (!seen.has(p.provider_id)) { seen.add(p.provider_id); rp.push(chip(p, reg.link, 'rent')); } });
     if (rp.length) { parts.push('<span class="prov-lbl">' + window.Lang.t('alquilar') + '</span>'); rp.forEach(x => parts.push(x)); }
-    if (isG && reg.countries) parts.push('<span class="prov-lbl">en ' + reg.countries + ' paises</span>');
+    if (isG && reg.countries) parts.push('<span class="prov-lbl">' + window.Lang.t('enPaises').replace('{n}', reg.countries) + '</span>');
     el.innerHTML = parts.length ? parts.join('') : '<span class="prov-none">' + window.Lang.t('sinDatos') + '</span>';
   }
 
@@ -1658,7 +1795,7 @@ window.CloudSync = (() => {
   const configured = () => CFG.SUPABASE_URL && CFG.SUPABASE_URL.indexOf('TU-PROYECTO') === -1;
 
   function setState(t, c) {
-    if (msg()) msg().textContent = t;
+    if (msg()) { msg().textContent = t; msg().dataset.live = '1'; }
     if (dot()) dot().className = 'cb-dot' + (c ? ' ' + c : '');
   }
   function renderOut() {
