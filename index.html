@@ -458,24 +458,24 @@ header h1 span{transition:color .8s ease}
 // group: agrupación para colapsar
 const LIST = [
   // ══════════ FASE 1 ══════════
-  { id:1,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitán América: El primer vengador', year:2011, imp:'Importante' },
-  { id:2,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitana Marvel', year:2019, imp:'Complementaria', note:'Cronológicamente ocurre en 1995' },
+  { id:1,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitán América: El primer vengador', year:2011, imp:'Esencial' },
+  { id:2,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Capitana Marvel', year:2019, imp:'Importante', note:'Cronológicamente ocurre en 1995' },
   { id:3,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man', year:2008, imp:'Esencial' },
   { id:4,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Iron Man 2', year:2010, imp:'Complementaria' },
   { id:54, phase:'Fase 1', kind:'mcu', type:'Película', title:'El Increíble Hulk', year:2008, imp:'Complementaria', note:'Cron. antes de Iron Man 2. Vuelve Ross en Un nuevo mundo' },
   { id:5,  phase:'Fase 1', kind:'mcu', type:'Película', title:'Thor', year:2011, imp:'Importante' },
   { id:6,  phase:'Fase 1', kind:'mcu', type:'Película', title:'The Avengers', year:2012, imp:'Esencial' },
   // ══════════ FASE 2 ══════════
-  { id:7,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Thor: Un mundo oscuro', year:2013, imp:'Complementaria' },
   { id:79, phase:'Fase 2', kind:'mcu', type:'Película', title:'Iron Man 3', year:2013, imp:'Importante', note:'Estres postraumatico de Tony tras Nueva York' },
+  { id:7,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Thor: Un mundo oscuro', year:2013, imp:'Complementaria' },
   { id:8,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Capitán América: El Soldado del Invierno', year:2014, imp:'Esencial' },
-  { id:9,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia', year:2014, imp:'Complementaria' },
-  { id:10, phase:'Fase 2', kind:'mcu', type:'Película', title:'Avengers: Era de Ultrón', year:2015, imp:'Importante' },
+  { id:9,  phase:'Fase 2', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia', year:2014, imp:'Importante' },
+  { id:10, phase:'Fase 2', kind:'mcu', type:'Película', title:'Avengers: Era de Ultrón', year:2015, imp:'Esencial' },
   { id:11, phase:'Fase 2', kind:'mcu', type:'Película', title:'Ant-Man: El hombre hormiga', year:2015, imp:'Importante' },
   // ══════════ FASE 3 ══════════
+  { id:80, phase:'Fase 3', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia Vol. 2', year:2017, imp:'Importante', note:'Cronologicamente ocurre en 2014, meses tras la primera. Ego y llega Mantis' },
   { id:12, phase:'Fase 3', kind:'mcu', type:'Película', title:'Capitán América: Civil War', year:2016, imp:'Esencial' },
   { id:13, phase:'Fase 3', kind:'mcu', type:'Película', title:'Doctor Strange: Hechicero supremo', year:2016, imp:'Complementaria' },
-  { id:80, phase:'Fase 3', kind:'mcu', type:'Película', title:'Guardianes de la Galaxia Vol. 2', year:2017, imp:'Importante', note:'Ego, el origen de Quill y llega Mantis' },
   { id:14, phase:'Fase 3', kind:'mcu', type:'Película', title:'Spider-Man: De regreso a casa', year:2017, imp:'Complementaria' },
   { id:15, phase:'Fase 3', kind:'mcu', type:'Película', title:'Thor: Ragnarok', year:2017, imp:'Esencial' },
   { id:16, phase:'Fase 3', kind:'mcu', type:'Película', title:'Pantera Negra', year:2018, imp:'Complementaria' },
@@ -484,7 +484,7 @@ const LIST = [
   { id:19, phase:'Fase 3', kind:'mcu', type:'Película', title:'Avengers: Endgame', year:2019, imp:'Esencial' },
   { id:20, phase:'Fase 3', kind:'mcu', type:'Película', title:'Spider-Man: Lejos de casa', year:2019, imp:'Complementaria' },
   // ══════════ FASE 4 — INICIO ══════════
-  { id:21, phase:'Fase 4', kind:'mcu', type:'Serie', title:'WandaVision', year:2021, imp:'Importante' },
+  { id:21, phase:'Fase 4', kind:'mcu', type:'Serie', title:'WandaVision', year:2021, imp:'Esencial' },
   { id:22, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Falcon y el Soldado del Invierno', year:2021, imp:'Esencial' },
   { id:23, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Loki (Temporada 1)', year:2021, imp:'Esencial' },
   { id:55, phase:'Fase 4', kind:'mcu', type:'Película', title:'Viuda Negra', year:2021, imp:'Esencial' },
@@ -512,7 +512,7 @@ const LIST = [
     reason:'El simbionte que queda en el MCU al final de NWH.'
   },
   // ══════════ FASE 4 — CONTINUACIÓN ══════════
-  { id:31, phase:'Fase 4', kind:'mcu', type:'Película', title:'Spider-Man: Sin camino a casa', year:2021, imp:'Complementaria' },
+  { id:31, phase:'Fase 4', kind:'mcu', type:'Película', title:'Spider-Man: Sin camino a casa', year:2021, imp:'Esencial' },
   { id:59, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Moon Knight', year:2022, imp:'Complementaria' },
   { id:32, phase:'Fase 4', kind:'mcu', type:'Película', title:'Doctor Strange en el multiverso de la locura', year:2022, imp:'Esencial' },
   { id:33, phase:'Fase 4', kind:'mcu', type:'Serie', title:'Ms. Marvel', year:2022, imp:'Complementaria' },
@@ -545,7 +545,7 @@ const LIST = [
   { id:66, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Echo', year:2024, imp:'Complementaria', note:'Conecta con Daredevil y Kingpin' },
   { id:67, phase:'Fase 5', kind:'mcu', type:'Serie', title:'X-Men \'97 (T1)', year:2024, imp:'Complementaria', note:'Animada. Continua la serie de los 90' },
   { id:43, phase:'Fase 5', kind:'mcu', type:'Película', title:'Deadpool & Wolverine', year:2024, imp:'Esencial' },
-  { id:68, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Agatha, ¿quién si no?', year:2024, imp:'Complementaria', note:'Secuela de WandaVision' },
+  { id:68, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Agatha, ¿quién si no?', year:2024, imp:'Importante', note:'Secuela de WandaVision' },
   { id:69, phase:'Fase 5', kind:'mcu', type:'Serie', title:'¿Qué pasaría si...? (T3)', year:2024, imp:'Complementaria' },
   { id:70, phase:'Fase 5', kind:'mcu', type:'Serie', title:'Tu amistoso vecino Spider-Man (T1)', year:2025, imp:'Complementaria', note:'Animada' },
   { id:44, phase:'Fase 5', kind:'mcu', type:'Película', title:'Capitán América: un nuevo mundo', year:2025, imp:'Esencial' },
@@ -567,11 +567,11 @@ const LIST = [
   { id:49, phase:'Extendido', kind:'ext', type:'Serie', title:'The Punisher (Netflix)', year:'2017-2019', imp:'Complementaria', universe:'Netflix / Marvel', reason:'Profundiza a Frank Castle. Recomendable si aparece en fases futuras.' },
   // ══════════ FASE 6 ══════════
   { id:50, phase:'Fase 6', kind:'mcu', type:'Película', title:'Los 4 Fantásticos: primeros pasos', year:2025, imp:'Esencial' },
-  { id:51, phase:'Fase 6', kind:'mcu', type:'Serie', title:'Daredevil: Born Again (Temp 1 y 2)', year:'2025-2026', imp:'Complementaria' },
+  { id:51, phase:'Fase 6', kind:'mcu', type:'Serie', title:'Daredevil: Born Again (Temp 1 y 2)', year:'2025-2026', imp:'Importante' },
   { id:75, phase:'Fase 6', kind:'mcu', type:'Serie', title:'The Punisher: One Last Kill', year:2026, imp:'Complementaria', note:'Especial. Prepara a Frank Castle para Brand New Day' },
   { id:76, phase:'Fase 6', kind:'mcu', type:'Serie', title:'X-Men \'97 (T2)', year:2026, imp:'Complementaria', note:'Apocalipsis y tres lineas temporales' },
   { id:77, phase:'Fase 6', kind:'mcu', type:'Serie', title:'Tu amistoso vecino Spider-Man (T2)', year:2026, imp:'Complementaria' },
-  { id:78, phase:'Fase 6', kind:'mcu', type:'Serie', title:'VisionQuest', year:2026, imp:'Importante', note:'Cierra la trilogia WandaVision - Agatha - Vision' },
+  { id:78, phase:'Fase 6', kind:'mcu', type:'Serie', title:'VisionQuest', year:2026, imp:'Esencial', note:'Cierra la trilogia WandaVision - Agatha - Vision' },
   { id:52, phase:'Fase 6', kind:'mcu', type:'Película', title:'Spider-Man: Brand New Day', year:2026, imp:'Esencial' },
   { id:53, phase:'Fase 6', kind:'mcu', type:'Película', title:'Avengers: Doomsday', year:2026, imp:'Esencial', dday:true },
 ];
