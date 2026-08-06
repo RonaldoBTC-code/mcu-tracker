@@ -627,8 +627,7 @@ function matches(m) {
   if (filter==='pending' && watched.has(mid(m))) return false;
   if (filter==='crucial' && m.imp!=='Crucial') return false;
   if (filter==='ext' && m.kind!=='ext') return false;
-  if (filter==='mcu' && m.kind!=='ext') return false; // show only mcu
-  if (filter==='mcu' && m.kind==='ext') return false;
+  if (filter==='mcu' && m.kind!=='mcu') return false;
   if (q) {
     const vis = window.Titles ? window.Titles.get(m) : m.title;
     if (!m.title.toLowerCase().includes(q) && !String(vis).toLowerCase().includes(q)) return false;
