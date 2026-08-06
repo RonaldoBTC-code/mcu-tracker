@@ -1311,7 +1311,7 @@ window.ZoomMap = (() => {
     'Point Dume, Malibu': 'Point Dume'
   };
 
-  const IMGKEY = 'wiki_img_v1';
+  const IMGKEY = 'wiki_img_v3';
   let imgCache = {};
   try { imgCache = JSON.parse(localStorage.getItem(IMGKEY) || '{}'); } catch (e) { imgCache = {}; }
   const saveImgs = () => { try { localStorage.setItem(IMGKEY, JSON.stringify(imgCache)); } catch (e) {} };
@@ -1324,7 +1324,7 @@ window.ZoomMap = (() => {
       if (r.ok) {
         const j = await r.json();
         const src = (j.thumbnail && j.thumbnail.source) || null;
-        imgCache[name] = src ? { src: src.replace(/\/\d+px-/, '/440px-'), page: j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page } : null;
+        imgCache[name] = src ? { src: src, page: j.content_urls && j.content_urls.desktop && j.content_urls.desktop.page } : null;
         return imgCache[name];
       }
     } catch (e) {}
@@ -1389,7 +1389,7 @@ window.ZoomMap = (() => {
       d.className = 'pin ' + tipo;
       d.title = name;
       const im = imgCache[name] || null;
-      const imgHtml = im ? ('<div class="pop-img"><img src="' + im.src + '" alt="' + esc(name) + '" loading="lazy">' +
+      const imgHtml = im ? ('<div class="pop-img"><img src="' + im.src + '" alt="' + esc(name) + '" loading="lazy" onerror="this.closest(\'.pop-img\').remove()">' +
         (im.page ? '<a class="pop-cred" href="' + im.page + '" target="_blank" rel="noopener">' + window.Lang.t('foto') + '</a>' : '') + '</div>') : '';
       const pop = new maplibregl.Popup({ offset: 14, closeButton: true, maxWidth: '270px' }).setHTML(
         '<div class="pop">' + imgHtml + '<b>' + esc(name) + '</b>' +
