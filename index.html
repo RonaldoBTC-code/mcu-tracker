@@ -358,6 +358,21 @@ header h1 span{transition:color .8s ease}
 .maperr p{color:var(--muted);font-size:12px;line-height:1.6;margin:0}
 
 .imp.i{background:rgba(255,183,3,.14);border:1px solid rgba(255,183,3,.42);color:var(--gold)}
+
+.gsec{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--border)}
+.gsec:last-child{border-bottom:0}
+.gico{font-size:19px;line-height:1.3;flex-shrink:0;width:26px;text-align:center}
+.gsec b{display:block;font-family:'Rajdhani',sans-serif;font-size:14px;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--text);margin-bottom:4px}
+.gsec p{margin:0;font-size:13px;line-height:1.65;color:var(--muted)}
+.gsec p b{display:inline;font-size:13px;letter-spacing:0;text-transform:none;color:var(--gold)}
+.guidefoot{display:flex;gap:10px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+.gbtn{background:rgba(230,57,70,.16);border:1px solid rgba(230,57,70,.45);color:#fff;border-radius:5px;
+  padding:8px 16px;font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;cursor:pointer}
+.gbtn:hover{background:rgba(230,57,70,.3)}
+.gbtn.sec{background:none;border-color:var(--border);color:var(--muted)}
+.gbtn.sec:hover{color:var(--text)}
 </style>
 </head>
 <body>
@@ -390,6 +405,7 @@ header h1 span{transition:color .8s ease}
   <select class="cb-reg" id="cbRegion"></select>
   <label for="cbLang" style="letter-spacing:2px;text-transform:uppercase;font-size:10px">Idioma</label>
   <select class="cb-reg" id="cbLang"></select>
+  <button class="mapbtn" id="guideOpen">Guia</button>
   <button class="mapbtn" id="mapOpen" data-i18n="mapaMundial">Mapa mundial</button>
 </div>
 <div class="stats">
@@ -423,6 +439,8 @@ header h1 span{transition:color .8s ease}
 
 
 <div class="mapwrap" id="mapwrap"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
+
+<div class="mapwrap" id="guidewrap"><div class="mapbox" style="max-width:640px"><div class="maphd"><span class="maptitle">Como funciona</span><button class="mapclose" id="guideX">✕</button></div><div id="guidebody"></div><div class="guidefoot"><button class="gbtn sec" id="guideNever">No volver a mostrar</button><button class="gbtn" id="guideClose">Entendido</button></div></div></div>
 <footer class="legal">
   <div class="f-row">
     <div class="f-col">
@@ -985,6 +1003,7 @@ window.Lang = (() => {
     }
     if (typeof updateStats === 'function') updateStats();
     if (window.Reviews) window.Reviews.paintAll();
+    if (window.Guide) window.Guide.render();
   }
 
 
@@ -1633,6 +1652,104 @@ window.Titles = (() => {
 
   return { get, ensure };
 })();
+/* ══ GUIA DE USO ══ */
+window.Guide = (() => {
+  const SEEN = 'mcu_guide_v1';
+  const G = {};
+  G.es = { t:'Como funciona', close:'Entendido', open:'Guia', never:'No volver a mostrar', s:[
+    ['\u2b55','Marca lo que ya viste','Toca el circulo a la izquierda de cada titulo. El contador y la barra de progreso se actualizan solos.'],
+    ['\ud83d\udd34','Tres niveles de importancia','<b>Esencial</b>: sin esto no entiendes Doomsday. <b>Importante</b>: no te pierdes, pero pierdes capas. <b>Complementaria</b>: para completistas.'],
+    ['\ud83d\udd0d','Filtros y busqueda','Filtra por pendientes, vistos, solo esenciales, solo MCU o solo universo extendido. El buscador encuentra por titulo en cualquier idioma.'],
+    ['\ud83d\udcfa','Donde ver cada titulo','Bajo cada pelicula aparece en que plataforma esta en tu pais. Cambia el selector de pais, o elige <b>Global</b> para ver donde esta disponible en todo el mundo.'],
+    ['\u2b50','Puntua y compara','Cinco estrellas por titulo. Al lado veras la media de la comunidad y cuanta gente voto.'],
+    ['\u2601\ufe0f','Guarda tu progreso','Sin cuenta se guarda en este navegador. Con tu correo se sincroniza y lo tienes en cualquier dispositivo. No hay contrasena: te llega un enlace.'],
+    ['\ud83c\udfa8','Ambiente por pelicula','Toca cualquier fila (no el circulo) y toda la pagina cambia a los colores de esa pelicula, con su imagen de fondo. Toca otra vez para apagarlo.'],
+    ['\ud83d\uddfa\ufe0f','Mapa mundial','Dos pestanas: <b>Comunidad</b> muestra desde que paises se usa el tracker. <b>Escenarios</b> es un mapa con zoom hasta el nivel de calle, con lugares reales de rodaje y ubicaciones de la historia.'],
+    ['\ud83c\udf10','Seis idiomas','La interfaz y los titulos de las peliculas cambian con el idioma. Tu progreso no se pierde al cambiar.']
+  ]};
+  G.en = { t:'How it works', close:'Got it', open:'Guide', never:'Do not show again', s:[
+    ['\u2b55','Mark what you have seen','Tap the circle to the left of each title. The counter and progress bar update on their own.'],
+    ['\ud83d\udd34','Three importance levels','<b>Essential</b>: without it you will not follow Doomsday. <b>Important</b>: you will not get lost, but you lose layers. <b>Complementary</b>: for completionists.'],
+    ['\ud83d\udd0d','Filters and search','Filter by to-watch, watched, essential only, MCU only or extended universe only. Search finds titles in any language.'],
+    ['\ud83d\udcfa','Where to watch','Under each film you will see which platform has it in your country. Change the country selector, or pick <b>Global</b> to see availability worldwide.'],
+    ['\u2b50','Rate and compare','Five stars per title. Next to them you will see the community average and how many people voted.'],
+    ['\u2601\ufe0f','Save your progress','Without an account it stays in this browser. With your email it syncs across devices. No password: you get a link.'],
+    ['\ud83c\udfa8','Per-film atmosphere','Tap any row (not the circle) and the whole page shifts to that film colours, with its backdrop. Tap again to turn it off.'],
+    ['\ud83d\uddfa\ufe0f','World map','Two tabs: <b>Community</b> shows which countries use the tracker. <b>Locations</b> is a map you can zoom to street level, with real filming sites and in-story places.'],
+    ['\ud83c\udf10','Six languages','Interface and film titles both change with the language. Your progress survives the switch.']
+  ]};
+  G.pt = { t:'Como funciona', close:'Entendi', open:'Guia', never:'Nao mostrar de novo', s:[
+    ['\u2b55','Marque o que ja viu','Toque no circulo a esquerda de cada titulo. O contador e a barra de progresso se atualizam sozinhos.'],
+    ['\ud83d\udd34','Tres niveis de importancia','<b>Essencial</b>: sem isso voce nao entende Doomsday. <b>Importante</b>: nao se perde, mas perde camadas. <b>Complementar</b>: para completistas.'],
+    ['\ud83d\udd0d','Filtros e busca','Filtre por pendentes, vistos, so essenciais, so MCU ou so universo estendido. A busca acha por titulo em qualquer idioma.'],
+    ['\ud83d\udcfa','Onde assistir','Sob cada filme aparece em qual plataforma esta no seu pais. Troque o seletor de pais, ou escolha <b>Global</b> para ver a disponibilidade no mundo todo.'],
+    ['\u2b50','Avalie e compare','Cinco estrelas por titulo. Ao lado voce ve a media da comunidade e quantos votaram.'],
+    ['\u2601\ufe0f','Salve seu progresso','Sem conta fica so neste navegador. Com seu email sincroniza entre dispositivos. Sem senha: chega um link.'],
+    ['\ud83c\udfa8','Ambiente por filme','Toque em qualquer linha (nao no circulo) e a pagina inteira muda para as cores daquele filme, com a imagem de fundo. Toque de novo para desligar.'],
+    ['\ud83d\uddfa\ufe0f','Mapa mundial','Duas abas: <b>Comunidade</b> mostra de quais paises usam o tracker. <b>Cenarios</b> e um mapa com zoom ate o nivel da rua, com locais reais de filmagem e lugares da historia.'],
+    ['\ud83c\udf10','Seis idiomas','A interface e os titulos dos filmes mudam com o idioma. Seu progresso nao se perde.']
+  ]};
+  G.fr = { t:'Comment ca marche', close:'Compris', open:'Guide', never:'Ne plus afficher', s:[
+    ['\u2b55','Marquez ce que vous avez vu','Touchez le cercle a gauche de chaque titre. Le compteur et la barre se mettent a jour seuls.'],
+    ['\ud83d\udd34','Trois niveaux d\u0027importance','<b>Essentiel</b> : sans cela vous ne suivrez pas Doomsday. <b>Important</b> : vous ne serez pas perdu, mais vous perdez des couches. <b>Complementaire</b> : pour les completistes.'],
+    ['\ud83d\udd0d','Filtres et recherche','Filtrez par a voir, vus, essentiels, MCU seul ou univers etendu. La recherche trouve les titres dans toutes les langues.'],
+    ['\ud83d\udcfa','Ou regarder','Sous chaque film apparait la plateforme disponible dans votre pays. Changez de pays, ou choisissez <b>Global</b> pour la disponibilite mondiale.'],
+    ['\u2b50','Notez et comparez','Cinq etoiles par titre. A cote, la moyenne de la communaute et le nombre de votes.'],
+    ['\u2601\ufe0f','Sauvegardez votre progression','Sans compte, elle reste dans ce navigateur. Avec votre email, elle se synchronise. Pas de mot de passe : vous recevez un lien.'],
+    ['\ud83c\udfa8','Ambiance par film','Touchez une ligne (pas le cercle) et toute la page prend les couleurs du film, avec son image. Touchez a nouveau pour l\u0027eteindre.'],
+    ['\ud83d\uddfa\ufe0f','Carte du monde','Deux onglets : <b>Communaute</b> montre les pays qui utilisent le tracker. <b>Lieux</b> est une carte zoomable jusqu\u0027a la rue, avec les vrais lieux de tournage.'],
+    ['\ud83c\udf10','Six langues','L\u0027interface et les titres changent avec la langue. Votre progression reste intacte.']
+  ]};
+  G.de = { t:'So funktioniert es', close:'Verstanden', open:'Anleitung', never:'Nicht mehr zeigen', s:[
+    ['\u2b55','Markiere, was du gesehen hast','Tippe auf den Kreis links neben jedem Titel. Zahler und Fortschrittsbalken aktualisieren sich selbst.'],
+    ['\ud83d\udd34','Drei Wichtigkeitsstufen','<b>Wesentlich</b>: ohne das verstehst du Doomsday nicht. <b>Wichtig</b>: du verlierst den Faden nicht, aber Ebenen. <b>Erganzend</b>: fur Komplettisten.'],
+    ['\ud83d\udd0d','Filter und Suche','Filtere nach offen, gesehen, nur wesentlich, nur MCU oder nur erweitertes Universum. Die Suche findet Titel in jeder Sprache.'],
+    ['\ud83d\udcfa','Wo zu sehen','Unter jedem Film steht, auf welcher Plattform er in deinem Land lauft. Wechsle das Land oder wahle <b>Global</b> fur weltweite Verfugbarkeit.'],
+    ['\u2b50','Bewerten und vergleichen','Funf Sterne pro Titel. Daneben der Durchschnitt der Community und die Anzahl der Stimmen.'],
+    ['\u2601\ufe0f','Fortschritt speichern','Ohne Konto bleibt er in diesem Browser. Mit deiner E-Mail wird er synchronisiert. Kein Passwort: du bekommst einen Link.'],
+    ['\ud83c\udfa8','Atmosphare pro Film','Tippe auf eine Zeile (nicht den Kreis) und die ganze Seite nimmt die Farben des Films an, samt Hintergrundbild. Nochmal tippen schaltet es aus.'],
+    ['\ud83d\uddfa\ufe0f','Weltkarte','Zwei Reiter: <b>Community</b> zeigt, aus welchen Landern der Tracker genutzt wird. <b>Drehorte</b> ist eine Karte bis auf Stra\u00dfenniveau mit echten Drehorten.'],
+    ['\ud83c\udf10','Sechs Sprachen','Oberflache und Filmtitel wechseln mit der Sprache. Dein Fortschritt bleibt erhalten.']
+  ]};
+  G.ru = { t:'\u041a\u0430\u043a \u044d\u0442\u043e \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442', close:'\u041f\u043e\u043d\u044f\u0442\u043d\u043e', open:'\u0413\u0438\u0434', never:'\u0411\u043e\u043b\u044c\u0448\u0435 \u043d\u0435 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c', s:[
+    ['\u2b55','\u041e\u0442\u043c\u0435\u0447\u0430\u0439\u0442\u0435 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u043d\u043e\u0435','\u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u043a\u0440\u0443\u0436\u043e\u043a \u0441\u043b\u0435\u0432\u0430 \u043e\u0442 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044f. \u0421\u0447\u0451\u0442\u0447\u0438\u043a \u0438 \u043f\u043e\u043b\u043e\u0441\u0430 \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0430 \u043e\u0431\u043d\u043e\u0432\u044f\u0442\u0441\u044f \u0441\u0430\u043c\u0438.'],
+    ['\ud83d\udd34','\u0422\u0440\u0438 \u0443\u0440\u043e\u0432\u043d\u044f \u0432\u0430\u0436\u043d\u043e\u0441\u0442\u0438','<b>\u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0435</b>: \u0431\u0435\u0437 \u043d\u0438\u0445 \u043d\u0435 \u043f\u043e\u0439\u043c\u0451\u0442\u0435 Doomsday. <b>\u0412\u0430\u0436\u043d\u044b\u0435</b>: \u043d\u0435 \u043f\u043e\u0442\u0435\u0440\u044f\u0435\u0442\u0435\u0441\u044c, \u043d\u043e \u0443\u043f\u0443\u0441\u0442\u0438\u0442\u0435 \u0434\u0435\u0442\u0430\u043b\u0438. <b>\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435</b>: \u0434\u043b\u044f \u043f\u0435\u0440\u0444\u0435\u043a\u0446\u0438\u043e\u043d\u0438\u0441\u0442\u043e\u0432.'],
+    ['\ud83d\udd0d','\u0424\u0438\u043b\u044c\u0442\u0440\u044b \u0438 \u043f\u043e\u0438\u0441\u043a','\u0424\u0438\u043b\u044c\u0442\u0440\u0443\u0439\u0442\u0435 \u043f\u043e \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u043d\u043e\u043c\u0443 \u0438 \u043a\u043b\u044e\u0447\u0435\u0432\u043e\u043c\u0443. \u041f\u043e\u0438\u0441\u043a \u043d\u0430\u0445\u043e\u0434\u0438\u0442 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044f \u043d\u0430 \u043b\u044e\u0431\u043e\u043c \u044f\u0437\u044b\u043a\u0435.'],
+    ['\ud83d\udcfa','\u0413\u0434\u0435 \u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c','\u041f\u043e\u0434 \u043a\u0430\u0436\u0434\u044b\u043c \u0444\u0438\u043b\u044c\u043c\u043e\u043c \u2014 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0430 \u0432 \u0432\u0430\u0448\u0435\u0439 \u0441\u0442\u0440\u0430\u043d\u0435. \u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 <b>Global</b>, \u0447\u0442\u043e\u0431\u044b \u0443\u0432\u0438\u0434\u0435\u0442\u044c \u0432\u0435\u0441\u044c \u043c\u0438\u0440.'],
+    ['\u2b50','\u041e\u0446\u0435\u043d\u0438\u0432\u0430\u0439\u0442\u0435','\u041f\u044f\u0442\u044c \u0437\u0432\u0451\u0437\u0434 \u043d\u0430 \u0444\u0438\u043b\u044c\u043c. \u0420\u044f\u0434\u043e\u043c \u2014 \u0441\u0440\u0435\u0434\u043d\u044f\u044f \u043e\u0446\u0435\u043d\u043a\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0430.'],
+    ['\u2601\ufe0f','\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u0435 \u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441','\u0411\u0435\u0437 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u0430 \u2014 \u0442\u043e\u043b\u044c\u043a\u043e \u0432 \u044d\u0442\u043e\u043c \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435. \u0421 email \u2014 \u043d\u0430 \u0432\u0441\u0435\u0445 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u0445. \u0411\u0435\u0437 \u043f\u0430\u0440\u043e\u043b\u044f: \u043f\u0440\u0438\u0434\u0451\u0442 \u0441\u0441\u044b\u043b\u043a\u0430.'],
+    ['\ud83c\udfa8','\u0410\u0442\u043c\u043e\u0441\u0444\u0435\u0440\u0430 \u0444\u0438\u043b\u044c\u043c\u0430','\u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u0441\u0442\u0440\u043e\u043a\u0443 (\u043d\u0435 \u043d\u0430 \u043a\u0440\u0443\u0436\u043e\u043a) \u2014 \u0432\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438\u043c\u0435\u0442 \u0446\u0432\u0435\u0442\u0430 \u0444\u0438\u043b\u044c\u043c\u0430.'],
+    ['\ud83d\uddfa\ufe0f','\u041a\u0430\u0440\u0442\u0430 \u043c\u0438\u0440\u0430','\u0414\u0432\u0435 \u0432\u043a\u043b\u0430\u0434\u043a\u0438: <b>\u0421\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e</b> \u0438 <b>\u041b\u043e\u043a\u0430\u0446\u0438\u0438</b> \u2014 \u043a\u0430\u0440\u0442\u0430 \u0441 \u0440\u0435\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u043c\u0435\u0441\u0442\u0430\u043c\u0438 \u0441\u044a\u0451\u043c\u043e\u043a.'],
+    ['\ud83c\udf10','\u0428\u0435\u0441\u0442\u044c \u044f\u0437\u044b\u043a\u043e\u0432','\u0418\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441 \u0438 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044f \u0444\u0438\u043b\u044c\u043c\u043e\u0432 \u043c\u0435\u043d\u044f\u044e\u0442\u0441\u044f. \u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441 \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u0435\u0442\u0441\u044f.']
+  ]};
+
+  const cur = () => G[(window.Lang ? window.Lang.get() : 'es')] || G.es;
+  function esc(s) { return String(s); }
+
+  function render() {
+    const g = cur();
+    const box = document.getElementById('guidebody');
+    if (!box) return;
+    const ti = document.querySelector('#guidewrap .maptitle');
+    if (ti) ti.textContent = g.t;
+    const bc = document.getElementById('guideClose');
+    if (bc) bc.textContent = g.close;
+    const bn = document.getElementById('guideNever');
+    if (bn) bn.textContent = g.never;
+    const bo = document.getElementById('guideOpen');
+    if (bo) bo.textContent = g.open;
+    box.innerHTML = g.s.map(x =>
+      '<div class="gsec"><span class="gico">' + x[0] + '</span><div><b>' + esc(x[1]) + '</b><p>' + x[2] + '</p></div></div>'
+    ).join('');
+  }
+  function open() { render(); const w = document.getElementById('guidewrap'); if (w) w.classList.add('open'); }
+  function close() { const w = document.getElementById('guidewrap'); if (w) w.classList.remove('open'); }
+  function never() { try { localStorage.setItem(SEEN, '1'); } catch (e) {} close(); }
+  function autoOpen() {
+    try { if (!localStorage.getItem(SEEN)) { localStorage.setItem(SEEN, '1'); setTimeout(open, 900); } } catch (e) {}
+  }
+  return { open, close, never, autoOpen, render };
+})();
 window.Backdrop = (() => {
   const CK = 'tmdb_bd_v2';
   const TTL = 14 * 24 * 60 * 60 * 1000;
@@ -1979,6 +2096,17 @@ window.CloudSync = (() => {
       if (te) te.classList.toggle('sel', which === 'esc');
     };
     if (mo) mo.onclick = () => { sel('com'); window.WorldMap.open(); };
+    const gO = document.getElementById('guideOpen'), gC = document.getElementById('guideClose'),
+          gX = document.getElementById('guideX'), gN = document.getElementById('guideNever'),
+          gW = document.getElementById('guidewrap');
+    if (gO) gO.onclick = () => window.Guide.open();
+    if (gC) gC.onclick = () => window.Guide.close();
+    if (gX) gX.onclick = () => window.Guide.close();
+    if (gN) gN.onclick = () => window.Guide.never();
+    if (gW) gW.onclick = e => { if (e.target === gW) window.Guide.close(); };
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') window.Guide.close(); });
+    window.Guide.render();
+    window.Guide.autoOpen();
     if (tc) tc.onclick = () => { sel('com'); window.WorldMap.open(); };
     if (te) te.onclick = () => { sel('esc'); window.ZoomMap.render(document.getElementById('mapbody')); };
     if (mc) mc.onclick = () => window.WorldMap.close();
