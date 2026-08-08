@@ -1,56 +1,86 @@
-# MCU Tracker — Rumbo a Doomsday
+# Rumbo a Doomsday — MCU Watch Tracker
 
-Rastreador del Universo Cinematográfico de Marvel en orden cronológico, con progreso sincronizado y disponibilidad por plataforma en Ecuador.
+Rastreador para ver el Universo Marvel en orden cronológico antes de
+**Avengers: Doomsday** (18 de diciembre de 2026).
 
-Proyecto de fan, no oficial. Sin relación con Marvel Studios ni con The Walt Disney Company.
+**En vivo:** https://ronaldobtc-code.github.io/mcu-tracker/
+
+Proyecto de fan, sin relación con Marvel Studios ni The Walt Disney Company.
+
+---
 
 ## Qué hace
 
-- **53 títulos** organizados en 6 fases, más el universo extendido
-- **Marca lo que ya viste** y calcula tu progreso hacia *Avengers: Doomsday*
-- **Progreso en la nube** — inicia sesión con tu correo y no lo pierdes al cambiar de dispositivo
-- **Dónde ver cada título** — si está incluido en tu suscripción o si toca alquilarlo, con enlace oficial
-- **Funciona sin cuenta** — sin sesión guarda en el navegador, como siempre
+- **89 títulos** en orden cronológico: las 6 fases del MCU, el universo
+  extendido y una sección X-Men para maratón.
+- **Tres niveles de importancia** según lo que hace falta para entender
+  Doomsday: Esencial (30), Importante (16), Complementaria (43).
+  La clasificación se basa en el reparto confirmado de la película,
+  no en opinión.
+- **Dónde ver cada título** en tu país, vía TMDB/JustWatch, con modo
+  Global para ver la disponibilidad en todo el mundo.
+- **Progreso en la nube** con enlace por correo, sin contraseña.
+- **Puntuaciones** de 1 a 5 con media de la comunidad.
+- **Mapa mundial** con la actividad por países y un mapa con zoom
+  a nivel de calle con 29 escenarios de rodaje y de la historia.
+- **Seis idiomas**: español, inglés, portugués, ruso, francés y alemán.
+  Los títulos de las películas también se traducen.
+- **Ambiente por película**: al seleccionar una, la página adopta sus
+  colores y su imagen de fondo.
+- **Guía de uso** integrada, que se abre en la primera visita.
 
-## Stack
+## Cómo está hecho
 
-| Capa | Tecnología |
+Un solo archivo `index.html` sin framework ni proceso de compilación.
+
+| Pieza | Para qué |
 |---|---|
-| Frontend | HTML, CSS y JavaScript sin framework |
-| Base de datos | Supabase (PostgreSQL + Row Level Security) |
-| Autenticación | Supabase Auth, enlace mágico por correo |
-| Disponibilidad | API de TMDB (datos de JustWatch) |
+| HTML, CSS y JS a mano | Toda la interfaz |
+| [Supabase](https://supabase.com) | Sesión, progreso, reseñas y analítica |
+| [TMDB](https://www.themoviedb.org) | Plataformas, imágenes y títulos localizados |
+| [MapLibre](https://maplibre.org) + [OpenFreeMap](https://openfreemap.org) | Mapa con zoom |
+| [Wikimedia](https://commons.wikimedia.org) | Fotos de los escenarios |
+| GitHub Pages | Alojamiento |
 
-Sin proceso de build. Un solo archivo, desplegable en cualquier hosting estático.
+La identidad de cada título es un **id numérico estable**, no su nombre.
+Por eso se puede cambiar de idioma sin perder el progreso.
 
-## Decisiones técnicas
+## Estructura
 
-**Local primero.** El tracker funciona completo sin cuenta. La sesión es opcional y solo agrega sincronización — nadie queda fuera por no registrarse.
-
-**Unión al iniciar sesión.** Si marcaste títulos antes de registrarte, se conservan: al entrar se hace la unión entre lo local y lo de la nube. Es el fallo clásico de las apps con sincronización, y aquí está resuelto.
-
-**Carga perezosa de proveedores.** 53 títulos de golpe serían 106 peticiones a TMDB. En su lugar: `IntersectionObserver`, máximo 4 peticiones concurrentes y caché de 7 días en el navegador. Solo se consulta lo que el usuario ve.
-
-**Escritura con retardo.** Los cambios se agrupan con 700 ms de espera antes de escribir en la base, para no generar una petición por clic.
-
-**RLS activo.** La llave pública de Supabase está expuesta por diseño; lo que protege los datos son las políticas de fila. Cada usuario solo lee y escribe la suya.
-
-## Ejecutar en local
-
-```bash
-git clone https://github.com/RonaldoBTC-code/mcu-tracker.git
-cd mcu-tracker
-python -m http.server 8000
+```
+index.html              Toda la aplicación
+supabase/migrations/    Esquema versionado: tablas, RLS y funciones
+SETUP.md                Cómo levantarlo desde cero
 ```
 
-Las credenciales van en la constante `CFG` al inicio del bloque `<script>`. Ver `SETUP.md`.
+## Base de datos
 
-## Créditos
+Cuatro migraciones en `supabase/migrations/`, aplicadas en orden
+alfabético. Se despliegan solas al hacer push a `main` mediante la
+integración de GitHub de Supabase.
 
-Datos de disponibilidad por [TMDB](https://www.themoviedb.org/) y [JustWatch](https://www.justwatch.com/). Este producto usa la API de TMDB, pero no está avalado ni certificado por TMDB.
+| Tabla | Contenido | Acceso |
+|---|---|---|
+| `mcu_progress` | Qué vio cada usuario | Privado, por RLS |
+| `reviews` | Puntuaciones | Privado, por RLS |
+| `site_visits` | Visitas por día y país | Lectura pública |
 
-Este sitio no aloja ni reproduce contenido audiovisual. Enlaza únicamente a plataformas oficiales.
+Los agregados públicos salen de funciones (`get_review_stats`,
+`get_country_activity`) que solo devuelven promedios y conteos, nunca
+filas individuales.
+
+**La analítica no guarda IP ni identifica a nadie:** una visita por
+persona y día, agrupada por país.
+
+## Legal
+
+- No aloja ni reproduce películas, y solo enlaza a plataformas oficiales.
+- Los datos de disponibilidad provienen de TMDB. Este producto usa la API
+  de TMDB, pero no está avalado ni certificado por TMDB.
+- Las fotos de los escenarios son de Wikimedia Commons, con atribución.
+- Títulos, fechas y lugares de rodaje son información factual de dominio
+  público.
 
 ## Licencia
 
-MIT
+MIT — ver [LICENSE](LICENSE).

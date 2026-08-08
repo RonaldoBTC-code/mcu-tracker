@@ -5,8 +5,9 @@ node_modules/
 
 _audit.ps1
 _*.py
-_*.js
+_tmp*.js
 _bak.html
 
 node_modules/
 _*.txt
+

@@ -723,7 +723,7 @@ function renderList() {
 
       row.innerHTML = `
         <div class="rnum">${numDisplay}</div>
-        <button class="chk" onclick="toggle('${mid(m)}')">
+        <button class="chk" onclick="toggle('${mid(m)}')" aria-pressed="${watched.has(mid(m))}" aria-label="${(window.Titles ? window.Titles.get(m) : m.title).replace(/"/g,'')}">
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </button>
         <div class="tarea">
