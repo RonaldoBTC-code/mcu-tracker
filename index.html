@@ -3735,6 +3735,18 @@ window.Guide = (() => {
     }, 10);
   }
 
+  // El scroll suave no avisa cuando termina. Se vigila la posicion:
+  // cuando deja de cambiar durante 3 fotogramas, ya paro.
+  function esperarScroll(cb) {
+    let ultimo = -1, quietos = 0, vueltas = 0;
+    (function mirar() {
+      const y = window.scrollY;
+      if (y === ultimo) quietos++; else { quietos = 0; ultimo = y; }
+      if (++vueltas > 60 || quietos >= 3) { cb(); return; }
+      requestAnimationFrame(mirar);
+    })();
+  }
+
   function renderStep(idx) {
     const data = getLangData();
     if (idx < 0 || idx >= data.steps.length) return;
@@ -3749,7 +3761,7 @@ window.Guide = (() => {
 
     const el = getStepElement(stepDef);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+      el.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center', inline: 'nearest' });
     }
 
     const tourStep = document.getElementById('tourStep');
@@ -3764,7 +3776,7 @@ window.Guide = (() => {
     if (tourPrev) tourPrev.style.display = currentStep === 0 ? 'none' : 'inline-block';
     if (tourNext) tourNext.textContent = (currentStep === data.steps.length - 1) ? data.finish : data.next;
 
-    setTimeout(positionSpotlightAndCard, 100);
+    esperarScroll(positionSpotlightAndCard);
   }
 
   function dismiss() {
@@ -3778,6 +3790,17 @@ window.Guide = (() => {
     if (card) card.classList.remove('on');
     try { localStorage.setItem(KEY_TOUR, '1'); } catch(e) {}
   }
+
+  // Si el movil gira o cambia el tamano, recolocar el foco.
+  let reajuste;
+  window.addEventListener('resize', () => {
+    if (!isActive) return;
+    clearTimeout(reajuste);
+    reajuste = setTimeout(positionSpotlightAndCard, 150);
+  });
+  window.addEventListener('orientationchange', () => {
+    if (isActive) setTimeout(positionSpotlightAndCard, 300);
+  });
 
   function start() {
     const overlay = document.getElementById('tourOverlay');
