@@ -28,6 +28,9 @@ const dom = new JSDOM(html, {
     w.IntersectionObserver = class { observe() {} unobserve() {} disconnect() {} };
     w.ResizeObserver = class { observe() {} unobserve() {} disconnect() {} };
     w.requestAnimationFrame = cb => setTimeout(cb, 0);
+    w.Element.prototype.scrollIntoView = function () {};
+    w.HTMLCanvasElement.prototype.getContext = () => null;
+    w.scrollTo = function () {};
     w.onerror = (m, s, l) => err.push(m + ' (linea ' + l + ')');
     w.addEventListener('unhandledrejection', () => {});
   }
