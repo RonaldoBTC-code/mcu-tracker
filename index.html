@@ -1502,14 +1502,7 @@ footer.legal a:hover { color: #fff; text-decoration: underline; }
 }
 
 /* The target element needs to visually float above the dark overlay */
-.tour-active-el {
-  position: relative !important;
-  z-index: 11002 !important;
-  /* Bright border glow to make it obvious */
-  outline: 2px solid rgba(230, 57, 70, 0.0) !important;
-  border-radius: 6px;
-  transition: outline 0.3s ease;
-}
+
 
 .tour-card {
   position: fixed;
@@ -1774,6 +1767,43 @@ footer.legal a:hover { color: #fff; text-decoration: underline; }
   #tourNext { flex: 1 }
   #tourClose { min-width: 40px; min-height: 40px }
 }
+
+/* ══ EL ELEMENTO SENALADO SE ILUMINA DE VERDAD ══
+   Antes solo subia de capa, pero al no tener fondo propio se le veia
+   el negro de la pagina a traves y seguia pareciendo apagado. */
+.tour-active-el {
+  position: relative !important;
+  z-index: 11002 !important;
+  border-radius: 8px;
+  /* fondo propio: sin esto el overlay oscuro se transparenta */
+  background-color: #141524 !important;
+  box-shadow:
+    0 0 0 2px var(--thA),
+    0 0 22px 6px rgba(230, 57, 70, .38),
+    0 10px 34px rgba(0, 0, 0, .6) !important;
+  filter: brightness(1.38) saturate(1.15) !important;
+  transition: box-shadow .3s ease, filter .3s ease, background-color .3s ease;
+}
+/* el texto de dentro tambien tiene que leerse */
+.tour-active-el, .tour-active-el * { opacity: 1 !important }
+
+/* Si lo senalado es una fila de pelicula, que respire */
+.row.tour-active-el { padding: 14px 12px !important }
+
+/* Botones y pastillas: el fondo propio no debe tapar su color */
+.fb.tour-active-el, .mapbtn.tour-active-el, .pill.tour-active-el,
+.chk.tour-active-el {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+}
+.fb.tour-active-el::after, .mapbtn.tour-active-el::after,
+.pill.tour-active-el::after, .chk.tour-active-el::after {
+  content: ''; position: absolute; inset: -3px; z-index: -1;
+  background: #141524; border-radius: 9px;
+}
+
+/* La capa oscura, un punto menos densa: se distingue mejor el contraste */
+.tour-overlay::before { background: rgba(3, 3, 9, .82) }
 </style>
 </head>
 <body>
