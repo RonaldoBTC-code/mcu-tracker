@@ -14,6 +14,10 @@ const dom = new JSDOM(html, {
     w.IntersectionObserver = class { observe() {} unobserve() {} disconnect() {} };
     w.ResizeObserver = class { observe() {} unobserve() {} disconnect() {} };
     w.requestAnimationFrame = cb => setTimeout(cb, 0);
+    // jsdom no implementa scrollIntoView ni matchMedia completos
+    w.Element.prototype.scrollIntoView = function () {};
+    w.scrollTo = function () {};
+    w.HTMLCanvasElement.prototype.getContext = function () { return null; };
     w.onerror = (msg, src, l, c, err) => { errores.push('ERROR: ' + msg + ' (linea ' + l + ')'); };
     w.addEventListener('unhandledrejection', () => {});
   }
