@@ -1834,6 +1834,37 @@ footer.legal a:hover { color: #fff; text-decoration: underline; }
   .stats { grid-template-columns: repeat(2, 1fr) !important }
   #guideOpen, #mapOpen { grid-column: 1 / -1 }
 }
+
+/* ══ EL TOUR ATRAVIESA LOS CONTEXTOS DE APILAMIENTO ══
+   Un ancestro con backdrop-filter o z-index crea un contexto de
+   apilamiento: el hijo queda atrapado dentro y su z-index alto solo
+   vale ahi adentro, nunca por encima de la capa oscura del tour.
+   Por eso los pasos 1,2,3,4,7 y 8 se veian apagados: sus padres
+   (header, .cloudbar y .main) crean uno.
+   Mientras el tour esta activo, esos padres suben de capa y se les
+   quita el filtro, de modo que el hijo resaltado sí queda encima. */
+body.tour-on header,
+body.tour-on .cloudbar,
+body.tour-on .main {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* El ancestro que contiene al elemento resaltado sube por encima
+   de la capa oscura (11000) junto con su hijo. */
+body.tour-on .tour-parent {
+  position: relative !important;
+  z-index: 11001 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Los demas hermanos del ancestro se quedan detras del velo */
+body.tour-on .tour-parent > *:not(.tour-active-el):not(.tour-parent) {
+  opacity: .28;
+  transition: opacity .3s ease;
+}
+body.tour-on .tour-parent > .tour-active-el { opacity: 1 !important }
 </style>
 </head>
 <body>
@@ -3682,6 +3713,7 @@ window.Guide = (() => {
   let isActive = false;
   let resizeTimer = null;
   let activeTargetEl = null;
+  let parentEls = [];
 
   const STEPS_DATA = {
     es: {
@@ -3802,6 +3834,8 @@ window.Guide = (() => {
       activeTargetEl.classList.remove('tour-active-el');
       activeTargetEl = null;
     }
+    parentEls.forEach(e => e.classList.remove('tour-parent'));
+    parentEls = [];
   }
 
   function positionSpotlightAndCard() {
@@ -3826,6 +3860,21 @@ window.Guide = (() => {
 
     el.classList.add('tour-active-el');
     activeTargetEl = el;
+
+    // Un ancestro con backdrop-filter, filter, transform u opacidad crea
+    // un contexto de apilamiento y atrapa al hijo: su z-index alto solo
+    // vale dentro de ese contexto, nunca sobre el velo del tour.
+    let anc = el.parentElement;
+    while (anc && anc.tagName !== 'BODY') {
+      const cs = getComputedStyle(anc);
+      const atrapa = (cs.backdropFilter && cs.backdropFilter !== 'none') ||
+                     (cs.filter && cs.filter !== 'none') ||
+                     (cs.transform && cs.transform !== 'none') ||
+                     (cs.position !== 'static' && cs.zIndex !== 'auto') ||
+                     parseFloat(cs.opacity || '1') < 1;
+      if (atrapa) { anc.classList.add('tour-parent'); parentEls.push(anc); }
+      anc = anc.parentElement;
+    }
 
     const rect = el.getBoundingClientRect();
     const pad = 10;
@@ -3907,6 +3956,7 @@ window.Guide = (() => {
     const spotlight = document.getElementById('tourSpotlight');
     const card = document.getElementById('tourCard');
     clearActiveTarget();
+    document.body.classList.remove('tour-on');
     if (overlay) overlay.classList.remove('active');
     if (spotlight) spotlight.classList.remove('on');
     if (card) card.classList.remove('on');
@@ -3929,6 +3979,7 @@ window.Guide = (() => {
     if (!overlay) return;
     currentStep = 0;
     isActive = true;
+    document.body.classList.add('tour-on');
     overlay.classList.add('active');
     renderStep(0);
   }
