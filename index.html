@@ -1706,48 +1706,6 @@ footer.legal a:hover { color: #fff; text-decoration: underline; }
   .fb, .tab, .mapbtn, .gbtn, .cb-btn { min-height: 40px }
 }
 
-/* ══ MOVIL: ESPACIADO Y RESPIRO ══
-   En pantallas estrechas los controles se amontonaban y las tarjetas
-   de estadisticas cortaban el texto en dos lineas. */
-@media (max-width: 640px) {
-  /* La barra de controles pasa a filas apiladas, no en linea */
-  .ctrl-bar, .cb-row { flex-wrap: wrap; gap: 10px 8px; padding: 12px 12px }
-  .cb-reg, #cbRegion, #cbLang { flex: 1 1 auto; min-width: 0; max-width: 100% }
-  label[for="cbRegion"], label[for="cbLang"] { font-size: 9px; letter-spacing: 1.5px }
-
-  /* Guia y Mapa mundial: ancho completo, uno debajo del otro */
-  #guideOpen, #mapOpen { flex: 1 1 100%; justify-content: center; text-align: center }
-
-  /* Estadisticas: 3 por fila en vez de 6 apretadas */
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px }
-  .stat { padding: 12px 8px; min-width: 0 }
-  .sn { font-size: 26px }
-  .sl { font-size: 8px; letter-spacing: 1px; line-height: 1.35; white-space: normal }
-
-  /* Filtros: cuadricula pareja, sin huerfanos */
-  .filters, .fbs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px }
-  .fb { width: 100%; padding: 11px 6px; font-size: 10px; letter-spacing: 1px }
-  .search, .search-wrap { grid-column: 1 / -1 }
-  .search input, #q { width: 100%; padding: 11px 12px }
-
-  /* Cabecera y contador */
-  header { padding: 16px 14px }
-  .brand { font-size: 30px; line-height: 1.05 }
-  .brand-sub { font-size: 9px; letter-spacing: 2px }
-  .pill { width: 100%; margin-top: 12px }
-
-  /* Progreso */
-  .prog-wrap { padding: 12px 14px; gap: 10px }
-  .prog-lbl { font-size: 9px; letter-spacing: 1.5px }
-
-  /* Filas de peliculas: mas aire vertical */
-  .row { padding: 13px 12px }
-  .ttxt { font-size: 14px; line-height: 1.3 }
-  .prov { gap: 5px; margin-top: 7px }
-  .prov-chip { font-size: 9px; padding: 3px 7px }
-}
-
-/* ══ TOUR EN MOVIL ══ */
 @media (max-width: 640px) {
   #tourCard, .tour-card {
     width: calc(100vw - 24px) !important;
@@ -1804,6 +1762,78 @@ footer.legal a:hover { color: #fff; text-decoration: underline; }
 
 /* La capa oscura, un punto menos densa: se distingue mejor el contraste */
 .tour-overlay::before { background: rgba(3, 3, 9, .82) }
+
+/* ══════ MOVIL v2 — sobre las clases REALES del documento ══════
+   .cloudbar  barra superior: sesion, pais, idioma, guia, mapa
+   .stats     6 tarjetas de estadisticas
+   .ctrl      6 filtros + buscador (.sw > .sr)
+   Las reglas anteriores apuntaban a clases que no existen. */
+
+@media (max-width: 680px) {
+
+  /* ── Barra superior: cada grupo en su fila, sin apreturas ── */
+  .cloudbar {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 8px;
+    padding: 12px !important;
+    align-items: center;
+  }
+  .cloudbar .cb-dot { display: none }
+  #cbMsg { grid-column: 1 / -1; font-size: 10px; line-height: 1.4; text-align: left }
+  #cbAuth { grid-column: 1 / -1 }
+  #cbAuth .cb-btn, #cbStart { width: 100%; justify-content: center }
+  .cloudbar .cb-sep { display: none }
+  #cbRegionWrap, #cbLangWrap {
+    display: flex; align-items: center; gap: 6px; min-width: 0;
+  }
+  #cbRegionWrap { grid-column: 1 / -1 }
+  #cbLangWrap { grid-column: 1 / -1 }
+  #cbRegionWrap select, #cbLangWrap select { flex: 1; min-width: 0 }
+  /* Guia y Mapa: uno al lado del otro, no apilados */
+  #guideOpen, #mapOpen { width: 100%; padding: 12px 8px; margin: 0 }
+
+  /* ── Estadisticas: 3 x 2, alineadas ── */
+  .stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1px;
+  }
+  .stat { padding: 11px 6px !important; min-width: 0; text-align: center }
+  .stat .sn { font-size: 24px }
+  .stat .sl { font-size: 8px; letter-spacing: .5px; line-height: 1.3; white-space: normal }
+
+  /* ── Filtros: 3 x 2 y el buscador debajo, a lo ancho ── */
+  .ctrl {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 7px !important;
+    padding: 12px !important;
+  }
+  .ctrl .fb {
+    width: 100% !important;
+    padding: 10px 4px !important;
+    font-size: 9px !important;
+    letter-spacing: .5px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ctrl .sw { grid-column: 1 / -1; width: 100% }
+  .ctrl .sw .sr, .ctrl .sr { width: 100%; box-sizing: border-box; padding: 11px 12px 11px 34px }
+
+  /* ── Cabecera ── */
+  header { padding: 15px 13px }
+  .hd { flex-direction: column; align-items: flex-start; gap: 12px }
+  .pill { width: 100%; box-sizing: border-box }
+}
+
+/* Pantallas muy estrechas: los filtros bajan a 2 columnas */
+@media (max-width: 400px) {
+  .ctrl { grid-template-columns: repeat(2, 1fr) !important }
+  .stats { grid-template-columns: repeat(2, 1fr) !important }
+  #guideOpen, #mapOpen { grid-column: 1 / -1 }
+}
 </style>
 </head>
 <body>
