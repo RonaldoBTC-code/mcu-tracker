@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Primera carga offline: catálogo, 445 estrellas y búsqueda",
+    "status": "PASS"
+  },
+  {
+    "name": "Storage corrupto o tipo inválido no deja la página vacía",
+    "status": "PASS"
+  },
+  {
+    "name": "Storage bloqueado permite ver y marcar",
+    "status": "PASS"
+  },
+  {
+    "name": "Cuota agotada actualiza UI y conserva cambios en memoria",
+    "status": "PASS"
+  },
+  {
+    "name": "Secciones se cierran y reabren con teclado",
+    "status": "PASS"
+  },
+  {
+    "name": "Marcar conserva foco y muestra nombre de película",
+    "status": "PASS"
+  },
+  {
+    "name": "Escape y API close cierran guía y restauran foco",
+    "status": "PASS"
+  },
+  {
+    "name": "OTP vuelve al despliegue actual y bloquea envío duplicado",
+    "status": "PASS"
+  },
+  {
+    "name": "Error OTP recuperable sin excepción no manejada",
+    "status": "PASS"
+  },
+  {
+    "name": "Sesiones A/B/invitado separan progreso y estrellas",
+    "status": "PASS"
+  },
+  {
+    "name": "Error SELECT no genera upsert y conserva caché de cuenta",
+    "status": "PASS"
+  },
+  {
+    "name": "Desmarcación remota sustituye copia antigua, sin unión",
+    "status": "PASS"
+  },
+  {
+    "name": "Cambio de cuenta cancela debounce y respuestas tardías",
+    "status": "PASS"
+  },
+  {
+    "name": "Cambios offline se reintentan tras lectura válida",
+    "status": "PASS"
+  },
+  {
+    "name": "Cambios de idioma preservan estado de sincronización",
+    "status": "PASS"
+  },
+  {
+    "name": "Título externo se muestra como texto, sin HTML ejecutable",
+    "status": "PASS"
+  },
+  {
+    "name": "Estrellas antiguas de invitado permanecen disponibles",
+    "status": "PASS"
+  },
+  {
+    "name": "Estrellas offline se conservan y reintentan por cuenta",
+    "status": "PASS"
+  },
+  {
+    "name": "Importar progreso invitado requiere clic explícito",
+    "status": "PASS"
+  },
+  {
+    "name": "Mapa offline y respuesta antigua no reemplazan pestaña activa",
+    "status": "PASS"
+  }
+]

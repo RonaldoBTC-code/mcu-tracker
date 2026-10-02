@@ -1,0 +1,7 @@
+{
+  "name": "mcu-tracker",
+  "private": true,
+  "scripts": {"test": "node tests/entry-regressions.cjs"},
+  "engines": {"node": ">=24"},
+  "devDependencies": {"jsdom": "29.1.1"}
+}

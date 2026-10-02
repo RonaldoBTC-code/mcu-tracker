@@ -84,3 +84,9 @@ persona y día, agrupada por país.
 ## Licencia
 
 MIT — ver [LICENSE](LICENSE).
+
+## Correcciones de entrada y pruebas
+
+La revisión del 2 de octubre de 2026 corrige el arranque con almacenamiento corrupto o bloqueado, las estrellas de la primera carga, las secciones colapsables, el foco y Escape de la guía, el enlace de acceso y errores de sincronización al cambiar de cuenta. El catálogo sigue disponible si falla la nube.
+
+Consultar [correcciones y límites](docs/entry-fixes.md), [resultados de regresión](docs/entry-fixes-results.json) y [AGENTS.md](AGENTS.md). Con Node.js 24 o posterior: `npm ci --ignore-scripts` y `npm test`. Estas pruebas no envían correos ni escriben datos reales. La validación de OTP real y navegador móvil/WebGL sigue pendiente.

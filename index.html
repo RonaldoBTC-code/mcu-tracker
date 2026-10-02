@@ -1868,6 +1868,7 @@ body.tour-on .tour-parent > .tour-active-el { opacity: 1 !important }
 </style>
 </head>
 <body>
+<p id="storageNotice" role="status" hidden style="padding:12px;text-align:center">El navegador no permite guardar datos. Los cambios se conservarán solo mientras esta página siga abierta.</p>
 <div class="cur-dot" id="curDot"></div>
 <div class="cur-ring" id="curRing"></div>
 <div class="grid"></div>
@@ -1954,11 +1955,11 @@ body.tour-on .tour-parent > .tour-active-el { opacity: 1 !important }
 <div class="toast" id="toast"></div>
 
 
-<div class="mapwrap" id="mapwrap"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
+<div class="mapwrap" id="mapwrap" role="dialog" aria-modal="true" aria-label="Mapa y actividad de la comunidad"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
 
 <div class="tour-overlay" id="tourOverlay">
   <div class="tour-spotlight" id="tourSpotlight"></div>
-  <div class="tour-card" id="tourCard" role="dialog" aria-modal="true">
+  <div class="tour-card" id="tourCard" role="dialog" aria-modal="true" aria-labelledby="tourTitle">
     <div class="tour-header">
       <div class="tour-badge"><span class="tour-badge-dot"></span> <span id="tourStep">PASO 1 DE 8</span></div>
       <button class="tour-close" id="tourClose" aria-label="Cerrar guía">✕</button>
@@ -2137,7 +2138,26 @@ window.Lang = window.Lang || {
 };
 window.Titles = window.Titles || { get: m => m.title, ensure: async () => false };
 
+window.SafeStorage = (() => {
+  const memory=new Map();let persistent=true;
+  function failed(){persistent=false;const el=document.getElementById('storageNotice');if(el)el.hidden=false;}
+  return {
+    getItem(key){if(memory.has(key))return memory.get(key);try{return window.localStorage.getItem(key);}catch(e){failed();return null;}},
+    setItem(key,value){memory.set(key,String(value));try{window.localStorage.setItem(key,String(value));}catch(e){failed();}},
+    removeItem(key){memory.delete(key);try{window.localStorage.removeItem(key);}catch(e){failed();}},
+    invalidate(key){memory.delete(key);},persistent:()=>persistent
+  };
+})();
+function readLocal(key,fallback){
+  try{const value=JSON.parse(window.SafeStorage.getItem(key)||JSON.stringify(fallback));
+    if(Array.isArray(fallback))return Array.isArray(value)?value:fallback;
+    return value&&typeof value==='object'&&!Array.isArray(value)?value:fallback;
+  }catch(e){return fallback;}
+}
+const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const KEY = 'mcu_v4';
+let progressKey=KEY+':guest';
+
 // La identidad de cada titulo es su id, no su nombre: asi no se rompe al cambiar de idioma.
 const mid = m => 'id:' + m.id;
 const T2ID = {};
@@ -2146,20 +2166,21 @@ const ID2M = {};
 LIST.forEach(m => { ID2M[mid(m)] = m; });
 // Migra lo guardado antes, cuando la clave era el titulo en espanol.
 function migrar(arr) {
-  return (arr || []).map(x => (typeof x === 'string' && x.indexOf('id:') === 0) ? x : (T2ID[x] || x))
-                    .filter((x, i, a) => a.indexOf(x) === i);
+  return (Array.isArray(arr) ? arr : []).map(x => (typeof x === 'string' && x.indexOf('id:') === 0) ? x : (T2ID[x] || x))
+                    .filter((x, i, a) => typeof x === 'string' && ID2M[x] && a.indexOf(x) === i);
 }
-let watched = new Set(migrar(JSON.parse(localStorage.getItem(KEY)||'[]')));
+let watched = new Set(migrar(readLocal(progressKey,readLocal(KEY,[]))));
 let filter = 'all', q = '';
 
-const save = () => { localStorage.setItem(KEY, JSON.stringify([...watched])); if (window.CloudSync) window.CloudSync.push([...watched]); };
+const save = () => { window.SafeStorage.setItem(progressKey, JSON.stringify([...watched])); if (window.CloudSync) window.CloudSync.push([...watched]); };
 
 function toggle(k, btn) {
   const title = k;
   const isNowDone = !watched.has(k);
   isNowDone ? watched.add(k) : watched.delete(k);
   save(); updateStats(); renderList();
-  const name = title.split(':')[0].split('(')[0].split('—')[0].trim();
+  const replacement=document.querySelector('.chk[data-mid="'+k+'"]');if(replacement)replacement.focus({preventScroll:true});
+  const movie=ID2M[k];const name=movie?(window.Titles?window.Titles.get(movie):movie.title):title;
   toast(isNowDone ? '✅ '+name+' — ¡Visto!' : '❌ '+name+' — Desmarcado');
   if (isNowDone && btn) {
     const burst = document.createElement('span');
@@ -2232,7 +2253,9 @@ function renderList() {
       <div class="sec-line${isExt?' pur':''}"></div>
       <span class="sec-info">${doneInGroup}/${items.length} ${(window.Lang && window.Lang.t) ? window.Lang.t('vistosDe') : 'vistos'}</span>
       <span class="sec-arr">▼</span>`;
-    hdr.onclick = () => { hdr.classList.toggle('collapsed'); };
+    hdr.tabIndex=0;hdr.setAttribute('role','button');hdr.setAttribute('aria-expanded','true');
+    hdr.onclick=()=>{const collapsed=hdr.classList.toggle('collapsed');hdr.setAttribute('aria-expanded',String(!collapsed));const rows=hdr.nextElementSibling;if(rows){rows.style.maxHeight=collapsed?'0':'9999px';rows.hidden=collapsed;}};
+    hdr.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();hdr.click();}};
 
     const rows = document.createElement('div');
     rows.className = 'sec-rows';
@@ -2263,13 +2286,13 @@ function renderList() {
 
       row.innerHTML = `
         <div class="rnum">${numDisplay}</div>
-        <button class="chk" onclick="toggle('${mid(m)}', this)" aria-pressed="${watched.has(mid(m))}" aria-label="${(window.Titles ? window.Titles.get(m) : m.title).replace(/"/g,'')}">
+        <button class="chk" data-mid="${mid(m)}" onclick="toggle('${mid(m)}', this)" aria-pressed="${watched.has(mid(m))}" aria-label="${escapeHTML(window.Titles ? window.Titles.get(m) : m.title)}">
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </button>
         <div class="tarea">
           <div class="ttop">
             <span class="ticon">${tIcon}</span>
-            <span class="ttxt">${window.Titles ? window.Titles.get(m) : m.title}</span>
+            <span class="ttxt">${escapeHTML(window.Titles ? window.Titles.get(m) : m.title)}</span>
             <span class="tyr">${m.year}</span>
           </div>
           ${m.reason?`<div class="treason">${m.reason}</div>`:''}
@@ -2297,19 +2320,6 @@ function renderList() {
   if (window.Reviews) { window.Reviews.paintAll(); window.Reviews.loadStats(false); }
   if (window.Lang) window.Lang.apply();
 }
-
-// Handle sec-rows height for collapse animation
-document.addEventListener('click', e=>{
-  const hdr = e.target.closest('.sec-hdr');
-  if (!hdr) return;
-  const rows = hdr.nextElementSibling;
-  if (!rows) return;
-  if (hdr.classList.contains('collapsed')) {
-    rows.style.maxHeight = rows.scrollHeight+'px';
-  } else {
-    rows.style.maxHeight = '0';
-  }
-});
 
 document.querySelectorAll('.fb').forEach(b => b.addEventListener('click', ()=>{
   document.querySelectorAll('.fb').forEach(x=>x.classList.remove('act'));
@@ -2526,7 +2536,7 @@ window.Lang = (() => {
     const l = (navigator.language || 'es').slice(0, 2).toLowerCase();
     return LANGS.some(x => x[0] === l) ? l : 'es';
   }
-  let cur = localStorage.getItem(KEY_L) || detect();
+  let cur = window.SafeStorage.getItem(KEY_L) || detect();
   if (!T[cur]) cur = 'es';
 
   const t = k => (T[cur] && T[cur][k]) || T.es[k] || k;
@@ -2537,7 +2547,7 @@ window.Lang = (() => {
   function set(l) {
     if (!T[l]) l = 'es';
     cur = l;
-    localStorage.setItem(KEY_L, l);
+    window.SafeStorage.setItem(KEY_L, l);
     CFG.LANG = tmdb();
     apply();
     if (window.Providers) { window.Providers.clearCache(); window.Providers.observe(); }
@@ -2559,7 +2569,7 @@ window.Lang = (() => {
     // elementos ya marcados con data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const k = el.dataset.i18n;
-      if (k) el.textContent = t(k);
+      if (k && !el.dataset.live) el.textContent = t(k);
     });
 
     // etiquetas de estadisticas, respetando el simbolo final
@@ -2667,7 +2677,7 @@ window.Region = (() => {
     if (l && l.length === 2) return l.toUpperCase();
     return 'US';
   }
-  let current = localStorage.getItem(KEY_R) || detect();
+  let current = window.SafeStorage.getItem(KEY_R) || detect();
   const get = () => current;
   function mount(onChange) {
     const sel = document.getElementById('cbRegion');
@@ -2675,7 +2685,7 @@ window.Region = (() => {
     sel.innerHTML = LIST.map(c => '<option value="' + c[0] + '">' + c[1] + '</option>').join('');
     if (!LIST.some(c => c[0] === current)) current = 'US';
     sel.value = current;
-    sel.onchange = () => { current = sel.value; localStorage.setItem(KEY_R, current); onChange(); };
+    sel.onchange = () => { current = sel.value; window.SafeStorage.setItem(KEY_R, current); onChange(); };
   }
   return { get, mount, detect };
 })();
@@ -2697,7 +2707,7 @@ window.Analytics = (() => {
     try {
       if (!CFG.SUPABASE_URL || CFG.SUPABASE_URL.indexOf('TU-PROYECTO') !== -1) return;
       const today = new Date().toISOString().slice(0, 10);
-      if (localStorage.getItem(KEY_T) === today) return;
+      if (window.SafeStorage.getItem(KEY_T) === today) return;
       let c = window.Region ? window.Region.get() : null;
       if (!c || c === 'GLOBAL' || c.length !== 2) {
         try { c = (navigator.language || '').split('-')[1] || null; } catch (e) { c = null; }
@@ -2708,7 +2718,7 @@ window.Analytics = (() => {
         headers: { 'Content-Type': 'application/json', apikey: CFG.SUPABASE_ANON_KEY, Authorization: 'Bearer ' + CFG.SUPABASE_ANON_KEY },
         body: JSON.stringify({ p_country: c.toUpperCase() })
       });
-      if (r.ok) localStorage.setItem(KEY_T, today);
+      if (r.ok) window.SafeStorage.setItem(KEY_T, today);
     } catch (e) {}
   }
   document.addEventListener('DOMContentLoaded', () => setTimeout(track, 1200));
@@ -2716,48 +2726,64 @@ window.Analytics = (() => {
 })();
 /* ══ RESENAS ══ */
 window.Reviews = (() => {
-  const KEY_R = 'mcu_reviews';
+  let KEY_R = 'mcu_reviews:guest';
+  let reviewGeneration=0,reviewRevision=0;
+  let ratingWrites=Promise.resolve();
+  function switchUser(id){reviewGeneration++;reviewRevision++;KEY_R='mcu_reviews:'+(id?'user:'+id:'guest');mine=readLocal(KEY_R,id?{}:readLocal('mcu_reviews',{}));paintAll();}
   let mine = {};
-  try { mine = JSON.parse(localStorage.getItem(KEY_R) || '{}'); } catch (e) { mine = {}; }
+  try { mine = readLocal(KEY_R, readLocal('mcu_reviews', {})); } catch (e) { mine = {}; }
   let stats = {};
 
   const sb = () => (window.CloudSync && window.CloudSync.client) ? window.CloudSync.client() : null;
   const user = () => (window.CloudSync && window.CloudSync.user) ? window.CloudSync.user() : null;
 
-  function saveLocal() { try { localStorage.setItem(KEY_R, JSON.stringify(mine)); } catch (e) {} }
+  function saveLocal() { try { window.SafeStorage.setItem(KEY_R, JSON.stringify(mine)); } catch (e) {} }
   const get = t => mine[t] || 0;
 
   async function set(title, rating) {
-    mine[title] = rating; saveLocal();
+    if(!ID2M[title]||!Number.isInteger(rating)||rating<1||rating>5)return;
+    reviewRevision++;mine[title] = rating; saveLocal();
+    const pendingKey=KEY_R+':pending',pending=readLocal(pendingKey,{});pending[title]=rating;window.SafeStorage.setItem(pendingKey,JSON.stringify(pending));
     const c = sb(), u = user();
     if (!c || !u) { toast(window.Lang.t('guardadaAqui')); return; }
     let country = window.Region ? window.Region.get() : null;
     if ((!country || country === 'GLOBAL') && window.Region && window.Region.detect) country = window.Region.detect();
-    const { error } = await c.from('reviews').upsert({
+    const generation=reviewGeneration;
+    let result;try{result=await (ratingWrites=ratingWrites.catch(()=>{}).then(()=>{
+      if(generation!==reviewGeneration)return {error:Error('Sesión cambiada')};
+      return c.from('reviews').upsert({
       user_id: u.id, title: title, rating: rating,
       country: (country && country !== 'GLOBAL' && country.length === 2) ? country : null,
       updated_at: new Date().toISOString()
-    }, { onConflict: 'user_id,title' });
+    }, { onConflict: 'user_id,title' });}));}catch(e){result={error:e};}
+    if(generation!==reviewGeneration)return;const {error}=result;
     toast(error ? window.Lang.t('noGuardo') : window.Lang.t('guardada'));
-    if (!error) loadStats(true);
+    if (!error) {const latest=readLocal(pendingKey,{});if(latest[title]===rating){delete latest[title];window.SafeStorage.setItem(pendingKey,JSON.stringify(latest));}loadStats(true);}
   }
 
   async function pullMine() {
     const c = sb(), u = user();
     if (!c || !u) return;
-    const { data } = await c.from('reviews').select('title,rating').eq('user_id', u.id);
-    if (!data) return;
+    const generation=reviewGeneration,revision=reviewRevision;
+    let result;try{result=await c.from('reviews').select('title,rating').eq('user_id',u.id);}catch(e){return;}
+    const {data,error}=result;
+    if(error||!Array.isArray(data)||generation!==reviewGeneration||revision!==reviewRevision)return;
+    mine={};
     data.forEach(r => { mine[(typeof T2ID !== 'undefined' && T2ID[r.title]) || r.title] = r.rating; });
+    const pending=readLocal(KEY_R+':pending',{});
+    Object.entries(pending).forEach(([title,rating])=>{if(ID2M[title]&&Number.isInteger(rating)&&rating>=1&&rating<=5)mine[title]=rating;});
     saveLocal();
     paintAll();
+    for(const [title,rating]of Object.entries(pending)){if(generation!==reviewGeneration)return;await set(title,rating);}
   }
 
   async function loadStats(force) {
     const c = sb();
     if (!c) return;
     if (!force && Object.keys(stats).length) return;
-    const { data } = await c.rpc('get_review_stats');
-    if (!data) return;
+    let result;try{result=await c.rpc('get_review_stats');}catch(e){return;}
+    const {data,error}=result;if(error)return;
+    if (!Array.isArray(data)) return;
     stats = {};
     data.forEach(r => { stats[(typeof T2ID !== 'undefined' && T2ID[r.title]) || r.title] = { avg: Number(r.avg_rating), votes: r.votes }; });
     paintAll();
@@ -2783,7 +2809,7 @@ window.Reviews = (() => {
 
   function paintAll() { document.querySelectorAll('.rate').forEach(paint); }
 
-  return { paintAll, loadStats, pullMine, get };
+  return { switchUser, paintAll, loadStats, pullMine, get };
 })();
 
 
@@ -2829,6 +2855,7 @@ window.Places = (() => {
 
 
 /* ══ MAPA CON ZOOM (MapLibre + OpenFreeMap, sin clave ni tarjeta) ══ */
+window.MapView={generation:0};
 window.ZoomMap = (() => {
   let map = null, loaded = false;
   const STYLE = () => (CFG.MAPTILER_KEY && CFG.MAPTILER_KEY.indexOf('TU_') === -1)
@@ -2884,8 +2911,8 @@ window.ZoomMap = (() => {
 
   const IMGKEY = 'wiki_img_v3';
   let imgCache = {};
-  try { imgCache = JSON.parse(localStorage.getItem(IMGKEY) || '{}'); } catch (e) { imgCache = {}; }
-  const saveImgs = () => { try { localStorage.setItem(IMGKEY, JSON.stringify(imgCache)); } catch (e) {} };
+  try { imgCache = readLocal(IMGKEY, {}); } catch (e) { imgCache = {}; }
+  const saveImgs = () => { try { window.SafeStorage.setItem(IMGKEY, JSON.stringify(imgCache)); } catch (e) {} };
   async function photo(name) {
     if (name in imgCache) return imgCache[name];
     const art = WIKI[name];
@@ -2915,14 +2942,17 @@ window.ZoomMap = (() => {
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
   async function render(container) {
+    const epoch=++window.MapView.generation;
     if (map) { try { map.remove(); } catch (e) {} map = null; }
     container.innerHTML = '<div id="zoommap" class="zoommap"></div>' +
       '<p class="maphint">Toca un punto para ver la escena. Acerca hasta el nivel de calle. ' +
       '<b>Rojo</b> = rodaje real \u00b7 <b>Morado</b> = ubicaci\u00f3n de la historia.</p>';
     try { await loadLib(); } catch (e) {
+      if(epoch!==window.MapView.generation)return;
       container.innerHTML = '<p class="prov-none">No se pudo cargar el mapa. Revisa tu conexi\u00f3n.</p>';
       return;
     }
+    if(epoch!==window.MapView.generation)return;
     const el = document.getElementById('zoommap');
 
     // WebGL disponible? Brave y algunos bloqueadores lo desactivan.
@@ -2938,6 +2968,7 @@ window.ZoomMap = (() => {
     // el contenedor debe tener su tamano final antes de medir
     await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 
+    if(epoch!==window.MapView.generation)return;
     map = new maplibregl.Map({
       container: el,
       style: STYLE(),
@@ -3065,20 +3096,19 @@ window.WorldMap = (() => {
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
   async function open() {
+    const epoch=++window.MapView.generation;
     const wrap = document.getElementById('mapwrap');
     if (!wrap) return;
-    wrap.classList.add('open');
+    wrap.classList.add('open');document.getElementById('mapClose')?.focus();
     const body = document.getElementById('mapbody');
     body.innerHTML = '<p style="color:var(--muted);font-size:12px;letter-spacing:2px">CARGANDO...</p>';
 
     const c = (window.CloudSync && window.CloudSync.client) ? window.CloudSync.client() : null;
     let act = [], visits = [];
     if (c) {
-      const a = await c.rpc('get_country_activity');
-      act = a.data || [];
-      const v = await c.from('site_visits').select('country,hits');
-      visits = v.data || [];
+      try{const a=await c.rpc('get_country_activity');const v=await c.from('site_visits').select('country,hits');act=Array.isArray(a.data)?a.data:[];visits=Array.isArray(v.data)?v.data:[];}catch(e){act=[];visits=[];}
     }
+    if(epoch!==window.MapView.generation)return;
     const byC = {};
     act.forEach(r => { byC[r.country] = { rev: r.reviews, avg: Number(r.avg_rating) }; });
     const vis = {};
@@ -3115,21 +3145,23 @@ window.WorldMap = (() => {
       '</div>';
 
     let top = [];
-    if (c) { const r = await c.rpc('get_review_stats'); top = (r.data || []).filter(x => x.votes >= 1).sort((a, b) => b.avg_rating - a.avg_rating || b.votes - a.votes).slice(0, 8); }
+    if(c){try{const r=await c.rpc('get_review_stats');top=(Array.isArray(r.data)?r.data:[]).filter(x=>x.votes>=1).sort((a,b)=>b.avg_rating-a.avg_rating||b.votes-a.votes).slice(0,8);}catch(e){s+='<p role="status">No se pudieron cargar las estadísticas. Reintenta cuando tengas conexión.</p>';}}
     if (top.length) {
       s += '<div class="toplist"><div class="maptitle" style="margin-bottom:6px">' + window.Lang.t('mejorValoradas') + '</div>';
       top.forEach((t, i) => {
-        s += '<div class="toprow"><em>' + (i + 1) + '</em><span>' + esc(t.title) + '</span>' +
+        const movie=ID2M[T2ID[t.title]||t.title];
+        s += '<div class="toprow"><em>' + (i + 1) + '</em><span>' + esc(movie?window.Titles.get(movie):t.title) + '</span>' +
              '<i>' + Number(t.avg_rating).toFixed(1) + '/5 \u00b7 ' + t.votes + '</i></div>';
       });
       s += '</div>';
     } else {
       s += '<p style="color:var(--muted);font-size:12px;margin-top:14px;letter-spacing:1px">Todavia no hay resenas. Puntua una pelicula con las estrellas para estrenar el mapa.</p>';
     }
+    if(epoch!==window.MapView.generation)return;
     body.innerHTML = s;
   }
 
-  function close() { const w = document.getElementById('mapwrap'); if (w) w.classList.remove('open'); }
+  function close() {const w=document.getElementById('mapwrap');if(w?.classList.contains('open')){window.MapView.generation++;w.classList.remove('open');document.getElementById('mapOpen')?.focus();}}
   return { open, close };
 })();
 /* ══ TITULOS LOCALIZADOS ══
@@ -3139,8 +3171,8 @@ window.Titles = (() => {
   const K = 'tmdb_titles_v2';
   const TTL = 30 * 24 * 60 * 60 * 1000;
   let store = {};
-  try { store = JSON.parse(localStorage.getItem(K) || '{}'); } catch (e) { store = {}; }
-  const save = () => { try { localStorage.setItem(K, JSON.stringify(store)); } catch (e) {} };
+  try { store = readLocal(K, {}); } catch (e) { store = {}; }
+  const save = () => { try { window.SafeStorage.setItem(K, JSON.stringify(store)); } catch (e) {} };
   const ready = () => CFG.TMDB_TOKEN && CFG.TMDB_TOKEN.indexOf('PLACEHOLDER') === -1;
 
   async function fetchOne(m, lang) {
@@ -3202,8 +3234,8 @@ window.Backdrop = (() => {
   const CK = 'tmdb_bd_v2';
   const TTL = 14 * 24 * 60 * 60 * 1000;
   let cache = {};
-  try { cache = JSON.parse(localStorage.getItem(CK) || '{}'); } catch (e) { cache = {}; }
-  const save = () => { try { localStorage.setItem(CK, JSON.stringify(cache)); } catch (e) {} };
+  try { cache = readLocal(CK, {}); } catch (e) { cache = {}; }
+  const save = () => { try { window.SafeStorage.setItem(CK, JSON.stringify(cache)); } catch (e) {} };
   const ready = () => CFG.TMDB_TOKEN && CFG.TMDB_TOKEN.indexOf('PLACEHOLDER') === -1;
 
   let token = 0;
@@ -3341,8 +3373,8 @@ window.Providers = (() => {
   const CACHE_KEY = 'tmdb_cache_v4';
   const TTL = 7 * 24 * 60 * 60 * 1000;
   let cache = {};
-  try { cache = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}'); } catch (e) { cache = {}; }
-  const saveCache = () => { try { localStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch (e) {} };
+  try { cache = readLocal(CACHE_KEY, {}); } catch (e) { cache = {}; }
+  const saveCache = () => { try { window.SafeStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch (e) {} };
   const ready = () => CFG.TMDB_TOKEN && CFG.TMDB_TOKEN.indexOf('PLACEHOLDER') === -1;
   const headers = () => ({ Authorization: 'Bearer ' + CFG.TMDB_TOKEN, accept: 'application/json' });
 
@@ -3429,6 +3461,7 @@ window.Providers = (() => {
 
   function observe() {
     if (!ready()) return;
+    if(typeof IntersectionObserver!=='function'){document.querySelectorAll('.prov').forEach(el=>{el.textContent=window.Lang.t('sinDatos');});return;}
     if (io) io.disconnect();
     io = new IntersectionObserver(entries => {
       entries.forEach(en => {
@@ -3455,110 +3488,123 @@ window.Providers = (() => {
 
 /* ══ SINCRONIZACION (Supabase) ══ */
 window.CloudSync = (() => {
-  let sb = null, user = null, timer = null;
-  const dot = () => document.getElementById('cbDot');
-  const msg = () => document.getElementById('cbMsg');
-  const box = () => document.getElementById('cbAuth');
-  const configured = () => CFG.SUPABASE_URL && CFG.SUPABASE_URL.indexOf('TU-PROYECTO') === -1;
-
-  function setState(t, c) {
-    if (msg()) { msg().textContent = t; msg().dataset.live = '1'; }
-    if (dot()) dot().className = 'cb-dot' + (c ? ' ' + c : '');
+  let sb=null,user=null,timer=null,generation=0,revision=0,ready=false,sending=false,initPromise=null;
+  let writes=Promise.resolve();
+  const dot=()=>document.getElementById('cbDot'),msg=()=>document.getElementById('cbMsg'),box=()=>document.getElementById('cbAuth');
+  const configured=()=>CFG.SUPABASE_URL&&!CFG.SUPABASE_URL.includes('TU-PROYECTO');
+  const dirtyKey=()=>progressKey+':pending';
+  function setState(t,c){if(msg()){msg().textContent=t;msg().dataset.live='1';}if(dot())dot().className='cb-dot'+(c?' '+c:'');}
+  function renderOut(){
+    setState('Progreso guardado solo en este navegador','');
+    box().innerHTML='<button class="cb-btn" id="cbStart">Guardar en la nube</button>';
+    document.getElementById('cbStart').onclick=()=>sb?renderForm():init();
   }
-  function renderOut() {
-    setState('Progreso guardado solo en este navegador', '');
-    box().innerHTML = '<button class="cb-btn" id="cbStart">Guardar en la nube</button>';
-    document.getElementById('cbStart').onclick = renderForm;
+  function renderForm(){
+    box().innerHTML='<input class="cb-in" id="cbEmail" type="email" placeholder="tu@correo.com" aria-label="Correo electrónico" autocomplete="email">'+
+      '<button class="cb-btn" id="cbSend">Enviar enlace</button><button class="cb-btn ghost" id="cbCancel">Cancelar</button>';
+    document.getElementById('cbCancel').onclick=renderOut;document.getElementById('cbSend').onclick=sendLink;
+    const e=document.getElementById('cbEmail');e.focus();e.onkeydown=ev=>{if(ev.key==='Enter'){ev.preventDefault();sendLink();}};
   }
-  function renderForm() {
-    box().innerHTML = '<input class="cb-in" id="cbEmail" type="email" placeholder="tu@correo.com" autocomplete="email">' +
-      '<button class="cb-btn" id="cbSend">Enviar enlace</button>' +
-      '<button class="cb-btn ghost" id="cbCancel">Cancelar</button>';
-    document.getElementById('cbCancel').onclick = renderOut;
-    document.getElementById('cbSend').onclick = sendLink;
-    const e = document.getElementById('cbEmail');
-    e.focus(); e.onkeydown = ev => { if (ev.key === 'Enter') sendLink(); };
+  async function sendLink(){
+    if(sending)return;
+    const el=document.getElementById('cbEmail'),email=el?el.value.trim():'';
+    if(!/^\S+@\S+\.\S+$/.test(email)){toast(window.Lang.t('correoInvalido'));return;}
+    if(!sb){setState('Acceso no disponible. Reintenta cuando tengas conexión.','');return;}
+    sending=true;const button=document.getElementById('cbSend');if(button)button.disabled=true;
+    try{
+      const {error}=await sb.auth.signInWithOtp({email,options:{emailRedirectTo:location.origin+location.pathname}});
+      if(error)throw error;
+      if(!el.isConnected)return;
+      box().innerHTML='<span class="cb-mail">Revisa tu correo y abre el enlace</span>';setState(window.Lang.t('enlaceEnviado'),'sync');
+    }catch(e){toast('No se pudo enviar el enlace. Reintenta más tarde.');setState('Error de acceso; tus datos locales siguen disponibles.','');}
+    finally{sending=false;if(button.isConnected)button.disabled=false;}
   }
-  async function sendLink() {
-    const el = document.getElementById('cbEmail');
-    const email = el ? el.value : '';
-    if (!/^\S+@\S+\.\S+$/.test(email)) { toast(window.Lang.t('correoInvalido')); return; }
-    const esLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
-    const destino = esLocal ? location.origin + location.pathname : 'https://ronaldobtc-code.github.io/mcu-tracker/';
-    const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: destino } });
-    if (error) { toast('Error: ' + error.message); return; }
-    box().innerHTML = '<span class="cb-mail">Revisa tu correo y abre el enlace</span>';
-    setState(window.Lang.t('enlaceEnviado'), 'sync');
-  }
-  function renderIn() {
-    setState(window.Lang.t('sincronizado'), 'on');
-    box().innerHTML = '<span class="cb-mail">' + user.email + '</span><button class="cb-btn ghost" id="cbOut">Salir</button>';
-    document.getElementById('cbOut').onclick = async () => { await sb.auth.signOut(); user = null; renderOut(); };
-  }
-
-  async function pull() {
-    const { data } = await sb.from('mcu_progress').select('watched').eq('user_id', user.id).maybeSingle();
-    return (data && data.watched) || [];
-  }
-  async function push(list) {
-    if (!sb || !user) return;
-    clearTimeout(timer);
-    timer = setTimeout(async () => {
-      setState(window.Lang.t('guardando'), 'sync');
-      const { error } = await sb.from('mcu_progress')
-        .upsert({ user_id: user.id, watched: list, updated_at: new Date().toISOString() }, { onConflict: 'user_id' });
-      setState(error ? window.Lang.t('noGuardo') : window.Lang.t('sincronizado'), error ? '' : 'on');
-    }, 700);
-  }
-  async function onSession(session) {
-    if (!session) { renderOut(); return; }
-    user = session.user;
-    renderIn();
-    const cloud = migrar(await pull());
-    const local = Array.from(watched);
-    const union = Array.from(new Set([].concat(cloud, local)));
-    watched = new Set(union);
-    localStorage.setItem(KEY, JSON.stringify(union));
-    updateStats(); renderList();
-    if (union.length !== cloud.length) push(union);
-    if (window.Reviews) { window.Reviews.pullMine(); window.Reviews.loadStats(true); }
-  }
-  async function init() {
-    if (!configured()) { setState('Progreso guardado solo en este navegador', ''); box().innerHTML = ''; return; }
-    try {
-      const mod = await import('https://esm.sh/@supabase/supabase-js@2');
-      sb = mod.createClient(CFG.SUPABASE_URL, CFG.SUPABASE_ANON_KEY);
-      const { data } = await sb.auth.getSession();
-      await onSession(data.session);
-      sb.auth.onAuthStateChange((_e, s) => onSession(s));
-    } catch (e) { setState('Sincronizacion no disponible', ''); box().innerHTML = ''; }
-  }
-  document.addEventListener('DOMContentLoaded', () => {
-    const s = document.getElementById('cbStart');
-    if (s) s.onclick = renderForm;
-    if (window.Lang) window.Lang.mount();
-    if (window.Titles && typeof LIST !== 'undefined') window.Titles.ensure(LIST).then(c => { if (c) renderList(); });
-    window.Region.mount(() => window.Providers.repaintAll());
-    const mo = document.getElementById('mapOpen'), mc = document.getElementById('mapClose'), mw = document.getElementById('mapwrap');
-    const tc = document.getElementById('tabCom'), te = document.getElementById('tabEsc');
-    const sel = which => {
-      if (tc) tc.classList.toggle('sel', which === 'com');
-      if (te) te.classList.toggle('sel', which === 'esc');
+  function renderIn(){
+    box().innerHTML='<span class="cb-mail" id="cbAccount"></span><button class="cb-btn ghost" id="cbOut">Salir</button><button class="cb-btn ghost" id="cbRetry">Reintentar sincronización</button>';
+    document.getElementById('cbAccount').textContent=user.email||'Cuenta conectada';
+    document.getElementById('cbRetry').onclick=()=>onSession({user},true);
+    const guest=migrar(readLocal(KEY+':guest',readLocal(KEY,[])));
+    if(guest.length){const button=document.createElement('button');button.className='cb-btn ghost';button.textContent='Importar progreso del invitado ('+guest.length+')';button.onclick=()=>{if(!ready){toast('Espera a sincronizar la cuenta antes de importar.');return;}watched=new Set([...watched,...guest]);save();updateStats();renderList();};box().appendChild(button);}
+    document.getElementById('cbOut').onclick=async()=>{
+      try{const {error}=await sb.auth.signOut();if(error)throw error;await onSession(null);}catch(e){toast('No se pudo cerrar sesión. Reintenta.');}
     };
-    if (mo) mo.onclick = () => { sel('com'); window.WorldMap.open(); };
-    if (tc) tc.onclick = () => { sel('com'); window.WorldMap.open(); };
-    if (te) te.onclick = () => { sel('esc'); window.ZoomMap.render(document.getElementById('mapbody')); };
-    if (mc) mc.onclick = () => window.WorldMap.close();
-    if (mw) mw.onclick = e => { if (e.target === mw) window.WorldMap.close(); };
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') window.WorldMap.close(); });
-
-    
-    if (window.CosmicParticles) window.CosmicParticles.init();
-    if (window.DoomsdayTimer) window.DoomsdayTimer.init();
-    if (window.Guide) window.Guide.init();
+  }
+  async function pull(id){
+    const {data,error}=await sb.from('mcu_progress').select('watched').eq('user_id',id).maybeSingle();
+    if(error)throw error;
+    if(data&&!Array.isArray(data.watched))throw Error('Progreso remoto inválido');
+    return migrar(data?data.watched:[]);
+  }
+  function push(list){
+    if(!user||!sb)return;
+    revision++;window.SafeStorage.setItem(dirtyKey(),'1');
+    const owner=user.id,epoch=generation,version=revision,snapshot=migrar(list),key=dirtyKey();
+    clearTimeout(timer);if(!ready){setState('Cambios locales pendientes. Reintenta sincronización.','');return;}
+    timer=setTimeout(()=>{
+      writes=writes.catch(()=>{}).then(async()=>{
+        if(epoch!==generation||user?.id!==owner||!ready)return;
+        setState(window.Lang.t('guardando'),'sync');
+        try{
+          const {error}=await sb.from('mcu_progress').upsert({user_id:owner,watched:snapshot,updated_at:new Date().toISOString()},{onConflict:'user_id'});
+          if(error)throw error;
+          if(epoch!==generation)return;
+          if(version===revision){window.SafeStorage.removeItem(key);setState(window.Lang.t('sincronizado'),'on');}
+        }catch(e){if(epoch===generation)setState('No se guardó en la nube. Cambios locales pendientes.','');}
+      });
+    },700);
+  }
+  async function onSession(session,force=false){
+    const next=session?.user||null,changed=user?.id!==next?.id;
+    if(!changed&&!force&&user&&ready)return;
+    if(changed){
+      clearTimeout(timer);generation++;revision++;ready=false;user=next;
+      progressKey=KEY+(user?':user:'+user.id:':guest');
+      watched=new Set(migrar(readLocal(progressKey,user?[]:readLocal(KEY,[]))));
+      window.Reviews?.switchUser(user?.id);updateStats();renderList();
+    }
+    if(!next){user=null;ready=false;renderOut();return;}
+    user=next;renderIn();setState('Cargando progreso de tu cuenta…','sync');ready=false;
+    const epoch=generation,version=revision,id=user.id;
+    try{
+      const cloud=await pull(id);if(epoch!==generation||user?.id!==id)return;
+      const pending=window.SafeStorage.getItem(dirtyKey())==='1'||version!==revision;
+      if(!pending){watched=new Set(cloud);window.SafeStorage.setItem(progressKey,JSON.stringify(cloud));}
+      ready=true;updateStats();renderList();
+      if(pending)push([...watched]);else setState(window.Lang.t('sincronizado'),'on');
+      await window.Reviews?.pullMine();window.Reviews?.loadStats(true);
+    }catch(e){if(epoch===generation)setState('No se pudo leer tu progreso. Se mantiene la copia local; reintenta sincronización.','');}
+  }
+  function init(){
+    if(initPromise)return initPromise;
+    initPromise=(async()=>{
+      renderOut();if(!configured())return;
+      try{
+        const mod=await import('https://esm.sh/@supabase/supabase-js@2');
+        sb=mod.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY,{auth:{storage:window.SafeStorage}});
+        sb.auth.onAuthStateChange((event,session)=>{if(event!=='INITIAL_SESSION')setTimeout(()=>onSession(session).catch(()=>setState('Error de sesión. Reintenta.','')),0);});
+        const {data,error}=await sb.auth.getSession();if(error)throw error;await onSession(data.session);
+      }catch(e){renderOut();setState('Sin conexión a la nube. Puedes usar el catálogo y guardar en este navegador.','');}
+    })().finally(()=>{initPromise=null;});return initPromise;
+  }
+  window.addEventListener('storage',e=>{
+    if(e.key===progressKey){window.SafeStorage.invalidate(e.key);watched=new Set(migrar(readLocal(progressKey,[])));updateStats();renderList();}
+  });
+  document.addEventListener('DOMContentLoaded',()=>{
+    // Complete the first render after all modules are defined, even without cloud/TMDB.
+    window.Lang.mount();window.Region.mount(()=>window.Providers.repaintAll());updateStats();renderList();
+    const mo=document.getElementById('mapOpen'),mc=document.getElementById('mapClose'),mw=document.getElementById('mapwrap');
+    const tc=document.getElementById('tabCom'),te=document.getElementById('tabEsc');
+    const sel=which=>{tc?.classList.toggle('sel',which==='com');te?.classList.toggle('sel',which==='esc');};
+    if(mo)mo.onclick=()=>{sel('com');window.WorldMap.open();};
+    if(tc)tc.onclick=()=>{sel('com');window.WorldMap.open();};
+    if(te)te.onclick=()=>{sel('esc');window.ZoomMap.render(document.getElementById('mapbody'));};
+    if(mc)mc.onclick=()=>window.WorldMap.close();if(mw)mw.onclick=e=>{if(e.target===mw)window.WorldMap.close();};
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')window.WorldMap.close();});
+    for(const name of ['CosmicParticles','DoomsdayTimer','Guide']){try{window[name]?.init();}catch(e){console.warn(name+' no disponible');}}
+    window.Titles.ensure(LIST).then(changed=>{if(changed)renderList();}).catch(()=>{});
     init();
   });
-  return { push, client: () => sb, user: () => user };
+  return {push,client:()=>sb,user:()=>user};
 })();
 
 
@@ -3960,7 +4006,8 @@ window.Guide = (() => {
     if (overlay) overlay.classList.remove('active');
     if (spotlight) spotlight.classList.remove('on');
     if (card) card.classList.remove('on');
-    try { localStorage.setItem(KEY_TOUR, '1'); } catch(e) {}
+    document.getElementById('guideOpen')?.focus();
+    try { window.SafeStorage.setItem(KEY_TOUR, '1'); } catch(e) {}
   }
 
   // Si el movil gira o cambia el tamano, recolocar el foco.
@@ -3982,6 +4029,7 @@ window.Guide = (() => {
     document.body.classList.add('tour-on');
     overlay.classList.add('active');
     renderStep(0);
+    document.getElementById('tourClose')?.focus();
   }
 
   function next() {
@@ -4001,7 +4049,7 @@ window.Guide = (() => {
 
   function autoStart() {
     try {
-      if (localStorage.getItem(KEY_TOUR) !== '1') {
+      if (window.SafeStorage.getItem(KEY_TOUR) !== '1') {
         setTimeout(start, 900);
       }
     } catch(e) {
@@ -4038,7 +4086,8 @@ window.Guide = (() => {
 
     document.addEventListener('keydown', e => {
       if (!isActive) return;
-      if (e.key === 'Escape') close();
+      if(e.key==='Tab'){const card=document.getElementById('tourCard');const buttons=[...card.querySelectorAll('button')].filter(b=>b.style.display!=='none');const first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
+      if (e.key === 'Escape') dismiss();
       else if (e.key === 'ArrowRight') next();
       else if (e.key === 'ArrowLeft') prev();
     });
@@ -4049,11 +4098,11 @@ window.Guide = (() => {
   return {
     start,
     open: start,
-    close,
+    close: dismiss,
     next,
     prev,
     render: () => { if (isActive) renderStep(currentStep); },
-    never: close,
+    never: dismiss,
     autoOpen: () => {},
     init
   };
