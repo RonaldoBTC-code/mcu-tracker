@@ -21,6 +21,10 @@ Fecha: 2 de octubre de 2026. Base: `eef4e630e022e003d000370c1d33009b0221ac2e`.
 
 ### Guía: transición entre pasos 7 y 8
 
+Corrección de visibilidad: el oscurecimiento de hermanos también alcanzaba a contenedores intermedios de la película/casilla, aunque el destino tuviera opacidad 1. Se identifica toda la ruta de ancestros con `tour-path`, se conserva su opacidad y se atenúan únicamente las ramas ajenas al destino. El borde `tourSpotlight` queda como hijo directo de `body`, por encima de las filas y debajo de la tarjeta, sin interceptar clics. Las clases de ruta se retiran al cambiar de paso o cerrar.
+
+Las 24 regresiones pasan, incluida una comprobación de opacidad de todos los ancestros en pasos 7 y 8 y del orden de capas del borde. Es una comprobación de estilos en jsdom; no sustituye una inspección visual real.
+
 La tarjeta de la guía se mueve a un hijo directo de `body`: así su capa queda por encima de los contenedores resaltados de películas y estos no pueden interceptar los controles «Siguiente» y «Finalizar». La tarjeta oculta no captura clics. La cabecera y el pie conservan espacio mientras el texto puede desplazarse en una ventana pequeña.
 
 Cada cambio de paso o cierre cancela los frames de scroll/posición anteriores y cambia la generación. Las callbacks antiguas no vuelven a colocar una tarjeta cerrada. Al regenerar las películas, el resaltado se calcula desde el DOM actual; si no hay resultados, la tarjeta se centra y permite terminar.

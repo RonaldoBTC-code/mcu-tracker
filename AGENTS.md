@@ -1,5 +1,7 @@
 # Instrucciones para agentes — MCU Tracker
 
+Resaltado de guía: conservar `tour-path` en todos los ancestros del destino para que el oscurecimiento no atenúe la película/casilla. Mantener `tourSpotlight` en `body`, por encima de las filas y debajo de `tourCard`, con pointer-events none. Limpiar la ruta al cerrar o cambiar de paso. Comprobar opacidad de todos los ancestros en pasos 7 y 8.
+
 Leer [correcciones de entrada y pendientes](docs/entry-fixes.md) antes de modificar arranque, autenticación, progreso o reseñas. Ejecutar `npm ci --ignore-scripts` y `npm test` con Node.js 24 o posterior.
 
 Mantener almacenamiento independiente por usuario e invitado. No importar datos de invitado automáticamente ni restaurar la unión indiscriminada del progreso local y remoto. Una lectura fallida no autoriza una escritura basada en una fila supuestamente vacía. Capturar identidad/generación por petición y conservar operaciones pendientes de la cuenta que las originó.

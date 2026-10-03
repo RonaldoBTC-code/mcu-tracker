@@ -64,6 +64,22 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   d.querySelector('#q').value='sin-resultados-xyz';d.querySelector('#q').dispatchEvent(new w.Event('input'));await pause(120);assert.equal(d.querySelectorAll('.row').length,0);assert(d.querySelector('#tourCard').classList.contains('on'));
   d.querySelector('#tourNext').click();d.querySelector('#tourNext').click();assert(!d.querySelector('#tourOverlay').classList.contains('active'));
  });
+ await test('Pasos 7 y 8: destino y todos sus contenedores conservan opacidad',async({w,d})=>{
+  w.Guide.start();for(let i=0;i<6;i++)w.Guide.next();await pause(120);
+  for(const selector of ['.row','.row .chk']){
+   const target=d.querySelector(selector);assert(target.classList.contains('tour-active-el'));
+   for(let el=target;el&&el!==d.body;el=el.parentElement){
+    const opacity=w.getComputedStyle(el).opacity;
+    assert(opacity===''||Number(opacity)===1,`${el.className} oscurece el destino: ${opacity}`);
+   }
+   const ring=d.querySelector('#tourSpotlight');assert.equal(ring.parentElement,d.body);
+   assert(ring.classList.contains('on'));assert.equal(w.getComputedStyle(ring).pointerEvents,'none');
+   assert(Number(w.getComputedStyle(ring).zIndex)>11002);
+   assert(Number(w.getComputedStyle(ring).zIndex)<Number(w.getComputedStyle(d.querySelector('#tourCard')).zIndex));
+   if(selector==='.row'){w.Guide.next();await pause(120);}
+  }
+  w.Guide.close();assert.equal(d.querySelectorAll('.tour-path,.tour-parent,.tour-active-el').length,0);
+ });
  console.log(JSON.stringify(results,null,2));
  if(process.argv.includes('--record'))fs.writeFileSync(path.join(__dirname,'../docs/entry-fixes-results.json'),JSON.stringify(results,null,2)+'\n');
 })();
