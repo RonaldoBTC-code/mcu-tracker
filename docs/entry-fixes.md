@@ -19,6 +19,14 @@ Fecha: 2 de octubre de 2026. Base: `eef4e630e022e003d000370c1d33009b0221ac2e`.
 
 ## Validación
 
+### Guía: transición entre pasos 7 y 8
+
+La tarjeta de la guía se mueve a un hijo directo de `body`: así su capa queda por encima de los contenedores resaltados de películas y estos no pueden interceptar los controles «Siguiente» y «Finalizar». La tarjeta oculta no captura clics. La cabecera y el pie conservan espacio mientras el texto puede desplazarse en una ventana pequeña.
+
+Cada cambio de paso o cierre cancela los frames de scroll/posición anteriores y cambia la generación. Las callbacks antiguas no vuelven a colocar una tarjeta cerrada. Al regenerar las películas, el resaltado se calcula desde el DOM actual; si no hay resultados, la tarjeta se centra y permite terminar.
+
+Regresiones añadidas: recorrido 7→8→fin mediante botones, cambios rápidos 7→8→7→8→fin, regeneración de filas y filtros sin resultados. La comprobación de capas usa DOM y estilos calculados en jsdom; queda pendiente comprobar hit testing y dimensiones en un navegador real.
+
 `npm ci --ignore-scripts` y `npm test`, con Node.js 24 o posterior. Las dependencias de prueba están fijadas en package-lock.json. El frontend publicado sigue siendo HTML/JS nativo y no requiere build.
 
 [Resultados de regresión](entry-fixes-results.json). Las pruebas usan jsdom y servicios simulados; no envían correos, no crean cuentas ni escriben en Supabase real. Incluyen arranque sin red, JSON inválido, almacenamiento bloqueado/lleno, estrellas, búsqueda, controles de teclado, foco, OTP, cambio de cuentas, lecturas fallidas, desmarcaciones, operaciones pendientes, idioma, títulos externos y mapa.

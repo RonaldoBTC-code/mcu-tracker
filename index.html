@@ -1521,9 +1521,8 @@ footer.legal a:hover { color: #fff; text-decoration: underline; }
   font-family: 'Rajdhani', sans-serif;
 }
 
-.tour-card.on {
-  opacity: 1;
-}
+.tour-card { visibility:hidden;pointer-events:none;max-height:calc(100dvh - 32px);overflow-y:auto; }
+.tour-card.on { opacity:1;visibility:visible;pointer-events:auto; }
 
 .tour-header {
   display: flex;
@@ -1865,6 +1864,9 @@ body.tour-on .tour-parent > *:not(.tour-active-el):not(.tour-parent) {
   transition: opacity .3s ease;
 }
 body.tour-on .tour-parent > .tour-active-el { opacity: 1 !important }
+.tour-card { display:flex;flex-direction:column; }
+.tour-header, .tour-title, .tour-footer { flex-shrink:0; }
+.tour-body { min-height:0;overflow-y:auto; }
 </style>
 </head>
 <body>
@@ -2319,6 +2321,7 @@ function renderList() {
   if (window.Providers) window.Providers.observe();
   if (window.Reviews) { window.Reviews.paintAll(); window.Reviews.loadStats(false); }
   if (window.Lang) window.Lang.apply();
+  if (window.Guide) window.Guide.refresh();
 }
 
 document.querySelectorAll('.fb').forEach(b => b.addEventListener('click', ()=>{
@@ -3760,6 +3763,9 @@ window.Guide = (() => {
   let resizeTimer = null;
   let activeTargetEl = null;
   let parentEls = [];
+  let stepGeneration=0,layoutFrame=null,scrollFrame=null;
+  let controlFocus='tourClose';
+  function cancelStepWork(){stepGeneration++;if(layoutFrame!==null)cancelAnimationFrame(layoutFrame);if(scrollFrame!==null)cancelAnimationFrame(scrollFrame);layoutFrame=scrollFrame=null;}
 
   const STEPS_DATA = {
     es: {
@@ -3886,6 +3892,7 @@ window.Guide = (() => {
 
   function positionSpotlightAndCard() {
     if (!isActive) return;
+    const epoch=stepGeneration;
     const data = getLangData();
     const stepDef = data.steps[currentStep];
     const el = getStepElement(stepDef);
@@ -3901,6 +3908,7 @@ window.Guide = (() => {
       card.style.left = '50%';
       card.style.transform = 'translate(-50%, -50%)';
       card.classList.add('on');
+      document.getElementById(controlFocus)?.focus({preventScroll:true});
       return;
     }
 
@@ -3935,7 +3943,9 @@ window.Guide = (() => {
     card.style.transform = 'none';
     card.classList.add('on');
 
-    setTimeout(() => {
+    if(layoutFrame!==null)cancelAnimationFrame(layoutFrame);
+    layoutFrame=requestAnimationFrame(() => {
+      layoutFrame=null;if(!isActive||epoch!==stepGeneration)return;
       const cardHeight = card.offsetHeight || 220;
       const spaceBelow = window.innerHeight - rect.bottom - pad;
       const spaceAbove = rect.top - pad;
@@ -3949,24 +3959,30 @@ window.Guide = (() => {
       }
       card.style.top = Math.max(16, Math.min(window.innerHeight - cardHeight - 16, topPos)) + 'px';
       card.style.left = Math.max(16, Math.min(window.innerWidth - cardWidth - 16, rect.left + (rect.width - cardWidth) / 2)) + 'px';
-    }, 10);
+      if(!card.contains(document.activeElement))document.getElementById(controlFocus)?.focus({preventScroll:true});
+    });
   }
 
   // El scroll suave no avisa cuando termina. Se vigila la posicion:
   // cuando deja de cambiar durante 3 fotogramas, ya paro.
   function esperarScroll(cb) {
+    const epoch=stepGeneration;
     let ultimo = -1, quietos = 0, vueltas = 0;
     (function mirar() {
+      if(!isActive||epoch!==stepGeneration)return;
       const y = window.scrollY;
       if (y === ultimo) quietos++; else { quietos = 0; ultimo = y; }
       if (++vueltas > 60 || quietos >= 3) { cb(); return; }
-      requestAnimationFrame(mirar);
+      scrollFrame=requestAnimationFrame(mirar);
     })();
   }
 
   function renderStep(idx) {
     const data = getLangData();
     if (idx < 0 || idx >= data.steps.length) return;
+    const cardElement=document.getElementById('tourCard');
+    controlFocus=cardElement?.contains(document.activeElement)?document.activeElement.id:(idx===0?'tourClose':'tourNext');
+    cancelStepWork();
     currentStep = idx;
     const stepDef = data.steps[currentStep];
 
@@ -3997,6 +4013,9 @@ window.Guide = (() => {
   }
 
   function dismiss() {
+    cancelStepWork();
+    clearTimeout(resizeTimer);
+    clearTimeout(reajuste);
     isActive = false;
     const overlay = document.getElementById('tourOverlay');
     const spotlight = document.getElementById('tourSpotlight');
@@ -4033,6 +4052,7 @@ window.Guide = (() => {
   }
 
   function next() {
+    if(!isActive)return;
     const data = getLangData();
     if (currentStep < data.steps.length - 1) {
       renderStep(currentStep + 1);
@@ -4042,6 +4062,7 @@ window.Guide = (() => {
   }
 
   function prev() {
+    if(!isActive)return;
     if (currentStep > 0) {
       renderStep(currentStep - 1);
     }
@@ -4065,6 +4086,8 @@ window.Guide = (() => {
     const nextBtn = document.getElementById('tourNext');
     const guideOpen = document.getElementById('guideOpen');
     const tourCardEl = document.getElementById('tourCard');
+    // Keep controls in the root stacking context above highlighted movie ancestors.
+    if(tourCardEl)document.body.appendChild(tourCardEl);
     if (tourCardEl) tourCardEl.onclick = (ev) => ev.stopPropagation();
     const parar = fn => (ev) => { ev.preventDefault(); ev.stopPropagation(); fn(); };
 
@@ -4102,6 +4125,7 @@ window.Guide = (() => {
     next,
     prev,
     render: () => { if (isActive) renderStep(currentStep); },
+    refresh: positionSpotlightAndCard,
     never: dismiss,
     autoOpen: () => {},
     init

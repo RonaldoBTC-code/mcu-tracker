@@ -78,5 +78,17 @@
   {
     "name": "Mapa offline y respuesta antigua no reemplazan pestaña activa",
     "status": "PASS"
+  },
+  {
+    "name": "Pasos 7 y 8: botones separados de filas, avanzan sin activar película",
+    "status": "PASS"
+  },
+  {
+    "name": "Cambios rápidos 7→8→7→8→fin cancelan reajustes anteriores",
+    "status": "PASS"
+  },
+  {
+    "name": "Paso 7 sin películas y filas regeneradas permite terminar",
+    "status": "PASS"
   }
 ]

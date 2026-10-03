@@ -46,6 +46,24 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
  await test('Estrellas offline se conservan y reintentan por cuenta',async({w})=>{const c=mock();w.CloudSync.inject(c);await w.CloudSync.onSession(session('A'));c.from=()=>({upsert:async()=>{throw Error('Offline')}});await w.Reviews.set('id:1',4);assert.equal(JSON.parse(w.SafeStorage.getItem('mcu_reviews:user:A:pending'))['id:1'],4);const next=mock();w.CloudSync.inject(next);await w.CloudSync.onSession(session('A'),true);assert.equal(w.Reviews.get('id:1'),4);assert.equal(next.writes.filter(x=>x.table==='reviews').length,1);assert.deepEqual(JSON.parse(w.SafeStorage.getItem('mcu_reviews:user:A:pending')),{});});
  await test('Importar progreso invitado requiere clic explícito',async({w,d})=>{d.querySelector('.chk').click();const c=mock();w.CloudSync.inject(c);await w.CloudSync.onSession(session('A'));assert.equal(w.eval('watched.size'),0);const button=[...d.querySelectorAll('#cbAuth button')].find(b=>b.textContent.includes('Importar'));assert(button);button.click();assert.equal(w.eval('watched.has("id:1")'),true)});
  await test('Mapa offline y respuesta antigua no reemplazan pestaña activa',async({w,d})=>{w.CloudSync.inject({...mock(),rpc:async()=>{throw Error('Offline')}});await w.WorldMap.open();assert(d.querySelector('#mapwrap').classList.contains('open'));w.WorldMap.close();assert.equal(d.activeElement.id,'mapOpen');let resolve;const c=mock();c.rpc=()=>new Promise(r=>resolve=r);c.from=()=>({select:async()=>({data:[]})});w.CloudSync.inject(c);const old=w.WorldMap.open();w.MapView.generation++;d.querySelector('#mapbody').textContent='Escenarios actuales';resolve({data:[]});await old;assert.equal(d.querySelector('#mapbody').textContent,'Escenarios actuales')});
+ await test('Pasos 7 y 8: botones separados de filas, avanzan sin activar película',async({w,d})=>{
+  w.Guide.start();for(let i=0;i<6;i++)d.querySelector('#tourNext').click();await pause(120);
+  assert(d.querySelector('#tourStep').textContent.includes('7'));
+  const card=d.querySelector('#tourCard');assert.equal(card.parentElement,d.body);assert(!card.closest('.tour-parent'));
+  assert(Number(w.getComputedStyle(card).zIndex)>Number(w.getComputedStyle(d.querySelector('#tourOverlay')).zIndex));
+  let pageClicks=0;d.querySelector('.row').addEventListener('click',()=>pageClicks++);
+  d.querySelector('#tourNext').click();await pause(120);assert(d.querySelector('#tourStep').textContent.includes('8'));assert.equal(pageClicks,0);
+  d.querySelector('#tourNext').click();await pause(120);assert(!d.querySelector('#tourOverlay').classList.contains('active'));assert.equal(w.getComputedStyle(card).pointerEvents,'none');assert.equal(w.getComputedStyle(card).visibility,'hidden');assert.equal(pageClicks,0);
+ });
+ await test('Cambios rápidos 7→8→7→8→fin cancelan reajustes anteriores',async({w,d})=>{
+  w.Guide.start();for(let i=0;i<6;i++)w.Guide.next();w.Guide.next();w.Guide.prev();w.Guide.next();w.Guide.next();await pause(180);
+  assert(!d.querySelector('#tourOverlay').classList.contains('active'));assert(!d.querySelector('#tourCard').classList.contains('on'));assert.equal(d.querySelectorAll('.tour-active-el,.tour-parent').length,0);
+ });
+ await test('Paso 7 sin películas y filas regeneradas permite terminar',async({w,d})=>{
+  w.Guide.start();for(let i=0;i<6;i++)w.Guide.next();w.renderList();await pause(120);assert(d.querySelector('#tourCard').classList.contains('on'));
+  d.querySelector('#q').value='sin-resultados-xyz';d.querySelector('#q').dispatchEvent(new w.Event('input'));await pause(120);assert.equal(d.querySelectorAll('.row').length,0);assert(d.querySelector('#tourCard').classList.contains('on'));
+  d.querySelector('#tourNext').click();d.querySelector('#tourNext').click();assert(!d.querySelector('#tourOverlay').classList.contains('active'));
+ });
  console.log(JSON.stringify(results,null,2));
  if(process.argv.includes('--record'))fs.writeFileSync(path.join(__dirname,'../docs/entry-fixes-results.json'),JSON.stringify(results,null,2)+'\n');
 })();
