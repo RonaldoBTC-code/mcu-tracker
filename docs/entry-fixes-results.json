@@ -90,5 +90,9 @@
   {
     "name": "Paso 7 sin películas y filas regeneradas permite terminar",
     "status": "PASS"
+  },
+  {
+    "name": "Pasos 7 y 8: destino y todos sus contenedores conservan opacidad",
+    "status": "PASS"
   }
 ]

@@ -1859,11 +1859,13 @@ body.tour-on .tour-parent {
 }
 
 /* Los demas hermanos del ancestro se quedan detras del velo */
-body.tour-on .tour-parent > *:not(.tour-active-el):not(.tour-parent) {
+body.tour-on .tour-path > *:not(.tour-active-el):not(.tour-path) {
   opacity: .28;
   transition: opacity .3s ease;
 }
 body.tour-on .tour-parent > .tour-active-el { opacity: 1 !important }
+body.tour-on .tour-path { opacity: 1 !important; }
+.tour-spotlight { z-index: 11005; }
 .tour-card { display:flex;flex-direction:column; }
 .tour-header, .tour-title, .tour-footer { flex-shrink:0; }
 .tour-body { min-height:0;overflow-y:auto; }
@@ -3763,6 +3765,7 @@ window.Guide = (() => {
   let resizeTimer = null;
   let activeTargetEl = null;
   let parentEls = [];
+  let pathEls = [];
   let stepGeneration=0,layoutFrame=null,scrollFrame=null;
   let controlFocus='tourClose';
   function cancelStepWork(){stepGeneration++;if(layoutFrame!==null)cancelAnimationFrame(layoutFrame);if(scrollFrame!==null)cancelAnimationFrame(scrollFrame);layoutFrame=scrollFrame=null;}
@@ -3888,6 +3891,8 @@ window.Guide = (() => {
     }
     parentEls.forEach(e => e.classList.remove('tour-parent'));
     parentEls = [];
+    pathEls.forEach(e => e.classList.remove('tour-path'));
+    pathEls = [];
   }
 
   function positionSpotlightAndCard() {
@@ -3920,6 +3925,8 @@ window.Guide = (() => {
     // vale dentro de ese contexto, nunca sobre el velo del tour.
     let anc = el.parentElement;
     while (anc && anc.tagName !== 'BODY') {
+      // Preserve visibility through every wrapper, not only stacking contexts.
+      anc.classList.add('tour-path'); pathEls.push(anc);
       const cs = getComputedStyle(anc);
       const atrapa = (cs.backdropFilter && cs.backdropFilter !== 'none') ||
                      (cs.filter && cs.filter !== 'none') ||
@@ -4088,6 +4095,8 @@ window.Guide = (() => {
     const tourCardEl = document.getElementById('tourCard');
     // Keep controls in the root stacking context above highlighted movie ancestors.
     if(tourCardEl)document.body.appendChild(tourCardEl);
+    const spotlightEl=document.getElementById('tourSpotlight');
+    if(spotlightEl)document.body.appendChild(spotlightEl);
     if (tourCardEl) tourCardEl.onclick = (ev) => ev.stopPropagation();
     const parar = fn => (ev) => { ev.preventDefault(); ev.stopPropagation(); fn(); };
 
