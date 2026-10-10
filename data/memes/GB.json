@@ -1,0 +1,31 @@
+{
+  "country": "GB",
+  "memes": [
+    {
+      "title": "Buzz Lightyear con armadura de Iron Man",
+      "alt": "Buzz Lightyear con armadura de Iron Man",
+      "image": "data/memes/GB/images/photo-1.webp",
+      "width": 510,
+      "height": 768,
+      "creator": "Roger Murmann from Eppertshausen, Deutschland",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8978219177).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "MCM London Comic Con, ExCeL London"
+    },
+    {
+      "title": "Iron Man se apunta a Toy Story",
+      "alt": "Iron Man se apunta a Toy Story",
+      "image": "data/memes/GB/images/photo-2.webp",
+      "width": 510,
+      "height": 768,
+      "creator": "Roger Murmann from Eppertshausen, Deutschland",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8979413974).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "MCM London Comic Con, ExCeL London"
+    }
+  ]
+}

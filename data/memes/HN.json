@@ -1,0 +1,31 @@
+{
+  "country": "HN",
+  "memes": [
+    {
+      "title": "Tres guacamayos y ninguna mano libre",
+      "alt": "Tres guacamayos y ninguna mano libre",
+      "image": "data/memes/HN/images/photo-1.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "Sarah and Jason",
+      "source": "https://commons.wikimedia.org/wiki/File:Three_macaws_-Macaw_Mountain_Bird_Park,_Honduras-8a.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: tres guacamayos con un visitante en Macaw Mountain Bird Park, Honduras"
+    },
+    {
+      "title": "Los guacamayos también quieren salir en la foto",
+      "alt": "Los guacamayos también quieren salir en la foto",
+      "image": "data/memes/HN/images/photo-2.webp",
+      "width": 640,
+      "height": 480,
+      "creator": "Sarah and Jason",
+      "source": "https://commons.wikimedia.org/wiki/File:Three_macaws_-Macaw_Mountain_Bird_Park,_Honduras-8b.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: tres guacamayos con otro visitante en Macaw Mountain Bird Park, Honduras"
+    }
+  ]
+}

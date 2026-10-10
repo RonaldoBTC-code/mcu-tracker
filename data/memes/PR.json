@@ -1,0 +1,18 @@
+{
+  "country": "PR",
+  "memes": [
+    {
+      "title": "Star Wars aparece en el Anime Show de San Juan",
+      "alt": "Star Wars aparece en el Anime Show de San Juan",
+      "image": "data/memes/PR/images/photo-1.webp",
+      "width": 768,
+      "height": 607,
+      "creator": "Tomás Del Coro from Las Vegas, Nevada, USA",
+      "source": "https://commons.wikimedia.org/wiki/File:Star_Wars_(8481185875).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Anime Show, San Juan, Puerto Rico, 16 de febrero de 2013"
+    }
+  ]
+}

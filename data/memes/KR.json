@@ -1,0 +1,31 @@
+{
+  "country": "KR",
+  "memes": [
+    {
+      "title": "Attack on Titan se reúne en Seúl",
+      "alt": "Attack on Titan se reúne en Seúl",
+      "image": "data/memes/KR/images/photo-1.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "myself (User:Piotrus)",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Eren_Yeager,_Mikasa_Ackerman_and_Armin_Arlert_from_Attack_on_Titan_at_the_2013_Comic_World_Seoul_(041).jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Comic World Seoul 2013; categorías de cosplay de los personajes en South Korea"
+    },
+    {
+      "title": "Disfraces de anime en Comic World Seoul",
+      "alt": "Disfraces de anime en Comic World Seoul",
+      "image": "data/memes/KR/images/photo-2.webp",
+      "width": 480,
+      "height": 640,
+      "creator": "myself (User:Piotrus)",
+      "source": "https://commons.wikimedia.org/wiki/File:Comic_World_Seoul_October_2013_073.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Comic World Seoul, octubre de 2013; Category:Cosplay in South Korea"
+    }
+  ]
+}

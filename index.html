@@ -1869,6 +1869,8 @@ body.tour-on .tour-path { opacity: 1 !important; }
 .tour-card { display:flex;flex-direction:column; }
 .tour-header, .tour-title, .tour-footer { flex-shrink:0; }
 .tour-body { min-height:0;overflow-y:auto; }
+.meme-country-map .mapsvg { height:180px; width:100%; }
+.maphd { position:sticky;top:0;background:var(--panel);z-index:2; }
 </style>
 </head>
 <body>
@@ -1959,7 +1961,7 @@ body.tour-on .tour-path { opacity: 1 !important; }
 <div class="toast" id="toast"></div>
 
 
-<div class="mapwrap" id="mapwrap" role="dialog" aria-modal="true" aria-label="Mapa y actividad de la comunidad"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
+<div class="mapwrap" id="mapwrap" role="dialog" aria-modal="true" aria-label="Mapa, memes y actividad de la comunidad"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabMemes">Memes locales</button><button class="tab" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
 
 <div class="tour-overlay" id="tourOverlay">
   <div class="tour-spotlight" id="tourSpotlight"></div>
@@ -2682,6 +2684,11 @@ window.Region = (() => {
     if (l && l.length === 2) return l.toUpperCase();
     return 'US';
   }
+  function detectCountry() {
+    try { const code=TZ[Intl.DateTimeFormat().resolvedOptions().timeZone]; if(code)return code; } catch(e) {}
+    const code=(navigator.language||'').split('-')[1]?.toUpperCase();
+    return LIST.some(c=>c[0]===code&&code!=='GLOBAL')?code:null;
+  }
   let current = window.SafeStorage.getItem(KEY_R) || detect();
   const get = () => current;
   function mount(onChange) {
@@ -2692,7 +2699,7 @@ window.Region = (() => {
     sel.value = current;
     sel.onchange = () => { current = sel.value; window.SafeStorage.setItem(KEY_R, current); onChange(); };
   }
-  return { get, mount, detect };
+  return { get, mount, detect, detectCountry, countries:()=>LIST.filter(c=>c[0]!=='GLOBAL') };
 })();
 
 /* ══ AMBIENTE POR TITULO ══ */
@@ -3166,8 +3173,130 @@ window.WorldMap = (() => {
     body.innerHTML = s;
   }
 
-  function close() {const w=document.getElementById('mapwrap');if(w?.classList.contains('open')){window.MapView.generation++;w.classList.remove('open');document.getElementById('mapOpen')?.focus();}}
-  return { open, close };
+  function close() {const w=document.getElementById('mapwrap');if(w?.classList.contains('open')){window.MapView.generation++;window.MapMemes?.cancel();w.classList.remove('open');document.getElementById('mapOpen')?.focus();}}
+  function countryMap(code) {
+    if(!C[code])return '';
+    const [lat,lon,name]=C[code],x=px(lon),y=py(lat);
+    let land='<g class="land">';
+    // Generate only the visible region; avoid thousands of off-screen SVG nodes.
+    for(let a=Math.max(LAT_BOT,lat-25);a<=Math.min(LAT_TOP,lat+25);a+=2.4){
+      for(let b=Math.max(-180,lon-51);b<=Math.min(180,lon+51);b+=2.4){
+        if(isLand(b,a))land+='<circle cx="'+px(b).toFixed(1)+'" cy="'+py(a).toFixed(1)+'" r="2.2"/>';
+      }
+    }
+    return '<svg class="mapsvg" viewBox="'+(x-140)+' '+(y-85)+' 280 170" role="img" aria-label="Mapa centrado en '+esc(name)+'">'+land+'</g><circle class="ring" cx="'+x+'" cy="'+y+'" r="6"/><circle class="dot me" cx="'+x+'" cy="'+y+'" r="4"/><text class="lbl" x="'+(x+10)+'" y="'+y+'">'+esc(name)+'</text></svg>';
+  }
+  return { open, close, countryMap };
+})();
+/* Memes are requested from one country file; never load a global catalogue. */
+window.MapMemes = (() => {
+  const KEY='mcu_map_country';
+  let controller=null,observer=null,timer=null;
+  const valid=code=>window.Region.countries().some(c=>c[0]===code);
+  function resolveCountry(){
+    const manual=window.SafeStorage.getItem(KEY);
+    if(valid(manual))return manual;
+    const region=window.SafeStorage.getItem('mcu_region');
+    return valid(region)?region:window.Region.detectCountry();
+  }
+  function cancel(){
+    controller?.abort();controller=null;clearTimeout(timer);timer=null;
+    observer?.disconnect();observer=null;
+    document.querySelectorAll('#memeList img').forEach(img=>{img.removeAttribute('src');img.removeAttribute('data-src');});
+  }
+  function imageURL(code,value){
+    if(typeof value!=='string')return null;
+    try{
+      const base=new URL('data/memes/'+code+'/images/',document.baseURI);
+      const url=new URL(value,document.baseURI);
+      const file=url.pathname.startsWith(base.pathname)?url.pathname.slice(base.pathname.length):'';
+      return url.origin===base.origin&&!url.search&&!url.hash&&/^[a-z0-9][a-z0-9._-]*\.(?:png|jpe?g|webp|gif)$/i.test(file)?url.href:null;
+    }catch(e){return null;}
+  }
+  function lazyImages(list,epoch){
+    const activate=img=>{
+      if(epoch!==window.MapView.generation||!img.isConnected)return;
+      const src=img.dataset.src;if(!src)return;
+      img.src=src;delete img.dataset.src;
+    };
+    if(typeof IntersectionObserver==='function'){
+      observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+        if(entry.isIntersecting){activate(entry.target);observer?.unobserve(entry.target);}
+      }),{root:document.querySelector('#mapwrap .mapbox'),rootMargin:'100px'});
+      list.querySelectorAll('img').forEach(img=>observer.observe(img));
+    }else{
+      list.querySelectorAll('img').forEach(img=>{
+        const button=document.createElement('button');button.className='tab';button.textContent='Cargar imagen';
+        button.onclick=()=>{activate(img);button.remove();};img.after(button);
+      });
+    }
+  }
+  async function open(code=resolveCountry()){
+    cancel();const epoch=++window.MapView.generation;
+    const wrap=document.getElementById('mapwrap'),body=document.getElementById('mapbody');
+    if(!wrap||!body)return;
+    const wasOpen=wrap.classList.contains('open');wrap.classList.add('open');
+    if(!wasOpen)document.getElementById('mapClose')?.focus();
+    document.getElementById('tabMemes')?.classList.add('sel');
+    document.getElementById('tabCom')?.classList.remove('sel');document.getElementById('tabEsc')?.classList.remove('sel');
+    body.replaceChildren();
+    const label=document.createElement('label');label.textContent='País de los memes ';label.htmlFor='memeCountry';
+    const select=document.createElement('select');select.id='memeCountry';select.className='cb-reg';
+    select.add(new Option('Selecciona un país',''));
+    window.Region.countries().forEach(([value,name])=>select.add(new Option(name,value)));
+    code=valid(code)?code:null;select.value=code||'';
+    select.onchange=()=>{const next=select.value;if(valid(next))window.SafeStorage.setItem(KEY,next);else window.SafeStorage.removeItem(KEY);open(next);};
+    label.appendChild(select);body.appendChild(label);
+    const hint=document.createElement('p');hint.textContent='País aproximado; puedes corregirlo. Fotos de cosplay y situaciones curiosas, elegidas al azar.';body.appendChild(hint);
+    const map=document.createElement('div');map.id='memeMap';map.className='meme-country-map';map.innerHTML=code?window.WorldMap.countryMap(code):'';body.appendChild(map);
+    const status=document.createElement('p');status.id='memeStatus';status.setAttribute('role','status');body.appendChild(status);
+    const list=document.createElement('div');list.id='memeList';list.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px';body.appendChild(list);
+    if(!code){status.textContent='No se pudo determinar tu país. Selecciónalo para cargar memes.';return;}
+    status.textContent='Cargando memes de '+select.selectedOptions[0].textContent+'…';
+    const request=new AbortController();controller=request;timer=setTimeout(()=>request.abort(),10000);
+    try{
+      const response=await fetch(new URL('data/memes/'+code+'.json',document.baseURI),{signal:request.signal});
+      if(epoch!==window.MapView.generation)return;
+      if(response.status===404){status.textContent='Todavía no hay memes disponibles para este país.';return;}
+      if(!response.ok)throw Error('HTTP '+response.status);
+      const data=await response.json();
+      if(epoch!==window.MapView.generation)return;
+      if(data.country!==code||!Array.isArray(data.memes))throw Error('Formato de país inválido');
+      // Reject invalid/cross-country image paths before adding an img to the DOM.
+      const memes=data.memes.slice(0,50).map(item=>({item,url:imageURL(code,item?.image)})).filter(x=>x.url&&typeof x.item.title==='string');
+      if(!memes.length){status.textContent='Todavía no hay memes disponibles para este país.';return;}
+      let remaining=[],previous=-1;
+      const draw=()=>{
+        observer?.disconnect();observer=null;
+        list.querySelectorAll('img').forEach(img=>img.removeAttribute('src'));list.replaceChildren();
+        if(!remaining.length)remaining=memes.map((_,i)=>i).filter(i=>memes.length===1||i!==previous);
+        const index=remaining.splice(Math.floor(Math.random()*remaining.length),1)[0];previous=index;
+        const {item,url}=memes[index];
+        const figure=document.createElement('figure');figure.style.margin='0';
+        const img=document.createElement('img');img.alt=typeof item.alt==='string'?item.alt:item.title;
+        img.width=Number.isInteger(item.width)&&item.width>0&&item.width<=2048?item.width:768;
+        img.height=Number.isInteger(item.height)&&item.height>0&&item.height<=2048?item.height:512;
+        img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto;max-height:55vh;object-fit:contain';
+        img.onerror=()=>{img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
+        const caption=document.createElement('figcaption');caption.textContent=item.title+' · '+(typeof item.creator==='string'?item.creator:'');
+        const licenseHost=item.license==='Public domain'&&item.licenseUrl===item.source?'commons.wikimedia.org':'creativecommons.org';
+        for(const [label,value,host]of [['Fuente',item.source,'commons.wikimedia.org'],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
+          try{const linkURL=new URL(value);if(!['https:','http:'].includes(linkURL.protocol)||linkURL.hostname!==host)continue;linkURL.protocol='https:';
+            const link=document.createElement('a');link.href=linkURL.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent=label;caption.append(' · ',link);
+          }catch(e){}
+        }
+        if(item.changes)caption.append(' · ',String(item.changes));
+        figure.append(img,caption);list.appendChild(figure);
+        lazyImages(list,epoch);
+      };
+      draw();
+      const next=document.createElement('button');next.className='tab';next.id='memeRandom';next.textContent='Otra foto aleatoria';next.disabled=memes.length<2;next.onclick=()=>{if(epoch===window.MapView.generation)draw();};body.appendChild(next);
+      status.textContent=memes.length+' fotos disponibles para '+select.selectedOptions[0].textContent+'.';
+    }catch(e){
+      if(epoch===window.MapView.generation)status.textContent='No se pudieron cargar los memes. Vuelve a seleccionar el país para reintentar.';
+    }finally{if(controller===request){clearTimeout(timer);timer=null;controller=null;}}
+  }
+  return {open,cancel,resolveCountry};
 })();
 /* ══ TITULOS LOCALIZADOS ══
    La identidad de cada pelicula es su id numerico (estable).
@@ -3598,11 +3727,12 @@ window.CloudSync = (() => {
     // Complete the first render after all modules are defined, even without cloud/TMDB.
     window.Lang.mount();window.Region.mount(()=>window.Providers.repaintAll());updateStats();renderList();
     const mo=document.getElementById('mapOpen'),mc=document.getElementById('mapClose'),mw=document.getElementById('mapwrap');
-    const tc=document.getElementById('tabCom'),te=document.getElementById('tabEsc');
-    const sel=which=>{tc?.classList.toggle('sel',which==='com');te?.classList.toggle('sel',which==='esc');};
-    if(mo)mo.onclick=()=>{sel('com');window.WorldMap.open();};
-    if(tc)tc.onclick=()=>{sel('com');window.WorldMap.open();};
-    if(te)te.onclick=()=>{sel('esc');window.ZoomMap.render(document.getElementById('mapbody'));};
+    const tc=document.getElementById('tabCom'),te=document.getElementById('tabEsc'),tm=document.getElementById('tabMemes');
+    const sel=which=>{tc?.classList.toggle('sel',which==='com');te?.classList.toggle('sel',which==='esc');tm?.classList.toggle('sel',which==='memes');};
+    if(mo)mo.onclick=()=>{sel('memes');window.MapMemes.open();};
+    if(tm)tm.onclick=()=>{sel('memes');window.MapMemes.open();};
+    if(tc)tc.onclick=()=>{window.MapMemes.cancel();sel('com');window.WorldMap.open();};
+    if(te)te.onclick=()=>{window.MapMemes.cancel();sel('esc');window.ZoomMap.render(document.getElementById('mapbody'));};
     if(mc)mc.onclick=()=>window.WorldMap.close();if(mw)mw.onclick=e=>{if(e.target===mw)window.WorldMap.close();};
     document.addEventListener('keydown',e=>{if(e.key==='Escape')window.WorldMap.close();});
     for(const name of ['CosmicParticles','DoomsdayTimer','Guide']){try{window[name]?.init();}catch(e){console.warn(name+' no disponible');}}

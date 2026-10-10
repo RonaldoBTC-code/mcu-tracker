@@ -1,0 +1,18 @@
+{
+  "country": "GT",
+  "memes": [
+    {
+      "title": "Un Tusken Raider aparece en la convención",
+      "alt": "Un Tusken Raider aparece en la convención",
+      "image": "data/memes/GT/images/photo-1.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Luis Penados",
+      "source": "https://commons.wikimedia.org/wiki/File:Convencion_Hentai_en_Guatemala_-_4121793708.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Guatemala City, Guatemala; Category:2009 in Guatemala City"
+    }
+  ]
+}

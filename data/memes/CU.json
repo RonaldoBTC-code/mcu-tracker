@@ -1,0 +1,18 @@
+{
+  "country": "CU",
+  "memes": [
+    {
+      "title": "Una Navidad sobre zancos en La Habana",
+      "alt": "Una Navidad sobre zancos en La Habana",
+      "image": "data/memes/CU/images/photo-1.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "DeLaGlow",
+      "source": "https://commons.wikimedia.org/wiki/File:Another_way_to_celebrate_Christmas_Eve_in_La_Havana,Cuba.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Category:Street-Performers on Stilts; December 2021 in Cuba; Old Havana"
+    }
+  ]
+}

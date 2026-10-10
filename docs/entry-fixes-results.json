@@ -94,5 +94,37 @@
   {
     "name": "Pasos 7 y 8: destino y todos sus contenedores conservan opacidad",
     "status": "PASS"
+  },
+  {
+    "name": "Memes Ecuador: solo archivo EC e imágenes EC diferidas, nunca catálogo global/MX",
+    "status": "PASS"
+  },
+  {
+    "name": "Memes: selección manual persiste y respuestas tardías no cambian país",
+    "status": "PASS"
+  },
+  {
+    "name": "Memes: detección falla sin país predeterminado ni descarga",
+    "status": "PASS"
+  },
+  {
+    "name": "Memes: entrada detecta EC y cerrar evita respuesta tardía",
+    "status": "PASS"
+  },
+  {
+    "name": "Memes: país incorrecto rechazado y ausencia de observer no precarga",
+    "status": "PASS"
+  },
+  {
+    "name": "Contenido: fotos reales con procedencia; ningún país usa tarjetas de texto",
+    "status": "PASS"
+  },
+  {
+    "name": "Atribución: dominio público enlaza su declaración y rechaza HTML y hosts externos",
+    "status": "PASS"
+  },
+  {
+    "name": "Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch",
+    "status": "PASS"
   }
 ]

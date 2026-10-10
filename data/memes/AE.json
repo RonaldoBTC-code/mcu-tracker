@@ -1,0 +1,31 @@
+{
+  "country": "AE",
+  "memes": [
+    {
+      "title": "Chewbacca se toma un descanso sin máscara",
+      "alt": "Chewbacca se toma un descanso sin máscara",
+      "image": "data/memes/AE/images/photo-1.webp",
+      "width": 510,
+      "height": 768,
+      "creator": "Hunny Alrohaif from Kuwait",
+      "source": "https://commons.wikimedia.org/wiki/File:MEFCC_2012_-_Headless_Chewbacca_(7249551842).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Middle East Film and Comic Con 2012; categoría de cosplay en Emiratos Árabes Unidos"
+    },
+    {
+      "title": "Un stormtrooper visita la MEFCC",
+      "alt": "Un stormtrooper visita la MEFCC",
+      "image": "data/memes/AE/images/photo-2.webp",
+      "width": 768,
+      "height": 510,
+      "creator": "Hunny Alrohaif from Kuwait",
+      "source": "https://commons.wikimedia.org/wiki/File:MEFCC_2012_-_Stormtrooper_(7249648618).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Middle East Film and Comic Con 2012; categoría de cosplay en Emiratos Árabes Unidos"
+    }
+  ]
+}

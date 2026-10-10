@@ -1,0 +1,31 @@
+{
+  "country": "DK",
+  "memes": [
+    {
+      "title": "Los disfraces celebran en Copenhague",
+      "alt": "Los disfraces celebran en Copenhague",
+      "image": "data/memes/DK/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Leif Jørgensen",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_Contest_at_Copenhagen_Sakura_Festival_2025_22.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: concurso cosplay de Copenhagen Sakura Festival, Langelinie, Copenhague, Dinamarca"
+    },
+    {
+      "title": "Sophie sale de El castillo ambulante",
+      "alt": "Sophie sale de El castillo ambulante",
+      "image": "data/memes/DK/images/photo-2.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Leif Jørgensen",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_Contest_at_Copenhagen_Sakura_Festival_2025_14.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: cosplay de Sophie en Copenhagen Sakura Festival, Copenhague, Dinamarca"
+    }
+  ]
+}

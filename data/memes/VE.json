@@ -1,0 +1,31 @@
+{
+  "country": "VE",
+  "memes": [
+    {
+      "title": "Zero Two sale de convención en Venezuela",
+      "alt": "Zero Two sale de convención en Venezuela",
+      "image": "data/memes/VE/images/photo-1.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Castorice",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Zero_Two.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Category:Cosplay of Zero Two in Venezuela; WikiSendero Andes 2025"
+    },
+    {
+      "title": "Kokushibo visita Kisetsu Anime",
+      "alt": "Kokushibo visita Kisetsu Anime",
+      "image": "data/memes/VE/images/photo-2.webp",
+      "width": 341,
+      "height": 768,
+      "creator": "Dandiewiki",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_de_Kokushibo.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Kisetsu Anime 2025; Category:Cosplay of Kokushibo in Venezuela"
+    }
+  ]
+}

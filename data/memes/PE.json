@@ -1,0 +1,31 @@
+{
+  "country": "PE",
+  "memes": [
+    {
+      "title": "Superman pasea por el centro de Lima",
+      "alt": "Superman pasea por el centro de Lima",
+      "image": "data/memes/PE/images/photo-1.webp",
+      "width": 768,
+      "height": 498,
+      "creator": "Art DiNo",
+      "source": "https://commons.wikimedia.org/wiki/File:Superman_Peru.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Superman peruano caminando en Lima, Perú"
+    },
+    {
+      "title": "Buzz Lightyear de paseo por Lima",
+      "alt": "Buzz Lightyear de paseo por Lima",
+      "image": "data/memes/PE/images/photo-2.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "Katherinne Sutizal",
+      "source": "https://commons.wikimedia.org/wiki/File:%22Buzz_Lightyear%22_en_la_Marcha_LGBT%2B_2022.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción de la autora: Marcha LGBT+ 2022 en Lima, Perú, 25 de junio de 2022"
+    }
+  ]
+}

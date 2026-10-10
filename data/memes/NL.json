@@ -1,0 +1,31 @@
+{
+  "country": "NL",
+  "memes": [
+    {
+      "title": "Undertale organiza una reunión en Rotterdam",
+      "alt": "Undertale organiza una reunión en Rotterdam",
+      "image": "data/memes/NL/images/photo-1.webp",
+      "width": 768,
+      "height": 687,
+      "creator": "Maplestrip",
+      "source": "https://commons.wikimedia.org/wiki/File:Undertale_cosplay_at_Tsunacon_2016.JPG",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Tsunacon, Rotterdam, Países Bajos"
+    },
+    {
+      "title": "Jinx sale de League of Legends",
+      "alt": "Jinx sale de League of Legends",
+      "image": "data/memes/NL/images/photo-2.webp",
+      "width": 551,
+      "height": 768,
+      "creator": "Miguel Discart",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Jinx_from_League_of_Legends_at_Comiccon_Holland_2023_-_1.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Comiccon Holland 2023, evento en Países Bajos"
+    }
+  ]
+}

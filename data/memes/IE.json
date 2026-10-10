@@ -1,0 +1,31 @@
+{
+  "country": "IE",
+  "memes": [
+    {
+      "title": "Los Teletubbies salen a tocar en Dublín",
+      "alt": "Los Teletubbies salen a tocar en Dublín",
+      "image": "data/memes/IE/images/photo-1.webp",
+      "width": 768,
+      "height": 513,
+      "creator": "Chad and Steph",
+      "source": "https://commons.wikimedia.org/wiki/File:Teletubby_Buskers.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Grafton Street, Dublín, Irlanda"
+    },
+    {
+      "title": "El Grinch se encuentra con un oso en Dublín",
+      "alt": "El Grinch se encuentra con un oso en Dublín",
+      "image": "data/memes/IE/images/photo-2.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "さえぼー",
+      "source": "https://commons.wikimedia.org/wiki/File:White_bear_and_Grinch.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: cerca de Grafton Street, Dublín, Irlanda, diciembre de 2024"
+    }
+  ]
+}

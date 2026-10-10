@@ -5,6 +5,7 @@ const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8')
  .replace('return {push,client:()=>sb,user:()=>user};','return {push,onSession,sendLink,renderForm,renderOut,inject:c=>sb=c,client:()=>sb,user:()=>user};')
  .replace('return { switchUser, paintAll, loadStats, pullMine, get };','return {set,switchUser,paintAll,loadStats,pullMine,get};');
 const pause=ms=>new Promise(r=>setTimeout(r,ms));const results=[];
+async function waitFor(predicate){const end=Date.now()+3000;while(!predicate()){if(Date.now()>end)throw Error('Estado esperado no apareció');await pause(20);}}
 async function fixture(options={}){
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
  const dom=new JSDOM(html,{url:'https://custom.example/tracker/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){
@@ -67,6 +68,7 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
  await test('Pasos 7 y 8: destino y todos sus contenedores conservan opacidad',async({w,d})=>{
   w.Guide.start();for(let i=0;i<6;i++)w.Guide.next();await pause(120);
   for(const selector of ['.row','.row .chk']){
+   await waitFor(()=>d.querySelector(selector)?.classList.contains('tour-active-el'));
    const target=d.querySelector(selector);assert(target.classList.contains('tour-active-el'));
    for(let el=target;el&&el!==d.body;el=el.parentElement){
     const opacity=w.getComputedStyle(el).opacity;
@@ -79,6 +81,74 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
    if(selector==='.row'){w.Guide.next();await pause(120);}
   }
   w.Guide.close();assert.equal(d.querySelectorAll('.tour-path,.tour-parent,.tour-active-el').length,0);
+ });
+ await test('Memes Ecuador: solo archivo EC e imágenes EC diferidas, nunca catálogo global/MX',async({w,d})=>{
+  const requests=[],images=[];let intersect;
+  w.fetch=async url=>{requests.push(new URL(url).pathname);return {ok:true,json:async()=>({country:'EC',memes:[
+   {title:'EC de prueba',image:'data/memes/EC/images/fixture.webp'},
+   {title:'MX no permitido',image:'data/memes/MX/images/fixture.webp'},
+   {title:'Externo no permitido',image:'https://example.org/image.webp'},
+   {title:'Ruta codificada no permitida',image:'data/memes/EC/images/%2f..%2fMX/fixture.webp'},
+   {title:'Subcarpeta no permitida',image:'data/memes/EC/images/../MX/fixture.webp'}]})};};
+  const src=Object.getOwnPropertyDescriptor(w.HTMLImageElement.prototype,'src');
+  Object.defineProperty(w.HTMLImageElement.prototype,'src',{get:src.get,set(value){images.push(new URL(value,d.baseURI).pathname);src.set.call(this,value)}});
+  w.IntersectionObserver=class{constructor(cb){intersect=cb;}observe(){}unobserve(){}disconnect(){}};
+  await w.MapMemes.open('EC');assert.deepEqual(requests,['/tracker/data/memes/EC.json']);assert.equal(images.length,0);
+  assert.equal(d.querySelectorAll('#memeList img').length,1);assert(d.querySelector('#memeMap svg').getAttribute('aria-label').includes('Ecuador'));
+  const img=d.querySelector('#memeList img');assert.equal(img.loading,'lazy');intersect([{target:img,isIntersecting:true}]);
+  assert.deepEqual(images,['/tracker/data/memes/EC/images/fixture.webp']);assert(!requests.concat(images).some(x=>x.includes('/MX/')||x.endsWith('/MX.json')));
+ });
+ await test('Memes: selección manual persiste y respuestas tardías no cambian país',async({w,d})=>{
+  const requests=[];let finish,oldSignal;
+  w.fetch=(url,options)=>{const country=new URL(url).pathname.endsWith('/EC.json')?'EC':'MX';requests.push(country);
+   if(country==='EC'){oldSignal=options.signal;return new Promise(resolve=>finish=resolve);}
+   return Promise.resolve({ok:true,json:async()=>({country:'MX',memes:[]})});};
+  const old=w.MapMemes.open('EC');const select=d.querySelector('#memeCountry');select.value='MX';select.dispatchEvent(new w.Event('change'));await pause(20);
+  assert(oldSignal.aborted);assert.equal(w.SafeStorage.getItem('mcu_map_country'),'MX');
+  finish({ok:true,json:async()=>({country:'EC',memes:[{title:'Antiguo',image:'data/memes/EC/images/fixture.webp'}]})});await old;
+  assert.equal(d.querySelector('#memeCountry').value,'MX');assert.equal(d.querySelectorAll('#memeList img').length,0);
+  w.WorldMap.close();await w.MapMemes.open();assert.equal(d.querySelector('#memeCountry').value,'MX');assert.deepEqual(requests,['EC','MX','MX']);
+ });
+ await test('Memes: detección falla sin país predeterminado ni descarga',async({w,d})=>{
+  let requests=0;w.fetch=async()=>{requests++;throw Error('No debe solicitarse')};
+  w.Intl.DateTimeFormat=()=>({resolvedOptions:()=>({timeZone:'UTC'})});Object.defineProperty(w.navigator,'language',{value:'en',configurable:true});
+  w.SafeStorage.removeItem('mcu_region');w.SafeStorage.removeItem('mcu_map_country');await w.MapMemes.open();
+  assert.equal(requests,0);assert.equal(d.querySelector('#memeCountry').value,'');assert(d.querySelector('#memeStatus').textContent.includes('No se pudo determinar'));
+ });
+ await test('Memes: entrada detecta EC y cerrar evita respuesta tardía',async({w,d})=>{
+  let finish,signal;const requests=[];w.Intl.DateTimeFormat=()=>({resolvedOptions:()=>({timeZone:'America/Guayaquil'})});
+  w.SafeStorage.removeItem('mcu_region');w.SafeStorage.removeItem('mcu_map_country');
+  w.fetch=(url,options)=>{requests.push(new URL(url).pathname);signal=options.signal;return new Promise(resolve=>finish=resolve)};
+  d.querySelector('#mapOpen').click();assert.equal(d.querySelector('#memeCountry').value,'EC');assert.deepEqual(requests,['/tracker/data/memes/EC.json']);
+  w.WorldMap.close();finish({ok:true,json:async()=>({country:'EC',memes:[]})});await pause(20);
+  assert(signal.aborted);assert(!d.querySelector('#mapwrap').classList.contains('open'));assert(!d.querySelector('#memeStatus').textContent.includes('Todavía'));
+ });
+ await test('Memes: país incorrecto rechazado y ausencia de observer no precarga',async({w,d})=>{
+  w.fetch=async()=>({ok:true,json:async()=>({country:'MX',memes:[{title:'MX',image:'data/memes/MX/images/fixture.webp'}]})});
+  await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList img').length,0);assert(d.querySelector('#memeStatus').textContent.includes('No se pudieron'));
+  w.IntersectionObserver=undefined;w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[{title:'EC',image:'data/memes/EC/images/fixture.webp'}]})});
+  await w.MapMemes.open('EC');assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert.equal(d.querySelector('#memeList button').textContent,'Cargar imagen');
+ });
+ await test('Contenido: fotos reales con procedencia; ningún país usa tarjetas de texto',async({w})=>{
+  const codes=w.Region.countries().map(c=>c[0]);assert.equal(codes.length,51);
+  let count=0,countries=0;
+  for(const code of codes){const file=path.join(__dirname,'../data/memes',code+'.json'),data=JSON.parse(fs.readFileSync(file,'utf8'));
+   assert.equal(data.country,code);assert(Array.isArray(data.memes));if(data.memes.length)countries++;
+   for(const meme of data.memes){count++;assert(meme.image.startsWith('data/memes/'+code+'/images/photo-'));assert(meme.title.length>10);assert(meme.width>0&&meme.width<=768);assert(meme.height>0&&meme.height<=768);assert(meme.countryEvidence);assert.equal(new URL(meme.source).hostname,'commons.wikimedia.org');assert(meme.license);assert(meme.creator);
+    const image=fs.readFileSync(path.join(__dirname,'..',meme.image));assert.equal(image.toString('ascii',0,4),'RIFF');assert.equal(image.toString('ascii',8,12),'WEBP');assert(image.length<100000);
+   }
+  }
+  const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));assert.equal(count,sources.length);assert.equal(countries,new Set(sources.map(s=>s.country)).size);assert.equal(count,96);assert.equal(countries,51);
+ });
+ await test('Atribución: dominio público enlaza su declaración y rechaza HTML y hosts externos',async({w,d})=>{
+  const source='https://commons.wikimedia.org/wiki/File:Example.jpg';let item={title:'Foto <img src=x>',creator:'<script>bad()</script>',image:'data/memes/EC/images/photo-1.webp',source,license:'Public domain',licenseUrl:source};
+  w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[item]})});await w.MapMemes.open('EC');
+  const links=d.querySelectorAll('#memeList figcaption a');assert.equal(links.length,2);assert.equal(links[1].href,source);assert.equal(links[1].textContent,'Public domain');assert.equal(links[1].rel,'noopener noreferrer');assert.equal(d.querySelectorAll('#memeList figcaption script,#memeList figcaption img').length,0);
+  item={...item,source:'javascript:bad()',licenseUrl:'https://example.org/license'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,0);
+ });
+ await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{
+  let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))})};};
+  await w.MapMemes.open('EC');let last='';for(let i=0;i<6;i++){const images=d.querySelectorAll('#memeList img');assert.equal(images.length,1);const current=images[0].dataset.src;assert.notEqual(current,last);last=current;d.querySelector('#memeRandom').click();}assert.equal(calls,1);
  });
  console.log(JSON.stringify(results,null,2));
  if(process.argv.includes('--record'))fs.writeFileSync(path.join(__dirname,'../docs/entry-fixes-results.json'),JSON.stringify(results,null,2)+'\n');

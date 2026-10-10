@@ -1,0 +1,31 @@
+{
+  "country": "ID",
+  "memes": [
+    {
+      "title": "Personajes reunidos en Madiun",
+      "alt": "Personajes reunidos en Madiun",
+      "image": "data/memes/ID/images/photo-1.webp",
+      "width": 768,
+      "height": 432,
+      "creator": "Neocorelight",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_competition_in_Plaza_Lawu,_Madiun._15_December_2024.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Plaza Lawu, Madiun, Indonesia, 15 de diciembre de 2024; Category:Cosplay in Indonesia"
+    },
+    {
+      "title": "Sinon sale de Sword Art Online",
+      "alt": "Sinon sale de Sword Art Online",
+      "image": "data/memes/ID/images/photo-2.webp",
+      "width": 431,
+      "height": 768,
+      "creator": "Seika",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplayer_of_Sinon,_Sword_Art_Online_20131027.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Category:Cosplay in Indonesia; fotografía de cosplay de Sinon"
+    }
+  ]
+}

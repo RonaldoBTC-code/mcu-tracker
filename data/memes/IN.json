@@ -1,0 +1,31 @@
+{
+  "country": "IN",
+  "memes": [
+    {
+      "title": "Batman visita la Comic Con de Delhi",
+      "alt": "Batman visita la Comic Con de Delhi",
+      "image": "data/memes/IN/images/photo-1.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "Pulakit Singh",
+      "source": "https://commons.wikimedia.org/wiki/File:Delhi_Comic_Con_2017_Cosplay_Batman.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Delhi Comic Con 2017; Category:Cosplay in India"
+    },
+    {
+      "title": "Un disfraz inspirado en la naturaleza",
+      "alt": "Un disfraz inspirado en la naturaleza",
+      "image": "data/memes/IN/images/photo-2.webp",
+      "width": 510,
+      "height": 768,
+      "creator": "Biswarup Ganguly",
+      "source": "https://commons.wikimedia.org/wiki/File:Costume_Parade_4878.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Costume Parade on Nature, BITM, Kolkata, India, 6 de marzo de 2010"
+    }
+  ]
+}

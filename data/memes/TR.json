@@ -1,0 +1,18 @@
+{
+  "country": "TR",
+  "memes": [
+    {
+      "title": "Un traje de sufragista en Estambul",
+      "alt": "Un traje de sufragista en Estambul",
+      "image": "data/memes/TR/images/photo-1.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "Flanoz",
+      "source": "https://commons.wikimedia.org/wiki/File:A_sufraget_in_2020.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: mujer con traje de sufragista en actos del 8 de marzo de 2020, Estambul, Turquía"
+    }
+  ]
+}

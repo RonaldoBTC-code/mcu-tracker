@@ -1,0 +1,31 @@
+{
+  "country": "BE",
+  "memes": [
+    {
+      "title": "Deadpool reclama el Trono de Hierro",
+      "alt": "Deadpool reclama el Trono de Hierro",
+      "image": "data/memes/BE/images/photo-1.webp",
+      "width": 432,
+      "height": 768,
+      "creator": "Miguel Discart from Bruxelles, Belgique",
+      "source": "https://commons.wikimedia.org/wiki/File:Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_(26675225495).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Comic Con Brussels 2016, Bruselas, Bélgica"
+    },
+    {
+      "title": "Duffman y Deadpool se encuentran en Bruselas",
+      "alt": "Duffman y Deadpool se encuentran en Bruselas",
+      "image": "data/memes/BE/images/photo-2.webp",
+      "width": 457,
+      "height": 768,
+      "creator": "Miguel Discart",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_(51979055573).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Brussels Comic Con 2022, Bélgica"
+    }
+  ]
+}

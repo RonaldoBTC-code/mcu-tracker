@@ -1,0 +1,31 @@
+{
+  "country": "BR",
+  "memes": [
+    {
+      "title": "Spider-Man se apunta al carnaval",
+      "alt": "Spider-Man se apunta al carnaval",
+      "image": "data/memes/BR/images/photo-1.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Quintinense",
+      "source": "https://commons.wikimedia.org/wiki/File:Carnaval_2012_-_Homem-Aranha_-_Cer%C3%A2mica,_Nova_Igua%C3%A7u.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Carnaval de Cerâmica, Nova Iguaçu-RJ, Brasil, 18 de febrero de 2012"
+    },
+    {
+      "title": "Spider-Man de fiesta en Olinda",
+      "alt": "Spider-Man de fiesta en Olinda",
+      "image": "data/memes/BR/images/photo-2.webp",
+      "width": 516,
+      "height": 768,
+      "creator": "Prefeitura de Olinda from Brasil",
+      "source": "https://commons.wikimedia.org/wiki/File:Homem_Aranha_de_Olinda_-_Carnaval_2012_(6917644937).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Carnival in Olinda in 2012; fotografía de Prefeitura de Olinda, Brasil, 21 de febrero de 2012"
+    }
+  ]
+}

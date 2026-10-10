@@ -1,0 +1,31 @@
+{
+  "country": "CA",
+  "memes": [
+    {
+      "title": "Iron Man, Pikachu y Deadpool en la misma foto",
+      "alt": "Iron Man, Pikachu y Deadpool en la misma foto",
+      "image": "data/memes/CA/images/photo-1.webp",
+      "width": 768,
+      "height": 548,
+      "creator": "GabboT",
+      "source": "https://commons.wikimedia.org/wiki/File:Iron_Pikachu.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Cosplay at the 2012 Fan Expo Canada; Cosplay of Iron Man in Canada"
+    },
+    {
+      "title": "Thor, Loki e Iron Man en versión steampunk",
+      "alt": "Thor, Loki e Iron Man en versión steampunk",
+      "image": "data/memes/CA/images/photo-2.webp",
+      "width": 548,
+      "height": 768,
+      "creator": "GabboT",
+      "source": "https://commons.wikimedia.org/wiki/File:Fan_Expo_2012_-_Steampunk_Thor,_Loki_%26_Iron_Man_(8143104437).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Fan Expo 2012, Canada"
+    }
+  ]
+}

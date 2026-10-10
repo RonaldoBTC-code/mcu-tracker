@@ -1,0 +1,31 @@
+{
+  "country": "CL",
+  "memes": [
+    {
+      "title": "Disfraces se encuentran en la Comic Con de Chile",
+      "alt": "Disfraces se encuentran en la Comic Con de Chile",
+      "image": "data/memes/CL/images/photo-1.webp",
+      "width": 768,
+      "height": 339,
+      "creator": "Rjcastillo",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplayers_@_Comic_Con_Chile_2026.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor y Category:Cosplay in Chile: Comic Con Chile 2026"
+    },
+    {
+      "title": "Un encuentro de personajes en Chile",
+      "alt": "Un encuentro de personajes en Chile",
+      "image": "data/memes/CL/images/photo-2.webp",
+      "width": 768,
+      "height": 325,
+      "creator": "Rjcastillo",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplayers_@_Comic_Con_Chile_2026-2.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor y Category:Cosplay in Chile: Comic Con Chile 2026"
+    }
+  ]
+}

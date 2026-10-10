@@ -1,0 +1,31 @@
+{
+  "country": "EC",
+  "memes": [
+    {
+      "title": "El Equipo Rocket visita Quito",
+      "alt": "El Equipo Rocket visita Quito",
+      "image": "data/memes/EC/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Agencia de Noticias ANDES",
+      "source": "https://commons.wikimedia.org/wiki/File:COSPLAY_(33474137522).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Agencia ANDES: Ichiban Fest VIII, Centro Cultural de la Universidad Católica, Quito, Ecuador, 24 de marzo de 2017"
+    },
+    {
+      "title": "Cubone se escapa al Ichiban Fest",
+      "alt": "Cubone se escapa al Ichiban Fest",
+      "image": "data/memes/EC/images/photo-2.webp",
+      "width": 768,
+      "height": 508,
+      "creator": "Agencia de Noticias ANDES",
+      "source": "https://commons.wikimedia.org/wiki/File:COSPLAY_(32788011544).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Agencia ANDES: Ichiban Fest VIII, Centro Cultural de la Universidad Católica, Quito, Ecuador, 24 de marzo de 2017"
+    }
+  ]
+}

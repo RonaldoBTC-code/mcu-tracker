@@ -1,0 +1,31 @@
+{
+  "country": "DO",
+  "memes": [
+    {
+      "title": "Un disfraz de Diablo Cojuelo en carnaval",
+      "alt": "Un disfraz de Diablo Cojuelo en carnaval",
+      "image": "data/memes/DO/images/photo-1.webp",
+      "width": 400,
+      "height": 720,
+      "creator": "Diplan1",
+      "source": "https://commons.wikimedia.org/wiki/File:Diablo_Cojuelo,_diablo_Mambero.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: carnaval dominicano; Category:Carnivals in the Dominican Republic"
+    },
+    {
+      "title": "Los Bichos se reúnen en La Vega",
+      "alt": "Los Bichos se reúnen en La Vega",
+      "image": "data/memes/DO/images/photo-2.webp",
+      "width": 640,
+      "height": 480,
+      "creator": "Sebas1990rd",
+      "source": "https://commons.wikimedia.org/wiki/File:BICHOS_CARNAVAL_VEGANO_2025.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Grupo Bichos del carnaval de La Vega 2025; categorías de República Dominicana"
+    }
+  ]
+}

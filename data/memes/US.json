@@ -1,0 +1,31 @@
+{
+  "country": "US",
+  "memes": [
+    {
+      "title": "Deadpool probando la armadura de Iron Man",
+      "alt": "Deadpool probando la armadura de Iron Man",
+      "image": "data/memes/US/images/photo-1.webp",
+      "width": 587,
+      "height": 768,
+      "creator": "LostplanetKD73",
+      "source": "https://commons.wikimedia.org/wiki/File:Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "New York Comic Con 2015"
+    },
+    {
+      "title": "Una interpretación literal de Iron Man",
+      "alt": "Una interpretación literal de Iron Man",
+      "image": "data/memes/US/images/photo-2.webp",
+      "width": 527,
+      "height": 768,
+      "creator": "Michael Miller",
+      "source": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "ConNooga 2009, Chattanooga, Tennessee"
+    }
+  ]
+}

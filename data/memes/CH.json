@@ -1,0 +1,31 @@
+{
+  "country": "CH",
+  "memes": [
+    {
+      "title": "Un personaje visita la convención de Ginebra",
+      "alt": "Un personaje visita la convención de Ginebra",
+      "image": "data/memes/CH/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Isabelle + Stéphane Gallay",
+      "source": "https://commons.wikimedia.org/wiki/File:Japan_Cosplay_2017,_Geneva;_November_2017_(31).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Japan Cosplay, Palexpo, Ginebra, Suiza, 18-19 noviembre de 2017"
+    },
+    {
+      "title": "La princesa Mononoke llega a Ginebra",
+      "alt": "La princesa Mononoke llega a Ginebra",
+      "image": "data/memes/CH/images/photo-2.webp",
+      "width": 512,
+      "height": 768,
+      "creator": "Isabelle + Stéphane Gallay",
+      "source": "https://commons.wikimedia.org/wiki/File:Japan_Cosplay_2017,_Geneva;_November_2017_(17).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Japan Cosplay, Palexpo, Ginebra, Suiza, 18-19 noviembre de 2017"
+    }
+  ]
+}
