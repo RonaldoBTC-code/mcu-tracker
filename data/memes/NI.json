@@ -1,31 +1,60 @@
 {
   "country": "NI",
+  "scope": "international",
   "memes": [
     {
-      "title": "Máscaras y disfraces en Diriamba",
-      "alt": "Máscaras y disfraces en Diriamba",
-      "image": "data/memes/NI/images/photo-1.webp",
-      "width": 504,
-      "height": 768,
-      "creator": "SeleneYang",
-      "source": "https://commons.wikimedia.org/wiki/File:G%C3%BCeguense_o_Macho_Rat%C3%B3n.jpg",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Descripción del autor: El Güegüense, Diriamba, Carazo, Nicaragua"
+      "id": "avengers-office",
+      "title": "Los Avengers también tienen reuniones que pudieron ser un correo",
+      "image": "data/memes/international/images/avengers-office.webp",
+      "source": "https://www.pinterest.com/pin/678636237574158906/",
+      "publisher": "musclegeekonline",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Captain America",
+        "Thor",
+        "Doctor Strange",
+        "Spider-Man",
+        "Black Widow",
+        "Hawkeye",
+        "Falcon"
+      ],
+      "visualGag": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "width": 735,
+      "height": 512,
+      "bytes": 40528,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     },
     {
-      "title": "El personaje Macho Ratón sale a la fiesta",
-      "alt": "El personaje Macho Ratón sale a la fiesta",
-      "image": "data/memes/NI/images/photo-2.webp",
-      "width": 720,
-      "height": 482,
-      "creator": "SeleneYang",
-      "source": "https://commons.wikimedia.org/wiki/File:Macho_rat%C3%B3n.jpg",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Descripción del autor: El Güegüense durante las fiestas de Diriamba, Nicaragua"
+      "id": "iron-man-costumes",
+      "title": "Dos Iron Man, dos presupuestos",
+      "image": "data/memes/international/images/iron-man-costumes.webp",
+      "source": "https://www.pinterest.com/pin/392516923774440652/",
+      "publisher": "Metro / metrouk",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "width": 660,
+      "height": 495,
+      "bytes": 36748,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     }
   ]
 }

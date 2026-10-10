@@ -1961,7 +1961,7 @@ body.tour-on .tour-path { opacity: 1 !important; }
 <div class="toast" id="toast"></div>
 
 
-<div class="mapwrap" id="mapwrap" role="dialog" aria-modal="true" aria-label="Mapa, memes y actividad de la comunidad"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabMemes">Memes locales</button><button class="tab" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
+<div class="mapwrap" id="mapwrap" role="dialog" aria-modal="true" aria-label="Mapa, memes y actividad de la comunidad"><div class="mapbox"><div class="maphd"><span class="maptitle" data-i18n="actividadMundo">Actividad en el mundo</span><button class="mapclose" id="mapClose">Cerrar</button></div><div class="tabs"><button class="tab sel" id="tabMemes">Memes Marvel</button><button class="tab" id="tabCom">Comunidad</button><button class="tab" id="tabEsc">Escenarios</button></div><div id="mapbody"></div></div></div>
 
 <div class="tour-overlay" id="tourOverlay">
   <div class="tour-spotlight" id="tourSpotlight"></div>
@@ -3204,10 +3204,10 @@ window.MapMemes = (() => {
     observer?.disconnect();observer=null;
     document.querySelectorAll('#memeList img').forEach(img=>{img.removeAttribute('src');img.removeAttribute('data-src');});
   }
-  function imageURL(code,value){
+  function imageURL(code,value,scope){
     if(typeof value!=='string')return null;
     try{
-      const base=new URL('data/memes/'+code+'/images/',document.baseURI);
+      const base=new URL('data/memes/'+(scope==='international'?'international':code)+'/images/',document.baseURI);
       const url=new URL(value,document.baseURI);
       const file=url.pathname.startsWith(base.pathname)?url.pathname.slice(base.pathname.length):'';
       return url.origin===base.origin&&!url.search&&!url.hash&&/^[a-z0-9][a-z0-9._-]*\.(?:png|jpe?g|webp|gif)$/i.test(file)?url.href:null;
@@ -3240,14 +3240,14 @@ window.MapMemes = (() => {
     document.getElementById('tabMemes')?.classList.add('sel');
     document.getElementById('tabCom')?.classList.remove('sel');document.getElementById('tabEsc')?.classList.remove('sel');
     body.replaceChildren();
-    const label=document.createElement('label');label.textContent='País de los memes ';label.htmlFor='memeCountry';
+    const label=document.createElement('label');label.textContent='País para ver memes ';label.htmlFor='memeCountry';
     const select=document.createElement('select');select.id='memeCountry';select.className='cb-reg';
     select.add(new Option('Selecciona un país',''));
     window.Region.countries().forEach(([value,name])=>select.add(new Option(name,value)));
     code=valid(code)?code:null;select.value=code||'';
     select.onchange=()=>{const next=select.value;if(valid(next))window.SafeStorage.setItem(KEY,next);else window.SafeStorage.removeItem(KEY);open(next);};
     label.appendChild(select);body.appendChild(label);
-    const hint=document.createElement('p');hint.textContent='País aproximado; puedes corregirlo. Fotos de cosplay y situaciones curiosas, elegidas al azar.';body.appendChild(hint);
+    const hint=document.createElement('p');hint.textContent='Fotos Marvel con humor visual, elegidas al azar. Selección internacional compartida; su país de origen no está acreditado.';body.appendChild(hint);
     const map=document.createElement('div');map.id='memeMap';map.className='meme-country-map';map.innerHTML=code?window.WorldMap.countryMap(code):'';body.appendChild(map);
     const status=document.createElement('p');status.id='memeStatus';status.setAttribute('role','status');body.appendChild(status);
     const list=document.createElement('div');list.id='memeList';list.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px';body.appendChild(list);
@@ -3263,7 +3263,7 @@ window.MapMemes = (() => {
       if(epoch!==window.MapView.generation)return;
       if(data.country!==code||!Array.isArray(data.memes))throw Error('Formato de país inválido');
       // Reject invalid/cross-country image paths before adding an img to the DOM.
-      const memes=data.memes.slice(0,50).map(item=>({item,url:imageURL(code,item?.image)})).filter(x=>x.url&&typeof x.item.title==='string');
+      const memes=data.memes.slice(0,50).map(item=>({item,url:imageURL(code,item?.image,data.scope)})).filter(x=>x.url&&typeof x.item.title==='string');
       if(!memes.length){status.textContent='Todavía no hay memes disponibles para este país.';return;}
       let remaining=[],previous=-1;
       const draw=()=>{
@@ -3278,10 +3278,11 @@ window.MapMemes = (() => {
         img.height=Number.isInteger(item.height)&&item.height>0&&item.height<=2048?item.height:512;
         img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto;max-height:55vh;object-fit:contain';
         img.onerror=()=>{img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
-        const caption=document.createElement('figcaption');caption.textContent=item.title+' · '+(typeof item.creator==='string'?item.creator:'');
+        const caption=document.createElement('figcaption');caption.textContent=item.title+(typeof item.creator==='string'?' · '+item.creator:'');
+        if(item.scope==='international')caption.append(' · País de origen no acreditado');
         const licenseHost=item.license==='Public domain'&&item.licenseUrl===item.source?'commons.wikimedia.org':'creativecommons.org';
-        for(const [label,value,host]of [['Fuente',item.source,'commons.wikimedia.org'],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
-          try{const linkURL=new URL(value);if(!['https:','http:'].includes(linkURL.protocol)||linkURL.hostname!==host)continue;linkURL.protocol='https:';
+        for(const [label,value,host]of [['Fuente',item.source,item.scope==='international'?'www.pinterest.com':'commons.wikimedia.org'],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
+          try{const linkURL=new URL(value);if(!['https:','http:'].includes(linkURL.protocol)||linkURL.hostname!==host)continue;if(host==='www.pinterest.com'&&!/^\/pin\/[0-9]+\/$/.test(linkURL.pathname))continue;linkURL.protocol='https:';
             const link=document.createElement('a');link.href=linkURL.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent=label;caption.append(' · ',link);
           }catch(e){}
         }
@@ -3291,7 +3292,7 @@ window.MapMemes = (() => {
       };
       draw();
       const next=document.createElement('button');next.className='tab';next.id='memeRandom';next.textContent='Otra foto aleatoria';next.disabled=memes.length<2;next.onclick=()=>{if(epoch===window.MapView.generation)draw();};body.appendChild(next);
-      status.textContent=memes.length+' fotos disponibles para '+select.selectedOptions[0].textContent+'.';
+      status.textContent=memes.length+' fotos'+(data.scope==='international'?' de la selección internacional.':' disponibles para '+select.selectedOptions[0].textContent+'.');
     }catch(e){
       if(epoch===window.MapView.generation)status.textContent='No se pudieron cargar los memes. Vuelve a seleccionar el país para reintentar.';
     }finally{if(controller===request){clearTimeout(timer);timer=null;controller=null;}}

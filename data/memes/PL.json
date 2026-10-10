@@ -1,31 +1,60 @@
 {
   "country": "PL",
+  "scope": "international",
   "memes": [
     {
-      "title": "Los personajes de creepypasta salen de convención",
-      "alt": "Los personajes de creepypasta salen de convención",
-      "image": "data/memes/PL/images/photo-1.webp",
-      "width": 768,
-      "height": 606,
-      "creator": "Klarqa",
-      "source": "https://commons.wikimedia.org/wiki/File:Pyrkon_2019_Cosplay_Creepypasta.jpg",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Pyrkon 2019; Category:Unidentified cosplay in Poland"
+      "id": "avengers-office",
+      "title": "Los Avengers también tienen reuniones que pudieron ser un correo",
+      "image": "data/memes/international/images/avengers-office.webp",
+      "source": "https://www.pinterest.com/pin/678636237574158906/",
+      "publisher": "musclegeekonline",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Captain America",
+        "Thor",
+        "Doctor Strange",
+        "Spider-Man",
+        "Black Widow",
+        "Hawkeye",
+        "Falcon"
+      ],
+      "visualGag": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "width": 735,
+      "height": 512,
+      "bytes": 40528,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     },
     {
-      "title": "My Hero Academia llega a Pyrkon",
-      "alt": "My Hero Academia llega a Pyrkon",
-      "image": "data/memes/PL/images/photo-2.webp",
-      "width": 768,
-      "height": 466,
-      "creator": "Klarqa",
-      "source": "https://commons.wikimedia.org/wiki/File:Pyrkon_2019_Cosplay_Boku_No_Hero_Academia.jpg",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Pyrkon 2019; Category:Cosplay of My Hero Academia in Poland"
+      "id": "iron-man-costumes",
+      "title": "Dos Iron Man, dos presupuestos",
+      "image": "data/memes/international/images/iron-man-costumes.webp",
+      "source": "https://www.pinterest.com/pin/392516923774440652/",
+      "publisher": "Metro / metrouk",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "width": 660,
+      "height": 495,
+      "bytes": 36748,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     }
   ]
 }

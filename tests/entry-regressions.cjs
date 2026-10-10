@@ -129,16 +129,20 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   w.IntersectionObserver=undefined;w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[{title:'EC',image:'data/memes/EC/images/fixture.webp'}]})});
   await w.MapMemes.open('EC');assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert.equal(d.querySelector('#memeList button').textContent,'Cargar imagen');
  });
- await test('Contenido: fotos reales con procedencia; ningún país usa tarjetas de texto',async({w})=>{
-  const codes=w.Region.countries().map(c=>c[0]);assert.equal(codes.length,51);
-  let count=0,countries=0;
-  for(const code of codes){const file=path.join(__dirname,'../data/memes',code+'.json'),data=JSON.parse(fs.readFileSync(file,'utf8'));
-   assert.equal(data.country,code);assert(Array.isArray(data.memes));if(data.memes.length)countries++;
-   for(const meme of data.memes){count++;assert(meme.image.startsWith('data/memes/'+code+'/images/photo-'));assert(meme.title.length>10);assert(meme.width>0&&meme.width<=768);assert(meme.height>0&&meme.height<=768);assert(meme.countryEvidence);assert.equal(new URL(meme.source).hostname,'commons.wikimedia.org');assert(meme.license);assert(meme.creator);
-    const image=fs.readFileSync(path.join(__dirname,'..',meme.image));assert.equal(image.toString('ascii',0,4),'RIFF');assert.equal(image.toString('ascii',8,12),'WEBP');assert(image.length<100000);
+ await test('Contenido Marvel: selección internacional compartida sin país ni licencia inventados',async({w})=>{
+  const codes=w.Region.countries().map(c=>c[0]);assert.equal(codes.length,51);const paths=new Set();
+  for(const code of codes){const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/memes',code+'.json'),'utf8'));
+   assert.equal(data.country,code);assert.equal(data.scope,'international');assert.equal(data.memes.length,2);
+   for(const item of data.memes){assert.equal(item.country,null);assert.equal(item.creator,null);assert.equal(item.license,null);assert.equal(item.countryEvidence,null);assert.equal(item.hasMemeTextOverlay,false);assert(item.reviewedVisually&&item.visualGag&&item.characters.length);assert(item.image.startsWith('data/memes/international/images/'));assert.equal(new URL(item.source).hostname,'www.pinterest.com');assert(item.width>0&&item.width<=768);assert(item.height>0&&item.height<=768);
+    const bytes=fs.readFileSync(path.join(__dirname,'..',item.image));assert(bytes.length<100000);assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');paths.add(item.image);
    }
   }
-  const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));assert.equal(count,sources.length);assert.equal(countries,new Set(sources.map(s=>s.country)).size);assert.equal(count,96);assert.equal(countries,51);
+  assert.equal(paths.size,2);const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));assert.equal(sources.length,2);
+ });
+ await test('Selección internacional: una foto local diferida, atribución Pinterest y sin país inventado',async({w,d})=>{
+  const calls=[];w.fetch=async url=>{calls.push(new URL(url).pathname);return {ok:true,json:async()=>({country:'EC',scope:'international',memes:[{title:'Marvel <script>bad()</script>',scope:'international',country:null,creator:null,license:null,image:'data/memes/international/images/avengers-office.webp',source:'https://www.pinterest.com/pin/678636237574158906/'},{title:'Ruta externa',image:'https://www.pinterest.com/photo.webp'},{title:'Otro país',image:'data/memes/MX/images/photo.webp'}]})};};
+  await w.MapMemes.open('EC');assert.deepEqual(calls,['/tracker/data/memes/EC.json']);assert.equal(d.querySelectorAll('#memeList img').length,1);assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert(d.querySelector('#memeStatus').textContent.includes('internacional'));assert(!d.querySelector('#memeStatus').textContent.includes('para Ecuador'));assert(d.querySelector('figcaption').textContent.includes('País de origen no acreditado'));assert.equal(d.querySelector('figcaption script'),null);
+  const link=d.querySelector('figcaption a');assert.equal(link.href,'https://www.pinterest.com/pin/678636237574158906/');assert.equal(link.rel,'noopener noreferrer');assert.equal(d.querySelectorAll('figcaption a').length,1);
  });
  await test('Atribución: dominio público enlaza su declaración y rechaza HTML y hosts externos',async({w,d})=>{
   const source='https://commons.wikimedia.org/wiki/File:Example.jpg';let item={title:'Foto <img src=x>',creator:'<script>bad()</script>',image:'data/memes/EC/images/photo-1.webp',source,license:'Public domain',licenseUrl:source};

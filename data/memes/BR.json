@@ -1,31 +1,60 @@
 {
   "country": "BR",
+  "scope": "international",
   "memes": [
     {
-      "title": "Spider-Man se apunta al carnaval",
-      "alt": "Spider-Man se apunta al carnaval",
-      "image": "data/memes/BR/images/photo-1.webp",
-      "width": 768,
-      "height": 576,
-      "creator": "Quintinense",
-      "source": "https://commons.wikimedia.org/wiki/File:Carnaval_2012_-_Homem-Aranha_-_Cer%C3%A2mica,_Nova_Igua%C3%A7u.JPG",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Descripción del fotógrafo: Carnaval de Cerâmica, Nova Iguaçu-RJ, Brasil, 18 de febrero de 2012"
+      "id": "avengers-office",
+      "title": "Los Avengers también tienen reuniones que pudieron ser un correo",
+      "image": "data/memes/international/images/avengers-office.webp",
+      "source": "https://www.pinterest.com/pin/678636237574158906/",
+      "publisher": "musclegeekonline",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Captain America",
+        "Thor",
+        "Doctor Strange",
+        "Spider-Man",
+        "Black Widow",
+        "Hawkeye",
+        "Falcon"
+      ],
+      "visualGag": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "width": 735,
+      "height": 512,
+      "bytes": 40528,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     },
     {
-      "title": "Spider-Man de fiesta en Olinda",
-      "alt": "Spider-Man de fiesta en Olinda",
-      "image": "data/memes/BR/images/photo-2.webp",
-      "width": 516,
-      "height": 768,
-      "creator": "Prefeitura de Olinda from Brasil",
-      "source": "https://commons.wikimedia.org/wiki/File:Homem_Aranha_de_Olinda_-_Carnaval_2012_(6917644937).jpg",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Carnival in Olinda in 2012; fotografía de Prefeitura de Olinda, Brasil, 21 de febrero de 2012"
+      "id": "iron-man-costumes",
+      "title": "Dos Iron Man, dos presupuestos",
+      "image": "data/memes/international/images/iron-man-costumes.webp",
+      "source": "https://www.pinterest.com/pin/392516923774440652/",
+      "publisher": "Metro / metrouk",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "width": 660,
+      "height": 495,
+      "bytes": 36748,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     }
   ]
 }
