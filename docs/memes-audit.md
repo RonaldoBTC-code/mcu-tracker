@@ -1,25 +1,33 @@
-# Auditoría de fotos por país
+# Auditoría de fotos por país — revisión final previa al despliegue
 
-## Estado real
+## Alcance y contenido
 
-La colección anterior de 102 tarjetas de texto no cumplía el formato requerido y fue retirada junto con su generador. La colección actual tiene 69 fotos reales inspeccionadas en 35 países. Quedan 16 países vacíos: AE, BO, CR, CU, DO, GT, HN, IL, NI, PA, PR, PY, SV, TR, UY y VE. Cobertura y despliegue final incompletos.
+La colección anterior de 102 tarjetas de texto incumplía el formato pedido y fue retirada junto con su generador. Se inspeccionaron las 96 fotos reales de la colección final, asignadas a los 51 países soportados. CU, GT, PR, SV, TR y ZA tienen una; los otros 45 países tienen dos. En Honduras se usan escenas curiosas de visitantes con guacamayos, no cosplay. En otros países se incluyen también carnavales y representación de personajes, además de Marvel.
 
-La revisión incluye cosplay, disfraces de carnavales y escenas curiosas. Se descartaron panorámicas de Argentina, Nueva Zelanda, Suecia y Austria donde los disfraces apenas se distinguían. La selección conserva proporciones y no añade texto. GB, CL, TH y PT contienen parejas de la misma sesión/grupo desde distintos ángulos; ZA tiene una sola foto.
+No se inventan procedencias ni se deduce el país del fotógrafo. Se contrastan descripción, evento, categorías o ubicación documentada. Se descartaron fotografías de Mumbai inicialmente confundidas con Emiratos por la sigla MFCC, panorámicas poco claras, un desfile de caballos, pinturas, documentos, collages y máscaras de museo. GB, CL, TH y PT muestran parejas de la misma sesión/disfraz o grupo desde distintos ángulos.
 
-## Seguridad y procedencia
+## Hallazgos corregidos
 
-País validado antes de fetch; manifiestos de otro país rechazados. Rutas locales, nombres planos y carpeta del país; rutas codificadas y externas rechazadas. Pies mediante textContent y enlaces restringidos a Commons/Creative Commons. AbortController, generación y limpieza del observer evitan que respuestas anteriores cambien la vista actual.
+1. Formato incorrecto: se retiraron tarjetas de texto y su código de generación; ahora se usan fotografías locales reales.
+2. Carga excesiva: una foto por vez y manifiesto del país seleccionado. El botón reutiliza la lista en memoria, sin índice global ni precarga de otros países.
+3. Atribución de dominio público oculta: el enlace de licencia noruego se rechazaba por apuntar a Commons. Se permite únicamente cuando la licencia es Public domain y el enlace coincide con la fuente Commons validada; no se amplía el permiso a hosts externos.
+4. Archivos demasiado pesados: el importador reduce calidad y dimensiones respetando proporciones, con límite inferior a 100.000 bytes por WebP.
+5. Consultas repetidas y limitadas: el importador reutiliza las fotos existentes y respeta Retry-After para HTTP 429/503. No participa en el tiempo de carga del navegador.
 
-Fuentes, autores, licencias, evidencia geográfica y tamaños están en photo-inventory.json. No se deduce el país de la nacionalidad del fotógrafo. Se contrastan descripción, evento, categorías o ubicación explícita. La fotografía del stormtrooper noruego tiene declaración PD-self de su autor; se preserva el enlace de esa declaración sin inventar una licencia CC0. Las fotografías CC mantienen las condiciones indicadas en su fuente.
+## Controles del código
 
-## Rendimiento y código
+País validado antes de fetch; respuesta de otro país rechazada. Nombres de imagen planos, carpeta del país, mismo origen y sin query/hash. Se rechazan rutas codificadas o externas. Pies con textContent y enlaces con noopener noreferrer. AbortController, timeout, generación y limpieza de observer evitan respuestas tardías y actualizaciones de una pestaña cerrada.
 
-Una foto aleatoria por vez. Cambiarla reutiliza el manifiesto en memoria; no descarga un índice global. Foto única desactiva el botón. Países vacíos muestran estado explícito. Mapa limitado a la región visible, sin nueva dependencia de frontend.
+Selección aleatoria sin repetir archivo inmediatamente; una foto desactiva el botón. Se reservan proporciones, se usa loading=lazy y decoding=async. El mapa dibuja la región visible; no se agrega dependencia de frontend. No quedan tarjetas antiguas, generador ni catálogo global de imágenes en el código publicado del PR.
 
-Cada WebP pesa menos de 100.000 bytes; las 69 fotos suman 3.747.250 bytes. Ninguna entrada descarga el conjunto completo. El importador se ejecuta solo al preparar contenido, reutiliza archivos existentes, respeta Retry-After en 429/503 y reduce dimensiones cuando la compresión no basta. Estos límites no prometen tiempos de Internet.
+## Licencias y tamaño
 
-## Evidencia y cierre pendiente
+Fuentes, autores, licencias, cambios y evidencia geográfica: photo-inventory.json. Cobertura: photo-coverage.json. Se preservan las condiciones CC/ShareAlike. La foto noruega del stormtrooper tiene liberación PD-self documentada; no se inventa licencia CC0. La licencia general del código no sustituye las licencias de imágenes.
 
-Resultados de pruebas en entry-fixes-results.json y browser-memes-results.json. La comprobación de Chrome recorre los 51 países y registra solicitudes, imágenes decodificadas, estado vacío, persistencia y guía 7→8→fin en escritorio y móvil emulado. Ecuador solicita solamente EC.json y una imagen de su propia carpeta al entrar. No se prueban escrituras reales ni envíos OTP.
+Las 96 fotos suman 5.567.802 bytes; el mayor archivo pesa 98.738 bytes. El conjunto no se descarga al entrar. Las mediciones locales de Chrome no prometen tiempos de Internet.
 
-El cierre exige contenido inspeccionado de los 51 países, revisión final de procedencia y licencias, auditoría del código y solicitudes del conjunto completo, despliegue de Pages y comprobación de la versión publicada. No marcar completo con cobertura parcial. Pendientes históricos de OTP, Supabase y concurrencia: entry-fixes.md.
+## Evidencia y puerta de publicación
+
+Resultados DOM en entry-fixes-results.json y Chrome en browser-memes-results.json. La comprobación del navegador recorre los 51 países y sus 96 fotos en escritorio y móvil emulado; registra solicitudes, decodificación, estado de botón único, persistencia y guía 7→8→fin. Ecuador pide únicamente EC.json y una imagen de su carpeta al entrar. Las pruebas bloquean conexiones externas, no escriben en Supabase ni envían OTP.
+
+Falta fusionar/publicar el commit verificado y comprobar que Pages sirve esa versión y sus imágenes. El objetivo permanece activo hasta verificar el despliegue. No se afirma que estén resueltos OTP real, pruebas en dispositivos físicos o concurrencia entre dispositivos; pendientes históricos en entry-fixes.md.

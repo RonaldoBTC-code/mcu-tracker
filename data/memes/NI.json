@@ -1,4 +1,31 @@
 {
   "country": "NI",
-  "memes": []
+  "memes": [
+    {
+      "title": "Máscaras y disfraces en Diriamba",
+      "alt": "Máscaras y disfraces en Diriamba",
+      "image": "data/memes/NI/images/photo-1.webp",
+      "width": 504,
+      "height": 768,
+      "creator": "SeleneYang",
+      "source": "https://commons.wikimedia.org/wiki/File:G%C3%BCeguense_o_Macho_Rat%C3%B3n.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: El Güegüense, Diriamba, Carazo, Nicaragua"
+    },
+    {
+      "title": "El personaje Macho Ratón sale a la fiesta",
+      "alt": "El personaje Macho Ratón sale a la fiesta",
+      "image": "data/memes/NI/images/photo-2.webp",
+      "width": 720,
+      "height": 482,
+      "creator": "SeleneYang",
+      "source": "https://commons.wikimedia.org/wiki/File:Macho_rat%C3%B3n.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: El Güegüense durante las fiestas de Diriamba, Nicaragua"
+    }
+  ]
 }

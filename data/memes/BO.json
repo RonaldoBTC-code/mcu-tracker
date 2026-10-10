@@ -1,4 +1,31 @@
 {
   "country": "BO",
-  "memes": []
+  "memes": [
+    {
+      "title": "Papá Noel de paseo por Santa Cruz",
+      "alt": "Papá Noel de paseo por Santa Cruz",
+      "image": "data/memes/BO/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Jail ibañez",
+      "source": "https://commons.wikimedia.org/wiki/File:Pap%C3%A1_Noel_santa_cruz.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Category:Santa Cruz de la Sierra, Bolivia; Santa Claus in Bolivia"
+    },
+    {
+      "title": "Depredador se apunta al Corso de Corsos",
+      "alt": "Depredador se apunta al Corso de Corsos",
+      "image": "data/memes/BO/images/photo-2.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Guillotinado",
+      "source": "https://commons.wikimedia.org/wiki/File:Corso_de_Corsos_2024_Cochabamba_03.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: disfraz de Depredador; Corso de Corsos 2024, Cochabamba, Bolivia"
+    }
+  ]
 }

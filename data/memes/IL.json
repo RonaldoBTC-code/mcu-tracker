@@ -1,4 +1,31 @@
 {
   "country": "IL",
-  "memes": []
+  "memes": [
+    {
+      "title": "Spider-Man sale de Purim en Tel Aviv",
+      "alt": "Spider-Man sale de Purim en Tel Aviv",
+      "image": "data/memes/IL/images/photo-1.webp",
+      "width": 512,
+      "height": 768,
+      "creator": "IgorZed from Tel Aviv, ISRAEL",
+      "source": "https://commons.wikimedia.org/wiki/File:Purim_2018_(25749998627).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Purim 2018 en Tel Aviv; Category:Cosplay of Spider-Man in Israel"
+    },
+    {
+      "title": "Hello Kitty se apunta a Purim",
+      "alt": "Hello Kitty se apunta a Purim",
+      "image": "data/memes/IL/images/photo-2.webp",
+      "width": 512,
+      "height": 768,
+      "creator": "IgorZed from Tel Aviv, ISRAEL",
+      "source": "https://commons.wikimedia.org/wiki/File:Purim_2016_(25439877783).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Purim 2016 en Tel Aviv; Category:Cosplay of Hello Kitty in Israel"
+    }
+  ]
 }

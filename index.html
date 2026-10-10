@@ -3279,7 +3279,8 @@ window.MapMemes = (() => {
         img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto;max-height:55vh;object-fit:contain';
         img.onerror=()=>{img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
         const caption=document.createElement('figcaption');caption.textContent=item.title+' · '+(typeof item.creator==='string'?item.creator:'');
-        for(const [label,value,host]of [['Fuente',item.source,'commons.wikimedia.org'],[item.license||'Licencia',item.licenseUrl,'creativecommons.org']]){
+        const licenseHost=item.license==='Public domain'&&item.licenseUrl===item.source?'commons.wikimedia.org':'creativecommons.org';
+        for(const [label,value,host]of [['Fuente',item.source,'commons.wikimedia.org'],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
           try{const linkURL=new URL(value);if(!['https:','http:'].includes(linkURL.protocol)||linkURL.hostname!==host)continue;linkURL.protocol='https:';
             const link=document.createElement('a');link.href=linkURL.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent=label;caption.append(' · ',link);
           }catch(e){}

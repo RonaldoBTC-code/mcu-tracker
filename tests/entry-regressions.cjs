@@ -138,7 +138,13 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
     const image=fs.readFileSync(path.join(__dirname,'..',meme.image));assert.equal(image.toString('ascii',0,4),'RIFF');assert.equal(image.toString('ascii',8,12),'WEBP');assert(image.length<100000);
    }
   }
-  const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));assert.equal(count,sources.length);assert.equal(countries,new Set(sources.map(s=>s.country)).size);assert.equal(count,69);assert.equal(countries,35);
+  const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));assert.equal(count,sources.length);assert.equal(countries,new Set(sources.map(s=>s.country)).size);assert.equal(count,96);assert.equal(countries,51);
+ });
+ await test('Atribución: dominio público enlaza su declaración y rechaza HTML y hosts externos',async({w,d})=>{
+  const source='https://commons.wikimedia.org/wiki/File:Example.jpg';let item={title:'Foto <img src=x>',creator:'<script>bad()</script>',image:'data/memes/EC/images/photo-1.webp',source,license:'Public domain',licenseUrl:source};
+  w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[item]})});await w.MapMemes.open('EC');
+  const links=d.querySelectorAll('#memeList figcaption a');assert.equal(links.length,2);assert.equal(links[1].href,source);assert.equal(links[1].textContent,'Public domain');assert.equal(links[1].rel,'noopener noreferrer');assert.equal(d.querySelectorAll('#memeList figcaption script,#memeList figcaption img').length,0);
+  item={...item,source:'javascript:bad()',licenseUrl:'https://example.org/license'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,0);
  });
  await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{
   let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))})};};

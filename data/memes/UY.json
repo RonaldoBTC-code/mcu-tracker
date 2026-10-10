@@ -1,4 +1,31 @@
 {
   "country": "UY",
-  "memes": []
+  "memes": [
+    {
+      "title": "El Caraca sale a escena en Canelones",
+      "alt": "El Caraca sale a escena en Canelones",
+      "image": "data/memes/UY/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Martuldl Fotografia",
+      "source": "https://commons.wikimedia.org/wiki/File:El_Caraca_con_la_Murga_Falta_y_resto.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: personaje El Caraca de Murga Falta y Resto, Tablado Monumental de la Costa, Canelones, Uruguay"
+    },
+    {
+      "title": "La Murga Vieja Diabla sale a escena",
+      "alt": "La Murga Vieja Diabla sale a escena",
+      "image": "data/memes/UY/images/photo-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Martuldl Fotografia",
+      "source": "https://commons.wikimedia.org/wiki/File:Salpicon_de_Murga_Vieja_Diabla.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Tablado de Parque del Plata durante carnaval 2026; Category:Carnival in Parque del Plata 2026, Uruguay"
+    }
+  ]
 }

@@ -1,4 +1,31 @@
 {
   "country": "PY",
-  "memes": []
+  "memes": [
+    {
+      "title": "Un traje de plumas en el carnaval de Encarnación",
+      "alt": "Un traje de plumas en el carnaval de Encarnación",
+      "image": "data/memes/PY/images/photo-1.webp",
+      "width": 488,
+      "height": 768,
+      "creator": "Cmasi",
+      "source": "https://commons.wikimedia.org/wiki/File:Dancers_at_Carnaval_parade_in_Encarnaci%C3%B3n_234233_HDR.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Carnaval of Encarnación; Category:Female dancers from Paraguay"
+    },
+    {
+      "title": "Demasiadas rayas en el mismo desfile",
+      "alt": "Demasiadas rayas en el mismo desfile",
+      "image": "data/memes/PY/images/photo-2.webp",
+      "width": 768,
+      "height": 432,
+      "creator": "Cmasi",
+      "source": "https://commons.wikimedia.org/wiki/File:Dancers_at_Carnaval_parade_in_Encarnaci%C3%B3n_235152.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Carnaval of Encarnación; Category:Musical groups from Paraguay"
+    }
+  ]
 }

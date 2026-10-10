@@ -120,6 +120,10 @@
     "status": "PASS"
   },
   {
+    "name": "Atribución: dominio público enlaza su declaración y rechaza HTML y hosts externos",
+    "status": "PASS"
+  },
+  {
     "name": "Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch",
     "status": "PASS"
   }
