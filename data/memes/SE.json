@@ -1,4 +1,31 @@
 {
   "country": "SE",
-  "memes": []
+  "memes": [
+    {
+      "title": "Stormtroopers de rosa en Estocolmo",
+      "alt": "Stormtroopers de rosa en Estocolmo",
+      "image": "data/memes/SE/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "AleWi",
+      "source": "https://commons.wikimedia.org/wiki/File:Stockhom_Pride_2016_-_11.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Stockholm Pride 2016; Category:Cosplay in Sweden"
+    },
+    {
+      "title": "Un disfraz visita DreamHack Stockholm",
+      "alt": "Un disfraz visita DreamHack Stockholm",
+      "image": "data/memes/SE/images/photo-2.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Rose Abrams",
+      "source": "https://commons.wikimedia.org/wiki/File:DH25_cosplay_04.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: cosplay en DreamHack Stockholm 2025, Suecia"
+    }
+  ]
 }

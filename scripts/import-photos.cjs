@@ -31,17 +31,18 @@ async function request(url){
   const result=await response.json(),info=Object.values(result.query.pages)[0]?.imageinfo?.[0];
   if(!info)throw Error('Missing source '+source.file);
   const meta=info.extmetadata,license=meta.LicenseShortName?.value;
-  if(!/^(?:CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)|CC BY-SA 3\.0 de|CC0)$/.test(license||''))throw Error('Review license '+source.file);
+  const released=license==='Public domain'&&meta.Copyrighted?.value==='False'&&meta.Categories?.value.split('|').includes('PD-self');
+  if(!released&&!/^(?:CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)|CC BY-SA 3\.0 de|CC0)$/.test(license||''))throw Error('Review license '+source.file);
   const image=await request(info.thumburl||info.url);
   const bytes=Buffer.from(await image.arrayBuffer());if(bytes.length>10000000)throw Error('Image too large');
   const n=data[source.country].memes.length+1,name='photo-'+n+'.webp',dir=path.join(root,'data/memes',source.country,'images');fs.mkdirSync(dir,{recursive:true});
   let output;
-  for(const quality of [76,68,60,50]){
-   output=await sharp(bytes).rotate().resize({width:768,height:768,fit:'inside',withoutEnlargement:true}).webp({quality,effort:6}).toFile(path.join(dir,name));
+  for(const [size,quality] of [[768,76],[768,68],[640,68],[512,60]]){
+   output=await sharp(bytes).rotate().resize({width:size,height:size,fit:'inside',withoutEnlargement:true}).webp({quality,effort:6}).toFile(path.join(dir,name));
    if(output.size<100000)break;
   }
   if(output.size>=100000)throw Error('Compressed image too large '+source.file);
-  const item={title:source.title,alt:source.title,image:'data/memes/'+source.country+'/images/'+name,width:output.width,height:output.height,creator:plain(meta.Artist?.value),source:info.descriptionurl,license,licenseUrl:meta.LicenseUrl?.value,changes:'Redimensionada y convertida a WebP; sin texto añadido',countryEvidence:source.countryEvidence};
+  const item={title:source.title,alt:source.title,image:'data/memes/'+source.country+'/images/'+name,width:output.width,height:output.height,creator:plain(meta.Artist?.value),source:info.descriptionurl,license,licenseUrl:meta.LicenseUrl?.value||(released?info.descriptionurl:undefined),changes:'Redimensionada y convertida a WebP; sin texto añadido',countryEvidence:source.countryEvidence};
   data[source.country].memes.push(item);inventory.push({...item,country:source.country,bytes:output.size});
  }
  for(const [code,value]of Object.entries(data))fs.writeFileSync(path.join(root,'data/memes',code+'.json'),JSON.stringify(value,null,2)+'\n');

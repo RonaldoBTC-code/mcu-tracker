@@ -1,4 +1,31 @@
 {
   "country": "FI",
-  "memes": []
+  "memes": [
+    {
+      "title": "Disney se reúne en Animecon Helsinki",
+      "alt": "Disney se reúne en Animecon Helsinki",
+      "image": "data/memes/FI/images/photo-1.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "JIP | Talk.\n\nOriginal uploader was JIP at en.wikipedia",
+      "source": "https://commons.wikimedia.org/wiki/File:Disney_princesses_cosplay_at_Animecon_2009.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Animecon 2009, Helsinki, Finlandia"
+    },
+    {
+      "title": "Personajes de videojuegos en Yukicon",
+      "alt": "Personajes de videojuegos en Yukicon",
+      "image": "data/memes/FI/images/photo-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Matias Tukiainen from Espoo, Finland",
+      "source": "https://commons.wikimedia.org/wiki/File:Unidentified_cosplay_of_Elsword_and_Shadow_Hearts,_cosplay_of_Reimu_Hakurei_from_Touhou_Project_at_Yukicon_2014_(20140118173024IMG_5490_-_Yukicon_2014_-_matiast1).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Yukicon 2014; Category:Cosplay of Reimu Hakurei in Finland"
+    }
+  ]
 }

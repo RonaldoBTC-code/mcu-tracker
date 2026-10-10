@@ -1,4 +1,18 @@
 {
   "country": "ZA",
-  "memes": []
+  "memes": [
+    {
+      "title": "Mario y Luigi se van de festival",
+      "alt": "Mario y Luigi se van de festival",
+      "image": "data/memes/ZA/images/photo-1.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Bernard303",
+      "source": "https://commons.wikimedia.org/wiki/File:Mario_Bros.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Rocking the Daisies Music Festival; Category:2014 festivals in South Africa"
+    }
+  ]
 }

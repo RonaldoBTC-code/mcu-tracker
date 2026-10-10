@@ -1,34 +1,25 @@
-# Auditoría de fotos por país — revisión del formato
-
-## Corrección de alcance
-
-La colección anterior de 102 tarjetas de texto fue rechazada por el usuario. Sus pruebas solo demostraban funcionamiento técnico, no que el contenido satisficiera el formato solicitado. No constituye una entrega terminada. Las tarjetas y el generador se retiran del PR sin publicarlos en main.
+# Auditoría de fotos por país
 
 ## Estado real
 
-- Treinta y cuatro fotos de personas en cosplay, con autor, licencia, evento y país documentados; Australia, Bélgica, Brasil, Canadá, España, Reino Unido, Japón, Estados Unidos, Ecuador, México, Argentina, Colombia, Perú, Chile, Francia, Italia y Alemania.
-- Selección aleatoria de una foto por vez, sin repetición inmediata; ninguna descarga global.
-- Treinta y cuatro países sin fotos verificadas. Estado vacío explícito; contenido completo y despliegue pendientes.
-- Proporción original reservada en el DOM; adaptación WebP, sin añadir textos o recortar personas.
+La colección anterior de 102 tarjetas de texto no cumplía el formato requerido y fue retirada junto con su generador. La colección actual tiene 69 fotos reales inspeccionadas en 35 países. Quedan 16 países vacíos: AE, BO, CR, CU, DO, GT, HN, IL, NI, PA, PR, PY, SV, TR, UY y VE. Cobertura y despliegue final incompletos.
 
-## Controles revisados
+La revisión incluye cosplay, disfraces de carnavales y escenas curiosas. Se descartaron panorámicas de Argentina, Nueva Zelanda, Suecia y Austria donde los disfraces apenas se distinguían. La selección conserva proporciones y no añade texto. GB, CL, TH y PT contienen parejas de la misma sesión/grupo desde distintos ángulos; ZA tiene una sola foto.
 
-País validado antes de fetch. Archivo de país incorrecto rechazado. Nombres de imagen planos y locales; sin rutas codificadas o de otros países. Textos mediante textContent. Enlaces de atribución restringidos a Commons y Creative Commons. AbortController y generación para cambio/cierre; observer anterior desconectado. Botón aleatorio conserva la lista del país en memoria y no solicita otro catálogo.
+## Seguridad y procedencia
 
-El mapa dibuja solo la región visible. No se añade dependencia de frontend. Las medidas anteriores de las tarjetas de texto no describen las fotos actuales; consultar photo-inventory.json y los resultados reales actualizados. Ninguna cifra local promete tiempos de Internet.
+País validado antes de fetch; manifiestos de otro país rechazados. Rutas locales, nombres planos y carpeta del país; rutas codificadas y externas rechazadas. Pies mediante textContent y enlaces restringidos a Commons/Creative Commons. AbortController, generación y limpieza del observer evitan que respuestas anteriores cambien la vista actual.
 
-## Evidencia y requisitos abiertos
+Fuentes, autores, licencias, evidencia geográfica y tamaños están en photo-inventory.json. No se deduce el país de la nacionalidad del fotógrafo. Se contrastan descripción, evento, categorías o ubicación explícita. La fotografía del stormtrooper noruego tiene declaración PD-self de su autor; se preserva el enlace de esa declaración sin inventar una licencia CC0. Las fotografías CC mantienen las condiciones indicadas en su fuente.
 
-photo-inventory.json recoge treinta y cuatro fuentes, autoría, licencia, cambios de formato y tamaños. Las imágenes se inspeccionaron en una hoja de contacto: cosplay mash-up de Pikachu/Iron Man, versión steampunk, Buzz Lightyear/Iron Man, Deadpool/Iron Man y una interpretación literal de Iron Man. Son fotos de eventos, no fotografías generadas.
+## Rendimiento y código
 
-Los resultados DOM y Chrome están en entry-fixes-results.json y browser-memes-results.json. La prueba de Chrome registra EC.json y una sola imagen ecuatoriana al entrar; los países con fotos descargan solo su archivo y la imagen elegida.
+Una foto aleatoria por vez. Cambiarla reutiliza el manifiesto en memoria; no descarga un índice global. Foto única desactiva el botón. Países vacíos muestran estado explícito. Mapa limitado a la región visible, sin nueva dependencia de frontend.
 
-La auditoría final exige cobertura real de los 51 países, revisión de cada procedencia, inspección visual, solicitudes por país y despliegue de Pages. No marcar el objetivo completo con una colección de diecisiete países. Los pendientes históricos de OTP, Supabase y concurrencia siguen en entry-fixes.md.
+Cada WebP pesa menos de 100.000 bytes; las 69 fotos suman 3.747.250 bytes. Ninguna entrada descarga el conjunto completo. El importador se ejecuta solo al preparar contenido, reutiliza archivos existentes, respeta Retry-After en 429/503 y reduce dimensiones cuando la compresión no basta. Estos límites no prometen tiempos de Internet.
 
-## Ampliación y rendimiento
+## Evidencia y cierre pendiente
 
-Se inspeccionaron las diez fotos añadidas: carnavales brasileños, Deadpool en el Trono de Hierro, Duffman y Deadpool, disfraces en Australia, Halloween y Spider-Man en Shibuya y cosplayers de Madrid. Cada WebP ocupa menos de 100.000 bytes; el conjunto de treinta y cuatro fotos ocupa 1.828.632 bytes y no se descarga completo al entrar. El importador reutiliza archivos verificados existentes y reintenta HTTP 429/503 respetando Retry-After. Estas funciones operan solo al preparar contenido.
+Resultados de pruebas en entry-fixes-results.json y browser-memes-results.json. La comprobación de Chrome recorre los 51 países y registra solicitudes, imágenes decodificadas, estado vacío, persistencia y guía 7→8→fin en escritorio y móvil emulado. Ecuador solicita solamente EC.json y una imagen de su propia carpeta al entrar. No se prueban escrituras reales ni envíos OTP.
 
-## Ampliación latinoamericana y europea
-
-Se inspeccionaron otras dieciocho fotos: Equipo Rocket y Cubone en Quito; Pomni y Auron en México; Harry Potter en Buenos Aires y disfraz colectivo del Carnaval del Pehuén; Ghost Rider y propuesta de matrimonio en cosplay en Colombia; Superman y Buzz Lightyear en Lima; dos ángulos de un grupo en Comic Con Chile; Goku y Roshi en Francia; cosplayers y hada en Italia; Scrap Baby y Mario Kart en Alemania. La segunda foto chilena muestra el mismo grupo desde otro ángulo. Se descartó una panorámica del patio de Magic Meeting que no destacaba disfraces. La selección incluye cosplay y carnavales de otros universos conforme al formato general solicitado; no se exige que toda foto sea Marvel.
+El cierre exige contenido inspeccionado de los 51 países, revisión final de procedencia y licencias, auditoría del código y solicitudes del conjunto completo, despliegue de Pages y comprobación de la versión publicada. No marcar completo con cobertura parcial. Pendientes históricos de OTP, Supabase y concurrencia: entry-fixes.md.

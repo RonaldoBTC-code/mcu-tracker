@@ -1,4 +1,31 @@
 {
   "country": "PH",
-  "memes": []
+  "memes": [
+    {
+      "title": "Un superhéroe entra en acción",
+      "alt": "Un superhéroe entra en acción",
+      "image": "data/memes/PH/images/photo-1.webp",
+      "width": 768,
+      "height": 508,
+      "creator": "EMMAN A. FORONDA",
+      "source": "https://commons.wikimedia.org/wiki/File:Superhero_in_action.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Spider-Man en Binondo, Manila, Filipinas, 25 de enero de 2020"
+    },
+    {
+      "title": "Gundam se apunta a la convención",
+      "alt": "Gundam se apunta a la convención",
+      "image": "data/memes/PH/images/photo-2.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "Cookie Nguyen",
+      "source": "https://commons.wikimedia.org/wiki/File:Gundam_cosplayers_at_the_Basilika_Ng_Nazareno_2012.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: cosplayers filipinos en Basílica Ng Nazareno, Manila; Category:Cosplay in the Philippines"
+    }
+  ]
 }

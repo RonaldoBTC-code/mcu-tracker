@@ -1,4 +1,31 @@
 {
   "country": "PT",
-  "memes": []
+  "memes": [
+    {
+      "title": "Pikachu pasea junto al tranvía de Lisboa",
+      "alt": "Pikachu pasea junto al tranvía de Lisboa",
+      "image": "data/memes/PT/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Maria  Eklind",
+      "source": "https://commons.wikimedia.org/wiki/File:Streets_of_Lisbon_(33920589802).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Praça do Comércio; Category:April 2017 in Lisbon y cosplay de Pikachu"
+    },
+    {
+      "title": "Pikachu saluda en la Praça do Comércio",
+      "alt": "Pikachu saluda en la Praça do Comércio",
+      "image": "data/memes/PT/images/photo-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Susanne Nilsson",
+      "source": "https://commons.wikimedia.org/wiki/File:Pikachu_(34296520333).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Category:People in Praça do Comércio; Portugal photographs taken on 2017-04-05"
+    }
+  ]
 }

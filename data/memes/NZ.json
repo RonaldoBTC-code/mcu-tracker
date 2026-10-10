@@ -1,4 +1,31 @@
 {
   "country": "NZ",
-  "memes": []
+  "memes": [
+    {
+      "title": "Mortal Kombat visita el festival de Hokitika",
+      "alt": "Mortal Kombat visita el festival de Hokitika",
+      "image": "data/memes/NZ/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Eli Duke",
+      "source": "https://commons.wikimedia.org/wiki/File:New_Zealand,_Wildfoods_Festival_in_Hokitika,_Cosplay_of_Mortal_Kombat,_March_2011.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Hokitika Wildfoods Festival, Nueva Zelanda, marzo de 2011; categorías de cosplay en New Zealand"
+    },
+    {
+      "title": "Un Na’vi se apunta a bailar",
+      "alt": "Un Na’vi se apunta a bailar",
+      "image": "data/memes/NZ/images/photo-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Newsbie Pix",
+      "source": "https://commons.wikimedia.org/wiki/File:Costumed_Na%27vi_Dance.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Category:Cosplay in New Zealand; New Zealand photographs taken on 2010-02-06"
+    }
+  ]
 }

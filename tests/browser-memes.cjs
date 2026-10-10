@@ -43,6 +43,7 @@ const server=http.createServer((req,res)=>{
     maxOpenMs=Math.max(maxOpenMs,ms);
     const manifest=JSON.parse(fs.readFileSync(path.join(root,'data/memes',code+'.json'),'utf8'));
     if(manifest.memes.length){withPhotos++;let previous='';
+     if(manifest.memes.length===1)assert(await page.locator('#memeRandom').isDisabled());
      for(let i=0;i<manifest.memes.length;i++){
       await page.locator('#memeList img').scrollIntoViewIfNeeded();
       await page.waitForFunction(()=>document.querySelector('#memeList img')?.complete&&document.querySelector('#memeList img').naturalWidth>0);

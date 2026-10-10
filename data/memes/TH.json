@@ -1,4 +1,31 @@
 {
   "country": "TH",
-  "memes": []
+  "memes": [
+    {
+      "title": "Snow Miku firma autógrafos en Bangkok",
+      "alt": "Snow Miku firma autógrafos en Bangkok",
+      "image": "data/memes/TH/images/photo-1.webp",
+      "width": 512,
+      "height": 768,
+      "creator": "Danny Choo",
+      "source": "https://commons.wikimedia.org/wiki/File:Enako_cosplay_as_Snow_Miku_giving_autographs_in_Bangkok_2013-01-28.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor y categorías: Kinokuniya Bangkok, Tailandia, 28 de enero de 2013"
+    },
+    {
+      "title": "Snow Miku posa en Bangkok",
+      "alt": "Snow Miku posa en Bangkok",
+      "image": "data/memes/TH/images/photo-2.webp",
+      "width": 512,
+      "height": 768,
+      "creator": "Danny Choo",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Hatsune_Miku_by_Enako_20130201e.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Misma sesión en Kinokuniya Bangkok, Tailandia, 28 de enero de 2013"
+    }
+  ]
 }
