@@ -23,4 +23,4 @@ Se mantiene validación del país, carpeta local internacional permitida expresa
 
 ## Estado
 
-Preparada para revisión en Git; no fusionada ni desplegada. El Pages actual corresponde al PR #3 anterior y no es evidencia de publicación de esta corrección. Pruebas locales: entry-fixes-results.json y browser-memes-results.json. El móvil es emulado y Supabase/OTP reales quedan fuera de las pruebas.
+Publicada y verificada el 10 de octubre de 2026. PR #4 fusionado como e9d8872056352fd78deb4ff469efd02fe28725c0. Workflow 38082727671 completado correctamente. Los 54 archivos publicados coinciden con la versión probada; Chrome comprobó los 51 países en 1280×900 y 390×844, con 102 comprobaciones de imagen por tamaño, dos fotos únicas y ningún error no capturado. Guía 7→8→fin, selección aleatoria y persistencia: PASS. Evidencia: docs/pages-verification-results.json y docs/browser-pages-results.json. Pruebas locales: entry-fixes-results.json y browser-memes-results.json. El móvil es emulado y Supabase/OTP reales quedan fuera de las pruebas.

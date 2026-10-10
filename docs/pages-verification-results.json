@@ -1,0 +1,277 @@
+{
+  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "checkedAt": "2026-10-10T20:11:52.827Z",
+  "result": "PASS",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 195585,
+      "sha": "3144cebb17a5987625e01a4872f11cb6cb8a8401"
+    },
+    {
+      "file": "data/memes/AE.json",
+      "bytes": 1986,
+      "sha": "6ceaef744c9db9bb9149bcacd760d4f43e80c3f6"
+    },
+    {
+      "file": "data/memes/AR.json",
+      "bytes": 1986,
+      "sha": "9b97dbc645659e22585bc979e0c7448a68f84de1"
+    },
+    {
+      "file": "data/memes/AT.json",
+      "bytes": 1986,
+      "sha": "653d95ccc597280c5f02eca4d6acb618e67d6b22"
+    },
+    {
+      "file": "data/memes/AU.json",
+      "bytes": 1986,
+      "sha": "a5f9b41d398e7fd7999b8e757e1b3a0e69f20c8d"
+    },
+    {
+      "file": "data/memes/BE.json",
+      "bytes": 1986,
+      "sha": "51c4e63eb8e76c6a1625810868c284be9e494cf5"
+    },
+    {
+      "file": "data/memes/BO.json",
+      "bytes": 1986,
+      "sha": "772ef6743d3d284c50c99ad9f10117c5eaac1a48"
+    },
+    {
+      "file": "data/memes/BR.json",
+      "bytes": 1986,
+      "sha": "2fd7cc9406aaf7fac09574be0bcb82fd38d3e605"
+    },
+    {
+      "file": "data/memes/CA.json",
+      "bytes": 1986,
+      "sha": "8ca86fd1120c552ec2a6c6d92452afc2a68f01f2"
+    },
+    {
+      "file": "data/memes/CH.json",
+      "bytes": 1986,
+      "sha": "72ad4f1f031f357cb49086ebf2a66b1cb6d80790"
+    },
+    {
+      "file": "data/memes/CL.json",
+      "bytes": 1986,
+      "sha": "8d595060d5276072a0c785addfb75201768a9acf"
+    },
+    {
+      "file": "data/memes/CO.json",
+      "bytes": 1986,
+      "sha": "3a0093b5618b6bd567d5b256ccec9141ba119926"
+    },
+    {
+      "file": "data/memes/CR.json",
+      "bytes": 1986,
+      "sha": "c5cc8af4ecc56596a7d4166f3936135d7d02ac49"
+    },
+    {
+      "file": "data/memes/CU.json",
+      "bytes": 1986,
+      "sha": "91b2e1880d2d18779c5c2ffe029877e694d04d53"
+    },
+    {
+      "file": "data/memes/DE.json",
+      "bytes": 1986,
+      "sha": "ba69c344f48d6ffb64a42713b57a3c1734231e47"
+    },
+    {
+      "file": "data/memes/DK.json",
+      "bytes": 1986,
+      "sha": "3ecc6ae5d69f4b9c34449211ffca5140278fb89d"
+    },
+    {
+      "file": "data/memes/DO.json",
+      "bytes": 1986,
+      "sha": "cb16fa13fad5e57b19ec3339ddbf92a2397f9cbe"
+    },
+    {
+      "file": "data/memes/EC.json",
+      "bytes": 1986,
+      "sha": "af5336111664898d9ef5a9e1e4d6250d3982e76d"
+    },
+    {
+      "file": "data/memes/ES.json",
+      "bytes": 1986,
+      "sha": "daadc88e61e9b5a6e62fb25abc50df2442960ef2"
+    },
+    {
+      "file": "data/memes/FI.json",
+      "bytes": 1986,
+      "sha": "4d5e294d05f6c0820c52847b817e18dc4e45872f"
+    },
+    {
+      "file": "data/memes/FR.json",
+      "bytes": 1986,
+      "sha": "57a9ec2160b93fa34a3a1fc29ad77b3c8d4c04cc"
+    },
+    {
+      "file": "data/memes/GB.json",
+      "bytes": 1986,
+      "sha": "31135aa9485d7450b9db75dc796325963a7ab74c"
+    },
+    {
+      "file": "data/memes/GT.json",
+      "bytes": 1986,
+      "sha": "163d74e2816e6d0bbb4ab88f32b78e376a90da97"
+    },
+    {
+      "file": "data/memes/HN.json",
+      "bytes": 1986,
+      "sha": "c27b911aa7e7a398fde8fa46bc253d82886f0e2a"
+    },
+    {
+      "file": "data/memes/ID.json",
+      "bytes": 1986,
+      "sha": "db3c369cd6a39b731f408f7f6e3b030c4e85bfc0"
+    },
+    {
+      "file": "data/memes/IE.json",
+      "bytes": 1986,
+      "sha": "0c1e1833f905203fb94aaf21bab172fb7095b15e"
+    },
+    {
+      "file": "data/memes/IL.json",
+      "bytes": 1986,
+      "sha": "ad1dd819c9cbefcbbd151fbf1cda86b2d1b4ac7b"
+    },
+    {
+      "file": "data/memes/IN.json",
+      "bytes": 1986,
+      "sha": "fa4a928c2e00d9417dcd2798ffad30b02aeb1f37"
+    },
+    {
+      "file": "data/memes/IT.json",
+      "bytes": 1986,
+      "sha": "cc8f91dd23366e40071becfaf8fde98160004b08"
+    },
+    {
+      "file": "data/memes/JP.json",
+      "bytes": 1986,
+      "sha": "4c362a546bde6ed31171a2a92f078e1226309c8f"
+    },
+    {
+      "file": "data/memes/KR.json",
+      "bytes": 1986,
+      "sha": "4c16e0cd994a6092aca2bbedb3e5fe6ffa7bac57"
+    },
+    {
+      "file": "data/memes/MX.json",
+      "bytes": 1986,
+      "sha": "a70efb460ee5e9fc373b96d4b8aef0bb342df158"
+    },
+    {
+      "file": "data/memes/NI.json",
+      "bytes": 1986,
+      "sha": "d99273c6a417b45b094a4562c92b74a16c267bbc"
+    },
+    {
+      "file": "data/memes/NL.json",
+      "bytes": 1986,
+      "sha": "5d753acdfccb587f458003fb015ecd7dcc12595d"
+    },
+    {
+      "file": "data/memes/NO.json",
+      "bytes": 1986,
+      "sha": "697b4dfcbdfef3e997c98af7dd9221328896f7b2"
+    },
+    {
+      "file": "data/memes/NZ.json",
+      "bytes": 1986,
+      "sha": "d276973761e81d3c9859a641cdadc5f3f124c1f8"
+    },
+    {
+      "file": "data/memes/PA.json",
+      "bytes": 1986,
+      "sha": "d70dfe316a965b5d67c5a6f4ebceb7decfaef2e2"
+    },
+    {
+      "file": "data/memes/PE.json",
+      "bytes": 1986,
+      "sha": "b2cbfeecd250fee16e00135fa943614f7f5ab2b0"
+    },
+    {
+      "file": "data/memes/PH.json",
+      "bytes": 1986,
+      "sha": "590087db8b188f40e49d963404f201d729581646"
+    },
+    {
+      "file": "data/memes/PL.json",
+      "bytes": 1986,
+      "sha": "f04cde503c1f5b2086fdf00d12522a35b60fba89"
+    },
+    {
+      "file": "data/memes/PR.json",
+      "bytes": 1986,
+      "sha": "be5f6515713b808e95a71a113d30cf10d9e2d547"
+    },
+    {
+      "file": "data/memes/PT.json",
+      "bytes": 1986,
+      "sha": "92052631b889ab331f525f09a1ed4b1bf68780a4"
+    },
+    {
+      "file": "data/memes/PY.json",
+      "bytes": 1986,
+      "sha": "6844421bed2477c690dc0f33c409f7b390e21a46"
+    },
+    {
+      "file": "data/memes/SE.json",
+      "bytes": 1986,
+      "sha": "9c736e7655b28f7d8f60f20a2f67e3c5bc384ed6"
+    },
+    {
+      "file": "data/memes/SG.json",
+      "bytes": 1986,
+      "sha": "1f04692c845f72b0cf8f22c7a037ae50cec53349"
+    },
+    {
+      "file": "data/memes/SV.json",
+      "bytes": 1986,
+      "sha": "9ba318dd10994aad744f4672d235f9d30f7638af"
+    },
+    {
+      "file": "data/memes/TH.json",
+      "bytes": 1986,
+      "sha": "39b17d88a08b35f9cdf2919dfb6ee7fe51bbd493"
+    },
+    {
+      "file": "data/memes/TR.json",
+      "bytes": 1986,
+      "sha": "0ef14d38e9d15e56f58c4fbf3bcbe6ffde64631d"
+    },
+    {
+      "file": "data/memes/US.json",
+      "bytes": 1986,
+      "sha": "09098051278a82521978e457ca944fc27912d812"
+    },
+    {
+      "file": "data/memes/UY.json",
+      "bytes": 1986,
+      "sha": "ab847e2c46b29af608433fba6cc03a2ccf384115"
+    },
+    {
+      "file": "data/memes/VE.json",
+      "bytes": 1986,
+      "sha": "559767cf3d9f423f5f0b2c8f7ce824210340fc51"
+    },
+    {
+      "file": "data/memes/ZA.json",
+      "bytes": 1986,
+      "sha": "d620a0cfbaeeb8174f7b82314c00a4d0a62dc5b1"
+    },
+    {
+      "file": "data/memes/international/images/avengers-office.webp",
+      "bytes": 40528,
+      "sha": "4c74716019665c3a2ea0a2c007dd9b2f0e6ad344"
+    },
+    {
+      "file": "data/memes/international/images/iron-man-costumes.webp",
+      "bytes": 36748,
+      "sha": "eb069b895fa6d4417b4ee009451970ebd5c5b3a4"
+    }
+  ]
+}

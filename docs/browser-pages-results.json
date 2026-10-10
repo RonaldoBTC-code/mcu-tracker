@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-10T20:12:41.879Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 51,
+    "imageDisplayChecks": 102,
+    "uniquePhotos": 2,
+    "scope": "international",
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/international/images/avengers-office.webp"
+    ],
+    "maxCountryOpenMs": 374,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-10T20:13:09.570Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 51,
+    "imageDisplayChecks": 102,
+    "uniquePhotos": 2,
+    "scope": "international",
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/international/images/avengers-office.webp"
+    ],
+    "maxCountryOpenMs": 140,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]
