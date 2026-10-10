@@ -3191,6 +3191,7 @@ window.WorldMap = (() => {
 /* Memes are requested from one country file; never load a global catalogue. */
 window.MapMemes = (() => {
   const KEY='mcu_map_country';
+  const sourceHosts=new Set(['www.pinterest.com','commons.wikimedia.org','pt.memedroid.com','imgur.com','vocal.media','zmyaro.com','iruntheinternet.com','www.bordeaux-tourism.co.uk']);
   let controller=null,observer=null,timer=null;
   const valid=code=>window.Region.countries().some(c=>c[0]===code);
   function resolveCountry(){
@@ -3247,7 +3248,7 @@ window.MapMemes = (() => {
     code=valid(code)?code:null;select.value=code||'';
     select.onchange=()=>{const next=select.value;if(valid(next))window.SafeStorage.setItem(KEY,next);else window.SafeStorage.removeItem(KEY);open(next);};
     label.appendChild(select);body.appendChild(label);
-    const hint=document.createElement('p');hint.textContent='Fotos Marvel con humor visual, elegidas al azar. Selección internacional compartida; su país de origen no está acreditado.';body.appendChild(hint);
+    const hint=document.createElement('p');hint.textContent='Fotos Marvel con humor visual. Cada país tiene su selección; la procedencia de cada foto se indica cuando está documentada.';body.appendChild(hint);
     const map=document.createElement('div');map.id='memeMap';map.className='meme-country-map';map.innerHTML=code?window.WorldMap.countryMap(code):'';body.appendChild(map);
     const status=document.createElement('p');status.id='memeStatus';status.setAttribute('role','status');body.appendChild(status);
     const list=document.createElement('div');list.id='memeList';list.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px';body.appendChild(list);
@@ -3265,12 +3266,13 @@ window.MapMemes = (() => {
       // Reject invalid/cross-country image paths before adding an img to the DOM.
       const memes=data.memes.slice(0,50).map(item=>({item,url:imageURL(code,item?.image,data.scope)})).filter(x=>x.url&&typeof x.item.title==='string');
       if(!memes.length){status.textContent='Todavía no hay memes disponibles para este país.';return;}
-      let remaining=[],previous=-1;
+      let remaining=[],previous=-1;const seen=new Set();
       const draw=()=>{
         observer?.disconnect();observer=null;
         list.querySelectorAll('img').forEach(img=>img.removeAttribute('src'));list.replaceChildren();
-        if(!remaining.length)remaining=memes.map((_,i)=>i).filter(i=>memes.length===1||i!==previous);
-        const index=remaining.splice(Math.floor(Math.random()*remaining.length),1)[0];previous=index;
+        if(!remaining.length)remaining=memes.map((_,i)=>i);
+        const available=remaining.map((value,i)=>i).filter(i=>memes.length===1||remaining[i]!==previous);
+        const index=remaining.splice(available[Math.floor(Math.random()*available.length)],1)[0];previous=index;seen.add(index);
         const {item,url}=memes[index];
         const figure=document.createElement('figure');figure.style.margin='0';
         const img=document.createElement('img');img.alt=typeof item.alt==='string'?item.alt:item.title;
@@ -3279,9 +3281,10 @@ window.MapMemes = (() => {
         img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto;max-height:55vh;object-fit:contain';
         img.onerror=()=>{img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
         const caption=document.createElement('figcaption');caption.textContent=item.title+(typeof item.creator==='string'?' · '+item.creator:'');
-        if(item.scope==='international')caption.append(' · País de origen no acreditado');
+        if(item.scope==='international')caption.append(valid(item.country)?' · Origen documentado: '+window.Region.countries().find(c=>c[0]===item.country)[1]:' · País de origen no acreditado');
+        let sourceHost=null;try{const host=new URL(item.source).hostname;if(sourceHosts.has(host))sourceHost=host;}catch(e){}
         const licenseHost=item.license==='Public domain'&&item.licenseUrl===item.source?'commons.wikimedia.org':'creativecommons.org';
-        for(const [label,value,host]of [['Fuente',item.source,item.scope==='international'?'www.pinterest.com':'commons.wikimedia.org'],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
+        for(const [label,value,host]of [['Fuente',item.source,sourceHost],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
           try{const linkURL=new URL(value);if(!['https:','http:'].includes(linkURL.protocol)||linkURL.hostname!==host)continue;if(host==='www.pinterest.com'&&!/^\/pin\/[0-9]+\/$/.test(linkURL.pathname))continue;linkURL.protocol='https:';
             const link=document.createElement('a');link.href=linkURL.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent=label;caption.append(' · ',link);
           }catch(e){}
@@ -3289,10 +3292,10 @@ window.MapMemes = (() => {
         if(item.changes)caption.append(' · ',String(item.changes));
         figure.append(img,caption);list.appendChild(figure);
         lazyImages(list,epoch);
+        status.textContent=memes.length+' fotos en la selección de '+select.selectedOptions[0].textContent+'. Vistas: '+seen.size+' de '+memes.length+'.';
       };
       draw();
       const next=document.createElement('button');next.className='tab';next.id='memeRandom';next.textContent='Otra foto aleatoria';next.disabled=memes.length<2;next.onclick=()=>{if(epoch===window.MapView.generation)draw();};body.appendChild(next);
-      status.textContent=memes.length+' fotos'+(data.scope==='international'?' de la selección internacional.':' disponibles para '+select.selectedOptions[0].textContent+'.');
     }catch(e){
       if(epoch===window.MapView.generation)status.textContent='No se pudieron cargar los memes. Vuelve a seleccionar el país para reintentar.';
     }finally{if(controller===request){clearTimeout(timer);timer=null;controller=null;}}

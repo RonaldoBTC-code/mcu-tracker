@@ -36,25 +36,27 @@ const server=http.createServer((req,res)=>{
    await page.evaluate(async()=>{await Promise.all([...document.querySelectorAll('#memeList img')].map(img=>img.decode()));await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
    await page.waitForTimeout(500); // Allow the dialog's opening transition to finish before visual QA.
    await page.screenshot({path:path.join(root,'docs/marvel-memes-'+viewport.width+'.png'),fullPage:false});
-   const countries=await page.evaluate(()=>window.Region.countries().map(c=>c[0]));let maxOpenMs=0,maxSvgNodes=0,decoded=0,withPhotos=0;
+   const uniqueImages=new Set(),catalogueSets=new Set();const countries=await page.evaluate(()=>window.Region.countries().map(c=>c[0]));let maxOpenMs=0,maxSvgNodes=0,decoded=0,withPhotos=0;
    for(const code of countries){
     requests.length=0;
     const ms=await page.evaluate(async country=>{const t=performance.now();await window.MapMemes.open(country);return performance.now()-t;},code);
     maxOpenMs=Math.max(maxOpenMs,ms);
     const manifest=JSON.parse(fs.readFileSync(path.join(root,'data/memes',code+'.json'),'utf8'));
-    if(manifest.memes.length){withPhotos++;let previous='';
+    catalogueSets.add(manifest.memes.map(item=>item.id).sort().join(','));
+    if(manifest.memes.length){withPhotos++;let previous='';let cycle=new Set();
      if(manifest.memes.length===1)assert(await page.locator('#memeRandom').isDisabled());
-     for(let i=0;i<manifest.memes.length;i++){
+     for(let i=0;i<manifest.memes.length*2;i++){
       await page.locator('#memeList img').scrollIntoViewIfNeeded();
       await page.waitForFunction(()=>document.querySelector('#memeList img')?.complete&&document.querySelector('#memeList img').naturalWidth>0);
-      const src=await page.locator('#memeList img').getAttribute('src');assert.notEqual(src,previous);previous=src;decoded++;
-      if(i+1<manifest.memes.length)await page.locator('#memeRandom').click();
+      const src=await page.locator('#memeList img').getAttribute('src');assert.notEqual(src,previous);previous=src;decoded++;uniqueImages.add(src);assert(!cycle.has(src),code+': repeated before complete cycle');cycle.add(src);if(cycle.size===manifest.memes.length)cycle=new Set();
+      if(i+1<manifest.memes.length*2)await page.locator('#memeRandom').click();
      }
     }else{assert.equal(await page.locator('#memeList img').count(),0);assert((await page.locator('#memeStatus').textContent()).includes('Todavía'));}
     assert(requests.every(p=>p==='/data/memes/'+code+'.json'||p.startsWith('/data/memes/international/images/')),code+': '+JSON.stringify(requests));
     maxSvgNodes=Math.max(maxSvgNodes,await page.locator('#memeMap circle').count());
+    if(withPhotos%10===0)console.log(JSON.stringify({viewport:viewport.width,countriesChecked:withPhotos,imageChecks:decoded}));
    }
-   await page.selectOption('#memeCountry','CA');await page.waitForFunction(()=>document.querySelector('#memeStatus').textContent.includes('2 fotos'));
+   await page.selectOption('#memeCountry','CA');await page.waitForFunction(()=>document.querySelector('#memeStatus').textContent.includes('8 fotos'));
    await page.locator('#mapClose').click();await page.reload({waitUntil:'domcontentloaded'});await page.locator('#mapOpen').click();
    await page.waitForFunction(()=>document.querySelector('#memeCountry')?.value==='CA');
    await page.locator('#mapClose').click();
@@ -70,7 +72,7 @@ const server=http.createServer((req,res)=>{
    }
    await page.waitForFunction(()=>!document.querySelector('#tourOverlay').classList.contains('active'));
    assert.deepEqual(errors,[]);assert(maxSvgNodes<1000);
-   reports.push({viewport,countriesTested:countries.length,countriesWithPhotos:withPhotos,imageDisplayChecks:decoded,uniquePhotos:2,scope:'international',initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
+   reports.push({viewport,countriesTested:countries.length,countriesWithPhotos:withPhotos,imageDisplayChecks:decoded,uniquePhotos:uniqueImages.size,uniqueCountryCatalogues:catalogueSets.size,scope:'international',initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
    await context.close();
   }
  }finally{await browser.close();}

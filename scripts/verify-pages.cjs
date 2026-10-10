@@ -18,7 +18,7 @@ async function check(file){
   report.files.push(await check('index.html'));
   const inventory=JSON.parse(await fs.readFile(path.join(root,'docs/photo-inventory.json'),'utf8'));
   const countries=JSON.parse(await fs.readFile(path.join(root,'docs/photo-coverage.json'),'utf8')).countries;
-  if(countries.length!==51||inventory.length!==2)throw Error('Unexpected audited coverage');
+  if(countries.length!==51||inventory.length<8)throw Error('Unexpected audited coverage');
   for(const code of countries)report.files.push(await check('data/memes/'+code+'.json'));
   for(const item of inventory)report.files.push(await check(item.image));
   report.result='PASS';

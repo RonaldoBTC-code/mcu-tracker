@@ -129,19 +129,20 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   w.IntersectionObserver=undefined;w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[{title:'EC',image:'data/memes/EC/images/fixture.webp'}]})});
   await w.MapMemes.open('EC');assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert.equal(d.querySelector('#memeList button').textContent,'Cargar imagen');
  });
- await test('Contenido Marvel: selección internacional compartida sin país ni licencia inventados',async({w})=>{
-  const codes=w.Region.countries().map(c=>c[0]);assert.equal(codes.length,51);const paths=new Set();
+ await test('Variedad por país: ocho fotos diferentes y 51 catálogos distintos, sin inventar procedencia',async({w})=>{
+  const codes=w.Region.countries().map(c=>c[0]),paths=new Set(),catalogues=new Set();assert.equal(codes.length,51);
+  const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));
   for(const code of codes){const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/memes',code+'.json'),'utf8'));
-   assert.equal(data.country,code);assert.equal(data.scope,'international');assert.equal(data.memes.length,2);
-   for(const item of data.memes){assert.equal(item.country,null);assert.equal(item.creator,null);assert.equal(item.license,null);assert.equal(item.countryEvidence,null);assert.equal(item.hasMemeTextOverlay,false);assert(item.reviewedVisually&&item.visualGag&&item.characters.length);assert(item.image.startsWith('data/memes/international/images/'));assert.equal(new URL(item.source).hostname,'www.pinterest.com');assert(item.width>0&&item.width<=768);assert(item.height>0&&item.height<=768);
+   assert.equal(data.country,code);assert.equal(data.catalogueRole,'audience');assert(data.memes.length>=8);assert.equal(new Set(data.memes.map(item=>item.id)).size,data.memes.length);catalogues.add(data.memes.map(item=>item.id).sort().join(','));
+   for(const item of data.memes){const source=sources.find(s=>s.id===item.id);assert(source);assert.equal(item.country,source.country);assert.equal(item.creator,source.creator);assert.equal(item.license,source.license);if(!item.country)assert.equal(item.countryEvidence,null);else assert(item.countryEvidence);assert.equal(item.hasMemeTextOverlay,false);assert(item.reviewedVisually&&item.visualGag&&item.characters.length);assert(item.image.startsWith('data/memes/international/images/'));assert.equal(item.source,source.source);assert(item.width>0&&item.width<=768);assert(item.height>0&&item.height<=768);
     const bytes=fs.readFileSync(path.join(__dirname,'..',item.image));assert(bytes.length<100000);assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');paths.add(item.image);
    }
   }
-  assert.equal(paths.size,2);const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));assert.equal(sources.length,2);
+  assert.equal(paths.size,sources.length);assert.equal(sources.length,14);assert.equal(catalogues.size,51);
  });
  await test('Selección internacional: una foto local diferida, atribución Pinterest y sin país inventado',async({w,d})=>{
   const calls=[];w.fetch=async url=>{calls.push(new URL(url).pathname);return {ok:true,json:async()=>({country:'EC',scope:'international',memes:[{title:'Marvel <script>bad()</script>',scope:'international',country:null,creator:null,license:null,image:'data/memes/international/images/avengers-office.webp',source:'https://www.pinterest.com/pin/678636237574158906/'},{title:'Ruta externa',image:'https://www.pinterest.com/photo.webp'},{title:'Otro país',image:'data/memes/MX/images/photo.webp'}]})};};
-  await w.MapMemes.open('EC');assert.deepEqual(calls,['/tracker/data/memes/EC.json']);assert.equal(d.querySelectorAll('#memeList img').length,1);assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert(d.querySelector('#memeStatus').textContent.includes('internacional'));assert(!d.querySelector('#memeStatus').textContent.includes('para Ecuador'));assert(d.querySelector('figcaption').textContent.includes('País de origen no acreditado'));assert.equal(d.querySelector('figcaption script'),null);
+  await w.MapMemes.open('EC');assert.deepEqual(calls,['/tracker/data/memes/EC.json']);assert.equal(d.querySelectorAll('#memeList img').length,1);assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert(d.querySelector('#memeStatus').textContent.includes('selección de Ecuador'));assert(d.querySelector('#memeStatus').textContent.includes('Vistas: 1 de 1'));assert(d.querySelector('figcaption').textContent.includes('País de origen no acreditado'));assert.equal(d.querySelector('figcaption script'),null);
   const link=d.querySelector('figcaption a');assert.equal(link.href,'https://www.pinterest.com/pin/678636237574158906/');assert.equal(link.rel,'noopener noreferrer');assert.equal(d.querySelectorAll('figcaption a').length,1);
  });
  await test('Atribución: dominio público enlaza su declaración y rechaza HTML y hosts externos',async({w,d})=>{
@@ -152,7 +153,7 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
  });
  await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{
   let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))})};};
-  await w.MapMemes.open('EC');let last='';for(let i=0;i<6;i++){const images=d.querySelectorAll('#memeList img');assert.equal(images.length,1);const current=images[0].dataset.src;assert.notEqual(current,last);last=current;d.querySelector('#memeRandom').click();}assert.equal(calls,1);
+  await w.MapMemes.open('EC');let last='';const cycle=[];for(let i=0;i<12;i++){const images=d.querySelectorAll('#memeList img');assert.equal(images.length,1);const current=images[0].dataset.src;assert.notEqual(current,last);last=current;cycle.push(current);if(cycle.length===3){assert.equal(new Set(cycle).size,3);cycle.length=0;}d.querySelector('#memeRandom').click();}assert.equal(calls,1);
  });
  console.log(JSON.stringify(results,null,2));
  if(process.argv.includes('--record'))fs.writeFileSync(path.join(__dirname,'../docs/entry-fixes-results.json'),JSON.stringify(results,null,2)+'\n');

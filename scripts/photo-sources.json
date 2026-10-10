@@ -36,5 +36,216 @@
     "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false
+  },
+  {
+    "id": "peevengers",
+    "title": "Los Avengers también hacen fila en el baño",
+    "image": "scripts/reference-images/peevengers.jpg",
+    "source": "https://www.pinterest.com/pin/534028468308237493/",
+    "publisher": "www.pinterest.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Spider-Man",
+      "Hawkeye",
+      "Captain America"
+    ],
+    "visualGag": "Superhéroes con el traje completo y sus accesorios frente a urinarios.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "spideypool-selfie",
+    "title": "Spider-Man y Deadpool cambian la batalla por un selfie",
+    "image": "scripts/reference-images/spideypool-selfie.jpg",
+    "source": "https://www.pinterest.com/pin/850617448347659197/",
+    "publisher": "www.pinterest.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Spider-Man",
+      "Deadpool"
+    ],
+    "visualGag": "Abrazo en un baño mientras Spider-Man toma un selfie con el móvil.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "deadpool-burrito",
+    "title": "Deadpool tiene un burrito de tamaño superheroico",
+    "image": "scripts/reference-images/deadpool-burrito.jpg",
+    "source": "https://vocal.media/geeks/logan-easter-egg-you-probably-didn-t-notice",
+    "publisher": "vocal.media",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Burrito enorme delante de Deadpool sentado en un sofá.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "avengers-cardboard",
+    "title": "Los Avengers resolvieron la armadura con cajas",
+    "image": "scripts/reference-images/avengers-cardboard.jpg",
+    "source": "https://pt.memedroid.com/memes/detail/752608",
+    "publisher": "pt.memedroid.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Captain America",
+      "Thor",
+      "Iron Man",
+      "Hulk"
+    ],
+    "visualGag": "Iron Man con cajas de cartón y Thor con martillo improvisado de periódico.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "avengers-livingroom",
+    "title": "La reunión de los Avengers fue de disfraces caseros",
+    "image": "scripts/reference-images/avengers-livingroom.jpg",
+    "source": "https://imgur.com/gallery/really-horrible-avengers-costumes-zTntlWx",
+    "publisher": "imgur.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Captain America",
+      "Iron Man",
+      "Thor",
+      "Hulk"
+    ],
+    "visualGag": "Trajes improvisados con pintura corporal, máscara, peluca y pantalones cortos en un salón.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "avengers-foil",
+    "title": "Iron Man acaba de descubrir el papel aluminio",
+    "image": "scripts/reference-images/avengers-foil.jpg",
+    "source": "https://imgur.com/gallery/really-horrible-avengers-costumes-zTntlWx",
+    "publisher": "imgur.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Iron Man",
+      "Thor",
+      "Captain America",
+      "Loki"
+    ],
+    "visualGag": "Armadura de papel aluminio junto a martillo de juguete y escudo inflable.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "captain-dorito",
+    "title": "Capitán América cambió el escudo por un Dorito",
+    "image": "scripts/reference-images/captain-dorito.jpg",
+    "source": "https://zmyaro.com/cosplay/captaindorito/",
+    "publisher": "zmyaro.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Captain America"
+    ],
+    "visualGag": "Escudo triangular de cartón con una bolsa de Doritos pegada en el centro.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "deadpool-bridal",
+    "title": "Deadpool ya está listo para la boda",
+    "image": "scripts/reference-images/deadpool-bridal.jpg",
+    "source": "https://imgur.com/gallery/its-cake-day-so-have-this-picture-of-deadpool-wedding-dress-WqMXk",
+    "publisher": "imgur.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Máscara y guantes de Deadpool combinados con vestido de novia y velo.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "deadpool-maid",
+    "title": "Deadpool consiguió un uniforme nuevo",
+    "image": "scripts/reference-images/deadpool-maid.jpg",
+    "source": "https://www.pinterest.com/pin/331436853810817205/",
+    "publisher": "www.pinterest.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Traje de Deadpool combinado con delantal, encaje, cofia y una rosa.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "maid-duel",
+    "title": "Spider-Man y Deadpool discuten quién limpia",
+    "image": "scripts/reference-images/maid-duel.png",
+    "source": "https://iruntheinternet.com/04193",
+    "publisher": "iruntheinternet.com",
+    "creator": null,
+    "license": null,
+    "country": null,
+    "characters": [
+      "Deadpool",
+      "Spider-Man"
+    ],
+    "visualGag": "Duelo juguetón con pelucas, tacones y uniformes de servicio doméstico sobre los trajes Marvel.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "bordeaux-maids",
+    "title": "Deadpool necesita ayuda para mantener el uniforme",
+    "image": "scripts/reference-images/bordeaux-maids.webp",
+    "source": "https://www.bordeaux-tourism.co.uk/events/bordeaux-geek-festival.html",
+    "publisher": "www.bordeaux-tourism.co.uk",
+    "creator": "Mandora Cosplay Photo (crédito en la imagen)",
+    "license": null,
+    "country": null,
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Un Deadpool sostiene a otro con uniforme de encaje y un lazo rosa gigante.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "title": "Iron Man se tomó lo de la plancha literalmente",
+    "alt": "Una interpretación literal de Iron Man",
+    "image": "scripts/reference-images/iron-ironing-board.webp",
+    "width": 527,
+    "height": 768,
+    "creator": "Michael Miller",
+    "source": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+    "countryEvidence": "ConNooga 2009, Chattanooga, Tennessee",
+    "country": "US",
+    "bytes": 14194,
+    "id": "iron-ironing-board",
+    "characters": [
+      "Iron Man"
+    ],
+    "visualGag": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
   }
 ]
