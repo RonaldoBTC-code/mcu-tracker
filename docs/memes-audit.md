@@ -6,9 +6,9 @@ La colección anterior de 102 tarjetas de texto fue rechazada por el usuario. Su
 
 ## Estado real
 
-- Seis fotos de personas en cosplay, con autor, licencia, evento y país documentados; Canadá, Reino Unido y Estados Unidos.
+- Dieciséis fotos de personas en cosplay, con autor, licencia, evento y país documentados; Canadá, Reino Unido, Estados Unidos, Brasil, Bélgica, Australia, Japón y España.
 - Selección aleatoria de una foto por vez, sin repetición inmediata; ninguna descarga global.
-- Cuarenta y ocho países sin fotos verificadas. Estado vacío explícito; contenido completo y despliegue pendientes.
+- Cuarenta y tres países sin fotos verificadas. Estado vacío explícito; contenido completo y despliegue pendientes.
 - Proporción original reservada en el DOM; adaptación WebP, sin añadir textos o recortar personas.
 
 ## Controles revisados
@@ -19,8 +19,12 @@ El mapa dibuja solo la región visible. No se añade dependencia de frontend. La
 
 ## Evidencia y requisitos abiertos
 
-photo-inventory.json recoge seis fuentes, autoría, licencia, cambios de formato y tamaños. Las imágenes se inspeccionaron en una hoja de contacto: cosplay mash-up de Pikachu/Iron Man, versión steampunk, Buzz Lightyear/Iron Man, Deadpool/Iron Man y una interpretación literal de Iron Man. Son fotos de eventos, no fotografías generadas.
+photo-inventory.json recoge dieciséis fuentes, autoría, licencia, cambios de formato y tamaños. Las imágenes se inspeccionaron en una hoja de contacto: cosplay mash-up de Pikachu/Iron Man, versión steampunk, Buzz Lightyear/Iron Man, Deadpool/Iron Man y una interpretación literal de Iron Man. Son fotos de eventos, no fotografías generadas.
 
 Los resultados DOM y Chrome están en entry-fixes-results.json y browser-memes-results.json. La prueba de Chrome registra EC.json sin ninguna imagen al faltar contenido ecuatoriano; los países con fotos descargan solo su archivo y la imagen elegida.
 
-La auditoría final exige cobertura real de los 51 países, revisión de cada procedencia, inspección visual, solicitudes por país y despliegue de Pages. No marcar el objetivo completo con una colección de tres países. Los pendientes históricos de OTP, Supabase y concurrencia siguen en entry-fixes.md.
+La auditoría final exige cobertura real de los 51 países, revisión de cada procedencia, inspección visual, solicitudes por país y despliegue de Pages. No marcar el objetivo completo con una colección de ocho países. Los pendientes históricos de OTP, Supabase y concurrencia siguen en entry-fixes.md.
+
+## Ampliación y rendimiento
+
+Se inspeccionaron las diez fotos añadidas: carnavales brasileños, Deadpool en el Trono de Hierro, Duffman y Deadpool, disfraces en Australia, Halloween y Spider-Man en Shibuya y cosplayers de Madrid. Cada WebP ocupa menos de 100.000 bytes; el conjunto de dieciséis fotos ocupa 874.852 bytes y no se descarga completo al entrar. El importador reutiliza archivos verificados existentes y reintenta HTTP 429/503 respetando Retry-After. Estas funciones operan solo al preparar contenido.

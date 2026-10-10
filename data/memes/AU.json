@@ -1,4 +1,31 @@
 {
   "country": "AU",
-  "memes": []
+  "memes": [
+    {
+      "title": "Spider-Man visita la Comic Con de Brisbane",
+      "alt": "Spider-Man visita la Comic Con de Brisbane",
+      "image": "data/memes/AU/images/photo-1.webp",
+      "width": 768,
+      "height": 527,
+      "creator": "Sheba_Also 43,000 photos",
+      "source": "https://commons.wikimedia.org/wiki/File:OZ_Comic_Con_2018_Brisbane_2018-23_(44875139911).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "OZ Comic Con 2018, Brisbane, Australia"
+    },
+    {
+      "title": "Un superhéroe en el Mardi Gras de Sídney",
+      "alt": "Un superhéroe en el Mardi Gras de Sídney",
+      "image": "data/memes/AU/images/photo-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Bruce Baker from Sydney, Australia",
+      "source": "https://commons.wikimedia.org/wiki/File:Sydney_Mardi_Gras_2021_(51011844572).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Sydney Mardi Gras 2021, Australia"
+    }
+  ]
 }

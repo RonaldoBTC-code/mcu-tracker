@@ -5,12 +5,12 @@
       "height": 900
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 3,
-    "imagesDecoded": 6,
+    "countriesWithPhotos": 8,
+    "imagesDecoded": 16,
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 48,
+    "maxCountryOpenMs": 66,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -21,12 +21,12 @@
       "height": 844
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 3,
-    "imagesDecoded": 6,
+    "countriesWithPhotos": 8,
+    "imagesDecoded": 16,
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 91,
+    "maxCountryOpenMs": 39,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

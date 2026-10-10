@@ -1,4 +1,31 @@
 {
   "country": "JP",
-  "memes": []
+  "memes": [
+    {
+      "title": "Spider-Man sale de Halloween en Shibuya",
+      "alt": "Spider-Man sale de Halloween en Shibuya",
+      "image": "data/memes/JP/images/photo-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Dick Thomas Johnson from Tokyo, Japan",
+      "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Halloween_2018_(October_31)_(45127537375).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Shibuya Halloween, Tokio, Japón, 31 de octubre de 2018"
+    },
+    {
+      "title": "Spider-Man cruza por Shibuya",
+      "alt": "Spider-Man cruza por Shibuya",
+      "image": "data/memes/JP/images/photo-2.webp",
+      "width": 512,
+      "height": 768,
+      "creator": "Dick Thomas Johnson from Tokyo, Japan",
+      "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_(53083700164).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Shibuya Crossing, Tokio, Japón; Category:Cosplay of Spider-Man in Japan"
+    }
+  ]
 }

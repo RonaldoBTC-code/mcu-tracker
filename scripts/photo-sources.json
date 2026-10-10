@@ -1,8 +1,98 @@
 [
- {"country":"CA","file":"Iron Pikachu.jpg","title":"Iron Man, Pikachu y Deadpool en la misma foto","countryEvidence":"Cosplay at the 2012 Fan Expo Canada; Cosplay of Iron Man in Canada"},
- {"country":"CA","file":"Fan Expo 2012 - Steampunk Thor, Loki & Iron Man (8143104437).jpg","title":"Thor, Loki e Iron Man en versión steampunk","countryEvidence":"Fan Expo 2012, Canada"},
- {"country":"GB","file":"MCM 2013 - Buzz Lightyear Iron Man (8978219177).jpg","title":"Buzz Lightyear con armadura de Iron Man","countryEvidence":"MCM London Comic Con, ExCeL London"},
- {"country":"GB","file":"MCM 2013 - Buzz Lightyear Iron Man (8979413974).jpg","title":"Iron Man se apunta a Toy Story","countryEvidence":"MCM London Comic Con, ExCeL London"},
- {"country":"US","file":"Day 4 at NYCC 2015 Cosplay of Iron Man Deadpool.jpg","title":"Deadpool probando la armadura de Iron Man","countryEvidence":"New York Comic Con 2015"},
- {"country":"US","file":"Original 'Iron Man' Cosplayer @ ConNooga '09 Masquerade.jpg","title":"Una interpretación literal de Iron Man","countryEvidence":"ConNooga 2009, Chattanooga, Tennessee"}
+  {
+    "country": "CA",
+    "file": "Iron Pikachu.jpg",
+    "title": "Iron Man, Pikachu y Deadpool en la misma foto",
+    "countryEvidence": "Cosplay at the 2012 Fan Expo Canada; Cosplay of Iron Man in Canada"
+  },
+  {
+    "country": "CA",
+    "file": "Fan Expo 2012 - Steampunk Thor, Loki & Iron Man (8143104437).jpg",
+    "title": "Thor, Loki e Iron Man en versión steampunk",
+    "countryEvidence": "Fan Expo 2012, Canada"
+  },
+  {
+    "country": "GB",
+    "file": "MCM 2013 - Buzz Lightyear Iron Man (8978219177).jpg",
+    "title": "Buzz Lightyear con armadura de Iron Man",
+    "countryEvidence": "MCM London Comic Con, ExCeL London"
+  },
+  {
+    "country": "GB",
+    "file": "MCM 2013 - Buzz Lightyear Iron Man (8979413974).jpg",
+    "title": "Iron Man se apunta a Toy Story",
+    "countryEvidence": "MCM London Comic Con, ExCeL London"
+  },
+  {
+    "country": "US",
+    "file": "Day 4 at NYCC 2015 Cosplay of Iron Man Deadpool.jpg",
+    "title": "Deadpool probando la armadura de Iron Man",
+    "countryEvidence": "New York Comic Con 2015"
+  },
+  {
+    "country": "US",
+    "file": "Original 'Iron Man' Cosplayer @ ConNooga '09 Masquerade.jpg",
+    "title": "Una interpretación literal de Iron Man",
+    "countryEvidence": "ConNooga 2009, Chattanooga, Tennessee"
+  },
+  {
+    "country": "BR",
+    "file": "Carnaval 2012 - Homem-Aranha - Cerâmica, Nova Iguaçu.JPG",
+    "title": "Spider-Man se apunta al carnaval",
+    "countryEvidence": "Descripción del fotógrafo: Carnaval de Cerâmica, Nova Iguaçu-RJ, Brasil, 18 de febrero de 2012"
+  },
+  {
+    "country": "BR",
+    "file": "Homem Aranha de Olinda - Carnaval 2012 (6917644937).jpg",
+    "title": "Spider-Man de fiesta en Olinda",
+    "countryEvidence": "Carnival in Olinda in 2012; fotografía de Prefeitura de Olinda, Brasil, 21 de febrero de 2012"
+  },
+  {
+    "country": "BE",
+    "file": "Comic Con Brussels 2016 - Deadpool on the Iron Throne (26675225495).jpg",
+    "title": "Deadpool reclama el Trono de Hierro",
+    "countryEvidence": "Comic Con Brussels 2016, Bruselas, Bélgica"
+  },
+  {
+    "country": "BE",
+    "file": "Cosplay of Duffman and Deadpool at Brussels Comic Con 2022 (51979055573).jpg",
+    "title": "Duffman y Deadpool se encuentran en Bruselas",
+    "countryEvidence": "Brussels Comic Con 2022, Bélgica"
+  },
+  {
+    "country": "AU",
+    "file": "OZ Comic Con 2018 Brisbane 2018-23 (44875139911).jpg",
+    "title": "Spider-Man visita la Comic Con de Brisbane",
+    "countryEvidence": "OZ Comic Con 2018, Brisbane, Australia"
+  },
+  {
+    "country": "AU",
+    "file": "Sydney Mardi Gras 2021 (51011844572).jpg",
+    "title": "Un superhéroe en el Mardi Gras de Sídney",
+    "countryEvidence": "Sydney Mardi Gras 2021, Australia"
+  },
+  {
+    "country": "JP",
+    "file": "Shibuya Halloween 2018 (October 31) (45127537375).jpg",
+    "title": "Spider-Man sale de Halloween en Shibuya",
+    "countryEvidence": "Shibuya Halloween, Tokio, Japón, 31 de octubre de 2018"
+  },
+  {
+    "country": "JP",
+    "file": "Shibuya Crossing (53083700164).jpg",
+    "title": "Spider-Man cruza por Shibuya",
+    "countryEvidence": "Shibuya Crossing, Tokio, Japón; Category:Cosplay of Spider-Man in Japan"
+  },
+  {
+    "country": "ES",
+    "file": "Fat Spider-Man in Madrid.jpg",
+    "title": "Spider-Man hace una pausa en Madrid",
+    "countryEvidence": "Madrid, España; Category:Cosplay of Spider-Man in Spain"
+  },
+  {
+    "country": "ES",
+    "file": "Cosplayer de Spider-Man en la Plaza Mayor de Madrid.jpg",
+    "title": "Spider-Man de paseo por la Plaza Mayor",
+    "countryEvidence": "Plaza Mayor de Madrid, España"
+  }
 ]

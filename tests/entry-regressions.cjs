@@ -138,7 +138,7 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
     const image=fs.readFileSync(path.join(__dirname,'..',meme.image));assert.equal(image.toString('ascii',0,4),'RIFF');assert.equal(image.toString('ascii',8,12),'WEBP');assert(image.length<100000);
    }
   }
-  assert.equal(count,6);assert.equal(countries,3);
+  const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));assert.equal(count,sources.length);assert.equal(countries,new Set(sources.map(s=>s.country)).size);assert.equal(count,16);assert.equal(countries,8);
  });
  await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{
   let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))})};};

@@ -1,4 +1,31 @@
 {
   "country": "ES",
-  "memes": []
+  "memes": [
+    {
+      "title": "Spider-Man hace una pausa en Madrid",
+      "alt": "Spider-Man hace una pausa en Madrid",
+      "image": "data/memes/ES/images/photo-1.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "Przemek P",
+      "source": "https://commons.wikimedia.org/wiki/File:Fat_Spider-Man_in_Madrid.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Madrid, España; Category:Cosplay of Spider-Man in Spain"
+    },
+    {
+      "title": "Spider-Man de paseo por la Plaza Mayor",
+      "alt": "Spider-Man de paseo por la Plaza Mayor",
+      "image": "data/memes/ES/images/photo-2.webp",
+      "width": 539,
+      "height": 768,
+      "creator": "Fsoguero",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Plaza Mayor de Madrid, España"
+    }
+  ]
 }
