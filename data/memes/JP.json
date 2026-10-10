@@ -1,31 +1,60 @@
 {
   "country": "JP",
+  "scope": "international",
   "memes": [
     {
-      "title": "Spider-Man sale de Halloween en Shibuya",
-      "alt": "Spider-Man sale de Halloween en Shibuya",
-      "image": "data/memes/JP/images/photo-1.webp",
-      "width": 768,
+      "id": "avengers-office",
+      "title": "Los Avengers también tienen reuniones que pudieron ser un correo",
+      "image": "data/memes/international/images/avengers-office.webp",
+      "source": "https://www.pinterest.com/pin/678636237574158906/",
+      "publisher": "musclegeekonline",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Captain America",
+        "Thor",
+        "Doctor Strange",
+        "Spider-Man",
+        "Black Widow",
+        "Hawkeye",
+        "Falcon"
+      ],
+      "visualGag": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "width": 735,
       "height": 512,
-      "creator": "Dick Thomas Johnson from Tokyo, Japan",
-      "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Halloween_2018_(October_31)_(45127537375).jpg",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Shibuya Halloween, Tokio, Japón, 31 de octubre de 2018"
+      "bytes": 40528,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     },
     {
-      "title": "Spider-Man cruza por Shibuya",
-      "alt": "Spider-Man cruza por Shibuya",
-      "image": "data/memes/JP/images/photo-2.webp",
-      "width": 512,
-      "height": 768,
-      "creator": "Dick Thomas Johnson from Tokyo, Japan",
-      "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_(53083700164).jpg",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Shibuya Crossing, Tokio, Japón; Category:Cosplay of Spider-Man in Japan"
+      "id": "iron-man-costumes",
+      "title": "Dos Iron Man, dos presupuestos",
+      "image": "data/memes/international/images/iron-man-costumes.webp",
+      "source": "https://www.pinterest.com/pin/392516923774440652/",
+      "publisher": "Metro / metrouk",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "width": 660,
+      "height": 495,
+      "bytes": 36748,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     }
   ]
 }

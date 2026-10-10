@@ -116,7 +116,11 @@
     "status": "PASS"
   },
   {
-    "name": "Contenido: fotos reales con procedencia; ningún país usa tarjetas de texto",
+    "name": "Contenido Marvel: selección internacional compartida sin país ni licencia inventados",
+    "status": "PASS"
+  },
+  {
+    "name": "Selección internacional: una foto local diferida, atribución Pinterest y sin país inventado",
     "status": "PASS"
   },
   {

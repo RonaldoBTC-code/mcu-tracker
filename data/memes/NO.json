@@ -1,31 +1,60 @@
 {
   "country": "NO",
+  "scope": "international",
   "memes": [
     {
-      "title": "Hatsune Miku visita Spillexpo",
-      "alt": "Hatsune Miku visita Spillexpo",
-      "image": "data/memes/NO/images/photo-1.webp",
-      "width": 577,
-      "height": 768,
-      "creator": "Markuswestermoen",
-      "source": "https://commons.wikimedia.org/wiki/File:Hatsune_Miku_Cosplayer_at_Spillexpo_2025.jpg",
-      "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Spillexpo 2025, Noruega; evento mencionado por el fotógrafo"
+      "id": "avengers-office",
+      "title": "Los Avengers también tienen reuniones que pudieron ser un correo",
+      "image": "data/memes/international/images/avengers-office.webp",
+      "source": "https://www.pinterest.com/pin/678636237574158906/",
+      "publisher": "musclegeekonline",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Captain America",
+        "Thor",
+        "Doctor Strange",
+        "Spider-Man",
+        "Black Widow",
+        "Hawkeye",
+        "Falcon"
+      ],
+      "visualGag": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "width": 735,
+      "height": 512,
+      "bytes": 40528,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     },
     {
-      "title": "Un stormtrooper se apunta al desfile",
-      "alt": "Un stormtrooper se apunta al desfile",
-      "image": "data/memes/NO/images/photo-2.webp",
-      "width": 420,
-      "height": 768,
-      "creator": "Cuneax",
-      "source": "https://commons.wikimedia.org/wiki/File:Imperial_Stormtrooper_01.jpg",
-      "license": "Public domain",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Imperial_Stormtrooper_01.jpg",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Descripción del fotógrafo: desfile del día nacional de Noruega, 17 de mayo de 2009"
+      "id": "iron-man-costumes",
+      "title": "Dos Iron Man, dos presupuestos",
+      "image": "data/memes/international/images/iron-man-costumes.webp",
+      "source": "https://www.pinterest.com/pin/392516923774440652/",
+      "publisher": "Metro / metrouk",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "width": 660,
+      "height": 495,
+      "bytes": 36748,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     }
   ]
 }

@@ -25,17 +25,17 @@ const server=http.createServer((req,res)=>{
    await page.goto(origin,{waitUntil:'domcontentloaded'});await page.locator('#mapOpen').click();
    await page.locator('#memeList img').scrollIntoViewIfNeeded();
    await page.waitForFunction(()=>document.querySelector('#memeList img')?.complete&&document.querySelector('#memeList img').naturalWidth>0);
-   assert.equal(requests.length,2);assert.equal(requests[0],'/data/memes/EC.json');assert(requests[1].startsWith('/data/memes/EC/images/'));
+   assert.equal(requests.length,2);assert.equal(requests[0],'/data/memes/EC.json');assert(requests[1].startsWith('/data/memes/international/images/'));
    const ecRequests=[...requests];requests.length=0;
    await page.evaluate(()=>window.MapMemes.open('CA'));
    await page.locator('#memeList img').first().scrollIntoViewIfNeeded();
    await page.locator('#memeList img').last().scrollIntoViewIfNeeded();
    await page.waitForFunction(()=>[...document.querySelectorAll('#memeList img')].every(i=>i.complete&&i.naturalWidth>0));
-   assert.equal(requests.length,2);assert(requests.every(p=>p==='/data/memes/CA.json'||p.startsWith('/data/memes/CA/images/')),JSON.stringify(requests));
+   assert(requests.length>=1&&requests.length<=2);assert.equal(requests[0],'/data/memes/CA.json');assert(requests.every(p=>p==='/data/memes/CA.json'||p.startsWith('/data/memes/international/images/')),JSON.stringify(requests));
    const closeBox=await page.locator('#mapClose').boundingBox();assert(closeBox&&closeBox.y>=0&&closeBox.y+closeBox.height<=viewport.height);
    await page.evaluate(async()=>{await Promise.all([...document.querySelectorAll('#memeList img')].map(img=>img.decode()));await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
    await page.waitForTimeout(500); // Allow the dialog's opening transition to finish before visual QA.
-   await page.screenshot({path:path.join(root,'docs/memes-'+viewport.width+'.png'),fullPage:false});
+   await page.screenshot({path:path.join(root,'docs/marvel-memes-'+viewport.width+'.png'),fullPage:false});
    const countries=await page.evaluate(()=>window.Region.countries().map(c=>c[0]));let maxOpenMs=0,maxSvgNodes=0,decoded=0,withPhotos=0;
    for(const code of countries){
     requests.length=0;
@@ -51,7 +51,7 @@ const server=http.createServer((req,res)=>{
       if(i+1<manifest.memes.length)await page.locator('#memeRandom').click();
      }
     }else{assert.equal(await page.locator('#memeList img').count(),0);assert((await page.locator('#memeStatus').textContent()).includes('Todavía'));}
-    assert(requests.every(p=>p==='/data/memes/'+code+'.json'||p.startsWith('/data/memes/'+code+'/images/')),code+': '+JSON.stringify(requests));
+    assert(requests.every(p=>p==='/data/memes/'+code+'.json'||p.startsWith('/data/memes/international/images/')),code+': '+JSON.stringify(requests));
     maxSvgNodes=Math.max(maxSvgNodes,await page.locator('#memeMap circle').count());
    }
    await page.selectOption('#memeCountry','CA');await page.waitForFunction(()=>document.querySelector('#memeStatus').textContent.includes('2 fotos'));
@@ -70,7 +70,7 @@ const server=http.createServer((req,res)=>{
    }
    await page.waitForFunction(()=>!document.querySelector('#tourOverlay').classList.contains('active'));
    assert.deepEqual(errors,[]);assert(maxSvgNodes<1000);
-   reports.push({viewport,countriesTested:countries.length,countriesWithPhotos:withPhotos,imagesDecoded:decoded,initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
+   reports.push({viewport,countriesTested:countries.length,countriesWithPhotos:withPhotos,imageDisplayChecks:decoded,uniquePhotos:2,scope:'international',initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
    await context.close();
   }
  }finally{await browser.close();}

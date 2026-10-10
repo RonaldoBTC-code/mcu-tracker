@@ -1,5 +1,4 @@
 {
-  "photos": 96,
   "countries": [
     "AE",
     "AR",
@@ -53,15 +52,10 @@
     "VE",
     "ZA"
   ],
-  "single": [
-    "CU",
-    "GT",
-    "PR",
-    "SV",
-    "TR",
-    "ZA"
-  ],
-  "bytes": 5567802,
-  "largest": 98738,
-  "remaining": []
+  "photos": 2,
+  "scope": "international",
+  "countriesOfOriginVerified": 0,
+  "bytes": 77276,
+  "largestBytes": 40528,
+  "rejectedPreviousPhotos": 96
 }

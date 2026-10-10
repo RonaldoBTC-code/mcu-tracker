@@ -1,33 +1,26 @@
-# Auditoría de fotos por país — versión publicada y verificada
+# Auditoría de la selección Marvel corregida
 
-## Alcance y contenido
+La colección anterior de 96 fotos fue rechazada editorialmente: mezclaba Marvel con anime, animales, carnavales y disfraces sin gag visual. La prueba técnica anterior no acreditaba que cumpliera el gusto y el criterio del usuario. Se retiran sus 96 archivos y las fuentes del importador.
 
-La colección anterior de 102 tarjetas de texto incumplía el formato pedido y fue retirada junto con su generador. Se inspeccionaron las 96 fotos reales de la colección final, asignadas a los 51 países soportados. CU, GT, PR, SV, TR y ZA tienen una; los otros 45 países tienen dos. En Honduras se usan escenas curiosas de visitantes con guacamayos, no cosplay. En otros países se incluyen también carnavales y representación de personajes, además de Marvel.
+## Criterio aplicado a los 51 países
 
-No se inventan procedencias ni se deduce el país del fotógrafo. Se contrastan descripción, evento, categorías o ubicación documentada. Se descartaron fotografías de Mumbai inicialmente confundidas con Emiratos por la sigla MFCC, panorámicas poco claras, un desfile de caballos, pinturas, documentos, collages y máscaras de museo. GB, CL, TH y PT muestran parejas de la misma sesión/disfraz o grupo desde distintos ángulos.
+Solo fotografías de personajes Marvel con un gag visual concreto, sin texto de meme superpuesto. Dos referencias aceptadas: Avengers en reunión de oficina y dos Iron Man con presupuestos distintos. Ambas se inspeccionaron visualmente completas. No se completan países con fotos que solo posan, anime ni escenas ajenas a Marvel.
 
-## Hallazgos corregidos
+Pinterest no acredita fotógrafo, país ni licencia en estos pines. Esos campos son null, sin licencia CC inventada ni asignación geográfica. Los publicadores no se presentan como autores. La colección es internacional y compartida; el selector no acredita procedencia. Los 51 manifiestos apuntan a los mismos dos archivos, no a 102 copias ni a 51 colecciones locales verificadas.
 
-1. Formato incorrecto: se retiraron tarjetas de texto y su código de generación; ahora se usan fotografías locales reales.
-2. Carga excesiva: una foto por vez y manifiesto del país seleccionado. El botón reutiliza la lista en memoria, sin índice global ni precarga de otros países.
-3. Atribución de dominio público oculta: el enlace de licencia noruego se rechazaba por apuntar a Commons. Se permite únicamente cuando la licencia es Public domain y el enlace coincide con la fuente Commons validada; no se amplía el permiso a hosts externos.
-4. Archivos demasiado pesados: el importador reduce calidad y dimensiones respetando proporciones, con límite inferior a 100.000 bytes por WebP.
-5. Consultas repetidas y limitadas: el importador reutiliza las fotos existentes y respeta Retry-After para HTTP 429/503. No participa en el tiempo de carga del navegador.
+## Fuentes
 
-## Controles del código
+- Avengers en oficina: https://www.pinterest.com/pin/678636237574158906/
+- Dos Iron Man: https://www.pinterest.com/pin/392516923774440652/
 
-País validado antes de fetch; respuesta de otro país rechazada. Nombres de imagen planos, carpeta del país, mismo origen y sin query/hash. Se rechazan rutas codificadas o externas. Pies con textContent y enlaces con noopener noreferrer. AbortController, timeout, generación y limpieza de observer evitan respuestas tardías y actualizaciones de una pestaña cerrada.
+La búsqueda adicional de Pinterest devolvió manualidades, plantillas y productos; no se añadieron para rellenar la colección. No se afirma disponer de derechos de reutilización documentados: las fuentes no aportan licencia y este dato sigue sin acreditación.
 
-Selección aleatoria sin repetir archivo inmediatamente; una foto desactiva el botón. Se reservan proporciones, se usa loading=lazy y decoding=async. El mapa dibuja la región visible; no se agrega dependencia de frontend. No quedan tarjetas antiguas, generador ni catálogo global de imágenes en el código publicado del PR.
+## Rendimiento y controles
 
-## Licencias y tamaño
+Dos WebP, 77.276 bytes en total; mayor archivo 40.528 bytes. Se conserva la proporción y no se añade texto. Al abrir se solicita únicamente el manifiesto del país seleccionado y una foto diferida. El botón aleatorio reutiliza los datos y evita repetición inmediata. No se descargan los otros 50 manifiestos ni se consulta Pinterest desde el navegador del usuario.
 
-Fuentes, autores, licencias, cambios y evidencia geográfica: photo-inventory.json. Cobertura: photo-coverage.json. Se preservan las condiciones CC/ShareAlike. La foto noruega del stormtrooper tiene liberación PD-self documentada; no se inventa licencia CC0. La licencia general del código no sustituye las licencias de imágenes.
+Se mantiene validación del país, carpeta local internacional permitida expresamente, rechazo de URL externas/rutas codificadas, cancelación y generación. Título y atribución usan textContent. Pinterest solo se admite como enlace de fuente HTTPS al host exacto www.pinterest.com y ruta /pin/ID/. Guía 7 y 8, aislamiento de cuentas y controles de acceso permanecen sujetos a las pruebas de regresión.
 
-Las 96 fotos suman 5.567.802 bytes; el mayor archivo pesa 98.738 bytes. El conjunto no se descarga al entrar. Las mediciones locales de Chrome no prometen tiempos de Internet.
+## Estado
 
-## Evidencia de publicación
-
-Resultados DOM en entry-fixes-results.json y Chrome en browser-memes-results.json. La comprobación del navegador recorre los 51 países y sus 96 fotos en escritorio y móvil emulado; registra solicitudes, decodificación, estado de botón único, persistencia y guía 7→8→fin. Ecuador pide únicamente EC.json y una imagen de su carpeta al entrar. Las pruebas bloquean conexiones externas, no escriben en Supabase ni envían OTP.
-
-Publicación verificada el 10 de octubre de 2026: PR #3 fusionado como 6aa7feffa29f085fb1cd6054c234c073a03fadd3. Pages completó correctamente el workflow 38034293552. Se contrastaron los bytes de los 148 archivos publicados y Chrome decodificó las 96 fotos de los 51 países en escritorio (1280×900) y móvil emulado (390×844), sin errores no capturados. Guía 7→8→fin, selección aleatoria y persistencia: PASS. Evidencia en docs/pages-verification-results.json y docs/browser-pages-results.json. URL: https://ronaldobtc-code.github.io/mcu-tracker/. No se afirma que estén resueltos OTP real, pruebas en dispositivos físicos o concurrencia entre dispositivos; pendientes históricos en entry-fixes.md.
+Preparada para revisión en Git; no fusionada ni desplegada. El Pages actual corresponde al PR #3 anterior y no es evidencia de publicación de esta corrección. Pruebas locales: entry-fixes-results.json y browser-memes-results.json. El móvil es emulado y Supabase/OTP reales quedan fuera de las pruebas.

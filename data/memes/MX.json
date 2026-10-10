@@ -1,31 +1,60 @@
 {
   "country": "MX",
+  "scope": "international",
   "memes": [
     {
-      "title": "Pomni visita la Animex de Monterrey",
-      "alt": "Pomni visita la Animex de Monterrey",
-      "image": "data/memes/MX/images/photo-1.webp",
-      "width": 576,
-      "height": 768,
-      "creator": "Jolly Flowers",
-      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_de_Pomni_(Animex,_2026).jpg",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Descripción del autor: Animex, Monterrey, Nuevo León, México"
+      "id": "avengers-office",
+      "title": "Los Avengers también tienen reuniones que pudieron ser un correo",
+      "image": "data/memes/international/images/avengers-office.webp",
+      "source": "https://www.pinterest.com/pin/678636237574158906/",
+      "publisher": "musclegeekonline",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Captain America",
+        "Thor",
+        "Doctor Strange",
+        "Spider-Man",
+        "Black Widow",
+        "Hawkeye",
+        "Falcon"
+      ],
+      "visualGag": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
+      "width": 735,
+      "height": 512,
+      "bytes": 40528,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     },
     {
-      "title": "Auron sale de Final Fantasy a México",
-      "alt": "Auron sale de Final Fantasy a México",
-      "image": "data/memes/MX/images/photo-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "Dorian Ivan Najera from Iztapalapa, Mexico",
-      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Auron_from_Final_Fantasy_X_in_Mexico_in_2008_(2589854052).jpg",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "Category:Cosplay in Mexico; archivo identificado por su fotógrafo como cosplay en México en 2008"
+      "id": "iron-man-costumes",
+      "title": "Dos Iron Man, dos presupuestos",
+      "image": "data/memes/international/images/iron-man-costumes.webp",
+      "source": "https://www.pinterest.com/pin/392516923774440652/",
+      "publisher": "Metro / metrouk",
+      "creator": null,
+      "license": null,
+      "country": null,
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
+      "width": 660,
+      "height": 495,
+      "bytes": 36748,
+      "scope": "international",
+      "countryEvidence": null,
+      "licenseUrl": null,
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
     }
   ]
 }

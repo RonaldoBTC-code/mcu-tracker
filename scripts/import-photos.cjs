@@ -1,51 +1,22 @@
-// Build-time download only; the browser never requests Commons or a global catalogue.
-const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp');
-const root=path.join(__dirname,'..'),sources=require('./photo-sources.json');
-const plain=s=>String(s||'').replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').trim();
-const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-async function request(url){
- for(let attempt=0;attempt<4;attempt++){
-  const response=await fetch(url,{headers:{'User-Agent':'MCUTrackerPhotoImporter/1.0 (https://github.com/RonaldoBTC-code/mcu-tracker)'}});
-  if(response.ok)return response;
-  if(![429,503].includes(response.status)||attempt===3)throw Error('Source HTTP '+response.status);
-  const retry=Number(response.headers.get('retry-after'));
-  await response.body?.cancel();
-  await pause(Math.min(120,Math.max(2,Number.isFinite(retry)?retry:2**(attempt+2)))*1000);
- }
-}
+// Build only: compress reviewed references; never invent attribution.
+const fs=require('node:fs/promises'),path=require('node:path'),sharp=require('sharp');
+const root=path.join(__dirname,'..');
 (async()=>{
- const countries=fs.readdirSync(path.join(root,'data/memes')).filter(f=>/^[A-Z]{2}\.json$/.test(f)).map(f=>f.slice(0,2));
- const data=Object.fromEntries(countries.map(country=>[country,{country,memes:[]}]));
+ const sources=JSON.parse(await fs.readFile(path.join(__dirname,'photo-sources.json'),'utf8'));
  const inventory=[];
- const previous=JSON.parse(fs.readFileSync(path.join(root,'docs/photo-inventory.json'),'utf8'));
  for(const source of sources){
-  if(!data[source.country])throw Error('Unknown country');
-  const cached=previous.find(item=>item.country===source.country&&decodeURIComponent(new URL(item.source).pathname.split('/wiki/File:')[1]||'').replace(/_/g,' ')===source.file.replace(/_/g,' ')&&item.title===source.title&&item.countryEvidence===source.countryEvidence);
-  if(cached&&cached.bytes<100000&&fs.existsSync(path.join(root,cached.image))){
-   const {country,bytes,...item}=cached;
-   data[country].memes.push(item);inventory.push(cached);continue;
-  }
-  const api=new URL('https://commons.wikimedia.org/w/api.php');
-  for(const [key,value]of Object.entries({action:'query',format:'json',titles:'File:'+source.file,prop:'imageinfo',iiprop:'url|extmetadata',iiurlwidth:'768'}))api.searchParams.set(key,value);
-  const response=await request(api);
-  const result=await response.json(),info=Object.values(result.query.pages)[0]?.imageinfo?.[0];
-  if(!info)throw Error('Missing source '+source.file);
-  const meta=info.extmetadata,license=meta.LicenseShortName?.value;
-  const released=license==='Public domain'&&meta.Copyrighted?.value==='False'&&meta.Categories?.value.split('|').includes('PD-self');
-  if(!released&&!/^(?:CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)|CC BY-SA 3\.0 de|CC0)$/.test(license||''))throw Error('Review license '+source.file);
-  const image=await request(info.thumburl||info.url);
-  const bytes=Buffer.from(await image.arrayBuffer());if(bytes.length>10000000)throw Error('Image too large');
-  const n=data[source.country].memes.length+1,name='photo-'+n+'.webp',dir=path.join(root,'data/memes',source.country,'images');fs.mkdirSync(dir,{recursive:true});
-  let output;
-  for(const [size,quality] of [[768,76],[768,68],[640,68],[512,60]]){
-   output=await sharp(bytes).rotate().resize({width:size,height:size,fit:'inside',withoutEnlargement:true}).webp({quality,effort:6}).toFile(path.join(dir,name));
-   if(output.size<100000)break;
-  }
-  if(output.size>=100000)throw Error('Compressed image too large '+source.file);
-  const item={title:source.title,alt:source.title,image:'data/memes/'+source.country+'/images/'+name,width:output.width,height:output.height,creator:plain(meta.Artist?.value),source:info.descriptionurl,license,licenseUrl:meta.LicenseUrl?.value||(released?info.descriptionurl:undefined),changes:'Redimensionada y convertida a WebP; sin texto añadido',countryEvidence:source.countryEvidence};
-  data[source.country].memes.push(item);inventory.push({...item,country:source.country,bytes:output.size});
+  if(!/^[a-z0-9-]+$/.test(source.id)||!source.reviewedVisually||source.hasMemeTextOverlay!==false||!source.visualGag||!source.characters.length)throw Error('Unreviewed reference');
+  const image='data/memes/international/images/'+source.id+'.webp';
+  const input=await fs.readFile(path.join(root,source.image));
+  const bytes=await sharp(input).rotate().resize({width:768,height:768,fit:'inside',withoutEnlargement:true}).webp({quality:72}).toBuffer();
+  if(bytes.length>=100000)throw Error('Photo exceeds budget: '+source.id);
+  const size=await sharp(bytes).metadata();
+  await fs.mkdir(path.dirname(path.join(root,image)),{recursive:true});await fs.writeFile(path.join(root,image),bytes);
+  inventory.push({...source,image,alt:source.visualGag,width:size.width,height:size.height,bytes:bytes.length,scope:'international',countryEvidence:null,licenseUrl:null,changes:'Redimensionada y convertida a WebP; sin texto añadido'});
  }
- for(const [code,value]of Object.entries(data))fs.writeFileSync(path.join(root,'data/memes',code+'.json'),JSON.stringify(value,null,2)+'\n');
- fs.writeFileSync(path.join(root,'docs/photo-inventory.json'),JSON.stringify(inventory,null,2)+'\n');
- console.log(JSON.stringify({countriesWithPhotos:Object.values(data).filter(d=>d.memes.length).length,photos:inventory.length,bytes:inventory.reduce((n,p)=>n+p.bytes,0)}));
-})().catch(e=>{console.error(e);process.exitCode=1;});
+ const countries=(await fs.readdir(path.join(root,'data/memes'))).filter(name=>/^[A-Z]{2}\.json$/.test(name)).map(name=>name.slice(0,2));
+ for(const country of countries)await fs.writeFile(path.join(root,'data/memes',country+'.json'),JSON.stringify({country,scope:'international',memes:inventory},null,2)+'\n');
+ await fs.writeFile(path.join(root,'docs/photo-inventory.json'),JSON.stringify(inventory,null,2)+'\n');
+ const coverage={countries,photos:inventory.length,scope:'international',countriesOfOriginVerified:0,bytes:inventory.reduce((sum,item)=>sum+item.bytes,0),largestBytes:Math.max(...inventory.map(item=>item.bytes)),rejectedPreviousPhotos:96};
+ await fs.writeFile(path.join(root,'docs/photo-coverage.json'),JSON.stringify(coverage,null,2)+'\n');console.log(JSON.stringify(coverage));
+})().catch(error=>{console.error(error);process.exitCode=1;});

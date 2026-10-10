@@ -1,35 +1,9 @@
-# Fotos aleatorias de disfraces y escenas curiosas por país
+# Memes Marvel
 
-El usuario requiere fotografías reales de personas disfrazadas y situaciones curiosas, seleccionadas al azar. Incluye cine, videojuegos, anime, carnavales y escenas curiosas con animales. No se añaden textos a las fotos ni se generan tarjetas. La imagen adjunta es una referencia de estilo, sin atribuirle un país.
+Leer memes-audit.md antes de cambiar contenido. Solo fotos reales Marvel con gag visual claro y sin texto superpuesto. La selección actual contiene dos referencias aceptadas, compartidas por los 51 países, con scope international. No representan procedencia local; país, autor y licencia no acreditados se conservan como null.
 
-## Cobertura verificada
+Metadatos originales y revisión: scripts/photo-sources.json. Originales: scripts/reference-images/. Importador reproducible sin red: scripts/import-photos.cjs (Node.js y sharp 0.35.5). Genera WebP y los 51 manifiestos. La página no incorpora sharp ni consulta Pinterest; solo enlaza fuentes.
 
-Hay 96 fotos inspeccionadas para los 51 países soportados. CU, GT, PR, SV, TR y ZA tienen una foto; los otros 45 países tienen dos. El botón aleatorio se desactiva cuando solo existe una foto. Inventario y atribuciones: docs/photo-inventory.json. Cobertura y tamaños: docs/photo-coverage.json. Fuentes editoriales: scripts/photo-sources.json.
+No añadir contenido de otro universo ni cosplay que solo posa para aumentar cobertura. Antes de introducir una nueva foto, revisar su imagen completa, registrar personajes, gag, fuente, texto superpuesto y los datos realmente acreditados. Una selección internacional compartida no equivale a una colección local por país.
 
-Honduras aporta dos escenas curiosas de visitantes con tres guacamayos en Macaw Mountain Bird Park; son fotografías reales, sin cosplay ni composición generada. Se descartaron desfiles sin disfraces destacados, pinturas, documentos, máscaras de museo, collages y panorámicas que no mostraban bien a los participantes.
-
-GB, CL, TH y PT incluyen parejas de la misma sesión/grupo o disfraz desde distintos ángulos. No repetir el archivo inmediatamente no garantiza que la siguiente foto muestre otro personaje. La asignación geográfica se basa en descripción, evento, categorías o ubicación explícita; no en la nacionalidad del fotógrafo.
-
-## Carga y rendimiento
-
-Se resuelve el país antes de pedir data/memes/<PAIS>.json. La elección manual persiste y tiene prioridad. La detección usa preferencias locales, zona horaria o región del idioma; si falla, se solicita elegir. No usa GPS.
-
-Se muestra una sola foto. «Otra foto aleatoria» recorre las opciones del país sin repetición inmediata y sin volver a solicitar el manifiesto. No se descarga un índice global ni se precargan imágenes de otros países. Se mantiene el estado vacío para futuros catálogos sin contenido o respuestas 404.
-
-IntersectionObserver activa la foto visible, con loading=lazy y decoding=async. Sin observer se ofrece «Cargar imagen». Cambiar o cerrar aborta la petición, desconecta el observer y retira la fuente anterior. Una generación descarta respuestas tardías; una transferencia ya iniciada puede terminar.
-
-Cada WebP ocupa menos de 100.000 bytes; el mayor pesa 98.738 bytes. Las 96 fotos suman 5.567.802 bytes y ese conjunto no se descarga al entrar. Se mantienen proporciones, sin recortar personas. El importador reduce calidad y, si hace falta, dimensiones hasta 512 px. Reutiliza archivos existentes y respeta Retry-After en HTTP 429/503.
-
-## Procedencia y atribución
-
-Cada entrada contiene título, texto alternativo, dimensiones, autor, fuente, licencia, enlace de licencia, cambios de formato y evidencia geográfica. Las fotografías CC conservan su licencia, incluidas condiciones ShareAlike. La foto noruega del stormtrooper tiene declaración PD-self de su autor; su enlace de licencia apunta a esa declaración en Commons. No se la etiqueta como CC0 ni se aplica a las imágenes la licencia general del código.
-
-Las rutas son locales, con nombre plano y carpeta del país. Se rechazan rutas codificadas, subcarpetas y URL externas. Los pies usan textContent. Las fuentes se restringen a Commons y las licencias a Creative Commons, con la única excepción del enlace PD-self que debe coincidir exactamente con la fuente Commons de esa foto.
-
-scripts/import-photos.cjs opera solo al preparar el repositorio; requiere Node.js y sharp 0.35.5. La página no consulta Commons ni añade esa dependencia de producción.
-
-## Validación y publicación
-
-npm test comprueba arranque, guía, aislamiento de cuentas, rutas, selección manual, cancelación, aleatoriedad, atribución e integridad de los 51 catálogos. tests/browser-memes.cjs recorre los 51 países en Chrome de escritorio y móvil emulado, decodifica las fotos, registra solicitudes, verifica foto única, persistencia y guía 7→8→fin. Resultados: docs/entry-fixes-results.json y docs/browser-memes-results.json.
-
-Publicación verificada el 10 de octubre de 2026: PR #3 fusionado como 6aa7feffa29f085fb1cd6054c234c073a03fadd3. Pages completó correctamente el workflow 38034293552. Se contrastaron los bytes de los 148 archivos publicados y Chrome decodificó las 96 fotos de los 51 países en escritorio (1280×900) y móvil emulado (390×844), sin errores no capturados. Guía 7→8→fin, selección aleatoria y persistencia: PASS. Evidencia en docs/pages-verification-results.json y docs/browser-pages-results.json. URL: https://ronaldobtc-code.github.io/mcu-tracker/. Las pruebas no cubren OTP/Supabase real, dispositivos físicos ni concurrencia entre dispositivos. La detección geográfica y el SVG son aproximados.
+Ejecutar npm test y tests/browser-memes.cjs; revisar la guía 7→8→fin y dos tamaños de pantalla. Tras publicar, scripts/verify-pages.cjs comprueba HTML, 51 manifiestos y dos WebP; tests/browser-pages.cjs prueba el sitio real bloqueando servicios externos. No confundir resultados históricos del PR #3 con esta colección.
