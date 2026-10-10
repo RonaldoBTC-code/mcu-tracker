@@ -1,4 +1,31 @@
 {
   "country": "DE",
-  "memes": []
+  "memes": [
+    {
+      "title": "Scrap Baby sale del videojuego en Dortmund",
+      "alt": "Scrap Baby sale del videojuego en Dortmund",
+      "image": "data/memes/DE/images/photo-1.webp",
+      "width": 768,
+      "height": 576,
+      "creator": "REZATA",
+      "source": "https://commons.wikimedia.org/wiki/File:German_Comic_Con_2023_Cosplay_Scrap_Baby.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: German Comic Con 2023, Dortmund, Alemania"
+    },
+    {
+      "title": "Mario y compañía llegan a Stuttgart",
+      "alt": "Mario y compañía llegan a Stuttgart",
+      "image": "data/memes/DE/images/photo-2.webp",
+      "width": 768,
+      "height": 678,
+      "creator": "© Ra Boe / Wikipedia",
+      "source": "https://commons.wikimedia.org/wiki/File:Stuttgart_2018_-Comic_Con_Germany_-_Cosplay_of_Mario_and_Princess_Peach_-_by-RaBoe_150.jpg",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Comic Con Germany, Stuttgart, Alemania, 2018"
+    }
+  ]
 }

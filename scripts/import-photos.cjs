@@ -31,7 +31,7 @@ async function request(url){
   const result=await response.json(),info=Object.values(result.query.pages)[0]?.imageinfo?.[0];
   if(!info)throw Error('Missing source '+source.file);
   const meta=info.extmetadata,license=meta.LicenseShortName?.value;
-  if(!/^(?:CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)|CC0)$/.test(license||''))throw Error('Review license '+source.file);
+  if(!/^(?:CC BY(?:-SA)? (?:2\.0|3\.0|4\.0)|CC BY-SA 3\.0 de|CC0)$/.test(license||''))throw Error('Review license '+source.file);
   const image=await request(info.thumburl||info.url);
   const bytes=Buffer.from(await image.arrayBuffer());if(bytes.length>10000000)throw Error('Image too large');
   const n=data[source.country].memes.length+1,name='photo-'+n+'.webp',dir=path.join(root,'data/memes',source.country,'images');fs.mkdirSync(dir,{recursive:true});

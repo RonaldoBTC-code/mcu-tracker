@@ -1,4 +1,31 @@
 {
   "country": "FR",
-  "memes": []
+  "memes": [
+    {
+      "title": "Goku aterriza en la Japan Expo",
+      "alt": "Goku aterriza en la Japan Expo",
+      "image": "data/memes/FR/images/photo-1.webp",
+      "width": 432,
+      "height": 768,
+      "creator": "Miguel Discart / Kiri Karma",
+      "source": "https://commons.wikimedia.org/wiki/File:Japan_Expo_2024_-_Cosplay_of_Goku.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Japan Expo 2024; Category:Cosplay of Dragon Ball in France; coordenadas de la fuente 48 N, 2 E"
+    },
+    {
+      "title": "El maestro Roshi también sale de convención",
+      "alt": "El maestro Roshi también sale de convención",
+      "image": "data/memes/FR/images/photo-2.webp",
+      "width": 432,
+      "height": 768,
+      "creator": "Miguel Discart / Kiri Karma",
+      "source": "https://commons.wikimedia.org/wiki/File:Japan_Expo_2024_-_Cosplay_of_Master_Rosi.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Japan Expo 2024; Category:Cosplay of Dragon Ball in France; coordenadas de la fuente 48 N, 2 E"
+    }
+  ]
 }

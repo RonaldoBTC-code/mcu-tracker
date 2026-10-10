@@ -1,4 +1,31 @@
 {
   "country": "MX",
-  "memes": []
+  "memes": [
+    {
+      "title": "Pomni visita la Animex de Monterrey",
+      "alt": "Pomni visita la Animex de Monterrey",
+      "image": "data/memes/MX/images/photo-1.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "Jolly Flowers",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_de_Pomni_(Animex,_2026).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Animex, Monterrey, Nuevo León, México"
+    },
+    {
+      "title": "Auron sale de Final Fantasy a México",
+      "alt": "Auron sale de Final Fantasy a México",
+      "image": "data/memes/MX/images/photo-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "Dorian Ivan Najera from Iztapalapa, Mexico",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Auron_from_Final_Fantasy_X_in_Mexico_in_2008_(2589854052).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Category:Cosplay in Mexico; archivo identificado por su fotógrafo como cosplay en México en 2008"
+    }
+  ]
 }

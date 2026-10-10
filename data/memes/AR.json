@@ -1,4 +1,31 @@
 {
   "country": "AR",
-  "memes": []
+  "memes": [
+    {
+      "title": "Hogwarts se reúne en Buenos Aires",
+      "alt": "Hogwarts se reúne en Buenos Aires",
+      "image": "data/memes/AR/images/photo-1.webp",
+      "width": 576,
+      "height": 768,
+      "creator": "HGranger18",
+      "source": "https://commons.wikimedia.org/wiki/File:Magic_meeting_XIII_-_Argentina_-_Cosplay_de_personajes.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Magic meeting XIII, Argentina; mismo evento del archivo Magic meeting XIII - Argentina.jpg, Colegio San José de Buenos Aires"
+    },
+    {
+      "title": "Disfraces en el Carnaval del Pehuén",
+      "alt": "Disfraces en el Carnaval del Pehuén",
+      "image": "data/memes/AR/images/photo-2.webp",
+      "width": 768,
+      "height": 433,
+      "creator": "Iro Bosero",
+      "source": "https://commons.wikimedia.org/wiki/File:39%C2%AA_edici%C3%B3n_Carnaval_del_Pehu%C3%A9n_%E2%80%93_Jun%C3%ADn_de_Los_Andes,_Neuqu%C3%A9n_-_2026_-_Disfraces_colectivos_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: Carnaval del Pehuén, Junín de los Andes, Neuquén, Argentina, 2026"
+    }
+  ]
 }

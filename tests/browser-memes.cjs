@@ -23,8 +23,10 @@ const server=http.createServer((req,res)=>{
    const page=await context.newPage(),errors=[],requests=[];
    page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(r.url().includes('/data/memes/'))requests.push(new URL(r.url()).pathname);});
    await page.goto(origin,{waitUntil:'domcontentloaded'});await page.locator('#mapOpen').click();
-   await page.waitForFunction(()=>document.querySelector('#memeStatus')?.textContent.includes('Todavía'));
-   assert.deepEqual(requests,['/data/memes/EC.json']);const ecRequests=[...requests];requests.length=0;
+   await page.locator('#memeList img').scrollIntoViewIfNeeded();
+   await page.waitForFunction(()=>document.querySelector('#memeList img')?.complete&&document.querySelector('#memeList img').naturalWidth>0);
+   assert.equal(requests.length,2);assert.equal(requests[0],'/data/memes/EC.json');assert(requests[1].startsWith('/data/memes/EC/images/'));
+   const ecRequests=[...requests];requests.length=0;
    await page.evaluate(()=>window.MapMemes.open('CA'));
    await page.locator('#memeList img').first().scrollIntoViewIfNeeded();
    await page.locator('#memeList img').last().scrollIntoViewIfNeeded();

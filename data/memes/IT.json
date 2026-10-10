@@ -1,4 +1,31 @@
 {
   "country": "IT",
-  "memes": []
+  "memes": [
+    {
+      "title": "Disfraces curiosos en Cartoomics",
+      "alt": "Disfraces curiosos en Cartoomics",
+      "image": "data/memes/IT/images/photo-1.webp",
+      "width": 512,
+      "height": 768,
+      "creator": "marcuz85 from San Giovanni Valdarno, Italia",
+      "source": "https://commons.wikimedia.org/wiki/File:Unidentified_cosplay_at_Cartoomics_2013_(8572265031).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Cartoomics 2013; Category:Unidentified cosplay in Italy"
+    },
+    {
+      "title": "Un hada se apunta a la Festa dell’Unicorno",
+      "alt": "Un hada se apunta a la Festa dell’Unicorno",
+      "image": "data/memes/IT/images/photo-2.webp",
+      "width": 768,
+      "height": 431,
+      "creator": "Cris",
+      "source": "https://commons.wikimedia.org/wiki/File:Green_Fairy_cosplay_at_the_2008_Festa_dell%27Unicorno,_Vinci,_Italy.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del fotógrafo: Festa dell’Unicorno, Vinci, Italia, 2008"
+    }
+  ]
 }

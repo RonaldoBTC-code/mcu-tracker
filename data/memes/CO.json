@@ -1,4 +1,31 @@
 {
   "country": "CO",
-  "memes": []
+  "memes": [
+    {
+      "title": "Ghost Rider cambia la moto por una pose",
+      "alt": "Ghost Rider cambia la moto por una pose",
+      "image": "data/memes/CO/images/photo-1.webp",
+      "width": 496,
+      "height": 768,
+      "creator": "Ghostridercolombia",
+      "source": "https://commons.wikimedia.org/wiki/File:Ghostrider_cosplay_3.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "Descripción del autor: cosplayer de Colombia interpretando a Ghost Rider"
+    },
+    {
+      "title": "El cosplay termina en propuesta de matrimonio",
+      "alt": "El cosplay termina en propuesta de matrimonio",
+      "image": "data/memes/CO/images/photo-2.webp",
+      "width": 640,
+      "height": 480,
+      "creator": "Oscarín Orbitus",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplayer_pidiendo_matrimonio.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "JZone 2013; Category:2013 events in Colombia"
+    }
+  ]
 }
