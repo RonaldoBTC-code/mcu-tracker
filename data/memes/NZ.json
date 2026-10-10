@@ -1,21 +1,4 @@
 {
   "country": "NZ",
-  "memes": [
-    {
-      "title": "Doctor Strange pide un paisaje épico. Yo: tenemos varios, elige una isla.",
-      "alt": "Doctor Strange pide un paisaje épico. Yo: tenemos varios, elige una isla.",
-      "image": "data/memes/NZ/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Los Avengers anuncian viaje largo. Yo ya tengo experiencia con ese vuelo.",
-      "alt": "Los Avengers anuncian viaje largo. Yo ya tengo experiencia con ese vuelo.",
-      "image": "data/memes/NZ/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

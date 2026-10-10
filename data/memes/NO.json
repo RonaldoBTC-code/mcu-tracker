@@ -1,21 +1,4 @@
 {
   "country": "NO",
-  "memes": [
-    {
-      "title": "Thor enseña su paisaje favorito. Yo le respondo con un fiordo.",
-      "alt": "Thor enseña su paisaje favorito. Yo le respondo con un fiordo.",
-      "image": "data/memes/NO/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Los Avengers esperan el amanecer. Yo reviso primero la época del año.",
-      "alt": "Los Avengers esperan el amanecer. Yo reviso primero la época del año.",
-      "image": "data/memes/NO/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

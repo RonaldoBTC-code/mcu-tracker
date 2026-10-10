@@ -1,21 +1,4 @@
 {
   "country": "PH",
-  "memes": [
-    {
-      "title": "Capitán América reúne al equipo. Yo reparto las letras del karaoke.",
-      "alt": "Capitán América reúne al equipo. Yo reparto las letras del karaoke.",
-      "image": "data/memes/PH/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Doctor Strange: viaje entre islas. Yo: perfecto, nos ahorramos un ferry.",
-      "alt": "Doctor Strange: viaje entre islas. Yo: perfecto, nos ahorramos un ferry.",
-      "image": "data/memes/PH/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

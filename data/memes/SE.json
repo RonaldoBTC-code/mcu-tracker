@@ -1,21 +1,4 @@
 {
   "country": "SE",
-  "memes": [
-    {
-      "title": "Thanos: no hay tiempo para pausas. Yo: la fika se respeta.",
-      "alt": "Thanos: no hay tiempo para pausas. Yo: la fika se respeta.",
-      "image": "data/memes/SE/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Tony Stark ensambla una armadura. Yo: sobró una pieza, como siempre.",
-      "alt": "Tony Stark ensambla una armadura. Yo: sobró una pieza, como siempre.",
-      "image": "data/memes/SE/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

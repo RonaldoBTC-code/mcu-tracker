@@ -1,21 +1,4 @@
 {
   "country": "ZA",
-  "memes": [
-    {
-      "title": "Capitán América reúne al equipo. Yo reúno a todos alrededor del braai.",
-      "alt": "Capitán América reúne al equipo. Yo reúno a todos alrededor del braai.",
-      "image": "data/memes/ZA/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Doctor Strange pide una vista épica. Yo propongo Table Mountain.",
-      "alt": "Doctor Strange pide una vista épica. Yo propongo Table Mountain.",
-      "image": "data/memes/ZA/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

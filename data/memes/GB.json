@@ -2,20 +2,30 @@
   "country": "GB",
   "memes": [
     {
-      "title": "Thanos: reunión urgente. Yo: ponemos la tetera y empezamos.",
-      "alt": "Thanos: reunión urgente. Yo: ponemos la tetera y empezamos.",
-      "image": "data/memes/GB/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
+      "title": "Buzz Lightyear con armadura de Iron Man",
+      "alt": "Buzz Lightyear con armadura de Iron Man",
+      "image": "data/memes/GB/images/photo-1.webp",
+      "width": 510,
+      "height": 768,
+      "creator": "Roger Murmann from Eppertshausen, Deutschland",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8978219177).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "MCM London Comic Con, ExCeL London"
     },
     {
-      "title": "Thor anuncia lluvia para mañana. En Londres nadie cambia de planes.",
-      "alt": "Thor anuncia lluvia para mañana. En Londres nadie cambia de planes.",
-      "image": "data/memes/GB/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
+      "title": "Iron Man se apunta a Toy Story",
+      "alt": "Iron Man se apunta a Toy Story",
+      "image": "data/memes/GB/images/photo-2.webp",
+      "width": 510,
+      "height": 768,
+      "creator": "Roger Murmann from Eppertshausen, Deutschland",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8979413974).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
+      "countryEvidence": "MCM London Comic Con, ExCeL London"
     }
   ]
 }

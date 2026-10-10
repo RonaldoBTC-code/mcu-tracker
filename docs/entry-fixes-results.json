@@ -116,7 +116,11 @@
     "status": "PASS"
   },
   {
-    "name": "Contenido: todos los países tienen dos memes locales y WebP de menos de 20 KB",
+    "name": "Contenido: fotos reales con procedencia; ningún país usa tarjetas de texto",
+    "status": "PASS"
+  },
+  {
+    "name": "Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch",
     "status": "PASS"
   }
 ]

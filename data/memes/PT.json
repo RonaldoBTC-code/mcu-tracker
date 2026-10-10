@@ -1,21 +1,4 @@
 {
   "country": "PT",
-  "memes": [
-    {
-      "title": "Doctor Strange busca un portal antiguo. Yo le señalo el tranvía de Lisboa.",
-      "alt": "Doctor Strange busca un portal antiguo. Yo le señalo el tranvía de Lisboa.",
-      "image": "data/memes/PT/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Los Avengers comparten provisiones. Yo escondo el último pastel de nata.",
-      "alt": "Los Avengers comparten provisiones. Yo escondo el último pastel de nata.",
-      "image": "data/memes/PT/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

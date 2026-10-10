@@ -129,14 +129,20 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   w.IntersectionObserver=undefined;w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[{title:'EC',image:'data/memes/EC/images/fixture.webp'}]})});
   await w.MapMemes.open('EC');assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert.equal(d.querySelector('#memeList button').textContent,'Cargar imagen');
  });
- await test('Contenido: todos los países tienen dos memes locales y WebP de menos de 20 KB',async({w})=>{
+ await test('Contenido: fotos reales con procedencia; ningún país usa tarjetas de texto',async({w})=>{
   const codes=w.Region.countries().map(c=>c[0]);assert.equal(codes.length,51);
+  let count=0,countries=0;
   for(const code of codes){const file=path.join(__dirname,'../data/memes',code+'.json'),data=JSON.parse(fs.readFileSync(file,'utf8'));
-   assert.equal(data.country,code);assert.equal(data.memes.length,2);assert(fs.statSync(file).size<4096);
-   for(const meme of data.memes){assert(meme.image.startsWith('data/memes/'+code+'/images/'));assert(meme.title.length>20);assert.equal(meme.width,768);assert.equal(meme.height,512);
-    const image=fs.readFileSync(path.join(__dirname,'..',meme.image));assert.equal(image.toString('ascii',0,4),'RIFF');assert.equal(image.toString('ascii',8,12),'WEBP');assert(image.length<20000);
+   assert.equal(data.country,code);assert(Array.isArray(data.memes));if(data.memes.length)countries++;
+   for(const meme of data.memes){count++;assert(meme.image.startsWith('data/memes/'+code+'/images/photo-'));assert(meme.title.length>10);assert(meme.width>0&&meme.width<=768);assert(meme.height>0&&meme.height<=768);assert(meme.countryEvidence);assert.equal(new URL(meme.source).hostname,'commons.wikimedia.org');assert(meme.license);assert(meme.creator);
+    const image=fs.readFileSync(path.join(__dirname,'..',meme.image));assert.equal(image.toString('ascii',0,4),'RIFF');assert.equal(image.toString('ascii',8,12),'WEBP');assert(image.length<100000);
    }
   }
+  assert.equal(count,6);assert.equal(countries,3);
+ });
+ await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{
+  let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))})};};
+  await w.MapMemes.open('EC');let last='';for(let i=0;i<6;i++){const images=d.querySelectorAll('#memeList img');assert.equal(images.length,1);const current=images[0].dataset.src;assert.notEqual(current,last);last=current;d.querySelector('#memeRandom').click();}assert.equal(calls,1);
  });
  console.log(JSON.stringify(results,null,2));
  if(process.argv.includes('--record'))fs.writeFileSync(path.join(__dirname,'../docs/entry-fixes-results.json'),JSON.stringify(results,null,2)+'\n');

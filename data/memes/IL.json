@@ -1,21 +1,4 @@
 {
   "country": "IL",
-  "memes": [
-    {
-      "title": "Los Avengers planean el almuerzo. Yo propongo hummus para compartir.",
-      "alt": "Los Avengers planean el almuerzo. Yo propongo hummus para compartir.",
-      "image": "data/memes/IL/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Thor: no pienso flotar sin poder. Yo le digo que pruebe el mar Muerto.",
-      "alt": "Thor: no pienso flotar sin poder. Yo le digo que pruebe el mar Muerto.",
-      "image": "data/memes/IL/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

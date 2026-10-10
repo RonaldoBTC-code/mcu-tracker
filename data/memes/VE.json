@@ -1,21 +1,4 @@
 {
   "country": "VE",
-  "memes": [
-    {
-      "title": "Capitán América: escudos listos. Yo: arepas listas, que nadie salga sin comer.",
-      "alt": "Capitán América: escudos listos. Yo: arepas listas, que nadie salga sin comer.",
-      "image": "data/memes/VE/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Thor: puedo volar. Yo: perfecto, vamos al Salto Ángel.",
-      "alt": "Thor: puedo volar. Yo: perfecto, vamos al Salto Ángel.",
-      "image": "data/memes/VE/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

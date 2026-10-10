@@ -1,21 +1,4 @@
 {
   "country": "SV",
-  "memes": [
-    {
-      "title": "Capitán América: necesito un escudo. Yo: la pupusa es redonda, pero no se lanza.",
-      "alt": "Capitán América: necesito un escudo. Yo: la pupusa es redonda, pero no se lanza.",
-      "image": "data/memes/SV/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Los Avengers tienen nueva misión. Primero paramos a comer pupusas.",
-      "alt": "Los Avengers tienen nueva misión. Primero paramos a comer pupusas.",
-      "image": "data/memes/SV/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

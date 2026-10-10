@@ -1,21 +1,4 @@
 {
   "country": "PA",
-  "memes": [
-    {
-      "title": "Doctor Strange conecta dos mundos. Yo: el Canal también hace su trabajo.",
-      "alt": "Doctor Strange conecta dos mundos. Yo: el Canal también hace su trabajo.",
-      "image": "data/memes/PA/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Tony Stark presume su armadura. Yo solo quiero aire acondicionado en Panamá.",
-      "alt": "Tony Stark presume su armadura. Yo solo quiero aire acondicionado en Panamá.",
-      "image": "data/memes/PA/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

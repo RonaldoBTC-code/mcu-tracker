@@ -1,21 +1,4 @@
 {
   "country": "AU",
-  "memes": [
-    {
-      "title": "Los Avengers: reunión por la mañana. Yo: ¿mañana de qué zona horaria?",
-      "alt": "Los Avengers: reunión por la mañana. Yo: ¿mañana de qué zona horaria?",
-      "image": "data/memes/AU/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Thor prepara el martillo. Yo preparo la barbacoa.",
-      "alt": "Thor prepara el martillo. Yo preparo la barbacoa.",
-      "image": "data/memes/AU/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

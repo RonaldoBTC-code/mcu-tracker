@@ -1,21 +1,4 @@
 {
   "country": "FR",
-  "memes": [
-    {
-      "title": "Tony Stark diseña otra armadura. Yo diseño la ruta a la panadería.",
-      "alt": "Tony Stark diseña otra armadura. Yo diseño la ruta a la panadería.",
-      "image": "data/memes/FR/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Doctor Strange ve todos los futuros. En todos me llevo una baguette.",
-      "alt": "Doctor Strange ve todos los futuros. En todos me llevo una baguette.",
-      "image": "data/memes/FR/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

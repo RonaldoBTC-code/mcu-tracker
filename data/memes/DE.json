@@ -1,21 +1,4 @@
 {
   "country": "DE",
-  "memes": [
-    {
-      "title": "Los Avengers: plan improvisado. Yo: ¿dónde está el horario de la misión?",
-      "alt": "Los Avengers: plan improvisado. Yo: ¿dónde está el horario de la misión?",
-      "image": "data/memes/DE/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Thor pide un vehículo veloz. Yo: primero revisemos la ruta del tren.",
-      "alt": "Thor pide un vehículo veloz. Yo: primero revisemos la ruta del tren.",
-      "image": "data/memes/DE/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

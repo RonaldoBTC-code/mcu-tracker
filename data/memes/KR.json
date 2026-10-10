@@ -1,21 +1,4 @@
 {
   "country": "KR",
-  "memes": [
-    {
-      "title": "Los Avengers forman otro equipo. Yo ya estoy pensando en la coreografía.",
-      "alt": "Los Avengers forman otro equipo. Yo ya estoy pensando en la coreografía.",
-      "image": "data/memes/KR/images/meme-1.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    },
-    {
-      "title": "Thor: necesito recuperar energía. Yo: vamos por bibimbap.",
-      "alt": "Thor: necesito recuperar energía. Yo: vamos por bibimbap.",
-      "image": "data/memes/KR/images/meme-2.webp",
-      "width": 768,
-      "height": 512,
-      "creator": "MCU Tracker · humor original de fans"
-    }
-  ]
+  "memes": []
 }

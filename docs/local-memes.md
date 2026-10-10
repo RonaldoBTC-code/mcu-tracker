@@ -1,42 +1,33 @@
-# Memes locales asociados al mapa
+# Fotos aleatorias de cosplay por país
 
-La entrada al mapa abre «Memes locales». Antes de solicitar datos se resuelve un único código de país: selección manual de este mapa guardada en `mcu_map_country`, selección previa del selector general guardada en `mcu_region`, zona horaria reconocida o región válida del idioma del navegador, en ese orden. No se solicita GPS, ubicación exacta ni servicio IP externo. Esta estimación puede ser incorrecta (viajes, VPN, idioma o configuración del equipo); el selector permite corregirla y conserva la elección manual. Si no se puede estimar, se pide seleccionar un país sin hacer solicitudes de memes. `GLOBAL` no es un país permitido.
+El formato requerido es fotografía real de personas disfrazadas o situaciones curiosas de Marvel, sin tarjetas de texto generadas y sin texto superpuesto añadido. La referencia adjunta del usuario define el estilo; no se utiliza como una foto de Ecuador ni se inventa su procedencia.
 
-El mapa SVG existente se centra en las coordenadas aproximadas del país. No necesita descargar tiles para esta vista. La pestaña Comunidad sigue ofreciendo sus estadísticas globales cuando se selecciona explícitamente; esas estadísticas no contienen memes.
+Se decide el país antes de solicitar data/memes/<PAIS>.json. La selección manual persiste; después se considera la elección general guardada, zona horaria reconocida o región del idioma. Si no se puede detectar, se pide elegir sin descargar datos. No se solicita GPS. No existe catálogo global descargado por el navegador.
 
-## Contrato de datos
+## Contenido actual y pendiente
 
-Cada país tiene su archivo independiente: `data/memes/EC.json`, `data/memes/MX.json`, etc. No existe endpoint ni índice global de memes. La petición se construye únicamente con un código validado contra la lista de países existente. Para Ecuador se solicita solo `data/memes/EC.json`.
+Hay seis fotos verificadas: dos de Canadá, dos del Reino Unido y dos de Estados Unidos. Se revisaron autor, licencia y evidencia de evento/país en Wikimedia Commons. Las dos fotos británicas muestran el mismo cosplay desde distintos ángulos. El inventario y atribuciones están en photo-inventory.json; las fuentes editoriales están en scripts/photo-sources.json.
 
-Formato de ejemplo, solo para explicar el contrato; no es un meme disponible:
+Los otros 48 países siguen sin fotos verificadas, incluido Ecuador. Sus archivos están vacíos y la página muestra esa ausencia. No se asignan fotos extranjeras a otro país para aparentar cobertura. Las 102 tarjetas anteriores y su generador se retiraron porque no correspondían al formato pedido. El objetivo de contenido para todos los países sigue incompleto; esta colección parcial no está lista para el despliegue final.
 
-```json
-{
-  "country": "EC",
-  "memes": [
-    {
-      "title": "Título del meme autorizado",
-      "alt": "Descripción de la imagen",
-      "image": "data/memes/EC/images/nombre.webp"
-    }
-  ]
-}
-```
+## Aleatoriedad y descargas
 
-Las imágenes deben alojarse en `data/memes/<PAIS>/images/`, en el mismo origen, con extensión png, jpg, jpeg, webp o gif. No se aceptan rutas de otro país, URL externa, parámetros o fragmentos. El campo `country` del archivo debe coincidir con el solicitado; un archivo de México servido como Ecuador se rechaza antes de crear imágenes. Textos se insertan mediante textContent; no admiten HTML. Se muestran como máximo 50 entradas por archivo.
+Después de descargar únicamente el manifiesto del país, se elige una sola foto al azar. «Otra foto aleatoria» recorre las opciones locales sin repetición inmediata y sin volver a descargar el manifiesto. Nunca se crea una galería con todas las imágenes ni se precarga otro país. Si solo hay una foto, el botón queda desactivado. Si no hay fotos, se muestra el estado vacío.
 
-Se incluyen 102 memes originales de fans: dos para cada uno de los 51 países del selector. Los textos usan referencias locales y personajes de Marvel; las ilustraciones y composición se crearon para MCU Tracker, sin copiar capturas de películas, memes de terceros ni imágenes oficiales. No se presentan como contenido viral encontrado en Internet. Los textos están en español. `scripts/meme-copy.json` contiene el material editorial para generación, no es un catálogo descargado por el frontend. `scripts/generate-memes.cjs` genera las tarjetas WebP y manifiestos; requiere Node.js y sharp 0.35.5 únicamente en desarrollo. Las imágenes pesan menos de 20 KB cada una y tienen tamaño 768×512 reservado en el DOM. Los archivos vacíos o inexistentes siguen mostrando «Todavía no hay memes disponibles para este país»; fallos de red/formato muestran un error recuperable al volver a seleccionar el país.
+IntersectionObserver activa únicamente la foto visible; se usa loading=lazy y decoding=async. Sin observer se ofrece «Cargar imagen». Al cambiar de país/pestaña o cerrar se aborta la petición, se desconecta el observer y se retira la fuente anterior. Una generación descarta respuestas tardías. Una transferencia ya iniciada puede terminar en el navegador.
 
-## Descargas y concurrencia
+## Archivos y atribución
 
-Las imágenes comienzan sin src. IntersectionObserver activa solo imágenes próximas al área visible del diálogo; además llevan loading=lazy y decoding=async. Sin observer se exige clic en «Cargar imagen», sin precargar toda la colección. Al cambiar de país, pestaña o cerrar se aborta la petición de datos, se desconecta el observer y se retiran fuentes anteriores. Una generación impide que una respuesta antigua reemplace el país actual, incluso si el transporte no respeta AbortSignal. Las peticiones de datos expiran a los 10 segundos.
+Cada entrada contiene title, alt, image, width, height, creator, source, license, licenseUrl, changes y countryEvidence. La imagen debe ser WebP/JPEG/PNG/GIF, de origen local y de la carpeta del país, con nombre de archivo plano. Se rechazan rutas codificadas, subcarpetas, URL externas y archivos de otro país.
 
-Una imagen que ya empezó a transferirse antes del cambio puede terminar en el navegador; no es posible recuperar bytes transferidos. Nunca se programan imágenes de países distintos al archivo solicitado ni se precarga un catálogo global. No hay caché de memes en memoria ni prefetch entre países. La caché HTTP del navegador puede reutilizar un archivo de un país previamente visitado.
+Se conservan las proporciones originales, sin recortar la escena. El pie muestra autor, fuente, licencia y que se redimensionó/convirtió a WebP. Solo se crean enlaces de fuente a commons.wikimedia.org y de licencia a creativecommons.org. Se insertan textos con textContent; no se acepta HTML. Las versiones convertidas conservan la licencia de la foto original, incluidas condiciones ShareAlike cuando corresponda; los archivos de imagen no se declaran bajo la licencia general del código.
+
+scripts/import-photos.cjs descarga las fuentes únicamente al preparar el repositorio; requiere Node.js y sharp 0.35.5. La página no consulta Commons, no descarga un índice mundial ni añade dependencia de producción.
 
 ## Validación y límites
 
-`npm test` ejecuta 30 regresiones, con solicitudes registradas para Ecuador, imágenes diferidas y rechazo de imágenes MX/externas, persistencia manual, detección fallida sin descarga, entrada con zona horaria de Guayaquil, cancelación al cerrar, respuestas tardías, archivo con país incorrecto, fallback sin observer y cobertura/tamaño de contenido para los 51 países. Los memes ficticios de estas pruebas no se publican. No se enviaron correos ni se escribió en Supabase.
+npm test comprueba aislamiento EC/MX, detección fallida, selección manual, cancelación, rutas malformadas, imagen única aleatoria sin repetir, existencia/procedencia de las seis fotos y ausencia de tarjetas de texto en manifiestos. Las fixtures simuladas no son contenido publicado.
 
-La prueba real `node tests/browser-memes.cjs` requiere Playwright y Chromium (puede indicarse un ejecutable con `MCU_BROWSER_PATH`). Sirve localmente la página y datos reales, desactiva Supabase/TMDB y bloquea los orígenes externos. En Chrome, 1280×900 y 390×844: comprueba los 51 países, decodifica sus 102 imágenes por tamaño de pantalla, registra las solicitudes reales y verifica que todas pertenecen al país solicitado. Comprueba también persistencia manual, botón Cerrar visible al desplazar la lista y la guía 7→8→fin. Resultados en `browser-memes-results.json`; las capturas locales no forman parte del frontend.
+tests/browser-memes.cjs usa Chrome y registra solicitudes reales de archivos locales; recorre 51 países, verifica los estados vacíos y las fotos disponibles, el botón aleatorio, persistencia manual y guía 7→8→fin en escritorio y móvil emulado. Evidencia en browser-memes-results.json y entry-fixes-results.json.
 
-Límites: las etiquetas y textos nuevos están en español; falta traducirlos. El SVG es aproximado y no dibuja fronteras políticas. No se incorporó un servicio de detección IP: la estimación local documentada es el mecanismo disponible. La prueba real usa Chrome con emulación de tamaño móvil, no un teléfono físico; no prueba OTP ni Supabase real. El objetivo vigente del usuario autoriza desplegar después de la auditoría y comprobaciones.
+Pendientes: fotos adecuadas verificadas para los otros 48 países, traducciones, auditoría final del conjunto completo y despliegue autorizado. La prueba no cubre Supabase/OTP real ni dispositivos físicos. La detección local y el SVG son aproximados.
