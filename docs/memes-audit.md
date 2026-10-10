@@ -1,4 +1,4 @@
-# Auditoría de fotos por país — revisión final previa al despliegue
+# Auditoría de fotos por país — versión publicada y verificada
 
 ## Alcance y contenido
 
@@ -26,8 +26,8 @@ Fuentes, autores, licencias, cambios y evidencia geográfica: photo-inventory.js
 
 Las 96 fotos suman 5.567.802 bytes; el mayor archivo pesa 98.738 bytes. El conjunto no se descarga al entrar. Las mediciones locales de Chrome no prometen tiempos de Internet.
 
-## Evidencia y puerta de publicación
+## Evidencia de publicación
 
 Resultados DOM en entry-fixes-results.json y Chrome en browser-memes-results.json. La comprobación del navegador recorre los 51 países y sus 96 fotos en escritorio y móvil emulado; registra solicitudes, decodificación, estado de botón único, persistencia y guía 7→8→fin. Ecuador pide únicamente EC.json y una imagen de su carpeta al entrar. Las pruebas bloquean conexiones externas, no escriben en Supabase ni envían OTP.
 
-Falta fusionar/publicar el commit verificado y comprobar que Pages sirve esa versión y sus imágenes. El objetivo permanece activo hasta verificar el despliegue. No se afirma que estén resueltos OTP real, pruebas en dispositivos físicos o concurrencia entre dispositivos; pendientes históricos en entry-fixes.md.
+Publicación verificada el 10 de octubre de 2026: PR #3 fusionado como 6aa7feffa29f085fb1cd6054c234c073a03fadd3. Pages completó correctamente el workflow 38034293552. Se contrastaron los bytes de los 148 archivos publicados y Chrome decodificó las 96 fotos de los 51 países en escritorio (1280×900) y móvil emulado (390×844), sin errores no capturados. Guía 7→8→fin, selección aleatoria y persistencia: PASS. Evidencia en docs/pages-verification-results.json y docs/browser-pages-results.json. URL: https://ronaldobtc-code.github.io/mcu-tracker/. No se afirma que estén resueltos OTP real, pruebas en dispositivos físicos o concurrencia entre dispositivos; pendientes históricos en entry-fixes.md.

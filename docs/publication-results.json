@@ -1,0 +1,14 @@
+{
+  "approvedHead": "d31df605747e826a2c35a1c721a0feeee09f0226",
+  "mergeCommit": "6aa7feffa29f085fb1cd6054c234c073a03fadd3",
+  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/3",
+  "deploymentRun": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38034293552",
+  "deploymentConclusion": "success",
+  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "filesVerified": 148,
+  "productionBrowserResults": "browser-pages-results.json",
+  "limitations": [
+    "Supabase/OTP real no probado; conexiones externas bloqueadas",
+    "Móvil emulado; dispositivos físicos no probados"
+  ]
+}
