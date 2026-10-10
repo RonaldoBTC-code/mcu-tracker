@@ -6,14 +6,15 @@
     },
     "countriesTested": 51,
     "countriesWithPhotos": 51,
-    "imageDisplayChecks": 102,
-    "uniquePhotos": 2,
+    "imageDisplayChecks": 816,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 51,
     "scope": "international",
     "initialECRequests": [
       "/data/memes/EC.json",
-      "/data/memes/international/images/avengers-office.webp"
+      "/data/memes/international/images/peevengers.webp"
     ],
-    "maxCountryOpenMs": 32,
+    "maxCountryOpenMs": 46,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -25,14 +26,15 @@
     },
     "countriesTested": 51,
     "countriesWithPhotos": 51,
-    "imageDisplayChecks": 102,
-    "uniquePhotos": 2,
+    "imageDisplayChecks": 816,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 51,
     "scope": "international",
     "initialECRequests": [
       "/data/memes/EC.json",
       "/data/memes/international/images/iron-man-costumes.webp"
     ],
-    "maxCountryOpenMs": 87,
+    "maxCountryOpenMs": 37,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

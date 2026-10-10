@@ -1,31 +1,11 @@
 {
-  "status": "published-verified",
-  "checkedAt": "2026-10-10T20:13:40.633Z",
-  "approvedPRHead": "0438f8660c0e1604edb77fd5043b0325101e1cd6",
-  "mergeCommit": "e9d8872056352fd78deb4ff469efd02fe28725c0",
-  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/4",
-  "deploymentRun": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38082727671",
-  "deploymentConclusion": "success",
-  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-  "filesVerified": 54,
+  "status": "prepared-not-deployed",
+  "supersedes": "PR #4: dos fotos eran referencias, no colección completa",
+  "uniquePhotos": 14,
+  "photosPerCountry": 8,
+  "uniqueCountryCatalogues": 51,
+  "catalogueEntries": 408,
   "scope": "international",
-  "uniquePhotos": 2,
-  "supportedCountrySelectors": 51,
-  "verifiedCountriesOfOrigin": 0,
-  "productionBrowserResults": "browser-pages-results.json",
-  "removedAssetsSample": [
-    {
-      "path": "data/memes/EC/images/photo-1.webp",
-      "status": 404
-    },
-    {
-      "path": "data/memes/HN/images/photo-1.webp",
-      "status": 404
-    }
-  ],
-  "limitations": [
-    "País, fotógrafo y licencia de Pinterest no acreditados",
-    "Supabase/OTP reales no probados; conexiones externas bloqueadas",
-    "Móvil emulado; dispositivos físicos no probados"
-  ]
+  "catalogueRole": "audience",
+  "previousDeploymentEvidenceIsHistorical": true
 }
