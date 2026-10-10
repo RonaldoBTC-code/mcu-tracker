@@ -1,1 +1,21 @@
-{"country":"CU","memes":[]}
+{
+  "country": "CU",
+  "memes": [
+    {
+      "title": "Tony Stark cambia de vehículo. Yo le propongo un clásico de La Habana.",
+      "alt": "Tony Stark cambia de vehículo. Yo le propongo un clásico de La Habana.",
+      "image": "data/memes/CU/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Capitán América organiza al equipo. Yo pongo el son para la entrada.",
+      "alt": "Capitán América organiza al equipo. Yo pongo el son para la entrada.",
+      "image": "data/memes/CU/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

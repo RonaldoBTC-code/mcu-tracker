@@ -1,1 +1,21 @@
-{"country":"IT","memes":[]}
+{
+  "country": "IT",
+  "memes": [
+    {
+      "title": "Thanos: mitad de la pizza desaparece. Yo: esta batalla ya es personal.",
+      "alt": "Thanos: mitad de la pizza desaparece. Yo: esta batalla ya es personal.",
+      "image": "data/memes/IT/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Tony Stark termina su proyecto. Yo: perfecto, ahora un espresso.",
+      "alt": "Tony Stark termina su proyecto. Yo: perfecto, ahora un espresso.",
+      "image": "data/memes/IT/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

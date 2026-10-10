@@ -114,5 +114,9 @@
   {
     "name": "Memes: país incorrecto rechazado y ausencia de observer no precarga",
     "status": "PASS"
+  },
+  {
+    "name": "Contenido: todos los países tienen dos memes locales y WebP de menos de 20 KB",
+    "status": "PASS"
   }
 ]

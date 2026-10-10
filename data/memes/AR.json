@@ -1,1 +1,21 @@
-{"country":"AR","memes":[]}
+{
+  "country": "AR",
+  "memes": [
+    {
+      "title": "Capitán América reúne al equipo. Yo: perfecto, ya preparo el mate.",
+      "alt": "Capitán América reúne al equipo. Yo: perfecto, ya preparo el mate.",
+      "image": "data/memes/AR/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Doctor Strange viaja en el tiempo. Yo: trae entradas para el próximo clásico.",
+      "alt": "Doctor Strange viaja en el tiempo. Yo: trae entradas para el próximo clásico.",
+      "image": "data/memes/AR/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

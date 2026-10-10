@@ -1,0 +1,36 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "countriesTested": 51,
+    "imagesDecoded": 102,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/meme-1.webp",
+      "/data/memes/EC/images/meme-2.webp"
+    ],
+    "maxCountryOpenMs": 105,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "countriesTested": 51,
+    "imagesDecoded": 102,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/meme-1.webp",
+      "/data/memes/EC/images/meme-2.webp"
+    ],
+    "maxCountryOpenMs": 44,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

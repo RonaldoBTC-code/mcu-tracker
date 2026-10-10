@@ -1,1 +1,21 @@
-{"country":"TR","memes":[]}
+{
+  "country": "TR",
+  "memes": [
+    {
+      "title": "Thanos quiere las seis gemas. Yo quiero un té más antes de salir.",
+      "alt": "Thanos quiere las seis gemas. Yo quiero un té más antes de salir.",
+      "image": "data/memes/TR/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Doctor Strange conecta continentes. Yo: en Estambul lo hacemos cada día.",
+      "alt": "Doctor Strange conecta continentes. Yo: en Estambul lo hacemos cada día.",
+      "image": "data/memes/TR/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

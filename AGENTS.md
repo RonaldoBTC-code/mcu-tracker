@@ -1,6 +1,6 @@
 # Instrucciones para agentes — MCU Tracker
 
-Memes: leer docs/local-memes.md. Resolver país antes de fetch; usar un archivo data/memes/<PAIS>.json, nunca catálogo global. No precargar imágenes de otros países. Conservar selección manual, cancelación y generaciones al cambiar/cerrar. No afirmar que existen memes reales: archivos iniciales vacíos. La implementación de esta funcionalidad no autoriza desplegar en main.
+Memes: leer docs/local-memes.md y docs/memes-audit.md. Resolver país antes de fetch; usar un archivo data/memes/<PAIS>.json, nunca catálogo global. No precargar imágenes de otros países. Conservar selección manual, cancelación y generaciones al cambiar/cerrar. Hay dos memes originales de fans por cada uno de los 51 países del selector; no son memes virales recopilados ni imágenes oficiales. Ejecutar npm test y la prueba opcional tests/browser-memes.cjs antes de cambiar esta ruta. El objetivo vigente autoriza desplegar cuando la auditoría y las comprobaciones estén completas.
 
 Resaltado de guía: conservar `tour-path` en todos los ancestros del destino para que el oscurecimiento no atenúe la película/casilla. Mantener `tourSpotlight` en `body`, por encima de las filas y debajo de `tourCard`, con pointer-events none. Limpiar la ruta al cerrar o cambiar de paso. Comprobar opacidad de todos los ancestros en pasos 7 y 8.
 

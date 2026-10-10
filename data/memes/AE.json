@@ -1,1 +1,21 @@
-{"country":"AE","memes":[]}
+{
+  "country": "AE",
+  "memes": [
+    {
+      "title": "Tony Stark busca un edificio futurista. Yo le paso el mapa de Dubái.",
+      "alt": "Tony Stark busca un edificio futurista. Yo le paso el mapa de Dubái.",
+      "image": "data/memes/AE/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Thor presume su calor de batalla. Yo: primero prueba una tarde de verano.",
+      "alt": "Thor presume su calor de batalla. Yo: primero prueba una tarde de verano.",
+      "image": "data/memes/AE/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

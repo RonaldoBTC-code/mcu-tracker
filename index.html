@@ -1869,6 +1869,8 @@ body.tour-on .tour-path { opacity: 1 !important; }
 .tour-card { display:flex;flex-direction:column; }
 .tour-header, .tour-title, .tour-footer { flex-shrink:0; }
 .tour-body { min-height:0;overflow-y:auto; }
+.meme-country-map .mapsvg { height:180px; width:100%; }
+.maphd { position:sticky;top:0;background:var(--panel);z-index:2; }
 </style>
 </head>
 <body>
@@ -3175,7 +3177,14 @@ window.WorldMap = (() => {
   function countryMap(code) {
     if(!C[code])return '';
     const [lat,lon,name]=C[code],x=px(lon),y=py(lat);
-    return '<svg class="mapsvg" viewBox="'+(x-140)+' '+(y-85)+' 280 170" role="img" aria-label="Mapa centrado en '+esc(name)+'">'+landLayer()+'<circle class="ring" cx="'+x+'" cy="'+y+'" r="6"/><circle class="dot me" cx="'+x+'" cy="'+y+'" r="4"/><text class="lbl" x="'+(x+10)+'" y="'+y+'">'+esc(name)+'</text></svg>';
+    let land='<g class="land">';
+    // Generate only the visible region; avoid thousands of off-screen SVG nodes.
+    for(let a=Math.max(LAT_BOT,lat-25);a<=Math.min(LAT_TOP,lat+25);a+=2.4){
+      for(let b=Math.max(-180,lon-51);b<=Math.min(180,lon+51);b+=2.4){
+        if(isLand(b,a))land+='<circle cx="'+px(b).toFixed(1)+'" cy="'+py(a).toFixed(1)+'" r="2.2"/>';
+      }
+    }
+    return '<svg class="mapsvg" viewBox="'+(x-140)+' '+(y-85)+' 280 170" role="img" aria-label="Mapa centrado en '+esc(name)+'">'+land+'</g><circle class="ring" cx="'+x+'" cy="'+y+'" r="6"/><circle class="dot me" cx="'+x+'" cy="'+y+'" r="4"/><text class="lbl" x="'+(x+10)+'" y="'+y+'">'+esc(name)+'</text></svg>';
   }
   return { open, close, countryMap };
 })();
@@ -3200,7 +3209,8 @@ window.MapMemes = (() => {
     try{
       const base=new URL('data/memes/'+code+'/images/',document.baseURI);
       const url=new URL(value,document.baseURI);
-      return url.origin===base.origin&&url.pathname.startsWith(base.pathname)&&!url.search&&!url.hash&&/\.(?:png|jpe?g|webp|gif)$/i.test(url.pathname)?url.href:null;
+      const file=url.pathname.startsWith(base.pathname)?url.pathname.slice(base.pathname.length):'';
+      return url.origin===base.origin&&!url.search&&!url.hash&&/^[a-z0-9][a-z0-9._-]*\.(?:png|jpe?g|webp|gif)$/i.test(file)?url.href:null;
     }catch(e){return null;}
   }
   function lazyImages(list,epoch){
@@ -3237,8 +3247,8 @@ window.MapMemes = (() => {
     code=valid(code)?code:null;select.value=code||'';
     select.onchange=()=>{const next=select.value;if(valid(next))window.SafeStorage.setItem(KEY,next);else window.SafeStorage.removeItem(KEY);open(next);};
     label.appendChild(select);body.appendChild(label);
-    const hint=document.createElement('p');hint.textContent='País aproximado por zona horaria o idioma; puedes corregirlo. La selección manual se conserva.';body.appendChild(hint);
-    const map=document.createElement('div');map.id='memeMap';map.innerHTML=code?window.WorldMap.countryMap(code):'';body.appendChild(map);
+    const hint=document.createElement('p');hint.textContent='País aproximado; puedes corregirlo. Humor original de fans, no oficial.';body.appendChild(hint);
+    const map=document.createElement('div');map.id='memeMap';map.className='meme-country-map';map.innerHTML=code?window.WorldMap.countryMap(code):'';body.appendChild(map);
     const status=document.createElement('p');status.id='memeStatus';status.setAttribute('role','status');body.appendChild(status);
     const list=document.createElement('div');list.id='memeList';list.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px';body.appendChild(list);
     if(!code){status.textContent='No se pudo determinar tu país. Selecciónalo para cargar memes.';return;}
@@ -3257,9 +3267,9 @@ window.MapMemes = (() => {
       if(!memes.length){status.textContent='Todavía no hay memes disponibles para este país.';return;}
       for(const {item,url}of memes){
         const figure=document.createElement('figure');figure.style.margin='0';
-        const img=document.createElement('img');img.alt=typeof item.alt==='string'?item.alt:item.title;img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto';
+        const img=document.createElement('img');img.alt=typeof item.alt==='string'?item.alt:item.title;img.width=768;img.height=512;img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto;aspect-ratio:3/2';
         img.onerror=()=>{img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
-        const caption=document.createElement('figcaption');caption.textContent=item.title;
+        const caption=document.createElement('figcaption');caption.textContent=typeof item.creator==='string'?item.creator:'Humor original de fans';
         figure.append(img,caption);list.appendChild(figure);
       }
       status.textContent=memes.length+' memes disponibles para '+select.selectedOptions[0].textContent+'.';lazyImages(list,epoch);

@@ -1,1 +1,21 @@
-{"country":"CR","memes":[]}
+{
+  "country": "CR",
+  "memes": [
+    {
+      "title": "Los Avengers: alarma mundial. Yo: respiren, pura vida.",
+      "alt": "Los Avengers: alarma mundial. Yo: respiren, pura vida.",
+      "image": "data/memes/CR/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Thor: traje resistente al agua. Yo: genial, vamos al bosque nuboso.",
+      "alt": "Thor: traje resistente al agua. Yo: genial, vamos al bosque nuboso.",
+      "image": "data/memes/CR/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

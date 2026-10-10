@@ -1,1 +1,21 @@
-{"country":"US","memes":[]}
+{
+  "country": "US",
+  "memes": [
+    {
+      "title": "Tony Stark mide la potencia. Yo pregunto cuántos campos de fútbol son.",
+      "alt": "Tony Stark mide la potencia. Yo pregunto cuántos campos de fútbol son.",
+      "image": "data/memes/US/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Los Avengers salvan Nueva York. Yo sigo buscando dónde aparcar.",
+      "alt": "Los Avengers salvan Nueva York. Yo sigo buscando dónde aparcar.",
+      "image": "data/memes/US/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

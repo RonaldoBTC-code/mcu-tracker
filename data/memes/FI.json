@@ -1,1 +1,21 @@
-{"country":"FI","memes":[]}
+{
+  "country": "FI",
+  "memes": [
+    {
+      "title": "Thor trae fuego y hielo. Yo: después nos vemos en la sauna.",
+      "alt": "Thor trae fuego y hielo. Yo: después nos vemos en la sauna.",
+      "image": "data/memes/FI/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Doctor Strange abre un portal brillante. Yo: las auroras también hacen eso.",
+      "alt": "Doctor Strange abre un portal brillante. Yo: las auroras también hacen eso.",
+      "image": "data/memes/FI/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

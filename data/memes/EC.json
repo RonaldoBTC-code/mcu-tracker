@@ -1,1 +1,21 @@
-{"country":"EC","memes":[]}
+{
+  "country": "EC",
+  "memes": [
+    {
+      "title": "Doctor Strange abre un portal. Yo: ¿también evita el tráfico de Guayaquil?",
+      "alt": "Doctor Strange abre un portal. Yo: ¿también evita el tráfico de Guayaquil?",
+      "image": "data/memes/EC/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Thor controla el trueno. Pero en Quito igual llevo paraguas.",
+      "alt": "Thor controla el trueno. Pero en Quito igual llevo paraguas.",
+      "image": "data/memes/EC/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

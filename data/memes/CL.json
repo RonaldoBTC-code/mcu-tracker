@@ -1,1 +1,21 @@
-{"country":"CL","memes":[]}
+{
+  "country": "CL",
+  "memes": [
+    {
+      "title": "Thor perdió su martillo. Yo reviso si quedó en el metro de Santiago.",
+      "alt": "Thor perdió su martillo. Yo reviso si quedó en el metro de Santiago.",
+      "image": "data/memes/CL/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Thanos busca las seis gemas. Yo busco una buena palta para la once.",
+      "alt": "Thanos busca las seis gemas. Yo busco una buena palta para la once.",
+      "image": "data/memes/CL/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

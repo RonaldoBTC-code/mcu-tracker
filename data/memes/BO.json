@@ -1,1 +1,21 @@
-{"country":"BO","memes":[]}
+{
+  "country": "BO",
+  "memes": [
+    {
+      "title": "Tony Stark: prueba de altura. Yo: empecemos aterrizando en El Alto.",
+      "alt": "Tony Stark: prueba de altura. Yo: empecemos aterrizando en El Alto.",
+      "image": "data/memes/BO/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Doctor Strange abre un portal. Yo: uno al Salar de Uyuni, por favor.",
+      "alt": "Doctor Strange abre un portal. Yo: uno al Salar de Uyuni, por favor.",
+      "image": "data/memes/BO/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

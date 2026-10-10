@@ -1,1 +1,21 @@
-{"country":"CO","memes":[]}
+{
+  "country": "CO",
+  "memes": [
+    {
+      "title": "Tony Stark: necesito más energía. Yo: primero un café colombiano.",
+      "alt": "Tony Stark: necesito más energía. Yo: primero un café colombiano.",
+      "image": "data/memes/CO/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Los Avengers salvan el universo. Yo todavía espero el TransMilenio.",
+      "alt": "Los Avengers salvan el universo. Yo todavía espero el TransMilenio.",
+      "image": "data/memes/CO/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

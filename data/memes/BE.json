@@ -1,1 +1,21 @@
-{"country":"BE","memes":[]}
+{
+  "country": "BE",
+  "memes": [
+    {
+      "title": "Los Avengers buscan el mejor equipo. Yo busco la mejor salsa para las patatas.",
+      "alt": "Los Avengers buscan el mejor equipo. Yo busco la mejor salsa para las patatas.",
+      "image": "data/memes/BE/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Thanos pide las gemas. Yo negocio con chocolate belga.",
+      "alt": "Thanos pide las gemas. Yo negocio con chocolate belga.",
+      "image": "data/memes/BE/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

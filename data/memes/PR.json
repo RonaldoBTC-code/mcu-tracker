@@ -1,1 +1,21 @@
-{"country":"PR","memes":[]}
+{
+  "country": "PR",
+  "memes": [
+    {
+      "title": "Los Avengers planean su entrada. Yo ya tengo la playlist de reguetón.",
+      "alt": "Los Avengers planean su entrada. Yo ya tengo la playlist de reguetón.",
+      "image": "data/memes/PR/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Doctor Strange busca luz mágica. Yo le enseño la bahía bioluminiscente.",
+      "alt": "Doctor Strange busca luz mágica. Yo le enseño la bahía bioluminiscente.",
+      "image": "data/memes/PR/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

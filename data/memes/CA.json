@@ -1,1 +1,21 @@
-{"country":"CA","memes":[]}
+{
+  "country": "CA",
+  "memes": [
+    {
+      "title": "Thor trae una tormenta de nieve. Yo: ¿otra vez hay que palear la entrada?",
+      "alt": "Thor trae una tormenta de nieve. Yo: ¿otra vez hay que palear la entrada?",
+      "image": "data/memes/CA/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Capitán América lleva su escudo. Yo llevo el jarabe de arce al desayuno.",
+      "alt": "Capitán América lleva su escudo. Yo llevo el jarabe de arce al desayuno.",
+      "image": "data/memes/CA/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}

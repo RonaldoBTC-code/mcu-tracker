@@ -5,6 +5,7 @@ const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8')
  .replace('return {push,client:()=>sb,user:()=>user};','return {push,onSession,sendLink,renderForm,renderOut,inject:c=>sb=c,client:()=>sb,user:()=>user};')
  .replace('return { switchUser, paintAll, loadStats, pullMine, get };','return {set,switchUser,paintAll,loadStats,pullMine,get};');
 const pause=ms=>new Promise(r=>setTimeout(r,ms));const results=[];
+async function waitFor(predicate){const end=Date.now()+3000;while(!predicate()){if(Date.now()>end)throw Error('Estado esperado no apareció');await pause(20);}}
 async function fixture(options={}){
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
  const dom=new JSDOM(html,{url:'https://custom.example/tracker/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){
@@ -67,6 +68,7 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
  await test('Pasos 7 y 8: destino y todos sus contenedores conservan opacidad',async({w,d})=>{
   w.Guide.start();for(let i=0;i<6;i++)w.Guide.next();await pause(120);
   for(const selector of ['.row','.row .chk']){
+   await waitFor(()=>d.querySelector(selector)?.classList.contains('tour-active-el'));
    const target=d.querySelector(selector);assert(target.classList.contains('tour-active-el'));
    for(let el=target;el&&el!==d.body;el=el.parentElement){
     const opacity=w.getComputedStyle(el).opacity;
@@ -85,7 +87,9 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   w.fetch=async url=>{requests.push(new URL(url).pathname);return {ok:true,json:async()=>({country:'EC',memes:[
    {title:'EC de prueba',image:'data/memes/EC/images/fixture.webp'},
    {title:'MX no permitido',image:'data/memes/MX/images/fixture.webp'},
-   {title:'Externo no permitido',image:'https://example.org/image.webp'}]})};};
+   {title:'Externo no permitido',image:'https://example.org/image.webp'},
+   {title:'Ruta codificada no permitida',image:'data/memes/EC/images/%2f..%2fMX/fixture.webp'},
+   {title:'Subcarpeta no permitida',image:'data/memes/EC/images/../MX/fixture.webp'}]})};};
   const src=Object.getOwnPropertyDescriptor(w.HTMLImageElement.prototype,'src');
   Object.defineProperty(w.HTMLImageElement.prototype,'src',{get:src.get,set(value){images.push(new URL(value,d.baseURI).pathname);src.set.call(this,value)}});
   w.IntersectionObserver=class{constructor(cb){intersect=cb;}observe(){}unobserve(){}disconnect(){}};
@@ -124,6 +128,15 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList img').length,0);assert(d.querySelector('#memeStatus').textContent.includes('No se pudieron'));
   w.IntersectionObserver=undefined;w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[{title:'EC',image:'data/memes/EC/images/fixture.webp'}]})});
   await w.MapMemes.open('EC');assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert.equal(d.querySelector('#memeList button').textContent,'Cargar imagen');
+ });
+ await test('Contenido: todos los países tienen dos memes locales y WebP de menos de 20 KB',async({w})=>{
+  const codes=w.Region.countries().map(c=>c[0]);assert.equal(codes.length,51);
+  for(const code of codes){const file=path.join(__dirname,'../data/memes',code+'.json'),data=JSON.parse(fs.readFileSync(file,'utf8'));
+   assert.equal(data.country,code);assert.equal(data.memes.length,2);assert(fs.statSync(file).size<4096);
+   for(const meme of data.memes){assert(meme.image.startsWith('data/memes/'+code+'/images/'));assert(meme.title.length>20);assert.equal(meme.width,768);assert.equal(meme.height,512);
+    const image=fs.readFileSync(path.join(__dirname,'..',meme.image));assert.equal(image.toString('ascii',0,4),'RIFF');assert.equal(image.toString('ascii',8,12),'WEBP');assert(image.length<20000);
+   }
+  }
  });
  console.log(JSON.stringify(results,null,2));
  if(process.argv.includes('--record'))fs.writeFileSync(path.join(__dirname,'../docs/entry-fixes-results.json'),JSON.stringify(results,null,2)+'\n');

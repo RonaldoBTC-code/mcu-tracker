@@ -1,1 +1,21 @@
-{"country":"PY","memes":[]}
+{
+  "country": "PY",
+  "memes": [
+    {
+      "title": "Los Avengers piden refuerzos. Yo llego con el tereré.",
+      "alt": "Los Avengers piden refuerzos. Yo llego con el tereré.",
+      "image": "data/memes/PY/images/meme-1.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    },
+    {
+      "title": "Thor tiene electricidad infinita. Yo le cuento que también tenemos Itaipú.",
+      "alt": "Thor tiene electricidad infinita. Yo le cuento que también tenemos Itaipú.",
+      "image": "data/memes/PY/images/meme-2.webp",
+      "width": 768,
+      "height": 512,
+      "creator": "MCU Tracker · humor original de fans"
+    }
+  ]
+}
