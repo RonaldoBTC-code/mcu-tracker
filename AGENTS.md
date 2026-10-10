@@ -1,5 +1,7 @@
 # Instrucciones para agentes — MCU Tracker
 
+Memes: leer docs/local-memes.md. Resolver país antes de fetch; usar un archivo data/memes/<PAIS>.json, nunca catálogo global. No precargar imágenes de otros países. Conservar selección manual, cancelación y generaciones al cambiar/cerrar. No afirmar que existen memes reales: archivos iniciales vacíos. La implementación de esta funcionalidad no autoriza desplegar en main.
+
 Resaltado de guía: conservar `tour-path` en todos los ancestros del destino para que el oscurecimiento no atenúe la película/casilla. Mantener `tourSpotlight` en `body`, por encima de las filas y debajo de `tourCard`, con pointer-events none. Limpiar la ruta al cerrar o cambiar de paso. Comprobar opacidad de todos los ancestros en pasos 7 y 8.
 
 Leer [correcciones de entrada y pendientes](docs/entry-fixes.md) antes de modificar arranque, autenticación, progreso o reseñas. Ejecutar `npm ci --ignore-scripts` y `npm test` con Node.js 24 o posterior.
