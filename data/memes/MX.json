@@ -2,56 +2,7 @@
   "country": "MX",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "partial",
+  "status": "pending",
   "minimumPerCountry": 10,
-  "memes": [
-    {
-      "id": "mx-spider-class",
-      "country": "MX",
-      "image": "data/memes/MX/images/mx-spider-class.webp",
-      "source": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-joven-disfrazado-spiderman-interrumpe-clase-salvar-mundo-mexico-face-fb-fotos-video-nnda-noticia-540463-noticia/",
-      "title": "Spider-Man interrumpe la clase para salvar el mundo",
-      "location": "México; ciudad no acreditada",
-      "countryEvidence": {
-        "url": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-joven-disfrazado-spiderman-interrumpe-clase-salvar-mundo-mexico-face-fb-fotos-video-nnda-noticia-540463-noticia/",
-        "statement": "El artículo de El Comercio describe explícitamente esta interrupción de una clase en México. El país del periódico es Perú, no el de la escena.",
-        "verifiedOn": "2026-10-10"
-      },
-      "imageURL": "https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/KQSPDNFQYNHOPP3DI7XOH7AMSA.jpg",
-      "creator": null,
-      "license": null,
-      "licenseUrl": null,
-      "characters": [
-        "Spider-Man"
-      ],
-      "visualGag": "Spider-Man interrumpe la clase para salvar el mundo",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "publisher": "El Comercio / captura Facebook",
-      "alt": "Spider-Man interrumpe la clase para salvar el mundo",
-      "width": 768,
-      "height": 441,
-      "bytes": 7564,
-      "scope": "geographic",
-      "originalFingerprint": {
-        "sha256": "cb661779ec861b0ce574f71e956ec859f9844a8c98a9b0d383d00cb7f7d09b21",
-        "pixelSha256": "fc257408a67174eb8b22c217f62eee1862a6583ce044f93dc4970d7a407810be",
-        "perceptualHashes": [
-          "0100011011000110001101001001011010011010110110011100110101101000",
-          "0100010111000100001101001001011010010010110110101100110011111100",
-          "0100010111100001001001001011011110010110100100111100110011010100"
-        ]
-      },
-      "outputFingerprint": {
-        "sha256": "e52cd7e8764563be1fb25b8060df53db318898e3d0f8ab51de994c662dc54058",
-        "pixelSha256": "8d6311cffe692f92f931e9dd6c3a22251f4012cbda890c19930d02e14284ab3e",
-        "perceptualHashes": [
-          "0100011011000110001101001001011010011010110110011100110101101000",
-          "0100010111000100001101001001011010010010110110101100110011111100",
-          "0100010111100001001001001011011110010110100100111100110011010100"
-        ]
-      },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
-    }
-  ]
+  "memes": []
 }

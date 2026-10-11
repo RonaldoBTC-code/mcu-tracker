@@ -1,0 +1,145 @@
+[
+  {
+    "id": "mx-spider-class",
+    "country": "MX",
+    "image": "scripts/reference-images/mx-spider-class.jpg",
+    "source": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-joven-disfrazado-spiderman-interrumpe-clase-salvar-mundo-mexico-face-fb-fotos-video-nnda-noticia-540463-noticia/",
+    "title": "Spider-Man interrumpe la clase para salvar el mundo",
+    "location": "México; ciudad no acreditada",
+    "countryEvidence": {
+      "url": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-joven-disfrazado-spiderman-interrumpe-clase-salvar-mundo-mexico-face-fb-fotos-video-nnda-noticia-540463-noticia/",
+      "statement": "El artículo de El Comercio describe explícitamente esta interrupción de una clase en México. El país del periódico es Perú, no el de la escena.",
+      "verifiedOn": "2026-10-10"
+    },
+    "imageURL": "https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/KQSPDNFQYNHOPP3DI7XOH7AMSA.jpg",
+    "creator": null,
+    "license": null,
+    "licenseUrl": null,
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man interrumpe la clase para salvar el mundo",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "publisher": "El Comercio / captura Facebook",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "withdrawn",
+      "reason": "Captura de vídeo borrosa en origen; más píxeles o calidad WebP no recuperan detalle.",
+      "preserveIdentityAndInteractions": true,
+      "notes": "Captura de vídeo borrosa, sin detalle suficiente del personaje"
+    },
+    "withdrawal": {
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura de vídeo borrosa, sin detalle suficiente del personaje",
+      "preserveIdentityAndInteractions": true
+    }
+  },
+  {
+    "id": "pe-spider-dance-bus",
+    "country": "PE",
+    "image": "scripts/reference-images/pe-spider-dance-bus.jpg",
+    "source": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-spiderman-baila-cumple-reto-dura-challenge-colectivo-lima-video-nnda-noticia-537172-noticia/",
+    "title": "Spider-Man convierte el pasillo del bus en pista de baile",
+    "location": "Lima, avenida Salaverry",
+    "countryEvidence": {
+      "url": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-spiderman-baila-cumple-reto-dura-challenge-colectivo-lima-video-nnda-noticia-537172-noticia/",
+      "statement": "El artículo describe el reto Dura Challenge dentro de un colectivo que recorría la avenida Salaverry en Lima.",
+      "verifiedOn": "2026-10-10"
+    },
+    "imageURL": "https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TENJK4FBPRHM3D6PAB7NUF74IM.jpg",
+    "creator": "Cristhian Rojas Rosas (crédito del medio)",
+    "license": null,
+    "licenseUrl": null,
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man convierte el pasillo del bus en pista de baile",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "publisher": "El Comercio / Facebook",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "withdrawn",
+      "reason": "Captura de vídeo borrosa en origen; más píxeles o calidad WebP no recuperan detalle.",
+      "preserveIdentityAndInteractions": true,
+      "notes": "Captura pequeña y borrosa del baile en un colectivo"
+    },
+    "withdrawal": {
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura pequeña y borrosa del baile en un colectivo",
+      "preserveIdentityAndInteractions": true
+    }
+  },
+  {
+    "id": "cl-spider-cueca",
+    "country": "CL",
+    "image": "scripts/reference-images/cl-spider-cueca.jpg",
+    "source": "https://www.13.cl/ar13/viral/dr-simi-y-spiderman-se-lucen-con-pie-de-cueca-en-pleno-centro-de-santiago",
+    "title": "Spider-Man baila cueca con el Dr. Simi",
+    "location": "Santiago, Paseo Bandera",
+    "countryEvidence": {
+      "url": "https://www.13.cl/ar13/viral/dr-simi-y-spiderman-se-lucen-con-pie-de-cueca-en-pleno-centro-de-santiago",
+      "statement": "Canal 13 sitúa el baile de cueca de Spider-Man y Dr. Simi en Paseo Bandera, centro de Santiago.",
+      "verifiedOn": "2026-10-10"
+    },
+    "imageURL": "https://s.13.cl/sites/default/files/styles/manualcrop_1600x800/public/ar13/field-imagen/2019-09/simi.jpg.jpeg?itok=-lIV4H7G",
+    "creator": null,
+    "license": null,
+    "licenseUrl": null,
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man baila cueca con el Dr. Simi",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "publisher": "Canal 13 / captura del video",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "withdrawn",
+      "reason": "Captura de vídeo borrosa en origen; más píxeles o calidad WebP no recuperan detalle.",
+      "preserveIdentityAndInteractions": true,
+      "notes": "Captura previamente ampliada, con detalle aparente superior al real"
+    },
+    "withdrawal": {
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura previamente ampliada, con detalle aparente superior al real",
+      "preserveIdentityAndInteractions": true
+    }
+  },
+  {
+    "id": "at-spider-dance",
+    "title": "Spider-Man se pone a bailar en el metro",
+    "location": "Viena, vagón del metro",
+    "publisher": "Heute / captura del video",
+    "country": "AT",
+    "image": "scripts/reference-images/at-spider-dance.jpg",
+    "source": "https://www.heute.at/s/spider-man-tanzt-in-wiener-u-bahn-dann-fliegen-faeuste-120263736",
+    "countryEvidence": {
+      "url": "https://www.heute.at/s/spider-man-tanzt-in-wiener-u-bahn-dann-fliegen-faeuste-120263736",
+      "statement": "Heute identifica al protagonista como Vienna Spidey y sitúa sus actuaciones en el metro de Viena, Austria. La imagen muestra el baile, no una agresión.",
+      "verifiedOn": "2026-10-10"
+    },
+    "imageURL": "https://heute-at-prod-images.imgix.net/2026/10/08/e9dd160c-7b1a-465a-8cf5-779a57e34e07.jpg?rect=0%2C0%2C4000%2C2250&auto=format&auto=compress&crop=fit&w=996",
+    "creator": null,
+    "license": null,
+    "licenseUrl": null,
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man se pone a bailar en el metro",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "withdrawn",
+      "fullFrameContactReviewed": true,
+      "notes": "Captura de vídeo con desenfoque de movimiento y detalle limitado del traje"
+    },
+    "withdrawal": {
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura de vídeo con desenfoque de movimiento y detalle limitado del traje",
+      "preserveIdentityAndInteractions": true
+    }
+  }
+]

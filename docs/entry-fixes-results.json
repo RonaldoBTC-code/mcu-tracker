@@ -134,5 +134,9 @@
   {
     "name": "Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch",
     "status": "PASS"
+  },
+  {
+    "name": "Variantes responsivas: cargas diferidas y URLs seguras por país",
+    "status": "PASS"
   }
 ]

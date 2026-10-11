@@ -1,19 +1,19 @@
 # Cobertura por país
 
-Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**. 65 fotos en 22 países; CA, GB y US alcanzan diez. Faltan 445 fotos en 48 países. Los 29 catálogos vacíos siguen visibles. `complete:false`.
+Mínimo explícito: **10 fotos distintas por cada uno de los 51 países**. 61 fotos únicas en 19 países; CA, GB y US alcanzan diez. Faltan 449 fotos en 48 países, de los cuales 32 siguen vacíos. `complete:false`. Las cuatro retiradas por calidad no cuentan como activas; las dos candidatas pendientes de SQL tampoco.
 
 | País | Fotos | Faltan para 10 | Estado |
 |---|---:|---:|---|
 | AE | 0 | 10 | Curación pendiente |
 | AR | 0 | 10 | Curación pendiente |
-| AT | 1 | 9 | Ampliación pendiente |
+| AT | 0 | 10 | Curación pendiente |
 | AU | 0 | 10 | Curación pendiente |
 | BE | 6 | 4 | Ampliación pendiente |
 | BO | 0 | 10 | Curación pendiente |
 | BR | 3 | 7 | Ampliación pendiente |
 | CA | 10 | 0 | Mínimo cubierto |
 | CH | 0 | 10 | Curación pendiente |
-| CL | 1 | 9 | Ampliación pendiente |
+| CL | 0 | 10 | Curación pendiente |
 | CO | 1 | 9 | Ampliación pendiente |
 | CR | 0 | 10 | Curación pendiente |
 | CU | 1 | 9 | Ampliación pendiente |
@@ -34,13 +34,13 @@ Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**.
 | IT | 0 | 10 | Curación pendiente |
 | JP | 2 | 8 | Ampliación pendiente |
 | KR | 0 | 10 | Curación pendiente |
-| MX | 1 | 9 | Ampliación pendiente |
+| MX | 0 | 10 | Curación pendiente |
 | NI | 0 | 10 | Curación pendiente |
 | NL | 0 | 10 | Curación pendiente |
 | NO | 0 | 10 | Curación pendiente |
 | NZ | 0 | 10 | Curación pendiente |
 | PA | 0 | 10 | Curación pendiente |
-| PE | 2 | 8 | Ampliación pendiente |
+| PE | 1 | 9 | Ampliación pendiente |
 | PH | 2 | 8 | Ampliación pendiente |
 | PL | 0 | 10 | Curación pendiente |
 | PR | 0 | 10 | Curación pendiente |
@@ -56,4 +56,4 @@ Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**.
 | VE | 0 | 10 | Curación pendiente |
 | ZA | 0 | 10 | Curación pendiente |
 
-Fuente ejecutable: `docs/photo-coverage.json`, generado por `npm run import:photos`. `npm run check:coverage` debe fallar mientras falte un país. No contar recortes, reencodificaciones o series de la misma escena.
+No reutilizar fotos de otro país ni identidades históricas para simular cobertura. Fuentes, autores/licencias y huellas: photo-inventory.json. Revisión y límites: photo-quality-audit.md.

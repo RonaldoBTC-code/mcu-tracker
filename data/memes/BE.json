@@ -8,7 +8,7 @@
     {
       "id": "be-deadpool-throne",
       "country": "BE",
-      "image": "data/memes/BE/images/be-deadpool-throne.webp",
+      "image": "data/memes/BE/images/be-deadpool-throne-1280-7617c2d09cec.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_(26675225495).jpg",
       "title": "Deadpool reclama el Trono de Hierro",
       "location": "Bruselas, Comic Con 2016",
@@ -17,7 +17,7 @@
         "statement": "La ficha identifica Comic Con Brussels 2016 y aporta coordenadas de Bruselas.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_%2826675225495%29.jpg/960px-Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_%2826675225495%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/1630/26675225495_b534d639cd_6k.jpg",
       "creator": "Miguel Discart from Bruxelles, Belgique",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -28,14 +28,60 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 3376,
+        "height": 6000
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/26675225495/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool reclama el Trono de Hierro",
-      "width": 432,
-      "height": 768,
-      "bytes": 59840,
+      "width": 720,
+      "height": 1280,
+      "sourceWidth": 3376,
+      "sourceHeight": 6000,
+      "bytes": 204324,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 360,
+          "height": 640,
+          "sha256": "82937192b556741e25da84b5796afbe65082ace4418829ffb3a96008ccfe3541",
+          "image": "data/memes/BE/images/be-deadpool-throne-640-82937192b556.webp",
+          "bytes": 68704
+        },
+        {
+          "edge": 1280,
+          "width": 720,
+          "height": 1280,
+          "sha256": "7617c2d09cec3ed300a8d084fe23cd5f44d2d15d125ccd90665aeee8970835c1",
+          "image": "data/memes/BE/images/be-deadpool-throne-1280-7617c2d09cec.webp",
+          "bytes": 204324
+        },
+        {
+          "edge": 1920,
+          "width": 1080,
+          "height": 1920,
+          "sha256": "6c8155394fdea25d838920b5ff515cefb6f81c7c9fc0d45fbe95b7269e563e4d",
+          "image": "data/memes/BE/images/be-deadpool-throne-1920-6c8155394fde.webp",
+          "bytes": 376698
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "dd9eb393e3dfee68398fe9011491d6a345ffa4bcd25f1ecb329e55a2cb877f9b",
-        "pixelSha256": "1870c5fc5c474eeb433b215ed7f360dcbd33b42dd7815cc39c6c9b788351ad9a",
+        "sha256": "f63eafd1f878b5af6476d8ade2a8ccc878d03d1fc54eed268a9ab51accdadf47",
+        "pixelSha256": "ae8fc48de0f74dc0fdf9ee93e5f12ae58b0af206219759e8d8eae8521c2e7c26",
         "perceptualHashes": [
           "0101111010101101110011110000111011001100000110011000101000001010",
           "0101110010101101100001101000011001001101100110011010101110000011",
@@ -43,20 +89,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "99c30a6e03577f81f5ecc5f2b1017d5075e6b89fdfc0986a9cf2a5fb49004967",
-        "pixelSha256": "c9ee72e37322e5f42c16314f4bd4437df899868ed1375d83c1b7cc3bd13d3cb7",
+        "sha256": "7617c2d09cec3ed300a8d084fe23cd5f44d2d15d125ccd90665aeee8970835c1",
+        "pixelSha256": "217f1ce3ec9a0ea8eaccfbbb91e9913c912e712343826110fa3598cbd8c87bff",
         "perceptualHashes": [
           "0101111010101101110011110000111011001100000110011000101000001010",
           "0101110010101101100001101000011001001101100110011010101110000011",
           "0001110110101101101100101010011001101111100000010011101110000000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "be-deadpool-duff",
       "country": "BE",
-      "image": "data/memes/BE/images/be-deadpool-duff.webp",
+      "image": "data/memes/BE/images/be-deadpool-duff-1280-0572758b285b.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_(51979055573).jpg",
       "title": "Deadpool lleva a Grogu en su mochila de pecho",
       "location": "Bruselas, Comic Con 2022",
@@ -65,7 +111,7 @@
         "statement": "La ficha ubica la Comic Con Brussels 2022 en Tour & Taxis, Bruselas.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg/960px-Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/2/28/Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Miguel Discart",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -76,14 +122,59 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 3072,
+        "height": 5158
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool lleva a Grogu en su mochila de pecho",
-      "width": 457,
-      "height": 768,
-      "bytes": 38228,
+      "width": 762,
+      "height": 1280,
+      "sourceWidth": 3072,
+      "sourceHeight": 5158,
+      "bytes": 153346,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 381,
+          "height": 640,
+          "sha256": "f567a1f80f459cdf6871eaf04939dbf999b65b937cb95e56076cdc7f20a481d9",
+          "image": "data/memes/BE/images/be-deadpool-duff-640-f567a1f80f45.webp",
+          "bytes": 50974
+        },
+        {
+          "edge": 1280,
+          "width": 762,
+          "height": 1280,
+          "sha256": "0572758b285b3b7f17c92a36b12ebdd3c16959fb549efcd39989248d93f677f3",
+          "image": "data/memes/BE/images/be-deadpool-duff-1280-0572758b285b.webp",
+          "bytes": 153346
+        },
+        {
+          "edge": 1920,
+          "width": 1144,
+          "height": 1920,
+          "sha256": "c8d9c16fe51f4a6ef901bb4469f7f89bba6d274e94c0897bad17701f839ebdd9",
+          "image": "data/memes/BE/images/be-deadpool-duff-1920-c8d9c16fe51f.webp",
+          "bytes": 279258
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "6bc4f78db99076741cc01f1db86cc4d7deb05b387b978a8b2bef57044e699f7f",
-        "pixelSha256": "b0dabf498952793ca4700bf94f13d8d8f02b9c43c621118727b833e0fed5632d",
+        "sha256": "4b184bf74907cba85a75743727be52a9b5566639da958b289767a53ae5f14607",
+        "pixelSha256": "c0b1ecd7f24294c08b9049be848acaa6a592fb781575eda8ce8af6cfd86edab1",
         "perceptualHashes": [
           "0101101101010110100101101100100011100000110100001111010011101000",
           "0101101101010100100001011000100011000100110101101111111011001000",
@@ -91,20 +182,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "13641210a1a80fb76a12bfa81ce0aef59cd28c146d5b9ee095be345c9c27af6c",
-        "pixelSha256": "72bdcc5b6e4a1d25faf9d3772ebbabb578ce3483fca0684508257ac75bcde3c3",
+        "sha256": "0572758b285b3b7f17c92a36b12ebdd3c16959fb549efcd39989248d93f677f3",
+        "pixelSha256": "c4d1c5c014ad31a3be1b000b04b0cbffbe30ac205d7d0831aca63939193a1d6a",
         "perceptualHashes": [
           "0101101101010110100101101100100011100000110100001111010011101000",
           "0101101101010100100001011000100011000100110101101111111011001000",
           "0101101100010110100000010001100101100100101101101011011111000011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "be-deadpool-spider",
       "country": "BE",
-      "image": "data/memes/BE/images/be-deadpool-spider.webp",
+      "image": "data/memes/BE/images/be-deadpool-spider-1280-a11f057bda17.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_(52159179688).jpg",
       "title": "Deadpool y Spider-Man intercambian uniforme",
       "location": "Bruselas, Made in Asia 2022",
@@ -113,7 +204,7 @@
         "statement": "Las categorías de Commons documentan Bélgica y Made in Asia 2022; la foto muestra uniformes combinados de los personajes.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_%2852159179688%29.jpg/960px-Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_%2852159179688%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/65535/52159179688_550f8ca007_6k.jpg",
       "creator": "Miguel Discart",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -125,14 +216,60 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 6001,
+        "height": 3376
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/52159179688/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool y Spider-Man intercambian uniforme",
-      "width": 768,
-      "height": 432,
-      "bytes": 46308,
+      "width": 1280,
+      "height": 720,
+      "sourceWidth": 6001,
+      "sourceHeight": 3376,
+      "bytes": 156820,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 360,
+          "sha256": "d2e1e1fd1b0bdc2ee1135fc0b34bc28ab48035e8315121be7318f4c5ce12d64d",
+          "image": "data/memes/BE/images/be-deadpool-spider-640-d2e1e1fd1b0b.webp",
+          "bytes": 55746
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 720,
+          "sha256": "a11f057bda176e1acf39f2dd8f3c577995084cf49f603d8dbfddf90edda9e2c8",
+          "image": "data/memes/BE/images/be-deadpool-spider-1280-a11f057bda17.webp",
+          "bytes": 156820
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1080,
+          "sha256": "7b734bbe7edd266a0a80a7621d6c58045971ac676567079398916d72e8fbb40c",
+          "image": "data/memes/BE/images/be-deadpool-spider-1920-7b734bbe7edd.webp",
+          "bytes": 279860
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "d999c8ca40a217b7f5d3cea3d7bebeed41d4395f221712118f5176e9a7ddd1bb",
-        "pixelSha256": "0b632cc9f2f9cb68249e88214040ab5f5b19c165af392af215f722fec55725e2",
+        "sha256": "ed3163b1f24078a1f3e61028f341d49f77387379ea8490c613bde58d8e5fe6fe",
+        "pixelSha256": "b1f57ab9cbceafca3eab2d191f8f5f7c2a21bc200454f19794fb86ec978a1b2d",
         "perceptualHashes": [
           "0110000000000011010011101111111000110010100001101011000011101111",
           "0110000000000001010011011001111100111111100001001011100011101110",
@@ -140,20 +277,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "5691dae22a8132af372ba69326c81f5a261de0abfc66922879001cf207305fe2",
-        "pixelSha256": "597fd7de1265a159f2100131532bfb8a333ddf1db4a7fb0cb947132e594a4485",
+        "sha256": "a11f057bda176e1acf39f2dd8f3c577995084cf49f603d8dbfddf90edda9e2c8",
+        "pixelSha256": "5b30f016932441beb48ed2f4b3eead82d90030cc1cee6486b713d95e7967cc75",
         "perceptualHashes": [
           "0110000000000011010011101111111000110010100001101011000011101111",
           "0110000000000001010011011001111100111111100001001011100011101110",
           "0111101000010000010011000001111100011111100111111001110011000000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "be-deadpool-hood",
       "country": "BE",
-      "image": "data/memes/BE/images/be-deadpool-hood.webp",
+      "image": "data/memes/BE/images/be-deadpool-hood-1280-41eeb9dd6eea.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_(51968415859).jpg",
       "title": "Deadpool lleva capucha y bastón",
       "location": "Bruselas, Comic Con Brussels 2022, Tour & Taxis",
@@ -162,7 +299,7 @@
         "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg/960px-Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/d/de/Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Kiri Karma",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -172,14 +309,59 @@
       "visualGag": "Deadpool mezcla su armadura roja con sudadera estampada y un largo bastón.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2265,
+        "height": 5314
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Deadpool mezcla su armadura roja con sudadera estampada y un largo bastón.",
-      "width": 327,
-      "height": 768,
-      "bytes": 35498,
+      "width": 545,
+      "height": 1280,
+      "sourceWidth": 2265,
+      "sourceHeight": 5314,
+      "bytes": 144164,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 273,
+          "height": 640,
+          "sha256": "959b4eeb84d8ab2ca38dcf76f21ba930a214661588a3e01a0d652cf210c5bd45",
+          "image": "data/memes/BE/images/be-deadpool-hood-640-959b4eeb84d8.webp",
+          "bytes": 49238
+        },
+        {
+          "edge": 1280,
+          "width": 545,
+          "height": 1280,
+          "sha256": "41eeb9dd6eea193efb52e5b3266d13c9e56c220a95764c99fd2a96f16dc78d6c",
+          "image": "data/memes/BE/images/be-deadpool-hood-1280-41eeb9dd6eea.webp",
+          "bytes": 144164
+        },
+        {
+          "edge": 1920,
+          "width": 818,
+          "height": 1920,
+          "sha256": "3d7dc0b28529669d635153d4c353200c56e1b388c9c768bb26a1b69a4f310201",
+          "image": "data/memes/BE/images/be-deadpool-hood-1920-3d7dc0b28529.webp",
+          "bytes": 250836
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "a487767835e4d5ae70b0b97da22b00ae31a36e3ee33e7a1ee14db804425b2f10",
-        "pixelSha256": "03eaf5faf94fde57dbaef9587c90d7af346752ebac93cbab5eab25ba38344fe9",
+        "sha256": "b7dc10b6aa27f71ab17951a10d3c08052d53c2cdc48ea29304cabb28b0946fe6",
+        "pixelSha256": "5bb35d8a6fb7ea9157616bab9d5a7d68fa7a376a4e1303a3913cf118e6fea1df",
         "perceptualHashes": [
           "0010011010100011100010110100110001001100010110111110010110100110",
           "0010001010100001100110110100111101011100010110010100010110100111",
@@ -187,20 +369,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "21d9887dba4a30478c24b14058897b8b09620b84133b91d5940ba75ced2b95f2",
-        "pixelSha256": "b73b02f28d57871ecd6760134f483950e646d52eba29ced55e59b7a3bc0d5c93",
+        "sha256": "41eeb9dd6eea193efb52e5b3266d13c9e56c220a95764c99fd2a96f16dc78d6c",
+        "pixelSha256": "4d5e222485ee7056b7199c2b625289f33cc1212735b14b25fccd8d88ed6f340f",
         "perceptualHashes": [
           "0010011010100011100010110100110001001100010110111110010110100110",
           "0010001010100001100110110100111101011100010110010100010110100111",
           "0010010010100001100100111110110100011110010110000100111110100011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "be-captain-wolverine",
       "country": "BE",
-      "image": "data/memes/BE/images/be-captain-wolverine.webp",
+      "image": "data/memes/BE/images/be-captain-wolverine-1280-7f94c67c318b.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_(52117205294).jpg",
       "title": "El capitán presume de garras",
       "location": "Bruselas, Made in Asia 2022",
@@ -209,7 +391,7 @@
         "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg/960px-Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/65535/52117205294_25a26e2a02_5k.jpg",
       "creator": "Miguel Discart",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -220,14 +402,60 @@
       "visualGag": "Cosplayer fusiona traje de Wolverine, garras y puro con el escudo de Capitán América.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 2730,
+        "height": 4958
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/52117205294/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Cosplayer fusiona traje de Wolverine, garras y puro con el escudo de Capitán América.",
-      "width": 423,
-      "height": 768,
-      "bytes": 23232,
+      "width": 705,
+      "height": 1280,
+      "sourceWidth": 2730,
+      "sourceHeight": 4958,
+      "bytes": 83192,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 352,
+          "height": 640,
+          "sha256": "eb9839bb39c58f9ec069c3677878d977c639c65e750a3d445eeee5aa4f57387c",
+          "image": "data/memes/BE/images/be-captain-wolverine-640-eb9839bb39c5.webp",
+          "bytes": 33344
+        },
+        {
+          "edge": 1280,
+          "width": 705,
+          "height": 1280,
+          "sha256": "7f94c67c318b91edce346bd6ab6948b3bef3806a7d2f6758e2ddab94f35e7a08",
+          "image": "data/memes/BE/images/be-captain-wolverine-1280-7f94c67c318b.webp",
+          "bytes": 83192
+        },
+        {
+          "edge": 1920,
+          "width": 1057,
+          "height": 1920,
+          "sha256": "9140378528b0e5ffb00c34410d88e51ebe09d466d933570a4bb5eac3534761fe",
+          "image": "data/memes/BE/images/be-captain-wolverine-1920-9140378528b0.webp",
+          "bytes": 145602
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "f6745bab92cbf09edba3aa9a022b295d813c02ca9cea979640444d96a6a49604",
-        "pixelSha256": "f062db9d9f18480076fc5646f3e62cbda480188c0a855279be71efdc42eb35ac",
+        "sha256": "c0fb9b60e7f3d4c88e3ab4417795b49c234a6edb6e015fc67c3ff76a647e6729",
+        "pixelSha256": "8839bc256f67b959e127070ad125a5fd66cda718e92108f13d39349088b6a1d6",
         "perceptualHashes": [
           "0011111111000010100100000110110010011010010110010101111100110000",
           "0010101111000110111101000110110010010001110011010001101100110000",
@@ -235,20 +463,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "258634b7c025966c700fb7c12ff0aa5e29ec5074be36632f884ba4acf682489e",
-        "pixelSha256": "90a6eaf45320c4083e9f0923d311f14868fe87eceb0a5ba4daab0e7d3e8a4c26",
+        "sha256": "7f94c67c318b91edce346bd6ab6948b3bef3806a7d2f6758e2ddab94f35e7a08",
+        "pixelSha256": "a08db9a5be2419797e80fde2dad05360ee784850627ee700d9a0af6c593429ac",
         "perceptualHashes": [
           "0011111111000010100100000110110010011010010110010101111100110000",
           "0010101111000110111101000110110010010001110011010001101100110000",
           "0010001011000111111101100110110010010000110010111001000010111001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "be-captain-fett",
       "country": "BE",
-      "image": "data/memes/BE/images/be-captain-fett.webp",
+      "image": "data/memes/BE/images/be-captain-fett-1280-c7ec54f82f75.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg",
       "title": "El capitán se pasa al Mandaloriano",
       "location": "Bruselas, Comiccon Brussels 2023",
@@ -257,7 +485,7 @@
         "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg/960px-Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/65535/53443777080_044d02c122_6k.jpg",
       "creator": "Miguel Discart",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -268,14 +496,60 @@
       "visualGag": "Armadura mandaloriana combina casco con A, colores y escudo de Capitán América.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 3782,
+        "height": 5791
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/53443777080/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Armadura mandaloriana combina casco con A, colores y escudo de Capitán América.",
-      "width": 502,
-      "height": 768,
-      "bytes": 39088,
+      "width": 836,
+      "height": 1280,
+      "sourceWidth": 3782,
+      "sourceHeight": 5791,
+      "bytes": 152836,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 418,
+          "height": 640,
+          "sha256": "fe70748b84a3e0c5bb8c50ee29a8b7c042b1fa41f079bf13ff4657735cc4aa3b",
+          "image": "data/memes/BE/images/be-captain-fett-640-fe70748b84a3.webp",
+          "bytes": 51180
+        },
+        {
+          "edge": 1280,
+          "width": 836,
+          "height": 1280,
+          "sha256": "c7ec54f82f75162988e0994a2fc698acc8a1e6dbb79da728405a756442eb9210",
+          "image": "data/memes/BE/images/be-captain-fett-1280-c7ec54f82f75.webp",
+          "bytes": 152836
+        },
+        {
+          "edge": 1920,
+          "width": 1254,
+          "height": 1920,
+          "sha256": "b4347e720476a51626781b58fdadd5dc2c1762f139d08a338e880c24902d7940",
+          "image": "data/memes/BE/images/be-captain-fett-1920-b4347e720476.webp",
+          "bytes": 292594
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "b7d1e84465e4089c6c6a2558359b1ce5034cca3dbcda0dbcc9233a90b1d24da9",
-        "pixelSha256": "a0a485ac303a96c79b48ea4407a95d89a4d113ec48d397a3ff2535df6cfaf280",
+        "sha256": "e38fadc1e43bfb90cacd6a637bf86b7bd7a810a58276975ba122893ff1515ea0",
+        "pixelSha256": "1dbbc5fd1f6738891bc5623e219fdea1e622f12e21e373f9f09d7cc38c4837bb",
         "perceptualHashes": [
           "0110000010101111110000010101000010011010111110110001110110000011",
           "0110010010100111110000011101000011010010010110110100101111000011",
@@ -283,15 +557,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "019a056cade2e7cb1b0e57ead8266a73285ed9979459e66140e2f9263a8703a5",
-        "pixelSha256": "7278e48801a01394772c03800c91cb17bd0ba8aa1674705753d6ff6580e492c7",
+        "sha256": "c7ec54f82f75162988e0994a2fc698acc8a1e6dbb79da728405a756442eb9210",
+        "pixelSha256": "0195e1e26149ce2229596256e9d471c9a6f30e170fc997a7ce9bd2d0fb177224",
         "perceptualHashes": [
           "0110000010101111110000010101000010011010111110110001110110000011",
           "0110010010100111110000011101000011010010010110110100101111000011",
-          "0110010110100111101000001101110011010100010111100100001111000010"
+          "0110010110100101101000001101110011010100010111100100001111001010"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

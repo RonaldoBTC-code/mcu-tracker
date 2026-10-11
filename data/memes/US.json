@@ -8,7 +8,7 @@
     {
       "id": "us-iron-board",
       "country": "US",
-      "image": "data/memes/US/images/us-iron-board.webp",
+      "image": "data/memes/US/images/us-iron-board-1280-6b6b0da9b8c2.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
       "title": "Iron Man se tomó lo de la plancha literalmente",
       "location": "ConNooga 2009, Chattanooga, Tennessee",
@@ -17,7 +17,7 @@
         "statement": "La fotografía de Michael Miller está identificada como ConNooga 2009 en Chattanooga, Tennessee.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+      "imageURL": "https://live.staticflickr.com/3432/3299551134_c0eccb6e53_o.jpg",
       "creator": "Michael Miller",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -27,35 +27,81 @@
       "visualGag": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 1987,
+        "height": 2896
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/millermz/3299551134/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Escenario oscuro intencional; se conservan color y encuadre. El gag de la tabla de planchar es visible en la revisión ampliada, sin afirmar nitidez o exposición perfectas.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
-      "width": 527,
-      "height": 768,
-      "bytes": 12564,
+      "width": 878,
+      "height": 1280,
+      "sourceWidth": 1987,
+      "sourceHeight": 2896,
+      "bytes": 94072,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 439,
+          "height": 640,
+          "sha256": "b0359daa4b25f1577f6e6d3ef73a0263b324ea30a54e4cf883cdbb119347177d",
+          "image": "data/memes/US/images/us-iron-board-640-b0359daa4b25.webp",
+          "bytes": 23650
+        },
+        {
+          "edge": 1280,
+          "width": 878,
+          "height": 1280,
+          "sha256": "6b6b0da9b8c25e24c4196ba693a10dbf96d574aad460c86c4d10c1f2f5ab9dcf",
+          "image": "data/memes/US/images/us-iron-board-1280-6b6b0da9b8c2.webp",
+          "bytes": 94072
+        },
+        {
+          "edge": 1920,
+          "width": 1317,
+          "height": 1920,
+          "sha256": "334a8e8b36823182bcdb413c2b71f43eb4a01fcb48bce5aac3c67981e3466008",
+          "image": "data/memes/US/images/us-iron-board-1920-334a8e8b3682.webp",
+          "bytes": 241344
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "089061b5bd31128fbe5d3cdd6dba1bf0b7d8662bd0b273310747c1b31e7a5c7c",
-        "pixelSha256": "0e7e34142fffe4fc9cadcf3fd14712dda7ffc3cf684c9b5786b93c576ffd6850",
+        "sha256": "71ec2411c812d032f53517602f95728a18401a57221cc28c28081716c6980eaf",
+        "pixelSha256": "4a0f9c336e178222d628f03b89b5cde1872a8614f1d04dcb81b171549fd2fd39",
+        "perceptualHashes": [
+          "0001111011110001001100011001101001110001001100011101110011100000",
+          "0001111011100001001001001001011101110000000110110111110001100011",
+          "0001111011101001001011001001011101100000100100110011100010110011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "6b6b0da9b8c25e24c4196ba693a10dbf96d574aad460c86c4d10c1f2f5ab9dcf",
+        "pixelSha256": "e5870c810912adef354eb9695b17999cdd46a6e6e3b1e679feb60f8b0938b151",
         "perceptualHashes": [
           "0001111011110001001100011001101001110001001110011101110001100000",
           "0001111011100001001001001001011101110000000110110111110001100011",
           "0001111011101001001011001001011101100000100100110011100010110011"
         ]
       },
-      "outputFingerprint": {
-        "sha256": "66ed7c53c905c16c4c0ee8db06e1f13056e37491a0c3e082bcc46a2ae3b0f8bb",
-        "pixelSha256": "7cfc8c73bc41d154c064d170b065471227117566fd55e8f1c7dee701aec48eee",
-        "perceptualHashes": [
-          "0001111011110001001100011001101001110001001110001101110011100000",
-          "0001111011100001001001001001011101110000000110110111110001100011",
-          "0001111011101001001011001001011101100000100100110011100010110011"
-        ]
-      },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-captain-dorito",
       "country": "US",
-      "image": "data/memes/US/images/us-captain-dorito.webp",
+      "image": "data/memes/US/images/us-captain-dorito-1280-eb6e001d5eec.webp",
       "source": "https://zmyaro.com/cosplay/captaindorito/",
       "title": "Capitán América cambió el escudo por un Dorito",
       "location": "Tora-Con 2018, RIT, Rochester, Nueva York",
@@ -78,10 +124,46 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Zachary Yaro (cosplayer)",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Escudo triangular de cartón con una bolsa de Doritos pegada en el centro.",
-      "width": 512,
-      "height": 768,
-      "bytes": 48710,
+      "width": 853,
+      "height": 1280,
+      "sourceWidth": 1854,
+      "sourceHeight": 2782,
+      "bytes": 221436,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 427,
+          "height": 640,
+          "sha256": "0d0f41d5ba2de632b1281875ab17cc23bc8ef240c28bfc5ace2f40ef36db1abe",
+          "image": "data/memes/US/images/us-captain-dorito-640-0d0f41d5ba2d.webp",
+          "bytes": 70748
+        },
+        {
+          "edge": 1280,
+          "width": 853,
+          "height": 1280,
+          "sha256": "eb6e001d5eecfcf9ee510c5f94116bfe56718becfb11965d169a607299611012",
+          "image": "data/memes/US/images/us-captain-dorito-1280-eb6e001d5eec.webp",
+          "bytes": 221436
+        },
+        {
+          "edge": 1920,
+          "width": 1280,
+          "height": 1920,
+          "sha256": "a72d3e72b528b2304c6e46d0392390a58c96cc2612d344bb7e23f8c8c6b10987",
+          "image": "data/memes/US/images/us-captain-dorito-1920-a72d3e72b528.webp",
+          "bytes": 420424
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "6be66654a0ac042d87a99f7af6aa898962af0559e955bbfb2c3cfcdccc17ff90",
@@ -93,20 +175,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "85a89672204200cf563b654cec32fcce3b64e3d51be9ca20106f0793da8c9a43",
-        "pixelSha256": "5f555479c5bfc012dfd0a00b696598b33d77771730c6b600d6f524f92ecd08a3",
+        "sha256": "eb6e001d5eecfcf9ee510c5f94116bfe56718becfb11965d169a607299611012",
+        "pixelSha256": "d449f10adf1d64bde67f98800b1986396f776216f7b1829b7d87030785979429",
         "perceptualHashes": [
           "0110011000011010111001101011000100001100000111011001111011100010",
           "0111010100011100111001101011000100000100000110011001111011110010",
           "0111010100011110111001111111100101000000000010010001110011110000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-deadpool-iron",
       "country": "US",
-      "image": "data/memes/US/images/us-deadpool-iron.webp",
+      "image": "data/memes/US/images/us-deadpool-iron-1280-a996bd409250.webp",
       "title": "Deadpool cambia de armadura y de presupuesto",
       "source": "https://commons.wikimedia.org/wiki/File:Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg",
       "location": "New York Comic Con 2015, Nueva York",
@@ -126,14 +208,60 @@
       "visualGag": "Deadpool lleva una versión de tela de la armadura de Iron Man y sostiene un cartel físico sobre su cambio de disfraz; no hay texto digital superpuesto.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceResolution": {
+        "width": 1186,
+        "height": 1553
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool lleva una versión de tela de la armadura de Iron Man y sostiene un cartel físico sobre su cambio de disfraz; no hay texto digital superpuesto.",
-      "width": 587,
-      "height": 768,
-      "bytes": 62554,
+      "width": 978,
+      "height": 1280,
+      "sourceWidth": 1186,
+      "sourceHeight": 1553,
+      "bytes": 242900,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 489,
+          "height": 640,
+          "sha256": "7ba9ddcdf634603b8ea504fb58caffaa69838bb2bc43cf876dd4e137a0dcff90",
+          "image": "data/memes/US/images/us-deadpool-iron-640-7ba9ddcdf634.webp",
+          "bytes": 78658
+        },
+        {
+          "edge": 1280,
+          "width": 978,
+          "height": 1280,
+          "sha256": "a996bd4092509c445103fb15558b75b66fa5ee03007d85b6773661f5d62d4b77",
+          "image": "data/memes/US/images/us-deadpool-iron-1280-a996bd409250.webp",
+          "bytes": 242900
+        },
+        {
+          "edge": 1920,
+          "width": 1186,
+          "height": 1553,
+          "sha256": "263c30148a5139f66774a27059e9b0f28e08cf55a8fc09d16c6cf49ae0ed2d42",
+          "image": "data/memes/US/images/us-deadpool-iron-1920-263c30148a51.webp",
+          "bytes": 316984
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "dc1f66f98577e6b2a24d82d51977c5da60ae5a3dbfc19400f0686c8fcd96671d",
-        "pixelSha256": "de3e8550e4762863abc747a8a43fe58e7207c29ff6305ea81bd5036d833d0583",
+        "sha256": "02fbbdef5ce4d91ed0b7f8762f6b7a772286a0b00e5d703f69e1d4fccc57fe25",
+        "pixelSha256": "81869907d9ea6333659a572cd522f0fbca88e4eca9d90a87e195f79e4f7fac26",
         "perceptualHashes": [
           "0010001001010110010110110101100101011011101010011001110010010100",
           "0010010001000110010110111101101001001010111110111000110010100100",
@@ -141,22 +269,22 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "f0859bcd8b68b2a12775dd501c0650edd7d970722eacef6a25e053cbfe1e1d5a",
-        "pixelSha256": "25528983b6b0677bad6f2e882db36605c21cbcce2d39e45f887d8618734feecb",
+        "sha256": "a996bd4092509c445103fb15558b75b66fa5ee03007d85b6773661f5d62d4b77",
+        "pixelSha256": "52ddc870c7e389fdb19193ed54f354a408f350975c6a95b5e594541bbde1bcd7",
         "perceptualHashes": [
           "0010001001010110010110110101100101011011101010011001110010010100",
-          "0010010001000110010110111101101001001010111110111000110010100100",
+          "0010010001000110010110110101101001001010111110111000110010110100",
           "0010010011000100010110100101000001011010011110111000111111101100"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-deadpool-pope",
       "country": "US",
-      "image": "data/memes/US/images/us-deadpool-pope.webp",
+      "image": "data/memes/US/images/us-deadpool-pope-1280-843895ba0eeb.webp",
       "source": "https://commons.wikimedia.org/wiki/File:NYCC_2016_Cosplay_of_Pope_Deadpool.jpg",
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/NYCC_2016_Cosplay_of_Pope_Deadpool.jpg/960px-NYCC_2016_Cosplay_of_Pope_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/e4/NYCC_2016_Cosplay_of_Pope_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "title": "Deadpool cambia la katana por un báculo",
       "location": "New York Comic Con 2016, Nueva York",
       "countryEvidence": {
@@ -174,14 +302,59 @@
       "visualGag": "Deadpool lleva mitra y vestimenta ceremonial blanca y roja.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2448,
+        "height": 3264
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Deadpool lleva mitra y vestimenta ceremonial blanca y roja.",
-      "width": 576,
-      "height": 768,
-      "bytes": 98258,
+      "width": 960,
+      "height": 1280,
+      "sourceWidth": 2448,
+      "sourceHeight": 3264,
+      "bytes": 352974,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 480,
+          "height": 640,
+          "sha256": "c3887970b2a81589471756ce0b53075ec0b76455a97cb94d77fd6c399643ca99",
+          "image": "data/memes/US/images/us-deadpool-pope-640-c3887970b2a8.webp",
+          "bytes": 97400
+        },
+        {
+          "edge": 1280,
+          "width": 960,
+          "height": 1280,
+          "sha256": "843895ba0eeb559c42a6df8eff6a97b94cfe12418505911c53030162f1bf77cb",
+          "image": "data/memes/US/images/us-deadpool-pope-1280-843895ba0eeb.webp",
+          "bytes": 352974
+        },
+        {
+          "edge": 1920,
+          "width": 1440,
+          "height": 1920,
+          "sha256": "960070495ce09689c036ce91fef0b481fe966229dec314bb30a3d4ebacfabe55",
+          "image": "data/memes/US/images/us-deadpool-pope-1920-960070495ce0.webp",
+          "bytes": 702252
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "90a896b1baed1e094694dac2350a7d0e5e53cc626270d5c1cc18fcc0d81e7630",
-        "pixelSha256": "5e0b81d952d9b4e6b7c92f3c52353f9768f022178340ccb590487fffb5acb52d",
+        "sha256": "7f3e596a7797d0c7b7eb90efd1bd5b40247e9d13046ff2eb91f0c3e50c3cb501",
+        "pixelSha256": "12925ec0def77dd02ff6482c30923110017b085a5a52cb15c23e5cbae732daf4",
         "perceptualHashes": [
           "0111010011001100111100101011000010001101100100110111000101010010",
           "0110010001001101111100111011010010001100101100110101000100110010",
@@ -189,22 +362,22 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "131cc389a1e037c9e8a7492b344801e4d002b58058817471484720dbd2ba570e",
-        "pixelSha256": "44f9549b0c0017822a07aed51d41c49cb418791d3ce74c6d700340deb43c3dac",
+        "sha256": "843895ba0eeb559c42a6df8eff6a97b94cfe12418505911c53030162f1bf77cb",
+        "pixelSha256": "d89906076b63b232d059c9b5c5e2becc589cf4990909aec0a350a4216d902be6",
         "perceptualHashes": [
           "0111010011001100111100101011000010001101100100110111000101010010",
           "0110010001001101111100111011010010001100101100110101000100110010",
           "0110010001001011111100011011110010001010101000100001011100110011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-deadpool-lego",
       "country": "US",
-      "image": "data/memes/US/images/us-deadpool-lego.webp",
+      "image": "data/memes/US/images/us-deadpool-lego-1280-a6c19e56496e.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "imageURL": "https://live.staticflickr.com/1620/25251031320_a74b7eb73d_b.jpg",
       "title": "Deadpool descubre el tamaño de una minifigura",
       "location": "Big Apple Comic Con 2016, Nueva York",
       "countryEvidence": {
@@ -222,37 +395,75 @@
       "visualGag": "Una persona viste un disfraz de Deadpool con cabeza, cuerpo y manos de minifigura LEGO gigante.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 934,
+        "height": 724
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/94565827@N05/25251031320/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Original nativo 934×724; capar presentación a 467px para DPR2.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Una persona viste un disfraz de Deadpool con cabeza, cuerpo y manos de minifigura LEGO gigante.",
-      "width": 768,
-      "height": 595,
-      "bytes": 31232,
+      "width": 934,
+      "height": 724,
+      "sourceWidth": 934,
+      "sourceHeight": 724,
+      "bytes": 81884,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 496,
+          "sha256": "e8198683ddaf2a9757a50c4d6e7c1ed7466c8798f15ce22ea8814a4bedde9ce3",
+          "image": "data/memes/US/images/us-deadpool-lego-640-e8198683ddaf.webp",
+          "bytes": 49720
+        },
+        {
+          "edge": 1280,
+          "width": 934,
+          "height": 724,
+          "sha256": "a6c19e56496ee8043b51cdb6ae8821397a538cdff7cbac8b07253564e45e2714",
+          "image": "data/memes/US/images/us-deadpool-lego-1280-a6c19e56496e.webp",
+          "bytes": 81884
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "4256240cf17b41d126ea90d0842275b297c1436f28eaab522fa10d0aef9feb2b",
-        "pixelSha256": "7fa2dead4312cc5ee18d9186274e3e1ef92aa09d03bb3c9031c9ec8464defd94",
+        "sha256": "66fa3115d264f2c27d0966c0ccef5ed758cd7a5a22e4640278b57fce59ea9bf1",
+        "pixelSha256": "59c42b6c3337263ecdca0aedabcf10b11b8cb9753cb40e28c5f5194fdb2e2642",
         "perceptualHashes": [
           "0100001111010110100101100100110011101101000011010110101011100000",
           "0111001010010110100101001100011111001011000011010100011011100010",
-          "0111001010110100100101011111010110001001000011110000111001100100"
+          "0111001010110001100101011111010110001001000011110000111001100100"
         ]
       },
       "outputFingerprint": {
-        "sha256": "a45ae94611464415f379c0048c347b0628a2f3c9658259d8525f9acc6a86c058",
-        "pixelSha256": "05b15da449dc3dd511c53e45379e792c2541c3919cd73c243d7da58a8275b593",
+        "sha256": "a6c19e56496ee8043b51cdb6ae8821397a538cdff7cbac8b07253564e45e2714",
+        "pixelSha256": "fd1e4a84b37d06a01e99bfec705b8afd939be7f3000a093a09ad20344709b1b6",
         "perceptualHashes": [
           "0100001111010110100101100100110011101101000011010110101011100000",
           "0111001010010110100101001100011111001011000011010100011011100010",
           "0111001010110100100101011111010110001001000011110000111001100100"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-spider-frog",
       "country": "US",
-      "image": "data/memes/US/images/us-spider-frog.webp",
+      "image": "data/memes/US/images/us-spider-frog-1280-f1949a25e42e.webp",
       "source": "https://commons.wikimedia.org/wiki/File:SDCC_15_-_Spider-Frog_(19652841226).jpg",
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/SDCC_15_-_Spider-Frog_%2819652841226%29.jpg/960px-SDCC_15_-_Spider-Frog_%2819652841226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/c/cf/SDCC_15_-_Spider-Frog_%2819652841226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "title": "La rana también tiene sentido arácnido",
       "location": "San Diego Comic-Con 2015, San Diego",
       "countryEvidence": {
@@ -270,14 +481,59 @@
       "visualGag": "Un disfraz de rana con cabeza enorme viste el traje de Spider-Man.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 5184,
+        "height": 3456
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Un disfraz de rana con cabeza enorme viste el traje de Spider-Man.",
-      "width": 768,
-      "height": 512,
-      "bytes": 74060,
+      "width": 1280,
+      "height": 853,
+      "sourceWidth": 5184,
+      "sourceHeight": 3456,
+      "bytes": 246616,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 427,
+          "sha256": "71a05dfc85044c42c9d03fd2227921093a6de3f9b2fd54536b24c3c3c7dea14c",
+          "image": "data/memes/US/images/us-spider-frog-640-71a05dfc8504.webp",
+          "bytes": 80962
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 853,
+          "sha256": "f1949a25e42e67c04a8b298fbd342c146bbf7c12daf6bcb55c49db8a3d39e433",
+          "image": "data/memes/US/images/us-spider-frog-1280-f1949a25e42e.webp",
+          "bytes": 246616
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1280,
+          "sha256": "3167dfcd827dc2843b9c2097e35cf05dc83b7f042a9f3c7b48da85c84a8f4b44",
+          "image": "data/memes/US/images/us-spider-frog-1920-3167dfcd827d.webp",
+          "bytes": 477156
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "aef0e60cd71f9578852bb13fab888d4128a5c0f586c196cd5c8ccd33ddeb53ab",
-        "pixelSha256": "3fd49cb7e91420daaf719a88e5202a391de503f9157cd22fa580089afaa02753",
+        "sha256": "d1c33b849e2f136e132c5069ba04bf1a0916d2280ab7ee5775644e6c4d1a22e8",
+        "pixelSha256": "4e8f115516b061458cfaaa1d6a0bc44bae8259be4d1102f5952debba6c0ab77b",
         "perceptualHashes": [
           "0111000100001100111011001100001000011111000010101001110110100111",
           "0111000101001100111011101101001001000110010110101001100110100001",
@@ -285,22 +541,22 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "06b9e99ca95f85d20302213c0bdbd3201ad9a16e7bf846c1b8f2e545a4882ca0",
-        "pixelSha256": "ca1973a42d9dd02df1c1ea6ae57f44a991405b028e73ff23aee6534645340079",
+        "sha256": "f1949a25e42e67c04a8b298fbd342c146bbf7c12daf6bcb55c49db8a3d39e433",
+        "pixelSha256": "b23790188b77717b0310f779281dc4f68ec41a5083ef1ad2af7ed8d52ac3f32a",
         "perceptualHashes": [
           "0111000100001100111011001100001000011111000010101001110110100111",
           "0111000101001100111011101101001001000110010110101001100110100001",
           "0111000100001101011011101111010101000110010111001001100010100001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-spider-thor",
       "country": "US",
-      "image": "data/memes/US/images/us-spider-thor.webp",
+      "image": "data/memes/US/images/us-spider-thor-1280-c39f290fe72c.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Captain_America_and_Spider_Thor%3F_C2E2_2014_(14254757313).jpg",
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg/960px-Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/5489/14254757313_963bdca397_3k.jpg",
       "title": "Spider-Man cambia de martillo y de capa",
       "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
       "countryEvidence": {
@@ -320,14 +576,60 @@
       "visualGag": "Spider-Man lleva armadura, capa y martillo de Thor junto a Captain America.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 2454,
+        "height": 3068
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/cfavero/14254757313/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man lleva armadura, capa y martillo de Thor junto a Captain America.",
-      "width": 614,
-      "height": 768,
-      "bytes": 84612,
+      "width": 1024,
+      "height": 1280,
+      "sourceWidth": 2454,
+      "sourceHeight": 3068,
+      "bytes": 318680,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 512,
+          "height": 640,
+          "sha256": "d9b4897e973f23f173bdd558c1afd99b50cfd30bebbe2d163a3657b2998ffb87",
+          "image": "data/memes/US/images/us-spider-thor-640-d9b4897e973f.webp",
+          "bytes": 96524
+        },
+        {
+          "edge": 1280,
+          "width": 1024,
+          "height": 1280,
+          "sha256": "c39f290fe72c235a6b41bb6739592d66915f9dcd1850b844b4c622df7a4f62ca",
+          "image": "data/memes/US/images/us-spider-thor-1280-c39f290fe72c.webp",
+          "bytes": 318680
+        },
+        {
+          "edge": 1920,
+          "width": 1536,
+          "height": 1920,
+          "sha256": "7992dcc3e34c21975c7ebe398715e61be6f85d56f1536ea5274302dcaee07cde",
+          "image": "data/memes/US/images/us-spider-thor-1920-7992dcc3e34c.webp",
+          "bytes": 681630
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "942ac8caaa80d8a75eff2834377e76c04bc34bf9d45637a81e2906c877aa2031",
-        "pixelSha256": "40dbd8938e36b31f1797107bf7508af1e2a967a0eef803cf7011596511cd0a57",
+        "sha256": "9463357070a247d5600b821722520f31dc86eb2f81814345d06176ce4fd98303",
+        "pixelSha256": "aed347398f1343cbdde79d77f95aeba3ab858cfdcebb2ac73a2585c483d6a0fa",
         "perceptualHashes": [
           "0010110100000010101100110000110110001100101011111011001010111010",
           "0010110100000010101100110100110110001100101010111011000010111110",
@@ -335,22 +637,22 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "1dac4eedd7b05c3bb167672924682947f17bb1da9e916cb1ee70d3eeb968db27",
-        "pixelSha256": "02dc71e00658ab3fe289c9b5ed891f2bcf0283108cef99be6636c711b24ce3de",
+        "sha256": "c39f290fe72c235a6b41bb6739592d66915f9dcd1850b844b4c622df7a4f62ca",
+        "pixelSha256": "7b9c96458cb2e1c61fb941ca10d04c90bf5c250cb19e48b37cc19c9def0944d3",
         "perceptualHashes": [
           "0010110100000010101100110000110110001100101011111011001010111010",
           "0010110100000010101100110100110110001100101010111011000010111110",
           "0000100101010100101100110100110010001110001010111011010011100111"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-deadtrooper",
       "country": "US",
-      "image": "data/memes/US/images/us-deadtrooper.webp",
+      "image": "data/memes/US/images/us-deadtrooper-1280-c0bcd9984531.webp",
       "source": "https://commons.wikimedia.org/wiki/File:SWCA_-_Deadtrooper_(16580465874).jpg",
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/SWCA_-_Deadtrooper_%2816580465874%29.jpg/960px-SWCA_-_Deadtrooper_%2816580465874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/8/8c/SWCA_-_Deadtrooper_%2816580465874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "title": "El stormtrooper se ha pasado a Deadpool",
       "location": "Star Wars Celebration Anaheim 2015, Anaheim",
       "countryEvidence": {
@@ -368,37 +670,82 @@
       "visualGag": "Una armadura de stormtrooper está pintada en rojo y negro con el patrón de la máscara de Deadpool.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 5184,
+        "height": 3456
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Una armadura de stormtrooper está pintada en rojo y negro con el patrón de la máscara de Deadpool.",
-      "width": 768,
-      "height": 512,
-      "bytes": 51480,
+      "width": 1280,
+      "height": 853,
+      "sourceWidth": 5184,
+      "sourceHeight": 3456,
+      "bytes": 156888,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 427,
+          "sha256": "00718fadcf72f470c321d87516e71315fc38d5722ff8099c13665754b03c252c",
+          "image": "data/memes/US/images/us-deadtrooper-640-00718fadcf72.webp",
+          "bytes": 67662
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 853,
+          "sha256": "c0bcd998453188a989283965260ed04006a4909b0d867801dedc7853e2daa169",
+          "image": "data/memes/US/images/us-deadtrooper-1280-c0bcd9984531.webp",
+          "bytes": 156888
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1280,
+          "sha256": "e89dc2b76a509b53c2a0bc3a8ed98d6ed522a871d320f3e4367913845812c10a",
+          "image": "data/memes/US/images/us-deadtrooper-1920-e89dc2b76a50.webp",
+          "bytes": 277808
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "d7edce36219b7c3bff019af5ec56de2670564cac2cac225b8b1a6141a08f11bd",
-        "pixelSha256": "73e4b5943545af66b0561155b246b50177f5b695b170d400e1a660689c55bd7d",
+        "sha256": "599f172aa11273e3e83a89fb3ea94947adff1b97c4729609e8205948543fb5a3",
+        "pixelSha256": "e36ea8785b19b8ef904520f61a6a7af08f89ad7c34a515a9a6a021b8f5db414a",
         "perceptualHashes": [
           "0110001010000101101001111110100101001111110100100000100100100111",
-          "0110001010100100101011111110100100000111110100010001110110000011",
+          "0110001010000100101011111110100100001111110100010001110110000011",
           "0111000110100100101001110110101100000110110100011001011010010011"
         ]
       },
       "outputFingerprint": {
-        "sha256": "086906e8ed5247ace143968b552f5b0ffb89135904debf9fa6ad0ee673af9b03",
-        "pixelSha256": "45c0961acd440f1640df51bc37d14ac629082cebace65a3ede21e7a4adc0981a",
+        "sha256": "c0bcd998453188a989283965260ed04006a4909b0d867801dedc7853e2daa169",
+        "pixelSha256": "bde5c31afe381ec31a9783c5e9406f4ee63a52b95ca0dd339c81e17778113c3c",
         "perceptualHashes": [
           "0110001010000101101001111110100101001111110100100000100100100111",
           "0110001010000100101011111110100100000111110100010001110110001011",
-          "0111000110100100101001110111101100000110110100001001011010010011"
+          "0111000110100100101001110110101100000110110110001001011010010011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-captain-spider",
       "country": "US",
-      "image": "data/memes/US/images/us-captain-spider.webp",
+      "image": "data/memes/US/images/us-captain-spider-1280-902cd98b52c8.webp",
       "source": "https://commons.wikimedia.org/wiki/File:C2E2_2015_-_Captain_Spider-Man_(17118870150).jpg",
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg/960px-C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/6a/C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "title": "Spider-Man toma prestado el escudo del Capitán",
       "location": "Chicago Comic & Entertainment Expo 2015, Chicago",
       "countryEvidence": {
@@ -417,14 +764,59 @@
       "visualGag": "Un traje de Spider-Man incorpora colores, estrella y escudo de Captain America.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2441,
+        "height": 3158
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Un traje de Spider-Man incorpora colores, estrella y escudo de Captain America.",
-      "width": 594,
-      "height": 768,
-      "bytes": 48878,
+      "width": 989,
+      "height": 1280,
+      "sourceWidth": 2441,
+      "sourceHeight": 3158,
+      "bytes": 216566,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 494,
+          "height": 640,
+          "sha256": "14bf0a0187e7ef8946a48c484b32453c50119ac37fd0f607f2fe7aac3a477a45",
+          "image": "data/memes/US/images/us-captain-spider-640-14bf0a0187e7.webp",
+          "bytes": 61598
+        },
+        {
+          "edge": 1280,
+          "width": 989,
+          "height": 1280,
+          "sha256": "902cd98b52c8bed637b6e6c46188fa2c24fb0984fe0ffecec05ac1b0bc656e39",
+          "image": "data/memes/US/images/us-captain-spider-1280-902cd98b52c8.webp",
+          "bytes": 216566
+        },
+        {
+          "edge": 1920,
+          "width": 1484,
+          "height": 1920,
+          "sha256": "ede33cb5a305bfdaf66c581f6fa374093d0c5c0e18f48c1e48cba2f4067c4222",
+          "image": "data/memes/US/images/us-captain-spider-1920-ede33cb5a305.webp",
+          "bytes": 445926
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "d287e154e1fec73a6832e2d916177d72fb29cdf5b8d40d5b4c0d9713ff18073c",
-        "pixelSha256": "da0b593ab845198e9b849f742a2d0db7e39cca80cf54fc9648db30977b882274",
+        "sha256": "080db2ffcfcf081f561d41300b27387022afd0719603a20b920b9c52186e628e",
+        "pixelSha256": "18d1c98bb727ff96f5ff2bc4efe7f5801467ace4402f919209df9dbeac4e181f",
         "perceptualHashes": [
           "0001010100010110110101000010010111110101110100011001010011011001",
           "0000110100010110111001010010110111100010100101011001010110011001",
@@ -432,22 +824,22 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "11915ca32a28dbbe0ead32ff7c32c15e16ec981bfb7c5541d6b13fa64dd18b3d",
-        "pixelSha256": "17a749eb8f53fdeb3577d274dea4ef8ac36cf3e33d0fb30f48c19903d4f8782b",
+        "sha256": "902cd98b52c8bed637b6e6c46188fa2c24fb0984fe0ffecec05ac1b0bc656e39",
+        "pixelSha256": "b3aa1c7330f1cc8ed9c192b5706f570e598aa431645f3431fdbc98ec8b7bfc17",
         "perceptualHashes": [
           "0001010100010110110101000010010111110101110100011001010011011001",
           "0000110100010110111001010010110111100010100101011001010110011001",
           "0000100100010110111011010010111101100010100001011010010110110011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "us-deadpool-elsa",
       "country": "US",
-      "image": "data/memes/US/images/us-deadpool-elsa.webp",
+      "image": "data/memes/US/images/us-deadpool-elsa-1280-cd67222782fe.webp",
       "source": "https://commons.wikimedia.org/wiki/File:C2E2_(Day_2)_2014,_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg",
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg/960px-C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/7302/14062998863_252f565f75_4k.jpg",
       "title": "Deadpool se apunta a Frozen",
       "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
       "countryEvidence": {
@@ -466,14 +858,60 @@
       "visualGag": "Deadpool lleva peluca rubia con trenza y vestido azul de Elsa junto a Spider-Man.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 3000,
+        "height": 4000
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/lauren-j/14062998863/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool lleva peluca rubia con trenza y vestido azul de Elsa junto a Spider-Man.",
-      "width": 576,
-      "height": 768,
-      "bytes": 52264,
+      "width": 960,
+      "height": 1280,
+      "sourceWidth": 3000,
+      "sourceHeight": 4000,
+      "bytes": 199622,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 480,
+          "height": 640,
+          "sha256": "5f92d9117ad6e1f1c1306fedb8af4f88e1327af80cee6f7796a005d62640eb02",
+          "image": "data/memes/US/images/us-deadpool-elsa-640-5f92d9117ad6.webp",
+          "bytes": 66696
+        },
+        {
+          "edge": 1280,
+          "width": 960,
+          "height": 1280,
+          "sha256": "cd67222782fe9f468ef538ec7829924490f38eed5210977cd50ff063cbfca55b",
+          "image": "data/memes/US/images/us-deadpool-elsa-1280-cd67222782fe.webp",
+          "bytes": 199622
+        },
+        {
+          "edge": 1920,
+          "width": 1440,
+          "height": 1920,
+          "sha256": "4cdfa0fbbe3752b54aaa12565cc79f7e48531ba49be920ada3114bf2ff7e7b1f",
+          "image": "data/memes/US/images/us-deadpool-elsa-1920-4cdfa0fbbe37.webp",
+          "bytes": 396920
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "c078bd05133b4882db476863e3fc9522b587727bfe86519c1dbf4f026398c18a",
-        "pixelSha256": "693c17b8fa87e9018b31b2e773deac7b8e17864111bcd7cc04b6bccb959db453",
+        "sha256": "b97a4d22d4159203ce257f469d01299ebbe19b551cef292f836b0432dd64b915",
+        "pixelSha256": "59d6d31abe99f987a484a1411efa1565a67bd35397491de4955b8cd1accd996d",
         "perceptualHashes": [
           "0111100000100011111010000011110000101011000000010110110101101111",
           "0111100000100011111010000011111000111011001010010110110001100100",
@@ -481,15 +919,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "580cd2b9000be31d6a16f96c4bb199ee3203579743a0ebba39b369494692ec5c",
-        "pixelSha256": "28205f2c992c231ebc38187670b8a0bbd101560d1850eead2b53789aea046f25",
+        "sha256": "cd67222782fe9f468ef538ec7829924490f38eed5210977cd50ff063cbfca55b",
+        "pixelSha256": "bb10a13ff0131780ede53a1c3b26c6e20a4c116eba368d16599d5c942c36c61a",
         "perceptualHashes": [
           "0111100000100011111010000011110000101011000000010110110101101111",
           "0111100000100011111010000011111000111011001010010110110001100100",
           "0101110010110011111011100011111000010011100010000110110001100000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

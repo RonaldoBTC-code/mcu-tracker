@@ -6,11 +6,11 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 65,
-      "imageDisplayChecks": 65,
+      "uniquePhotos": 61,
+      "imageDisplayChecks": 61,
       "initialRequests": [
         "/data/memes/EC.json",
-        "/data/memes/EC/images/ec-spider-bus.webp"
+        "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
       ],
       "inlineMapAbsent": true,
       "originalMapEntryPreserved": true,
@@ -23,17 +23,17 @@
       "result": "PASS"
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 22,
-    "imageDisplayChecks": 130,
-    "uniquePhotos": 65,
-    "uniqueCountryCatalogues": 23,
+    "countriesWithPhotos": 19,
+    "imageDisplayChecks": 122,
+    "uniquePhotos": 61,
+    "uniqueCountryCatalogues": 20,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json",
-      "/data/memes/EC/images/ec-spider-bus.webp"
+      "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
     ],
-    "maxCountryOpenMs": 38,
+    "maxCountryOpenMs": 76,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -45,11 +45,11 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 65,
-      "imageDisplayChecks": 65,
+      "uniquePhotos": 61,
+      "imageDisplayChecks": 61,
       "initialRequests": [
         "/data/memes/EC.json",
-        "/data/memes/EC/images/ec-spider-bus.webp"
+        "/data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp"
       ],
       "inlineMapAbsent": true,
       "originalMapEntryPreserved": true,
@@ -62,16 +62,16 @@
       "result": "PASS"
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 22,
-    "imageDisplayChecks": 130,
-    "uniquePhotos": 65,
-    "uniqueCountryCatalogues": 23,
+    "countriesWithPhotos": 19,
+    "imageDisplayChecks": 122,
+    "uniquePhotos": 61,
+    "uniqueCountryCatalogues": 20,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 27,
+    "maxCountryOpenMs": 33,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

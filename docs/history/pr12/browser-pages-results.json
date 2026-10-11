@@ -1,0 +1,86 @@
+[
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T16:28:46.172Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
+      "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
+    "uniqueCountryCatalogues": 23,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
+    ],
+    "maxCountryOpenMs": 131,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T16:29:32.629Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
+      "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
+    "uniqueCountryCatalogues": 23,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
+    ],
+    "maxCountryOpenMs": 62,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

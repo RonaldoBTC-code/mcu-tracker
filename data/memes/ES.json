@@ -8,7 +8,7 @@
     {
       "id": "es-spider-plaza",
       "country": "ES",
-      "image": "data/memes/ES/images/es-spider-plaza.webp",
+      "image": "data/memes/ES/images/es-spider-plaza-1280-7a10d396a3f1.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg",
       "title": "Spider-Man lleva la máscara sobre los ojos",
       "location": "Madrid, Plaza Mayor",
@@ -17,7 +17,7 @@
         "statement": "El fotógrafo sitúa al personaje en Plaza Mayor de Madrid, España. El gag es la máscara desplazada, no el cuerpo del intérprete.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg/960px-Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Fsoguero",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -27,35 +27,80 @@
       "visualGag": "Spider-Man lleva la máscara sobre los ojos",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2418,
+        "height": 3446
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Spider-Man lleva la máscara sobre los ojos",
-      "width": 539,
-      "height": 768,
-      "bytes": 63796,
+      "width": 898,
+      "height": 1280,
+      "sourceWidth": 2418,
+      "sourceHeight": 3446,
+      "bytes": 199926,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 449,
+          "height": 640,
+          "sha256": "6ee27d3cb90c35ef40a1cdfe785bea951c276bcebaf756b6c98a986af30f1301",
+          "image": "data/memes/ES/images/es-spider-plaza-640-6ee27d3cb90c.webp",
+          "bytes": 78508
+        },
+        {
+          "edge": 1280,
+          "width": 898,
+          "height": 1280,
+          "sha256": "7a10d396a3f1dc644f38fc1dd91a0f53fcb6820a4b4357c0b510cbbf3f39b839",
+          "image": "data/memes/ES/images/es-spider-plaza-1280-7a10d396a3f1.webp",
+          "bytes": 199926
+        },
+        {
+          "edge": 1920,
+          "width": 1347,
+          "height": 1920,
+          "sha256": "58690bc4db47da48177149d8d0a818407e55262076632711b87d390e9f2af262",
+          "image": "data/memes/ES/images/es-spider-plaza-1920-58690bc4db47.webp",
+          "bytes": 327794
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "8f76e9f4a1262c38119b92c4f63a8e6171e169d0274cc98e7c447321955ee665",
-        "pixelSha256": "051b2703f7063e5fd414cd469fc307b116fd82198ba5bddb38da4a899e2f3487",
-        "perceptualHashes": [
-          "0000011100011001110110001010011010111101111000011000001001111010",
-          "0010000100011000110111011010011010101000101000011011001101111101",
-          "0010000100011010110111011010011010101000101000001011000111111011"
-        ]
-      },
-      "outputFingerprint": {
-        "sha256": "cc713119482339ed554d1eb28c02e8d29db50528153314e9fcfcb07af29a16ba",
-        "pixelSha256": "0c5e66ffebfeededa60505d287242b759bce30db98147b43737be617aff9c2b4",
+        "sha256": "1865beb839ccf63d2082937c11a79bb20934673907b40a7ee4ac4e9e9a2215a4",
+        "pixelSha256": "01c7a33487ef885028898f91590258827c30d7b456b1939d32ec5ac35b86f38c",
         "perceptualHashes": [
           "0000011100011001110110001010011010111101111000011000001001111010",
           "0010000100011000110111011010011010101000101000011011001101111011",
           "0010000100011010110111011010011010101000101000001011000111111011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "outputFingerprint": {
+        "sha256": "7a10d396a3f1dc644f38fc1dd91a0f53fcb6820a4b4357c0b510cbbf3f39b839",
+        "pixelSha256": "d9e4e3ddc683455295f96bbb137bccfe7ace56d32448ab88c789b03caeff650d",
+        "perceptualHashes": [
+          "0000011100011001110110001010011010111101111000011000001001111010",
+          "0010000100011000110111011010011010101000101000011011001101111011",
+          "0010000100011010110111011010011010101000101000001011000111111011"
+        ]
+      },
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "es-spider-smoking",
       "country": "ES",
-      "image": "data/memes/ES/images/es-spider-smoking.webp",
+      "image": "data/memes/ES/images/es-spider-smoking-1280-9f432ed895d9.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Fat_Spider-Man.jpg",
       "title": "Spider-Man se toma un descanso con cigarrillo",
       "location": "Madrid, Plaza Mayor",
@@ -64,7 +109,7 @@
         "statement": "La descripción sitúa la escena en Plaza Mayor, España; las categorías identifican al intérprete fumando. El título no reproduce el comentario corporal de la fuente.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Fat_Spider-Man.jpg/960px-Fat_Spider-Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/05/Fat_Spider-Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "רנדום",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -74,30 +119,75 @@
       "visualGag": "Spider-Man se toma un descanso con cigarrillo",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2258,
+        "height": 3454
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Spider-Man se toma un descanso con cigarrillo",
-      "width": 502,
-      "height": 768,
-      "bytes": 42544,
+      "width": 837,
+      "height": 1280,
+      "sourceWidth": 2258,
+      "sourceHeight": 3454,
+      "bytes": 173210,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 418,
+          "height": 640,
+          "sha256": "dc8c9cd582909aed5c4a7050ec8a5108af922523e8e3800115c39dd09881e9f3",
+          "image": "data/memes/ES/images/es-spider-smoking-640-dc8c9cd58290.webp",
+          "bytes": 54282
+        },
+        {
+          "edge": 1280,
+          "width": 837,
+          "height": 1280,
+          "sha256": "9f432ed895d9b17f529c4f6374a09092f85a27c1a6135f1e0cc22b351f004352",
+          "image": "data/memes/ES/images/es-spider-smoking-1280-9f432ed895d9.webp",
+          "bytes": 173210
+        },
+        {
+          "edge": 1920,
+          "width": 1255,
+          "height": 1920,
+          "sha256": "1fe208a88323a61b3d136c833c625827bb7852bcbb22465ab456056ebe215da7",
+          "image": "data/memes/ES/images/es-spider-smoking-1920-1fe208a88323.webp",
+          "bytes": 302298
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "4813667830ca4edef2f3aaf0ad088b87f6fa0e04751f14c4dee0367fc4ced2f9",
-        "pixelSha256": "404f1c76a048eed4cda0783a6c049e4ebedd9a6bd8d55fff4d9f58b3ddf4a390",
+        "sha256": "2ea78a313b3b005ba8fc96a193898e6ad18f84ae78a2d5243bf76b113df5a313",
+        "pixelSha256": "7882723bbd28e69c68cb956bc8169421fddaca3ba5a4fef0d63e38ca3a1b8610",
         "perceptualHashes": [
-          "0110100001111000100011110000111100010010110011110110011000110010",
+          "0110100001111000110011110000111100010010110011110110011000100010",
           "0110100001111010100011110000011110010010110011010110011000110010",
           "0111101001111010100011010010001110010010110011010110001001101000"
         ]
       },
       "outputFingerprint": {
-        "sha256": "89c9f4f249e5fce3654eb202050bde2a9a70303bdf64e7a3ba3fdf68f84580a6",
-        "pixelSha256": "805c266e5a8c3d12ec54de951c2a61227bf86e3645f75133ac22dfa3b9442be1",
+        "sha256": "9f432ed895d9b17f529c4f6374a09092f85a27c1a6135f1e0cc22b351f004352",
+        "pixelSha256": "e506febd18966344cbdd36b672e32ae354202f22dcafe8424e0b1e44bf5e073b",
         "perceptualHashes": [
-          "0110100001111000100011110000111100010010110011110110011000110010",
+          "0110100001111000110011110000111100010010110011110110011000100010",
           "0110100001111010100011110000011110010010110011010110011000110010",
           "0111101001111010100011010010001110010010110011010110001001101000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

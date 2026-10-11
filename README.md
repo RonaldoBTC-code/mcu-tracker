@@ -100,3 +100,7 @@ La portada incluye un feed vertical con país detectado/selector, imágenes prog
 [Me gusta y vistas compartidas](docs/meme-feed.md) tienen frontend, migración aditiva y pruebas SQL/DOM. La lectura real posterior al despliegue comprobó los 54 IDs, incluidos los 14 nuevos. Las escrituras autenticadas y su persistencia real siguen pendientes de validación. Las vistas de memes identifican cuentas autenticadas para deduplicar: una cuenta/foto de por vida; esto es distinto de site_visits. Sin backend no se muestran cifras inventadas.
 
 Requisito de memes: sección propia con mapa visible y múltiples tarjetas por país, mínimo diez fotos distintas por cada uno de los 51 países. El feed no tiene un límite de cuatro: ese valor es el lote de carga progresiva. Estado actual: 54 fotos, CA/US con diez, 49 países y 456 fotos por completar. [Conteos y faltantes](docs/country-coverage.md).
+
+## Auditoría y calidad fotográfica
+
+La entrada siempre muestra el rastreador. Memes se abre con navegación explícita y conserva el mapa original. La revisión de calidad, las fuentes, las pruebas y los pendientes están en [docs/photo-quality-audit.md](docs/photo-quality-audit.md). Leer [AGENTS.md](AGENTS.md) antes de modificar arranque, guía o fotografías. El catálogo conserva 61 fotos reales de humor visual en 19 países; el objetivo de diez por país sigue incompleto. La evidencia de publicación debe verificarse en [docs/publication-results.json](docs/publication-results.json).

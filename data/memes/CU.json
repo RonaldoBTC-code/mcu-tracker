@@ -8,7 +8,7 @@
     {
       "id": "cu-spider-nerf",
       "country": "CU",
-      "image": "data/memes/CU/images/cu-spider-nerf.webp",
+      "image": "data/memes/CU/images/cu-spider-nerf-1280-0eb1394f9c1a.webp",
       "source": "https://www.dvidshub.net/image/2433478/residents-embrace",
       "title": "Spider-Man cambia la telaraña por un lanzador de juguete",
       "location": "Guantánamo Bay, Cuba, fiesta de Halloween en un bus",
@@ -17,7 +17,7 @@
         "statement": "DVIDS indica GUANTANAMO BAY, CU y describe al participante disfrazado de Spider-Man con un juguete Nerf dentro de un bus de Halloween. La base estadounidense no convierte el lugar geográfico de la foto en Estados Unidos.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1603/2433478/1000w_q95.jpg",
+      "imageURL": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1603/2433478/2000w_q95.jpg",
       "creator": "Sgt. LeAnne Withrow / DVIDS",
       "license": "Public domain",
       "licenseUrl": "https://www.dvidshub.net/about/copyright",
@@ -29,14 +29,59 @@
       "hasMemeTextOverlay": false,
       "publisher": "DVIDS",
       "rightsNotice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.",
+      "sourceResolution": {
+        "width": 1999,
+        "height": 1328
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Original or larger publisher file explicitly linked in primary article",
+        "original": false
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man cambia la telaraña por un lanzador de juguete",
-      "width": 768,
-      "height": 510,
-      "bytes": 36062,
+      "width": 1280,
+      "height": 850,
+      "sourceWidth": 1999,
+      "sourceHeight": 1328,
+      "bytes": 195882,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 425,
+          "sha256": "aeda37cd222ea55c3baf1fdd3ae947e12a41fc2465d78852efe8bce397009f61",
+          "image": "data/memes/CU/images/cu-spider-nerf-640-aeda37cd222e.webp",
+          "bytes": 55770
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 850,
+          "sha256": "0eb1394f9c1a461e966fe9e892df894017b5edd535f124cd50ba550c1eebd977",
+          "image": "data/memes/CU/images/cu-spider-nerf-1280-0eb1394f9c1a.webp",
+          "bytes": 195882
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1276,
+          "sha256": "83353f35b2b4bdbaa05821019b0d5ed540672aebfe76304818e197881cc0b8fa",
+          "image": "data/memes/CU/images/cu-spider-nerf-1920-83353f35b2b4.webp",
+          "bytes": 480810
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "c15b34f7dbd0c44fe8fce2e5a4b0ca0853646bb87a4967a9544ef03947b72b84",
-        "pixelSha256": "809de5819aabadbec5cc1d07e979ee7ef090332a1a0b8c133156b7ee8cb19f3d",
+        "sha256": "c307127d37448889d97a73298c9827310d9ad1a88aa3226c641dc3f7f22e934b",
+        "pixelSha256": "f46f4f9fb79b6055a1357a561753aca8a4ebfc87beb6693af367b20454ff5a55",
         "perceptualHashes": [
           "0110110011110011111101101100010111110000100010101101000000000010",
           "0110110111110011101001101110000011110100100000011111000000000110",
@@ -44,15 +89,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "972cd28787103955a062ae99ed062ac88dd9356a4984e1f09904db6199f4ac05",
-        "pixelSha256": "1a0c7c87b4c1b53514a6d692b1dd1aeb31b1de771bc8360d206ec9dc4b508f21",
+        "sha256": "0eb1394f9c1a461e966fe9e892df894017b5edd535f124cd50ba550c1eebd977",
+        "pixelSha256": "f5c05d2b854284278ccafaec32747c12b2003d34de363c61acc19c15f3aa6a17",
         "perceptualHashes": [
           "0110110011110011111101101100010111110000100010101101000000000010",
           "0110110111110011101001101110000011110100100000011111000000000110",
           "0110110111110010011001111110000010100100100110010111000011000100"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

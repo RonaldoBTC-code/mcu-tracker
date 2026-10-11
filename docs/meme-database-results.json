@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-11T16:22:17.108Z",
+  "checkedAt": "2026-10-11T18:09:06.817Z",
   "result": "PASS",
   "engine": "PGlite embedded PostgreSQL; auth schema simulated",
   "productionPersistenceVerified": false,
   "checks": [
-    "migration executes with every reviewed stable ID",
+    "migration covers current stable IDs and preserves withdrawn-photo identities",
     "guest reads aggregates but cannot mutate likes/views",
     "duplicate desired-state likes count once",
     "duplicate views and reloads count once per account for life",

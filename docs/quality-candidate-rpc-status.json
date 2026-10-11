@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-11T17:43:08.368Z",
+  "writes": false,
+  "results": [
+    {
+      "id": "ec-spider-bin",
+      "status": 400,
+      "response": {
+        "code": "22023",
+        "details": null,
+        "hint": null,
+        "message": "Unknown meme"
+      }
+    },
+    {
+      "id": "mx-spider-errands",
+      "status": 400,
+      "response": {
+        "code": "22023",
+        "details": null,
+        "hint": null,
+        "message": "Unknown meme"
+      }
+    }
+  ]
+}

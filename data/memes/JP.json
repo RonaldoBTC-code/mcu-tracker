@@ -8,7 +8,7 @@
     {
       "id": "jp-deadpool-market",
       "country": "JP",
-      "image": "data/memes/JP/images/jp-deadpool-market.webp",
+      "image": "data/memes/JP/images/jp-deadpool-market-1280-a569f3e8b6b3.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Comic_Market_96_Day_2_Cosplayers_(48600288981).jpg",
       "title": "Deadpool se pone orejas de conejo junto a Spider-Man",
       "location": "Tokio, Comic Market 96",
@@ -18,7 +18,7 @@
         "verifiedOn": "2026-10-10",
         "corroboratingUrl": "https://www.comiket.co.jp/info-a/TAFO/C96TAFO/cmkfor_eng.html"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Comic_Market_96_Day_2_Cosplayers_%2848600288981%29.jpg/960px-Comic_Market_96_Day_2_Cosplayers_%2848600288981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/65535/48600288981_1c5e6851f7_6k.jpg",
       "creator": "Dick Thomas Johnson from Tokyo, Japan",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -29,14 +29,60 @@
       "visualGag": "Deadpool se pone orejas de conejo junto a Spider-Man",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 4000,
+        "height": 6000
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/31029865@N06/48600288981/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool se pone orejas de conejo junto a Spider-Man",
-      "width": 512,
-      "height": 768,
-      "bytes": 74970,
+      "width": 853,
+      "height": 1280,
+      "sourceWidth": 4000,
+      "sourceHeight": 6000,
+      "bytes": 269566,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 427,
+          "height": 640,
+          "sha256": "8f835a153d3d44b0c44869daa6851ca2f6120f2807df5bf64589fc0348be5584",
+          "image": "data/memes/JP/images/jp-deadpool-market-640-8f835a153d3d.webp",
+          "bytes": 85228
+        },
+        {
+          "edge": 1280,
+          "width": 853,
+          "height": 1280,
+          "sha256": "a569f3e8b6b3508aaf57f8bc6d2b66d675b50542c27f80f7708f1d5535767c9a",
+          "image": "data/memes/JP/images/jp-deadpool-market-1280-a569f3e8b6b3.webp",
+          "bytes": 269566
+        },
+        {
+          "edge": 1920,
+          "width": 1280,
+          "height": 1920,
+          "sha256": "8d1ba5cf72db1926ffc19a9a0cb4cdf5596841cc6d2e5d2fc4021c3e6c28b11a",
+          "image": "data/memes/JP/images/jp-deadpool-market-1920-8d1ba5cf72db.webp",
+          "bytes": 472956
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "d6aae7801f4fe2e0198e2edf3b3742f577c80cde489feaa67e2743626e693209",
-        "pixelSha256": "8516062278b695c87be61e66803b4b8becb8855a8d4a7653ee817d995cd69c71",
+        "sha256": "a7992b561f40bbbd446a86570df0c114ca20c3b2e37851f4c2c6f920afe44305",
+        "pixelSha256": "00ba5841387f34f3a6cef85da008a6bfe9bd1048c1cbc9f2253b0fb5c74178a2",
         "perceptualHashes": [
           "0111110111000000110001110111110011000011100101001001011000101000",
           "0011110111100000110101110110010111100001100100011001011000100100",
@@ -44,20 +90,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "3a29348fdff5d00e41c9ff1321a02f62f37871133cbbae38a57710ff9f601eda",
-        "pixelSha256": "08aee8a056977bea948120abb05705ab1f5bd18fb1c3c27cdbe9f3e70a7b35d3",
+        "sha256": "a569f3e8b6b3508aaf57f8bc6d2b66d675b50542c27f80f7708f1d5535767c9a",
+        "pixelSha256": "a54ecf44a51885e40581a971157e4b635face2fb34ed76b8c6d73791d0460c96",
         "perceptualHashes": [
           "0111110111000000110001110111110011000011100101001001011000101000",
-          "0011110111100000110101110110010111100011100100011001011000000100",
+          "0011110111100000110101110110010111100011100100011001010000100100",
           "0011110011100011100101010110011101100000100100011011010110100100"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "jp-spider-crossing",
       "country": "JP",
-      "image": "data/memes/JP/images/jp-spider-crossing.webp",
+      "image": "data/memes/JP/images/jp-spider-crossing-1280-d839771b451e.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_(53083700164).jpg",
       "title": "Spider-Man hace equilibrio sobre una bicicleta",
       "location": "Tokio, cruce de Shibuya",
@@ -66,7 +112,7 @@
         "statement": "Descripción y categorías identifican el cruce de Shibuya, Tokio, Japón, y la actuación callejera de Spider-Man.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Shibuya_Crossing_%2853083700164%29.jpg/960px-Shibuya_Crossing_%2853083700164%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/65535/53083700164_73b384c5df_6k.jpg",
       "creator": "Dick Thomas Johnson from Tokyo, Japan",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -76,14 +122,60 @@
       "visualGag": "Spider-Man hace equilibrio sobre una bicicleta",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 4000,
+        "height": 6000
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/31029865@N06/53083700164/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man hace equilibrio sobre una bicicleta",
-      "width": 512,
-      "height": 768,
-      "bytes": 91588,
+      "width": 853,
+      "height": 1280,
+      "sourceWidth": 4000,
+      "sourceHeight": 6000,
+      "bytes": 352184,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 427,
+          "height": 640,
+          "sha256": "1fae5cdab2f4805eb63b25fb48454258009e1ec7e794619f322df263ca573f00",
+          "image": "data/memes/JP/images/jp-spider-crossing-640-1fae5cdab2f4.webp",
+          "bytes": 97976
+        },
+        {
+          "edge": 1280,
+          "width": 853,
+          "height": 1280,
+          "sha256": "d839771b451ec5d4de02c9efb67920e0680dc8de2c864666104610d4dea89201",
+          "image": "data/memes/JP/images/jp-spider-crossing-1280-d839771b451e.webp",
+          "bytes": 352184
+        },
+        {
+          "edge": 1920,
+          "width": 1280,
+          "height": 1920,
+          "sha256": "5565f65678d03ecb34248a4dd7104f9d186f2b40fffce6f500e28a3d033fa4f8",
+          "image": "data/memes/JP/images/jp-spider-crossing-1920-5565f65678d0.webp",
+          "bytes": 705194
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "729f009835bcdc84c2093cf287035cfe64104ddd9a32a2fa1403d869f341cf5e",
-        "pixelSha256": "09b60804f67e9c234b32a4e6c0b2d6209c3be7487b2e1477afc6278ddd5e1117",
+        "sha256": "0e792815c75846d3d662ceedb484509e3d780cc1160c6afa4c27762549784d94",
+        "pixelSha256": "041f5e121e55aff49c2963158efc66170d2715f7d2cb61c3ca9170ab95a089a9",
         "perceptualHashes": [
           "0100110110001101110011000011100111000000011001101101011010101100",
           "0100110111001001100011010011100111000000001100001101011010101111",
@@ -91,15 +183,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "a004db0e9271a45e19ed1b5ee6d10754149902ab8a5e40b4f2218505d019595e",
-        "pixelSha256": "38ec7fd42cf29f5d5ac67477e77808af8b30f97443a8c01517471c5065e53adf",
+        "sha256": "d839771b451ec5d4de02c9efb67920e0680dc8de2c864666104610d4dea89201",
+        "pixelSha256": "ea397946bee36e18a7108d3a27af1362cdda7410a9a62cb9ccb2935081e5319a",
         "perceptualHashes": [
           "0100110110001101110011000011100111000000011001101101011010101100",
           "0100110111001001100011010011100111000000001100001101011010101111",
           "0100100111001001100011010011100111101000001101001110011000011011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }
