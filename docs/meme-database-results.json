@@ -1,11 +1,13 @@
 {
-  "checkedAt": "2026-10-11T18:09:06.817Z",
+  "checkedAt": "2026-10-11T21:32:06.343Z",
   "result": "PASS",
   "engine": "PGlite embedded PostgreSQL; auth schema simulated",
   "productionPersistenceVerified": false,
   "checks": [
+    "candidate migration applied twice adds two IDs and preserves every prior identity, like and view",
     "migration covers current stable IDs and preserves withdrawn-photo identities",
     "guest reads aggregates but cannot mutate likes/views",
+    "new IDs have independent zero counts and do not give guests write privileges",
     "duplicate desired-state likes count once",
     "duplicate views and reloads count once per account for life",
     "account B cannot remove account A like",

@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-11T18:09:30.554Z",
+  "result": "PASS",
+  "network": "simulated; no production writes",
+  "checks": [
+    {
+      "name": "Sección Memes: lote inicial, país único, scroll sin duplicados y fin real",
+      "status": "PASS"
+    },
+    {
+      "name": "Doble clic: una petición, estado confirmado, retirar y recargar",
+      "status": "PASS"
+    },
+    {
+      "name": "Cambio A→B: JWT capturado, respuesta tardía no cambia B",
+      "status": "PASS"
+    },
+    {
+      "name": "Vista: menos de un segundo no cuenta; reentrada y recarga deduplicadas",
+      "status": "PASS"
+    },
+    {
+      "name": "Guía superpuesta e invitado no generan vistas",
+      "status": "PASS"
+    },
+    {
+      "name": "Fallo de red: sin éxito ficticio; reconsulta recupera estado",
+      "status": "PASS"
+    },
+    {
+      "name": "Cambiar país cancela colección antigua y rechaza contadores inválidos",
+      "status": "PASS"
+    },
+    {
+      "name": "Sin mapa en la portada: selector accesible y mapa original conservados",
+      "status": "PASS"
+    },
+    {
+      "name": "Inicio siempre tracker; cerrar cancela vistas y conserva progreso y preferencia",
+      "status": "PASS"
+    },
+    {
+      "name": "Scroll anclado: rearmar sentinel tras cada lote; cancelar frame al cerrar o cambiar país",
+      "status": "PASS"
+    }
+  ]
+}

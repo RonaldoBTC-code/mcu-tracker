@@ -1,0 +1,79 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 61,
+      "imageDisplayChecks": 61,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
+      ],
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
+      "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 19,
+    "imageDisplayChecks": 122,
+    "uniquePhotos": 61,
+    "uniqueCountryCatalogues": 20,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
+    ],
+    "maxCountryOpenMs": 76,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 61,
+      "imageDisplayChecks": 61,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp"
+      ],
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
+      "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 19,
+    "imageDisplayChecks": 122,
+    "uniquePhotos": 61,
+    "uniqueCountryCatalogues": 20,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json"
+    ],
+    "maxCountryOpenMs": 33,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

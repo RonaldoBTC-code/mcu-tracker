@@ -2894,24 +2894,27 @@ window.Places = (() => {
 /* ══ MAPA CON ZOOM (MapLibre + OpenFreeMap, sin clave ni tarjeta) ══ */
 window.MapView={generation:0};
 window.ZoomMap = (() => {
-  let map = null, loaded = false;
+  let map = null, libPromise = null, maplibregl;
   const STYLE = () => (CFG.MAPTILER_KEY && CFG.MAPTILER_KEY.indexOf('TU_') === -1)
     ? 'https://api.maptiler.com/maps/streets-v2-dark/style.json?key=' + CFG.MAPTILER_KEY
     : 'https://tiles.openfreemap.org/styles/positron';
 
   function loadLib() {
-    if (loaded) return Promise.resolve();
-    return new Promise((res, rej) => {
+    if (!libPromise) {
       const css = document.createElement('link');
       css.rel = 'stylesheet';
-      css.href = 'https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css';
+      css.href = 'https://unpkg.com/maplibre-gl@6.4.1/dist/maplibre-gl.css';
+      const styles = new Promise((res, rej) => {
+        const timeout = setTimeout(() => { css.remove(); rej(new Error('no se pudo cargar MapLibre')); }, 15000);
+        css.onload = () => { clearTimeout(timeout); res(); };
+        css.onerror = () => { clearTimeout(timeout); rej(new Error('no se pudo cargar MapLibre')); };
+      });
       document.head.appendChild(css);
-      const s = document.createElement('script');
-      s.src = 'https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js';
-      s.onload = () => { loaded = true; res(); };
-      s.onerror = () => rej(new Error('no se pudo cargar MapLibre'));
-      document.head.appendChild(s);
-    });
+      libPromise = Promise.all([import('https://unpkg.com/maplibre-gl@6.4.1/dist/maplibre-gl.mjs'), styles])
+        .then(([lib]) => { maplibregl = lib; })
+        .catch(error => { css.remove(); libPromise = null; throw error; });
+    }
+    return libPromise;
   }
 
 
@@ -2978,6 +2981,38 @@ window.ZoomMap = (() => {
 
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
+  function photoURL(value, host) {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' && url.hostname === host && !url.username && !url.password && !url.port ? url.href : null;
+    } catch (e) { return null; }
+  }
+
+  function popupContent(name, film, tipo, nota, im) {
+    const content = document.createElement('div');
+    content.className = 'pop';
+    const src = im && photoURL(im.src, 'upload.wikimedia.org');
+    if (src) {
+      const frame = document.createElement('div'), image = document.createElement('img');
+      frame.className = 'pop-img'; image.src = src; image.alt = name; image.loading = 'lazy';
+      image.onerror = () => frame.remove(); frame.appendChild(image);
+      const page = photoURL(im.page, 'en.wikipedia.org');
+      if (page) {
+        const credit = document.createElement('a');
+        credit.className = 'pop-cred'; credit.href = page; credit.target = '_blank'; credit.rel = 'noopener';
+        credit.textContent = window.Lang.t('foto'); frame.appendChild(credit);
+      }
+      content.appendChild(frame);
+    }
+    for (const [tag, className, text] of [
+      ['b', '', name], ['span', 'pop-film', film],
+      ['span', 'pop-tag ' + tipo, window.Lang.t(tipo === 'rodaje' ? 'rodajeReal' : 'enHistoria')], ['p', '', nota]
+    ]) {
+      const node = document.createElement(tag); node.className = className; node.textContent = text; content.appendChild(node);
+    }
+    return content;
+  }
+
   async function render(container) {
     const epoch=++window.MapView.generation;
     if (map) { try { map.remove(); } catch (e) {} map = null; }
@@ -2994,11 +3029,10 @@ window.ZoomMap = (() => {
 
     // WebGL disponible? Brave y algunos bloqueadores lo desactivan.
     let gl = null;
-    try { const cv = document.createElement('canvas'); gl = cv.getContext('webgl2') || cv.getContext('webgl'); } catch (e) {}
+    try { const cv = document.createElement('canvas'); gl = cv.getContext('webgl2'); } catch (e) {}
     if (!gl) {
       container.innerHTML = '<div class="maperr"><b>El mapa no puede dibujarse</b>' +
-        '<p>Tu navegador tiene WebGL desactivado. Si usas Brave, baja el escudo (icono del le\u00f3n) para este sitio y recarga. ' +
-        'En Chrome, revisa que la aceleraci\u00f3n por hardware est\u00e9 activada.</p></div>';
+        '<p>El mapa necesita WebGL 2. Revisa la aceleraci\u00f3n por hardware o usa un navegador compatible.</p></div>';
       return;
     }
 
@@ -3021,6 +3055,7 @@ window.ZoomMap = (() => {
     map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), 'top-right');
 
     await preload(window.Places.list().map(x => x[2]));
+    if(epoch!==window.MapView.generation)return;
 
     window.Places.list().forEach(p => {
       const [lat, lon, name, film, tipo, nota] = p;
@@ -3028,14 +3063,8 @@ window.ZoomMap = (() => {
       d.className = 'pin ' + tipo;
       d.title = name;
       const im = imgCache[name] || null;
-      const imgHtml = im ? ('<div class="pop-img"><img src="' + im.src + '" alt="' + esc(name) + '" loading="lazy" onerror="this.closest(\'.pop-img\').remove()">' +
-        (im.page ? '<a class="pop-cred" href="' + im.page + '" target="_blank" rel="noopener">' + window.Lang.t('foto') + '</a>' : '') + '</div>') : '';
-      const pop = new maplibregl.Popup({ offset: 14, closeButton: true, maxWidth: '270px' }).setHTML(
-        '<div class="pop">' + imgHtml + '<b>' + esc(name) + '</b>' +
-        '<span class="pop-film">' + esc(film) + '</span>' +
-        '<span class="pop-tag ' + tipo + '">' + (tipo === 'rodaje' ? window.Lang.t('rodajeReal') : window.Lang.t('enHistoria')) + '</span>' +
-        '<p>' + esc(nota) + '</p></div>'
-      );
+      const pop = new maplibregl.Popup({ offset: 14, closeButton: true, maxWidth: '270px' })
+        .setDOMContent(popupContent(name, film, tipo, nota, im));
       new maplibregl.Marker({ element: d }).setLngLat([lon, lat]).setPopup(pop).addTo(map);
     });
 

@@ -1,0 +1,76 @@
+[
+  {
+    "checkedAt": "2026-10-11T21:30:32.137Z",
+    "result": "PASS",
+    "version": "6.4.1",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "markers": 29,
+    "canvas": {
+      "x": 114,
+      "y": 204.203125,
+      "width": 1052,
+      "height": 538
+    },
+    "assetsRequested": [
+      "maplibre-gl.css",
+      "maplibre-gl.mjs",
+      "maplibre-gl-shared.mjs",
+      "maplibre-gl-worker.mjs"
+    ],
+    "softwareWebGL": true,
+    "style": "local GeoJSON fixture; not real OpenFreeMap tiles",
+    "productionWritesPerformed": false,
+    "applicationInstrumentation": "test-only map handle; public source otherwise unchanged",
+    "checks": [
+      "module/worker/CSS load",
+      "WebGL renders",
+      "all scene markers",
+      "zoom control",
+      "popup open/close",
+      "malicious attribution sanitized without execution",
+      "untrusted photo URLs cannot inject HTML or JavaScript",
+      "close/reopen without duplicate stylesheet"
+    ],
+    "uncaughtErrors": []
+  },
+  {
+    "checkedAt": "2026-10-11T21:30:41.137Z",
+    "result": "PASS",
+    "version": "6.4.1",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "markers": 29,
+    "canvas": {
+      "x": 34,
+      "y": 227.171875,
+      "width": 322,
+      "height": 437
+    },
+    "assetsRequested": [
+      "maplibre-gl.css",
+      "maplibre-gl.mjs",
+      "maplibre-gl-shared.mjs",
+      "maplibre-gl-worker.mjs"
+    ],
+    "softwareWebGL": true,
+    "style": "local GeoJSON fixture; not real OpenFreeMap tiles",
+    "productionWritesPerformed": false,
+    "applicationInstrumentation": "test-only map handle; public source otherwise unchanged",
+    "checks": [
+      "module/worker/CSS load",
+      "WebGL renders",
+      "all scene markers",
+      "zoom control",
+      "popup open/close",
+      "malicious attribution sanitized without execution",
+      "untrusted photo URLs cannot inject HTML or JavaScript",
+      "close/reopen without duplicate stylesheet"
+    ],
+    "uncaughtErrors": []
+  }
+]

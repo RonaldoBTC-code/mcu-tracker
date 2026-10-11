@@ -1,0 +1,36 @@
+{
+  "version": "6.4.1",
+  "checkedAt": "2026-10-11T21:24:16.561Z",
+  "advisory": "https://github.com/maplibre/maplibre-gl-js/security/advisories/GHSA-jrc7-96c5-q579",
+  "migrationGuide": "https://github.com/maplibre/maplibre-gl-js/blob/v6.0.0/docs/guides/v5-to-v6-migration-guide.md",
+  "assets": [
+    {
+      "asset": "maplibre-gl.mjs",
+      "url": "https://unpkg.com/maplibre-gl@6.4.1/dist/maplibre-gl.mjs",
+      "bytes": 567005,
+      "sha256": "97e8b9a39ab8b823d6a0caf9c312237262bc9138a6162d9e29606f5f8d24127d",
+      "integrity": "sha384-ZEPnMfN8RZc+VuGJWD9jEpjkXJqDSwBZ66IXRH7T0Be/2XwFByZDpJIREH3zPqAB"
+    },
+    {
+      "asset": "maplibre-gl-shared.mjs",
+      "url": "https://unpkg.com/maplibre-gl@6.4.1/dist/maplibre-gl-shared.mjs",
+      "bytes": 482036,
+      "sha256": "fcf4d81450df235da0aea74897cc23926774b5228d38ae1de6a7d701c5905785",
+      "integrity": "sha384-XWb7kIXVtN5GCUk0iH+L55pX/uMSUVIAbVx9/RfelwfMQzTtw/UQDETr+882qhsN"
+    },
+    {
+      "asset": "maplibre-gl-worker.mjs",
+      "url": "https://unpkg.com/maplibre-gl@6.4.1/dist/maplibre-gl-worker.mjs",
+      "bytes": 18592,
+      "sha256": "ce4957017fe705ac2f9ebef206cca966d08d8621756c39326a78cf09757e7d75",
+      "integrity": "sha384-ygGedBpT/8a9NbgMRGCS5I7jTHBttCpCxMWcXAkhhcIEVFdHJAbSyd/svyJwrvnH"
+    },
+    {
+      "asset": "maplibre-gl.css",
+      "url": "https://unpkg.com/maplibre-gl@6.4.1/dist/maplibre-gl.css",
+      "bytes": 83195,
+      "sha256": "8e2dbbab312dc57656fbb76e9fa5308c75c9d7c7ba5808a7d55bcdb64cc813fa",
+      "integrity": "sha384-Q5Blg3vUVAlUKqIPJYz7wGnz40Vwrx4pVuFVicI73+8c/26Zr5hhckfuIiIUflLE"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-11T21:32:30.953Z",
+  "result": "PASS",
+  "transport": "simulated; no production requests",
+  "checks": [
+    "missing, duplicate, wrong IDs, negative/string counts and authenticated flags fail closed",
+    "61 active IDs stay valid when one isolated pending identity is unknown",
+    "HTTP 200 with invalid identity cannot authorize activation",
+    "permission and transport failures remain blocked without leaking error details"
+  ]
+}

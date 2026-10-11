@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "test": "node tests/run.cjs",
+    "check:backend": "node scripts/check-meme-backend.cjs",
     "import:photos": "node scripts/import-photos.cjs",
     "check:coverage": "node scripts/import-photos.cjs --require-complete"
   },
