@@ -4,12 +4,30 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
  try{
   await db.exec("create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;grant usage on schema auth to anon,authenticated;grant execute on function auth.uid() to anon,authenticated;");
   const a='00000000-0000-0000-0000-000000000001',b='00000000-0000-0000-0000-000000000002';await db.query('insert into auth.users values($1),($2)',[a,b]);
-  for(const file of fs.readdirSync(path.join(__dirname,'../supabase/migrations')).filter(name=>/_meme_/.test(name)).sort())await db.exec(fs.readFileSync(path.join(__dirname,'../supabase/migrations',file),'utf8'));
+  const candidateMigration='20261011040000_meme_catalogue_reviewed_candidates.sql';
+  for(const file of fs.readdirSync(path.join(__dirname,'../supabase/migrations')).filter(name=>/_meme_/.test(name)&&name!==candidateMigration).sort())await db.exec(fs.readFileSync(path.join(__dirname,'../supabase/migrations',file),'utf8'));
+  // A prepared additive migration must survive reruns and preserve retired-photo interactions.
+  const preservedId='mx-spider-class';
+  await db.query('insert into meme_data.likes(user_id,meme_id) values($1,$2)',[a,preservedId]);
+  await db.query('insert into meme_data.views(user_id,meme_id) values($1,$2)',[a,preservedId]);
+  const beforeLikes=(await db.query('select * from meme_data.likes order by user_id,meme_id')).rows;
+  const beforeViews=(await db.query('select * from meme_data.views order by user_id,meme_id')).rows;
+  const beforeCatalogue=(await db.query('select * from meme_data.catalogue order by id')).rows;
+  const candidateSql=fs.readFileSync(path.join(__dirname,'../supabase/migrations',candidateMigration),'utf8');
+  await db.exec(candidateSql);await db.exec(candidateSql);
+  assert.deepEqual((await db.query('select * from meme_data.likes order by user_id,meme_id')).rows,beforeLikes);
+  assert.deepEqual((await db.query('select * from meme_data.views order by user_id,meme_id')).rows,beforeViews);
+  assert.deepEqual((await db.query("select * from meme_data.catalogue where id not in ('ec-spider-bin','mx-spider-errands') order by id")).rows,beforeCatalogue);
+  results.push('candidate migration applied twice adds two IDs and preserves every prior identity, like and view');
   const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8')),id=sources[0].id;
   const catalogue=(await db.query('select id from meme_data.catalogue')).rows.map(r=>r.id),withdrawn=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/withdrawn-photo-sources.json'),'utf8'));assert(sources.every(s=>catalogue.includes(s.id)));assert(withdrawn.every(s=>catalogue.includes(s.id)));results.push('migration covers current stable IDs and preserves withdrawn-photo identities');
   async function role(name,user=''){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user]);await db.exec('set role '+name);}
   async function stats(){return(await db.query('select * from public.get_meme_stats($1)',[[id]])).rows[0];}
   await role('anon');assert.equal(Number((await stats()).likes_count),0);await assert.rejects(db.query('select * from public.set_meme_like($1,true)',[id]),/permission denied/);await assert.rejects(db.query('select * from public.record_meme_views($1)',[[id]]),/permission denied/);results.push('guest reads aggregates but cannot mutate likes/views');
+  const candidates=(await db.query('select * from public.get_meme_stats($1)',[['ec-spider-bin','mx-spider-errands']])).rows;
+  assert.equal(candidates.length,2);assert(candidates.every(r=>Number(r.likes_count)===0&&Number(r.views_count)===0&&r.liked===false&&r.seen===false));
+  await assert.rejects(db.query('select * from public.set_meme_like($1,true)',['ec-spider-bin']),/permission denied/);
+  results.push('new IDs have independent zero counts and do not give guests write privileges');
   await role('authenticated',a);await Promise.all([db.query('select * from public.set_meme_like($1,true)',[id]),db.query('select * from public.set_meme_like($1,true)',[id])]);assert.equal(Number((await stats()).likes_count),1);assert.equal((await stats()).liked,true);results.push('duplicate desired-state likes count once');
   await db.query('select * from public.record_meme_views($1)',[[id,id]]);await db.query('select * from public.record_meme_views($1)',[[id]]);assert.equal(Number((await stats()).views_count),1);results.push('duplicate views and reloads count once per account for life');
   await role('authenticated',b);assert.equal((await stats()).liked,false);assert.equal((await stats()).seen,false);await db.query('select * from public.set_meme_like($1,false)',[id]);assert.equal(Number((await stats()).likes_count),1);await db.query('select * from public.set_meme_like($1,true)',[id]);assert.equal(Number((await stats()).likes_count),2);results.push('account B cannot remove account A like');

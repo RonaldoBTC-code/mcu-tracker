@@ -33,7 +33,7 @@
       "/data/memes/EC.json",
       "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
     ],
-    "maxCountryOpenMs": 76,
+    "maxCountryOpenMs": 53,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -71,7 +71,7 @@
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 33,
+    "maxCountryOpenMs": 89,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

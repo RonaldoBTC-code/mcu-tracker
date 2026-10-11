@@ -104,3 +104,7 @@ Requisito de memes: sección propia con mapa visible y múltiples tarjetas por p
 ## Auditoría y calidad fotográfica
 
 La entrada siempre muestra el rastreador. Memes se abre con navegación explícita y conserva el mapa original. La revisión de calidad, las fuentes, las pruebas y los pendientes están en [docs/photo-quality-audit.md](docs/photo-quality-audit.md). Leer [AGENTS.md](AGENTS.md) antes de modificar arranque, guía o fotografías. El catálogo conserva 61 fotos reales de humor visual en 19 países; el objetivo de diez por país sigue incompleto. La evidencia de publicación debe verificarse en [docs/publication-results.json](docs/publication-results.json).
+
+## Continuación de seguridad y despliegue pendiente
+
+Leer [correcciones de seguridad y límites](docs/security-continuation.md), [activación de candidatas](docs/candidate-deployment.md) y [permisos de fotos pendientes](docs/unverified-photo-permissions.md). `npm run check:backend` consulta exclusivamente agregados reales: 0 listo, 2 candidatas aún bloqueadas, 1 fallo. La migración 20261011040000 está preparada, no desplegada. MapLibre usa ESM/CSS/worker 6.4.1; pruebas `node tests/browser-maplibre.cjs` y `node tests/browser-maplibre.cjs --live` requieren Chrome/Playwright. Los cuatro archivos de prueba están en research/maplibre-6.4.1 y sus hashes en docs/maplibre-assets.json.
