@@ -5487,5 +5487,173 @@
       ]
     },
     "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
+  },
+  {
+    "id": "ec-spider-bin",
+    "country": "EC",
+    "image": "data/memes/EC/images/ec-spider-bin-1280-6122a0e281ba.webp",
+    "source": "https://www.flickr.com/photos/200225254@N06/53569762773",
+    "title": "Guaya💀",
+    "alt": "Spider-Man usa una papelera urbana como plataforma para su pose, junto a un taxi",
+    "location": "Guayaquil, Ecuador",
+    "countryEvidence": {
+      "url": "https://www.flickr.com/photos/200225254@N06/53569762773",
+      "statement": "El fotógrafo etiqueta esta escena guayaquil, spiderman, streets y taxis; el álbum Ecuador trips describe sus viajes a Ecuador.",
+      "album": "https://www.flickr.com/photos/200225254@N06/albums/72177720315256843/",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://live.staticflickr.com/65535/53569762773_23a109d206_b.jpg",
+    "creator": "Joan Briones (joanbrionesjim)",
+    "license": "CC BY-ND 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nd/2.0/",
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man usa una papelera urbana como plataforma para su pose, junto a un taxi",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "publisher": "Joan Briones / Flickr",
+    "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "sourceOriginalRecovered": false,
+      "notes": "Archivo público Flickr de 665x1024; conservar el encuadre íntegro y conversiones técnicas. No acreditar recuperación de un original mayor."
+    },
+    "width": 665,
+    "height": 1024,
+    "sourceWidth": 665,
+    "sourceHeight": 1024,
+    "bytes": 141108,
+    "variants": [
+      {
+        "edge": 640,
+        "width": 416,
+        "height": 640,
+        "sha256": "5731b7407db08e2feebd4698a4cd6b14d2eec462e2d2d7eaffc08d17443fad96",
+        "image": "data/memes/EC/images/ec-spider-bin-640-5731b7407db0.webp",
+        "bytes": 59740
+      },
+      {
+        "edge": 1280,
+        "width": 665,
+        "height": 1024,
+        "sha256": "6122a0e281ba913b3822583947e81354a5995dc33f1624dbab4b13a20043bf4e",
+        "image": "data/memes/EC/images/ec-spider-bin-1280-6122a0e281ba.webp",
+        "bytes": 141108
+      }
+    ],
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "fcdab816c52b199b28c8db1e0ebc4994e57afa8d17ec1545591b39e3fa1a2425",
+      "pixelSha256": "f3223890177af81e5be626494bf59f524ce7864cc19bbf9933d41feb2dd9e7c6",
+      "perceptualHashes": [
+        "0111100011101001111010110111110010101000000001110000011010000110",
+        "0111110011011001111000111111110010101000011000110000011000000010",
+        "0111110011011000110000111011110011001010011000010000010101101001"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "6122a0e281ba913b3822583947e81354a5995dc33f1624dbab4b13a20043bf4e",
+      "pixelSha256": "def1863f02b65c5b6d7bd3ad234fc43f68f60406697c2302599ad608dfd8eaa0",
+      "perceptualHashes": [
+        "0111100011101001111010110111110010101000000001110000011010000110",
+        "0111110011011001111000111111110010101000011000110000011000000010",
+        "0111110011011000110000111011110011001010011000010000010101101001"
+      ]
+    }
+  },
+  {
+    "id": "mx-spider-errands",
+    "country": "MX",
+    "image": "data/memes/MX/images/mx-spider-errands-1280-a6c4cbb2c48d.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Late_for_Work_Tarde_pal_trabajo_(2522135992).jpg",
+    "title": "Spider-Man también hace recados con la familia",
+    "location": "Plaza de la Constitución, Ciudad de México",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Late_for_Work_Tarde_pal_trabajo_(2522135992).jpg",
+      "statement": "La ficha de Commons clasifica esta fotografía en Plaza de la Constitución (Mexico City), documenta coordenadas 19.431851, -99.133597 y fecha 25 de mayo de 2008.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://live.staticflickr.com/2322/2522135992_1db3a426c1_4k.jpg",
+    "creator": "Eneas De Troya",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man lleva un bolso mientras un niño camina con los guantes del traje",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "publisher": "Eneas De Troya / Flickr / Wikimedia Commons",
+    "sourceResolution": {
+      "width": 3656,
+      "height": 2415
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked from Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/eneas/2522135992/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "notes": "Encuadre íntegro con gag visible y detalle útil; ligero movimiento de una foto callejera, no captura de vídeo ampliada."
+    },
+    "alt": "Spider-Man lleva un bolso mientras un niño camina con los guantes del traje",
+    "width": 1280,
+    "height": 846,
+    "sourceWidth": 3656,
+    "sourceHeight": 2415,
+    "bytes": 259708,
+    "variants": [
+      {
+        "edge": 640,
+        "width": 640,
+        "height": 422,
+        "sha256": "5e92a6b6d164331a9fef6768f63bf3473785f1b1796a71153129dc3d57725916",
+        "image": "data/memes/MX/images/mx-spider-errands-640-5e92a6b6d164.webp",
+        "bytes": 71670
+      },
+      {
+        "edge": 1280,
+        "width": 1280,
+        "height": 846,
+        "sha256": "a6c4cbb2c48d9ac1883858097f1273dcded76811b64442b5a4d309bd6edeb8c4",
+        "image": "data/memes/MX/images/mx-spider-errands-1280-a6c4cbb2c48d.webp",
+        "bytes": 259708
+      },
+      {
+        "edge": 1920,
+        "width": 1920,
+        "height": 1268,
+        "sha256": "a68e3da9bc6b81333fc0b51a0d964b140830d95ef1ce62a3efe066114e737b24",
+        "image": "data/memes/MX/images/mx-spider-errands-1920-a68e3da9bc6b.webp",
+        "bytes": 523426
+      }
+    ],
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "479f9e661f8cc0a066b9864ec7999ea04a798983c258d1cc4aa049cc0fe16d8c",
+      "pixelSha256": "0b82c06dcae3bb11c59c2611a0e356732879ff5e55159fa433f7e362606d41b4",
+      "perceptualHashes": [
+        "0000111111001001001100011011000110011001110110001100110001111000",
+        "0100111111001001001101011010000010011001100110011000110011111000",
+        "0100011111001001001101001010000010111011100110011000110110111000"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "a6c4cbb2c48d9ac1883858097f1273dcded76811b64442b5a4d309bd6edeb8c4",
+      "pixelSha256": "56035c86a563ed656be627a5bf51055f2dec9decb235133875935d4421a62cf5",
+      "perceptualHashes": [
+        "0000111111001001001100011011000110011001110110001100110001111000",
+        "0100111111001001001101011010000110011001100110011000110001111000",
+        "0100011111001001001101001010000010111011100110011000110110111000"
+      ]
+    },
+    "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido",
+    "rightsNotice": "Título original: Late for Work / Tarde pa'l trabajo"
   }
 ]

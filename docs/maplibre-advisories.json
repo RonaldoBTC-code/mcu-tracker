@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-11T21:34:39.371Z",
+  "package": "maplibre-gl",
+  "version": "6.4.1",
+  "endpoint": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+  "httpStatus": 200,
+  "scope": "direct package only; excludes transitive dependencies and Supabase CDN",
+  "advisories": {}
+}

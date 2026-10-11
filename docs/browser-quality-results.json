@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-11T18:29:34.469Z",
-  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "checkedAt": "2026-10-11T21:44:33.164Z",
+  "url": "http://127.0.0.1:61011/",
   "result": "PASS",
   "writesBlocked": true,
   "reports": [
@@ -10,7 +10,7 @@
         "height": 900
       },
       "dpr": 1,
-      "photos": 61,
+      "photos": 63,
       "result": "PASS",
       "uncaughtErrors": [],
       "rows": [
@@ -61,6 +61,18 @@
           "selectedFile": "data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp",
           "sourceWidth": 2000,
           "sourceHeight": 1333
+        },
+        {
+          "id": "ec-spider-bin",
+          "country": "EC",
+          "drawnWidth": 332,
+          "drawnHeight": 510.765625,
+          "selectedWidth": 416,
+          "selectedHeight": 640,
+          "selectedBytes": 59740,
+          "selectedFile": "data/memes/EC/images/ec-spider-bin-640-5731b7407db0.webp",
+          "sourceWidth": 665,
+          "sourceHeight": 1024
         },
         {
           "id": "th-spider-student",
@@ -745,6 +757,18 @@
           "selectedFile": "data/memes/PE/images/pe-spider-yoyo-640-a0e9b2a285df.webp",
           "sourceWidth": 1153,
           "sourceHeight": 765
+        },
+        {
+          "id": "mx-spider-errands",
+          "country": "MX",
+          "drawnWidth": 708,
+          "drawnHeight": 467.9375,
+          "selectedWidth": 1280,
+          "selectedHeight": 846,
+          "selectedBytes": 259708,
+          "selectedFile": "data/memes/MX/images/mx-spider-errands-1280-a6c4cbb2c48d.webp",
+          "sourceWidth": 3656,
+          "sourceHeight": 2415
         }
       ]
     },
@@ -754,7 +778,7 @@
         "height": 900
       },
       "dpr": 2,
-      "photos": 61,
+      "photos": 63,
       "result": "PASS",
       "uncaughtErrors": [],
       "rows": [
@@ -805,6 +829,18 @@
           "selectedFile": "data/memes/EC/images/ec-spider-bus-1920-57317011295d.webp",
           "sourceWidth": 2000,
           "sourceHeight": 1333
+        },
+        {
+          "id": "ec-spider-bin",
+          "country": "EC",
+          "drawnWidth": 332,
+          "drawnHeight": 511.21875,
+          "selectedWidth": 665,
+          "selectedHeight": 1024,
+          "selectedBytes": 141108,
+          "selectedFile": "data/memes/EC/images/ec-spider-bin-1280-6122a0e281ba.webp",
+          "sourceWidth": 665,
+          "sourceHeight": 1024
         },
         {
           "id": "th-spider-student",
@@ -1489,6 +1525,18 @@
           "selectedFile": "data/memes/PE/images/pe-spider-yoyo-1280-6ae023fbf044.webp",
           "sourceWidth": 1153,
           "sourceHeight": 765
+        },
+        {
+          "id": "mx-spider-errands",
+          "country": "MX",
+          "drawnWidth": 708,
+          "drawnHeight": 467.5625,
+          "selectedWidth": 1920,
+          "selectedHeight": 1268,
+          "selectedBytes": 523426,
+          "selectedFile": "data/memes/MX/images/mx-spider-errands-1920-a68e3da9bc6b.webp",
+          "sourceWidth": 3656,
+          "sourceHeight": 2415
         }
       ]
     },
@@ -1498,7 +1546,7 @@
         "height": 844
       },
       "dpr": 1,
-      "photos": 61,
+      "photos": 63,
       "result": "PASS",
       "uncaughtErrors": [],
       "rows": [
@@ -1549,6 +1597,18 @@
           "selectedFile": "data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp",
           "sourceWidth": 2000,
           "sourceHeight": 1333
+        },
+        {
+          "id": "ec-spider-bin",
+          "country": "EC",
+          "drawnWidth": 332,
+          "drawnHeight": 510.765625,
+          "selectedWidth": 416,
+          "selectedHeight": 640,
+          "selectedBytes": 59740,
+          "selectedFile": "data/memes/EC/images/ec-spider-bin-640-5731b7407db0.webp",
+          "sourceWidth": 665,
+          "sourceHeight": 1024
         },
         {
           "id": "th-spider-student",
@@ -2233,6 +2293,18 @@
           "selectedFile": "data/memes/PE/images/pe-spider-yoyo-640-a0e9b2a285df.webp",
           "sourceWidth": 1153,
           "sourceHeight": 765
+        },
+        {
+          "id": "mx-spider-errands",
+          "country": "MX",
+          "drawnWidth": 362,
+          "drawnHeight": 238.6875,
+          "selectedWidth": 640,
+          "selectedHeight": 422,
+          "selectedBytes": 71670,
+          "selectedFile": "data/memes/MX/images/mx-spider-errands-640-5e92a6b6d164.webp",
+          "sourceWidth": 3656,
+          "sourceHeight": 2415
         }
       ]
     },
@@ -2242,7 +2314,7 @@
         "height": 844
       },
       "dpr": 2,
-      "photos": 61,
+      "photos": 63,
       "result": "PASS",
       "uncaughtErrors": [],
       "rows": [
@@ -2293,6 +2365,18 @@
           "selectedFile": "data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp",
           "sourceWidth": 2000,
           "sourceHeight": 1333
+        },
+        {
+          "id": "ec-spider-bin",
+          "country": "EC",
+          "drawnWidth": 332,
+          "drawnHeight": 511.21875,
+          "selectedWidth": 665,
+          "selectedHeight": 1024,
+          "selectedBytes": 141108,
+          "selectedFile": "data/memes/EC/images/ec-spider-bin-1280-6122a0e281ba.webp",
+          "sourceWidth": 665,
+          "sourceHeight": 1024
         },
         {
           "id": "th-spider-student",
@@ -2977,6 +3061,18 @@
           "selectedFile": "data/memes/PE/images/pe-spider-yoyo-1280-6ae023fbf044.webp",
           "sourceWidth": 1153,
           "sourceHeight": 765
+        },
+        {
+          "id": "mx-spider-errands",
+          "country": "MX",
+          "drawnWidth": 362,
+          "drawnHeight": 239.25,
+          "selectedWidth": 1280,
+          "selectedHeight": 846,
+          "selectedBytes": 259708,
+          "selectedFile": "data/memes/MX/images/mx-spider-errands-1280-a6c4cbb2c48d.webp",
+          "sourceWidth": 3656,
+          "sourceHeight": 2415
         }
       ]
     }

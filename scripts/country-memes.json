@@ -42,7 +42,8 @@
   "DK": [],
   "DO": [],
   "EC": [
-    "ec-spider-bus"
+    "ec-spider-bus",
+    "ec-spider-bin"
   ],
   "ES": [
     "es-spider-plaza",
@@ -87,7 +88,9 @@
     "jp-spider-crossing"
   ],
   "KR": [],
-  "MX": [],
+  "MX": [
+    "mx-spider-errands"
+  ],
   "NI": [],
   "NL": [],
   "NO": [],

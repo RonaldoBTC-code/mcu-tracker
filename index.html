@@ -3245,7 +3245,7 @@ window.WorldMap = (() => {
 /* Memes are requested from one country file; never load a global catalogue. */
 window.MapMemes = (() => {
   const KEY='mcu_map_country';
-  const sourceHosts=new Set(['www.pinterest.com','commons.wikimedia.org','pt.memedroid.com','imgur.com','vocal.media','zmyaro.com','iruntheinternet.com','www.bordeaux-tourism.co.uk','gshow.globo.com','tn.com.ar','www.infobae.com','elcomercio.pe','www.ecuavisa.com','www.sanook.com','www.nationthailand.com','philnews.ph','thesmartlocal.ph','everydaypeople.sg','www.elobservador.com.uy','www.extra.ec','www.dailynews.co.th','suaraindonesia.co.id','www.tunota.com','www.publimetro.co','www.13.cl','www.dvidshub.net','www.heute.at','www.hindustantimes.com','trome.com']);
+  const sourceHosts=new Set(['www.flickr.com','www.pinterest.com','commons.wikimedia.org','pt.memedroid.com','imgur.com','vocal.media','zmyaro.com','iruntheinternet.com','www.bordeaux-tourism.co.uk','gshow.globo.com','tn.com.ar','www.infobae.com','elcomercio.pe','www.ecuavisa.com','www.sanook.com','www.nationthailand.com','philnews.ph','thesmartlocal.ph','everydaypeople.sg','www.elobservador.com.uy','www.extra.ec','www.dailynews.co.th','suaraindonesia.co.id','www.tunota.com','www.publimetro.co','www.13.cl','www.dvidshub.net','www.heute.at','www.hindustantimes.com','trome.com']);
   let controller=null,observer=null,timer=null;
   const valid=code=>window.Region.countries().some(c=>c[0]===code);
   function resolveCountry(){
@@ -3312,7 +3312,7 @@ window.MapMemes = (() => {
         let sourceHost=null;try{const host=new URL(item.source).hostname;if(sourceHosts.has(host))sourceHost=host;}catch(e){}
         const licenseHost=item.license==='Public domain'&&sourceHost==='www.dvidshub.net'&&item.licenseUrl==='https://www.dvidshub.net/about/copyright'?'www.dvidshub.net':item.license==='Public domain'&&item.licenseUrl===item.source?'commons.wikimedia.org':'creativecommons.org';
         for(const [label,value,host]of [['Fuente',item.source,sourceHost],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
-          try{const linkURL=new URL(value);if(!['https:','http:'].includes(linkURL.protocol)||linkURL.hostname!==host)continue;if(host==='www.pinterest.com'&&!/^\/pin\/[0-9]+\/$/.test(linkURL.pathname))continue;linkURL.protocol='https:';
+          try{const linkURL=new URL(value);if(!['https:','http:'].includes(linkURL.protocol)||linkURL.hostname!==host||linkURL.username||linkURL.password||linkURL.port)continue;if(host==='www.flickr.com'&&!/^\/photos\/[A-Za-z0-9_@-]+\/[0-9]+\/?$/.test(linkURL.pathname))continue;if(host==='www.pinterest.com'&&!/^\/pin\/[0-9]+\/$/.test(linkURL.pathname))continue;linkURL.protocol='https:';
             const link=document.createElement('a');link.href=linkURL.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent=label;caption.append(' · ',link);
           }catch(e){}
         }

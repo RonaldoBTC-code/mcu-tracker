@@ -6,11 +6,12 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 61,
-      "imageDisplayChecks": 61,
+      "uniquePhotos": 63,
+      "imageDisplayChecks": 63,
       "initialRequests": [
         "/data/memes/EC.json",
-        "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
+        "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp",
+        "/data/memes/EC/images/ec-spider-bin-640-5731b7407db0.webp"
       ],
       "inlineMapAbsent": true,
       "originalMapEntryPreserved": true,
@@ -23,17 +24,17 @@
       "result": "PASS"
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 19,
-    "imageDisplayChecks": 122,
-    "uniquePhotos": 61,
-    "uniqueCountryCatalogues": 20,
+    "countriesWithPhotos": 20,
+    "imageDisplayChecks": 126,
+    "uniquePhotos": 63,
+    "uniqueCountryCatalogues": 21,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json",
       "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
     ],
-    "maxCountryOpenMs": 53,
+    "maxCountryOpenMs": 145,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -45,11 +46,12 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 61,
-      "imageDisplayChecks": 61,
+      "uniquePhotos": 63,
+      "imageDisplayChecks": 63,
       "initialRequests": [
         "/data/memes/EC.json",
-        "/data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp"
+        "/data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp",
+        "/data/memes/EC/images/ec-spider-bin-640-5731b7407db0.webp"
       ],
       "inlineMapAbsent": true,
       "originalMapEntryPreserved": true,
@@ -62,16 +64,17 @@
       "result": "PASS"
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 19,
-    "imageDisplayChecks": 122,
-    "uniquePhotos": 61,
-    "uniqueCountryCatalogues": 20,
+    "countriesWithPhotos": 20,
+    "imageDisplayChecks": 126,
+    "uniquePhotos": 63,
+    "uniqueCountryCatalogues": 21,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
-      "/data/memes/EC.json"
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp"
     ],
-    "maxCountryOpenMs": 89,
+    "maxCountryOpenMs": 65,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

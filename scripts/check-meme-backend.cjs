@@ -49,7 +49,8 @@ async function main(){
  const key=html.match(/SUPABASE_ANON_KEY:\s*'([^']+)'/)?.[1];
  if(url!==project||!key)throw Error('Public configuration does not match the audited project');
  const active=JSON.parse(await fs.readFile(path.join(root,'scripts/photo-sources.json'),'utf8'));
- const pending=await Promise.all(pendingFiles.map(file=>fs.readFile(path.join(root,file),'utf8').then(JSON.parse)));
+ const prepared=await Promise.all(pendingFiles.map(file=>fs.readFile(path.join(root,file),'utf8').then(JSON.parse)));
+ const pending=prepared.filter(p=>!active.some(a=>a.id===p.id));
  const ids=active.concat(pending).map(p=>p.id);
  if(new Set(ids).size!==ids.length||ids.some(id=>typeof id!=='string'||!/^[a-z0-9-]+$/.test(id)))throw Error('Invalid catalogue identities');
  const report=await inspectCatalogue({key,activeIds:active.map(p=>p.id),pendingIds:pending.map(p=>p.id)});

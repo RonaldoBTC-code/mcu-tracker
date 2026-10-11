@@ -1,6 +1,6 @@
 # Catálogos geográficos de memes Marvel
 
-Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. No compartir fotos entre países ni deducir procedencia del dominio, idioma o nacionalidad del artista. Estado actual: 61 fotos, 19 países con contenido, CA/GB/US con diez y 48 países por completar hasta diez; faltan 449 fotos. Los países sin contenido muestran un mensaje de catálogo pendiente. El contador y el botón aleatorio funcionan con el contenido disponible, sin repetición inmediata para catálogos de dos o más fotos.
+Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. No compartir fotos entre países ni deducir procedencia del dominio, idioma o nacionalidad del artista. Estado actual: 63 fotos, 20 países con contenido, CA/GB/US con diez y 48 países por completar hasta diez; faltan 447 fotos. Los países sin contenido muestran un mensaje de catálogo pendiente. El contador y el botón aleatorio funcionan con el contenido disponible, sin repetición inmediata para catálogos de dos o más fotos.
 
 ## Mantenimiento
 
@@ -11,7 +11,7 @@ Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. N
 5. Ejecutar npm run check:coverage antes de afirmar que las 51 colecciones están completas. Actualmente falla porque faltan fotos; no modificar el mínimo ni falsear la evidencia para convertir ese fallo en PASS.
 6. Ejecutar tests/browser-memes.cjs con Playwright/Chrome. Tras publicar, scripts/verify-pages.cjs y tests/browser-pages.cjs verifican archivos e interfaz reales. Diferenciar éxito de despliegue, funcionamiento y cobertura editorial.
 
-Las 171 variantes responsivas suman 32.854.616 bytes; los 61 archivos principales suman 10.921.734, el mayor 401.314. El navegador elige la resolución mediante srcset/sizes; la entrada del tracker descarga cero imágenes de memes. Feed y visor conservan carga diferida por país. La información completa está en docs/photo-inventory.json.
+Las 176 variantes responsivas suman 33.910.268 bytes; los 63 archivos principales suman 11.322.550, el mayor 401.314. El navegador elige la resolución mediante srcset/sizes; la entrada del tracker descarga cero imágenes de memes. Feed y visor conservan carga diferida por país. La información completa está en docs/photo-inventory.json.
 
 La sección diferenciada de memes contiene selector de país y un feed vertical; el único mapa permanece en su ubicación original, fuera de esa sección: añade cuatro tarjetas por lote al hacer scroll y permite recorrer toda la colección; el modal aleatorio sigue disponible como función adicional. Consultar docs/meme-feed.md para Me gusta/vistas, esquema y pruebas. El agregado real de Supabase está disponible; la persistencia de escrituras autenticadas todavía no se ha verificado. La evidencia anterior de publicación está en docs/history/pr7; docs/publication-results.json debe acreditar por separado el despliegue actual.
 
