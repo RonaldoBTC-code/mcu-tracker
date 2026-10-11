@@ -16,6 +16,10 @@
       "originalMapEntryPreserved": true,
       "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
       "result": "PASS"
     },
     "countriesTested": 51,
@@ -26,9 +30,10 @@
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
-      "/data/memes/EC.json"
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
     ],
-    "maxCountryOpenMs": 38,
+    "maxCountryOpenMs": 47,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -50,6 +55,10 @@
       "originalMapEntryPreserved": true,
       "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
       "result": "PASS"
     },
     "countriesTested": 51,
@@ -62,7 +71,7 @@
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 49,
+    "maxCountryOpenMs": 32,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

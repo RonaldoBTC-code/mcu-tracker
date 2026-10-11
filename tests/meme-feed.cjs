@@ -13,21 +13,21 @@ function backend(){
  }};
 }
 async function wait(predicate){const end=Date.now()+3000;while(!predicate()){if(Date.now()>end)throw Error('Expected state missing');await pause(15);}}
-async function fixture(server=backend()){
- const observers=[],errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));let owner=null;
+async function fixture(server=backend(),autoOpen=true){
+ const callsAtEntry=server.calls.filter(c=>c.path.includes('/data/memes/')).length,observers=[],errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));let owner=null;
  const dom=new JSDOM(html,{url:'https://test.example/tracker/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){
   w.localStorage.setItem('mcu_tour_v1','1');w.localStorage.setItem('mcu_map_country','BR');w.fetch=(...args)=>server.fetch(...args);w.matchMedia=()=>({matches:false,addEventListener(){}});w.ResizeObserver=class{observe(){}disconnect(){}};
   w.IntersectionObserver=class{constructor(cb,options){this.cb=cb;this.options=options;this.targets=new Set();observers.push(this);}observe(e){this.targets.add(e)}unobserve(e){this.targets.delete(e)}disconnect(){this.targets.clear()}};
   w.Element.prototype.scrollIntoView=function(){};w.HTMLCanvasElement.prototype.getContext=()=>null;w.scrollTo=()=>{};
   Object.defineProperty(w.HTMLImageElement.prototype,'complete',{get:()=>true});Object.defineProperty(w.HTMLImageElement.prototype,'naturalWidth',{get:()=>600});w.Element.prototype.getBoundingClientRect=()=>({left:0,top:0,right:300,bottom:500});w.document.elementFromPoint=()=>w.document.querySelector('#feedList img');
  }});
-  const w=dom.window,d=w.document;await wait(()=>d.querySelectorAll('#feedList article').length===4);await pause(30);
+  const w=dom.window,d=w.document;await wait(()=>d.querySelector('#feedCountry').options.length===52);assert(d.querySelector('#memeFeed').hidden);assert(!d.querySelector('#trackerView').hidden);assert.equal(server.calls.filter(c=>c.path.includes('/data/memes/')).length,callsAtEntry);if(autoOpen){await w.MemeFeed.show();await wait(()=>d.querySelectorAll('#feedList article').length===4);}await pause(30);
  w.CloudSync.user=()=>owner?{id:owner}:null;w.CloudSync.client=()=>({auth:{getSession:async()=>({data:{session:owner?{user:{id:owner},access_token:'token-'+owner}:null},error:null})}});
   return{w,d,server,observers,errors,async login(id){owner=id;w.MemeFeed.sessionChanged();await pause(50)},show(img,on=true){const o=observers.findLast(x=>x.options?.threshold);o.cb([{target:img,isIntersecting:on,intersectionRatio:on ? .75 : 0}]);},close:()=>{w.dispatchEvent(new w.Event('pagehide'));w.close()}};
 }
 async function test(name,fn){let f;try{f=await fixture();await fn(f);assert.deepEqual(f.errors,[]);results.push({name,status:'PASS'})}catch(e){results.push({name,status:'FAIL',detail:e.stack});process.exitCode=1}finally{f?.close()}}
 (async()=>{
- await test('Landing: lote inicial, país único, scroll sin duplicados y fin real',async({w,d,server,observers})=>{
+ await test('Sección Memes: lote inicial, país único, scroll sin duplicados y fin real',async({w,d,server,observers})=>{
   assert(d.querySelector('#memeFeed'));assert.equal(d.querySelector('#feedCountry').value,'BR');assert.equal(d.querySelectorAll('#feedList article').length,4);assert.equal(d.querySelectorAll('#feedList img[src]').length,0);assert.equal(server.calls.filter(x=>x.path.includes('/data/memes/')).length,1);
   const lazy=observers.find(x=>x.options?.rootMargin==='300px');lazy.cb([{target:d.querySelector('#feedList img'),isIntersecting:true}]);assert(d.querySelector('#feedList img').src.includes('/BR/images/'));
   const more=observers.find(x=>x.options?.rootMargin==='150px');more.cb([{isIntersecting:true}]);more.cb([{isIntersecting:true}]);more.cb([{isIntersecting:true}]);assert.equal(d.querySelectorAll('#feedList article').length,12);assert.equal(new Set([...d.querySelectorAll('#feedList article')].map(x=>x.dataset.memeId)).size,12);assert(d.querySelector('#feedEnd').textContent.includes('Fin'));assert(d.querySelector('#feedMore').hidden);await w.MemeFeed.open('BR');assert.equal(server.calls.filter(x=>x.path.includes('/data/memes/')).length,1);
@@ -60,6 +60,13 @@ async function test(name,fn){let f;try{f=await fixture();await fn(f);assert.deep
   const select=d.querySelector('#feedCountry');select.value='EC';select.dispatchEvent(new w.Event('change'));await wait(()=>d.querySelector('#feedList article')?.dataset.memeId.startsWith('ec-'));
   select.value='MX';select.dispatchEvent(new w.Event('change'));await wait(()=>d.querySelector('#feedList article')?.dataset.memeId.startsWith('mx-'));
   assert([...d.querySelectorAll('#feedList article')].every(c=>c.dataset.memeId.startsWith('mx-')));assert.deepEqual(server.calls.filter(c=>c.path.includes('/data/memes/')).map(c=>c.path.split('/').at(-1)),['BR.json','EC.json','MX.json']);
+ });
+ await test('Inicio siempre tracker; cerrar cancela vistas y conserva progreso y preferencia',async f=>{
+  f.d.querySelector('.chk').click();const saved=f.w.SafeStorage.getItem('mcu_v4'),done=f.d.querySelector('#s-done').textContent;await f.login('A');f.show(f.d.querySelector('#feedList img'));await pause(100);f.w.MemeFeed.close();await pause(1500);
+  assert(f.d.querySelector('#memeFeed').hidden);assert(!f.d.querySelector('#trackerView').hidden);assert.equal(f.server.views.size,0);assert.equal(f.w.SafeStorage.getItem('mcu_v4'),saved);assert.equal(f.d.querySelector('#s-done').textContent,done);assert.equal(f.d.activeElement.id,'feedOpen');
+  const before=f.server.calls.length;await f.w.MemeFeed.open('EC');f.w.MemeFeed.sessionChanged();assert.equal(f.server.calls.length,before);await f.w.MemeFeed.show();assert(!f.d.querySelector('#memeFeed').hidden);assert(f.d.querySelector('#trackerView').hidden);assert.equal(f.d.querySelector('#feedCountry').value,'BR');assert.equal(f.w.SafeStorage.getItem('mcu_v4'),saved);
+  f.w.Guide.start();assert(f.d.querySelector('#memeFeed').hidden);assert(!f.d.querySelector('#trackerView').hidden);f.w.Guide.close();
+  const initial=await fixture(backend(),false);try{assert(initial.d.querySelector('#memeFeed').hidden);assert.equal(initial.server.calls.filter(c=>c.path.includes('/data/memes/')).length,0);await initial.w.MemeFeed.open('BR');assert.equal(initial.server.calls.filter(c=>c.path.includes('/data/memes/')).length,0);}finally{initial.close()}
  });
  const report={checkedAt:new Date().toISOString(),result:results.every(r=>r.status==='PASS')?'PASS':'FAIL',network:'simulated; no production writes',checks:results};fs.writeFileSync(path.join(root,'docs/meme-feed-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 })().catch(e=>{console.error(e);process.exitCode=1});
