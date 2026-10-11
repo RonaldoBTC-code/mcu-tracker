@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T01:58:15.444Z",
+  "checkedAt": "2026-10-11T15:16:38.471Z",
   "result": "PASS",
   "network": "simulated; no production writes",
   "checks": [
@@ -32,7 +32,7 @@
       "status": "PASS"
     },
     {
-      "name": "Mapa integrado: 51 países, clic y teclado cambian solo su colección",
+      "name": "Sin mapa en la portada: selector accesible y mapa original conservados",
       "status": "PASS"
     }
   ]

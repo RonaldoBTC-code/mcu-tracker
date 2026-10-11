@@ -103,8 +103,6 @@ window.MemeFeed=(()=>{
   async function open(next=window.MapMemes.resolveCountry(),force=false){
     next=window.MapMemes.valid(next)?next:null;if(!force&&next===code&&(loading||items.length))return;
     cancel();const generation=epoch;code=next;items=[];cursor=0;loading=!!code;manifestFailed=false;$('feedList').replaceChildren();$('feedCountry').value=code||'';$('feedMore').hidden=true;$('feedEnd').hidden=true;$('feedRetry').hidden=true;
-    for(const point of $('feedMap').querySelectorAll('[data-country]'))point.setAttribute('aria-pressed',String(point.dataset.country===code));
-    $('feedMapCaption').textContent=code?'País seleccionado: '+$('feedCountry').selectedOptions[0].textContent+'.':'Elige un país en el mapa o en el selector.';
     if(!code){status('Selecciona un país para descubrir sus fotos.');return;}
     status('Cargando la colección…');controller=new AbortController();timer=setTimeout(()=>controller?.abort(),10000);
     try{
@@ -127,9 +125,6 @@ window.MemeFeed=(()=>{
   function init(){
     if(mounted||!$('memeFeed'))return;mounted=true;const select=$('feedCountry');select.add(new Option('Selecciona un país',''));for(const [id,name]of window.Region.countries())select.add(new Option(name,id));
     select.onchange=()=>{if(select.value)window.SafeStorage.setItem('mcu_map_country',select.value);else window.SafeStorage.removeItem('mcu_map_country');open(select.value);};
-    $('feedMap').innerHTML=window.WorldMap.discoveryMap();
-    const choose=e=>{const point=e.target.closest('[data-country]');if(!point||!$('feedMap').contains(point))return;if(e.type==='keydown'&&!['Enter',' '].includes(e.key))return;e.preventDefault();select.value=point.dataset.country;select.onchange();};
-    $('feedMap').addEventListener('click',choose);$('feedMap').addEventListener('keydown',choose);
     $('feedMore').onclick=append;$('feedRetry').onclick=()=>manifestFailed?open(code,true):Promise.all([refresh(),flushViews()]);
     const observeBlockers=()=>{blockers.observe(document.body,{attributes:true,attributeFilter:['class']});if($('mapwrap'))blockers.observe($('mapwrap'),{attributes:true,attributeFilter:['class']});};
     blockers=new MutationObserver(()=>{cancelVisibleTimers();for(const s of cards.values())scheduleView(s)});observeBlockers();

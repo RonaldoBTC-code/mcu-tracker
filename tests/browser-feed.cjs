@@ -5,11 +5,11 @@ module.exports=async function checkFeed(page,{root,viewport,requests}){
  await page.locator('#memeFeed').scrollIntoViewIfNeeded();assert(await page.locator('#feedCountry').isVisible());
  await page.locator('#feedList img').scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);
  assert(requests.every(p=>p==='/data/memes/EC.json'||p.startsWith('/data/memes/EC/images/')));const initialRequests=[...requests];
- await page.locator('#feedMap').scrollIntoViewIfNeeded();assert(await page.locator('#feedMap svg').isVisible());assert.equal(await page.locator('#feedMap [data-country]').count(),51);
- await page.locator('#feedMap [data-country="CA"] .feed-map-hit').click();await page.waitForFunction(()=>document.querySelector('#feedCountry').value==='CA'&&document.querySelector('#feedList article')?.dataset.memeId.startsWith('ca-'));
- await page.locator('#feedMap [data-country="BR"]').press('Enter');await page.waitForFunction(()=>document.querySelector('#feedCountry').value==='BR'&&document.querySelector('#feedList article')?.dataset.memeId.startsWith('br-'));
- assert.equal(await page.locator('#feedMap [data-country="BR"]').getAttribute('aria-pressed'),'true');assert((await page.locator('#feedMapCaption').textContent()).includes('Brasil'));
- // Drain events from the map interaction before testing a new country's requests.
+ assert.equal(await page.locator('#feedMap, #feedMapCaption, .feed-map-panel').count(),0);assert.equal(await page.locator('#memeFeed svg').count(),0);
+ assert.equal(await page.locator('#mapOpen').count(),1);assert.equal(await page.locator('#mapwrap').count(),1);assert(await page.locator('#mapwrap').isHidden());
+ await page.selectOption('#feedCountry','CA');await page.waitForFunction(()=>document.querySelector('#feedList article')?.dataset.memeId.startsWith('ca-'));
+ await page.locator('#feedCountry').focus();await page.locator('#feedCountry').press('Home');await page.locator('#feedCountry').press('ArrowDown');await page.locator('#feedCountry').press('Enter');
+ await page.selectOption('#feedCountry','BR');await page.waitForFunction(()=>document.querySelector('#feedList article')?.dataset.memeId.startsWith('br-'));
  await page.waitForLoadState('networkidle');
  for(const country of countries){
   requests.length=0;await page.evaluate(c=>{window.__feedImageAssignments=[];return window.MemeFeed.open(c);},country);const items=JSON.parse(fs.readFileSync(path.join(root,'data/memes',country+'.json'))).memes;
@@ -33,5 +33,5 @@ module.exports=async function checkFeed(page,{root,viewport,requests}){
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.selectOption('#feedCountry','BR');await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('#feedCountry')?.value==='BR'&&document.querySelectorAll('#feedList article').length>=2);
  await page.selectOption('#feedCountry','EC');await page.locator('#feedList img').first().scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);requests.length=0;
- return {countriesTested:countries.length,uniquePhotos:unique.size,imageDisplayChecks:decoded,initialRequests,inlineMapVisible:true,mapMarkers:51,mapClickAndKeyboardVerified:true,manualSelectionSurvivesReload:true,result:'PASS'};
+ return {countriesTested:countries.length,uniquePhotos:unique.size,imageDisplayChecks:decoded,initialRequests,inlineMapAbsent:true,originalMapEntryPreserved:true,countrySelectorOptions:51,manualSelectionSurvivesReload:true,result:'PASS'};
 };
