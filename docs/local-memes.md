@@ -13,3 +13,5 @@ Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. N
 
 Los archivos WebP actuales suman 543.204 bytes; el mayor pesa 90.272. El navegador carga una imagen del país elegido por vez. La información completa de fuentes y huellas permanece en docs/photo-inventory.json. La evidencia del PR #5 es histórica y corresponde a un conjunto compartido que fue corregido.
 
+
+Publicación PR #6 verificada en GitHub Pages: workflow 38098159084 exitoso, 66 archivos públicos coincidentes y pruebas de Chrome en escritorio y móvil emulado PASS. La guía 7 y 8 mantiene avance y resaltado. Consultar docs/publication-results.json para el commit y las limitaciones; la cobertura sigue incompleta en 48 países.

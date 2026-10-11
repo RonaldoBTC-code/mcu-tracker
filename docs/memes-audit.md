@@ -10,7 +10,7 @@ La colección actual sigue incompleta: 14 fotos únicas en siete países, con tr
 
 Cada manifiesto identifica scope: geographic y catalogueRole: scene-location. Las fotos tienen country igual al código del archivo, ubicación, fuente y una explicación comprobable de la ubicación. La interfaz rechaza archivos de la biblioteca internacional, fotos de otro país y entradas sin evidencia. El importador deriva los catálogos de las fuentes, evitando mantener 51 listas independientes a mano. Conserva los manifiestos vacíos y no aplica un reemplazo global.
 
-El importador calcula SHA-256 de archivo original, píxeles decodificados y WebP final. Añade pHash de 64 posiciones mediante DCT, para imagen completa y recortes centrales al 90% y 80%. Compara pares entre todos los países. Coincidencias exactas abortan; distancia perceptual <=8 exige revisar el par completo y registrar por qué son fotografías distintas. El conjunto actual no tiene coincidencias ni pares cercanos. Estos controles no prueban que cualquier recorte arbitrario sea detectable ni que una fotografía sea auténtica: la revisión visual sigue siendo necesaria.
+El importador calcula SHA-256 del archivo de entrada, píxeles decodificados y WebP final. Añade pHash de 64 posiciones mediante DCT, para imagen completa y recortes centrales al 90% y 80%. Compara pares entre todos los países. Coincidencias exactas abortan; distancia perceptual <=8 exige revisar el par completo y registrar por qué son fotografías distintas. El conjunto actual no tiene coincidencias ni pares cercanos. Estos controles no prueban que cualquier recorte arbitrario sea detectable ni que una fotografía sea auténtica: la revisión visual sigue siendo necesaria.
 
 La validación ocurre antes de escribir archivos públicos. Un catálogo incompleto se exporta con estado partial o pending para no fingir cobertura. npm run check:coverage exige tres por cada uno de los 51 países y falla en la revisión actual. La aplicación carga únicamente el JSON elegido y una imagen local diferida. Conserva cancelación, timeout, atribución con textContent, enlaces con host validado, ciclos completos y selección manual persistente.
 
@@ -24,7 +24,7 @@ La validación ocurre antes de escribir archivos públicos. Un catálogo incompl
 - Filipinas: Philnews documenta el pasajero disfrazado en un jeepney; no se inventa una ciudad. Commons describe a Spider-Man dirigiendo la danza del dragón en Binondo, Manila, con licencia CC BY-SA 4.0.
 - Estados Unidos: se revalidaron individualmente Iron Man como tabla de planchar en ConNooga 2009 y Deadpool con traje de Iron Man en NYCC 2015. El cartel del segundo es físico, no texto digital superpuesto. Captain Dorito está identificado por su cosplayer como Tora-Con 2018; la cobertura de RIT acredita la sede en Rochester. El cosplayer no se identifica automáticamente como fotógrafo.
 
-Fuentes individuales, URLs de imágenes, evidencia geográfica, créditos y licencias: scripts/photo-sources.json. Huellas de los originales y archivos publicados: docs/photo-inventory.json. Hay tres fotografías con licencia documentada y once sin licencia acreditada. Registrar una fuente accesible no concede derechos de redistribución; esas licencias permanecen null y su autorización sigue sin acreditar.
+Fuentes individuales, URLs de imágenes, evidencia geográfica, créditos y licencias: scripts/photo-sources.json. Huellas de los archivos de entrada y archivos publicados: docs/photo-inventory.json. Hay tres fotografías con licencia documentada y once sin licencia acreditada. Registrar una fuente accesible no concede derechos de redistribución; esas licencias permanecen null y su autorización sigue sin acreditar.
 
 ## Descartes y pistas pendientes
 
@@ -40,3 +40,9 @@ La búsqueda se amplió a medios de virales locales, Commons, Reddit, sitios de 
 
 Las pruebas de OTP/Supabase real, dispositivos físicos y sincronización entre dispositivos siguen pendientes. No se enviaron correos ni se escribieron datos reales. Los resultados de publicación del PR #5 están preservados bajo docs/history/pr5 y no acreditan esta revisión.
 
+
+## Publicación verificada
+
+PR #6 fusionado en main como 090eae93b63be0b3d5a0cf518a1b1dfe83a7e564. GitHub Pages completó correctamente el workflow 38098159084. Se contrastaron 114 archivos con el árbol de Git y 66 archivos publicados con sus bytes locales: HTML, 51 manifiestos y 14 fotos. Chrome sobre la URL pública pasó en 1280×900 y 390×844: 51 países por tamaño, 28 comprobaciones de imagen por tamaño, guía 7→8→fin y resaltado visible, sin errores no capturados. Evidencia: docs/publication-results.json, docs/pages-verification-results.json y docs/browser-pages-results.json; capturas docs/pages-memes-1280.png y docs/pages-memes-390.png.
+
+Esta publicación acredita funcionamiento y despliegue, no cobertura completa: complete sigue false y faltan fotos en 48 países. Parte de los archivos de entrada son WebP ya procesados de la revisión anterior; sus huellas no equivalen al original de máxima resolución del proveedor.
