@@ -1,6 +1,6 @@
 # Cobertura por país
 
-Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**. 54 fotos en 22 países; 2 países alcanzan diez. Faltan 456 fotos en 49 países. Los 29 catálogos vacíos siguen visibles; no se reduce la lista para aparentar cumplimiento. `complete:false`.
+Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**. 65 fotos en 22 países; CA, GB y US alcanzan diez. Faltan 445 fotos en 48 países. Los 29 catálogos vacíos siguen visibles. `complete:false`.
 
 | País | Fotos | Faltan para 10 | Estado |
 |---|---:|---:|---|
@@ -8,7 +8,7 @@ Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**.
 | AR | 0 | 10 | Curación pendiente |
 | AT | 1 | 9 | Ampliación pendiente |
 | AU | 0 | 10 | Curación pendiente |
-| BE | 3 | 7 | Ampliación pendiente |
+| BE | 6 | 4 | Ampliación pendiente |
 | BO | 0 | 10 | Curación pendiente |
 | BR | 3 | 7 | Ampliación pendiente |
 | CA | 10 | 0 | Mínimo cubierto |
@@ -23,8 +23,8 @@ Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**.
 | EC | 1 | 9 | Ampliación pendiente |
 | ES | 2 | 8 | Ampliación pendiente |
 | FI | 0 | 10 | Curación pendiente |
-| FR | 3 | 7 | Ampliación pendiente |
-| GB | 3 | 7 | Ampliación pendiente |
+| FR | 4 | 6 | Ampliación pendiente |
+| GB | 10 | 0 | Mínimo cubierto |
 | GT | 0 | 10 | Curación pendiente |
 | HN | 1 | 9 | Ampliación pendiente |
 | ID | 1 | 9 | Ampliación pendiente |
@@ -56,4 +56,4 @@ Mínimo explícito del usuario: **10 fotos distintas por cada país soportado**.
 | VE | 0 | 10 | Curación pendiente |
 | ZA | 0 | 10 | Curación pendiente |
 
-Fuente ejecutable: `docs/photo-coverage.json`, generado por `npm run import:photos`. `npm run check:coverage` debe fallar mientras falte un país. No contar recortes, reencodificaciones o la misma foto asignada a países distintos.
+Fuente ejecutable: `docs/photo-coverage.json`, generado por `npm run import:photos`. `npm run check:coverage` debe fallar mientras falte un país. No contar recortes, reencodificaciones o series de la misma escena.

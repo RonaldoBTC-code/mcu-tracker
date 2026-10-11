@@ -4,7 +4,7 @@
 
 El PR #5 publicó 14 fotos compartidas en 51 combinaciones. Esa organización no cumplía la precisión posterior: varias fotos propias y diferentes por país. Esta corrección elimina la biblioteca compartida de los manifiestos y exige que el país sea la ubicación acreditada de la escena. Las dos referencias de Pinterest no se asignan a ningún país porque su procedencia no está demostrada.
 
-La colección actual sigue incompleta: 54 fotos únicas en 22 países; CA y US alcanzan el mínimo explícito de diez. Los otros 49 países necesitan 456 fotos, con 29 catálogos vacíos. El requisito de tres queda obsoleto después de la corrección explícita a diez por país. complete permanece false. Un PASS de software o despliegue no completa el contenido.
+La colección actual sigue incompleta: 65 fotos únicas en 22 países; CA, GB y US alcanzan el mínimo explícito de diez. Los otros 48 países necesitan 445 fotos, con 29 catálogos vacíos. El requisito de tres queda obsoleto después de la corrección explícita a diez por país. complete permanece false. Un PASS de software o despliegue no completa el contenido.
 
 ## Corrección técnica
 

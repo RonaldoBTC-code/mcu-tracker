@@ -55,13 +55,13 @@
     "VE",
     "ZA"
   ],
-  "photos": 54,
+  "photos": 65,
   "perCountry": {
     "AE": 0,
     "AR": 0,
     "AT": 1,
     "AU": 0,
-    "BE": 3,
+    "BE": 6,
     "BO": 0,
     "BR": 3,
     "CA": 10,
@@ -76,8 +76,8 @@
     "EC": 1,
     "ES": 2,
     "FI": 0,
-    "FR": 3,
-    "GB": 3,
+    "FR": 4,
+    "GB": 10,
     "GT": 0,
     "HN": 1,
     "ID": 1,
@@ -114,7 +114,7 @@
     "AR": 10,
     "AT": 9,
     "AU": 10,
-    "BE": 7,
+    "BE": 4,
     "BO": 10,
     "BR": 7,
     "CA": 0,
@@ -129,8 +129,8 @@
     "EC": 9,
     "ES": 8,
     "FI": 10,
-    "FR": 7,
-    "GB": 7,
+    "FR": 6,
+    "GB": 0,
     "GT": 10,
     "HN": 9,
     "ID": 9,
@@ -162,10 +162,11 @@
     "VE": 10,
     "ZA": 10
   },
-  "missingPhotos": 456,
+  "missingPhotos": 445,
   "complete": false,
   "completeCountries": [
     "CA",
+    "GB",
     "US"
   ],
   "pendingCountries": [
@@ -188,7 +189,6 @@
     "ES",
     "FI",
     "FR",
-    "GB",
     "GT",
     "HN",
     "ID",
@@ -222,6 +222,6 @@
   "crossCountryDuplicatePhotos": 0,
   "visualReviewThreshold": 8,
   "nearPairs": [],
-  "bytes": 2543344,
+  "bytes": 3101488,
   "largestBytes": 98258
 }

@@ -2597,5 +2597,527 @@
       ]
     },
     "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "gb-deadpool-captain",
+    "country": "GB",
+    "image": "data/memes/GB/images/gb-deadpool-captain.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Deadpool_(17435591233).jpg",
+    "title": "Deadpool capitán se impone a sus dobles",
+    "location": "Londres, MCM London Comic Con, ExCeL",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Deadpool_(17435591233).jpg",
+      "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/London_Comic_Con_2015_-_Deadpool_%2817435591233%29.jpg/960px-London_Comic_Con_2015_-_Deadpool_%2817435591233%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Pete Sheffield",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool",
+      "Captain America"
+    ],
+    "visualGag": "Deadpool con escudo y traje de Capitán América posa con un pie sobre otro Deadpool, junto a dos dobles tumbados.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Deadpool con escudo y traje de Capitán América posa con un pie sobre otro Deadpool, junto a dos dobles tumbados.",
+    "width": 511,
+    "height": 768,
+    "bytes": 58408,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "5f3e71517026cf7a323eb67fa6926d6691a82f4737602cd9fd7aee1510b42c68",
+      "pixelSha256": "59e48674f1e133a025ec7b7faa8b6f673d97e01604ebd7bdf3d9144ef19fb809",
+      "perceptualHashes": [
+        "0111110001101100110000111101100110101000010110100000010011001101",
+        "0111110001101110110000111001000111011000010110101000010001001101",
+        "0110110001101111110000111011100011011000000101101010011000001100"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "19b6e72a811875b28e5889535ec2b23cfb0a6a1044cffcafdc91d293751fa0ae",
+      "pixelSha256": "a55b7d86bbd1f3f6f34095d75ecbd90ed587c1cebb5b3eecd0c7987b948bbb15",
+      "perceptualHashes": [
+        "0111110001101100110001111101000110101000010110100000010011001101",
+        "0111110001101110110000111001000111011000000111101000010001001101",
+        "0110110001101111110000111011100011011000000101101010011000001100"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "gb-deadpool-sombrero",
+    "country": "GB",
+    "image": "data/memes/GB/images/gb-deadpool-sombrero.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Sombrero_Deadpool_(18241070682).jpg",
+    "title": "Deadpool cambia las katanas por poncho y sombrero",
+    "location": "Londres, MCM London Comic Con, ExCeL",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Sombrero_Deadpool_(18241070682).jpg",
+      "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg/960px-MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "big-ashb",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool lleva un gran sombrero rosa y un poncho mientras charla sentado entre asistentes.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Deadpool lleva un gran sombrero rosa y un poncho mientras charla sentado entre asistentes.",
+    "width": 768,
+    "height": 549,
+    "bytes": 48900,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "ff90d09751fbc74dfcda179334787a38497926e892c14a03752a072a2c15bc25",
+      "pixelSha256": "738de418ef13722ad6c28fffaf655e6048860da4bb162acf99c22e15fd199fdd",
+      "perceptualHashes": [
+        "0010010001011110010010010011101111001100111111011000000001110010",
+        "0010010001011110010010010011101111001101100110011010101000110100",
+        "0010111111000111010110010001101101000101100010011010101000101100"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "253a5f329911d7d7b364899073aea267d8513e29612319790810f3a800ae2b69",
+      "pixelSha256": "c54622e5e0314ef9e8467325d79251bef362102f2aaf0f27a57999a2d884c641",
+      "perceptualHashes": [
+        "0010010001011110010010010011101111001100111111011000000001110010",
+        "0010010001011110010010010011101111001101100110011010101000110100",
+        "0010111111000111010110010001101101000101100010011010101000101100"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "gb-deadpool-wedding",
+    "country": "GB",
+    "image": "data/memes/GB/images/gb-deadpool-wedding.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Deadpools_(18218154216).jpg",
+    "title": "La boda de Deadpool tiene invitados inesperados",
+    "location": "Londres, MCM London Comic Con, ExCeL",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Deadpools_(18218154216).jpg",
+      "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg/960px-MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "big-ashb",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool con vestido blanco y peluca rubia recibe una propuesta de otro Deadpool de rodillas, entre invitados con máscara de V.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Deadpool con vestido blanco y peluca rubia recibe una propuesta de otro Deadpool de rodillas, entre invitados con máscara de V.",
+    "width": 768,
+    "height": 512,
+    "bytes": 69832,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "cbc6e90921a46457eaf9d465eab1825e7b4404032be966f23f8cc120adbdbaf2",
+      "pixelSha256": "a3f4cae8ef5d95cec48cd2c814a779d1d26d2a465c9e1d19a3b323d2d70018b7",
+      "perceptualHashes": [
+        "0001011111000110100010011110001100000101001101100110110100101101",
+        "0001011111000111100010001110001010000001101101101110100101100011",
+        "0001010111001111110111101111001010000001100101001100100001100010"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "51808436975de7c006a821a7ebd78b5ea85093c3b60e4dd8cab898dd92f62a6d",
+      "pixelSha256": "aeeb419898e00e3fc1a386b906a01f032bdce33bd04e75eb194f59a7ba83b890",
+      "perceptualHashes": [
+        "0001011111000110100010011110001100000101001101100110110100101101",
+        "0001011111000111100010001110001010000001101101101110100101100011",
+        "0001010111001111110111101111001010000001100101001100100001100010"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "gb-deadpool-kimono",
+    "country": "GB",
+    "image": "data/memes/GB/images/gb-deadpool-kimono.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Deadpool_(17417809783).jpg",
+    "title": "Deadpool despliega su abanico",
+    "location": "Londres, MCM London Comic Con, ExCeL",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Deadpool_(17417809783).jpg",
+      "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/MCM_London_May_2015_-_Deadpool_%2817417809783%29.jpg/960px-MCM_London_May_2015_-_Deadpool_%2817417809783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Cosplay Vogue1",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool combina su máscara roja con kimono floral, abanico abierto y sombrero de paja.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Deadpool combina su máscara roja con kimono floral, abanico abierto y sombrero de paja.",
+    "width": 509,
+    "height": 768,
+    "bytes": 66186,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "ca8a183928929aee860115fa4423d2e0ff76a3f51177a737e819cfbd8260d626",
+      "pixelSha256": "8a38df42aa23724f47c8d5712a3f01366b3766dc6c0faad83bb430fc01e92786",
+      "perceptualHashes": [
+        "0011100110010111100000110100110000110110001110011001001011011001",
+        "0011100110010111110000010100111001100111000110010011001010011001",
+        "0011100110010111110010000100111001100110010111100011001010011000"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "2c74b3e6fd53464ba559bc40153c2c44e42e14218f79cd2519ea1348acce3e52",
+      "pixelSha256": "527691ebe5d59ee40934361d136e6960f424dacaae677db05f3313d3458091f0",
+      "perceptualHashes": [
+        "0011100110010111100000110100110000110110001110011001001011011001",
+        "0011100110010111110000010100111001100111000110010011001010011001",
+        "0011100110010111110010000100111001100111010011100011001010011000"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "gb-deadpool-maid",
+    "country": "GB",
+    "image": "data/memes/GB/images/gb-deadpool-maid.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:At_your_service_(34671100260).jpg",
+    "title": "Deadpool ofrece servicio de limpieza",
+    "location": "Londres, MCM London Comic Con, ExCeL",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:At_your_service_(34671100260).jpg",
+      "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/At_your_service_%2834671100260%29.jpg/960px-At_your_service_%2834671100260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "m4mystery from London, United Kingdom",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool con vestido de criada y delantal blanco muestra una mochila de sí mismo.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Deadpool con vestido de criada y delantal blanco muestra una mochila de sí mismo.",
+    "width": 768,
+    "height": 512,
+    "bytes": 68254,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "b6a25005b3b53bdabeaa7a0a013c908aba208c941a3f54d70a7b11c1d53a7df4",
+      "pixelSha256": "f51e90aff4d580b74461b3de9b1ac6f0e667f9533e622fd7e80e0f6a1bbcd5d9",
+      "perceptualHashes": [
+        "0011010111100010000111000111101100011101000110001011001011010001",
+        "0010010111100110000111000111101100001001001110100011011010011001",
+        "0010010111100110000111010100101100001011000111100001111100011001"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "594a4e3a9e732b422828db9aae2fded1d4c2b10af417290d3187f7970d2ce98c",
+      "pixelSha256": "1e4d5aa0cfa52d2b577fccfa6925fd0205ede7f48c9dee7073fa6d2c3ed8e8b3",
+      "perceptualHashes": [
+        "0011010111100010000111000111101100011101000110001011001011010001",
+        "0010010111100110000111000111101100001001001110100011011010011001",
+        "0010010111100110000111010100101100001011000111100001111100011001"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "gb-pikachu-thor",
+    "country": "GB",
+    "image": "data/memes/GB/images/gb-pikachu-thor.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Pikachu_Thor_(18011811396).jpg",
+    "title": "Pikachu se convierte en el dios del trueno",
+    "location": "Londres, MCM London Comic Con, ExCeL",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Pikachu_Thor_(18011811396).jpg",
+      "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/MCM_London_May_2015_-_Pikachu_Thor_%2818011811396%29.jpg/960px-MCM_London_May_2015_-_Pikachu_Thor_%2818011811396%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Cosplay Vogue1",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Thor",
+      "Pikachu"
+    ],
+    "visualGag": "Pikachu lleva peluca rubia, armadura de Thor, capa roja y martillo sobre el hombro.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Pikachu lleva peluca rubia, armadura de Thor, capa roja y martillo sobre el hombro.",
+    "width": 768,
+    "height": 509,
+    "bytes": 41776,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "ec092b543ce54079df3348c2e001c652ba202d43c302987346bebab7f06e9f25",
+      "pixelSha256": "8abf8b861df2d0cf8eb016da491117fa79d39a138e37edb607e09d0afdfee726",
+      "perceptualHashes": [
+        "0000111111011000011000100001011011000001101111000100001011111101",
+        "0000101111011000011101100001011010000001101101100101000111101101",
+        "0000101111011011001101110101011110100000001001000101000111101010"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "e11af8974846a20d653ffbabb0bd5402d8688e83e27ec2bea654f97a6529e64f",
+      "pixelSha256": "05c8c0949fd3df8f5acf2d6ec7d7e614d04d77b77b071625653125d005680995",
+      "perceptualHashes": [
+        "0000111111011000011000100001011011000001101111000100001011111101",
+        "0000101111011000011101100001011010000001101101100101001111101001",
+        "0000101111011011001101110101011110100000001001000101000111101010"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "gb-thor-bike",
+    "country": "GB",
+    "image": "data/memes/GB/images/gb-thor-bike.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Thor_on_a_bike_(17868517180).jpg",
+    "title": "Thor posa sobre una moto",
+    "location": "Londres, MCM London Comic Con, ExCeL",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Thor_on_a_bike_(17868517180).jpg",
+      "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg/960px-London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Pete Sheffield",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Thor"
+    ],
+    "visualGag": "Thor levanta el martillo mientras posa sobre una motocicleta Triumph en el puesto de Metal Gear Solid.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Thor levanta el martillo mientras posa sobre una motocicleta Triumph en el puesto de Metal Gear Solid.",
+    "width": 640,
+    "height": 426,
+    "bytes": 78446,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "50d32779c2af65df79414313f52c8452f2c25f7eeed769a327986e127e079fff",
+      "pixelSha256": "91e0e7a6ac7c566f7a72da7ad9a09c48898b11e5e8444220f4876ed53c48aa2a",
+      "perceptualHashes": [
+        "0100001110011011000010000110011011111001111110110110011001000000",
+        "0100001010011011000110000110011110111001101010100111110001001001",
+        "0101001010010010000111100110010110011001101000101011110101101001"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "db0af45238e2c4dd659371dd08045e9dd85a601372551fb4a95053b417c7d353",
+      "pixelSha256": "04f9ca9ce862d2b2a201485d87f60000d4b8b8575f8193a4cd38c23a95314e84",
+      "perceptualHashes": [
+        "0100001110011011000010000110011011111001111110110110011001000000",
+        "0100001010011011000110000110011110111001101010100111110001001001",
+        "0101001010010011000011100110010110011001101000101011110101101001"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "be-deadpool-hood",
+    "country": "BE",
+    "image": "data/memes/BE/images/be-deadpool-hood.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_(51968415859).jpg",
+    "title": "Deadpool lleva capucha y bastón",
+    "location": "Bruselas, Comic Con Brussels 2022, Tour & Taxis",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_(51968415859).jpg",
+      "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg/960px-Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Kiri Karma",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool mezcla su armadura roja con sudadera estampada y un largo bastón.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Deadpool mezcla su armadura roja con sudadera estampada y un largo bastón.",
+    "width": 327,
+    "height": 768,
+    "bytes": 35498,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "a487767835e4d5ae70b0b97da22b00ae31a36e3ee33e7a1ee14db804425b2f10",
+      "pixelSha256": "03eaf5faf94fde57dbaef9587c90d7af346752ebac93cbab5eab25ba38344fe9",
+      "perceptualHashes": [
+        "0010011010100011100010110100110001001100010110111110010110100110",
+        "0010001010100001100110110100111101011100010110010100010110100111",
+        "0010010010100000100100111110110100011110010110000100111111100011"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "21d9887dba4a30478c24b14058897b8b09620b84133b91d5940ba75ced2b95f2",
+      "pixelSha256": "b73b02f28d57871ecd6760134f483950e646d52eba29ced55e59b7a3bc0d5c93",
+      "perceptualHashes": [
+        "0010011010100011100010110100110001001100010110111110010110100110",
+        "0010001010100001100110110100111101011100010110010100010110100111",
+        "0010010010100001100100111110110100011110010110000100111110100011"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "be-captain-wolverine",
+    "country": "BE",
+    "image": "data/memes/BE/images/be-captain-wolverine.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_(52117205294).jpg",
+    "title": "El capitán presume de garras",
+    "location": "Bruselas, Made in Asia 2022",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_(52117205294).jpg",
+      "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg/960px-Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Captain America",
+      "Wolverine"
+    ],
+    "visualGag": "Cosplayer fusiona traje de Wolverine, garras y puro con el escudo de Capitán América.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Cosplayer fusiona traje de Wolverine, garras y puro con el escudo de Capitán América.",
+    "width": 423,
+    "height": 768,
+    "bytes": 23232,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "f6745bab92cbf09edba3aa9a022b295d813c02ca9cea979640444d96a6a49604",
+      "pixelSha256": "f062db9d9f18480076fc5646f3e62cbda480188c0a855279be71efdc42eb35ac",
+      "perceptualHashes": [
+        "0011111111000010100100000110110010011010010110010101111100110000",
+        "0010101111000110111101000110110010010001110011010001101100110000",
+        "0010001011000111111101100110110010010000110010111001000010111001"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "258634b7c025966c700fb7c12ff0aa5e29ec5074be36632f884ba4acf682489e",
+      "pixelSha256": "90a6eaf45320c4083e9f0923d311f14868fe87eceb0a5ba4daab0e7d3e8a4c26",
+      "perceptualHashes": [
+        "0011111111000010100100000110110010011010010110010101111100110000",
+        "0010101111000110111101000110110010010001110011010001101100110000",
+        "0010001011000111111101100110110010010000110010111001000010111001"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "be-captain-fett",
+    "country": "BE",
+    "image": "data/memes/BE/images/be-captain-fett.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg",
+    "title": "El capitán se pasa al Mandaloriano",
+    "location": "Bruselas, Comiccon Brussels 2023",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg",
+      "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg/960px-Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Captain America",
+      "Mandalorian"
+    ],
+    "visualGag": "Armadura mandaloriana combina casco con A, colores y escudo de Capitán América.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Armadura mandaloriana combina casco con A, colores y escudo de Capitán América.",
+    "width": 502,
+    "height": 768,
+    "bytes": 39088,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "b7d1e84465e4089c6c6a2558359b1ce5034cca3dbcda0dbcc9233a90b1d24da9",
+      "pixelSha256": "a0a485ac303a96c79b48ea4407a95d89a4d113ec48d397a3ff2535df6cfaf280",
+      "perceptualHashes": [
+        "0110000010101111110000010101000010011010111110110001110110000011",
+        "0110010010100111110000011101000011010010010110110100101111000011",
+        "0110010110100101111000001101110011010100010111100100001111000010"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "019a056cade2e7cb1b0e57ead8266a73285ed9979459e66140e2f9263a8703a5",
+      "pixelSha256": "7278e48801a01394772c03800c91cb17bd0ba8aa1674705753d6ff6580e492c7",
+      "perceptualHashes": [
+        "0110000010101111110000010101000010011010111110110001110110000011",
+        "0110010010100111110000011101000011010010010110110100101111000011",
+        "0110010110100111101000001101110011010100010111100100001111000010"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+  },
+  {
+    "id": "fr-pikachu-captain",
+    "country": "FR",
+    "image": "data/memes/FR/images/fr-pikachu-captain.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg",
+    "title": "Capitán Pikachu protege la Pokébola",
+    "location": "Villepinte, Île-de-France, Japan Expo 2022",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg",
+      "statement": "La categoría sitúa la fotografía en Japan Expo 2022, día 3; los metadatos documentan Île-de-France el 16 de julio de 2022.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg/960px-2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "creator": "Miguel Discart",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Captain America",
+      "Pikachu"
+    ],
+    "visualGag": "Cosplayer amarillo con máscara de orejas, escudo de Pikachu, peluche al hombro y Pokébola fusiona Capitán América con Pokémon.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "alt": "Cosplayer amarillo con máscara de orejas, escudo de Pikachu, peluche al hombro y Pokébola fusiona Capitán América con Pokémon.",
+    "width": 401,
+    "height": 768,
+    "bytes": 28524,
+    "scope": "geographic",
+    "originalFingerprint": {
+      "sha256": "efe11216bf54d112676211c50b8c0aca38ef21aca87f3496e4f4d1f459fcc5d7",
+      "pixelSha256": "2eced1de8d106bda05ea516d5d6712a9c654c5c3748a36115b37b9b86d8b383c",
+      "perceptualHashes": [
+        "0111100011011001010010011100010011110001111001100110010001110000",
+        "0111111111011001010010011100100011010000110001010110010001110000",
+        "0101111111011010010010011101111010010010100001000100010001101001"
+      ]
+    },
+    "outputFingerprint": {
+      "sha256": "303c2114dd12f6b1f92b804a2662d1b63c48afc29913f7a7facfb3dbaf2ab2ba",
+      "pixelSha256": "4e99877e1427cddf3872b3ab5d34fb11f231568b765cebe8779252db2efe72da",
+      "perceptualHashes": [
+        "0111100011011001010010011100010011110001111001100110010001110000",
+        "0111111111011001010010011100100011010000110001010110010001110000",
+        "0101111111011010010010011101111010010010100001000100010001111000"
+      ]
+    },
+    "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
   }
 ]

@@ -149,6 +149,149 @@
         ]
       },
       "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "be-deadpool-hood",
+      "country": "BE",
+      "image": "data/memes/BE/images/be-deadpool-hood.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_(51968415859).jpg",
+      "title": "Deadpool lleva capucha y bastón",
+      "location": "Bruselas, Comic Con Brussels 2022, Tour & Taxis",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_(51968415859).jpg",
+        "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
+        "verifiedOn": "2026-10-11"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg/960px-Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Kiri Karma",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool mezcla su armadura roja con sudadera estampada y un largo bastón.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool mezcla su armadura roja con sudadera estampada y un largo bastón.",
+      "width": 327,
+      "height": 768,
+      "bytes": 35498,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "a487767835e4d5ae70b0b97da22b00ae31a36e3ee33e7a1ee14db804425b2f10",
+        "pixelSha256": "03eaf5faf94fde57dbaef9587c90d7af346752ebac93cbab5eab25ba38344fe9",
+        "perceptualHashes": [
+          "0010011010100011100010110100110001001100010110111110010110100110",
+          "0010001010100001100110110100111101011100010110010100010110100111",
+          "0010010010100000100100111110110100011110010110000100111111100011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "21d9887dba4a30478c24b14058897b8b09620b84133b91d5940ba75ced2b95f2",
+        "pixelSha256": "b73b02f28d57871ecd6760134f483950e646d52eba29ced55e59b7a3bc0d5c93",
+        "perceptualHashes": [
+          "0010011010100011100010110100110001001100010110111110010110100110",
+          "0010001010100001100110110100111101011100010110010100010110100111",
+          "0010010010100001100100111110110100011110010110000100111110100011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "be-captain-wolverine",
+      "country": "BE",
+      "image": "data/memes/BE/images/be-captain-wolverine.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_(52117205294).jpg",
+      "title": "El capitán presume de garras",
+      "location": "Bruselas, Made in Asia 2022",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_(52117205294).jpg",
+        "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
+        "verifiedOn": "2026-10-11"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg/960px-Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Captain America",
+        "Wolverine"
+      ],
+      "visualGag": "Cosplayer fusiona traje de Wolverine, garras y puro con el escudo de Capitán América.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Cosplayer fusiona traje de Wolverine, garras y puro con el escudo de Capitán América.",
+      "width": 423,
+      "height": 768,
+      "bytes": 23232,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "f6745bab92cbf09edba3aa9a022b295d813c02ca9cea979640444d96a6a49604",
+        "pixelSha256": "f062db9d9f18480076fc5646f3e62cbda480188c0a855279be71efdc42eb35ac",
+        "perceptualHashes": [
+          "0011111111000010100100000110110010011010010110010101111100110000",
+          "0010101111000110111101000110110010010001110011010001101100110000",
+          "0010001011000111111101100110110010010000110010111001000010111001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "258634b7c025966c700fb7c12ff0aa5e29ec5074be36632f884ba4acf682489e",
+        "pixelSha256": "90a6eaf45320c4083e9f0923d311f14868fe87eceb0a5ba4daab0e7d3e8a4c26",
+        "perceptualHashes": [
+          "0011111111000010100100000110110010011010010110010101111100110000",
+          "0010101111000110111101000110110010010001110011010001101100110000",
+          "0010001011000111111101100110110010010000110010111001000010111001"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "be-captain-fett",
+      "country": "BE",
+      "image": "data/memes/BE/images/be-captain-fett.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg",
+      "title": "El capitán se pasa al Mandaloriano",
+      "location": "Bruselas, Comiccon Brussels 2023",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg",
+        "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
+        "verifiedOn": "2026-10-11"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg/960px-Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Captain America",
+        "Mandalorian"
+      ],
+      "visualGag": "Armadura mandaloriana combina casco con A, colores y escudo de Capitán América.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Armadura mandaloriana combina casco con A, colores y escudo de Capitán América.",
+      "width": 502,
+      "height": 768,
+      "bytes": 39088,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "b7d1e84465e4089c6c6a2558359b1ce5034cca3dbcda0dbcc9233a90b1d24da9",
+        "pixelSha256": "a0a485ac303a96c79b48ea4407a95d89a4d113ec48d397a3ff2535df6cfaf280",
+        "perceptualHashes": [
+          "0110000010101111110000010101000010011010111110110001110110000011",
+          "0110010010100111110000011101000011010010010110110100101111000011",
+          "0110010110100101111000001101110011010100010111100100001111000010"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "019a056cade2e7cb1b0e57ead8266a73285ed9979459e66140e2f9263a8703a5",
+        "pixelSha256": "7278e48801a01394772c03800c91cb17bd0ba8aa1674705753d6ff6580e492c7",
+        "perceptualHashes": [
+          "0110000010101111110000010101000010011010111110110001110110000011",
+          "0110010010100111110000011101000011010010010110110100101111000011",
+          "0110010110100111101000001101110011010100010111100100001111000010"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     }
   ]
 }

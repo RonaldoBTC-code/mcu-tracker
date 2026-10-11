@@ -146,6 +146,54 @@
         ]
       },
       "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "fr-pikachu-captain",
+      "country": "FR",
+      "image": "data/memes/FR/images/fr-pikachu-captain.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg",
+      "title": "Capitán Pikachu protege la Pokébola",
+      "location": "Villepinte, Île-de-France, Japan Expo 2022",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg",
+        "statement": "La categoría sitúa la fotografía en Japan Expo 2022, día 3; los metadatos documentan Île-de-France el 16 de julio de 2022.",
+        "verifiedOn": "2026-10-11"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg/960px-2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Captain America",
+        "Pikachu"
+      ],
+      "visualGag": "Cosplayer amarillo con máscara de orejas, escudo de Pikachu, peluche al hombro y Pokébola fusiona Capitán América con Pokémon.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Cosplayer amarillo con máscara de orejas, escudo de Pikachu, peluche al hombro y Pokébola fusiona Capitán América con Pokémon.",
+      "width": 401,
+      "height": 768,
+      "bytes": 28524,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "efe11216bf54d112676211c50b8c0aca38ef21aca87f3496e4f4d1f459fcc5d7",
+        "pixelSha256": "2eced1de8d106bda05ea516d5d6712a9c654c5c3748a36115b37b9b86d8b383c",
+        "perceptualHashes": [
+          "0111100011011001010010011100010011110001111001100110010001110000",
+          "0111111111011001010010011100100011010000110001010110010001110000",
+          "0101111111011010010010011101111010010010100001000100010001101001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "303c2114dd12f6b1f92b804a2662d1b63c48afc29913f7a7facfb3dbaf2ab2ba",
+        "pixelSha256": "4e99877e1427cddf3872b3ab5d34fb11f231568b765cebe8779252db2efe72da",
+        "perceptualHashes": [
+          "0111100011011001010010011100010011110001111001100110010001110000",
+          "0111111111011001010010011100100011010000110001010110010001110000",
+          "0101111111011010010010011101111010010010100001000100010001111000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     }
   ]
 }
