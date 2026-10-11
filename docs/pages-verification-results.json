@@ -1,12 +1,12 @@
 {
   "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-  "checkedAt": "2026-10-11T18:27:50.912Z",
+  "checkedAt": "2026-10-11T21:54:46.580Z",
   "result": "PASS",
   "files": [
     {
       "file": "index.html",
-      "bytes": 202307,
-      "sha": "e33372aa9501eeec15c8da497e4a07b1760e39bf"
+      "bytes": 203536,
+      "sha": "eee37683fd35a4221dd56c241471435f6d945096"
     },
     {
       "file": "scripts/meme-feed.js",
@@ -95,8 +95,8 @@
     },
     {
       "file": "data/memes/EC.json",
-      "bytes": 3859,
-      "sha": "1fa24d1cbfe2e98d832d40db963b9db27ef18e21"
+      "bytes": 7305,
+      "sha": "b7c04d134511eca0bf2b327a0906e55f12ec7471"
     },
     {
       "file": "data/memes/ES.json",
@@ -165,8 +165,8 @@
     },
     {
       "file": "data/memes/MX.json",
-      "bytes": 149,
-      "sha": "380794f3c17fb9e9422904efc49d3faf61b1abce"
+      "bytes": 4283,
+      "sha": "a739f4e26b5371892a5c2be44170e5ff380cd2f9"
     },
     {
       "file": "data/memes/NI.json",
@@ -1122,6 +1122,31 @@
       "file": "data/memes/FR/images/fr-pikachu-captain-1920-bd6d291cbc44.webp",
       "bytes": 239440,
       "sha": "f73de2c9a7109f88d8ec0821a20f51977feecb8b"
+    },
+    {
+      "file": "data/memes/EC/images/ec-spider-bin-1280-6122a0e281ba.webp",
+      "bytes": 141108,
+      "sha": "04c3239de6fa783e6a4bd434677c7dcbc6808138"
+    },
+    {
+      "file": "data/memes/EC/images/ec-spider-bin-640-5731b7407db0.webp",
+      "bytes": 59740,
+      "sha": "e491b7b445a240dbd855404454846d38f26cf8d8"
+    },
+    {
+      "file": "data/memes/MX/images/mx-spider-errands-1280-a6c4cbb2c48d.webp",
+      "bytes": 259708,
+      "sha": "7654660a2d8274246a21816b7395302e4edc9d9f"
+    },
+    {
+      "file": "data/memes/MX/images/mx-spider-errands-640-5e92a6b6d164.webp",
+      "bytes": 71670,
+      "sha": "b13398c5743985121f20f273116bc8be027d9b09"
+    },
+    {
+      "file": "data/memes/MX/images/mx-spider-errands-1920-a68e3da9bc6b.webp",
+      "bytes": 523426,
+      "sha": "8019d3841bf9a65ab1177241e81c773534fd8972"
     }
   ],
   "collectionCoverageComplete": false

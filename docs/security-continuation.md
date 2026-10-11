@@ -35,3 +35,7 @@ Datos y hashes: `maplibre-assets.json`, `browser-maplibre-results.json`, `browse
 ## Reducción de código
 
 Se reutiliza la comprobación de agregados en la verificación real y sus pruebas; se conserva el constructor de fotos compartido entre mapa y feed del PR #13. La seguridad del DOM requiere más líneas que concatenar HTML; no se elimina para reducir el tamaño. No se afirma un ahorro global de líneas ni una mejora de rendimiento sin medición. El frontend sigue sin build.
+
+## Estado público posterior: PR #15
+
+La versión final conserva esta corrección de MapLibre y la pasó de nuevo en la página pública, en dos tamaños, con módulos/teselas reales y hashes verificados. La comparación exacta de archivos, la guía, las 63 fotos y los contadores reales se registran en publication-results.json y audit-status-20261011.md. Los dos IDs ya están activos tras lectura HTTP200, sin ejecución de SQL desde esta sesión. Las cifras/bloqueos de la tabla anterior son históricos del PR #14. Continúan 447 fotos y 14 permisos pendientes; no se declara completa la auditoría general.

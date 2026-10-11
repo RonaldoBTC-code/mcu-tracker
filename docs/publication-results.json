@@ -1,55 +1,42 @@
 {
   "status": "source-published-and-verified",
-  "checkedAt": "2026-10-11T18:30:36.147Z",
+  "checkedAt": "2026-10-11T21:56:52.237Z",
   "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-  "baselineSourceCommit": "d5e299738fea20f5fe46b2f811e881fe427b502b",
-  "photos": 61,
-  "responsiveVariants": 171,
-  "commonsOriginalsRecovered": 46,
-  "publisherLargerFilesRecovered": 3,
-  "withdrawnPhotos": 4,
-  "localBrowserQuality": "PASS - four configurations / 61 photos each",
-  "localBrowserFull": "PASS - 51 collections / 61 photos / two viewports",
+  "pullRequest": 15,
+  "sourceCommit": "0cd764643433257010cd386fccc54674c9b9ae6a",
+  "sourceTree": "8b3dc6ae86b959ef68182d5d9942336dc37d3a19",
+  "workflow": {
+    "id": 38178189021,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38178189021"
+  },
+  "photos": 63,
+  "countriesWithPhotos": 20,
+  "responsiveVariants": 176,
   "localTests": {
     "entry": 35,
     "pipeline": 8,
-    "postgres": 9,
+    "postgres": 11,
     "feed": 10,
-    "result": "PASS"
+    "readiness": 4,
+    "total": 68,
+    "result": "PASS",
+    "authenticationAndTransportSimulated": true
   },
   "productionAggregateRead": {
     "result": "PASS",
-    "ids": 61,
-    "http": [
-      200,
-      200
-    ],
-    "readOnly": true
+    "ids": 63,
+    "readOnly": true,
+    "evidence": "docs/candidate-backend-readiness.json"
   },
+  "publicSourceFilesVerified": 229,
   "publicCurrentSourceVerification": "PASS",
-  "collectionCoverageComplete": false,
-  "missingPhotos": 449,
-  "licenseUnverified": 14,
-  "authenticatedWritesVerified": false,
-  "productionPersistenceVerified": false,
-  "pendingNewIds": [
-    "ec-spider-bin",
-    "mx-spider-errands"
-  ],
-  "pullRequest": 13,
-  "sourceCommit": "759ee9df69c6e8aa78527cb9356d5b592b6b1bff",
-  "sourceTree": "1987d7bf4a3f01104e4da9e5817ae972e0fa8037",
-  "workflow": {
-    "id": 38163719214,
-    "status": "completed",
-    "conclusion": "success",
-    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38163719214"
-  },
-  "publicSourceFilesVerified": 224,
   "publicBrowserQuality": {
     "result": "PASS",
     "configurations": 4,
-    "photosPerConfiguration": 61,
+    "photosPerConfiguration": 63,
+    "measurements": 252,
     "uncaughtErrors": 0,
     "evidence": "docs/browser-quality-results.json"
   },
@@ -57,8 +44,8 @@
     "result": "PASS",
     "viewports": 2,
     "countriesPerViewport": 51,
-    "photosPerViewport": 61,
-    "mapImageDisplayChecksPerViewport": 122,
+    "photosPerViewport": 63,
+    "mapImageDisplayChecksPerViewport": 126,
     "trackerEntryAndReload": true,
     "explicitMemeNavigation": true,
     "noInitialMemeRequests": true,
@@ -69,9 +56,34 @@
   },
   "publicBrowserSharedStats": {
     "result": "PASS",
-    "cardsCompared": 48,
-    "aggregateRequests": 15,
+    "cardsCompared": 50,
+    "aggregateRequests": 16,
     "writesBlocked": true,
     "evidence": "docs/browser-shared-stats-results.json"
-  }
+  },
+  "publicBrowserMapLibre": {
+    "result": "PASS",
+    "version": "6.4.1",
+    "viewports": 2,
+    "realModulesHashed": 4,
+    "realTilesVerified": true,
+    "markersPerViewport": 29,
+    "softwareWebGL": true,
+    "WikipediaPhotosSimulated": true,
+    "writesBlocked": true,
+    "evidence": "docs/browser-maplibre-pages-results.json"
+  },
+  "activatedIds": [
+    "ec-spider-bin",
+    "mx-spider-errands"
+  ],
+  "productionMigrationExecutedByThisSession": false,
+  "collectionCoverageComplete": false,
+  "missingPhotos": 447,
+  "pendingCountries": 48,
+  "emptyCountries": 31,
+  "licenseUnverified": 14,
+  "authenticatedWritesVerified": false,
+  "productionPersistenceVerified": false,
+  "otherRepositoryAuditsHistorical": true
 }

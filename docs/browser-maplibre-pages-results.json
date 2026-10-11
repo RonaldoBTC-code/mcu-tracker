@@ -1,6 +1,6 @@
 [
   {
-    "checkedAt": "2026-10-11T21:40:28.157Z",
+    "checkedAt": "2026-10-11T21:56:13.473Z",
     "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
     "result": "PASS",
     "viewport": {
@@ -23,7 +23,7 @@
     "uncaughtErrors": []
   },
   {
-    "checkedAt": "2026-10-11T21:40:33.611Z",
+    "checkedAt": "2026-10-11T21:56:20.655Z",
     "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
     "result": "PASS",
     "viewport": {
@@ -38,7 +38,7 @@
       "maplibre-gl.css",
       "maplibre-gl.mjs"
     ],
-    "realTileResponses": 8,
+    "realTileResponses": 4,
     "markers": 29,
     "softwareWebGL": true,
     "WikipediaPhotosSimulated": true,

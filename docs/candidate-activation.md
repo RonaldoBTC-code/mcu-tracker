@@ -11,7 +11,7 @@ Ecuador: Spider-Man usa una papelera como plataforma junto a un taxi; 665×1024,
 
 El importador transaccional pasó: 63 fotos, 20 países, 176 variantes, sin duplicados de archivo/píxeles/pHash y sin pares pendientes de revisión. Las 61 fotos anteriores mantienen IDs, rutas y bytes de imagen. Las nuevas reciben IDs propios y no heredan likes ni vistas. Las cuatro fotos retiradas siguen conservando identidad e interacciones en servidor.
 
-Calidad local: 63 fotos en los cuatro casos móvil/escritorio DPR1/2; 252 mediciones PASS, píxeles suficientes en ambos ejes, proporción y carga diferida por país. Navegación local: 51 colecciones, 63 fotos, progreso/recarga y guía 7→8→fin en dos tamaños, sin errores no manejados. La prueba pública se registra después de su despliegue; el PASS del PR #14 acredita todavía 61 fotos.
+Calidad local: 63 fotos en los cuatro casos móvil/escritorio DPR1/2; 252 mediciones PASS, píxeles suficientes en ambos ejes, proporción y carga diferida por país. Navegación local: 51 colecciones, 63 fotos, progreso/recarga y guía 7→8→fin en dos tamaños, sin errores no manejados. Publicación final PR #15 comprobada: 229 archivos idénticos, 51 colecciones/63 fotos y guía en dos tamaños, 252 mediciones de calidad y 50 tarjetas de contadores reales incluida recarga. Ver publication-results.json; el PASS del PR #14 acredita la versión histórica de 61 fotos.
 
 Las dos nuevas no tienen una versión publicada anterior; la comparación no inventa una mejora contra una imagen ausente. El archivo de reproducción admite previousAvailable:false. Las seis comparaciones históricas permanecen diferenciadas.
 
