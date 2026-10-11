@@ -1,6 +1,6 @@
 {
-  "status": "prepared-local-validation",
-  "checkedAt": "2026-10-11T18:12:08.337Z",
+  "status": "source-published-and-verified",
+  "checkedAt": "2026-10-11T18:30:36.147Z",
   "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
   "baselineSourceCommit": "d5e299738fea20f5fe46b2f811e881fe427b502b",
   "photos": 61,
@@ -26,7 +26,7 @@
     ],
     "readOnly": true
   },
-  "publicCurrentSourceVerification": "pending-new-deployment",
+  "publicCurrentSourceVerification": "PASS",
   "collectionCoverageComplete": false,
   "missingPhotos": 449,
   "licenseUnverified": 14,
@@ -35,5 +35,43 @@
   "pendingNewIds": [
     "ec-spider-bin",
     "mx-spider-errands"
-  ]
+  ],
+  "pullRequest": 13,
+  "sourceCommit": "759ee9df69c6e8aa78527cb9356d5b592b6b1bff",
+  "sourceTree": "1987d7bf4a3f01104e4da9e5817ae972e0fa8037",
+  "workflow": {
+    "id": 38163719214,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38163719214"
+  },
+  "publicSourceFilesVerified": 224,
+  "publicBrowserQuality": {
+    "result": "PASS",
+    "configurations": 4,
+    "photosPerConfiguration": 61,
+    "uncaughtErrors": 0,
+    "evidence": "docs/browser-quality-results.json"
+  },
+  "publicBrowserFull": {
+    "result": "PASS",
+    "viewports": 2,
+    "countriesPerViewport": 51,
+    "photosPerViewport": 61,
+    "mapImageDisplayChecksPerViewport": 122,
+    "trackerEntryAndReload": true,
+    "explicitMemeNavigation": true,
+    "noInitialMemeRequests": true,
+    "progressSurvivesNavigation": true,
+    "guide7to8toEnd": true,
+    "uncaughtErrors": 0,
+    "evidence": "docs/browser-pages-results.json"
+  },
+  "publicBrowserSharedStats": {
+    "result": "PASS",
+    "cardsCompared": 48,
+    "aggregateRequests": 15,
+    "writesBlocked": true,
+    "evidence": "docs/browser-shared-stats-results.json"
+  }
 }

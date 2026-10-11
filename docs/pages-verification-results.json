@@ -1,834 +1,1128 @@
 {
-  "checkedAt": "2026-10-11T16:27:44.731Z",
-  "sourceCommit": "d5e299738fea20f5fe46b2f811e881fe427b502b",
+  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "checkedAt": "2026-10-11T18:27:50.912Z",
   "result": "PASS",
-  "files": 118,
-  "rows": [
+  "files": [
     {
-      "path": "index.html",
-      "http": 200,
-      "identical": true,
-      "bytes": 200829,
-      "sha256": "ca7d776f067efcba470a2100a3c20a7b3e162233ed8a121cede643e08c70cadb"
+      "file": "index.html",
+      "bytes": 202307,
+      "sha": "e33372aa9501eeec15c8da497e4a07b1760e39bf"
     },
     {
-      "path": "scripts/meme-feed.js",
-      "http": 200,
-      "identical": true,
-      "bytes": 14144,
-      "sha256": "8670dffcc7b7851a8174cbc4e897f5f26f3cfd1bf293538e9422d4da50bd553b"
+      "file": "scripts/meme-feed.js",
+      "bytes": 14249,
+      "sha": "a142b03a703e8c32c733a0965b1b1eb188c0107b"
     },
     {
-      "path": "data/memes/AE.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/AE.json",
       "bytes": 149,
-      "sha256": "78216e452ab43c1725a1ef30563f7e6ae611fa2f7d82b3379127a7c29f5b21c5"
+      "sha": "4b171f2d3a02e052dc7d3b27d6a238a942839113"
     },
     {
-      "path": "data/memes/AR.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/AR.json",
       "bytes": 149,
-      "sha256": "7b870e4372e6127e02257f0c7c7aaa503873c80a766fac55468e0dcfef683a37"
+      "sha": "0d305b7300dd2f5f31e5f8ff748797f474c4af6c"
     },
     {
-      "path": "data/memes/AT.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2533,
-      "sha256": "5e65d0c30c90de259c6653aebfa1c61dd3bfd7a10f0a51acb7e44371905c6747"
-    },
-    {
-      "path": "data/memes/AU.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/AT.json",
       "bytes": 149,
-      "sha256": "9087d9da2792e204129873f77239c9db2788b18f0fa363bedb164957464f04fa"
+      "sha": "891d31e8bfd0947492d992a44d9e21885137782b"
     },
     {
-      "path": "data/memes/BE.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 16141,
-      "sha256": "bfb86a28321e56dddef868d0aca8a979669c37f082ecd53a9906aa22df032bcd"
-    },
-    {
-      "path": "data/memes/BO.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/AU.json",
       "bytes": 149,
-      "sha256": "f85a98058790ebae995e05a6db65af03b32c045e22d18eb8d607781769741278"
+      "sha": "738c0957463a436824cbf14e68a54005012ab4d7"
     },
     {
-      "path": "data/memes/BR.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 7982,
-      "sha256": "1693ae509c2dade8d8d849734bf1719971a68ea35cce5fceac8fc22c18288f0a"
+      "file": "data/memes/BE.json",
+      "bytes": 25032,
+      "sha": "22afe61be7b61d3f73e2aa52559b1cac9d1a56bc"
     },
     {
-      "path": "data/memes/CA.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 26601,
-      "sha256": "4363502e3665f567ba1be90fcc76520a7b53fcbf06f518c7b3fd7f27b0995eff"
-    },
-    {
-      "path": "data/memes/CH.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/BO.json",
       "bytes": 149,
-      "sha256": "8af2e2ea12e68976a6da36f00f4b0899eb26729894b65be3eb5d1c166c8f80a3"
+      "sha": "5029c85f7e66a71784dd044ee5dc02e4571564c1"
     },
     {
-      "path": "data/memes/CL.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2473,
-      "sha256": "25883a91e6fe945c57e3ff42d194dd7efdb0de1adcf5498259ec224ca0e7967d"
+      "file": "data/memes/BR.json",
+      "bytes": 11518,
+      "sha": "5be2b6a32090b42243e9894b89a165960f543262"
     },
     {
-      "path": "data/memes/CO.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2701,
-      "sha256": "3f9efdd05ceb4db11ef9f92b5e9c8b6545d8a94162a9f0cc5020e7281987c793"
+      "file": "data/memes/CA.json",
+      "bytes": 41873,
+      "sha": "92a1ab5061d9d3755a87c6bd52c6ca5606acebfb"
     },
     {
-      "path": "data/memes/CR.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/CH.json",
       "bytes": 149,
-      "sha256": "a00805c2ae01bb7fb4f2c9166f3cfc14afb383d1616bcdca5686aa1ddfc6a01a"
+      "sha": "0f55b009ae2dc210c0e18c1c9901d429bb3f3504"
     },
     {
-      "path": "data/memes/CU.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2733,
-      "sha256": "a114845db0444293761e12b541484e1b44b3186946a68379ca03c2a12e5ba36a"
-    },
-    {
-      "path": "data/memes/DE.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/CL.json",
       "bytes": 149,
-      "sha256": "44f215f43db39ec07c5e3cf8fccbf71ae737044ce771bb39859fe577a2959844"
+      "sha": "f3d756d92a0513e05afefe4a7d1452527b6fdc2b"
     },
     {
-      "path": "data/memes/DK.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/CO.json",
+      "bytes": 3779,
+      "sha": "ab188a49822a9152ba0b66a5417991f1a1e2adfe"
+    },
+    {
+      "file": "data/memes/CR.json",
       "bytes": 149,
-      "sha256": "182f7b3917751d744ce1435171f57e9a71bd8b7f06783fbce7d38bacc84c8d4d"
+      "sha": "ba33a578e360f5707697c1dcd96c37c74dce6c7e"
     },
     {
-      "path": "data/memes/DO.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/CU.json",
+      "bytes": 4368,
+      "sha": "e7c45ecd6fa74d02e5cd26d5134a14ace2bcf66c"
+    },
+    {
+      "file": "data/memes/DE.json",
       "bytes": 149,
-      "sha256": "b32d8378a12be898b280cdf58685360d2c12764b1fd560964bb6018b9f96ac8e"
+      "sha": "744b956dec78c64b72f6c9280f8f2c067dcdd635"
     },
     {
-      "path": "data/memes/EC.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2502,
-      "sha256": "8463ed7cd133cbec931c3901770825ad05535a4a703b5a00aec31119f38eb24b"
-    },
-    {
-      "path": "data/memes/ES.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 5039,
-      "sha256": "ce1c6ca23c7ddd03e8c5dbf58ab1cc0b66cc6fff0271265885038167818abd39"
-    },
-    {
-      "path": "data/memes/FI.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/DK.json",
       "bytes": 149,
-      "sha256": "fb1ed77802e7f61763693148b23ff729be80dae14a7dbd997826f4b786e2a566"
+      "sha": "8735f91a64b05150b9dd810118a39fe857b8c403"
     },
     {
-      "path": "data/memes/FR.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 10498,
-      "sha256": "7654bd692b3d71dda1b4416d28668f1838439f966aa05e8e97c51aa3d34f50e5"
-    },
-    {
-      "path": "data/memes/GB.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 25718,
-      "sha256": "3a9c2814a34b732e5d01477cf25f8be97eae5a72e55496b0f53a2566540b1bbb"
-    },
-    {
-      "path": "data/memes/GT.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/DO.json",
       "bytes": 149,
-      "sha256": "d0b250ad5927b6894ff1101ee20efa758c6e7bd29a35db1f8ef76052b1c8a95d"
+      "sha": "37c11822d99604a224ed83df97545f8675153759"
     },
     {
-      "path": "data/memes/HN.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2518,
-      "sha256": "852ee8a5273d4277fe8b2926f306db92ed0ad5b1b7cc219b29d6d34e6b4cbf21"
+      "file": "data/memes/EC.json",
+      "bytes": 3859,
+      "sha": "1fa24d1cbfe2e98d832d40db963b9db27ef18e21"
     },
     {
-      "path": "data/memes/ID.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2515,
-      "sha256": "29909df42f88882dde64bb104ed9ca1cdfcee6680d45e01505e526a72a4760b4"
+      "file": "data/memes/ES.json",
+      "bytes": 8142,
+      "sha": "69e63b4b2889a1bbb95f79f8a14adfca7cd7ec95"
     },
     {
-      "path": "data/memes/IE.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/FI.json",
       "bytes": 149,
-      "sha256": "98f152e868b49c718880d028d2d18dd4fa13bd496a1fcd3cc620b788776217f7"
+      "sha": "2c251102d0b030d63b69952590fc3675c2d6be8a"
     },
     {
-      "path": "data/memes/IL.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2551,
-      "sha256": "50217851b4e8fba33a03f421bd57a53ff5f642af7a3c118576528240ae1d88da"
+      "file": "data/memes/FR.json",
+      "bytes": 16612,
+      "sha": "93808f4f10ab674e053ea107c8c17b39afc284ca"
     },
     {
-      "path": "data/memes/IN.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2725,
-      "sha256": "cf5db34cd67fc00aa1841825c18fc0481c1e144970842f6a35dc09038ac379a9"
+      "file": "data/memes/GB.json",
+      "bytes": 40745,
+      "sha": "beb33c58a236fbcdf0dbb127be1c889fa09994fa"
     },
     {
-      "path": "data/memes/IT.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/GT.json",
       "bytes": 149,
-      "sha256": "a7544849bf3802d2e3b9abed997efc484c003c76ee69a1ae5cdc1fc2c237a957"
+      "sha": "0c785265c9797a7eee595759d3fea5c36737e89c"
     },
     {
-      "path": "data/memes/JP.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 5207,
-      "sha256": "4f164da61516845872a44265f2b009f0224d8c7b5978e723cb5441e5ef46592e"
+      "file": "data/memes/HN.json",
+      "bytes": 3596,
+      "sha": "6040779777dafb9cf31c5636ddf07d341a6fe1c9"
     },
     {
-      "path": "data/memes/KR.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/ID.json",
+      "bytes": 3594,
+      "sha": "635a1917aedd5a6560e7239db0eb23dbca4cde46"
+    },
+    {
+      "file": "data/memes/IE.json",
       "bytes": 149,
-      "sha256": "ed9161718f25031d3d0da7f513a19653166e58e9b8d3c91e5a2a6d6601fd2a13"
+      "sha": "0bce2f15118b4ef9619ffe71cc9fe4dc0ca47c83"
     },
     {
-      "path": "data/memes/MX.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2690,
-      "sha256": "14d1a9cce418b72aad46bdb9757f8174a37124945438854e3a63f047a3ba5af0"
+      "file": "data/memes/IL.json",
+      "bytes": 4104,
+      "sha": "98c17ac3460ceb9a7aed9aa6aeb02c140b579bc9"
     },
     {
-      "path": "data/memes/NI.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/IN.json",
+      "bytes": 4085,
+      "sha": "8fd52dc7fb63eda187de51960b3962c598e2d091"
+    },
+    {
+      "file": "data/memes/IT.json",
       "bytes": 149,
-      "sha256": "6396b8d234c67de6afa6320e82fd5fe5483f749fdb33ddd17182f9f90309171c"
+      "sha": "e3311e9500f47d05fc2994f3e7c019b1feeeb73e"
     },
     {
-      "path": "data/memes/NL.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/JP.json",
+      "bytes": 8299,
+      "sha": "04efcfb4d94420bbc1809e63863d10ba8a3a83e6"
+    },
+    {
+      "file": "data/memes/KR.json",
       "bytes": 149,
-      "sha256": "45cce10e54504d2e8bda6e8ffb228caa0e16e9b3ea6a52803c63446eaf3770cd"
+      "sha": "9056a538bde35a35bef8af60fd85ac36f4f334dc"
     },
     {
-      "path": "data/memes/NO.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/MX.json",
       "bytes": 149,
-      "sha256": "b905a6374b41774e2dee0dd8ba7c494be5491863ea70506390bcc90bae5cadca"
+      "sha": "380794f3c17fb9e9422904efc49d3faf61b1abce"
     },
     {
-      "path": "data/memes/NZ.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/NI.json",
       "bytes": 149,
-      "sha256": "99118c75a2f060cfd5a4f4b579c87c797005eafc929132a36caa8bb86f982e8b"
+      "sha": "6d8a21ea873698a15423666558e286a381eebeba"
     },
     {
-      "path": "data/memes/PA.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/NL.json",
       "bytes": 149,
-      "sha256": "ebdef79f7a005a72d462324280c330ee2dbf9e7c2894976487771ce46316a1e9"
+      "sha": "a2f13566758b4e359b715dac644fa99772224625"
     },
     {
-      "path": "data/memes/PE.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 5390,
-      "sha256": "600a162a5c54e86c0d2c447fee39cddabdb2b7d8055f1367128a79d7cf362666"
-    },
-    {
-      "path": "data/memes/PH.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 4754,
-      "sha256": "2ae3db7b19f8366a5041f4423a2ea82eebb70873846fb73bb85ac1805a92f5ed"
-    },
-    {
-      "path": "data/memes/PL.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/NO.json",
       "bytes": 149,
-      "sha256": "d74d48c7df767bbc085327a9503e4d31dbf9ae5dfc4713aa7b89e03696386c8c"
+      "sha": "b67c42047b9de94ee30d458029e174d98ad62e31"
     },
     {
-      "path": "data/memes/PR.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/NZ.json",
       "bytes": 149,
-      "sha256": "4517c4b135f5c65817fe11a7fba19dbe1bb62924144e78d9816c496d2894ce0f"
+      "sha": "c33ea0e2209f26dc391f5eb5f63d4d4820b897d7"
     },
     {
-      "path": "data/memes/PT.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/PA.json",
       "bytes": 149,
-      "sha256": "60ce89083f674dad151cd5be4694f7401dc94aa344fda94f49b62e7057f2245a"
+      "sha": "9fd4f9e3d96596ad718730c139c2b0180d912c2d"
     },
     {
-      "path": "data/memes/PY.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/PE.json",
+      "bytes": 3948,
+      "sha": "df7c62f5ca49f7d429282d72797b4513e7a2a837"
+    },
+    {
+      "file": "data/memes/PH.json",
+      "bytes": 7854,
+      "sha": "1aa82ee525aa39c254d073d7b33b71fe16cf40dd"
+    },
+    {
+      "file": "data/memes/PL.json",
       "bytes": 149,
-      "sha256": "ff49adc8a160dc7c64d4eab17777f2110e0abf9f06b3863431e605ae02997ab8"
+      "sha": "834e9b358548f241c51a51f031c9983fb430a62b"
     },
     {
-      "path": "data/memes/SE.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/PR.json",
       "bytes": 149,
-      "sha256": "890e27d71105f6d138041a4417cd58a7cda9920008b61c66da0eb9186689064a"
+      "sha": "5b1312fcddca71a5952efb065bb61ffa643ba543"
     },
     {
-      "path": "data/memes/SG.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/PT.json",
       "bytes": 149,
-      "sha256": "cf0f1dcb1e98edf879d5bbdbe9ebdc9a151bb43d395cfcf05f76d20298fd120d"
+      "sha": "d448fd6b8b1922be94ef1f126424598ddea0f3b6"
     },
     {
-      "path": "data/memes/SV.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 2493,
-      "sha256": "f450a87b55d2ece9068a31c03959766fc3349f8be92f6a7695fce7097e06086f"
-    },
-    {
-      "path": "data/memes/TH.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 6928,
-      "sha256": "ca7aa2a5765ff8ebafe177b31f23525293c4e140ad6dc9ffe3780e68919a916f"
-    },
-    {
-      "path": "data/memes/TR.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/PY.json",
       "bytes": 149,
-      "sha256": "7edba8ed96ae18bbbad187d4f9eb18e7f54413c0b1767dc7983d81da6f7e937d"
+      "sha": "1b56223a811c0d8728670c4819492d19ba911bcb"
     },
     {
-      "path": "data/memes/US.json",
-      "http": 200,
-      "identical": true,
-      "bytes": 25720,
-      "sha256": "940e76cf298d0a879b4e7d95a44065b5b0bd484c64660a8272e4c421a7258fb3"
-    },
-    {
-      "path": "data/memes/UY.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/SE.json",
       "bytes": 149,
-      "sha256": "8326ad2d46ce70f448fac76bc0b7a5a1778e49175a132d1aabf18720c1ee909a"
+      "sha": "15647ef87b61c3799791c2e16a66279c8c2ef739"
     },
     {
-      "path": "data/memes/VE.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/SG.json",
       "bytes": 149,
-      "sha256": "17e91cb295032b867f473d1138f6d99314f7f927ef2641a027ed6793a72589c5"
+      "sha": "9333d786e81648b64974abc751de2469e85131ba"
     },
     {
-      "path": "data/memes/ZA.json",
-      "http": 200,
-      "identical": true,
+      "file": "data/memes/SV.json",
+      "bytes": 4053,
+      "sha": "484c767aa5f93c481ff5e4aee3754c9832cc5b0f"
+    },
+    {
+      "file": "data/memes/TH.json",
+      "bytes": 10715,
+      "sha": "c21a864096082db3092f7d1349c4e440bd1ddc2b"
+    },
+    {
+      "file": "data/memes/TR.json",
       "bytes": 149,
-      "sha256": "8142c4ff7bb3632a2726fe4954f92e0abc2b789e11cfdc648efcce5d4fb20680"
+      "sha": "e8a2761ef688b71357dc6ea3133b251146599e83"
     },
     {
-      "path": "data/memes/BR/images/br-spider-circle-sp.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 30208,
-      "sha256": "8c52e7a55f23f0af79dbf99caf6633ed8280c212fff3e77e667eb91fda9ef40d"
+      "file": "data/memes/US.json",
+      "bytes": 40994,
+      "sha": "82d9250eef87ce8f279638316a06d1f6fab62017"
     },
     {
-      "path": "data/memes/BR/images/br-spider-circle-bh.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 90272,
-      "sha256": "228756f47380de2179ee0377451e0218750ced44bbe6dfbdd4646155d62db68b"
+      "file": "data/memes/UY.json",
+      "bytes": 149,
+      "sha": "3e00838162974bd6a63fc1414df57e2841871071"
     },
     {
-      "path": "data/memes/BR/images/br-spider-embrace.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 31060,
-      "sha256": "cdc83f01405dfb882ecb60cda56e527897c694e06e7f8ee60c59246fa22ce9d1"
+      "file": "data/memes/VE.json",
+      "bytes": 149,
+      "sha": "d3b5cc17e5823f5a20a99ba555ea6b881af1c5a3"
     },
     {
-      "path": "data/memes/EC/images/ec-spider-bus.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 24660,
-      "sha256": "96671622ff8f5617963bff131c80504785bd49f9f6b8c84d6dce1226a8c1d057"
+      "file": "data/memes/ZA.json",
+      "bytes": 149,
+      "sha": "d8acc41caee45e9864302a0c85777ad295a8affb"
     },
     {
-      "path": "data/memes/MX/images/mx-spider-class.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 7564,
-      "sha256": "e52cd7e8764563be1fb25b8060df53db318898e3d0f8ab51de994c662dc54058"
+      "file": "data/memes/BR/images/br-spider-circle-sp-1280-1e0c64ef9472.webp",
+      "bytes": 48778,
+      "sha": "9d43a666e807ade8516a2f1af957500bacd4ec89"
     },
     {
-      "path": "data/memes/PE/images/pe-spider-dance-bus.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 8554,
-      "sha256": "d84b106c6d542c28a9fac5895e0cf5c1efd9ae72ec4da3d19da46da622df18ae"
+      "file": "data/memes/BR/images/br-spider-circle-sp-640-ebd43e7d9253.webp",
+      "bytes": 45788,
+      "sha": "d791ef2955dda7d316c624764a11adcb4947a46b"
     },
     {
-      "path": "data/memes/TH/images/th-spider-student.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 53206,
-      "sha256": "f2dd0a07485b4592db0405514deaed34c929cbd5e51190ad439781dcc0d479dd"
+      "file": "data/memes/BR/images/br-spider-circle-bh-1280-5e1393017c0e.webp",
+      "bytes": 268672,
+      "sha": "1904fa41170a233a0dd32f218d471362cde5d215"
     },
     {
-      "path": "data/memes/TH/images/th-spider-yogurt.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 24038,
-      "sha256": "0d88edef09430f894eaf54accb8a182370082090f5d90b063cf66efd8d293205"
+      "file": "data/memes/BR/images/br-spider-circle-bh-640-1f5315a40464.webp",
+      "bytes": 120738,
+      "sha": "42150ae7a903a12326a0ff82e60253b0bd57a6ad"
     },
     {
-      "path": "data/memes/TH/images/th-spider-vegetables.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 73380,
-      "sha256": "69d321176cbe5e97bd57afd041220d3890056087ccbfcdd7581b4bb9ed2c4e1b"
+      "file": "data/memes/BR/images/br-spider-embrace-1280-40e6996bedd0.webp",
+      "bytes": 58500,
+      "sha": "e379f542db8aec5b09d356560776060902eeff18"
     },
     {
-      "path": "data/memes/PH/images/ph-spider-commute.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 13828,
-      "sha256": "6ad1e1c70a9bf2ef547eb047ae098273cd3d9d538db4b7fd9810b3c128582c00"
+      "file": "data/memes/BR/images/br-spider-embrace-640-1c08c3159c4c.webp",
+      "bytes": 55708,
+      "sha": "f790b52fe83e93753acaa063e59b6ec78b7ebc33"
     },
     {
-      "path": "data/memes/PH/images/ph-spider-dragon.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 62606,
-      "sha256": "b856e03527f03740c2f714a1a794c9a72fb270df74d040d4483e7c065811da8c"
+      "file": "data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp",
+      "bytes": 94914,
+      "sha": "73c664357610ad0fd865adf00449af9fa154793c"
     },
     {
-      "path": "data/memes/US/images/us-iron-board.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 12564,
-      "sha256": "66ed7c53c905c16c4c0ee8db06e1f13056e37491a0c3e082bcc46a2ae3b0f8bb"
+      "file": "data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp",
+      "bytes": 36820,
+      "sha": "4b2f1b703cb553c84cbb8c4ce11ec559dcf6ab5e"
     },
     {
-      "path": "data/memes/US/images/us-captain-dorito.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 48710,
-      "sha256": "85a89672204200cf563b654cec32fcce3b64e3d51be9ca20106f0793da8c9a43"
+      "file": "data/memes/EC/images/ec-spider-bus-1920-57317011295d.webp",
+      "bytes": 167918,
+      "sha": "5cd6b9035626e63d122e1bee80573719c86b5772"
     },
     {
-      "path": "data/memes/US/images/us-deadpool-iron.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 62554,
-      "sha256": "f0859bcd8b68b2a12775dd501c0650edd7d970722eacef6a25e053cbfe1e1d5a"
+      "file": "data/memes/TH/images/th-spider-student-1280-a9ee16b46796.webp",
+      "bytes": 138664,
+      "sha": "3a79aa4ad680bc4132c07e2888605c8e7a83817b"
     },
     {
-      "path": "data/memes/CA/images/ca-iron-pikachu.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 56428,
-      "sha256": "0a37ca0dc53cc0024e655b3035a84eb206883fecced80c048933523afc33c23d"
+      "file": "data/memes/TH/images/th-spider-student-640-995e9badb22c.webp",
+      "bytes": 81076,
+      "sha": "fd5ab395d0d9f6c789a47a00d4b16581ba3b30dc"
     },
     {
-      "path": "data/memes/GB/images/gb-iron-buzz.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 31094,
-      "sha256": "9ce3a9ee863bf987e348e8f5a93a5a704472e61c12fc80da345ae3cb95c759be"
+      "file": "data/memes/TH/images/th-spider-yogurt-1280-1c58bc2657e6.webp",
+      "bytes": 94934,
+      "sha": "962cb7f8251e75e2ae00ee8b8a55db3bb953a06d"
     },
     {
-      "path": "data/memes/BE/images/be-deadpool-throne.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 59840,
-      "sha256": "99c30a6e03577f81f5ecc5f2b1017d5075e6b89fdfc0986a9cf2a5fb49004967"
+      "file": "data/memes/TH/images/th-spider-yogurt-640-f9174374247b.webp",
+      "bytes": 35972,
+      "sha": "cece61eb78797fe15a0ff9e93de63faaa7a1e4ff"
     },
     {
-      "path": "data/memes/BE/images/be-deadpool-duff.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 38228,
-      "sha256": "13641210a1a80fb76a12bfa81ce0aef59cd28c146d5b9ee095be345c9c27af6c"
+      "file": "data/memes/TH/images/th-spider-yogurt-1920-3fd818ca043e.webp",
+      "bytes": 163338,
+      "sha": "0c398d71f4e3c61d0c6e2e8cdd09c93e60bf1998"
     },
     {
-      "path": "data/memes/BE/images/be-deadpool-spider.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 46308,
-      "sha256": "5691dae22a8132af372ba69326c81f5a261de0abfc66922879001cf207305fe2"
+      "file": "data/memes/TH/images/th-spider-vegetables-1280-51ca346b6413.webp",
+      "bytes": 296024,
+      "sha": "ff1eb20329589544bc2d42a50abdde8efbdc9b8d"
     },
     {
-      "path": "data/memes/CA/images/ca-iron-fanexpo.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 61314,
-      "sha256": "64e9f0836486190210daa1e711a5c7324a0ccaad8c7f2c070e236fe7c97f09c7"
+      "file": "data/memes/TH/images/th-spider-vegetables-640-ab4a24f72daa.webp",
+      "bytes": 117288,
+      "sha": "16b18771197f09f5559b12d77b2d568e4551bde6"
     },
     {
-      "path": "data/memes/GB/images/gb-deadpools-throne.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 76364,
-      "sha256": "ff7b7966952eff5de5c07cbb5fc22b35b80d770d5a28e8773fe08e8f291fee34"
+      "file": "data/memes/PH/images/ph-spider-commute-1280-9ea027bbb6af.webp",
+      "bytes": 63716,
+      "sha": "8ab8175683c9c783d5702295d0c5a255959af01c"
     },
     {
-      "path": "data/memes/GB/images/gb-spider-tube.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 34036,
-      "sha256": "0b94bca6dc9cb3dc093cf14369b7532efd6b74441c31d6f912557bb867d98020"
+      "file": "data/memes/PH/images/ph-spider-commute-640-434a982a3091.webp",
+      "bytes": 37484,
+      "sha": "6e2a8335c579c13bcc40d9291c2c861ae6aef767"
     },
     {
-      "path": "data/memes/FR/images/fr-spider-hospital.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 40392,
-      "sha256": "8be3a9421ae0bb5aa572a3ea25aa0816b49544c7a8dd8fa36c0ebd57a4e97a6b"
+      "file": "data/memes/PH/images/ph-spider-dragon-1280-a4877c0280c0.webp",
+      "bytes": 251740,
+      "sha": "a19da4c4a9fccb5cf8df02f34293d21401dcf262"
     },
     {
-      "path": "data/memes/CA/images/ca-deadpool-maid.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 25856,
-      "sha256": "c54bb890ed75cd7b162608a07d72d3add4f86e2b5fbd29c005b0ead10843dc7f"
+      "file": "data/memes/PH/images/ph-spider-dragon-640-be05ea9ad52e.webp",
+      "bytes": 76194,
+      "sha": "d2a1d7ff69d1095156d433d0f964a73f97834a7b"
     },
     {
-      "path": "data/memes/ID/images/id-spider-vegetables.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 54230,
-      "sha256": "d6425091aa2499240cbf6d46fe0183ff8209a8c4b872cd12958bd57603ca99d7"
+      "file": "data/memes/PH/images/ph-spider-dragon-1920-f52ac1d2b079.webp",
+      "bytes": 590214,
+      "sha": "276c21c9f584f55a0e5029bad9e11af083b2ad71"
     },
     {
-      "path": "data/memes/HN/images/hn-spider-graduate.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 33070,
-      "sha256": "db85091b5b2c937d9f81c4b01128baf7a8ea1d0986747205fcecb8cec01460cb"
+      "file": "data/memes/US/images/us-iron-board-1280-6b6b0da9b8c2.webp",
+      "bytes": 94072,
+      "sha": "67011664a8e5a0f213e30354ab191f7549547efe"
     },
     {
-      "path": "data/memes/CO/images/co-spider-handstand.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 11160,
-      "sha256": "a93012ec383a693b726dd2dc98c2c56fa03e53e94644de03ec82ec9984386d8b"
+      "file": "data/memes/US/images/us-iron-board-640-b0359daa4b25.webp",
+      "bytes": 23650,
+      "sha": "b084709114086f86521bc4d7daad94f77dc346dd"
     },
     {
-      "path": "data/memes/CL/images/cl-spider-cueca.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 20166,
-      "sha256": "e39f1b11fa91e3f0f6fc77d7d444fea78d0f38e76ed50428593fa1f3e40724ff"
+      "file": "data/memes/US/images/us-iron-board-1920-334a8e8b3682.webp",
+      "bytes": 241344,
+      "sha": "a7f3f6b18b1c09d2d1688be57b1dedca18bc1489"
     },
     {
-      "path": "data/memes/CU/images/cu-spider-nerf.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 36062,
-      "sha256": "972cd28787103955a062ae99ed062ac88dd9356a4984e1f09904db6199f4ac05"
+      "file": "data/memes/US/images/us-captain-dorito-1280-eb6e001d5eec.webp",
+      "bytes": 221436,
+      "sha": "95661234767f7e5be77e418aba74aad21f0fee94"
     },
     {
-      "path": "data/memes/FR/images/fr-deadpool-sailor.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 28080,
-      "sha256": "5bff910de0958a00d7ec51bc687c259dc2db2aa19ce6403b82f530bd87b55df2"
+      "file": "data/memes/US/images/us-captain-dorito-640-0d0f41d5ba2d.webp",
+      "bytes": 70748,
+      "sha": "f08cd41d57f4acb2fc0f0255575d8272239b380b"
     },
     {
-      "path": "data/memes/FR/images/fr-deadpool-2019.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 77964,
-      "sha256": "abcfb594e07fee74d1e0acf602d19817d4780ba7aa72342afa772ce9d9d37fdc"
+      "file": "data/memes/US/images/us-captain-dorito-1920-a72d3e72b528.webp",
+      "bytes": 420424,
+      "sha": "74a05c7fc528434d91d3a4f701d44a0d5876c2ca"
     },
     {
-      "path": "data/memes/JP/images/jp-deadpool-market.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 74970,
-      "sha256": "3a29348fdff5d00e41c9ff1321a02f62f37871133cbbae38a57710ff9f601eda"
+      "file": "data/memes/US/images/us-deadpool-iron-1280-a996bd409250.webp",
+      "bytes": 242900,
+      "sha": "b887202291dad95173c4b084c4f246a98c40070b"
     },
     {
-      "path": "data/memes/JP/images/jp-spider-crossing.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 91588,
-      "sha256": "a004db0e9271a45e19ed1b5ee6d10754149902ab8a5e40b4f2218505d019595e"
+      "file": "data/memes/US/images/us-deadpool-iron-640-7ba9ddcdf634.webp",
+      "bytes": 78658,
+      "sha": "0bb67e71a023c066b994eb1b1c0eb6e6032a6820"
     },
     {
-      "path": "data/memes/SV/images/sv-stan-spider.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 27900,
-      "sha256": "440e830bc60ecdabc4d7b013964e30fe8473b0f7a05d232c4c324e2238270aaa"
+      "file": "data/memes/US/images/us-deadpool-iron-1920-263c30148a51.webp",
+      "bytes": 316984,
+      "sha": "ce5af20f70717b9790a4a74ef7be994db0e9d36f"
     },
     {
-      "path": "data/memes/IL/images/il-spider-purim.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 64056,
-      "sha256": "2eead5dd5c3c6d5ea14d4466e848c462b4e49fcaa8bf58cabad893ee7ac13968"
+      "file": "data/memes/CA/images/ca-iron-pikachu-1280-0507931b9d9a.webp",
+      "bytes": 203474,
+      "sha": "86944cec1a4b030b9dfe306f24b04b626add6ea1"
     },
     {
-      "path": "data/memes/ES/images/es-spider-plaza.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 63796,
-      "sha256": "cc713119482339ed554d1eb28c02e8d29db50528153314e9fcfcb07af29a16ba"
+      "file": "data/memes/CA/images/ca-iron-pikachu-640-20b812abcbeb.webp",
+      "bytes": 64950,
+      "sha": "d14046ce6a982fc18e25754f5c01fb8cb28d65ec"
     },
     {
-      "path": "data/memes/ES/images/es-spider-smoking.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 42544,
-      "sha256": "89c9f4f249e5fce3654eb202050bde2a9a70303bdf64e7a3ba3fdf68f84580a6"
+      "file": "data/memes/CA/images/ca-iron-pikachu-1920-6d606249fb4f.webp",
+      "bytes": 400190,
+      "sha": "957a591f360fca9b8b82b8e314a9fe173f68bec0"
     },
     {
-      "path": "data/memes/AT/images/at-spider-dance.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 16212,
-      "sha256": "b2982c67f618a0719cecb6e7b648a829aaa775940ac3138c56a3c2ae59eb4099"
+      "file": "data/memes/GB/images/gb-iron-buzz-1280-29f9fdc0a109.webp",
+      "bytes": 97090,
+      "sha": "2892b8116599ee197cd02a9f38117d23c640a0e1"
     },
     {
-      "path": "data/memes/IN/images/in-spider-hood.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 47344,
-      "sha256": "4768a2fc30ab5edfb230995274ccda595ba37ead21bad169473d39c4b148f6bb"
+      "file": "data/memes/GB/images/gb-iron-buzz-640-bb430c3ed29c.webp",
+      "bytes": 39278,
+      "sha": "2c85adb954f54ef023c08387fbba77843209a7a0"
     },
     {
-      "path": "data/memes/PE/images/pe-spider-yoyo.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 48494,
-      "sha256": "af7a9c30de96c94ac7aa69b15253df15909fdfcd850c47c92c6a952a393b69a3"
+      "file": "data/memes/GB/images/gb-iron-buzz-1920-52812d5c8de4.webp",
+      "bytes": 166572,
+      "sha": "9adf2da330726770f7ed90798f1cd7f9cb296a27"
     },
     {
-      "path": "data/memes/CA/images/ca-spider-hawaiian.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 40764,
-      "sha256": "b41c81cd54b12a5d3e7a181303b900cfd80d928b5182963aec2c2de4f1a72bd4"
+      "file": "data/memes/BE/images/be-deadpool-throne-1280-7617c2d09cec.webp",
+      "bytes": 204324,
+      "sha": "e2b42d5a1072e08100b89eb5f4e3d70ee6ea3efe"
     },
     {
-      "path": "data/memes/CA/images/ca-miku-maid.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 33834,
-      "sha256": "8abd6b02e98e8b8cfc9df90eaebfaa102e0b974cab19772635f7028b3543c64a"
+      "file": "data/memes/BE/images/be-deadpool-throne-640-82937192b556.webp",
+      "bytes": 68704,
+      "sha": "ccddcfa25e6024a263f9ebfd09cbe3f4af86cc3c"
     },
     {
-      "path": "data/memes/CA/images/ca-deadpool-redhood.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 73746,
-      "sha256": "494b2218b4f0fe04116376280403a8d0104035b578ee658347d38d8567cbe6e4"
+      "file": "data/memes/BE/images/be-deadpool-throne-1920-6c8155394fde.webp",
+      "bytes": 376698,
+      "sha": "b8faacbc93e8a86747c7ea335657c24dcef72dca"
     },
     {
-      "path": "data/memes/CA/images/ca-deadpool-brainslug.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 45528,
-      "sha256": "d7684df01d25ade29701a63b9d42e15e00171d2ce94caacda4f0bb62e9dceb87"
+      "file": "data/memes/BE/images/be-deadpool-duff-1280-0572758b285b.webp",
+      "bytes": 153346,
+      "sha": "5f7d50e21002f73e00d4b0e9d98730a9261781d6"
     },
     {
-      "path": "data/memes/CA/images/ca-deadpool-chicken.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 64374,
-      "sha256": "515821b3f93ddc60acb9cda2a43470425cf7464857805bd6bc52d1c817136495"
+      "file": "data/memes/BE/images/be-deadpool-duff-640-f567a1f80f45.webp",
+      "bytes": 50974,
+      "sha": "beecd1fbc125512ce972e06079936e9472b01310"
     },
     {
-      "path": "data/memes/CA/images/ca-photobomb-pileup.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 39758,
-      "sha256": "52d01ab0f7c9b8f2aceaeb4b1ee9ea6b0de34fc38c2ddb06273007837725da5b"
+      "file": "data/memes/BE/images/be-deadpool-duff-1920-c8d9c16fe51f.webp",
+      "bytes": 279258,
+      "sha": "ce54385ce17300c52337ccc240f004b5569d2913"
     },
     {
-      "path": "data/memes/US/images/us-deadpool-pope.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 98258,
-      "sha256": "131cc389a1e037c9e8a7492b344801e4d002b58058817471484720dbd2ba570e"
+      "file": "data/memes/BE/images/be-deadpool-spider-1280-a11f057bda17.webp",
+      "bytes": 156820,
+      "sha": "7d7ef77aa4c552781bfbabf52185b69394c7b544"
     },
     {
-      "path": "data/memes/US/images/us-deadpool-lego.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 31232,
-      "sha256": "a45ae94611464415f379c0048c347b0628a2f3c9658259d8525f9acc6a86c058"
+      "file": "data/memes/BE/images/be-deadpool-spider-640-d2e1e1fd1b0b.webp",
+      "bytes": 55746,
+      "sha": "03f10a10dd8b8d0f5f3db3cc54437849a3bc7935"
     },
     {
-      "path": "data/memes/US/images/us-spider-frog.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 74060,
-      "sha256": "06b9e99ca95f85d20302213c0bdbd3201ad9a16e7bf846c1b8f2e545a4882ca0"
+      "file": "data/memes/BE/images/be-deadpool-spider-1920-7b734bbe7edd.webp",
+      "bytes": 279860,
+      "sha": "6b44126c39fd40a1da9d10af9830b506c70c5c0d"
     },
     {
-      "path": "data/memes/CA/images/ca-deadpool-lantern.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 53856,
-      "sha256": "8567d8f623d30a1aabd91808c8ff922c2fe27fc00802b47ca8374a53833cbb19"
+      "file": "data/memes/CA/images/ca-iron-fanexpo-1280-f5f6329d42e1.webp",
+      "bytes": 223392,
+      "sha": "2b5c2b3102ed677655fe61f4dff007cb8ec3103e"
     },
     {
-      "path": "data/memes/US/images/us-spider-thor.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 84612,
-      "sha256": "1dac4eedd7b05c3bb167672924682947f17bb1da9e916cb1ee70d3eeb968db27"
+      "file": "data/memes/CA/images/ca-iron-fanexpo-640-7d6f667d76ea.webp",
+      "bytes": 70086,
+      "sha": "aa860754c720db41f7bde8cf5beb426da64593a5"
     },
     {
-      "path": "data/memes/US/images/us-deadtrooper.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 51480,
-      "sha256": "086906e8ed5247ace143968b552f5b0ffb89135904debf9fa6ad0ee673af9b03"
+      "file": "data/memes/CA/images/ca-iron-fanexpo-1920-6196dc73a3b3.webp",
+      "bytes": 433634,
+      "sha": "ddd7839807cf9392fe17aad75613a6bbb5db85da"
     },
     {
-      "path": "data/memes/US/images/us-captain-spider.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 48878,
-      "sha256": "11915ca32a28dbbe0ead32ff7c32c15e16ec981bfb7c5541d6b13fa64dd18b3d"
+      "file": "data/memes/GB/images/gb-deadpools-throne-1280-52612e1db1c9.webp",
+      "bytes": 314360,
+      "sha": "8e5b597ec3943e8203b2c403fdbd01a24895fe19"
     },
     {
-      "path": "data/memes/US/images/us-deadpool-elsa.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 52264,
-      "sha256": "580cd2b9000be31d6a16f96c4bb199ee3203579743a0ebba39b369494692ec5c"
+      "file": "data/memes/GB/images/gb-deadpools-throne-640-fcd55b4d0662.webp",
+      "bytes": 90714,
+      "sha": "1b273d7bdd408cced382382eacee9347d2707997"
     },
     {
-      "path": "data/memes/GB/images/gb-deadpool-captain.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 58408,
-      "sha256": "19b6e72a811875b28e5889535ec2b23cfb0a6a1044cffcafdc91d293751fa0ae"
+      "file": "data/memes/GB/images/gb-deadpools-throne-1920-da9dee05eb19.webp",
+      "bytes": 733916,
+      "sha": "c1638a7503100132b0513bea36b3ccf2dcdb5eab"
     },
     {
-      "path": "data/memes/GB/images/gb-deadpool-sombrero.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 48900,
-      "sha256": "253a5f329911d7d7b364899073aea267d8513e29612319790810f3a800ae2b69"
+      "file": "data/memes/GB/images/gb-spider-tube-1280-4420b81f0aaf.webp",
+      "bytes": 79268,
+      "sha": "a776ecc05098009ddece4704c8d3d587d7f12d37"
     },
     {
-      "path": "data/memes/GB/images/gb-deadpool-wedding.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 69832,
-      "sha256": "51808436975de7c006a821a7ebd78b5ea85093c3b60e4dd8cab898dd92f62a6d"
+      "file": "data/memes/GB/images/gb-spider-tube-640-cdc2d9da99fe.webp",
+      "bytes": 58782,
+      "sha": "5dce615d3f1c11b40e53fa2790a269378f90c123"
     },
     {
-      "path": "data/memes/GB/images/gb-deadpool-kimono.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 66186,
-      "sha256": "2c74b3e6fd53464ba559bc40153c2c44e42e14218f79cd2519ea1348acce3e52"
+      "file": "data/memes/FR/images/fr-spider-hospital-1280-8895de1a2169.webp",
+      "bytes": 126772,
+      "sha": "50c6f9e86fae359cfa62fab670d9ac60949b5397"
     },
     {
-      "path": "data/memes/GB/images/gb-deadpool-maid.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 68254,
-      "sha256": "594a4e3a9e732b422828db9aae2fded1d4c2b10af417290d3187f7970d2ce98c"
+      "file": "data/memes/FR/images/fr-spider-hospital-640-67880d34a9d8.webp",
+      "bytes": 43424,
+      "sha": "095c60903027e74ad19c389845030dd9b948d6fa"
     },
     {
-      "path": "data/memes/GB/images/gb-pikachu-thor.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 41776,
-      "sha256": "e11af8974846a20d653ffbabb0bd5402d8688e83e27ec2bea654f97a6529e64f"
+      "file": "data/memes/FR/images/fr-spider-hospital-1920-6cc5a5ffa2f8.webp",
+      "bytes": 225872,
+      "sha": "cbde4a80caa9fe672365f68929ddda8d8f147253"
     },
     {
-      "path": "data/memes/GB/images/gb-thor-bike.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 78446,
-      "sha256": "db0af45238e2c4dd659371dd08045e9dd85a601372551fb4a95053b417c7d353"
+      "file": "data/memes/CA/images/ca-deadpool-maid-1280-9aa1332aafa9.webp",
+      "bytes": 92502,
+      "sha": "e692e21d5f147e71558bf326534bc75ed405d60e"
     },
     {
-      "path": "data/memes/BE/images/be-deadpool-hood.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 35498,
-      "sha256": "21d9887dba4a30478c24b14058897b8b09620b84133b91d5940ba75ced2b95f2"
+      "file": "data/memes/CA/images/ca-deadpool-maid-640-b3784e61be03.webp",
+      "bytes": 36298,
+      "sha": "74bb1e447ccccd7b5e38cd0ee047863da73e1f60"
     },
     {
-      "path": "data/memes/BE/images/be-captain-wolverine.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 23232,
-      "sha256": "258634b7c025966c700fb7c12ff0aa5e29ec5074be36632f884ba4acf682489e"
+      "file": "data/memes/CA/images/ca-deadpool-maid-1920-20cd6ed6f003.webp",
+      "bytes": 159178,
+      "sha": "1fae81eae64da8ca991f5b98bef916acbfb91762"
     },
     {
-      "path": "data/memes/BE/images/be-captain-fett.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 39088,
-      "sha256": "019a056cade2e7cb1b0e57ead8266a73285ed9979459e66140e2f9263a8703a5"
+      "file": "data/memes/ID/images/id-spider-vegetables-1280-5903dc843e59.webp",
+      "bytes": 102442,
+      "sha": "fb627a15acd6c5601f979b3a1e12e531d3603d27"
     },
     {
-      "path": "data/memes/FR/images/fr-pikachu-captain.webp",
-      "http": 200,
-      "identical": true,
-      "bytes": 28524,
-      "sha256": "303c2114dd12f6b1f92b804a2662d1b63c48afc29913f7a7facfb3dbaf2ab2ba"
+      "file": "data/memes/ID/images/id-spider-vegetables-640-9e2c8bf466e5.webp",
+      "bytes": 78710,
+      "sha": "4788eb0fe5fb2b4d134d5c03ac66acf956b7139a"
+    },
+    {
+      "file": "data/memes/HN/images/hn-spider-graduate-1280-e82567e949ff.webp",
+      "bytes": 116132,
+      "sha": "7d981f240088736c8a56fad84248f2d50af2f6db"
+    },
+    {
+      "file": "data/memes/HN/images/hn-spider-graduate-640-6d42cad7de9e.webp",
+      "bytes": 51152,
+      "sha": "2c60a0b07be77bbd2fc263b0a7289f400cc6d562"
+    },
+    {
+      "file": "data/memes/CO/images/co-spider-handstand-1280-aa8bde2ac3e8.webp",
+      "bytes": 40354,
+      "sha": "0c764c736b52dcce0b008d20e185dc9ca7154cdd"
+    },
+    {
+      "file": "data/memes/CO/images/co-spider-handstand-640-8e7094aaf0fc.webp",
+      "bytes": 18816,
+      "sha": "9f9c2ca8eebdc1fcea716e2720f36adb785945c2"
+    },
+    {
+      "file": "data/memes/CU/images/cu-spider-nerf-1280-0eb1394f9c1a.webp",
+      "bytes": 195882,
+      "sha": "2d5d2620e8696676917b1a465f38ba0b13f4a3d2"
+    },
+    {
+      "file": "data/memes/CU/images/cu-spider-nerf-640-aeda37cd222e.webp",
+      "bytes": 55770,
+      "sha": "db73df9cbee3149b45ae316d9e3f307473210d2b"
+    },
+    {
+      "file": "data/memes/CU/images/cu-spider-nerf-1920-83353f35b2b4.webp",
+      "bytes": 480810,
+      "sha": "88bf245762deae241ac12ba5a296f8286fabb995"
+    },
+    {
+      "file": "data/memes/FR/images/fr-deadpool-sailor-1280-21b2ae60f857.webp",
+      "bytes": 97522,
+      "sha": "9307f96d4941423e6b2ce977cb9bd11627c83dd0"
+    },
+    {
+      "file": "data/memes/FR/images/fr-deadpool-sailor-640-8963c32fced2.webp",
+      "bytes": 39014,
+      "sha": "1ad72258258c8157cef1d092e73e41dff57571db"
+    },
+    {
+      "file": "data/memes/FR/images/fr-deadpool-sailor-1920-72fbd4c7482a.webp",
+      "bytes": 174064,
+      "sha": "117245565a3bbb0e7c0899df098ffb389caa456b"
+    },
+    {
+      "file": "data/memes/FR/images/fr-deadpool-2019-1280-b790bd14a505.webp",
+      "bytes": 289264,
+      "sha": "37eeba37768f2220821b5e50e8661f13c96c8801"
+    },
+    {
+      "file": "data/memes/FR/images/fr-deadpool-2019-640-3b69b5e36842.webp",
+      "bytes": 92218,
+      "sha": "f6c52b7cadbc9e7c0e3f2b8ff70359399f837e27"
+    },
+    {
+      "file": "data/memes/FR/images/fr-deadpool-2019-1920-8d85d25050b9.webp",
+      "bytes": 555366,
+      "sha": "98b1e916a760a93df2b910c8c49d96f94bac8d04"
+    },
+    {
+      "file": "data/memes/JP/images/jp-deadpool-market-1280-a569f3e8b6b3.webp",
+      "bytes": 269566,
+      "sha": "3070fc107b63793563da8de4e6c7fbcb5f5f9aaa"
+    },
+    {
+      "file": "data/memes/JP/images/jp-deadpool-market-640-8f835a153d3d.webp",
+      "bytes": 85228,
+      "sha": "8b73481cae6ca60a9fa444040d145486b398ab2f"
+    },
+    {
+      "file": "data/memes/JP/images/jp-deadpool-market-1920-8d1ba5cf72db.webp",
+      "bytes": 472956,
+      "sha": "7be04b01b852a5c67bfcdace25b6ae7b17518c1d"
+    },
+    {
+      "file": "data/memes/JP/images/jp-spider-crossing-1280-d839771b451e.webp",
+      "bytes": 352184,
+      "sha": "56c146e6931262d41c9c5dd792f47aa5cfc74604"
+    },
+    {
+      "file": "data/memes/JP/images/jp-spider-crossing-640-1fae5cdab2f4.webp",
+      "bytes": 97976,
+      "sha": "3e2dc6df6a34423ea3828e8f6c1925526e17734f"
+    },
+    {
+      "file": "data/memes/JP/images/jp-spider-crossing-1920-5565f65678d0.webp",
+      "bytes": 705194,
+      "sha": "36da3ace452a3d7fc284ebaee693f0462eaa99c1"
+    },
+    {
+      "file": "data/memes/SV/images/sv-stan-spider-1280-ea8b1d0d98b7.webp",
+      "bytes": 94424,
+      "sha": "853eac0a0d3406b4f55444a6c435971dab9db1d3"
+    },
+    {
+      "file": "data/memes/SV/images/sv-stan-spider-640-cf5854e1c65c.webp",
+      "bytes": 34610,
+      "sha": "5082a15280bf93ecb1b1448d5143ac8194903fbd"
+    },
+    {
+      "file": "data/memes/SV/images/sv-stan-spider-1920-27c531e4b8f0.webp",
+      "bytes": 183892,
+      "sha": "54ccf3660d746a1e518860560ce4721c21b7c1eb"
+    },
+    {
+      "file": "data/memes/IL/images/il-spider-purim-1280-abb84f5e406f.webp",
+      "bytes": 243532,
+      "sha": "6a132af21b7e2309403e3ea177755a099a047bc4"
+    },
+    {
+      "file": "data/memes/IL/images/il-spider-purim-640-c87025fbee9e.webp",
+      "bytes": 71738,
+      "sha": "e08cfbaec3a64f6f9b48a28b73a2943b3ec2437f"
+    },
+    {
+      "file": "data/memes/IL/images/il-spider-purim-1920-f4b6537b4355.webp",
+      "bytes": 437946,
+      "sha": "3fd2c337334707ae49e2c2551f4be859a3a61481"
+    },
+    {
+      "file": "data/memes/ES/images/es-spider-plaza-1280-7a10d396a3f1.webp",
+      "bytes": 199926,
+      "sha": "7691de773e8b9bc03d779024fd3f8a9f4741fed3"
+    },
+    {
+      "file": "data/memes/ES/images/es-spider-plaza-640-6ee27d3cb90c.webp",
+      "bytes": 78508,
+      "sha": "639e16300a345ffeceb1ef98f9df462b01d38e6f"
+    },
+    {
+      "file": "data/memes/ES/images/es-spider-plaza-1920-58690bc4db47.webp",
+      "bytes": 327794,
+      "sha": "55d17ca077661876be96f8a6a6fd9451690691b9"
+    },
+    {
+      "file": "data/memes/ES/images/es-spider-smoking-1280-9f432ed895d9.webp",
+      "bytes": 173210,
+      "sha": "e4d66b34bf66b20ec704a1ab90197b4cad0db20f"
+    },
+    {
+      "file": "data/memes/ES/images/es-spider-smoking-640-dc8c9cd58290.webp",
+      "bytes": 54282,
+      "sha": "a196343332071bced4c2edae2c027dbac349da3d"
+    },
+    {
+      "file": "data/memes/ES/images/es-spider-smoking-1920-1fe208a88323.webp",
+      "bytes": 302298,
+      "sha": "8127c89e9cbf1236eed5b241b8874fa6bd40e9f8"
+    },
+    {
+      "file": "data/memes/IN/images/in-spider-hood-1280-087aa84c44c9.webp",
+      "bytes": 158866,
+      "sha": "68b546e6debbfba88f0ce88e94934a8edad4cf85"
+    },
+    {
+      "file": "data/memes/IN/images/in-spider-hood-640-f7671fae7c8d.webp",
+      "bytes": 64380,
+      "sha": "f230212924e18fe6fef55e9bb6643b240d7230ad"
+    },
+    {
+      "file": "data/memes/IN/images/in-spider-hood-1920-d4bbb46dcfa9.webp",
+      "bytes": 203784,
+      "sha": "7d8f56f139376bad9570d9b94045613bceeddf2f"
+    },
+    {
+      "file": "data/memes/PE/images/pe-spider-yoyo-1280-6ae023fbf044.webp",
+      "bytes": 169500,
+      "sha": "3a57c617126ec676c4216a48fc0968e01060c09f"
+    },
+    {
+      "file": "data/memes/PE/images/pe-spider-yoyo-640-a0e9b2a285df.webp",
+      "bytes": 75242,
+      "sha": "1fe5860a721b3a32ceec5b2f6918d5c2d811e4e5"
+    },
+    {
+      "file": "data/memes/CA/images/ca-spider-hawaiian-1280-41907ded3c0f.webp",
+      "bytes": 157828,
+      "sha": "692609a74086877585fc4b34c593dfae56cf04c2"
+    },
+    {
+      "file": "data/memes/CA/images/ca-spider-hawaiian-640-2dac62ba2868.webp",
+      "bytes": 49588,
+      "sha": "6b6c1f4b9e8dc0e6c834207fef7498c0a480c819"
+    },
+    {
+      "file": "data/memes/CA/images/ca-spider-hawaiian-1920-c12a964b3e97.webp",
+      "bytes": 332816,
+      "sha": "3ddee9b45e6b20beab29852fc2ac18587cf9aeab"
+    },
+    {
+      "file": "data/memes/CA/images/ca-miku-maid-1280-cf9562c35dc4.webp",
+      "bytes": 118578,
+      "sha": "8ad4fc93938fce54a9b9a71cb0f1c6b213287d8a"
+    },
+    {
+      "file": "data/memes/CA/images/ca-miku-maid-640-74edb687767c.webp",
+      "bytes": 45510,
+      "sha": "ca67a17bd02e50eba2269702889bc8edfd319e60"
+    },
+    {
+      "file": "data/memes/CA/images/ca-miku-maid-1920-a0ec33c8206d.webp",
+      "bytes": 208428,
+      "sha": "6107e11749a66c56cf42e3a7743f7b5a64920ac7"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-redhood-1280-41d5dd6a6962.webp",
+      "bytes": 243624,
+      "sha": "9a25f61241bd0b0c6ab2df60772ac3e3b38c59c7"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-redhood-640-bc1dfbe16255.webp",
+      "bytes": 81488,
+      "sha": "b9c8cf0a48faa6d852136824201faa7bf4397900"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-redhood-1920-223c23d904da.webp",
+      "bytes": 427732,
+      "sha": "211ecb38e8f2fdbd36fb7ccbcc97d174ac6aa942"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-brainslug-1280-ba2f214fae42.webp",
+      "bytes": 160582,
+      "sha": "f08600952351d40c63270de2bd1495dd7ba8a46e"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-brainslug-640-9cb169287856.webp",
+      "bytes": 59916,
+      "sha": "e1c49f19b66f389f945526248487f9b7596ebe8a"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-brainslug-1920-a9a1f2f2bf4f.webp",
+      "bytes": 299484,
+      "sha": "e9fcc1c590b7ebb47bdf50a6a4680095eafa4742"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-chicken-1280-0327242fdd44.webp",
+      "bytes": 257880,
+      "sha": "2a1ffb891a5593b27c959383b0ba4f98d8a464a2"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-chicken-640-c60fdbfda1f3.webp",
+      "bytes": 71900,
+      "sha": "9676afb61bc4a42227e13dfc02b2b7f1e47d26e0"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-chicken-1920-ea4d507e3833.webp",
+      "bytes": 513296,
+      "sha": "13f1f8c066777a5aef5bbffeee9a98a58ea4f639"
+    },
+    {
+      "file": "data/memes/CA/images/ca-photobomb-pileup-1280-da11e08a15a3.webp",
+      "bytes": 133644,
+      "sha": "b4fbf24f2fef7e382c7be7d2bf3a8c1cc737d793"
+    },
+    {
+      "file": "data/memes/CA/images/ca-photobomb-pileup-640-cc4c5c43174a.webp",
+      "bytes": 47662,
+      "sha": "dd0ff033492f6ca634c0383e37d2e5e9f58d5343"
+    },
+    {
+      "file": "data/memes/CA/images/ca-photobomb-pileup-1920-c3bc192501d2.webp",
+      "bytes": 260978,
+      "sha": "8300e0d2ee1d591ae6a4433b53befe3e8ab631da"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-pope-1280-843895ba0eeb.webp",
+      "bytes": 352974,
+      "sha": "be78f792e0cdb28cc127b338d192358f612b06e7"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-pope-640-c3887970b2a8.webp",
+      "bytes": 97400,
+      "sha": "cae4afe274f267a3eb63c4d8ddee6e4a8ee79f17"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-pope-1920-960070495ce0.webp",
+      "bytes": 702252,
+      "sha": "c6d2429fde94ab53b22f1b55ce6659f3c8ad27ce"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-lego-1280-a6c19e56496e.webp",
+      "bytes": 81884,
+      "sha": "d5ed7569257e6018b9aaadb9e6be6618b168e20d"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-lego-640-e8198683ddaf.webp",
+      "bytes": 49720,
+      "sha": "47961a6ec4acf502bebd655a00c80611997fba8d"
+    },
+    {
+      "file": "data/memes/US/images/us-spider-frog-1280-f1949a25e42e.webp",
+      "bytes": 246616,
+      "sha": "d31e122c48bc7bf076fff493f72d166644d7a482"
+    },
+    {
+      "file": "data/memes/US/images/us-spider-frog-640-71a05dfc8504.webp",
+      "bytes": 80962,
+      "sha": "d67bea0bf578987ee6caeaf3cc7e4a5612263c32"
+    },
+    {
+      "file": "data/memes/US/images/us-spider-frog-1920-3167dfcd827d.webp",
+      "bytes": 477156,
+      "sha": "62c436dd64d7c4b718d3547969ec4b169a96e07c"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-lantern-1280-fcd1ec4eb6a1.webp",
+      "bytes": 185426,
+      "sha": "e075cff4ff4a7c6eb762887c3023a5744984f4ee"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-lantern-640-f0575e8f9997.webp",
+      "bytes": 63722,
+      "sha": "5d1c36f2353caad69e9064ba725fd3ef5e8919ad"
+    },
+    {
+      "file": "data/memes/CA/images/ca-deadpool-lantern-1920-a2c0b626b9d5.webp",
+      "bytes": 365204,
+      "sha": "6421a5aee202a02df98fce8fd0089f6253d64d21"
+    },
+    {
+      "file": "data/memes/US/images/us-spider-thor-1280-c39f290fe72c.webp",
+      "bytes": 318680,
+      "sha": "19b9d3ce895a74d33727bb5351b7dd60b4cc42fe"
+    },
+    {
+      "file": "data/memes/US/images/us-spider-thor-640-d9b4897e973f.webp",
+      "bytes": 96524,
+      "sha": "bdfe7e8f4259f30b1edbfef9dadda0e0b62c9a62"
+    },
+    {
+      "file": "data/memes/US/images/us-spider-thor-1920-7992dcc3e34c.webp",
+      "bytes": 681630,
+      "sha": "82b7fe5a8cb68b8eb95735dabc88909889e7f009"
+    },
+    {
+      "file": "data/memes/US/images/us-deadtrooper-1280-c0bcd9984531.webp",
+      "bytes": 156888,
+      "sha": "8fa6d03f6afb009976de6e407ad116e7a8cafb25"
+    },
+    {
+      "file": "data/memes/US/images/us-deadtrooper-640-00718fadcf72.webp",
+      "bytes": 67662,
+      "sha": "964cb19f30ab9bfa162f5e6039303764689aee67"
+    },
+    {
+      "file": "data/memes/US/images/us-deadtrooper-1920-e89dc2b76a50.webp",
+      "bytes": 277808,
+      "sha": "5a7b228e7242532916450e0e6f8476c0e4426b5e"
+    },
+    {
+      "file": "data/memes/US/images/us-captain-spider-1280-902cd98b52c8.webp",
+      "bytes": 216566,
+      "sha": "bc8bfca5a8f289ef4dceda4b0245f1fb4d3d177d"
+    },
+    {
+      "file": "data/memes/US/images/us-captain-spider-640-14bf0a0187e7.webp",
+      "bytes": 61598,
+      "sha": "1d4ebee38009be462caffd917b500f71236082dc"
+    },
+    {
+      "file": "data/memes/US/images/us-captain-spider-1920-ede33cb5a305.webp",
+      "bytes": 445926,
+      "sha": "50e2a4d515469b500e5b8add7b4b242baca0b1e1"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-elsa-1280-cd67222782fe.webp",
+      "bytes": 199622,
+      "sha": "6c4f75b2ddfa8ec2aa4a8cc876c2a67da16bd0b0"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-elsa-640-5f92d9117ad6.webp",
+      "bytes": 66696,
+      "sha": "8d12571c479134ffaa6e9ccd12573e5a284fb732"
+    },
+    {
+      "file": "data/memes/US/images/us-deadpool-elsa-1920-4cdfa0fbbe37.webp",
+      "bytes": 396920,
+      "sha": "35afe52da4dc191bf307d91da9cc5f94d06ad2da"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-captain-1280-f926be422fd9.webp",
+      "bytes": 218056,
+      "sha": "de8dfb28fd427c108e02f5acc8a6cb805c969cbe"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-captain-640-b790ee2f38fa.webp",
+      "bytes": 76762,
+      "sha": "085ae84ca2f1fef90f349208b1ab1312a1919143"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-captain-1920-cbce4b6b2830.webp",
+      "bytes": 391126,
+      "sha": "c793c8bd1823fc83dc0f91d2ed95eda6bc431edc"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-sombrero-1280-c1fc0c71e82e.webp",
+      "bytes": 159360,
+      "sha": "1fed7d68c5bbc3982d2f0a7bb99a42dee1de7249"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-sombrero-640-77615779b138.webp",
+      "bytes": 59526,
+      "sha": "faa96f1bf4a9595f8521e7d7bd980b383f9f2119"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-sombrero-1920-3a4c6030a38b.webp",
+      "bytes": 284232,
+      "sha": "54201c64c5f274675748ee5ecb42a077f0abb98b"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-wedding-1280-f2d814e82a03.webp",
+      "bytes": 215796,
+      "sha": "266147da91c6801c103f92ff8aa71e8bd483e3b3"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-wedding-640-96180b316afe.webp",
+      "bytes": 80854,
+      "sha": "9f0c161859fa358ccaa420a20a91ba2ae28dd38f"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-wedding-1920-1ba833c0e0fb.webp",
+      "bytes": 403876,
+      "sha": "6e770bae1e470d6c80f1f693555f80ff8c9cc37a"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-kimono-1280-58ec443f0ef9.webp",
+      "bytes": 213410,
+      "sha": "146cb30555b5009b5199146fe8977b1f407f5f51"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-kimono-640-59fc5a4629f6.webp",
+      "bytes": 82858,
+      "sha": "f6e37d9ef5ecc4410247afe0f74262db88edf1d7"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-kimono-1920-adbe4361cd4d.webp",
+      "bytes": 372120,
+      "sha": "e822c0820fc5c99fcb402cec811d2092b3375f96"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-maid-1280-b4cd58917930.webp",
+      "bytes": 218898,
+      "sha": "4d1b97715e50328d0fb52c85b86f3c01e46e422b"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-maid-640-a9766ee33d4e.webp",
+      "bytes": 82558,
+      "sha": "7806c5bde22e80ae38a39046d285f5e57f256ce2"
+    },
+    {
+      "file": "data/memes/GB/images/gb-deadpool-maid-1920-23fb12ce919d.webp",
+      "bytes": 391378,
+      "sha": "58c8a0214b4d860f4c79038dbd820b38b0653326"
+    },
+    {
+      "file": "data/memes/GB/images/gb-pikachu-thor-1280-3b49f128e834.webp",
+      "bytes": 132696,
+      "sha": "297263fb3de6f1d1ae8403552d54dc553a415d68"
+    },
+    {
+      "file": "data/memes/GB/images/gb-pikachu-thor-640-703379ef678d.webp",
+      "bytes": 53246,
+      "sha": "38e761bb0ea4de4d9dafdec27f54cb59622e5f2e"
+    },
+    {
+      "file": "data/memes/GB/images/gb-pikachu-thor-1920-8bc6eb0199a4.webp",
+      "bytes": 221106,
+      "sha": "34cf4a335d736501440e9903424993311ed867ad"
+    },
+    {
+      "file": "data/memes/GB/images/gb-thor-bike-1280-2e971ecaad63.webp",
+      "bytes": 401314,
+      "sha": "6b334a58c30b0e7b65355bbc578df63209e5de1b"
+    },
+    {
+      "file": "data/memes/GB/images/gb-thor-bike-640-73d39aaa5d02.webp",
+      "bytes": 115228,
+      "sha": "f73b91687b8ddbac1372cb087e7dee923db8dfa1"
+    },
+    {
+      "file": "data/memes/GB/images/gb-thor-bike-1920-3787b564f071.webp",
+      "bytes": 827880,
+      "sha": "98bc3ff94bbb1e11c9466998ae4cd66dc9b0ed90"
+    },
+    {
+      "file": "data/memes/BE/images/be-deadpool-hood-1280-41eeb9dd6eea.webp",
+      "bytes": 144164,
+      "sha": "83bd71361b00f9efe3c525316c9518023070fd62"
+    },
+    {
+      "file": "data/memes/BE/images/be-deadpool-hood-640-959b4eeb84d8.webp",
+      "bytes": 49238,
+      "sha": "b5be9ce0872bf6be80885cc76fff15f5cf3c2077"
+    },
+    {
+      "file": "data/memes/BE/images/be-deadpool-hood-1920-3d7dc0b28529.webp",
+      "bytes": 250836,
+      "sha": "b0bba60e02f7458b8da84239ea39697b841133c0"
+    },
+    {
+      "file": "data/memes/BE/images/be-captain-wolverine-1280-7f94c67c318b.webp",
+      "bytes": 83192,
+      "sha": "e94c4f3b863a2047f1b13a39a1bef24d856c81cb"
+    },
+    {
+      "file": "data/memes/BE/images/be-captain-wolverine-640-eb9839bb39c5.webp",
+      "bytes": 33344,
+      "sha": "3502fb352fa5adebe54c7120da16c788aa4152e8"
+    },
+    {
+      "file": "data/memes/BE/images/be-captain-wolverine-1920-9140378528b0.webp",
+      "bytes": 145602,
+      "sha": "3635ba9c10cd19c0788128f9275f10a76a62a08a"
+    },
+    {
+      "file": "data/memes/BE/images/be-captain-fett-1280-c7ec54f82f75.webp",
+      "bytes": 152836,
+      "sha": "87d95881d35b20ad058f14ec90e12c2a9ee786c8"
+    },
+    {
+      "file": "data/memes/BE/images/be-captain-fett-640-fe70748b84a3.webp",
+      "bytes": 51180,
+      "sha": "0472f3f4d6582ad92274f4e279049af6a616a047"
+    },
+    {
+      "file": "data/memes/BE/images/be-captain-fett-1920-b4347e720476.webp",
+      "bytes": 292594,
+      "sha": "cbaca1a590a62f5ae76b5d6ae038376e7b36ae41"
+    },
+    {
+      "file": "data/memes/FR/images/fr-pikachu-captain-1280-32502ca4ef10.webp",
+      "bytes": 122718,
+      "sha": "4dfe5024aa8d4168714aa7e99d7f0f7e50912620"
+    },
+    {
+      "file": "data/memes/FR/images/fr-pikachu-captain-640-e1a919a288e4.webp",
+      "bytes": 41692,
+      "sha": "0a83f915806d4740b5479dfb4850f733065a9147"
+    },
+    {
+      "file": "data/memes/FR/images/fr-pikachu-captain-1920-bd6d291cbc44.webp",
+      "bytes": 239440,
+      "sha": "f73de2c9a7109f88d8ec0821a20f51977feecb8b"
     }
-  ]
+  ],
+  "collectionCoverageComplete": false
 }

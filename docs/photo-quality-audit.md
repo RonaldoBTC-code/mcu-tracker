@@ -1,6 +1,6 @@
 # Auditoría y corrección de calidad fotográfica
 
-Fecha: 11 de octubre de 2026. Base publicada: PR #12, commit `d5e299738fea20f5fe46b2f811e881fe427b502b`. La publicación de esta corrección debe acreditarse en `publication-results.json`; este documento no convierte una preparación local en un despliegue.
+Fecha: 11 de octubre de 2026. Base publicada: PR #12, commit `d5e299738fea20f5fe46b2f811e881fe427b502b`. Corrección publicada mediante PR #13, commit `759ee9df69c6e8aa78527cb9356d5b592b6b1bff`; Pages 38163719214 success. Verificación pública: 224 archivos idénticos, Chrome PASS en dos tamaños y cuatro configuraciones DPR1/2. Evidencia: `publication-results.json`.
 
 Se revisaron las 65 fotos anteriores. Se conservan 61 fotos distintas en 19 países y se retiran cuatro capturas de vídeo con detalle deficiente. Se recuperaron los 46 originales de Commons y tres archivos editoriales mayores (dos marcados como originales y una reproducción editorial mayor) desde las fuentes acreditadas. No se generó nitidez, se inventaron píxeles ni se sustituyeron fotos bajo identificadores históricos.
 
@@ -126,3 +126,7 @@ Resoluciones en píxeles. Las medidas de dibujo son CSS; el recurso DPR2 debe cu
 | [fr-pikachu-captain](https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg) | FR | 401×768 | 2934×5616 | 329×630 | 669×1280 | 669×1280 |
 
 Las cuatro revisiones recorren todas las fotos: escritorio DPR1 5.972.922 bytes; escritorio DPR2 13.809.298; móvil DPR1 3.923.558; móvil DPR2 10.921.734. Son sumas de recorrer el catálogo completo, no carga inicial. La entrada del tracker tiene cero solicitudes de fotos/catálogos.
+
+## Resultado público
+
+Verificación del 11 de octubre: todas las 171 variantes públicas coinciden con los bytes locales; las 61 fotos pasan medición de píxeles en las cuatro configuraciones. Chrome verifica guía 7→8→fin, tracker inicial/recarga, navegación explícita, progreso y mapa original. Supabase devuelve 61 agregados exactos y Chrome compara 48 tarjetas reales incluida recarga, con escrituras bloqueadas. Las capturas del ensayo de calidad bloquean servicios externos para medir de forma reproducible; mensajes de estadísticas no disponibles en esas capturas pertenecen al ensayo, mientras la prueba separada de Supabase real pasó.
