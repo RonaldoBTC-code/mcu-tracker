@@ -12,9 +12,9 @@
         "/data/memes/EC.json",
         "/data/memes/EC/images/ec-spider-bus.webp"
       ],
-      "inlineMapVisible": true,
-      "mapMarkers": 51,
-      "mapClickAndKeyboardVerified": true,
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
       "result": "PASS"
     },
@@ -28,7 +28,7 @@
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 48,
+    "maxCountryOpenMs": 41,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -46,9 +46,9 @@
         "/data/memes/EC.json",
         "/data/memes/EC/images/ec-spider-bus.webp"
       ],
-      "inlineMapVisible": true,
-      "mapMarkers": 51,
-      "mapClickAndKeyboardVerified": true,
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
       "result": "PASS"
     },
@@ -62,7 +62,7 @@
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 21,
+    "maxCountryOpenMs": 45,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

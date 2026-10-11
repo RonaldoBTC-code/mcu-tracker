@@ -54,13 +54,12 @@ async function test(name,fn){let f;try{f=await fixture();await fn(f);assert.deep
   const original=f.server.fetch.bind(f.server);let release;f.w.fetch=(url,opts)=>new URL(url).pathname.endsWith('/EC.json')?new Promise(r=>release=()=>r(original(url,opts))):original(url,opts);
   const old=f.w.MemeFeed.open('EC');await f.w.MemeFeed.open('MX');release();await old;assert.equal(f.d.querySelector('#feedCountry').value,'MX');assert([...f.d.querySelectorAll('#feedList img')].every(i=>i.dataset.src.includes('/MX/')));f.server.bad=true;await f.login('B');assert(f.d.querySelector('.feed-like').disabled);assert.equal(f.d.querySelector('.feed-actions span').textContent,'Vistas no disponibles');
  });
- await test('Mapa integrado: 51 países, clic y teclado cambian solo su colección',async({w,d,server})=>{
-  const points=d.querySelectorAll('#feedMap [data-country]');assert.equal(points.length,51);assert.equal(d.querySelector('#feedMap [data-country="BR"]').getAttribute('aria-pressed'),'true');
-  d.querySelector('#feedMap [data-country="EC"] circle').dispatchEvent(new w.MouseEvent('click',{bubbles:true}));await wait(()=>d.querySelector('#feedCountry').value==='EC'&&d.querySelector('#feedList article')?.dataset.memeId.startsWith('ec-'));
-  assert.equal(d.querySelector('#feedMap [data-country="EC"]').getAttribute('aria-pressed'),'true');assert(d.querySelector('#feedMapCaption').textContent.includes('Ecuador'));
-  d.querySelector('#feedMap [data-country="MX"]').dispatchEvent(new w.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));await wait(()=>d.querySelector('#feedCountry').value==='MX'&&d.querySelector('#feedList article')?.dataset.memeId.startsWith('mx-'));
-  assert.equal(d.querySelector('#feedMap [data-country="EC"]').getAttribute('aria-pressed'),'false');assert([...d.querySelectorAll('#feedList article')].every(c=>c.dataset.memeId.startsWith('mx-')));
-  assert.deepEqual(server.calls.filter(c=>c.path.includes('/data/memes/')).map(c=>c.path.split('/').at(-1)),['BR.json','EC.json','MX.json']);
+ await test('Sin mapa en la portada: selector accesible y mapa original conservados',async({w,d,server})=>{
+  assert.equal(d.querySelector('#feedMap'),null);assert.equal(d.querySelector('#feedMapCaption'),null);assert.equal(w.WorldMap.discoveryMap,undefined);assert.equal(d.querySelector('#feedCountry').options.length,52);
+  assert.equal(d.querySelectorAll('#mapOpen').length,1);assert.equal(d.querySelectorAll('#mapwrap').length,1);assert.equal(typeof w.WorldMap.countryMap,'function');
+  const select=d.querySelector('#feedCountry');select.value='EC';select.dispatchEvent(new w.Event('change'));await wait(()=>d.querySelector('#feedList article')?.dataset.memeId.startsWith('ec-'));
+  select.value='MX';select.dispatchEvent(new w.Event('change'));await wait(()=>d.querySelector('#feedList article')?.dataset.memeId.startsWith('mx-'));
+  assert([...d.querySelectorAll('#feedList article')].every(c=>c.dataset.memeId.startsWith('mx-')));assert.deepEqual(server.calls.filter(c=>c.path.includes('/data/memes/')).map(c=>c.path.split('/').at(-1)),['BR.json','EC.json','MX.json']);
  });
  const report={checkedAt:new Date().toISOString(),result:results.every(r=>r.status==='PASS')?'PASS':'FAIL',network:'simulated; no production writes',checks:results};fs.writeFileSync(path.join(root,'docs/meme-feed-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 })().catch(e=>{console.error(e);process.exitCode=1});
