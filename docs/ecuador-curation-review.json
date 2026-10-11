@@ -1,0 +1,85 @@
+{
+  "reviewedOn": "2026-10-11",
+  "publishedECPhotos": 1,
+  "missingECPhotos": 9,
+  "commonsQuery": "Ecuador cosplay",
+  "searchResults": 12,
+  "reviewedFullPhotos": 8,
+  "newApprovedPhotos": 1,
+  "rejected": [
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:COSPLAY_(33474137522).jpg",
+      "id": 57678458,
+      "decision": "excluded",
+      "reason": "Personajes Pokémon; no Marvel."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:COSPLAY_(32788011544).jpg",
+      "id": 57678475,
+      "decision": "excluded",
+      "reason": "Personajes Pokémon; no Marvel."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:COSPLAY_(33589714996).jpg",
+      "id": 57678489,
+      "decision": "excluded",
+      "reason": "Personajes Pokémon; no Marvel."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:COSPLAY_(32816926153).jpg",
+      "id": 57678507,
+      "decision": "excluded",
+      "reason": "Personajes Pokémon; no Marvel."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:Orgullo_Guayaquil_2024_-_Orgullo_LGBT%2B_Ecuador_-_Diane_Rodriguez_y_Zack_El%C3%ADas.jpg",
+      "id": 149952265,
+      "decision": "excluded",
+      "reason": "Retrato/pose sin gag claro; serie del mismo personaje y evento, no tres situaciones independientes."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:Orgullo_Guayaquil_2024_-_Orgullo_LGBT%2B_Ecuador_(1).jpg",
+      "id": 149952270,
+      "decision": "excluded",
+      "reason": "Retrato/pose sin gag claro; serie del mismo personaje y evento, no tres situaciones independientes."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:Orgullo_Guayaquil_2024_-_Orgullo_LGBT%2B_Ecuador_(6).jpg",
+      "id": 149952276,
+      "decision": "excluded",
+      "reason": "Retrato/pose sin gag claro; serie del mismo personaje y evento, no tres situaciones independientes."
+    }
+  ],
+  "pending": [
+    {
+      "source": "https://www.ecuavisa.com/redes/spiderman-y-el-capitan-america-son-tendencia-por-foto-con-la-cte-20180601-0012.html",
+      "status": 403,
+      "reason": "No se recuperó foto completa ni permiso."
+    },
+    {
+      "source": "https://www.elcomercio.com/tendencias/entretenimiento/tony-stark-charro-comic/",
+      "reason": "Noticia de evento localizada; falta foto apta y licencia individual."
+    }
+  ],
+  "approvedPendingActivation": [
+    {
+      "id": "ec-spider-bin",
+      "source": "https://www.flickr.com/photos/200225254@N06/53569762773",
+      "creator": "Joan Briones (joanbrionesjim)",
+      "license": "CC BY-ND 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nd/2.0/",
+      "location": "Guayaquil, Ecuador",
+      "visualGag": "Spider-Man usa una papelera urbana como plataforma para su pose, junto a un taxi",
+      "sourceTitle": "Guaya💀",
+      "formatOnly": true,
+      "licenseRationale": "La sección 3 de CC BY-ND 2.0 permite modificaciones técnicamente necesarias de medio/formato; preservar encuadre, colores y título, sin derivadas artísticas.",
+      "legalCode": "https://creativecommons.org/licenses/by-nd/2.0/legalcode",
+      "backendRead": {
+        "http": 400,
+        "code": "22023",
+        "message": "Unknown meme"
+      },
+      "publicCatalogueActive": false
+    }
+  ]
+}

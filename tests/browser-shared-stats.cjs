@@ -1,7 +1,7 @@
 // Read-only production check. No authentication, OTP, likes, views or other writes.
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.join(__dirname,'..'),base='https://ronaldobtc-code.github.io/mcu-tracker/';
+const root=path.join(__dirname,'..'),base=process.env.MCU_AUDIT_BASE||'https://ronaldobtc-code.github.io/mcu-tracker/';
 (async()=>{
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
  const backend=html.match(/SUPABASE_URL\s*:\s*['"]([^'"]+)/)[1];
@@ -25,9 +25,11 @@ const root=path.join(__dirname,'..'),base='https://ronaldobtc-code.github.io/mcu
   });
   const checks=[];
   async function check(country,count){
+   console.log(JSON.stringify({country,expectedCards:count}));const scrollDeadline=Date.now()+20000;
    await page.selectOption('#feedCountry',country);
    await page.waitForFunction(n=>document.querySelectorAll('#feedList article').length>=n,Math.min(count,2));
    while(await page.locator('#feedList article').count()<count){
+    if(Date.now()>scrollDeadline)throw Error(country+': expected '+count+' cards, rendered '+await page.locator('#feedList article').count()+'; '+await page.locator('#feedStatus').textContent());
     await page.locator('#feedSentinel').scrollIntoViewIfNeeded();
     await page.waitForTimeout(100);
    }

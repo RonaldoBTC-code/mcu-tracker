@@ -17,7 +17,7 @@ async function fixture(server=backend(),autoOpen=true){
  const callsAtEntry=server.calls.filter(c=>c.path.includes('/data/memes/')).length,observers=[],errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));let owner=null;
  const dom=new JSDOM(html,{url:'https://test.example/tracker/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){
   w.localStorage.setItem('mcu_tour_v1','1');w.localStorage.setItem('mcu_map_country','BR');w.fetch=(...args)=>server.fetch(...args);w.matchMedia=()=>({matches:false,addEventListener(){}});w.ResizeObserver=class{observe(){}disconnect(){}};
-  w.IntersectionObserver=class{constructor(cb,options){this.cb=cb;this.options=options;this.targets=new Set();observers.push(this);}observe(e){this.targets.add(e)}unobserve(e){this.targets.delete(e)}disconnect(){this.targets.clear()}};
+  w.IntersectionObserver=class{constructor(cb,options){this.cb=cb;this.options=options;this.targets=new Set();this.observations=0;this.removals=0;observers.push(this);}observe(e){this.observations++;this.targets.add(e)}unobserve(e){this.removals++;this.targets.delete(e)}disconnect(){this.targets.clear()}};
   w.Element.prototype.scrollIntoView=function(){};w.HTMLCanvasElement.prototype.getContext=()=>null;w.scrollTo=()=>{};
   Object.defineProperty(w.HTMLImageElement.prototype,'complete',{get:()=>true});Object.defineProperty(w.HTMLImageElement.prototype,'naturalWidth',{get:()=>600});w.Element.prototype.getBoundingClientRect=()=>({left:0,top:0,right:300,bottom:500});w.document.elementFromPoint=()=>w.document.querySelector('#feedList img');
  }});
@@ -67,6 +67,13 @@ async function test(name,fn){let f;try{f=await fixture();await fn(f);assert.deep
   const before=f.server.calls.length;await f.w.MemeFeed.open('EC');f.w.MemeFeed.sessionChanged();assert.equal(f.server.calls.length,before);await f.w.MemeFeed.show();assert(!f.d.querySelector('#memeFeed').hidden);assert(f.d.querySelector('#trackerView').hidden);assert.equal(f.d.querySelector('#feedCountry').value,'BR');assert.equal(f.w.SafeStorage.getItem('mcu_v4'),saved);
   f.w.Guide.start();assert(f.d.querySelector('#memeFeed').hidden);assert(!f.d.querySelector('#trackerView').hidden);f.w.Guide.close();
   const initial=await fixture(backend(),false);try{assert(initial.d.querySelector('#memeFeed').hidden);assert.equal(initial.server.calls.filter(c=>c.path.includes('/data/memes/')).length,0);await initial.w.MemeFeed.open('BR');assert.equal(initial.server.calls.filter(c=>c.path.includes('/data/memes/')).length,0);}finally{initial.close()}
+ });
+ await test('Scroll anclado: rearmar sentinel tras cada lote; cancelar frame al cerrar o cambiar país',async f=>{
+  const more=f.observers.find(x=>x.options?.rootMargin==='150px'),sentinel=f.d.querySelector('#feedSentinel'),observations=more.observations;
+  more.cb([{target:sentinel,isIntersecting:true}]);assert.equal(f.d.querySelectorAll('#feedList article').length,8);assert(!more.targets.has(sentinel));await pause(40);assert(more.targets.has(sentinel));assert.equal(more.observations,observations+1);
+  more.cb([{target:sentinel,isIntersecting:true}]);assert.equal(f.d.querySelectorAll('#feedList article').length,12);await pause(40);assert(!more.targets.has(sentinel));assert(more.removals>=3);
+  await f.w.MemeFeed.open('EC');const stale=f.observers.findLast(x=>x.options?.rootMargin==='150px');f.w.MemeFeed.close();await pause(40);assert.equal(stale.targets.size,0);assert(f.d.querySelector('#memeFeed').hidden);
+  await f.w.MemeFeed.show();const old=f.observers.findLast(x=>x.options?.rootMargin==='150px');old.cb([{target:sentinel,isIntersecting:true}]);await f.w.MemeFeed.open('MX');await pause(40);assert.equal(old.targets.size,0);assert([...f.d.querySelectorAll('#feedList article')].every(c=>c.dataset.memeId.startsWith('mx-')));
  });
  const report={checkedAt:new Date().toISOString(),result:results.every(r=>r.status==='PASS')?'PASS':'FAIL',network:'simulated; no production writes',checks:results};fs.writeFileSync(path.join(root,'docs/meme-feed-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 })().catch(e=>{console.error(e);process.exitCode=1});
