@@ -48,14 +48,15 @@ Por eso se puede cambiar de idioma sin perder el progreso.
 ## Estructura
 
 ```
-index.html              Toda la aplicación
+index.html              Rastreador, autenticación y mapa
+scripts/meme-feed.js     Feed vertical e interacciones compartidas
 supabase/migrations/    Esquema versionado: tablas, RLS y funciones
 SETUP.md                Cómo levantarlo desde cero
 ```
 
 ## Base de datos
 
-Cuatro migraciones en `supabase/migrations/`, aplicadas en orden
+Cinco migraciones en `supabase/migrations/`, aplicadas en orden
 alfabético. Se despliegan solas al hacer push a `main` mediante la
 integración de GitHub de Supabase.
 
@@ -64,6 +65,7 @@ integración de GitHub de Supabase.
 | `mcu_progress` | Qué vio cada usuario | Privado, por RLS |
 | `reviews` | Puntuaciones | Privado, por RLS |
 | `site_visits` | Visitas por día y país | Lectura pública |
+| `meme_data.catalogue / likes / views` | Fotos aprobadas e interacciones | Privado; RPCs con autenticación para escribir |
 
 Los agregados públicos salen de funciones (`get_review_stats`,
 `get_country_activity`) que solo devuelven promedios y conteos, nunca
@@ -95,4 +97,4 @@ Consultar [correcciones y límites](docs/entry-fixes.md), [resultados de regresi
 
 La portada incluye un feed vertical con país detectado/selector, imágenes progresivas y fin real. Hay 40 fotos geográficas únicas en 22 países; 44 países siguen por debajo del mínimo de tres. [Cobertura](docs/country-coverage.md) y [auditoría](docs/memes-audit.md).
 
-[Me gusta y vistas compartidas](docs/meme-feed.md) tienen frontend, migración aditiva y pruebas SQL/DOM. La persistencia real está pendiente de despliegue de Supabase. Las vistas de memes identifican cuentas autenticadas para deduplicar: una cuenta/foto de por vida; esto es distinto de site_visits. Sin backend no se muestran cifras inventadas.
+[Me gusta y vistas compartidas](docs/meme-feed.md) tienen frontend, migración aditiva y pruebas SQL/DOM. El agregado real de Supabase devuelve los 40 IDs aprobados después del despliegue. Las escrituras autenticadas y su persistencia real siguen pendientes de validación. Las vistas de memes identifican cuentas autenticadas para deduplicar: una cuenta/foto de por vida; esto es distinto de site_visits. Sin backend no se muestran cifras inventadas.

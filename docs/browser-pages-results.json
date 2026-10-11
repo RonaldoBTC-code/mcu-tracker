@@ -1,6 +1,70 @@
-{
-  "status": "pending-new-deployment",
-  "photos": 40,
-  "historicalProof": "docs/history/pr6/browser-pages-results.json",
-  "productionInteractionsVerified": false
-}
+[
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T01:17:16.053Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 40,
+      "imageDisplayChecks": 40,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "manualSelectionSurvivesReload": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 80,
+    "uniquePhotos": 40,
+    "uniqueCountryCatalogues": 23,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json"
+    ],
+    "maxCountryOpenMs": 387,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T01:17:58.089Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 40,
+      "imageDisplayChecks": 40,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "manualSelectionSurvivesReload": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 80,
+    "uniquePhotos": 40,
+    "uniqueCountryCatalogues": 23,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json"
+    ],
+    "maxCountryOpenMs": 63,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

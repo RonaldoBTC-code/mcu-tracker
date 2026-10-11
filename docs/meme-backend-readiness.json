@@ -1,8 +1,11 @@
 {
-  "checkedAt": "2026-10-11T01:02:35.733Z",
-  "httpStatus": 404,
-  "code": "PGRST202",
+  "checkedAt": "2026-10-11T01:17:56.738Z",
+  "httpStatus": 200,
+  "code": null,
   "readOnly": true,
+  "productionSchemaVerified": true,
   "productionPersistenceVerified": false,
-  "message": "Endpoint unavailable; database migration deployment pending"
+  "aggregateRows": 40,
+  "validCounters": true,
+  "message": "Shared aggregate available after deployment; authenticated write persistence still unverified"
 }

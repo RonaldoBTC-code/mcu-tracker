@@ -49,6 +49,10 @@ Japan Expo se fotografió en Francia, no Japón. Comic Market 96 se sitúa en To
 
 Los nuevos collages de Uruguay y Bolivia, composiciones de Trome con personaje digital, poses genéricas de Australia/Italia y fotos cuyo país no estaba demostrado quedaron fuera. TimesLIVE difundió el baile llamado Sipho-Man, pero no acreditó el lugar exacto de la escena: no se importó como Sudáfrica solo por la música o la sede del medio. La noticia sobre un paraguayo fotografiado en España no acredita una foto en Paraguay; la de un cubano en Miami no acredita Cuba.
 
-El feed de la portada usa las mismas colecciones y atribución segura, con lotes y fin real. Me gusta y vistas tienen frontend, SQL privado y pruebas ejecutables; Supabase devolvió 404 en la consulta inicial del agregado. Persistencia real pendiente. Detalles: docs/meme-feed.md.
+El feed de la portada usa las mismas colecciones y atribución segura, con lotes y fin real. Me gusta y vistas tienen frontend, SQL privado y pruebas ejecutables. Tras el despliegue, Supabase respondió HTTP 200 con los 40 agregados válidos; el 404 inicial está resuelto. Las escrituras y su persistencia con cuentas autenticadas reales siguen pendientes de validación. Detalles: docs/meme-feed.md.
 
 La evidencia del PR #6 está preservada en docs/history/pr6. No usar sus 66 archivos y 14 fotos como prueba de esta ampliación. La evidencia de la nueva publicación se guarda en docs/publication-results.json, docs/pages-verification-results.json y docs/browser-pages-results.json después del despliegue.
+
+Publicación comprobada del PR #7: commit ac108c0935b433ed4bcfab86d7121c4d298276be, workflow 38101183383 success, 93 archivos públicos con bytes idénticos y pruebas de feed/mapa/guía en 1280×900 y 390×844. Supabase devolvió los 40 agregados mediante consulta de solo lectura; no se realizaron escrituras autenticadas reales.
+
+Chrome también mostró los agregados reales de Supabase, verificados contra las respuestas de la RPC en Ecuador/Brasil y después de recargar; docs/browser-shared-stats-results.json PASS. La prueba permite lectura y bloquea escrituras/OTP.

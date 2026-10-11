@@ -13,4 +13,4 @@ Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. N
 
 Los archivos WebP actuales suman 1.750.700 bytes; el mayor pesa 91.588. El navegador carga una imagen del país elegido por vez. La información completa de fuentes y huellas permanece en docs/photo-inventory.json. La evidencia del PR #5 es histórica y corresponde a un conjunto compartido que fue corregido.
 
-El feed vertical de la portada añade tarjetas al hacer scroll; el modal sigue disponible. Consultar docs/meme-feed.md para Me gusta/vistas, esquema, pruebas y el backend todavía pendiente. La evidencia anterior de publicación está en docs/history/pr6; docs/publication-results.json debe acreditar por separado el despliegue actual.
+El feed vertical de la portada añade tarjetas al hacer scroll; el modal sigue disponible. Consultar docs/meme-feed.md para Me gusta/vistas, esquema y pruebas. El agregado real de Supabase está disponible; la persistencia de escrituras autenticadas todavía no se ha verificado. La evidencia anterior de publicación está en docs/history/pr6; docs/publication-results.json debe acreditar por separado el despliegue actual.
