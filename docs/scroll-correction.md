@@ -6,4 +6,4 @@ append desobserva el sentinel antes de insertar el lote y lo vuelve a observar e
 
 Regresión DOM: comprobar rearmado después del lote, fin real, cierre y cambio de país. Chrome local con backend real completó EC1, BR3, US10, CA10, GB10, BE6, FR4 y recarga FR4; 48 contadores coinciden y todas las escrituras están bloqueadas. El harness tiene límite de veinte segundos para convertir un bloqueo en FAIL explícito.
 
-Estado: corrección local probada; publicación pública pendiente. No modifica la cantidad de fotos de Ecuador: EC tiene una, faltan nueve.
+Estado: preparada, integrada y publicada mediante PR #12, commit d5e299738fea20f5fe46b2f811e881fe427b502b; Pages 38155490931 success. Los 118 archivos públicos son idénticos. Chrome público pasó en escritorio/móvil y la lectura real comparó las 48 tarjetas previstas; sin errores no manejados. No modifica la cantidad de fotos de Ecuador: EC tiene una, faltan nueve.

@@ -1,7 +1,7 @@
 [
   {
     "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-    "checkedAt": "2026-10-11T15:35:14.071Z",
+    "checkedAt": "2026-10-11T16:28:46.172Z",
     "backendRequestsBlocked": true,
     "viewport": {
       "width": 1280,
@@ -19,6 +19,10 @@
       "originalMapEntryPreserved": true,
       "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
       "result": "PASS"
     },
     "countriesTested": 51,
@@ -29,16 +33,17 @@
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
-      "/data/memes/EC.json"
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
     ],
-    "maxCountryOpenMs": 365,
+    "maxCountryOpenMs": 131,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
   },
   {
     "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-    "checkedAt": "2026-10-11T15:35:56.977Z",
+    "checkedAt": "2026-10-11T16:29:32.629Z",
     "backendRequestsBlocked": true,
     "viewport": {
       "width": 390,
@@ -56,6 +61,10 @@
       "originalMapEntryPreserved": true,
       "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
+      "trackerInitialAndReloadVerified": true,
+      "hashDoesNotOpenMemes": true,
+      "noInitialMemeRequests": true,
+      "progressSurvivesNavigation": true,
       "result": "PASS"
     },
     "countriesTested": 51,
@@ -66,9 +75,10 @@
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
-      "/data/memes/EC.json"
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
     ],
-    "maxCountryOpenMs": 60,
+    "maxCountryOpenMs": 62,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

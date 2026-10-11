@@ -1,10 +1,10 @@
 {
   "status": "source-published-and-verified",
-  "checkedAt": "2026-10-11T15:36:56.198Z",
+  "checkedAt": "2026-10-11T16:30:25.609Z",
   "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/10",
-  "sourceCommit": "4b11baa794315a54f2ce97c3050c2b8c1dac21b1",
-  "sourceTree": "01a4509825fab7b01cd07b65c28114ba60f8395c",
+  "pullRequest": 12,
+  "sourceCommit": "d5e299738fea20f5fe46b2f811e881fe427b502b",
+  "sourceTree": "aa4865dd61fee4a29154247e180c7a1c3d8ec3e2",
   "mapCorrection": {
     "pullRequest": 9,
     "sourceCommit": "c776829e1adc04fb4ae973a32c91c36763c90f45",
@@ -12,11 +12,10 @@
     "originalMapPreserved": true
   },
   "workflow": {
-    "id": 38151695606,
+    "id": 38155490931,
     "conclusion": "success",
-    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38151695606"
+    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38155490931"
   },
-  "gitSourceFilesVerified": 51,
   "publicSourceFilesVerified": 118,
   "photos": 65,
   "countriesWithPhotos": 22,
@@ -50,7 +49,12 @@
     "inlineMapAbsent": true,
     "originalMapEntryPreserved": true,
     "guideSteps7And8Verified": true,
-    "externalRequestsBlocked": true
+    "externalRequestsBlocked": true,
+    "trackerInitialAndReloadVerified": true,
+    "hashDoesNotOpenMemes": true,
+    "noInitialMemeRequests": true,
+    "progressSurvivesNavigation": true,
+    "uncaughtErrors": []
   },
   "productionAggregateReadVerified": true,
   "productionAggregateBrowserReadVerified": true,
@@ -76,13 +80,51 @@
   "backendReadiness": "docs/meme-backend-readiness.json",
   "historicalProof": [
     "docs/history/pr8/publication-results.json",
-    "docs/history/pr9-browser-pages-results.json"
+    "docs/history/pr9-browser-pages-results.json",
+    "docs/history/pr10/publication-results.json",
+    "docs/history/pr11/browser-pages-results.json"
   ],
   "limitations": [
-    "445 distinct photos missing across48 supported countries",
+    "445 distinct photos missing across 48 supported countries",
     "18 existing licenses undocumented",
+    "One licensed Ecuador candidate awaits production catalogue ID before public activation",
     "Authenticated production persistence unverified",
-    "Physical devices,real OTP and cross-device sync unverified"
+    "Physical devices, real OTP and cross-device sync unverified"
   ],
-  "evidence": "Source deployment and read-only checks. Later proof commits can update documentation/harness without changing production source."
+  "evidence": "Source deployment and read-only checks. Later proof commits can update documentation/harness without changing production source.",
+  "pullRequestUrl": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/12",
+  "gitChangedPathsVerified": 18,
+  "trackerNavigation": {
+    "pullRequest": 11,
+    "sourceCommit": "f812d7659ec4f2d2ff3ec875a74f7d8f8f16e320",
+    "workflow": 38154274034,
+    "prepared": true,
+    "integrated": true,
+    "published": true,
+    "trackerAlwaysInitial": true,
+    "memesExplicitNavigation": true,
+    "hashDoesNotOpenMemes": true,
+    "noInitialMemeRequests": true,
+    "progressPreserved": true,
+    "originalMapPreserved": true
+  },
+  "scrollCorrection": {
+    "prepared": true,
+    "integrated": true,
+    "published": true,
+    "rearmAfterEachBatch": true,
+    "staleFrameCancelled": true,
+    "productionReadOnlyScrollVerified": true
+  },
+  "ecuador": {
+    "publishedPhotos": 1,
+    "missingPublishedPhotos": 9,
+    "approvedPendingPhotos": 1,
+    "candidate": "ec-spider-bin",
+    "candidatePublicCatalogueActive": false,
+    "backendCandidateHttp": 400,
+    "backendCandidateError": "22023 Unknown meme",
+    "preparedMigration": "docs/pending-migrations/ec-spider-bin.sql",
+    "productionMigrationExecuted": false
+  }
 }
