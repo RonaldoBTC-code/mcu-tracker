@@ -1,7 +1,7 @@
 /* Only documented scene-location collections; shared totals always come from RPCs. */
 window.MemeFeed=(()=>{
   const $=id=>document.getElementById(id),BATCH=4,MINIMUM=10,VIEW_MS=1000;
-  let mounted=false,epoch=0,socialEpoch=0,controller,timer,lazy,visibility,more,blockers;
+  let mounted=false,active=false,trackerScroll=0,epoch=0,socialEpoch=0,controller,timer,lazy,visibility,more,blockers;
   let code=null,items=[],cursor=0,loading=false,manifestFailed=false,flushTimer=null;
   const cards=new Map(),visible=new Set(),viewTimers=new Map(),pendingViews=new Set(),inflightViews=new Set(),requests=new Set();
   let flushing=false;
@@ -45,7 +45,7 @@ window.MemeFeed=(()=>{
     }return data;
   }
   async function refresh(ids=[...cards.keys()]){
-    ids=ids.filter(id=>cards.has(id)&&!cards.get(id).busy);if(!ids.length)return;
+    if(!active)return;ids=ids.filter(id=>cards.has(id)&&!cards.get(id).busy);if(!ids.length)return;
     const generation=socialEpoch,owner=account(),versions=new Map(ids.map(id=>[id,cards.get(id).version]));
     try{
       const rows=checked(await rpc('get_meme_stats',{p_ids:ids},owner,generation),ids);
@@ -54,14 +54,14 @@ window.MemeFeed=(()=>{
     }catch(e){if(generation!==socialEpoch)return;for(const id of ids){const s=cards.get(id);if(s&&s.version===versions.get(id)&&!s.busy){s.error='No se pudieron consultar las interacciones compartidas.';paint(s);}}$('feedRetry').hidden=false;}
   }
   async function toggle(id){
-    const s=cards.get(id),owner=account();if(!s||!owner||!s.data||s.busy)return;
+    const s=cards.get(id),owner=account();if(!active||!s||!owner||!s.data||s.busy)return;
     const generation=socialEpoch,desired=!s.data.liked;s.busy=true;s.version++;s.error='';paint(s);
     try{const [row]=checked(await rpc('set_meme_like',{p_id:id,p_liked:desired},owner,generation),[id]);if(generation===socialEpoch&&cards.get(id)===s)s.data=row;}
     catch(e){if(generation===socialEpoch)s.error='No se confirmó el Me gusta. Reintenta la consulta antes de cambiarlo.';}
     finally{if(generation===socialEpoch&&cards.get(id)===s){s.busy=false;paint(s);if(s.error){s.data=null;paint(s);$('feedRetry').hidden=false;}}}
   }
   function foreground(s){
-    if(document.visibilityState==='hidden'||document.body.classList.contains('tour-on')||$('mapwrap')?.classList.contains('open'))return false;
+    if(!active||document.visibilityState==='hidden'||document.body.classList.contains('tour-on')||$('mapwrap')?.classList.contains('open'))return false;
     const r=s.img.getBoundingClientRect(),x=(Math.max(0,r.left)+Math.min(innerWidth,r.right))/2,y=(Math.max(0,r.top)+Math.min(innerHeight,r.bottom))/2;
     return document.elementFromPoint(x,y)===s.img;
   }
@@ -73,7 +73,7 @@ window.MemeFeed=(()=>{
     },VIEW_MS));
   }
   async function flushViews(){
-    clearTimeout(flushTimer);flushTimer=null;const owner=account(),generation=socialEpoch,ids=[...pendingViews].slice(0,10);if(flushing||!owner||!ids.length)return;
+    clearTimeout(flushTimer);flushTimer=null;const owner=account(),generation=socialEpoch,ids=[...pendingViews].slice(0,10);if(!active||flushing||!owner||!ids.length)return;
     flushing=true;ids.forEach(id=>{pendingViews.delete(id);inflightViews.add(id)});const versions=new Map(ids.map(id=>[id,cards.get(id)?.version]));
     try{
       const rows=checked(await rpc('record_meme_views',{p_ids:ids},owner,generation),ids);
@@ -83,7 +83,7 @@ window.MemeFeed=(()=>{
     finally{if(generation===socialEpoch){flushing=false;ids.forEach(id=>inflightViews.delete(id));}}
   }
   function append(){
-    if(loading||cursor>=items.length)return;const ids=[];
+    if(!active||loading||cursor>=items.length)return;const ids=[];
     for(const item of items.slice(cursor,cursor+BATCH)){
       const card=document.createElement('article');card.className='feed-card';card.dataset.memeId=item.id;
       const figure=document.createElement('figure'),img=document.createElement('img');img.width=item.width||768;img.height=item.height||512;img.alt=item.alt||item.title;img.loading='lazy';img.decoding='async';img.dataset.src=window.MapMemes.imageURL(code,item.image);
@@ -101,6 +101,7 @@ window.MemeFeed=(()=>{
     refresh(ids);
   }
   async function open(next=window.MapMemes.resolveCountry(),force=false){
+    if(!active)return;
     next=window.MapMemes.valid(next)?next:null;if(!force&&next===code&&(loading||items.length))return;
     cancel();const generation=epoch;code=next;items=[];cursor=0;loading=!!code;manifestFailed=false;$('feedList').replaceChildren();$('feedCountry').value=code||'';$('feedMore').hidden=true;$('feedEnd').hidden=true;$('feedRetry').hidden=true;
     if(!code){status('Selecciona un país para descubrir sus fotos.');return;}
@@ -119,19 +120,28 @@ window.MemeFeed=(()=>{
     }catch(e){if(generation!==epoch)return;manifestFailed=true;loading=false;status('No se pudo cargar esta colección.');$('feedRetry').hidden=false;}
     finally{if(generation===epoch){clearTimeout(timer);controller=null;}}
   }
+  function close(restore=true){
+    if(!mounted||!active)return;active=false;cancel();items=[];code=null;loading=false;$('feedList').replaceChildren();$('memeFeed').hidden=true;$('trackerView').hidden=false;$('feedOpen').setAttribute('aria-expanded','false');
+    if(restore){window.scrollTo(0,trackerScroll);$('feedOpen').focus({preventScroll:true});}
+  }
+  async function show(){
+    if(active)return;if(document.body.classList.contains('tour-on'))window.Guide?.close();trackerScroll=window.scrollY;active=true;$('trackerView').hidden=true;$('memeFeed').hidden=false;$('feedOpen').setAttribute('aria-expanded','true');$('feedTitle').focus({preventScroll:true});$('memeFeed').scrollIntoView();await open();
+  }
   function sessionChanged(){
-    if(!mounted)return;cancelSocial();for(const s of cards.values()){s.version++;s.data=null;s.busy=false;s.error='';paint(s);}refresh();
+    if(!mounted||!active)return;cancelSocial();for(const s of cards.values()){s.version++;s.data=null;s.busy=false;s.error='';paint(s);}refresh();
   }
   function init(){
     if(mounted||!$('memeFeed'))return;mounted=true;const select=$('feedCountry');select.add(new Option('Selecciona un país',''));for(const [id,name]of window.Region.countries())select.add(new Option(name,id));
     select.onchange=()=>{if(select.value)window.SafeStorage.setItem('mcu_map_country',select.value);else window.SafeStorage.removeItem('mcu_map_country');open(select.value);};
+    $('feedOpen').onclick=show;$('feedClose').onclick=()=>close();
     $('feedMore').onclick=append;$('feedRetry').onclick=()=>manifestFailed?open(code,true):Promise.all([refresh(),flushViews()]);
     const observeBlockers=()=>{blockers.observe(document.body,{attributes:true,attributeFilter:['class']});if($('mapwrap'))blockers.observe($('mapwrap'),{attributes:true,attributeFilter:['class']});};
     blockers=new MutationObserver(()=>{cancelVisibleTimers();for(const s of cards.values())scheduleView(s)});observeBlockers();
     document.addEventListener('visibilitychange',()=>{cancelTimers();if(document.visibilityState==='visible'){for(const s of cards.values())scheduleView(s);flushViews();}});
-    window.addEventListener('online',()=>{if(manifestFailed)open(code,true);else{refresh();flushViews();}});
-    window.addEventListener('pagehide',()=>{blockers.disconnect();cancel()});window.addEventListener('pageshow',e=>{if(e.persisted){observeBlockers();open(code,true)}});open();
+    window.addEventListener('online',()=>{if(!active)return;if(manifestFailed)open(code,true);else{refresh();flushViews();}});
+    window.addEventListener('pagehide',()=>{blockers.disconnect();cancel()});window.addEventListener('pageshow',e=>{if(e.persisted){observeBlockers();close(false)}});
+    $('memeFeed').hidden=true;$('trackerView').hidden=false;
   }
   document.addEventListener('DOMContentLoaded',init);
-  return {init,open,sessionChanged,toggle};
+  return {init,show,close,open,sessionChanged,toggle};
 })();

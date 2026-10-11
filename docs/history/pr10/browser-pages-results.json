@@ -1,0 +1,76 @@
+[
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T15:35:14.071Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
+      "manualSelectionSurvivesReload": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
+    "uniqueCountryCatalogues": 23,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json"
+    ],
+    "maxCountryOpenMs": 365,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T15:35:56.977Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
+      "manualSelectionSurvivesReload": true,
+      "result": "PASS"
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
+    "uniqueCountryCatalogues": 23,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json"
+    ],
+    "maxCountryOpenMs": 60,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

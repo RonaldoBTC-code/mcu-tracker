@@ -1,7 +1,12 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 module.exports=async function checkFeed(page,{root,viewport,requests}){
  const countries=JSON.parse(fs.readFileSync(path.join(root,'docs/photo-coverage.json'))).countries,unique=new Set();let decoded=0;
- await page.waitForFunction(()=>document.querySelector('#feedCountry')?.value==='EC');
+ await page.waitForFunction(()=>document.querySelectorAll('#mc .row').length>0&&document.querySelector('#feedCountry').options.length===52);
+ assert(await page.locator('#trackerView').isVisible());assert(await page.locator('#memeFeed').isHidden());assert.equal(requests.length,0);assert(await page.locator('#q').isVisible());
+ await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('#mc .row')).opacity)===1);assert.equal(requests.length,0);
+ await page.screenshot({path:path.join(root,'docs/tracker-entry-'+viewport.width+'.png'),fullPage:false});
+ await page.locator('.chk').first().click();const progress=await page.evaluate(()=>window.SafeStorage.getItem('mcu_v4'));
+ await page.locator('#feedOpen').click();await page.waitForFunction(()=>document.querySelector('#feedCountry').value==='EC');assert(await page.locator('#trackerView').isHidden());
  await page.locator('#memeFeed').scrollIntoViewIfNeeded();assert(await page.locator('#feedCountry').isVisible());
  await page.locator('#feedList img').scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);
  assert(requests.every(p=>p==='/data/memes/EC.json'||p.startsWith('/data/memes/EC/images/')));const initialRequests=[...requests];
@@ -29,9 +34,11 @@ module.exports=async function checkFeed(page,{root,viewport,requests}){
   assert.equal(assigned.length,items.length,country+': not every image activation was verified');
   assert(assigned.every(x=>x.country===country&&x.path.startsWith('/data/memes/'+country+'/images/')),country+': activated an image after switching to another country: '+JSON.stringify(assigned));
  }
- await page.selectOption('#feedCountry','CA');await page.locator('#feedList img').first().scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);await page.screenshot({path:path.join(root,'docs/feed-landing-'+viewport.width+'.png'),fullPage:false});
+ await page.selectOption('#feedCountry','CA');await page.locator('#feedList img').first().scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);await page.screenshot({path:path.join(root,'docs/feed-section-'+viewport.width+'.png'),fullPage:false});
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
- await page.selectOption('#feedCountry','BR');await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('#feedCountry')?.value==='BR'&&document.querySelectorAll('#feedList article').length>=2);
- await page.selectOption('#feedCountry','EC');await page.locator('#feedList img').first().scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);requests.length=0;
- return {countriesTested:countries.length,uniquePhotos:unique.size,imageDisplayChecks:decoded,initialRequests,inlineMapAbsent:true,originalMapEntryPreserved:true,countrySelectorOptions:51,manualSelectionSurvivesReload:true,result:'PASS'};
+ await page.selectOption('#feedCountry','BR');await page.locator('#feedClose').click();assert(await page.locator('#trackerView').isVisible());assert(await page.locator('#memeFeed').isHidden());assert.equal(await page.evaluate(()=>window.SafeStorage.getItem('mcu_v4')),progress);assert.equal(await page.locator('#feedOpen').getAttribute('aria-expanded'),'false');
+ await page.goto(page.url().split('#')[0]+'#memeFeed',{waitUntil:'domcontentloaded'});await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelectorAll('#mc .row').length>0);assert(await page.locator('#trackerView').isVisible());assert(await page.locator('#memeFeed').isHidden());assert.equal(await page.locator('#feedList article').count(),0);assert.equal(await page.evaluate(()=>window.SafeStorage.getItem('mcu_v4')),progress);
+ requests.length=0;await page.locator('#feedOpen').click();await page.waitForFunction(()=>document.querySelector('#feedCountry')?.value==='BR'&&document.querySelectorAll('#feedList article').length>=2);
+ await page.selectOption('#feedCountry','EC');await page.locator('#feedList img').first().scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);await page.locator('#feedClose').click();await page.waitForLoadState('networkidle');requests.length=0;
+ return {countriesTested:countries.length,uniquePhotos:unique.size,imageDisplayChecks:decoded,initialRequests,inlineMapAbsent:true,originalMapEntryPreserved:true,countrySelectorOptions:51,manualSelectionSurvivesReload:true,trackerInitialAndReloadVerified:true,hashDoesNotOpenMemes:true,noInitialMemeRequests:true,progressSurvivesNavigation:true,result:'PASS'};
 };

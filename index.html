@@ -1875,7 +1875,8 @@ body.tour-on .tour-path { opacity: 1 !important; }
 <style>
 .meme-feed{position:relative;z-index:1;width:min(760px,100%);margin:32px auto;padding:28px 24px;scroll-margin-top:24px;border:1px solid var(--border);border-radius:24px;background:#0d101b;box-shadow:0 16px 60px #0004}
 .feed-heading{display:flex;align-items:flex-start;gap:20px;justify-content:space-between}.feed-heading h2{font-size:clamp(28px,5vw,38px);line-height:1.05;color:var(--text);margin:6px 0 12px}.feed-heading p,.feed-note{color:var(--muted);font-size:14px;line-height:1.5}.feed-kicker{letter-spacing:3px;color:var(--gold)!important;font-size:11px!important}
-.feed-tracker-link{color:var(--gold);flex-shrink:0;font-size:13px;padding:12px 0}.feed-country-label{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0}.feed-country-label select{min-height:44px;font-size:14px;max-width:100%}
+.meme-feed[hidden],#trackerView[hidden]{display:none!important}
+.feed-tracker-link{border:0;background:none;font:inherit;cursor:pointer;color:var(--gold);flex-shrink:0;font-size:13px;padding:12px 0}.feed-country-label{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0}.feed-country-label select{min-height:44px;font-size:14px;max-width:100%}
 #feedStatus{font-size:13px;color:var(--muted);margin:12px 0}.feed-list{display:grid;gap:24px}.feed-card{overflow:hidden;background:#12131c;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px #0003;scroll-margin-top:24px}.feed-card figure{margin:0}.feed-card img{display:block;width:100%;height:auto;max-height:70svh;object-fit:contain;background:#090a11;aspect-ratio:auto}.feed-card figcaption{padding:18px;font-size:13px;line-height:1.5;overflow-wrap:anywhere}.feed-card figcaption a{color:var(--gold)}
 .feed-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:0 18px 12px;font-size:13px;color:var(--muted)}.feed-like,.feed-more,.feed-image-retry{min-height:44px;padding:10px 16px;border:1px solid var(--border);border-radius:10px;background:#202233;color:var(--text);font:inherit;cursor:pointer}.feed-like[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}.feed-like:disabled{cursor:default;opacity:.6}.feed-message{font-size:12px;color:var(--muted);padding:0 18px 14px;margin:0}.feed-more{margin:14px 0}.feed-image-retry{margin:0 18px 18px}.feed-more[hidden]{display:none}#feedSentinel{height:1px}.feed-note{font-size:12px;margin-top:16px}
 @media(max-width:560px){.meme-feed{padding:20px 12px;margin:24px auto}.feed-heading{display:block}.feed-tracker-link{display:inline-block;min-height:44px}.feed-card{border-radius:14px}.feed-card figcaption{padding:14px}.feed-actions{padding:0 14px 12px}}
@@ -1938,20 +1939,11 @@ body.tour-on .tour-path { opacity: 1 !important; }
     <select class="cb-reg" id="cbLang"></select>
   </span>
   <button class="mapbtn" id="guideOpen">Guia</button>
-  <a class="mapbtn" id="feedOpen" href="#memeFeed">Descubrir memes</a>
+  <button class="mapbtn" id="feedOpen" type="button" aria-controls="memeFeed" aria-expanded="false">Memes</button>
   <button class="mapbtn" id="mapOpen" data-i18n="mapaMundial">Mapa mundial</button>
 </div>
-<section id="memeFeed" class="meme-feed" aria-labelledby="feedTitle">
-  <div class="feed-heading"><div><p class="feed-kicker">DESCUBRE</p><h2 id="feedTitle">Marvel fuera de la pantalla</h2><p>Disfraces inesperados y escenas reales de cada país. Sigue bajando para descubrirlas.</p></div><a class="feed-tracker-link" href="#mc">Ir al rastreador</a></div>
-  <label class="feed-country-label" for="feedCountry">Descubrir fotos de <select id="feedCountry" class="cb-reg"></select></label>
-  <p id="feedStatus" role="status">Preparando la colección…</p>
-  <div id="feedList" class="feed-list"></div>
-  <div id="feedSentinel" aria-hidden="true"></div>
-  <button id="feedMore" class="feed-more" type="button" hidden>Descubrir más fotos</button>
-  <p id="feedEnd" class="feed-note" role="status" hidden></p>
-  <button id="feedRetry" class="feed-more" type="button" hidden>Reintentar</button>
-  <p class="feed-note">Vistas de cuentas únicas: una por cuenta y foto, tras verla durante al menos un segundo. Los invitados pueden explorar; inicia sesión para participar.</p>
-</section>
+
+<main id="trackerView" aria-label="Tracker de películas y series">
 <div class="stats">
   <div class="stat"><span class="sn g" id="s-done">0</span><span class="sl">Vistos</span></div>
   <div class="stat"><span class="sn" id="s-left">53</span><span class="sl">Pendientes</span></div>
@@ -1979,6 +1971,18 @@ body.tour-on .tour-path { opacity: 1 !important; }
 </div>
 
 <div class="main" id="mc"></div>
+</main>
+<section id="memeFeed" class="meme-feed" aria-labelledby="feedTitle" hidden>
+  <div class="feed-heading"><div><p class="feed-kicker">DESCUBRE</p><h2 id="feedTitle" tabindex="-1">Marvel fuera de la pantalla</h2><p>Disfraces inesperados y escenas reales de cada país. Sigue bajando para descubrirlas.</p></div><button id="feedClose" class="feed-tracker-link" type="button">Volver al tracker</button></div>
+  <label class="feed-country-label" for="feedCountry">Descubrir fotos de <select id="feedCountry" class="cb-reg"></select></label>
+  <p id="feedStatus" role="status">Preparando la colección…</p>
+  <div id="feedList" class="feed-list"></div>
+  <div id="feedSentinel" aria-hidden="true"></div>
+  <button id="feedMore" class="feed-more" type="button" hidden>Descubrir más fotos</button>
+  <p id="feedEnd" class="feed-note" role="status" hidden></p>
+  <button id="feedRetry" class="feed-more" type="button" hidden>Reintentar</button>
+  <p class="feed-note">Vistas de cuentas únicas: una por cuenta y foto, tras verla durante al menos un segundo. Los invitados pueden explorar; inicia sesión para participar.</p>
+</section>
 <div class="toast" id="toast"></div>
 
 
@@ -4212,6 +4216,7 @@ window.Guide = (() => {
   });
 
   function start() {
+    window.MemeFeed?.close(false);
     const overlay = document.getElementById('tourOverlay');
     if (!overlay) return;
     currentStep = 0;

@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-11T15:29:12.206Z",
+  "checkedAt": "2026-10-11T16:04:55.240Z",
   "result": "PASS",
   "network": "simulated; no production writes",
   "checks": [
     {
-      "name": "Landing: lote inicial, país único, scroll sin duplicados y fin real",
+      "name": "Sección Memes: lote inicial, país único, scroll sin duplicados y fin real",
       "status": "PASS"
     },
     {
@@ -33,6 +33,10 @@
     },
     {
       "name": "Sin mapa en la portada: selector accesible y mapa original conservados",
+      "status": "PASS"
+    },
+    {
+      "name": "Inicio siempre tracker; cerrar cancela vistas y conserva progreso y preferencia",
       "status": "PASS"
     }
   ]

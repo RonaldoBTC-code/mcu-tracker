@@ -1,0 +1,88 @@
+{
+  "status": "source-published-and-verified",
+  "checkedAt": "2026-10-11T15:36:56.198Z",
+  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/10",
+  "sourceCommit": "4b11baa794315a54f2ce97c3050c2b8c1dac21b1",
+  "sourceTree": "01a4509825fab7b01cd07b65c28114ba60f8395c",
+  "mapCorrection": {
+    "pullRequest": 9,
+    "sourceCommit": "c776829e1adc04fb4ae973a32c91c36763c90f45",
+    "newLandingMapRemoved": true,
+    "originalMapPreserved": true
+  },
+  "workflow": {
+    "id": 38151695606,
+    "conclusion": "success",
+    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38151695606"
+  },
+  "gitSourceFilesVerified": 51,
+  "publicSourceFilesVerified": 118,
+  "photos": 65,
+  "countriesWithPhotos": 22,
+  "minimumPerCountry": 10,
+  "completeCountries": [
+    "CA",
+    "GB",
+    "US"
+  ],
+  "countriesBelowMinimum": 48,
+  "countriesWithoutPhotos": 29,
+  "missingPhotos": 445,
+  "documentedLicensesOrPublicDomain": 47,
+  "unverifiedLicenses": 18,
+  "collectionCoverageComplete": false,
+  "browser": {
+    "result": "PASS",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "countriesTestedPerViewport": 51,
+    "feedPhotosCheckedPerViewport": 65,
+    "mapImageDisplayChecksPerViewport": 130,
+    "inlineMapAbsent": true,
+    "originalMapEntryPreserved": true,
+    "guideSteps7And8Verified": true,
+    "externalRequestsBlocked": true
+  },
+  "productionAggregateReadVerified": true,
+  "productionAggregateBrowserReadVerified": true,
+  "productionInteractionsVerified": false,
+  "productionPersistenceVerified": false,
+  "aggregateBrowserEvidence": "docs/browser-shared-stats-results.json",
+  "aggregateBrowserChecks": {
+    "result": "PASS",
+    "countries": [
+      "EC",
+      "BR",
+      "US",
+      "CA",
+      "GB",
+      "BE",
+      "FR"
+    ],
+    "cardCounterMatches": 48,
+    "reloadVerified": true,
+    "writesBlocked": true,
+    "authentication": false
+  },
+  "backendReadiness": "docs/meme-backend-readiness.json",
+  "historicalProof": [
+    "docs/history/pr8/publication-results.json",
+    "docs/history/pr9-browser-pages-results.json"
+  ],
+  "limitations": [
+    "445 distinct photos missing across48 supported countries",
+    "18 existing licenses undocumented",
+    "Authenticated production persistence unverified",
+    "Physical devices,real OTP and cross-device sync unverified"
+  ],
+  "evidence": "Source deployment and read-only checks. Later proof commits can update documentation/harness without changing production source."
+}
