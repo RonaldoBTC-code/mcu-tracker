@@ -3,7 +3,7 @@
   "scope": "geographic",
   "catalogueRole": "scene-location",
   "status": "partial",
-  "minimumPerCountry": 3,
+  "minimumPerCountry": 10,
   "memes": [
     {
       "id": "in-spider-hood",

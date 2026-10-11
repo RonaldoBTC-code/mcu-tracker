@@ -958,5 +958,348 @@
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
     "publisher": "Trome"
+  },
+  {
+    "id": "ca-spider-hawaiian",
+    "country": "CA",
+    "image": "scripts/reference-images/ca-spider-hawaiian.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_(18855860674).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg/960px-Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Spider-Man se va de vacaciones",
+    "location": "Montreal Comiccon 2015, Montreal",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_(18855860674).jpg",
+      "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Pikawil from Laval, Canada",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man mezcla su traje con camisa hawaiana, collar de flores y pantalones cortos.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "ca-miku-maid",
+    "country": "CA",
+    "image": "scripts/reference-images/ca-miku-maid.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_(28181536851).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg/960px-Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Daredevil y Spider-Man cambian de vestuario",
+    "location": "Montreal Comiccon 2016, Montreal",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_(28181536851).jpg",
+      "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Pikawil from Laval, Canada",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Daredevil",
+      "Spider-Man"
+    ],
+    "visualGag": "Daredevil interpreta a Hatsune Miku y Spider-Man lleva un traje de sirvienta.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "ca-deadpool-redhood",
+    "country": "CA",
+    "image": "scripts/reference-images/ca-deadpool-redhood.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_(19292146559).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg/960px-Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Caperucita Deadpool encuentra a Spider-Man",
+    "location": "Montreal Comiccon 2015, Montreal",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_(19292146559).jpg",
+      "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Pikawil from Laval, Canada",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool",
+      "Spider-Man"
+    ],
+    "visualGag": "Deadpool combina máscara, capucha de Caperucita y delantal junto a Spider-Man.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "ca-deadpool-brainslug",
+    "country": "CA",
+    "image": "scripts/reference-images/ca-deadpool-brainslug.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Brainslugged_Deadpool_(19432425756).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg/960px-Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Deadpool tiene un invitado en la cabeza",
+    "location": "Montreal Comiccon 2015, Montreal",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Brainslugged_Deadpool_(19432425756).jpg",
+      "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Pikawil from Laval, Canada",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Un muñeco verde con un ojo descansa sobre la máscara de Deadpool.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "ca-deadpool-chicken",
+    "country": "CA",
+    "image": "scripts/reference-images/ca-deadpool-chicken.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_(27633865783).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg/960px-Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Deadpool consigue un compañero con plumas",
+    "location": "Montreal Comiccon 2016, Montreal",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_(27633865783).jpg",
+      "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Pikawil from Laval, Canada",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool abraza a un acompañante con disfraz de pollo amarillo.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "ca-photobomb-pileup",
+    "country": "CA",
+    "image": "scripts/reference-images/ca-photobomb-pileup.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015-_Photobomb_pileup,_part_5_(18835967574).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg/960px-Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Deadpool se suma a una foto cada vez más concurrida",
+    "location": "Montreal Comiccon 2015, Montreal",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015-_Photobomb_pileup,_part_5_(18835967574).jpg",
+      "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Pikawil from Laval, Canada",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool participa en un grupo de cosplayers con cabeza de caballo, espadas y disfraces de universos diferentes.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "us-deadpool-pope",
+    "country": "US",
+    "image": "scripts/reference-images/us-deadpool-pope.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:NYCC_2016_Cosplay_of_Pope_Deadpool.jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/NYCC_2016_Cosplay_of_Pope_Deadpool.jpg/960px-NYCC_2016_Cosplay_of_Pope_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Deadpool cambia la katana por un báculo",
+    "location": "New York Comic Con 2016, Nueva York",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:NYCC_2016_Cosplay_of_Pope_Deadpool.jpg",
+      "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "LostplanetKD73",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool lleva mitra y vestimenta ceremonial blanca y roja.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "us-deadpool-lego",
+    "country": "US",
+    "image": "scripts/reference-images/us-deadpool-lego.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "title": "Deadpool descubre el tamaño de una minifigura",
+    "location": "Big Apple Comic Con 2016, Nueva York",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg",
+      "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Richie S",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Una persona viste un disfraz de Deadpool con cabeza, cuerpo y manos de minifigura LEGO gigante.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "us-spider-frog",
+    "country": "US",
+    "image": "scripts/reference-images/us-spider-frog.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:SDCC_15_-_Spider-Frog_(19652841226).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/SDCC_15_-_Spider-Frog_%2819652841226%29.jpg/960px-SDCC_15_-_Spider-Frog_%2819652841226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "La rana también tiene sentido arácnido",
+    "location": "San Diego Comic-Con 2015, San Diego",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:SDCC_15_-_Spider-Frog_(19652841226).jpg",
+      "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "William Tung from USA",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Un disfraz de rana con cabeza enorme viste el traje de Spider-Man.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "ca-deadpool-lantern",
+    "country": "CA",
+    "image": "scripts/reference-images/ca-deadpool-lantern.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg/960px-Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Deadpool estrena traje de Green Lantern",
+    "location": "Fan Expo Canada 2012, Toronto",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg",
+      "statement": "La descripción y categoría identifican Fan Expo Canada 2012; la categoría del evento acredita Toronto.",
+      "verifiedOn": "2026-10-10",
+      "corroboratingUrl": "https://commons.wikimedia.org/wiki/Category:2012_Fan_Expo_Canada"
+    },
+    "creator": "Maria Casacalenda",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Deadpool lleva máscara y cinturón propios en un traje verde de Green Lantern, junto a una pistola de juguete del mismo color.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "us-spider-thor",
+    "country": "US",
+    "image": "scripts/reference-images/us-spider-thor.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Captain_America_and_Spider_Thor%3F_C2E2_2014_(14254757313).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg/960px-Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Spider-Man cambia de martillo y de capa",
+    "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Captain_America_and_Spider_Thor%3F_C2E2_2014_(14254757313).jpg",
+      "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Chris Favero from USA",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Spider-Man",
+      "Thor",
+      "Captain America"
+    ],
+    "visualGag": "Spider-Man lleva armadura, capa y martillo de Thor junto a Captain America.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "us-deadtrooper",
+    "country": "US",
+    "image": "scripts/reference-images/us-deadtrooper.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:SWCA_-_Deadtrooper_(16580465874).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/SWCA_-_Deadtrooper_%2816580465874%29.jpg/960px-SWCA_-_Deadtrooper_%2816580465874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "El stormtrooper se ha pasado a Deadpool",
+    "location": "Star Wars Celebration Anaheim 2015, Anaheim",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:SWCA_-_Deadtrooper_(16580465874).jpg",
+      "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "William Tung from USA",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Deadpool"
+    ],
+    "visualGag": "Una armadura de stormtrooper está pintada en rojo y negro con el patrón de la máscara de Deadpool.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "us-captain-spider",
+    "country": "US",
+    "image": "scripts/reference-images/us-captain-spider.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:C2E2_2015_-_Captain_Spider-Man_(17118870150).jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg/960px-C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Spider-Man toma prestado el escudo del Capitán",
+    "location": "Chicago Comic & Entertainment Expo 2015, Chicago",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:C2E2_2015_-_Captain_Spider-Man_(17118870150).jpg",
+      "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "GabboT",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "characters": [
+      "Spider-Man",
+      "Captain America"
+    ],
+    "visualGag": "Un traje de Spider-Man incorpora colores, estrella y escudo de Captain America.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
+  },
+  {
+    "id": "us-deadpool-elsa",
+    "country": "US",
+    "image": "scripts/reference-images/us-deadpool-elsa.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:C2E2_(Day_2)_2014,_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg",
+    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg/960px-C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "title": "Deadpool se apunta a Frozen",
+    "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:C2E2_(Day_2)_2014,_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg",
+      "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+      "verifiedOn": "2026-10-10"
+    },
+    "creator": "Lauren Jankowski",
+    "publisher": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Deadpool",
+      "Spider-Man"
+    ],
+    "visualGag": "Deadpool lleva peluca rubia con trenza y vestido azul de Elsa junto a Spider-Man.",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false
   }
 ]

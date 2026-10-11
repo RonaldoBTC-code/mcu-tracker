@@ -136,13 +136,13 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));
   const coverage=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/photo-coverage.json'),'utf8'));
   for(const code of codes){const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/memes',code+'.json'),'utf8'));
-   assert.equal(data.country,code);assert.equal(data.scope,'geographic');assert.equal(data.catalogueRole,'scene-location');assert.equal(data.status,data.memes.length>=3?'complete':data.memes.length?'partial':'pending');
+   assert.equal(data.country,code);assert.equal(data.scope,'geographic');assert.equal(data.catalogueRole,'scene-location');assert.equal(data.minimumPerCountry,10);assert.equal(data.status,data.memes.length>=10?'complete':data.memes.length?'partial':'pending');
    for(const item of data.memes){const source=sources.find(s=>s.id===item.id);assert(source);assert.equal(item.country,code);assert.equal(item.country,source.country);assert.equal(item.creator,source.creator);assert.equal(item.license,source.license);assert.deepEqual(item.countryEvidence,source.countryEvidence);assert(item.location&&item.countryEvidence.statement&&new URL(item.countryEvidence.url).protocol==='https:');assert.equal(item.hasMemeTextOverlay,false);assert(item.reviewedVisually&&item.visualGag&&item.characters.length);assert(item.image.startsWith('data/memes/'+code+'/images/'));assert.equal(item.source,source.source);assert(item.width>0&&item.width<=768);assert(item.height>0&&item.height<=768);
     const bytes=fs.readFileSync(path.join(__dirname,'..',item.image));assert(bytes.length<100000);assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');assert(!paths.has(item.image));paths.add(item.image);assert(!contentHashes.has(item.outputFingerprint.sha256));contentHashes.add(item.outputFingerprint.sha256);
    }
    assert.equal(coverage.perCountry[code],data.memes.length);
   }
-  assert.equal(paths.size,sources.length);assert.equal(coverage.photos,sources.length);assert.equal(coverage.complete,coverage.pendingCountries.length===0);assert.equal(coverage.crossCountryDuplicatePhotos,0);
+  assert.equal(paths.size,sources.length);assert.equal(coverage.photos,sources.length);assert.equal(coverage.minimumPerCountry,10);assert.equal(coverage.missingPhotos,Object.values(coverage.missingPerCountry).reduce((a,b)=>a+b,0));assert.equal(coverage.complete,coverage.pendingCountries.length===0);assert.equal(coverage.crossCountryDuplicatePhotos,0);
  });
  await test('Sin reciclaje internacional: rechaza el catálogo compartido del PR 5',async({w,d})=>{
   w.fetch=async()=>({ok:true,json:async()=>({country:'EC',scope:'international',memes:[{title:'Marvel',image:'data/memes/international/images/avengers-office.webp'}]})});

@@ -1,0 +1,67 @@
+{
+  "status": "source-published-and-verified",
+  "checkedAt": "2026-10-11T01:22:38.452Z",
+  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/7",
+  "sourceCommit": "ac108c0935b433ed4bcfab86d7121c4d298276be",
+  "sourceTree": "6dc883d7ea618089b2b83102860099736cc53802",
+  "workflow": {
+    "id": 38101183383,
+    "conclusion": "success",
+    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38101183383"
+  },
+  "gitSourceFilesVerified": 116,
+  "publicSourceFilesVerified": 93,
+  "browser": {
+    "result": "PASS",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "countriesTestedPerViewport": 51,
+    "feedPhotosCheckedPerViewport": 40,
+    "mapImageDisplayChecksPerViewport": 80,
+    "guideSteps7And8Verified": true,
+    "externalRequestsBlocked": true
+  },
+  "photos": 40,
+  "countriesWithPhotos": 22,
+  "countriesWithAtLeastThreePhotos": 7,
+  "countriesBelowOperationalMinimum": 44,
+  "countriesWithoutPhotos": 29,
+  "documentedLicensesOrPublicDomain": 22,
+  "unverifiedLicenses": 18,
+  "collectionCoverageComplete": false,
+  "productionSchemaVerified": true,
+  "productionAggregateReadVerified": true,
+  "productionInteractionsVerified": false,
+  "productionPersistenceVerified": false,
+  "backendReadiness": "docs/meme-backend-readiness.json",
+  "historicalProof": "docs/history/pr6/publication-results.json",
+  "limitations": [
+    "Country content incomplete",
+    "18 image licenses not documented",
+    "Authenticated production write persistence unverified",
+    "Physical mobile devices, real OTP and cross-device sync unverified"
+  ],
+  "evidence": "This records the source deployment and subsequent read-only checks. Documentation-only commits may follow.",
+  "productionAggregateBrowserReadVerified": true,
+  "aggregateBrowserEvidence": "docs/browser-shared-stats-results.json",
+  "aggregateBrowserChecks": {
+    "result": "PASS",
+    "countries": [
+      "EC",
+      "BR"
+    ],
+    "cardCounterMatches": 7,
+    "reloadVerified": true,
+    "writesBlocked": true,
+    "authentication": false
+  }
+}

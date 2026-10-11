@@ -1,6 +1,6 @@
 /* Only documented scene-location collections; shared totals always come from RPCs. */
 window.MemeFeed=(()=>{
-  const $=id=>document.getElementById(id),BATCH=2,VIEW_MS=1000;
+  const $=id=>document.getElementById(id),BATCH=4,MINIMUM=10,VIEW_MS=1000;
   let mounted=false,epoch=0,socialEpoch=0,controller,timer,lazy,visibility,more,blockers;
   let code=null,items=[],cursor=0,loading=false,manifestFailed=false,flushTimer=null;
   const cards=new Map(),visible=new Set(),viewTimers=new Map(),pendingViews=new Set(),inflightViews=new Set(),requests=new Set();
@@ -95,20 +95,23 @@ window.MemeFeed=(()=>{
       if(lazy)lazy.observe(img);else{img.src=img.dataset.src;delete img.dataset.src;}visibility?.observe(img);
     }
     cursor=Math.min(items.length,cursor+BATCH);$('feedMore').hidden=cursor>=items.length;
-    status(items.length+' foto'+(items.length===1?'':'s')+' para descubrir. Sigue bajando.');$('feedEnd').hidden=cursor<items.length;
-    $('feedEnd').textContent='Fin de esta colección.'+(items.length<3?' Seguimos ampliándola.':'');
+    const missing=Math.max(0,MINIMUM-items.length);
+    status(items.length+' foto'+(items.length===1?'':'s')+' para descubrir.'+(missing?' Colección en ampliación: faltan '+missing+' para '+MINIMUM+'.':'')+' Sigue bajando.');$('feedEnd').hidden=cursor<items.length;
+    $('feedEnd').textContent='Fin de esta colección.'+(missing?' Faltan '+missing+' fotos para el mínimo de '+MINIMUM+'.':'');
     refresh(ids);
   }
   async function open(next=window.MapMemes.resolveCountry(),force=false){
     next=window.MapMemes.valid(next)?next:null;if(!force&&next===code&&(loading||items.length))return;
     cancel();const generation=epoch;code=next;items=[];cursor=0;loading=!!code;manifestFailed=false;$('feedList').replaceChildren();$('feedCountry').value=code||'';$('feedMore').hidden=true;$('feedEnd').hidden=true;$('feedRetry').hidden=true;
+    for(const point of $('feedMap').querySelectorAll('[data-country]'))point.setAttribute('aria-pressed',String(point.dataset.country===code));
+    $('feedMapCaption').textContent=code?'País seleccionado: '+$('feedCountry').selectedOptions[0].textContent+'.':'Elige un país en el mapa o en el selector.';
     if(!code){status('Selecciona un país para descubrir sus fotos.');return;}
     status('Cargando la colección…');controller=new AbortController();timer=setTimeout(()=>controller?.abort(),10000);
     try{
       const r=await fetch(new URL('data/memes/'+code+'.json',document.baseURI),{signal:controller.signal});if(!r.ok)throw Error('Catalogue unavailable');
       const data=await r.json();if(generation!==epoch)return;
       const unique=new Set();items=window.MapMemes.parseCatalogue(code,data).map(x=>x.item).filter(item=>/^[a-z0-9-]+$/.test(item.id||'')&&!unique.has(item.id)&&unique.add(item.id));loading=false;
-      if(!items.length){status('Todavía no hay fotos verificadas para este país.');return;}
+      if(!items.length){status('Todavía no hay fotos verificadas para este país. Faltan '+MINIMUM+' para completar la colección.');return;}
       if(typeof IntersectionObserver==='function'){
         lazy=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting&&generation===epoch){const img=e.target;if(img.dataset.src){img.src=img.dataset.src;delete img.dataset.src;}lazy.unobserve(img)}},{rootMargin:'300px'});
         visibility=new IntersectionObserver(entries=>{if(generation!==epoch)return;for(const e of entries){if(e.isIntersecting&&e.intersectionRatio>=.5){visible.add(e.target);scheduleView(cards.get(e.target.closest('article').dataset.memeId));}else{visible.delete(e.target);const id=e.target.closest('article').dataset.memeId;clearTimeout(viewTimers.get(id));viewTimers.delete(id);}}},{threshold:[0,.5]});
@@ -123,7 +126,11 @@ window.MemeFeed=(()=>{
   }
   function init(){
     if(mounted||!$('memeFeed'))return;mounted=true;const select=$('feedCountry');select.add(new Option('Selecciona un país',''));for(const [id,name]of window.Region.countries())select.add(new Option(name,id));
-    select.onchange=()=>{if(select.value)window.SafeStorage.setItem('mcu_map_country',select.value);else window.SafeStorage.removeItem('mcu_map_country');open(select.value);};$('feedMore').onclick=append;$('feedRetry').onclick=()=>manifestFailed?open(code,true):Promise.all([refresh(),flushViews()]);
+    select.onchange=()=>{if(select.value)window.SafeStorage.setItem('mcu_map_country',select.value);else window.SafeStorage.removeItem('mcu_map_country');open(select.value);};
+    $('feedMap').innerHTML=window.WorldMap.discoveryMap();
+    const choose=e=>{const point=e.target.closest('[data-country]');if(!point||!$('feedMap').contains(point))return;if(e.type==='keydown'&&!['Enter',' '].includes(e.key))return;e.preventDefault();select.value=point.dataset.country;select.onchange();};
+    $('feedMap').addEventListener('click',choose);$('feedMap').addEventListener('keydown',choose);
+    $('feedMore').onclick=append;$('feedRetry').onclick=()=>manifestFailed?open(code,true):Promise.all([refresh(),flushViews()]);
     const observeBlockers=()=>{blockers.observe(document.body,{attributes:true,attributeFilter:['class']});if($('mapwrap'))blockers.observe($('mapwrap'),{attributes:true,attributeFilter:['class']});};
     blockers=new MutationObserver(()=>{cancelVisibleTimers();for(const s of cards.values())scheduleView(s)});observeBlockers();
     document.addEventListener('visibilitychange',()=>{cancelTimers();if(document.visibilityState==='visible'){for(const s of cards.values())scheduleView(s);flushViews();}});

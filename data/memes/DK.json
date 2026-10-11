@@ -3,6 +3,6 @@
   "scope": "geographic",
   "catalogueRole": "scene-location",
   "status": "pending",
-  "minimumPerCountry": 3,
+  "minimumPerCountry": 10,
   "memes": []
 }

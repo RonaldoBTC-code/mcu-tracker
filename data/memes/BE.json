@@ -2,8 +2,8 @@
   "country": "BE",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "complete",
-  "minimumPerCountry": 3,
+  "status": "partial",
+  "minimumPerCountry": 10,
   "memes": [
     {
       "id": "be-deadpool-throne",

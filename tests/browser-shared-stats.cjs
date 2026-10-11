@@ -38,8 +38,8 @@ const root=path.join(__dirname,'..'),base='https://ronaldobtc-code.github.io/mcu
    for(const card of shown){const row=totals.get(card.id);assert(row);assert.equal(row.liked,false);assert.equal(row.seen,false);assert.equal(card.views,row.views_count+' vistas de cuentas únicas');assert.equal(card.like,'Me gusta · '+row.likes_count);assert(card.disabled);}
    checks.push({country,photos:count,realCounterMatches:count,guestLikesDisabled:true});
   }
-  await page.goto(base,{waitUntil:'domcontentloaded'});await check('EC',1);await check('BR',3);
-  await page.reload({waitUntil:'domcontentloaded'});await check('BR',3);
+  await page.goto(base,{waitUntil:'domcontentloaded'});await check('EC',1);await check('BR',3);await check('US',10);await check('CA',10);
+  await page.reload({waitUntil:'domcontentloaded'});await check('CA',10);
   assert(requests.length>0);assert(requests.every(r=>r.url===rpc&&['POST','OPTIONS'].includes(r.method)));assert.deepEqual(errors,[]);
   const report={checkedAt:new Date().toISOString(),url:base,result:'PASS',productionAggregateReadVerified:true,productionPersistenceVerified:false,writesBlocked:true,authenticatedSession:false,checks,aggregateRequests:requests.length,uncaughtErrors:errors};
   fs.writeFileSync(path.join(root,'docs/browser-shared-stats-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

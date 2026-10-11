@@ -1873,12 +1873,13 @@ body.tour-on .tour-path { opacity: 1 !important; }
 .maphd { position:sticky;top:0;background:var(--panel);z-index:2; }
 </style>
 <style>
-.meme-feed{position:relative;z-index:1;width:min(700px,100%);margin:32px auto;padding:0 20px;scroll-margin-top:24px}
+.meme-feed{position:relative;z-index:1;width:min(760px,100%);margin:32px auto;padding:28px 24px;scroll-margin-top:24px;border:1px solid var(--border);border-radius:24px;background:#0d101b;box-shadow:0 16px 60px #0004}
+.feed-map-panel{margin-top:24px;background:#090c16;border:1px solid var(--border);border-radius:16px;padding:12px}.feed-map svg{display:block;width:100%;height:auto;min-height:160px}.feed-land{fill:#26314b;stroke:#4c5772;stroke-width:1}.feed-map-hit{fill:transparent}.feed-map-dot{fill:#f5c869;stroke:#0d101b;stroke-width:2;pointer-events:none}.feed-map [data-country]{cursor:pointer}.feed-map [data-country]:focus{outline:none}.feed-map [data-country]:focus .feed-map-dot,.feed-map [aria-pressed=true] .feed-map-dot{fill:#fff;stroke:#ed354e;stroke-width:4}.feed-map-panel p{margin:8px 4px 0;font-size:13px;line-height:1.4;color:var(--text)}
 .feed-heading{display:flex;align-items:flex-start;gap:20px;justify-content:space-between}.feed-heading h2{font-size:clamp(28px,5vw,38px);line-height:1.05;color:var(--text);margin:6px 0 12px}.feed-heading p,.feed-note{color:var(--muted);font-size:14px;line-height:1.5}.feed-kicker{letter-spacing:3px;color:var(--gold)!important;font-size:11px!important}
 .feed-tracker-link{color:var(--gold);flex-shrink:0;font-size:13px;padding:12px 0}.feed-country-label{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0}.feed-country-label select{min-height:44px;font-size:14px;max-width:100%}
 #feedStatus{font-size:13px;color:var(--muted);margin:12px 0}.feed-list{display:grid;gap:24px}.feed-card{overflow:hidden;background:#12131c;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 24px #0003;scroll-margin-top:24px}.feed-card figure{margin:0}.feed-card img{display:block;width:100%;height:auto;max-height:70svh;object-fit:contain;background:#090a11;aspect-ratio:auto}.feed-card figcaption{padding:18px;font-size:13px;line-height:1.5;overflow-wrap:anywhere}.feed-card figcaption a{color:var(--gold)}
 .feed-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:0 18px 12px;font-size:13px;color:var(--muted)}.feed-like,.feed-more,.feed-image-retry{min-height:44px;padding:10px 16px;border:1px solid var(--border);border-radius:10px;background:#202233;color:var(--text);font:inherit;cursor:pointer}.feed-like[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}.feed-like:disabled{cursor:default;opacity:.6}.feed-message{font-size:12px;color:var(--muted);padding:0 18px 14px;margin:0}.feed-more{margin:14px 0}.feed-image-retry{margin:0 18px 18px}.feed-more[hidden]{display:none}#feedSentinel{height:1px}.feed-note{font-size:12px;margin-top:16px}
-@media(max-width:560px){.meme-feed{padding:0 12px;margin:24px auto}.feed-heading{display:block}.feed-tracker-link{display:inline-block;min-height:44px}.feed-card{border-radius:14px}.feed-card figcaption{padding:14px}.feed-actions{padding:0 14px 12px}}
+@media(max-width:560px){.meme-feed{padding:20px 12px;margin:24px auto}.feed-heading{display:block}.feed-tracker-link{display:inline-block;min-height:44px}.feed-card{border-radius:14px}.feed-card figcaption{padding:14px}.feed-actions{padding:0 14px 12px}}
 </style>
 <script src="scripts/meme-feed.js" defer></script>
 </head>
@@ -1943,6 +1944,7 @@ body.tour-on .tour-path { opacity: 1 !important; }
 </div>
 <section id="memeFeed" class="meme-feed" aria-labelledby="feedTitle">
   <div class="feed-heading"><div><p class="feed-kicker">DESCUBRE</p><h2 id="feedTitle">Marvel fuera de la pantalla</h2><p>Disfraces inesperados y escenas reales de cada país. Sigue bajando para descubrirlas.</p></div><a class="feed-tracker-link" href="#mc">Ir al rastreador</a></div>
+  <div class="feed-map-panel"><div id="feedMap" class="feed-map"></div><p id="feedMapCaption">Elige un país en el mapa o en el selector.</p></div>
   <label class="feed-country-label" for="feedCountry">Descubrir fotos de <select id="feedCountry" class="cb-reg"></select></label>
   <p id="feedStatus" role="status">Preparando la colección…</p>
   <div id="feedList" class="feed-list"></div>
@@ -3207,7 +3209,16 @@ window.WorldMap = (() => {
     }
     return '<svg class="mapsvg" viewBox="'+(x-140)+' '+(y-85)+' 280 170" role="img" aria-label="Mapa centrado en '+esc(name)+'">'+land+'</g><circle class="ring" cx="'+x+'" cy="'+y+'" r="6"/><circle class="dot me" cx="'+x+'" cy="'+y+'" r="4"/><text class="lbl" x="'+(x+10)+'" y="'+y+'">'+esc(name)+'</text></svg>';
   }
-  return { open, close, countryMap };
+  function discoveryMap() {
+    const land=LAND.map(poly=>'<polygon class="feed-land" points="'+poly.map(([lon,lat])=>px(lon).toFixed(1)+','+py(lat).toFixed(1)).join(' ')+'"/>').join('');
+    const points=window.Region.countries().map(([code,name])=>{
+      const position=C[code];if(!position)return '';
+      const [lat,lon]=position;
+      return '<g data-country="'+code+'" role="button" tabindex="0" aria-pressed="false" aria-label="Descubrir fotos de '+esc(name)+'" transform="translate('+px(lon).toFixed(1)+' '+py(lat).toFixed(1)+')"><title>'+esc(name)+'</title><circle class="feed-map-hit" r="12"/><circle class="feed-map-dot" r="5"/></g>';
+    }).join('');
+    return '<svg viewBox="0 0 '+W+' '+H+'" role="group" aria-label="Mapa de países para descubrir memes">'+land+points+'</svg>';
+  }
+  return { open, close, countryMap, discoveryMap };
 })();
 /* Memes are requested from one country file; never load a global catalogue. */
 window.MapMemes = (() => {

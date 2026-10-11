@@ -1,7 +1,7 @@
 // Country is the documented location of the scene, never the reader's audience.
 const fs=require('node:fs/promises'),path=require('node:path'),sharp=require('sharp');
 const {fingerprint,similarity}=require('./photo-fingerprint.cjs');
-const root=path.join(__dirname,'..'),minimumPerCountry=3;
+const root=path.join(__dirname,'..'),minimumPerCountry=10;
 const isURL=value=>{try{return new URL(value).protocol==='https:';}catch{return false;}};
 (async()=>{
  const sources=JSON.parse(await fs.readFile(path.join(__dirname,'photo-sources.json'),'utf8'));
@@ -34,7 +34,8 @@ const isURL=value=>{try{return new URL(value).protocol==='https:';}catch{return 
  if(process.argv.includes('--require-complete')&&pendingCountries.length)throw Error('Country collections incomplete: '+pendingCountries.join(', '));
  for(const item of inventory){await fs.mkdir(path.dirname(path.join(root,item.image)),{recursive:true});await fs.writeFile(path.join(root,item.image),item._bytes);delete item._bytes;}
  for(const country of countries){const memes=inventory.filter(item=>item.country===country);await fs.writeFile(path.join(root,'data/memes',country+'.json'),JSON.stringify({country,scope:'geographic',catalogueRole:'scene-location',status:memes.length>=minimumPerCountry?'complete':memes.length?'partial':'pending',minimumPerCountry,memes},null,2)+'\n');}
- const coverage={scope:'geographic',minimumPerCountry,countries,photos:inventory.length,perCountry,complete:pendingCountries.length===0,completeCountries:countries.filter(c=>perCountry[c]>=minimumPerCountry),pendingCountries,crossCountryDuplicatePhotos:0,visualReviewThreshold:8,nearPairs,bytes:inventory.reduce((sum,p)=>sum+p.bytes,0),largestBytes:Math.max(0,...inventory.map(p=>p.bytes))};
+ const missingPerCountry=Object.fromEntries(countries.map(c=>[c,Math.max(0,minimumPerCountry-perCountry[c])]));
+ const coverage={scope:'geographic',minimumPerCountry,minimumSource:'explicit-user-requirement',countries,photos:inventory.length,perCountry,missingPerCountry,missingPhotos:Object.values(missingPerCountry).reduce((a,b)=>a+b,0),complete:pendingCountries.length===0,completeCountries:countries.filter(c=>perCountry[c]>=minimumPerCountry),pendingCountries,crossCountryDuplicatePhotos:0,visualReviewThreshold:8,nearPairs,bytes:inventory.reduce((sum,p)=>sum+p.bytes,0),largestBytes:Math.max(0,...inventory.map(p=>p.bytes))};
  await fs.writeFile(path.join(root,'docs/photo-inventory.json'),JSON.stringify(inventory,null,2)+'\n');
  await fs.writeFile(path.join(root,'docs/photo-coverage.json'),JSON.stringify(coverage,null,2)+'\n');
  await fs.writeFile(path.join(__dirname,'country-memes.json'),JSON.stringify(Object.fromEntries(countries.map(c=>[c,inventory.filter(p=>p.country===c).map(p=>p.id)])),null,2)+'\n');

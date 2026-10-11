@@ -4,7 +4,7 @@
 
 El PR #5 publicó 14 fotos compartidas en 51 combinaciones. Esa organización no cumplía la precisión posterior: varias fotos propias y diferentes por país. Esta corrección elimina la biblioteca compartida de los manifiestos y exige que el país sea la ubicación acreditada de la escena. Las dos referencias de Pinterest no se asignan a ningún país porque su procedencia no está demostrada.
 
-La colección actual sigue incompleta: 40 fotos únicas en 22 países; siete alcanzan tres fotos y 44 siguen por debajo del mínimo. Los otros 29 catálogos están vacíos. Mínimo cubierto en BE, BR, CA, FR, GB, TH y US. El mínimo operativo de tres interpreta varias fotos; no fue un número exigido por el usuario. complete permanece false. Un PASS de software o despliegue no completa el contenido.
+La colección actual sigue incompleta: 54 fotos únicas en 22 países; CA y US alcanzan el mínimo explícito de diez. Los otros 49 países necesitan 456 fotos, con 29 catálogos vacíos. El requisito de tres queda obsoleto después de la corrección explícita a diez por país. complete permanece false. Un PASS de software o despliegue no completa el contenido.
 
 ## Corrección técnica
 
@@ -12,7 +12,7 @@ Cada manifiesto identifica scope: geographic y catalogueRole: scene-location. La
 
 El importador calcula SHA-256 del archivo de entrada, píxeles decodificados y WebP final. Añade pHash de 64 posiciones mediante DCT, para imagen completa y recortes centrales al 90% y 80%. Compara pares entre todos los países. Coincidencias exactas abortan; distancia perceptual <=8 exige revisar el par completo y registrar por qué son fotografías distintas. El conjunto actual no tiene coincidencias ni pares cercanos. Estos controles no prueban que cualquier recorte arbitrario sea detectable ni que una fotografía sea auténtica: la revisión visual sigue siendo necesaria.
 
-La validación ocurre antes de escribir archivos públicos. Un catálogo incompleto se exporta con estado partial o pending para no fingir cobertura. npm run check:coverage exige tres por cada uno de los 51 países y falla en la revisión actual. La aplicación carga únicamente el JSON elegido y una imagen local diferida. Conserva cancelación, timeout, atribución con textContent, enlaces con host validado, ciclos completos y selección manual persistente.
+La validación ocurre antes de escribir archivos públicos. Un catálogo incompleto se exporta con estado partial o pending para no fingir cobertura. npm run check:coverage exige diez por cada uno de los 51 países y falla en la revisión actual. La aplicación carga únicamente el JSON elegido y una imagen local diferida. Conserva cancelación, timeout, atribución con textContent, enlaces con host validado, ciclos completos y selección manual persistente.
 
 ## Procedencia editorial
 
@@ -24,7 +24,7 @@ La validación ocurre antes de escribir archivos públicos. Un catálogo incompl
 - Filipinas: Philnews documenta el pasajero disfrazado en un jeepney; no se inventa una ciudad. Commons describe a Spider-Man dirigiendo la danza del dragón en Binondo, Manila, con licencia CC BY-SA 4.0.
 - Estados Unidos: se revalidaron individualmente Iron Man como tabla de planchar en ConNooga 2009 y Deadpool con traje de Iron Man en NYCC 2015. El cartel del segundo es físico, no texto digital superpuesto. Captain Dorito está identificado por su cosplayer como Tora-Con 2018; la cobertura de RIT acredita la sede en Rochester. El cosplayer no se identifica automáticamente como fotógrafo.
 
-Fuentes individuales, URLs de imágenes, evidencia geográfica, créditos y licencias: scripts/photo-sources.json. Huellas de los archivos de entrada y archivos publicados: docs/photo-inventory.json. Hay 22 fotografías con licencia o declaración de dominio público documentada y 18 sin licencia acreditada. Registrar una fuente accesible no concede derechos de redistribución; esas licencias permanecen null y su autorización sigue sin acreditar.
+Fuentes individuales, URLs de imágenes, evidencia geográfica, créditos y licencias: scripts/photo-sources.json. Huellas de los archivos de entrada y archivos publicados: docs/photo-inventory.json. Hay 36 fotografías con licencia o declaración de dominio público documentada y 18 sin licencia acreditada. Registrar una fuente accesible no concede derechos de redistribución; esas licencias permanecen null y su autorización sigue sin acreditar.
 
 ## Descartes y pistas pendientes
 
@@ -56,3 +56,9 @@ La evidencia del PR #6 está preservada en docs/history/pr6. No usar sus 66 arch
 Publicación comprobada del PR #7: commit ac108c0935b433ed4bcfab86d7121c4d298276be, workflow 38101183383 success, 93 archivos públicos con bytes idénticos y pruebas de feed/mapa/guía en 1280×900 y 390×844. Supabase devolvió los 40 agregados mediante consulta de solo lectura; no se realizaron escrituras autenticadas reales.
 
 Chrome también mostró los agregados reales de Supabase, verificados contra las respuestas de la RPC en Ecuador/Brasil y después de recargar; docs/browser-shared-stats-results.json PASS. La prueba permite lectura y bloquea escrituras/OTP.
+
+## Corrección: sección con mapa y diez por país
+
+La landing ahora incluye el mapa dentro del panel de memes, con 51 puntos activables mediante clic/teclado y un selector accesible. La colección se conserva como múltiples tarjetas en scroll; los lotes de cuatro no limitan el total. Se añadieron 14 fotos completas diferentes: siete de Montreal/Toronto y siete de Nueva York, San Diego, Chicago/Anaheim, con fuente, autor y licencia Commons/Flickr. Se seleccionó una sola fotografía de cada serie candidata para evitar variantes casi idénticas; no se cuentan recortes ni reencodificaciones como fotos distintas. Se descartó Sailor USA: la fuente solo acredita Sailor Moon con tema patriótico, insuficiente para clasificarla como Marvel. El catálogo SQL se amplía mediante una migración aditiva, sin renombrar IDs ni borrar interacciones.
+
+Conteo actual y déficit exacto por país: docs/country-coverage.md. Canadá/Estados Unidos tienen diez; 49 países siguen por debajo de diez y faltan 456 fotos. complete:false. La publicación y los PASS de la versión anterior se preservan en docs/history/pr7; no demuestran la cobertura del nuevo requisito.

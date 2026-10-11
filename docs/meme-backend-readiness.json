@@ -1,11 +1,8 @@
 {
-  "checkedAt": "2026-10-11T01:17:56.738Z",
-  "httpStatus": 200,
-  "code": null,
-  "readOnly": true,
-  "productionSchemaVerified": true,
+  "status": "pending-new-catalogue-deployment",
+  "existingIdsReadVerified": 40,
+  "newIdsToVerify": 14,
+  "expectedIds": 54,
   "productionPersistenceVerified": false,
-  "aggregateRows": 40,
-  "validCounters": true,
-  "message": "Shared aggregate available after deployment; authenticated write persistence still unverified"
+  "historicalProof": "docs/history/pr7/meme-backend-readiness.json"
 }
