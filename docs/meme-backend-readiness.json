@@ -1,8 +1,18 @@
 {
-  "status": "pending-new-catalogue-deployment",
-  "existingIdsReadVerified": 40,
-  "newIdsToVerify": 14,
+  "checkedAt": "2026-10-11T02:24:45.146Z",
+  "httpStatuses": [
+    {
+      "status": 200
+    },
+    {
+      "status": 200
+    }
+  ],
+  "readOnly": true,
   "expectedIds": 54,
+  "aggregateRows": 54,
+  "uniqueAggregateIds": 54,
+  "productionAggregateReadVerified": true,
   "productionPersistenceVerified": false,
-  "historicalProof": "docs/history/pr7/meme-backend-readiness.json"
+  "validCounters": true
 }

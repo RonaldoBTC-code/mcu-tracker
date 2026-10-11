@@ -10,6 +10,10 @@ const root=path.join(__dirname,'..'),reports=[];
    const context=await browser.newContext({viewport,locale:'es-EC',timezoneId:'America/Guayaquil'});
    await context.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());
    await context.addInitScript(()=>{localStorage.setItem('mcu_tour_v1','1');localStorage.setItem('mcu_lang','es');});
+   await context.addInitScript(()=>{
+    window.__feedImageAssignments=[];const native=Object.getOwnPropertyDescriptor(HTMLImageElement.prototype,'src');
+    Object.defineProperty(HTMLImageElement.prototype,'src',{...native,set(value){if(this.closest('#feedList'))window.__feedImageAssignments.push({country:document.querySelector('#feedCountry').value,path:new URL(value,document.baseURI).pathname.replace('/mcu-tracker','')});native.set.call(this,value);}});
+   });
    const page=await context.newPage(),errors=[],requests=[];
    page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(r.url().includes('/data/memes/'))requests.push(new URL(r.url()).pathname.replace('/mcu-tracker',''));});
    await page.goto(base,{waitUntil:'domcontentloaded'});const feed=await require('./browser-feed.cjs')(page,{root,viewport,requests});await page.locator('#mapOpen').click();

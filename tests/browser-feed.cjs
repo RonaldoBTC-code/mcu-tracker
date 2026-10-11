@@ -9,8 +9,10 @@ module.exports=async function checkFeed(page,{root,viewport,requests}){
  await page.locator('#feedMap [data-country="CA"] .feed-map-hit').click();await page.waitForFunction(()=>document.querySelector('#feedCountry').value==='CA'&&document.querySelector('#feedList article')?.dataset.memeId.startsWith('ca-'));
  await page.locator('#feedMap [data-country="BR"]').press('Enter');await page.waitForFunction(()=>document.querySelector('#feedCountry').value==='BR'&&document.querySelector('#feedList article')?.dataset.memeId.startsWith('br-'));
  assert.equal(await page.locator('#feedMap [data-country="BR"]').getAttribute('aria-pressed'),'true');assert((await page.locator('#feedMapCaption').textContent()).includes('Brasil'));
+ // Drain events from the map interaction before testing a new country's requests.
+ await page.waitForLoadState('networkidle');
  for(const country of countries){
-  requests.length=0;await page.evaluate(c=>window.MemeFeed.open(c),country);const items=JSON.parse(fs.readFileSync(path.join(root,'data/memes',country+'.json'))).memes;
+  requests.length=0;await page.evaluate(c=>{window.__feedImageAssignments=[];return window.MemeFeed.open(c);},country);const items=JSON.parse(fs.readFileSync(path.join(root,'data/memes',country+'.json'))).memes;
   if(items.length){
    for(;;){const before=await page.locator('#feedList article').count();if(before>=items.length)break;await page.locator('#feedSentinel').scrollIntoViewIfNeeded();await page.waitForFunction(n=>document.querySelectorAll('#feedList article').length>n,before).catch(async error=>{console.log(JSON.stringify({country,before,viewport,feedState:await page.evaluate(()=>({status:document.querySelector('#feedStatus').textContent,sentinel:document.querySelector('#feedSentinel').getBoundingClientRect().toJSON(),scrollY,viewport:innerHeight,cards:document.querySelectorAll('#feedList article').length,moreHidden:document.querySelector('#feedMore').hidden}))}));await page.screenshot({path:path.join(root,'docs/feed-failure.png')});throw error;});}
    assert.equal(await page.locator('#feedList article').count(),items.length);
@@ -20,7 +22,12 @@ module.exports=async function checkFeed(page,{root,viewport,requests}){
    }
    assert((await page.locator('#feedEnd').textContent()).includes('Fin de esta colección'));assert(await page.locator('#feedMore').isHidden());assert(await page.locator('.feed-like').first().isDisabled());
   }else{assert.equal(await page.locator('#feedList article').count(),0);assert((await page.locator('#feedStatus').textContent()).includes('Todavía'));}
-  assert(requests.every(p=>p==='/data/memes/'+country+'.json'||p.startsWith('/data/memes/'+country+'/images/')),country+': feed downloaded another country');
+  // Native request events can arrive after a previously assigned image was detached.
+  // Assert catalogue requests plus the country at each actual image activation.
+  assert(requests.filter(p=>p.endsWith('.json')).every(p=>p==='/data/memes/'+country+'.json'),country+': requested another catalogue: '+JSON.stringify(requests));
+  const assigned=await page.evaluate(()=>window.__feedImageAssignments||[]);
+  assert.equal(assigned.length,items.length,country+': not every image activation was verified');
+  assert(assigned.every(x=>x.country===country&&x.path.startsWith('/data/memes/'+country+'/images/')),country+': activated an image after switching to another country: '+JSON.stringify(assigned));
  }
  await page.selectOption('#feedCountry','CA');await page.locator('#feedList img').first().scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);await page.screenshot({path:path.join(root,'docs/feed-landing-'+viewport.width+'.png'),fullPage:false});
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));

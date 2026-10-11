@@ -28,7 +28,7 @@
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 28,
+    "maxCountryOpenMs": 48,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -62,7 +62,7 @@
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 57,
+    "maxCountryOpenMs": 21,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

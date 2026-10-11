@@ -1,15 +1,76 @@
 {
-  "status": "pending-new-deployment",
+  "status": "source-published-and-verified",
+  "checkedAt": "2026-10-11T02:19:47.122Z",
+  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/8",
+  "sourceCommit": "7393b923f17e69cabe52ff0920e4d85eb8005dd8",
+  "sourceTree": "47e903a512b251f1e2f21447430b45d8c6f00986",
+  "workflow": {
+    "id": 38104269159,
+    "conclusion": "success",
+    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38104269159"
+  },
+  "gitSourceFilesVerified": 122,
+  "publicSourceFilesVerified": 107,
   "photos": 54,
-  "minimumPerCountry": 10,
   "countriesWithPhotos": 22,
+  "minimumPerCountry": 10,
+  "minimumSource": "explicit-user-requirement",
   "completeCountries": [
     "CA",
     "US"
   ],
   "countriesBelowMinimum": 49,
+  "countriesWithoutPhotos": 29,
   "missingPhotos": 456,
+  "documentedLicensesOrPublicDomain": 36,
+  "unverifiedLicenses": 18,
   "collectionCoverageComplete": false,
+  "browser": {
+    "result": "PASS",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "countriesTestedPerViewport": 51,
+    "feedPhotosCheckedPerViewport": 54,
+    "mapImageDisplayChecksPerViewport": 108,
+    "inlineMapVisible": true,
+    "mapClickAndKeyboardVerified": true,
+    "guideSteps7And8Verified": true,
+    "externalRequestsBlocked": true
+  },
+  "productionAggregateReadVerified": true,
+  "productionAggregateBrowserReadVerified": true,
+  "productionInteractionsVerified": false,
+  "productionPersistenceVerified": false,
+  "aggregateBrowserEvidence": "docs/browser-shared-stats-results.json",
+  "aggregateBrowserChecks": {
+    "result": "PASS",
+    "countries": [
+      "EC",
+      "BR",
+      "US",
+      "CA"
+    ],
+    "cardCounterMatches": 34,
+    "reloadVerified": true,
+    "writesBlocked": true,
+    "authentication": false
+  },
+  "backendReadiness": "docs/meme-backend-readiness.json",
   "historicalProof": "docs/history/pr7/publication-results.json",
-  "productionPersistenceVerified": false
+  "limitations": [
+    "456 distinct photos missing across 49 supported countries",
+    "18 existing image licenses not documented",
+    "Authenticated production write persistence unverified",
+    "Physical devices, real OTP and cross-device sync unverified"
+  ],
+  "evidence": "This records the source deployment and read-only checks. Later commits may update documentation and the audit harness without changing the source."
 }
