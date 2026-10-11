@@ -3,7 +3,7 @@
   "scope": "geographic",
   "catalogueRole": "scene-location",
   "status": "complete",
-  "minimumPerCountry": 3,
+  "minimumPerCountry": 10,
   "memes": [
     {
       "id": "us-iron-board",
@@ -147,6 +147,346 @@
           "0010001001010110010110110101100101011011101010011001110010010100",
           "0010010001000110010110111101101001001010111110111000110010100100",
           "0010010011000100010110100101000001011010011110111000111111101100"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "us-deadpool-pope",
+      "country": "US",
+      "image": "data/memes/US/images/us-deadpool-pope.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:NYCC_2016_Cosplay_of_Pope_Deadpool.jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/NYCC_2016_Cosplay_of_Pope_Deadpool.jpg/960px-NYCC_2016_Cosplay_of_Pope_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Deadpool cambia la katana por un báculo",
+      "location": "New York Comic Con 2016, Nueva York",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:NYCC_2016_Cosplay_of_Pope_Deadpool.jpg",
+        "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "LostplanetKD73",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool lleva mitra y vestimenta ceremonial blanca y roja.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool lleva mitra y vestimenta ceremonial blanca y roja.",
+      "width": 576,
+      "height": 768,
+      "bytes": 98258,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "90a896b1baed1e094694dac2350a7d0e5e53cc626270d5c1cc18fcc0d81e7630",
+        "pixelSha256": "5e0b81d952d9b4e6b7c92f3c52353f9768f022178340ccb590487fffb5acb52d",
+        "perceptualHashes": [
+          "0111010011001100111100101011000010001101100100110111000101010010",
+          "0110010001001101111100111011010010001100101100110101000100110010",
+          "0110010001001011111100011011110010001010101000100001011100110011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "131cc389a1e037c9e8a7492b344801e4d002b58058817471484720dbd2ba570e",
+        "pixelSha256": "44f9549b0c0017822a07aed51d41c49cb418791d3ce74c6d700340deb43c3dac",
+        "perceptualHashes": [
+          "0111010011001100111100101011000010001101100100110111000101010010",
+          "0110010001001101111100111011010010001100101100110101000100110010",
+          "0110010001001011111100011011110010001010101000100001011100110011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "us-deadpool-lego",
+      "country": "US",
+      "image": "data/memes/US/images/us-deadpool-lego.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "title": "Deadpool descubre el tamaño de una minifigura",
+      "location": "Big Apple Comic Con 2016, Nueva York",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg",
+        "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Richie S",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Una persona viste un disfraz de Deadpool con cabeza, cuerpo y manos de minifigura LEGO gigante.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Una persona viste un disfraz de Deadpool con cabeza, cuerpo y manos de minifigura LEGO gigante.",
+      "width": 768,
+      "height": 595,
+      "bytes": 31232,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "4256240cf17b41d126ea90d0842275b297c1436f28eaab522fa10d0aef9feb2b",
+        "pixelSha256": "7fa2dead4312cc5ee18d9186274e3e1ef92aa09d03bb3c9031c9ec8464defd94",
+        "perceptualHashes": [
+          "0100001111010110100101100100110011101101000011010110101011100000",
+          "0111001010010110100101001100011111001011000011010100011011100010",
+          "0111001010110100100101011111010110001001000011110000111001100100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "a45ae94611464415f379c0048c347b0628a2f3c9658259d8525f9acc6a86c058",
+        "pixelSha256": "05b15da449dc3dd511c53e45379e792c2541c3919cd73c243d7da58a8275b593",
+        "perceptualHashes": [
+          "0100001111010110100101100100110011101101000011010110101011100000",
+          "0111001010010110100101001100011111001011000011010100011011100010",
+          "0111001010110100100101011111010110001001000011110000111001100100"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "us-spider-frog",
+      "country": "US",
+      "image": "data/memes/US/images/us-spider-frog.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:SDCC_15_-_Spider-Frog_(19652841226).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/SDCC_15_-_Spider-Frog_%2819652841226%29.jpg/960px-SDCC_15_-_Spider-Frog_%2819652841226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "La rana también tiene sentido arácnido",
+      "location": "San Diego Comic-Con 2015, San Diego",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:SDCC_15_-_Spider-Frog_(19652841226).jpg",
+        "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "William Tung from USA",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Un disfraz de rana con cabeza enorme viste el traje de Spider-Man.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Un disfraz de rana con cabeza enorme viste el traje de Spider-Man.",
+      "width": 768,
+      "height": 512,
+      "bytes": 74060,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "aef0e60cd71f9578852bb13fab888d4128a5c0f586c196cd5c8ccd33ddeb53ab",
+        "pixelSha256": "3fd49cb7e91420daaf719a88e5202a391de503f9157cd22fa580089afaa02753",
+        "perceptualHashes": [
+          "0111000100001100111011001100001000011111000010101001110110100111",
+          "0111000101001100111011101101001001000110010110101001100110100001",
+          "0111000100001101011011101111010101000110010111001001100010100001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "06b9e99ca95f85d20302213c0bdbd3201ad9a16e7bf846c1b8f2e545a4882ca0",
+        "pixelSha256": "ca1973a42d9dd02df1c1ea6ae57f44a991405b028e73ff23aee6534645340079",
+        "perceptualHashes": [
+          "0111000100001100111011001100001000011111000010101001110110100111",
+          "0111000101001100111011101101001001000110010110101001100110100001",
+          "0111000100001101011011101111010101000110010111001001100010100001"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "us-spider-thor",
+      "country": "US",
+      "image": "data/memes/US/images/us-spider-thor.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Captain_America_and_Spider_Thor%3F_C2E2_2014_(14254757313).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg/960px-Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Spider-Man cambia de martillo y de capa",
+      "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Captain_America_and_Spider_Thor%3F_C2E2_2014_(14254757313).jpg",
+        "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Chris Favero from USA",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Spider-Man",
+        "Thor",
+        "Captain America"
+      ],
+      "visualGag": "Spider-Man lleva armadura, capa y martillo de Thor junto a Captain America.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Spider-Man lleva armadura, capa y martillo de Thor junto a Captain America.",
+      "width": 614,
+      "height": 768,
+      "bytes": 84612,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "942ac8caaa80d8a75eff2834377e76c04bc34bf9d45637a81e2906c877aa2031",
+        "pixelSha256": "40dbd8938e36b31f1797107bf7508af1e2a967a0eef803cf7011596511cd0a57",
+        "perceptualHashes": [
+          "0010110100000010101100110000110110001100101011111011001010111010",
+          "0010110100000010101100110100110110001100101010111011000010111110",
+          "0000100101010100101100110100110010001110001010111011010011100111"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "1dac4eedd7b05c3bb167672924682947f17bb1da9e916cb1ee70d3eeb968db27",
+        "pixelSha256": "02dc71e00658ab3fe289c9b5ed891f2bcf0283108cef99be6636c711b24ce3de",
+        "perceptualHashes": [
+          "0010110100000010101100110000110110001100101011111011001010111010",
+          "0010110100000010101100110100110110001100101010111011000010111110",
+          "0000100101010100101100110100110010001110001010111011010011100111"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "us-deadtrooper",
+      "country": "US",
+      "image": "data/memes/US/images/us-deadtrooper.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:SWCA_-_Deadtrooper_(16580465874).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/SWCA_-_Deadtrooper_%2816580465874%29.jpg/960px-SWCA_-_Deadtrooper_%2816580465874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "El stormtrooper se ha pasado a Deadpool",
+      "location": "Star Wars Celebration Anaheim 2015, Anaheim",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:SWCA_-_Deadtrooper_(16580465874).jpg",
+        "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "William Tung from USA",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Una armadura de stormtrooper está pintada en rojo y negro con el patrón de la máscara de Deadpool.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Una armadura de stormtrooper está pintada en rojo y negro con el patrón de la máscara de Deadpool.",
+      "width": 768,
+      "height": 512,
+      "bytes": 51480,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "d7edce36219b7c3bff019af5ec56de2670564cac2cac225b8b1a6141a08f11bd",
+        "pixelSha256": "73e4b5943545af66b0561155b246b50177f5b695b170d400e1a660689c55bd7d",
+        "perceptualHashes": [
+          "0110001010000101101001111110100101001111110100100000100100100111",
+          "0110001010100100101011111110100100000111110100010001110110000011",
+          "0111000110100100101001110110101100000110110100011001011010010011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "086906e8ed5247ace143968b552f5b0ffb89135904debf9fa6ad0ee673af9b03",
+        "pixelSha256": "45c0961acd440f1640df51bc37d14ac629082cebace65a3ede21e7a4adc0981a",
+        "perceptualHashes": [
+          "0110001010000101101001111110100101001111110100100000100100100111",
+          "0110001010000100101011111110100100000111110100010001110110001011",
+          "0111000110100100101001110111101100000110110100001001011010010011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "us-captain-spider",
+      "country": "US",
+      "image": "data/memes/US/images/us-captain-spider.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:C2E2_2015_-_Captain_Spider-Man_(17118870150).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg/960px-C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Spider-Man toma prestado el escudo del Capitán",
+      "location": "Chicago Comic & Entertainment Expo 2015, Chicago",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:C2E2_2015_-_Captain_Spider-Man_(17118870150).jpg",
+        "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "GabboT",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Spider-Man",
+        "Captain America"
+      ],
+      "visualGag": "Un traje de Spider-Man incorpora colores, estrella y escudo de Captain America.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Un traje de Spider-Man incorpora colores, estrella y escudo de Captain America.",
+      "width": 594,
+      "height": 768,
+      "bytes": 48878,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "d287e154e1fec73a6832e2d916177d72fb29cdf5b8d40d5b4c0d9713ff18073c",
+        "pixelSha256": "da0b593ab845198e9b849f742a2d0db7e39cca80cf54fc9648db30977b882274",
+        "perceptualHashes": [
+          "0001010100010110110101000010010111110101110100011001010011011001",
+          "0000110100010110111001010010110111100010100101011001010110011001",
+          "0000100100010110111011010010111101100010100001011010010110110011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "11915ca32a28dbbe0ead32ff7c32c15e16ec981bfb7c5541d6b13fa64dd18b3d",
+        "pixelSha256": "17a749eb8f53fdeb3577d274dea4ef8ac36cf3e33d0fb30f48c19903d4f8782b",
+        "perceptualHashes": [
+          "0001010100010110110101000010010111110101110100011001010011011001",
+          "0000110100010110111001010010110111100010100101011001010110011001",
+          "0000100100010110111011010010111101100010100001011010010110110011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "us-deadpool-elsa",
+      "country": "US",
+      "image": "data/memes/US/images/us-deadpool-elsa.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:C2E2_(Day_2)_2014,_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg/960px-C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Deadpool se apunta a Frozen",
+      "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:C2E2_(Day_2)_2014,_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg",
+        "statement": "La descripción y categorías de Commons identifican el evento y la ciudad indicados en la ubicación de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Lauren Jankowski",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "characters": [
+        "Deadpool",
+        "Spider-Man"
+      ],
+      "visualGag": "Deadpool lleva peluca rubia con trenza y vestido azul de Elsa junto a Spider-Man.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool lleva peluca rubia con trenza y vestido azul de Elsa junto a Spider-Man.",
+      "width": 576,
+      "height": 768,
+      "bytes": 52264,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "c078bd05133b4882db476863e3fc9522b587727bfe86519c1dbf4f026398c18a",
+        "pixelSha256": "693c17b8fa87e9018b31b2e773deac7b8e17864111bcd7cc04b6bccb959db453",
+        "perceptualHashes": [
+          "0111100000100011111010000011110000101011000000010110110101101111",
+          "0111100000100011111010000011111000111011001010010110110001100100",
+          "0101110010110011111011100011111000010011100010000110110001100000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "580cd2b9000be31d6a16f96c4bb199ee3203579743a0ebba39b369494692ec5c",
+        "pixelSha256": "28205f2c992c231ebc38187670b8a0bbd101560d1850eead2b53789aea046f25",
+        "perceptualHashes": [
+          "0111100000100011111010000011110000101011000000010110110101101111",
+          "0111100000100011111010000011111000111011001010010110110001100100",
+          "0101110010110011111011100011111000010011100010000110110001100000"
         ]
       },
       "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"

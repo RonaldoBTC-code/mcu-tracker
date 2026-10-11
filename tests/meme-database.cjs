@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
  try{
   await db.exec("create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;grant usage on schema auth to anon,authenticated;grant execute on function auth.uid() to anon,authenticated;");
   const a='00000000-0000-0000-0000-000000000001',b='00000000-0000-0000-0000-000000000002';await db.query('insert into auth.users values($1),($2)',[a,b]);
-  await db.exec(fs.readFileSync(path.join(__dirname,'../supabase/migrations/20261011010000_meme_interactions.sql'),'utf8'));
+  for(const file of fs.readdirSync(path.join(__dirname,'../supabase/migrations')).filter(name=>/_meme_/.test(name)).sort())await db.exec(fs.readFileSync(path.join(__dirname,'../supabase/migrations',file),'utf8'));
   const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8')),id=sources[0].id;
   assert.equal((await db.query('select count(*)::int as n from meme_data.catalogue')).rows[0].n,sources.length);results.push('migration executes with every reviewed stable ID');
   async function role(name,user=''){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user]);await db.exec('set role '+name);}

@@ -56,7 +56,7 @@ SETUP.md                Cómo levantarlo desde cero
 
 ## Base de datos
 
-Cinco migraciones en `supabase/migrations/`, aplicadas en orden
+Seis migraciones en `supabase/migrations/`, aplicadas en orden
 alfabético. Se despliegan solas al hacer push a `main` mediante la
 integración de GitHub de Supabase.
 
@@ -95,6 +95,8 @@ Consultar [correcciones y límites](docs/entry-fixes.md), [resultados de regresi
 
 ## Descubrimiento Marvel
 
-La portada incluye un feed vertical con país detectado/selector, imágenes progresivas y fin real. Hay 40 fotos geográficas únicas en 22 países; 44 países siguen por debajo del mínimo de tres. [Cobertura](docs/country-coverage.md) y [auditoría](docs/memes-audit.md).
+La portada incluye un feed vertical con país detectado/selector, imágenes progresivas y fin real. Hay 54 fotos geográficas únicas en 22 países; CA/US alcanzan el mínimo explícito de diez. Faltan 456 fotos en los otros 49 países. [Cobertura](docs/country-coverage.md) y [auditoría](docs/memes-audit.md).
 
-[Me gusta y vistas compartidas](docs/meme-feed.md) tienen frontend, migración aditiva y pruebas SQL/DOM. El agregado real de Supabase devuelve los 40 IDs aprobados después del despliegue. Las escrituras autenticadas y su persistencia real siguen pendientes de validación. Las vistas de memes identifican cuentas autenticadas para deduplicar: una cuenta/foto de por vida; esto es distinto de site_visits. Sin backend no se muestran cifras inventadas.
+[Me gusta y vistas compartidas](docs/meme-feed.md) tienen frontend, migración aditiva y pruebas SQL/DOM. La lectura real histórica comprobó 40 IDs; la migración aditiva incorpora otros 14 para esta ampliación. Las escrituras autenticadas y su persistencia real siguen pendientes de validación. Las vistas de memes identifican cuentas autenticadas para deduplicar: una cuenta/foto de por vida; esto es distinto de site_visits. Sin backend no se muestran cifras inventadas.
+
+Requisito de memes: sección propia con mapa visible y múltiples tarjetas por país, mínimo diez fotos distintas por cada uno de los 51 países. El feed no tiene un límite de cuatro: ese valor es el lote de carga progresiva. Estado actual: 54 fotos, CA/US con diez, 49 países y 456 fotos por completar. [Conteos y faltantes](docs/country-coverage.md).

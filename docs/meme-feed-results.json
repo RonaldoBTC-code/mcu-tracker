@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T01:13:24.256Z",
+  "checkedAt": "2026-10-11T01:58:15.444Z",
   "result": "PASS",
   "network": "simulated; no production writes",
   "checks": [
@@ -29,6 +29,10 @@
     },
     {
       "name": "Cambiar país cancela colección antigua y rechaza contadores inválidos",
+      "status": "PASS"
+    },
+    {
+      "name": "Mapa integrado: 51 países, clic y teclado cambian solo su colección",
       "status": "PASS"
     }
   ]

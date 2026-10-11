@@ -3,7 +3,7 @@
   "scope": "geographic",
   "catalogueRole": "scene-location",
   "status": "complete",
-  "minimumPerCountry": 3,
+  "minimumPerCountry": 10,
   "memes": [
     {
       "id": "ca-iron-pikachu",
@@ -146,6 +146,345 @@
           "0100011111001011101011001010010010010010110000011111001010110100",
           "0100010111010001001011011010010110010110110000101111001010110100",
           "0100000011010010010011011000010110010111110000101111001010111101"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-spider-hawaiian",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-spider-hawaiian.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_(18855860674).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg/960px-Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Spider-Man se va de vacaciones",
+      "location": "Montreal Comiccon 2015, Montreal",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_(18855860674).jpg",
+        "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Pikawil from Laval, Canada",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man mezcla su traje con camisa hawaiana, collar de flores y pantalones cortos.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Spider-Man mezcla su traje con camisa hawaiana, collar de flores y pantalones cortos.",
+      "width": 512,
+      "height": 768,
+      "bytes": 40764,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "a0309fd7804980281a30a9336591de7d68919940c50986e284188da336278a80",
+        "pixelSha256": "e86fdaa58ae1804c691ab2cab8eb6589a91e2cedaceaf0cb840535cff6ed652a",
+        "perceptualHashes": [
+          "0100100011100100001101111110011110000110001000101111000011011100",
+          "0100100111100100001001111100001110000110001000101111000111110110",
+          "0101100111111100001000111100001110000110011000001111000111110000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "b41c81cd54b12a5d3e7a181303b900cfd80d928b5182963aec2c2de4f1a72bd4",
+        "pixelSha256": "c3b942625b1644822db3152c230b67cfe5d58570dfb63fc3f4ef6bf4b6197593",
+        "perceptualHashes": [
+          "0100100011100100001101111110011110000110001000101111000011011100",
+          "0100100111100100001001111100001110000110001000101111000111110110",
+          "0101100111111100001000111100001110000110011000001111000111110000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-miku-maid",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-miku-maid.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_(28181536851).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg/960px-Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Daredevil y Spider-Man cambian de vestuario",
+      "location": "Montreal Comiccon 2016, Montreal",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_(28181536851).jpg",
+        "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Pikawil from Laval, Canada",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Daredevil",
+        "Spider-Man"
+      ],
+      "visualGag": "Daredevil interpreta a Hatsune Miku y Spider-Man lleva un traje de sirvienta.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Daredevil interpreta a Hatsune Miku y Spider-Man lleva un traje de sirvienta.",
+      "width": 512,
+      "height": 768,
+      "bytes": 33834,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "0305764e23b3b898150c10aea45c30a148bfd5ab44c064cfeb8795764001df7e",
+        "pixelSha256": "28ec393d6b975edc18a6082e7198ddd305557d5c7c62440c015a2d19edadbf87",
+        "perceptualHashes": [
+          "0001011001100110011011011011000101011110000010111000010101100101",
+          "0000011001000110011011101011010001011101100100111100000101101101",
+          "0000010001000100011011101011110001011101100101111100000100111101"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "8abd6b02e98e8b8cfc9df90eaebfaa102e0b974cab19772635f7028b3543c64a",
+        "pixelSha256": "dfd3d9589ecf1ecedcb4ec498f545df506d27108f60a5bc3fac27ded0d1b3e3a",
+        "perceptualHashes": [
+          "0001011001100110011011011011000101011110000010111000010101100101",
+          "0000010001000110011011101011010001011101100100111100001101101101",
+          "0000010001000100011011101011110001011101100101111100000100111101"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-deadpool-redhood",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-deadpool-redhood.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_(19292146559).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg/960px-Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Caperucita Deadpool encuentra a Spider-Man",
+      "location": "Montreal Comiccon 2015, Montreal",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_(19292146559).jpg",
+        "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Pikawil from Laval, Canada",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool",
+        "Spider-Man"
+      ],
+      "visualGag": "Deadpool combina máscara, capucha de Caperucita y delantal junto a Spider-Man.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool combina máscara, capucha de Caperucita y delantal junto a Spider-Man.",
+      "width": 512,
+      "height": 768,
+      "bytes": 73746,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "d2b205560d0aa11d14e748c41b54aaea82c282847734f18dee3c84ec73c80688",
+        "pixelSha256": "13215bc27b1da2ffa68a7ebf7fb41a594a95b5cdf24d9334f4e3d972d77a595f",
+        "perceptualHashes": [
+          "0110110001010101100100110110111010010010100100001110010101101001",
+          "0110111000010101101100100110111001010010100101011010010101101000",
+          "0110101010010001101100100110111001010100100101011010011100001110"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "494b2218b4f0fe04116376280403a8d0104035b578ee658347d38d8567cbe6e4",
+        "pixelSha256": "ba7f0913e4bb4d9e655785ccc8f80a9d525db863e05ef83e94805dea5654a868",
+        "perceptualHashes": [
+          "0110110101010101100100110110111010010010100100001010010101101001",
+          "0110111000010101101100100110111001010010100101011010010101101000",
+          "0110101010010001101100100110111001010100100101011010011100001110"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-deadpool-brainslug",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-deadpool-brainslug.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Brainslugged_Deadpool_(19432425756).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg/960px-Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Deadpool tiene un invitado en la cabeza",
+      "location": "Montreal Comiccon 2015, Montreal",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Brainslugged_Deadpool_(19432425756).jpg",
+        "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Pikawil from Laval, Canada",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Un muñeco verde con un ojo descansa sobre la máscara de Deadpool.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Un muñeco verde con un ojo descansa sobre la máscara de Deadpool.",
+      "width": 512,
+      "height": 768,
+      "bytes": 45528,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "367deb7904e8c9f3778c741fd3e047e9659a833cedb165753d385b72ca5857fc",
+        "pixelSha256": "a4e59dea76488596d49ef11302d2e31dae1bc5d06316823c860a83522e5c92b2",
+        "perceptualHashes": [
+          "0110001110001000100101101111110110001011010001010001100111001001",
+          "0111000110001000101101101101110110001011000001010101110111001000",
+          "0111000010010100101101101001010110000111001001010011110111001001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "d7684df01d25ade29701a63b9d42e15e00171d2ce94caacda4f0bb62e9dceb87",
+        "pixelSha256": "ac2d8521c2ca8e8b45645c69ce1a66ccd4c1ef64268a518828ec7acbf0e17407",
+        "perceptualHashes": [
+          "0110001110001000100101101111110110001011010001010001100111001001",
+          "0111000110001000101101101101110110001011000001010101110111001000",
+          "0111000010010100101101101001010110000111001001010011110111001001"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-deadpool-chicken",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-deadpool-chicken.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_(27633865783).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg/960px-Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Deadpool consigue un compañero con plumas",
+      "location": "Montreal Comiccon 2016, Montreal",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_(27633865783).jpg",
+        "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Pikawil from Laval, Canada",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool abraza a un acompañante con disfraz de pollo amarillo.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool abraza a un acompañante con disfraz de pollo amarillo.",
+      "width": 512,
+      "height": 768,
+      "bytes": 64374,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "8c815b1d810ed4da338197a8737f192533ed1bfdcb1b3a61f0ee470e47e961b4",
+        "pixelSha256": "789359035d8002d7f51e8c3c7789e693a8a79ac44b948cfc7b7dbaa0d75d965b",
+        "perceptualHashes": [
+          "0011111101010010010000010101101000000010101011110110111001100101",
+          "0011111111010010010000000101110000010011100011100000111100101111",
+          "0011110111110010010000000101110011010011110101100000110100001101"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "515821b3f93ddc60acb9cda2a43470425cf7464857805bd6bc52d1c817136495",
+        "pixelSha256": "de68a907c45dea19129d3254b49e0a2830b7624ae1203bd8126fcb8321826dc9",
+        "perceptualHashes": [
+          "0011111101010010010000010101101000000010101011110110111001100101",
+          "0011111111010010010000000101110000010011100011100000111100101111",
+          "0011110111110010010000000101110011010011110101100000110100001101"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-photobomb-pileup",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-photobomb-pileup.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015-_Photobomb_pileup,_part_5_(18835967574).jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg/960px-Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Deadpool se suma a una foto cada vez más concurrida",
+      "location": "Montreal Comiccon 2015, Montreal",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015-_Photobomb_pileup,_part_5_(18835967574).jpg",
+        "statement": "Commons identifica la edición de Montreal Comiccon en la descripción y categoría de esta fotografía.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "Pikawil from Laval, Canada",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool participa en un grupo de cosplayers con cabeza de caballo, espadas y disfraces de universos diferentes.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool participa en un grupo de cosplayers con cabeza de caballo, espadas y disfraces de universos diferentes.",
+      "width": 768,
+      "height": 512,
+      "bytes": 39758,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "df5bd084ba6bd1a1b1f66e913ee69ece99469074ba25f07be66389fa3c1c4198",
+        "pixelSha256": "ac5d8fe46550808ac6f9fa0ca231d642d769219b413df755c900e639e8ab0d4f",
+        "perceptualHashes": [
+          "0100110011110011001100101000110010001101100011010010001110110110",
+          "0100110011110011001100100000111010001110100010010011001110110110",
+          "0100110011110011001100100000111011000100100010010111001110100111"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "52d01ab0f7c9b8f2aceaeb4b1ee9ea6b0de34fc38c2ddb06273007837725da5b",
+        "pixelSha256": "1287890ca385c3432fb627681f6b494d3f000f1684759e3577e45d300f3d9715",
+        "perceptualHashes": [
+          "0100110011110011001100101000110010001101100011010010001110110110",
+          "0100110011110011001100100000111010001110100010010011001110110110",
+          "0100110011110011001100100000111011000100100010010111001110100111"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-deadpool-lantern",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-deadpool-lantern.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg",
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg/960px-Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "title": "Deadpool estrena traje de Green Lantern",
+      "location": "Fan Expo Canada 2012, Toronto",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg",
+        "statement": "La descripción y categoría identifican Fan Expo Canada 2012; la categoría del evento acredita Toronto.",
+        "verifiedOn": "2026-10-10",
+        "corroboratingUrl": "https://commons.wikimedia.org/wiki/Category:2012_Fan_Expo_Canada"
+      },
+      "creator": "Maria Casacalenda",
+      "publisher": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool lleva máscara y cinturón propios en un traje verde de Green Lantern, junto a una pistola de juguete del mismo color.",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool lleva máscara y cinturón propios en un traje verde de Green Lantern, junto a una pistola de juguete del mismo color.",
+      "width": 768,
+      "height": 512,
+      "bytes": 53856,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "95809b7018769c895016d22c2fdbfa8b7d90dc1273f6cff9731c98f99d771333",
+        "pixelSha256": "77a1a7e100b9093f756f296d6d9e61e23a079f9774c6820cbd4319338823c556",
+        "perceptualHashes": [
+          "0001000110001011011010001011010101100111010000100110101110110110",
+          "0001000111001011011110101011010100110011110000101100101010010100",
+          "0001100111011010010111101010111100110101010000001100101010100100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "8567d8f623d30a1aabd91808c8ff922c2fe27fc00802b47ca8374a53833cbb19",
+        "pixelSha256": "08b60d20999b9217306111932524050af60c71e328f2e3cafffc752d64f7411e",
+        "perceptualHashes": [
+          "0001000110001011011010001011010101100111010000100110101110110110",
+          "0001000111001011011110101011010100110011110000101100101010010100",
+          "0001100111011010010111101010111100110101010000001100101010100100"
         ]
       },
       "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
