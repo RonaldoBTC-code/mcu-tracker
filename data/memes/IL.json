@@ -2,7 +2,55 @@
   "country": "IL",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "il-spider-purim",
+      "country": "IL",
+      "image": "data/memes/IL/images/il-spider-purim.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Purim_2018_(25749998627).jpg",
+      "title": "Spider-Man sale con llaves, teléfono y bolso",
+      "location": "Tel Aviv, celebración de Purim 2018",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Purim_2018_(25749998627).jpg",
+        "statement": "El fotógrafo identifica Purim 2018 en Tel Aviv; la categoría identifica Spider-Man en Israel.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Purim_2018_%2825749998627%29.jpg/960px-Purim_2018_%2825749998627%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "IgorZed from Tel Aviv, ISRAEL",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man sale con llaves, teléfono y bolso",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Spider-Man sale con llaves, teléfono y bolso",
+      "width": 512,
+      "height": 768,
+      "bytes": 64056,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "4bd227e18bf6d1cf342234e3cb26bf203849faa7b25d042cc36e927e7ba2f00f",
+        "pixelSha256": "89b85539052e8d305453a90fc0a0d3d1b23d61425d9d4b0b67c52142e383f957",
+        "perceptualHashes": [
+          "0011100010001001100000011000001110110101101111001110101101101100",
+          "0011100010001000100000011000001110101101101111011110001110111100",
+          "0011111111001100100000001000000110111101101110011000000110011101"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "2eead5dd5c3c6d5ea14d4466e848c462b4e49fcaa8bf58cabad893ee7ac13968",
+        "pixelSha256": "e45e7a5647c86491bd67e1def7de9119420bd691ac778221b06d84d56adf2c3a",
+        "perceptualHashes": [
+          "0011100010001001100000011000001110110101101111001110101101101100",
+          "0011100010001000100000011000001110101101101111011110100110111100",
+          "0011111111001100100000001000000110111101101110011000000110011101"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

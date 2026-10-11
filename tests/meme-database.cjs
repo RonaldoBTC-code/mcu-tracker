@@ -1,0 +1,22 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{PGlite}=require('@electric-sql/pglite');
+(async()=>{
+ const db=new PGlite(),results=[];
+ try{
+  await db.exec("create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;grant usage on schema auth to anon,authenticated;grant execute on function auth.uid() to anon,authenticated;");
+  const a='00000000-0000-0000-0000-000000000001',b='00000000-0000-0000-0000-000000000002';await db.query('insert into auth.users values($1),($2)',[a,b]);
+  await db.exec(fs.readFileSync(path.join(__dirname,'../supabase/migrations/20261011010000_meme_interactions.sql'),'utf8'));
+  const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8')),id=sources[0].id;
+  assert.equal((await db.query('select count(*)::int as n from meme_data.catalogue')).rows[0].n,sources.length);results.push('migration executes with every reviewed stable ID');
+  async function role(name,user=''){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user]);await db.exec('set role '+name);}
+  async function stats(){return(await db.query('select * from public.get_meme_stats($1)',[[id]])).rows[0];}
+  await role('anon');assert.equal(Number((await stats()).likes_count),0);await assert.rejects(db.query('select * from public.set_meme_like($1,true)',[id]),/permission denied/);await assert.rejects(db.query('select * from public.record_meme_views($1)',[[id]]),/permission denied/);results.push('guest reads aggregates but cannot mutate likes/views');
+  await role('authenticated',a);await Promise.all([db.query('select * from public.set_meme_like($1,true)',[id]),db.query('select * from public.set_meme_like($1,true)',[id])]);assert.equal(Number((await stats()).likes_count),1);assert.equal((await stats()).liked,true);results.push('duplicate desired-state likes count once');
+  await db.query('select * from public.record_meme_views($1)',[[id,id]]);await db.query('select * from public.record_meme_views($1)',[[id]]);assert.equal(Number((await stats()).views_count),1);results.push('duplicate views and reloads count once per account for life');
+  await role('authenticated',b);assert.equal((await stats()).liked,false);assert.equal((await stats()).seen,false);await db.query('select * from public.set_meme_like($1,false)',[id]);assert.equal(Number((await stats()).likes_count),1);await db.query('select * from public.set_meme_like($1,true)',[id]);assert.equal(Number((await stats()).likes_count),2);results.push('account B cannot remove account A like');
+  await assert.rejects(db.query('select * from meme_data.likes'),/permission denied/);await assert.rejects(db.query('insert into meme_data.views values($1,$2,now())',[a,id]),/permission denied/);results.push('raw reads, spoofed ownership and direct writes denied');
+  await assert.rejects(db.query('select * from public.set_meme_like($1,true)',['invented-id']),/Unknown meme/);await assert.rejects(db.query('select * from public.record_meme_views($1)',[Array(11).fill(id)]),/Invalid view batch/);await assert.rejects(db.query('select * from public.record_meme_views($1)',[[id,'invented-id']]),/Unknown meme/);assert.equal(Number((await stats()).views_count),1);results.push('unknown IDs and excessive/mixed batches rejected atomically');
+  await role('authenticated',a);await db.query('select * from public.set_meme_like($1,false)',[id]);assert.equal(Number((await stats()).likes_count),1);assert.equal((await stats()).liked,false);results.push('unlike removes only the caller row and survives reread');
+  await db.exec('reset role');assert((await db.query("select relrowsecurity from pg_class where oid in ('meme_data.likes'::regclass,'meme_data.views'::regclass,'meme_data.catalogue'::regclass)")).rows.every(r=>r.relrowsecurity));results.push('RLS enabled on all private tables');
+  const report={checkedAt:new Date().toISOString(),result:'PASS',engine:'PGlite embedded PostgreSQL; auth schema simulated',productionPersistenceVerified:false,checks:results};fs.writeFileSync(path.join(__dirname,'../docs/meme-database-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+ }finally{await db.close();}
+})().catch(e=>{console.error(e);process.exitCode=1});

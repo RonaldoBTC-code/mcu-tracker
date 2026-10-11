@@ -1,39 +1,77 @@
 {
   "AE": [],
   "AR": [],
-  "AT": [],
+  "AT": [
+    "at-spider-dance"
+  ],
   "AU": [],
-  "BE": [],
+  "BE": [
+    "be-deadpool-throne",
+    "be-deadpool-duff",
+    "be-deadpool-spider"
+  ],
   "BO": [],
   "BR": [
     "br-spider-circle-sp",
     "br-spider-circle-bh",
     "br-spider-embrace"
   ],
-  "CA": [],
+  "CA": [
+    "ca-iron-pikachu",
+    "ca-iron-fanexpo",
+    "ca-deadpool-maid"
+  ],
   "CH": [],
-  "CL": [],
-  "CO": [],
+  "CL": [
+    "cl-spider-cueca"
+  ],
+  "CO": [
+    "co-spider-handstand"
+  ],
   "CR": [],
-  "CU": [],
+  "CU": [
+    "cu-spider-nerf"
+  ],
   "DE": [],
   "DK": [],
   "DO": [],
   "EC": [
     "ec-spider-bus"
   ],
-  "ES": [],
+  "ES": [
+    "es-spider-plaza",
+    "es-spider-smoking"
+  ],
   "FI": [],
-  "FR": [],
-  "GB": [],
+  "FR": [
+    "fr-spider-hospital",
+    "fr-deadpool-sailor",
+    "fr-deadpool-2019"
+  ],
+  "GB": [
+    "gb-iron-buzz",
+    "gb-deadpools-throne",
+    "gb-spider-tube"
+  ],
   "GT": [],
-  "HN": [],
-  "ID": [],
+  "HN": [
+    "hn-spider-graduate"
+  ],
+  "ID": [
+    "id-spider-vegetables"
+  ],
   "IE": [],
-  "IL": [],
-  "IN": [],
+  "IL": [
+    "il-spider-purim"
+  ],
+  "IN": [
+    "in-spider-hood"
+  ],
   "IT": [],
-  "JP": [],
+  "JP": [
+    "jp-deadpool-market",
+    "jp-spider-crossing"
+  ],
   "KR": [],
   "MX": [
     "mx-spider-class"
@@ -44,7 +82,8 @@
   "NZ": [],
   "PA": [],
   "PE": [
-    "pe-spider-dance-bus"
+    "pe-spider-dance-bus",
+    "pe-spider-yoyo"
   ],
   "PH": [
     "ph-spider-commute",
@@ -56,7 +95,9 @@
   "PY": [],
   "SE": [],
   "SG": [],
-  "SV": [],
+  "SV": [
+    "sv-stan-spider"
+  ],
   "TH": [
     "th-spider-student",
     "th-spider-yogurt",

@@ -2,7 +2,56 @@
   "country": "SV",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "sv-stan-spider",
+      "country": "SV",
+      "image": "data/memes/SV/images/sv-stan-spider.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_Stan_Lee.jpg",
+      "title": "Spider-Man encuentra a un doble de Stan Lee",
+      "location": "Comic Con 2019, El Salvador",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Cosplay_Stan_Lee.jpg",
+        "statement": "El fotógrafo identifica un cosplay de homenaje a Stan Lee en Comic Con 2019, El Salvador.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Cosplay_Stan_Lee.jpg/960px-Cosplay_Stan_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "LuisaBustillo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "characters": [
+        "Spider-Man",
+        "Stan Lee"
+      ],
+      "visualGag": "Spider-Man encuentra a un doble de Stan Lee",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Spider-Man encuentra a un doble de Stan Lee",
+      "width": 432,
+      "height": 768,
+      "bytes": 27900,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "d3178e8f460e84b2909f3ed4e59b88c7a22e97f60705d466c5af7f0a9c9bfa2d",
+        "pixelSha256": "782e22926e7bbaf3f1750a746db7beecd66a93cb654183d4678590ed389f5122",
+        "perceptualHashes": [
+          "0111100011010011010110100010110010000111000101101001000111101001",
+          "0111110111010010010110100010100010000101000101001011110110101010",
+          "0111110111010000010111100110101011000111000001011011100010000010"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "440e830bc60ecdabc4d7b013964e30fe8473b0f7a05d232c4c324e2238270aaa",
+        "pixelSha256": "61905e3cb5c6028622e78650137ea7b7fa2717186363c8b4aad523e7826624b0",
+        "perceptualHashes": [
+          "0111100011010011010110100010110010000111000101101001000111101001",
+          "0111110111010010010110100010100010000101000101001011110110101010",
+          "0111110111010000010111100110101011000111000001011011100010000010"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

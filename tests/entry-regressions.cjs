@@ -158,6 +158,8 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   const source='https://commons.wikimedia.org/wiki/File:Example.jpg';let item={title:'Foto <img src=x>',creator:'<script>bad()</script>',image:'data/memes/EC/images/photo-1.webp',source,license:'Public domain',licenseUrl:source};
   w.fetch=async()=>({ok:true,json:async()=>(localCatalogue({country:'EC',memes:[item]}))});await w.MapMemes.open('EC');
   const links=d.querySelectorAll('#memeList figcaption a');assert.equal(links.length,2);assert.equal(links[1].href,source);assert.equal(links[1].textContent,'Public domain');assert.equal(links[1].rel,'noopener noreferrer');assert.equal(d.querySelectorAll('#memeList figcaption script,#memeList figcaption img').length,0);
+  item={...item,source:'https://www.dvidshub.net/image/2433478/residents-embrace',licenseUrl:'https://www.dvidshub.net/about/copyright',rightsNotice:'Aviso <img src=x onerror=bad()>'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,2);assert(d.querySelector('#memeList figcaption').textContent.includes(item.rightsNotice));assert.equal(d.querySelectorAll('#memeList figcaption img').length,0);
+  item={...item,licenseUrl:'https://www.dvidshub.net/about/copyright?redirect=https://example.org'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,1);
   item={...item,source:'javascript:bad()',licenseUrl:'https://example.org/license'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,0);
  });
  await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{

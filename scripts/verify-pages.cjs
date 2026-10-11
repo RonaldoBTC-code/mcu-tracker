@@ -16,6 +16,7 @@ async function check(file){
  try{
   // Stop before requesting photos if the published HTML is still an earlier version.
   report.files.push(await check('index.html'));
+  report.files.push(await check('scripts/meme-feed.js'));
   const inventory=JSON.parse(await fs.readFile(path.join(root,'docs/photo-inventory.json'),'utf8'));
   const coverage=JSON.parse(await fs.readFile(path.join(root,'docs/photo-coverage.json'),'utf8'));const countries=coverage.countries;report.collectionCoverageComplete=coverage.complete;
   if(countries.length!==51||inventory.length===0)throw Error('Unexpected audited coverage');

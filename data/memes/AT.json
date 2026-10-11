@@ -2,7 +2,56 @@
   "country": "AT",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "at-spider-dance",
+      "title": "Spider-Man se pone a bailar en el metro",
+      "location": "Viena, vagón del metro",
+      "publisher": "Heute / captura del video",
+      "country": "AT",
+      "image": "data/memes/AT/images/at-spider-dance.webp",
+      "source": "https://www.heute.at/s/spider-man-tanzt-in-wiener-u-bahn-dann-fliegen-faeuste-120263736",
+      "countryEvidence": {
+        "url": "https://www.heute.at/s/spider-man-tanzt-in-wiener-u-bahn-dann-fliegen-faeuste-120263736",
+        "statement": "Heute identifica al protagonista como Vienna Spidey y sitúa sus actuaciones en el metro de Viena, Austria. La imagen muestra el baile, no una agresión.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://heute-at-prod-images.imgix.net/2026/10/08/e9dd160c-7b1a-465a-8cf5-779a57e34e07.jpg?rect=0%2C0%2C4000%2C2250&auto=format&auto=compress&crop=fit&w=996",
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man se pone a bailar en el metro",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Spider-Man se pone a bailar en el metro",
+      "width": 768,
+      "height": 432,
+      "bytes": 16212,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "597f17950abff1a105756f47eb1c833bd8e8ccc8be494dd52c3d3327f0ae7848",
+        "pixelSha256": "5b6a4f4cf9f1d1e685a19d481aa15f55353279cd75631acc1a50f1a756bc0274",
+        "perceptualHashes": [
+          "0111100110001110001100100000010001110011010110001101110001110011",
+          "0111100110000111001101000000010000110011100011001111001101111001",
+          "0111101010000111001101011000010100110011100011100111001100101000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "b2982c67f618a0719cecb6e7b648a829aaa775940ac3138c56a3c2ae59eb4099",
+        "pixelSha256": "19e9d9ce1e02fef45a321246f3ce709872b40658d54dedbfc4539a6208c77746",
+        "perceptualHashes": [
+          "0111100110001110001100100000010001110011010110001101110001110011",
+          "0111100110000110001101000000010000110011100011001111101101111001",
+          "0111101010000111001101011000010100110011100011100111001100101000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

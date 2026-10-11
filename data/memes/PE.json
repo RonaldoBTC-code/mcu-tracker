@@ -52,6 +52,54 @@
         ]
       },
       "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "pe-spider-yoyo",
+      "country": "PE",
+      "image": "data/memes/PE/images/pe-spider-yoyo.webp",
+      "source": "https://trome.com/actualidad/spiderman-mi-superheroe-me-ayuda-a-llevar-dinero-a-casa-y-pagar-estudios-de-mis-hijos-dice-hombre-arana-peruano-spiderman-en-lima-alegria-a-ninos-y-lanza-yo-yo-foto-video-noticia/",
+      "title": "Spider-Man carga una bolsa de yoyós en vez de telarañas",
+      "location": "Lima, centro histórico",
+      "countryEvidence": {
+        "url": "https://trome.com/actualidad/spiderman-mi-superheroe-me-ayuda-a-llevar-dinero-a-casa-y-pagar-estudios-de-mis-hijos-dice-hombre-arana-peruano-spiderman-en-lima-alegria-a-ninos-y-lanza-yo-yo-foto-video-noticia/",
+        "statement": "Trome identifica a Zacarías Barrientos trabajando como Spider-Man vendedor de yoyós en el Centro de Lima. Se selecciona una sola fotografía sin collage ni personaje digital añadido.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://trome.com/resizer/v2/ZLJLK7GFTRDC7CB4PAWGCQZI6I.jpg?auth=491ec33b72cf6dfb98b11d4d9150e7bc067dc6004f5d11f5c0e0f0a7507fdaf7&width=1153&height=765&quality=75&smart=true",
+      "creator": "Fernando Sangama / Trome",
+      "license": null,
+      "licenseUrl": null,
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man carga una bolsa de yoyós en vez de telarañas",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Trome",
+      "alt": "Spider-Man carga una bolsa de yoyós en vez de telarañas",
+      "width": 768,
+      "height": 510,
+      "bytes": 48494,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "a37c5b8dec503120242a02c310fedad8966f5cca35e99dc3e47bd4a33dc2e17c",
+        "pixelSha256": "281241cf02642b5075a12ae1bcd0e1dac848b07ecc1638ad678686303a798b52",
+        "perceptualHashes": [
+          "0110010000010010001110111010111011100101010100010001011000110111",
+          "0110010000010110000110111010111011101111010110010000010100010101",
+          "0110110000010111000100101010011011001111111110000000110100011001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "af7a9c30de96c94ac7aa69b15253df15909fdfcd850c47c92c6a952a393b69a3",
+        "pixelSha256": "f46f96493dfcecb87c2feba518681accb45077ad655b5d902b08b626d5cc4780",
+        "perceptualHashes": [
+          "0110010000010010001110111010111011100101010100010001011000110111",
+          "0110010000010110000110101010111011101111010111010000010100010101",
+          "0110110000010101000100101010011011001111111110010000110100011001"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     }
   ]
 }

@@ -1,52 +1,10 @@
 {
-  "status": "published-and-verified",
-  "checkedAt": "2026-10-11T00:26:46.789Z",
-  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/6",
-  "sourceCommit": "090eae93b63be0b3d5a0cf518a1b1dfe83a7e564",
-  "workflow": {
-    "id": 38098159084,
-    "url": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38098159084",
-    "headSha": "090eae93b63be0b3d5a0cf518a1b1dfe83a7e564",
-    "status": "completed",
-    "conclusion": "success"
-  },
-  "gitFilesVerified": 114,
-  "publishedFilesVerified": 66,
-  "browserResults": [
-    {
-      "viewport": {
-        "width": 1280,
-        "height": 900
-      },
-      "result": "PASS",
-      "countriesTested": 51,
-      "uniquePhotos": 14,
-      "imageDisplayChecks": 28,
-      "uncaughtErrors": []
-    },
-    {
-      "viewport": {
-        "width": 390,
-        "height": 844
-      },
-      "result": "PASS",
-      "countriesTested": 51,
-      "uniquePhotos": 14,
-      "imageDisplayChecks": 28,
-      "uncaughtErrors": []
-    }
-  ],
-  "guideSteps7And8": "PASS: advancement and ancestor opacity at both viewport sizes",
+  "status": "pending-new-deployment",
+  "photos": 40,
+  "countriesWithPhotos": 22,
+  "countriesBelowOperationalMinimum": 44,
   "collectionCoverageComplete": false,
-  "countries": 51,
-  "countriesWithPhotos": 7,
-  "countriesBelowOperationalMinimum": 48,
-  "photos": 14,
-  "historicalProof": "docs/history/pr5/publication-results.json",
-  "limits": [
-    "Backend requests blocked in browser audit: no real OTP or Supabase writes",
-    "Physical devices and cross-device synchronization unverified",
-    "Eleven image redistribution licenses remain unverified"
-  ]
+  "historicalProof": "docs/history/pr6/publication-results.json",
+  "productionInteractionsVerified": false,
+  "backendReadiness": "docs/meme-backend-readiness.json"
 }

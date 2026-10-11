@@ -1,6 +1,6 @@
 # Catálogos geográficos de memes Marvel
 
-Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. No compartir fotos entre países ni deducir procedencia del dominio, idioma o nacionalidad del artista. Estado actual: 14 fotos, siete países con contenido, tres con al menos tres fotos y 48 por completar. Los países sin contenido muestran un mensaje de catálogo pendiente. El contador y el botón aleatorio funcionan con el contenido disponible, sin repetición inmediata para catálogos de dos o más fotos.
+Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. No compartir fotos entre países ni deducir procedencia del dominio, idioma o nacionalidad del artista. Estado actual: 40 fotos, 22 países con contenido, siete con al menos tres fotos y 44 por completar. Los países sin contenido muestran un mensaje de catálogo pendiente. El contador y el botón aleatorio funcionan con el contenido disponible, sin repetición inmediata para catálogos de dos o más fotos.
 
 ## Mantenimiento
 
@@ -11,7 +11,6 @@ Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. N
 5. Ejecutar npm run check:coverage antes de afirmar que las 51 colecciones están completas. Actualmente falla porque faltan fotos; no modificar el mínimo ni falsear la evidencia para convertir ese fallo en PASS.
 6. Ejecutar tests/browser-memes.cjs con Playwright/Chrome. Tras publicar, scripts/verify-pages.cjs y tests/browser-pages.cjs verifican archivos e interfaz reales. Diferenciar éxito de despliegue, funcionamiento y cobertura editorial.
 
-Los archivos WebP actuales suman 543.204 bytes; el mayor pesa 90.272. El navegador carga una imagen del país elegido por vez. La información completa de fuentes y huellas permanece en docs/photo-inventory.json. La evidencia del PR #5 es histórica y corresponde a un conjunto compartido que fue corregido.
+Los archivos WebP actuales suman 1.750.700 bytes; el mayor pesa 91.588. El navegador carga una imagen del país elegido por vez. La información completa de fuentes y huellas permanece en docs/photo-inventory.json. La evidencia del PR #5 es histórica y corresponde a un conjunto compartido que fue corregido.
 
-
-Publicación PR #6 verificada en GitHub Pages: workflow 38098159084 exitoso, 66 archivos públicos coincidentes y pruebas de Chrome en escritorio y móvil emulado PASS. La guía 7 y 8 mantiene avance y resaltado. Consultar docs/publication-results.json para el commit y las limitaciones; la cobertura sigue incompleta en 48 países.
+El feed vertical de la portada añade tarjetas al hacer scroll; el modal sigue disponible. Consultar docs/meme-feed.md para Me gusta/vistas, esquema, pruebas y el backend todavía pendiente. La evidencia anterior de publicación está en docs/history/pr6; docs/publication-results.json debe acreditar por separado el despliegue actual.

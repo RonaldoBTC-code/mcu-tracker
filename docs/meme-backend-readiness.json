@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-11T01:02:35.733Z",
+  "httpStatus": 404,
+  "code": "PGRST202",
+  "readOnly": true,
+  "productionPersistenceVerified": false,
+  "message": "Endpoint unavailable; database migration deployment pending"
+}
