@@ -1,0 +1,27 @@
+{
+  "id": "ec-spider-bin",
+  "country": "EC",
+  "image": "scripts/reference-images/ec-spider-bin.jpg",
+  "source": "https://www.flickr.com/photos/200225254@N06/53569762773",
+  "title": "Guaya💀",
+  "alt": "Spider-Man agazapado sobre una papelera junto a un taxi en Guayaquil",
+  "location": "Guayaquil, Ecuador",
+  "countryEvidence": {
+    "url": "https://www.flickr.com/photos/200225254@N06/53569762773",
+    "statement": "El fotógrafo etiqueta esta escena guayaquil, spiderman, streets y taxis; el álbum Ecuador trips describe sus viajes a Ecuador.",
+    "album": "https://www.flickr.com/photos/200225254@N06/albums/72177720315256843/",
+    "verifiedOn": "2026-10-11"
+  },
+  "imageURL": "https://live.staticflickr.com/65535/53569762773_23a109d206_b.jpg",
+  "creator": "Joan Briones (joanbrionesjim)",
+  "license": "CC BY-ND 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-nd/2.0/",
+  "characters": [
+    "Spider-Man"
+  ],
+  "visualGag": "Spider-Man usa una papelera urbana como plataforma para su pose, junto a un taxi",
+  "reviewedVisually": true,
+  "hasMemeTextOverlay": false,
+  "publisher": "Joan Briones / Flickr",
+  "changes": "Solo reducción proporcional y cambio técnico a WebP; conservar encuadre, colores y título original."
+}

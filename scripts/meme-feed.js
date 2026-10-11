@@ -83,7 +83,7 @@ window.MemeFeed=(()=>{
     finally{if(generation===socialEpoch){flushing=false;ids.forEach(id=>inflightViews.delete(id));}}
   }
   function append(){
-    if(!active||loading||cursor>=items.length)return;const ids=[];
+    if(!active||loading||cursor>=items.length)return;const ids=[],generation=epoch;more?.unobserve($('feedSentinel'));
     for(const item of items.slice(cursor,cursor+BATCH)){
       const card=document.createElement('article');card.className='feed-card';card.dataset.memeId=item.id;
       const figure=document.createElement('figure'),img=document.createElement('img');img.width=item.width||768;img.height=item.height||512;img.alt=item.alt||item.title;img.loading='lazy';img.decoding='async';img.dataset.src=window.MapMemes.imageURL(code,item.image);
@@ -99,6 +99,7 @@ window.MemeFeed=(()=>{
     status(items.length+' foto'+(items.length===1?'':'s')+' para descubrir.'+(missing?' Colección en ampliación: faltan '+missing+' para '+MINIMUM+'.':'')+' Sigue bajando.');$('feedEnd').hidden=cursor<items.length;
     $('feedEnd').textContent='Fin de esta colección.'+(missing?' Faltan '+missing+' fotos para el mínimo de '+MINIMUM+'.':'');
     refresh(ids);
+    requestAnimationFrame(()=>{if(active&&generation===epoch&&cursor<items.length)more?.observe($('feedSentinel'));});
   }
   async function open(next=window.MapMemes.resolveCountry(),force=false){
     if(!active)return;
