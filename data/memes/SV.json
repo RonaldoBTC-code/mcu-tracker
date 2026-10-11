@@ -8,7 +8,7 @@
     {
       "id": "sv-stan-spider",
       "country": "SV",
-      "image": "data/memes/SV/images/sv-stan-spider.webp",
+      "image": "data/memes/SV/images/sv-stan-spider-1280-ea8b1d0d98b7.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplay_Stan_Lee.jpg",
       "title": "Spider-Man encuentra a un doble de Stan Lee",
       "location": "Comic Con 2019, El Salvador",
@@ -17,7 +17,7 @@
         "statement": "El fotógrafo identifica un cosplay de homenaje a Stan Lee en Comic Con 2019, El Salvador.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Cosplay_Stan_Lee.jpg/960px-Cosplay_Stan_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Cosplay_Stan_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "LuisaBustillo",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -28,14 +28,59 @@
       "visualGag": "Spider-Man encuentra a un doble de Stan Lee",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2592,
+        "height": 4608
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Spider-Man encuentra a un doble de Stan Lee",
-      "width": 432,
-      "height": 768,
-      "bytes": 27900,
+      "width": 720,
+      "height": 1280,
+      "sourceWidth": 2592,
+      "sourceHeight": 4608,
+      "bytes": 94424,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 360,
+          "height": 640,
+          "sha256": "cf5854e1c65c5ce1d5f8a7d8f34f13873fc2d515a0b80dac536822069c640f6c",
+          "image": "data/memes/SV/images/sv-stan-spider-640-cf5854e1c65c.webp",
+          "bytes": 34610
+        },
+        {
+          "edge": 1280,
+          "width": 720,
+          "height": 1280,
+          "sha256": "ea8b1d0d98b7141485dac06619543c5eb5bb29f6861d1af00955d35ecb7691ab",
+          "image": "data/memes/SV/images/sv-stan-spider-1280-ea8b1d0d98b7.webp",
+          "bytes": 94424
+        },
+        {
+          "edge": 1920,
+          "width": 1080,
+          "height": 1920,
+          "sha256": "27c531e4b8f0b9b935dc59cad531534d2ca8af44baf1700cd5b3843e95652d35",
+          "image": "data/memes/SV/images/sv-stan-spider-1920-27c531e4b8f0.webp",
+          "bytes": 183892
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "d3178e8f460e84b2909f3ed4e59b88c7a22e97f60705d466c5af7f0a9c9bfa2d",
-        "pixelSha256": "782e22926e7bbaf3f1750a746db7beecd66a93cb654183d4678590ed389f5122",
+        "sha256": "f1b4dbc8897a9b6650a9700511fdcbbae7ea2be7202e136940e25f3d21e0e7e5",
+        "pixelSha256": "3613acac32d9f4494578c9239ff3074eff8d7eee0c76278b2528b8d4c3c40319",
         "perceptualHashes": [
           "0111100011010011010110100010110010000111000101101001000111101001",
           "0111110111010010010110100010100010000101000101001011110110101010",
@@ -43,15 +88,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "440e830bc60ecdabc4d7b013964e30fe8473b0f7a05d232c4c324e2238270aaa",
-        "pixelSha256": "61905e3cb5c6028622e78650137ea7b7fa2717186363c8b4aad523e7826624b0",
+        "sha256": "ea8b1d0d98b7141485dac06619543c5eb5bb29f6861d1af00955d35ecb7691ab",
+        "pixelSha256": "217947200ad490474889194ecf9ca1509dff63ab71c3f8ab2a6cd91789c3e43f",
         "perceptualHashes": [
           "0111100011010011010110100010110010000111000101101001000111101001",
           "0111110111010010010110100010100010000101000101001011110110101010",
           "0111110111010000010111100110101011000111000001011011100010000010"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

@@ -8,7 +8,7 @@
     {
       "id": "fr-spider-hospital",
       "country": "FR",
-      "image": "data/memes/FR/images/fr-spider-hospital.webp",
+      "image": "data/memes/FR/images/fr-spider-hospital-1280-8895de1a2169.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg",
       "title": "Spider-Man visita el hospital colgado boca abajo",
       "location": "Lille, Centre Oscar-Lambret",
@@ -17,7 +17,7 @@
         "statement": "La descripción identifica el norte de Francia; la categoría geográfica ubica Centre Oscar-Lambret, Lille.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg/960px-Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/50/Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Globe Zero",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -28,35 +28,80 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 4032,
+        "height": 3024
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man visita el hospital colgado boca abajo",
-      "width": 768,
-      "height": 576,
-      "bytes": 40392,
+      "width": 1280,
+      "height": 960,
+      "sourceWidth": 4032,
+      "sourceHeight": 3024,
+      "bytes": 126772,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 480,
+          "sha256": "67880d34a9d874383cf366be7d27acdbf4f671dede234e76da8b47010ac743ef",
+          "image": "data/memes/FR/images/fr-spider-hospital-640-67880d34a9d8.webp",
+          "bytes": 43424
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 960,
+          "sha256": "8895de1a2169c4f087f754445e28dc174dcb787df0817b51a18aa123819b546f",
+          "image": "data/memes/FR/images/fr-spider-hospital-1280-8895de1a2169.webp",
+          "bytes": 126772
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1440,
+          "sha256": "6cc5a5ffa2f80277d98dfcb8d7ad41b5feaba1e9c2f740865449fb85da108da0",
+          "image": "data/memes/FR/images/fr-spider-hospital-1920-6cc5a5ffa2f8.webp",
+          "bytes": 225872
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "3d1d70973b063c1758500e9748368042992829f7600a40dda8fe7d00d797f3e4",
-        "pixelSha256": "3c1f5f39216e52e4d503905ecb122bb60256e682166ed32d5c60c55cffa0feda",
-        "perceptualHashes": [
-          "0110010100110010010010110000110000001111101000111011000111110011",
-          "0110010000110010010010110001110001001111100111111000100110100110",
-          "0110110000110001010110100001110001001111100010111000100110100111"
-        ]
-      },
-      "outputFingerprint": {
-        "sha256": "8be3a9421ae0bb5aa572a3ea25aa0816b49544c7a8dd8fa36c0ebd57a4e97a6b",
-        "pixelSha256": "392e63878cc65efd56fa62b05a1984ef9c630d7c8f2d0d147b259012de4df2cd",
+        "sha256": "90e7665cb19a80cfa54f3d5ac61847897de2a9089360f1ba31499bd618704cf3",
+        "pixelSha256": "81ad21f3094d3dfcd11b81f8ec8152c48db73e5160dafec8f802575819959dc5",
         "perceptualHashes": [
           "0110010100110010010010110000110000001111101000111011000111100111",
           "0110010000110010010010110001110001001111100111111000100110100110",
-          "0110110000110001010110100001110001001111100010111000100110100111"
+          "0110110000110001010110100101110001000111100010111000100110100111"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "outputFingerprint": {
+        "sha256": "8895de1a2169c4f087f754445e28dc174dcb787df0817b51a18aa123819b546f",
+        "pixelSha256": "f74acc68a2fad128c22c0a555a6b7ba7b7c7e245c0eed201d41f8b8cd9c8f21e",
+        "perceptualHashes": [
+          "0110010100110010010010110000110000001111101000111011000111100111",
+          "0110010000110010010010110001110001001111100111111000100110100110",
+          "0110110000110001010110100101110001000111100010111000100110100111"
+        ]
+      },
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "fr-deadpool-sailor",
       "country": "FR",
-      "image": "data/memes/FR/images/fr-deadpool-sailor.webp",
+      "image": "data/memes/FR/images/fr-deadpool-sailor-1280-21b2ae60f857.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_female_Deadpool_at_Japan_Expo_2016_(29105603664).jpg",
       "title": "Deadpool se disfraza de Sailor Moon",
       "location": "Paris-Nord Villepinte, Japan Expo 2016",
@@ -65,7 +110,7 @@
         "statement": "La descripción ubica Japan Expo en Paris-Nord Villepinte, Francia; la categoría identifica la mezcla con Sailor Moon.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg/960px-Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Miguel Discart",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -75,14 +120,59 @@
       "visualGag": "Deadpool se disfraza de Sailor Moon",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 3376,
+        "height": 6001
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Deadpool se disfraza de Sailor Moon",
-      "width": 432,
-      "height": 768,
-      "bytes": 28080,
+      "width": 720,
+      "height": 1280,
+      "sourceWidth": 3376,
+      "sourceHeight": 6001,
+      "bytes": 97522,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 360,
+          "height": 640,
+          "sha256": "8963c32fced2ea3d80b7d6c3a51fdb314d1dfd6fe8518065c5840060c179f0ab",
+          "image": "data/memes/FR/images/fr-deadpool-sailor-640-8963c32fced2.webp",
+          "bytes": 39014
+        },
+        {
+          "edge": 1280,
+          "width": 720,
+          "height": 1280,
+          "sha256": "21b2ae60f85756ad7ba087bf72c207c85d0650d36fe77195fdc6acfa6d711ae6",
+          "image": "data/memes/FR/images/fr-deadpool-sailor-1280-21b2ae60f857.webp",
+          "bytes": 97522
+        },
+        {
+          "edge": 1920,
+          "width": 1080,
+          "height": 1920,
+          "sha256": "72fbd4c7482a957ebb41d3eb66215b9e8ed7a38c9a1dcff47f4b4d50ca89872c",
+          "image": "data/memes/FR/images/fr-deadpool-sailor-1920-72fbd4c7482a.webp",
+          "bytes": 174064
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "2bd7fa6c95bcad6b519d172f389a818e66fa8268a4282a0b3bfa920dc198430a",
-        "pixelSha256": "9776f6cadfa20fbc2c28a3633c99232c52934d78cb6c6e64820381d59e036d51",
+        "sha256": "7cbf11a97b167dc93f368d68415cff2a88b3eebb8d5458d687dcdad571962f11",
+        "pixelSha256": "f5b00670133afbc0f0781041689d1ed4a90b42f4e721bb7a8b7bcf769f771e1d",
         "perceptualHashes": [
           "0111111010000111110100000101101001111001011100000100011000100110",
           "0110111010000111110101101001100000111001011110000100011000100110",
@@ -90,20 +180,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "5bff910de0958a00d7ec51bc687c259dc2db2aa19ce6403b82f530bd87b55df2",
-        "pixelSha256": "c9db8d95fef0177361cbc12cc096e66743b11e930b1927aa4d76cb3542abc4ba",
+        "sha256": "21b2ae60f85756ad7ba087bf72c207c85d0650d36fe77195fdc6acfa6d711ae6",
+        "pixelSha256": "85aabd3200f95a2da4eb92114da2f70dc874282a47d5f8d8ccab506d448f2f39",
         "perceptualHashes": [
           "0111111010000111110100000101101001111001011100000100011000100110",
           "0110111010000111110101101001100000111001011110000100011000100110",
-          "0110010010100010110101101001101000011000110110010110011101111000"
+          "0110010010100010110101101001101000011000110110010110011101101100"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "fr-deadpool-2019",
       "country": "FR",
-      "image": "data/memes/FR/images/fr-deadpool-2019.webp",
+      "image": "data/memes/FR/images/fr-deadpool-2019-1280-b790bd14a505.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Japan_Expo_2019_(48381081197).jpg",
       "title": "Deadpool cambia las espadas por una falda de hula",
       "location": "Paris-Nord Villepinte, Japan Expo 2019",
@@ -112,7 +202,7 @@
         "statement": "La descripción del fotógrafo sitúa Japan Expo 2019 en Paris-Nord Villepinte, Francia.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg/960px-Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/06/Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Miguel Discart",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -122,14 +212,59 @@
       "visualGag": "Deadpool cambia las espadas por una falda de hula",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 3269,
+        "height": 5472
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Deadpool cambia las espadas por una falda de hula",
-      "width": 459,
-      "height": 768,
-      "bytes": 77964,
+      "width": 764,
+      "height": 1280,
+      "sourceWidth": 3269,
+      "sourceHeight": 5472,
+      "bytes": 289264,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 382,
+          "height": 640,
+          "sha256": "3b69b5e3684223ed76b608a1f1dd1c7bacde2fed4edd0357b154886f829f0db2",
+          "image": "data/memes/FR/images/fr-deadpool-2019-640-3b69b5e36842.webp",
+          "bytes": 92218
+        },
+        {
+          "edge": 1280,
+          "width": 764,
+          "height": 1280,
+          "sha256": "b790bd14a5052d53f37357c52e7411f2242be866dfe70f45968f95659bdd0f96",
+          "image": "data/memes/FR/images/fr-deadpool-2019-1280-b790bd14a505.webp",
+          "bytes": 289264
+        },
+        {
+          "edge": 1920,
+          "width": 1147,
+          "height": 1920,
+          "sha256": "8d85d25050b98be5183d6b0e3e5c20b44570d708bd66d1b53337140780d99e43",
+          "image": "data/memes/FR/images/fr-deadpool-2019-1920-8d85d25050b9.webp",
+          "bytes": 555366
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "83ccebe2dc9087258cbe745fafc8846b6fc04728f642c5a384b33c3abf155957",
-        "pixelSha256": "dd5553397ff058c2c068064c1e6f046876f7569f8f77109179f9647c5295f759",
+        "sha256": "dbc343a6652c73de70e1bed718681b6a8323fc723cd326268d0dfaa8ca258400",
+        "pixelSha256": "ed60afafbe91e1328fddf854f2ba95b28ce6868dda32f6c7613d27f21af30a6b",
         "perceptualHashes": [
           "0111010001000011100011001111100001001011101111000001001101011010",
           "0111010001000011101011001111000001001001101101001001101111010010",
@@ -137,20 +272,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "abcfb594e07fee74d1e0acf602d19817d4780ba7aa72342afa772ce9d9d37fdc",
-        "pixelSha256": "23d7ad579bbc6a0722a90559d0effaa82c7abcf06c9d2b553746c3792fac7477",
+        "sha256": "b790bd14a5052d53f37357c52e7411f2242be866dfe70f45968f95659bdd0f96",
+        "pixelSha256": "8158d967c7e99c3509c9f6aef785c89bc290010c3677204c53590e7ec07185ed",
         "perceptualHashes": [
           "0111010001000011100011001111100001001011101111000001001101011010",
           "0111010001000011101011001111000001001001101101001001101111010010",
           "0111010001000011101011001111000101100001101011001001100011010110"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "fr-pikachu-captain",
       "country": "FR",
-      "image": "data/memes/FR/images/fr-pikachu-captain.webp",
+      "image": "data/memes/FR/images/fr-pikachu-captain-1280-32502ca4ef10.webp",
       "source": "https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg",
       "title": "Capitán Pikachu protege la Pokébola",
       "location": "Villepinte, Île-de-France, Japan Expo 2022",
@@ -159,7 +294,7 @@
         "statement": "La categoría sitúa la fotografía en Japan Expo 2022, día 3; los metadatos documentan Île-de-France el 16 de julio de 2022.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg/960px-2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/ba/2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Miguel Discart",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -170,30 +305,75 @@
       "visualGag": "Cosplayer amarillo con máscara de orejas, escudo de Pikachu, peluche al hombro y Pokébola fusiona Capitán América con Pokémon.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2934,
+        "height": 5616
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Cosplayer amarillo con máscara de orejas, escudo de Pikachu, peluche al hombro y Pokébola fusiona Capitán América con Pokémon.",
-      "width": 401,
-      "height": 768,
-      "bytes": 28524,
+      "width": 669,
+      "height": 1280,
+      "sourceWidth": 2934,
+      "sourceHeight": 5616,
+      "bytes": 122718,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 334,
+          "height": 640,
+          "sha256": "e1a919a288e42a65d1f9ff7de225c4e2cbe7e6c34b59cb1a3401fee9b447632a",
+          "image": "data/memes/FR/images/fr-pikachu-captain-640-e1a919a288e4.webp",
+          "bytes": 41692
+        },
+        {
+          "edge": 1280,
+          "width": 669,
+          "height": 1280,
+          "sha256": "32502ca4ef1098cac3782092e50318e18dc1b2a7f7f816f49852262081fd2b70",
+          "image": "data/memes/FR/images/fr-pikachu-captain-1280-32502ca4ef10.webp",
+          "bytes": 122718
+        },
+        {
+          "edge": 1920,
+          "width": 1003,
+          "height": 1920,
+          "sha256": "bd6d291cbc443237a2750bc4b0781e9aea7a1ff07667e20256cf33f5c3617273",
+          "image": "data/memes/FR/images/fr-pikachu-captain-1920-bd6d291cbc44.webp",
+          "bytes": 239440
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "efe11216bf54d112676211c50b8c0aca38ef21aca87f3496e4f4d1f459fcc5d7",
-        "pixelSha256": "2eced1de8d106bda05ea516d5d6712a9c654c5c3748a36115b37b9b86d8b383c",
-        "perceptualHashes": [
-          "0111100011011001010010011100010011110001111001100110010001110000",
-          "0111111111011001010010011100100011010000110001010110010001110000",
-          "0101111111011010010010011101111010010010100001000100010001101001"
-        ]
-      },
-      "outputFingerprint": {
-        "sha256": "303c2114dd12f6b1f92b804a2662d1b63c48afc29913f7a7facfb3dbaf2ab2ba",
-        "pixelSha256": "4e99877e1427cddf3872b3ab5d34fb11f231568b765cebe8779252db2efe72da",
+        "sha256": "cfce56a4255d988b398c69046b5c683c843f0e18168e01fe4ce1f633bdbd0e44",
+        "pixelSha256": "aeae79191fd2c54c7510ac613a3292a2dc8b30fd44df4ec6fe741b288688be03",
         "perceptualHashes": [
           "0111100011011001010010011100010011110001111001100110010001110000",
           "0111111111011001010010011100100011010000110001010110010001110000",
           "0101111111011010010010011101111010010010100001000100010001111000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "outputFingerprint": {
+        "sha256": "32502ca4ef1098cac3782092e50318e18dc1b2a7f7f816f49852262081fd2b70",
+        "pixelSha256": "32ddb31e97782f18841f43c19c48c9a0a39193e003864f6c409dbb2b2706c1f0",
+        "perceptualHashes": [
+          "0111100011011001010010011100010011110001111001100110010001110000",
+          "0111111111011001010010011100100011010000110001010110010001110000",
+          "0101111111011010010010011101111010010010100001000100010001101001"
+        ]
+      },
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

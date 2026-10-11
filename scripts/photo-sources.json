@@ -21,7 +21,16 @@
     "visualGag": "Un círculo de Spider-Man se señala en el cine",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Gshow / reproducción Twitter"
+    "publisher": "Gshow / reproducción Twitter",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "El archivo editorial de 984px amplía un recorte de 680px documentado en la URL de la fuente; limitar variantes a 680px y presentación a 340px. El acceso a la URL nativa publicada expiró por timeout; no afirmar recuperación del original.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "detailMaxEdge": 680
   },
   {
     "id": "br-spider-circle-bh",
@@ -45,7 +54,15 @@
     "visualGag": "Cinco Spider-Man intentan averiguar quién es el original",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Gshow / reproducción Twitter"
+    "publisher": "Gshow / reproducción Twitter",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "br-spider-embrace",
@@ -69,7 +86,16 @@
     "visualGag": "Spider-Man termina cargando a otro Spider-Man",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Gshow / reproducción Twitter"
+    "publisher": "Gshow / reproducción Twitter",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "El archivo editorial de 984px amplía un recorte de 680px documentado en la URL de la fuente; limitar variantes a 680px y presentación a 340px. El acceso a la URL nativa publicada expiró por timeout; no afirmar recuperación del original.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "detailMaxEdge": 680
   },
   {
     "id": "ec-spider-bus",
@@ -93,55 +119,15 @@
     "visualGag": "Spider-Man cambia la telaraña por un bus urbano",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "EXTRA"
-  },
-  {
-    "id": "mx-spider-class",
-    "country": "MX",
-    "image": "scripts/reference-images/mx-spider-class.jpg",
-    "source": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-joven-disfrazado-spiderman-interrumpe-clase-salvar-mundo-mexico-face-fb-fotos-video-nnda-noticia-540463-noticia/",
-    "title": "Spider-Man interrumpe la clase para salvar el mundo",
-    "location": "México; ciudad no acreditada",
-    "countryEvidence": {
-      "url": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-joven-disfrazado-spiderman-interrumpe-clase-salvar-mundo-mexico-face-fb-fotos-video-nnda-noticia-540463-noticia/",
-      "statement": "El artículo de El Comercio describe explícitamente esta interrupción de una clase en México. El país del periódico es Perú, no el de la escena.",
-      "verifiedOn": "2026-10-10"
-    },
-    "imageURL": "https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/KQSPDNFQYNHOPP3DI7XOH7AMSA.jpg",
-    "creator": null,
-    "license": null,
-    "licenseUrl": null,
-    "characters": [
-      "Spider-Man"
-    ],
-    "visualGag": "Spider-Man interrumpe la clase para salvar el mundo",
-    "reviewedVisually": true,
-    "hasMemeTextOverlay": false,
-    "publisher": "El Comercio / captura Facebook"
-  },
-  {
-    "id": "pe-spider-dance-bus",
-    "country": "PE",
-    "image": "scripts/reference-images/pe-spider-dance-bus.jpg",
-    "source": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-spiderman-baila-cumple-reto-dura-challenge-colectivo-lima-video-nnda-noticia-537172-noticia/",
-    "title": "Spider-Man convierte el pasillo del bus en pista de baile",
-    "location": "Lima, avenida Salaverry",
-    "countryEvidence": {
-      "url": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-spiderman-baila-cumple-reto-dura-challenge-colectivo-lima-video-nnda-noticia-537172-noticia/",
-      "statement": "El artículo describe el reto Dura Challenge dentro de un colectivo que recorría la avenida Salaverry en Lima.",
-      "verifiedOn": "2026-10-10"
-    },
-    "imageURL": "https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TENJK4FBPRHM3D6PAB7NUF74IM.jpg",
-    "creator": "Cristhian Rojas Rosas (crédito del medio)",
-    "license": null,
-    "licenseUrl": null,
-    "characters": [
-      "Spider-Man"
-    ],
-    "visualGag": "Spider-Man convierte el pasillo del bus en pista de baile",
-    "reviewedVisually": true,
-    "hasMemeTextOverlay": false,
-    "publisher": "El Comercio / Facebook"
+    "publisher": "EXTRA",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "th-spider-student",
@@ -165,7 +151,15 @@
     "visualGag": "Spider-Man también llega a clase con mochila",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Sanook / PPTV"
+    "publisher": "Sanook / PPTV",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "th-spider-yogurt",
@@ -189,7 +183,15 @@
     "visualGag": "Spider-Man vende yogur por la ventanilla del auto",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "The Nation Thailand"
+    "publisher": "The Nation Thailand",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "th-spider-vegetables",
@@ -203,7 +205,7 @@
       "statement": "Daily News identifica el mercado de Sanam Chai, distrito Mueang, provincia de Suphan Buri, en el primer párrafo del reportaje sobre Montri Pho Thong.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://www.dailynews.co.th/wp-content/uploads/2021/08/IMG_8202-1024x883.jpg",
+    "imageURL": "https://www.dailynews.co.th/wp-content/uploads/2021/08/IMG_8202.jpg",
     "creator": null,
     "license": null,
     "licenseUrl": null,
@@ -213,7 +215,24 @@
     "visualGag": "Spider-Man atiende su puesto de verduras",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Daily News"
+    "publisher": "Daily News",
+    "sourceResolution": {
+      "width": 1253,
+      "height": 1080
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Original or larger publisher file explicitly linked in primary article",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "ph-spider-commute",
@@ -227,7 +246,7 @@
       "statement": "Philnews documenta esta fotografía de un pasajero vestido de Spider-Man en un jeepney filipino; no se atribuye una ciudad que la fuente no identifica.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://philnews.ph/wp-content/uploads/2017/03/spiderman-375x500.jpg",
+    "imageURL": "https://philnews.ph/wp-content/uploads/2017/03/spiderman.jpg",
     "creator": null,
     "license": null,
     "licenseUrl": null,
@@ -237,12 +256,29 @@
     "visualGag": "Spider-Man viaja sentado en el jeepney",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Philnews / reproducción de redes"
+    "publisher": "Philnews / reproducción de redes",
+    "sourceResolution": {
+      "width": 750,
+      "height": 1000
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Publisher full image replacing WordPress 375x500 derivative",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Recuperado archivo editorial 750×1000 en lugar de miniatura 375×500; foto callejera con luz desigual y enfoque modesto. Máximo 375px de presentación para DPR2, sin mejora artificial de nitidez.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "ph-spider-dragon",
     "country": "PH",
-    "image": "scripts/reference-images/ph-spider-dragon.webp",
+    "image": "scripts/reference-images/ph-spider-dragon.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Superhero_in_action.jpg",
     "title": "Spider-Man dirige un dragón entre los petardos",
     "location": "Binondo, Manila",
@@ -251,7 +287,7 @@
       "statement": "La descripción del fotógrafo en Commons ubica a Spider-Man en la celebración del Año Nuevo chino en Binondo, Manila, el 25 de enero de 2020.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://commons.wikimedia.org/wiki/File:Superhero_in_action.jpg",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Superhero_in_action.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "EMMAN A. FORONDA",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -261,7 +297,24 @@
     "visualGag": "Spider-Man dirige un dragón entre los petardos",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 4625,
+      "height": 3057
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "us-iron-board",
@@ -275,7 +328,7 @@
       "statement": "La fotografía de Michael Miller está identificada como ConNooga 2009 en Chattanooga, Tennessee.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+    "imageURL": "https://live.staticflickr.com/3432/3299551134_c0eccb6e53_o.jpg",
     "creator": "Michael Miller",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -284,7 +337,25 @@
     ],
     "visualGag": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 1987,
+      "height": 2896
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/millermz/3299551134/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Escenario oscuro intencional; se conservan color y encuadre. El gag de la tabla de planchar es visible en la revisión ampliada, sin afirmar nitidez o exposición perfectas.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "us-captain-dorito",
@@ -311,12 +382,20 @@
     "visualGag": "Escudo triangular de cartón con una bolsa de Doritos pegada en el centro.",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Zachary Yaro (cosplayer)"
+    "publisher": "Zachary Yaro (cosplayer)",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "us-deadpool-iron",
     "country": "US",
-    "image": "scripts/reference-images/us-deadpool-iron.webp",
+    "image": "scripts/reference-images/us-deadpool-iron.jpg",
     "title": "Deadpool cambia de armadura y de presupuesto",
     "source": "https://commons.wikimedia.org/wiki/File:Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg",
     "location": "New York Comic Con 2015, Nueva York",
@@ -335,7 +414,25 @@
     ],
     "visualGag": "Deadpool lleva una versión de tela de la armadura de Iron Man y sostiene un cartel físico sobre su cambio de disfraz; no hay texto digital superpuesto.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceResolution": {
+      "width": 1186,
+      "height": 1553
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "ca-iron-pikachu",
@@ -349,7 +446,7 @@
       "statement": "Las categorías de Commons identifican Fan Expo Canada 2012 y los personajes en Canadá.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Iron_Pikachu.jpg/960px-Iron_Pikachu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/04/Iron_Pikachu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "GabboT",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -360,7 +457,24 @@
     "visualGag": "Iron Man mezcla su armadura con Pikachu",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 2873,
+      "height": 2051
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia Commons imageinfo original URL",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "gb-iron-buzz",
@@ -374,7 +488,7 @@
       "statement": "La descripción sitúa esta fotografía en MCM London Comic Con, ExCeL Exhibition Centre.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/MCM_2013_-_Buzz_Lightyear_Iron_Man_%288978219177%29.jpg/960px-MCM_2013_-_Buzz_Lightyear_Iron_Man_%288978219177%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/5340/8978219177_d87448edf6_o.jpg",
     "creator": "Roger Murmann from Eppertshausen, Deutschland",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -384,7 +498,25 @@
     "visualGag": "Iron Man se convierte en Buzz Lightyear",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 1424,
+      "height": 2144
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/starcadet/8978219177/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Fondo de escenario negro, traje iluminado; no confundir fondo oscuro con subexposición del personaje.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "be-deadpool-throne",
@@ -398,7 +530,7 @@
       "statement": "La ficha identifica Comic Con Brussels 2016 y aporta coordenadas de Bruselas.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_%2826675225495%29.jpg/960px-Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_%2826675225495%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/1630/26675225495_b534d639cd_6k.jpg",
     "creator": "Miguel Discart from Bruxelles, Belgique",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -408,7 +540,25 @@
     "visualGag": "Deadpool reclama el Trono de Hierro",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 3376,
+      "height": 6000
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/miguel_discart/26675225495/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "be-deadpool-duff",
@@ -422,7 +572,7 @@
       "statement": "La ficha ubica la Comic Con Brussels 2022 en Tour & Taxis, Bruselas.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg/960px-Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/2/28/Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Miguel Discart",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -432,7 +582,24 @@
     "visualGag": "Deadpool lleva a Grogu en su mochila de pecho",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 3072,
+      "height": 5158
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "be-deadpool-spider",
@@ -446,7 +613,7 @@
       "statement": "Las categorías de Commons documentan Bélgica y Made in Asia 2022; la foto muestra uniformes combinados de los personajes.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_%2852159179688%29.jpg/960px-Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_%2852159179688%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/65535/52159179688_550f8ca007_6k.jpg",
     "creator": "Miguel Discart",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -457,7 +624,25 @@
     "visualGag": "Deadpool y Spider-Man intercambian uniforme",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 6001,
+      "height": 3376
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/miguel_discart/52159179688/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "ca-iron-fanexpo",
@@ -471,7 +656,7 @@
       "statement": "La descripción de Commons identifica a Dianne Da Rosa con una variante de vestido de Iron Man en Fan Expo Canada 2016.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Fan_Expo_Canada_2016_Iron_Man.jpg/960px-Fan_Expo_Canada_2016_Iron_Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Fan_Expo_Canada_2016_Iron_Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Nicholas Moreau",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -481,7 +666,24 @@
     "visualGag": "Iron Man cambia la armadura por un vestido de gala",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2448,
+      "height": 3264
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "gb-deadpools-throne",
@@ -495,7 +697,7 @@
       "statement": "La descripción identifica London Super Comic Con 2016 y el Trono de Hierro.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/LSCC_2016_-_Deadpools_on_the_Iron_Throne_%2825057706012%29.jpg/960px-LSCC_2016_-_Deadpools_on_the_Iron_Throne_%2825057706012%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/1487/25057706012_b0a5d51c99_o.jpg",
     "creator": "BatCam Photography",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -505,7 +707,25 @@
     "visualGag": "Dos Deadpool comparten el trono con un unicornio",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 3312,
+      "height": 4968
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/batcam90/25057706012/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "gb-spider-tube",
@@ -519,7 +739,7 @@
       "statement": "La fuente del fotógrafo y las categorías identifican Gloucester Road, Londres, en la fiesta de la Circle line del 31 de mayo de 2008.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Gloucester_Road_-_Spider-Man_%282539882747%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "imageURL": "https://live.staticflickr.com/2128/2539882747_b043dc2f55_c.jpg",
     "creator": "Annie Mole from London, UK",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -529,7 +749,25 @@
     "visualGag": "Spider-Man da una entrevista con una lata en la mano",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 610,
+      "height": 800
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/anniemole/2539882747/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Archivo nativo limitado a 610×800 y enfoque suave; presentación máxima de 305px para DPR2. No se inventa un original más nítido.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "fr-spider-hospital",
@@ -543,7 +781,7 @@
       "statement": "La descripción identifica el norte de Francia; la categoría geográfica ubica Centre Oscar-Lambret, Lille.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg/960px-Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/50/Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Globe Zero",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -553,7 +791,24 @@
     "visualGag": "Spider-Man visita el hospital colgado boca abajo",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "sourceResolution": {
+      "width": 4032,
+      "height": 3024
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "ca-deadpool-maid",
@@ -567,7 +822,7 @@
       "statement": "La descripción y categorías identifican Montreal Comiccon 2016, Canadá.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_%2827633930493%29.jpg/960px-Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_%2827633930493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_%2827633930493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Pikawil from Laval, Canada",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -577,7 +832,24 @@
     "visualGag": "Deadpool se vuelve gigante y sale con un unicornio",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Wikimedia Commons"
+    "publisher": "Wikimedia Commons",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2513,
+      "height": 4272
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "id-spider-vegetables",
@@ -601,7 +873,15 @@
     "visualGag": "Spider-Man vende verduras desde su moto",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Suara Indonesia"
+    "publisher": "Suara Indonesia",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "hn-spider-graduate",
@@ -625,7 +905,15 @@
     "visualGag": "Spider-Man recoge su título de psicología",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Tunota / imagen compartida por UNAH"
+    "publisher": "Tunota / imagen compartida por UNAH",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "co-spider-handstand",
@@ -649,31 +937,15 @@
     "visualGag": "Spider-Man se pone de cabeza en el metro",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Publimetro / captura de @BarneyStinsonWt"
-  },
-  {
-    "id": "cl-spider-cueca",
-    "country": "CL",
-    "image": "scripts/reference-images/cl-spider-cueca.jpg",
-    "source": "https://www.13.cl/ar13/viral/dr-simi-y-spiderman-se-lucen-con-pie-de-cueca-en-pleno-centro-de-santiago",
-    "title": "Spider-Man baila cueca con el Dr. Simi",
-    "location": "Santiago, Paseo Bandera",
-    "countryEvidence": {
-      "url": "https://www.13.cl/ar13/viral/dr-simi-y-spiderman-se-lucen-con-pie-de-cueca-en-pleno-centro-de-santiago",
-      "statement": "Canal 13 sitúa el baile de cueca de Spider-Man y Dr. Simi en Paseo Bandera, centro de Santiago.",
-      "verifiedOn": "2026-10-10"
-    },
-    "imageURL": "https://s.13.cl/sites/default/files/styles/manualcrop_1600x800/public/ar13/field-imagen/2019-09/simi.jpg.jpeg?itok=-lIV4H7G",
-    "creator": null,
-    "license": null,
-    "licenseUrl": null,
-    "characters": [
-      "Spider-Man"
-    ],
-    "visualGag": "Spider-Man baila cueca con el Dr. Simi",
-    "reviewedVisually": true,
-    "hasMemeTextOverlay": false,
-    "publisher": "Canal 13 / captura del video"
+    "publisher": "Publimetro / captura de @BarneyStinsonWt",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "cu-spider-nerf",
@@ -687,7 +959,7 @@
       "statement": "DVIDS indica GUANTANAMO BAY, CU y describe al participante disfrazado de Spider-Man con un juguete Nerf dentro de un bus de Halloween. La base estadounidense no convierte el lugar geográfico de la foto en Estados Unidos.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1603/2433478/1000w_q95.jpg",
+    "imageURL": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1603/2433478/2000w_q95.jpg",
     "creator": "Sgt. LeAnne Withrow / DVIDS",
     "license": "Public domain",
     "licenseUrl": "https://www.dvidshub.net/about/copyright",
@@ -698,7 +970,24 @@
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
     "publisher": "DVIDS",
-    "rightsNotice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement."
+    "rightsNotice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.",
+    "sourceResolution": {
+      "width": 1999,
+      "height": 1328
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Original or larger publisher file explicitly linked in primary article",
+      "original": false
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "fr-deadpool-sailor",
@@ -712,7 +1001,7 @@
       "statement": "La descripción ubica Japan Expo en Paris-Nord Villepinte, Francia; la categoría identifica la mezcla con Sailor Moon.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg/960px-Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Miguel Discart",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -721,7 +1010,24 @@
     ],
     "visualGag": "Deadpool se disfraza de Sailor Moon",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 3376,
+      "height": 6001
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "fr-deadpool-2019",
@@ -735,7 +1041,7 @@
       "statement": "La descripción del fotógrafo sitúa Japan Expo 2019 en Paris-Nord Villepinte, Francia.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg/960px-Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/06/Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Miguel Discart",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -744,7 +1050,24 @@
     ],
     "visualGag": "Deadpool cambia las espadas por una falda de hula",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 3269,
+      "height": 5472
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "jp-deadpool-market",
@@ -759,7 +1082,7 @@
       "verifiedOn": "2026-10-10",
       "corroboratingUrl": "https://www.comiket.co.jp/info-a/TAFO/C96TAFO/cmkfor_eng.html"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Comic_Market_96_Day_2_Cosplayers_%2848600288981%29.jpg/960px-Comic_Market_96_Day_2_Cosplayers_%2848600288981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/65535/48600288981_1c5e6851f7_6k.jpg",
     "creator": "Dick Thomas Johnson from Tokyo, Japan",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -769,7 +1092,25 @@
     ],
     "visualGag": "Deadpool se pone orejas de conejo junto a Spider-Man",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 4000,
+      "height": 6000
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/31029865@N06/48600288981/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "jp-spider-crossing",
@@ -783,7 +1124,7 @@
       "statement": "Descripción y categorías identifican el cruce de Shibuya, Tokio, Japón, y la actuación callejera de Spider-Man.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Shibuya_Crossing_%2853083700164%29.jpg/960px-Shibuya_Crossing_%2853083700164%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/65535/53083700164_73b384c5df_6k.jpg",
     "creator": "Dick Thomas Johnson from Tokyo, Japan",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -792,7 +1133,25 @@
     ],
     "visualGag": "Spider-Man hace equilibrio sobre una bicicleta",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 4000,
+      "height": 6000
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/31029865@N06/53083700164/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "sv-stan-spider",
@@ -806,7 +1165,7 @@
       "statement": "El fotógrafo identifica un cosplay de homenaje a Stan Lee en Comic Con 2019, El Salvador.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Cosplay_Stan_Lee.jpg/960px-Cosplay_Stan_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Cosplay_Stan_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "LuisaBustillo",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -816,7 +1175,24 @@
     ],
     "visualGag": "Spider-Man encuentra a un doble de Stan Lee",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2592,
+      "height": 4608
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "il-spider-purim",
@@ -830,7 +1206,7 @@
       "statement": "El fotógrafo identifica Purim 2018 en Tel Aviv; la categoría identifica Spider-Man en Israel.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Purim_2018_%2825749998627%29.jpg/960px-Purim_2018_%2825749998627%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Purim_2018_%2825749998627%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "IgorZed from Tel Aviv, ISRAEL",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -839,7 +1215,24 @@
     ],
     "visualGag": "Spider-Man sale con llaves, teléfono y bolso",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2146,
+      "height": 3219
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "es-spider-plaza",
@@ -853,7 +1246,7 @@
       "statement": "El fotógrafo sitúa al personaje en Plaza Mayor de Madrid, España. El gag es la máscara desplazada, no el cuerpo del intérprete.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg/960px-Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Fsoguero",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -862,7 +1255,24 @@
     ],
     "visualGag": "Spider-Man lleva la máscara sobre los ojos",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2418,
+      "height": 3446
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "es-spider-smoking",
@@ -876,7 +1286,7 @@
       "statement": "La descripción sitúa la escena en Plaza Mayor, España; las categorías identifican al intérprete fumando. El título no reproduce el comentario corporal de la fuente.",
       "verifiedOn": "2026-10-10"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Fat_Spider-Man.jpg/960px-Fat_Spider-Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/05/Fat_Spider-Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "רנדום",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -885,31 +1295,24 @@
     ],
     "visualGag": "Spider-Man se toma un descanso con cigarrillo",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
-  },
-  {
-    "id": "at-spider-dance",
-    "title": "Spider-Man se pone a bailar en el metro",
-    "location": "Viena, vagón del metro",
-    "publisher": "Heute / captura del video",
-    "country": "AT",
-    "image": "scripts/reference-images/at-spider-dance.jpg",
-    "source": "https://www.heute.at/s/spider-man-tanzt-in-wiener-u-bahn-dann-fliegen-faeuste-120263736",
-    "countryEvidence": {
-      "url": "https://www.heute.at/s/spider-man-tanzt-in-wiener-u-bahn-dann-fliegen-faeuste-120263736",
-      "statement": "Heute identifica al protagonista como Vienna Spidey y sitúa sus actuaciones en el metro de Viena, Austria. La imagen muestra el baile, no una agresión.",
-      "verifiedOn": "2026-10-10"
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
     },
-    "imageURL": "https://heute-at-prod-images.imgix.net/2026/10/08/e9dd160c-7b1a-465a-8cf5-779a57e34e07.jpg?rect=0%2C0%2C4000%2C2250&auto=format&auto=compress&crop=fit&w=996",
-    "creator": null,
-    "license": null,
-    "licenseUrl": null,
-    "characters": [
-      "Spider-Man"
-    ],
-    "visualGag": "Spider-Man se pone a bailar en el metro",
-    "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "sourceResolution": {
+      "width": 2258,
+      "height": 3454
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "in-spider-hood",
@@ -933,7 +1336,15 @@
     ],
     "visualGag": "Spider-Man termina junto a la policía de tránsito",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "pe-spider-yoyo",
@@ -957,14 +1368,22 @@
     "visualGag": "Spider-Man carga una bolsa de yoyós en vez de telarañas",
     "reviewedVisually": true,
     "hasMemeTextOverlay": false,
-    "publisher": "Trome"
+    "publisher": "Trome",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": false,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "ca-spider-hawaiian",
     "country": "CA",
     "image": "scripts/reference-images/ca-spider-hawaiian.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_(18855860674).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg/960px-Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/04/Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Spider-Man se va de vacaciones",
     "location": "Montreal Comiccon 2015, Montreal",
     "countryEvidence": {
@@ -981,14 +1400,31 @@
     ],
     "visualGag": "Spider-Man mezcla su traje con camisa hawaiana, collar de flores y pantalones cortos.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2848,
+      "height": 4272
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "ca-miku-maid",
     "country": "CA",
     "image": "scripts/reference-images/ca-miku-maid.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_(28181536851).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg/960px-Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/59/Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Daredevil y Spider-Man cambian de vestuario",
     "location": "Montreal Comiccon 2016, Montreal",
     "countryEvidence": {
@@ -1006,14 +1442,31 @@
     ],
     "visualGag": "Daredevil interpreta a Hatsune Miku y Spider-Man lleva un traje de sirvienta.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2848,
+      "height": 4272
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "ca-deadpool-redhood",
     "country": "CA",
     "image": "scripts/reference-images/ca-deadpool-redhood.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_(19292146559).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg/960px-Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Caperucita Deadpool encuentra a Spider-Man",
     "location": "Montreal Comiccon 2015, Montreal",
     "countryEvidence": {
@@ -1031,14 +1484,31 @@
     ],
     "visualGag": "Deadpool combina máscara, capucha de Caperucita y delantal junto a Spider-Man.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2848,
+      "height": 4272
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "ca-deadpool-brainslug",
     "country": "CA",
     "image": "scripts/reference-images/ca-deadpool-brainslug.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Brainslugged_Deadpool_(19432425756).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg/960px-Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Deadpool tiene un invitado en la cabeza",
     "location": "Montreal Comiccon 2015, Montreal",
     "countryEvidence": {
@@ -1055,14 +1525,31 @@
     ],
     "visualGag": "Un muñeco verde con un ojo descansa sobre la máscara de Deadpool.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2848,
+      "height": 4272
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "ca-deadpool-chicken",
     "country": "CA",
     "image": "scripts/reference-images/ca-deadpool-chicken.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_(27633865783).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg/960px-Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Deadpool consigue un compañero con plumas",
     "location": "Montreal Comiccon 2016, Montreal",
     "countryEvidence": {
@@ -1079,14 +1566,31 @@
     ],
     "visualGag": "Deadpool abraza a un acompañante con disfraz de pollo amarillo.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2848,
+      "height": 4272
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "ca-photobomb-pileup",
     "country": "CA",
     "image": "scripts/reference-images/ca-photobomb-pileup.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015-_Photobomb_pileup,_part_5_(18835967574).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg/960px-Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/60/Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Deadpool se suma a una foto cada vez más concurrida",
     "location": "Montreal Comiccon 2015, Montreal",
     "countryEvidence": {
@@ -1103,14 +1607,31 @@
     ],
     "visualGag": "Deadpool participa en un grupo de cosplayers con cabeza de caballo, espadas y disfraces de universos diferentes.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 4272,
+      "height": 2848
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "us-deadpool-pope",
     "country": "US",
     "image": "scripts/reference-images/us-deadpool-pope.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:NYCC_2016_Cosplay_of_Pope_Deadpool.jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/NYCC_2016_Cosplay_of_Pope_Deadpool.jpg/960px-NYCC_2016_Cosplay_of_Pope_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/e4/NYCC_2016_Cosplay_of_Pope_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Deadpool cambia la katana por un báculo",
     "location": "New York Comic Con 2016, Nueva York",
     "countryEvidence": {
@@ -1127,14 +1648,31 @@
     ],
     "visualGag": "Deadpool lleva mitra y vestimenta ceremonial blanca y roja.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2448,
+      "height": 3264
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "us-deadpool-lego",
     "country": "US",
     "image": "scripts/reference-images/us-deadpool-lego.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg",
-    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "imageURL": "https://live.staticflickr.com/1620/25251031320_a74b7eb73d_b.jpg",
     "title": "Deadpool descubre el tamaño de una minifigura",
     "location": "Big Apple Comic Con 2016, Nueva York",
     "countryEvidence": {
@@ -1151,14 +1689,32 @@
     ],
     "visualGag": "Una persona viste un disfraz de Deadpool con cabeza, cuerpo y manos de minifigura LEGO gigante.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 934,
+      "height": 724
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/94565827@N05/25251031320/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Original nativo 934×724; capar presentación a 467px para DPR2.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "us-spider-frog",
     "country": "US",
     "image": "scripts/reference-images/us-spider-frog.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:SDCC_15_-_Spider-Frog_(19652841226).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/SDCC_15_-_Spider-Frog_%2819652841226%29.jpg/960px-SDCC_15_-_Spider-Frog_%2819652841226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/c/cf/SDCC_15_-_Spider-Frog_%2819652841226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "La rana también tiene sentido arácnido",
     "location": "San Diego Comic-Con 2015, San Diego",
     "countryEvidence": {
@@ -1175,14 +1731,31 @@
     ],
     "visualGag": "Un disfraz de rana con cabeza enorme viste el traje de Spider-Man.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 5184,
+      "height": 3456
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "ca-deadpool-lantern",
     "country": "CA",
     "image": "scripts/reference-images/ca-deadpool-lantern.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg/960px-Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Deadpool estrena traje de Green Lantern",
     "location": "Fan Expo Canada 2012, Toronto",
     "countryEvidence": {
@@ -1200,14 +1773,31 @@
     ],
     "visualGag": "Deadpool lleva máscara y cinturón propios en un traje verde de Green Lantern, junto a una pistola de juguete del mismo color.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2048,
+      "height": 1365
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "us-spider-thor",
     "country": "US",
     "image": "scripts/reference-images/us-spider-thor.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:Captain_America_and_Spider_Thor%3F_C2E2_2014_(14254757313).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg/960px-Captain_America_and_Spider_Thor%3F_C2E2_2014_%2814254757313%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/5489/14254757313_963bdca397_3k.jpg",
     "title": "Spider-Man cambia de martillo y de capa",
     "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
     "countryEvidence": {
@@ -1226,14 +1816,32 @@
     ],
     "visualGag": "Spider-Man lleva armadura, capa y martillo de Thor junto a Captain America.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 2454,
+      "height": 3068
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/cfavero/14254757313/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "us-deadtrooper",
     "country": "US",
     "image": "scripts/reference-images/us-deadtrooper.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:SWCA_-_Deadtrooper_(16580465874).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/SWCA_-_Deadtrooper_%2816580465874%29.jpg/960px-SWCA_-_Deadtrooper_%2816580465874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/8/8c/SWCA_-_Deadtrooper_%2816580465874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "El stormtrooper se ha pasado a Deadpool",
     "location": "Star Wars Celebration Anaheim 2015, Anaheim",
     "countryEvidence": {
@@ -1250,14 +1858,31 @@
     ],
     "visualGag": "Una armadura de stormtrooper está pintada en rojo y negro con el patrón de la máscara de Deadpool.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 5184,
+      "height": 3456
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "us-captain-spider",
     "country": "US",
     "image": "scripts/reference-images/us-captain-spider.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:C2E2_2015_-_Captain_Spider-Man_(17118870150).jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg/960px-C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/6a/C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "title": "Spider-Man toma prestado el escudo del Capitán",
     "location": "Chicago Comic & Entertainment Expo 2015, Chicago",
     "countryEvidence": {
@@ -1275,14 +1900,31 @@
     ],
     "visualGag": "Un traje de Spider-Man incorpora colores, estrella y escudo de Captain America.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2441,
+      "height": 3158
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "us-deadpool-elsa",
     "country": "US",
     "image": "scripts/reference-images/us-deadpool-elsa.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:C2E2_(Day_2)_2014,_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg",
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg/960px-C2E2_%28Day_2%29_2014%2C_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/7302/14062998863_252f565f75_4k.jpg",
     "title": "Deadpool se apunta a Frozen",
     "location": "Chicago Comic & Entertainment Expo 2014, Chicago",
     "countryEvidence": {
@@ -1300,7 +1942,25 @@
     ],
     "visualGag": "Deadpool lleva peluca rubia con trenza y vestido azul de Elsa junto a Spider-Man.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 3000,
+      "height": 4000
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/lauren-j/14062998863/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "gb-deadpool-captain",
@@ -1314,7 +1974,7 @@
       "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/London_Comic_Con_2015_-_Deadpool_%2817435591233%29.jpg/960px-London_Comic_Con_2015_-_Deadpool_%2817435591233%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/5347/17435591233_cffb1bed79_o.jpg",
     "creator": "Pete Sheffield",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -1324,7 +1984,25 @@
     ],
     "visualGag": "Deadpool con escudo y traje de Capitán América posa con un pie sobre otro Deadpool, junto a dos dobles tumbados.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 2077,
+      "height": 3121
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/twosheffs/17435591233/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "gb-deadpool-sombrero",
@@ -1338,7 +2016,7 @@
       "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg/960px-MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/79/MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "big-ashb",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -1347,7 +2025,24 @@
     ],
     "visualGag": "Deadpool lleva un gran sombrero rosa y un poncho mientras charla sentado entre asistentes.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 4147,
+      "height": 2962
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "gb-deadpool-wedding",
@@ -1361,7 +2056,7 @@
       "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg/960px-MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/55/MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "big-ashb",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -1370,7 +2065,24 @@
     ],
     "visualGag": "Deadpool con vestido blanco y peluca rubia recibe una propuesta de otro Deadpool de rodillas, entre invitados con máscara de V.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 5184,
+      "height": 3456
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "gb-deadpool-kimono",
@@ -1384,7 +2096,7 @@
       "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/MCM_London_May_2015_-_Deadpool_%2817417809783%29.jpg/960px-MCM_London_May_2015_-_Deadpool_%2817417809783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/7696/17417809783_7f31aff8ea_k.jpg",
     "creator": "Cosplay Vogue1",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -1393,7 +2105,25 @@
     ],
     "visualGag": "Deadpool combina su máscara roja con kimono floral, abanico abierto y sombrero de paja.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 1356,
+      "height": 2047
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/cosplaytango/17417809783/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "gb-deadpool-maid",
@@ -1407,7 +2137,7 @@
       "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/At_your_service_%2834671100260%29.jpg/960px-At_your_service_%2834671100260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/2/29/At_your_service_%2834671100260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "m4mystery from London, United Kingdom",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -1416,7 +2146,24 @@
     ],
     "visualGag": "Deadpool con vestido de criada y delantal blanco muestra una mochila de sí mismo.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 5388,
+      "height": 3592
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "gb-pikachu-thor",
@@ -1430,7 +2177,7 @@
       "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/MCM_London_May_2015_-_Pikachu_Thor_%2818011811396%29.jpg/960px-MCM_London_May_2015_-_Pikachu_Thor_%2818011811396%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/8885/18011811396_204c1b0968_k.jpg",
     "creator": "Cosplay Vogue1",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -1440,7 +2187,25 @@
     ],
     "visualGag": "Pikachu lleva peluca rubia, armadura de Thor, capa roja y martillo sobre el hombro.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 2047,
+      "height": 1356
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/cosplaytango/18011811396/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "gb-thor-bike",
@@ -1454,7 +2219,7 @@
       "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg/960px-London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/d/d2/London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Pete Sheffield",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -1463,7 +2228,24 @@
     ],
     "visualGag": "Thor levanta el martillo mientras posa sobre una motocicleta Triumph en el puesto de Metal Gear Solid.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 4274,
+      "height": 2845
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "be-deadpool-hood",
@@ -1477,7 +2259,7 @@
       "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg/960px-Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/d/de/Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Kiri Karma",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -1486,7 +2268,24 @@
     ],
     "visualGag": "Deadpool mezcla su armadura roja con sudadera estampada y un largo bastón.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2265,
+      "height": 5314
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   },
   {
     "id": "be-captain-wolverine",
@@ -1500,7 +2299,7 @@
       "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg/960px-Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_%2852117205294%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/65535/52117205294_25a26e2a02_5k.jpg",
     "creator": "Miguel Discart",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -1510,7 +2309,25 @@
     ],
     "visualGag": "Cosplayer fusiona traje de Wolverine, garras y puro con el escudo de Capitán América.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 2730,
+      "height": 4958
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/miguel_discart/52117205294/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "be-captain-fett",
@@ -1524,7 +2341,7 @@
       "statement": "Las categorías de la fuente documentan el evento en Bruselas y la ubicación de la foto en Bélgica; no se usa la nacionalidad del fotógrafo.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg/960px-Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://live.staticflickr.com/65535/53443777080_044d02c122_6k.jpg",
     "creator": "Miguel Discart",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -1534,12 +2351,30 @@
     ],
     "visualGag": "Armadura mandaloriana combina casco con A, colores y escudo de Capitán América.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "sourceResolution": {
+      "width": 3782,
+      "height": 5791
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked by Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/miguel_discart/53443777080/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    }
   },
   {
     "id": "fr-pikachu-captain",
     "country": "FR",
-    "image": "scripts/reference-images/fr-pikachu-captain.jpg",
+    "image": "scripts/reference-images/fr-pikachu-captain-original.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg",
     "title": "Capitán Pikachu protege la Pokébola",
     "location": "Villepinte, Île-de-France, Japan Expo 2022",
@@ -1548,7 +2383,7 @@
       "statement": "La categoría sitúa la fotografía en Japan Expo 2022, día 3; los metadatos documentan Île-de-France el 16 de julio de 2022.",
       "verifiedOn": "2026-10-11"
     },
-    "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg/960px-2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/ba/2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "creator": "Miguel Discart",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -1558,6 +2393,23 @@
     ],
     "visualGag": "Cosplayer amarillo con máscara de orejas, escudo de Pikachu, peluche al hombro y Pokébola fusiona Capitán América con Pokémon.",
     "reviewedVisually": true,
-    "hasMemeTextOverlay": false
+    "hasMemeTextOverlay": false,
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+      "sourceOriginalRecovered": true,
+      "displayEvidence": "docs/browser-quality-results.json"
+    },
+    "sourceResolution": {
+      "width": 2934,
+      "height": 5616
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Wikimedia imageinfo original URL",
+      "original": true
+    }
   }
 ]

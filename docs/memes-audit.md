@@ -4,7 +4,7 @@
 
 El PR #5 publicó 14 fotos compartidas en 51 combinaciones. Esa organización no cumplía la precisión posterior: varias fotos propias y diferentes por país. Esta corrección elimina la biblioteca compartida de los manifiestos y exige que el país sea la ubicación acreditada de la escena. Las dos referencias de Pinterest no se asignan a ningún país porque su procedencia no está demostrada.
 
-La colección actual sigue incompleta: 65 fotos únicas en 22 países; CA, GB y US alcanzan el mínimo explícito de diez. Los otros 48 países necesitan 445 fotos, con 29 catálogos vacíos. El requisito de tres queda obsoleto después de la corrección explícita a diez por país. complete permanece false. Un PASS de software o despliegue no completa el contenido.
+La colección actual sigue incompleta: 61 fotos únicas en 19 países; CA, GB y US alcanzan el mínimo explícito de diez. Los otros 48 países necesitan 449 fotos, con 32 catálogos vacíos. El requisito de tres queda obsoleto después de la corrección explícita a diez por país. complete permanece false. Un PASS de software o despliegue no completa el contenido.
 
 ## Corrección técnica
 
@@ -36,7 +36,7 @@ La búsqueda se amplió a medios de virales locales, Commons, Reddit, sitios de 
 
 ## Verificación
 
-34 regresiones PASS: entrada, aislamiento de cuentas, guía 7→8→fin, rechazo del pool compartido, ruta local, origen ausente/distinto, XSS/atribución, cancelación y aleatoriedad. Chrome comprueba los 51 selectores, los 22 países con fotos y los 29 vacíos, en escritorio y móvil emulado. El informe vigente distingue el feed de la vista Memes y el modal; ambos deben recorrer sus imágenes reales sin descargar otros países. La guía conserva el resaltado y el avance en 7 y 8. Las pruebas adversariales comprueban duplicados exactos, versiones recomprimidas/redimensionadas, evidencia ausente y cobertura incompleta; cada rechazo precede la escritura pública.
+34 regresiones PASS: entrada, aislamiento de cuentas, guía 7→8→fin, rechazo del pool compartido, ruta local, origen ausente/distinto, XSS/atribución, cancelación y aleatoriedad. Chrome comprueba los 51 selectores, los 22 países con fotos y los 32 vacíos, en escritorio y móvil emulado. El informe vigente distingue el feed de la vista Memes y el modal; ambos deben recorrer sus imágenes reales sin descargar otros países. La guía conserva el resaltado y el avance en 7 y 8. Las pruebas adversariales comprueban duplicados exactos, versiones recomprimidas/redimensionadas, evidencia ausente y cobertura incompleta; cada rechazo precede la escritura pública.
 
 Las pruebas de OTP/Supabase real, dispositivos físicos y sincronización entre dispositivos siguen pendientes. No se enviaron correos ni se escribieron datos reales. Los resultados de publicación del PR #5 están preservados bajo docs/history/pr5 y no acreditan esta revisión.
 
@@ -61,10 +61,12 @@ Chrome también mostró los agregados reales de Supabase, verificados contra las
 
 El PR #8 añadió un mapa al panel de memes; el usuario lo rechazó y el PR #9 lo retiró, junto con su código exclusivo. La vista Memes conserva el selector; el mapa original continúa en su ubicación existente. No restaurar el mapa principal. La colección se conserva como múltiples tarjetas en scroll; los lotes de cuatro no limitan el total. Se añadieron 14 fotos completas diferentes: siete de Montreal/Toronto y siete de Nueva York, San Diego, Chicago/Anaheim, con fuente, autor y licencia Commons/Flickr. Se seleccionó una sola fotografía de cada serie candidata para evitar variantes casi idénticas; no se cuentan recortes ni reencodificaciones como fotos distintas. Se descartó Sailor USA: la fuente solo acredita Sailor Moon con tema patriótico, insuficiente para clasificarla como Marvel. El catálogo SQL se amplía mediante una migración aditiva, sin renombrar IDs ni borrar interacciones.
 
-Conteo actual y déficit exacto por país: docs/country-coverage.md. Canadá/Reino Unido/Estados Unidos tienen diez; 48 países siguen por debajo de diez y faltan 445 fotos. complete:false. La publicación y los PASS de la versión anterior se preservan en docs/history/pr7; no demuestran la cobertura del nuevo requisito.
+Conteo actual y déficit exacto por país: docs/country-coverage.md. Canadá/Reino Unido/Estados Unidos tienen diez; 48 países siguen por debajo de diez y faltan 449 fotos. complete:false. La publicación y los PASS de la versión anterior se preservan en docs/history/pr7; no demuestran la cobertura del nuevo requisito.
 
 Evidencia histórica del PR #8: 7393b923f17e69cabe52ff0920e4d85eb8005dd8, workflow 38104269159 success, 107 archivos públicos con bytes idénticos. Mapa/feed/guía y las 54 fotos pasan Chrome en escritorio y móvil emulado. Supabase devuelve los 54 agregados y el navegador compara 34 tarjetas reales, incluida recarga de Canadá; escrituras bloqueadas. No se acredita persistencia autenticada ni cobertura completa.
 
 La comprobación de país al activar cada imagen distingue las peticiones nativas tardías de imágenes ya asignadas en la selección anterior. Los eventos de red pueden recibirse tras cambiar de país; la prueba registra el país en el momento de asignar src, exige la ruta correspondiente y comprueba todas las imágenes. No transforma ese retraso del registro en un supuesto cambio de país del contenido.
 
 Estado vigente del PR #10: once fotos acreditadas adicionales (GB7/BE3/FR1), 65 en total y Reino Unido con diez. Source commit 4b11baa794315a54f2ce97c3050c2b8c1dac21b1, Pages workflow 38151695606 success, 118 archivos públicos idénticos y Chrome PASS en dos tamaños: 51 países, 65 fotos, ausencia de mapa principal, mapa original y guía7→8→fin. Leer docs/publication-results.json y docs/curation-uk-20261011.md.
+
+Revisión de calidad del 11 de octubre: cuatro capturas de vídeo retiradas del catálogo activo; sus identidades y datos históricos se conservan. La nueva foto mexicana usa mx-spider-errands y permanece preparada junto a ec-spider-bin hasta registrar ambos IDs. Leer [auditoría de calidad](photo-quality-audit.md); cualquier descripción de las fotos retiradas en este documento registra procedencia histórica, no publicación activa.

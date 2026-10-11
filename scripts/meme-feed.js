@@ -87,12 +87,13 @@ window.MemeFeed=(()=>{
     for(const item of items.slice(cursor,cursor+BATCH)){
       const card=document.createElement('article');card.className='feed-card';card.dataset.memeId=item.id;
       const figure=document.createElement('figure'),img=document.createElement('img');img.width=item.width||768;img.height=item.height||512;img.alt=item.alt||item.title;img.loading='lazy';img.decoding='async';img.dataset.src=window.MapMemes.imageURL(code,item.image);
+      window.MapMemes.configureImage(img,item,code);
       const caption=window.MapMemes.creditCaption(item,$('feedCountry').selectedOptions[0].textContent);figure.append(img,caption);card.append(figure);
       const actions=document.createElement('div');actions.className='feed-actions';const like=document.createElement('button');like.type='button';like.className='feed-like';like.setAttribute('aria-label','Me gusta: '+item.title);
       const views=document.createElement('span'),message=document.createElement('p');message.className='feed-message';message.setAttribute('role','status');actions.append(like,views);card.append(actions,message);$('feedList').append(card);
       const s={id:item.id,img,like,views,message,data:null,error:'',busy:false,version:0};cards.set(item.id,s);ids.push(item.id);like.onclick=()=>toggle(item.id);paint(s);
-      img.onload=()=>scheduleView(s);img.onerror=()=>{s.error='No se pudo cargar la foto.';paint(s);if(!card.querySelector('.feed-image-retry')){const retry=document.createElement('button');retry.type='button';retry.className='feed-image-retry';retry.textContent='Reintentar imagen';retry.onclick=()=>{s.error='';paint(s);img.src=window.MapMemes.imageURL(code,item.image);retry.remove();};card.append(retry);}};
-      if(lazy)lazy.observe(img);else{img.src=img.dataset.src;delete img.dataset.src;}visibility?.observe(img);
+      img.onload=()=>scheduleView(s);img.onerror=()=>{s.error='No se pudo cargar la foto.';paint(s);if(!card.querySelector('.feed-image-retry')){const retry=document.createElement('button');retry.type='button';retry.className='feed-image-retry';retry.textContent='Reintentar imagen';retry.onclick=()=>{s.error='';paint(s);img.removeAttribute('srcset');img.src=window.MapMemes.imageURL(code,item.image);retry.remove();};card.append(retry);}};
+      if(lazy)lazy.observe(img);else{window.MapMemes.activateImage(img);delete img.dataset.src;}visibility?.observe(img);
     }
     cursor=Math.min(items.length,cursor+BATCH);$('feedMore').hidden=cursor>=items.length;
     const missing=Math.max(0,MINIMUM-items.length);
@@ -113,7 +114,7 @@ window.MemeFeed=(()=>{
       const unique=new Set();items=window.MapMemes.parseCatalogue(code,data).map(x=>x.item).filter(item=>/^[a-z0-9-]+$/.test(item.id||'')&&!unique.has(item.id)&&unique.add(item.id));loading=false;
       if(!items.length){status('Todavía no hay fotos verificadas para este país. Faltan '+MINIMUM+' para completar la colección.');return;}
       if(typeof IntersectionObserver==='function'){
-        lazy=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting&&generation===epoch){const img=e.target;if(img.dataset.src){img.src=img.dataset.src;delete img.dataset.src;}lazy.unobserve(img)}},{rootMargin:'300px'});
+        lazy=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting&&generation===epoch){const img=e.target;if(img.dataset.src){window.MapMemes.activateImage(img);delete img.dataset.src;}lazy.unobserve(img)}},{rootMargin:'300px'});
         visibility=new IntersectionObserver(entries=>{if(generation!==epoch)return;for(const e of entries){if(e.isIntersecting&&e.intersectionRatio>=.5){visible.add(e.target);scheduleView(cards.get(e.target.closest('article').dataset.memeId));}else{visible.delete(e.target);const id=e.target.closest('article').dataset.memeId;clearTimeout(viewTimers.get(id));viewTimers.delete(id);}}},{threshold:[0,.5]});
         more=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)&&generation===epoch)append()},{rootMargin:'150px'});more.observe($('feedSentinel'));
       }

@@ -8,7 +8,7 @@
     {
       "id": "gb-iron-buzz",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-iron-buzz.webp",
+      "image": "data/memes/GB/images/gb-iron-buzz-1280-29f9fdc0a109.webp",
       "source": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8978219177).jpg",
       "title": "Iron Man se convierte en Buzz Lightyear",
       "location": "Londres, ExCeL, MCM 2013",
@@ -17,7 +17,7 @@
         "statement": "La descripción sitúa esta fotografía en MCM London Comic Con, ExCeL Exhibition Centre.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/MCM_2013_-_Buzz_Lightyear_Iron_Man_%288978219177%29.jpg/960px-MCM_2013_-_Buzz_Lightyear_Iron_Man_%288978219177%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/5340/8978219177_d87448edf6_o.jpg",
       "creator": "Roger Murmann from Eppertshausen, Deutschland",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -28,14 +28,60 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 1424,
+        "height": 2144
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/starcadet/8978219177/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Fondo de escenario negro, traje iluminado; no confundir fondo oscuro con subexposición del personaje.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Iron Man se convierte en Buzz Lightyear",
-      "width": 510,
-      "height": 768,
-      "bytes": 31094,
+      "width": 850,
+      "height": 1280,
+      "sourceWidth": 1424,
+      "sourceHeight": 2144,
+      "bytes": 97090,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 425,
+          "height": 640,
+          "sha256": "bb430c3ed29c7e270ce03f46034c85eb41ae68672a89956f8d3cce8053dcf2e8",
+          "image": "data/memes/GB/images/gb-iron-buzz-640-bb430c3ed29c.webp",
+          "bytes": 39278
+        },
+        {
+          "edge": 1280,
+          "width": 850,
+          "height": 1280,
+          "sha256": "29f9fdc0a1092744812a0222a6be404a0ba0da880d03cbd76aa0c526f45c203d",
+          "image": "data/memes/GB/images/gb-iron-buzz-1280-29f9fdc0a109.webp",
+          "bytes": 97090
+        },
+        {
+          "edge": 1920,
+          "width": 1275,
+          "height": 1920,
+          "sha256": "52812d5c8de4b0882d40b80e64f392109e48f4b3d9fbb946216faace1091805c",
+          "image": "data/memes/GB/images/gb-iron-buzz-1920-52812d5c8de4.webp",
+          "bytes": 166572
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "9baf515ebd6577a27bcda558a20da9f96e28775cf706dc09d23fdcff38ae5c09",
-        "pixelSha256": "ffd569401d3c0fa7008187f0844557eafe460661d81618cda8d41de0f9c204f1",
+        "sha256": "8083279ef6a63fd2d333736de7150a669691247ba55a4950665575193bba84b3",
+        "pixelSha256": "8fd5a53818dc7938c1449daf7dfa011b147be0598f8a52cfeba92bfbca9d3149",
         "perceptualHashes": [
           "0001010101011011011001100010110001111011001001110010000110010101",
           "0001110101011011011001100101110001010011011010100010100110010001",
@@ -43,20 +89,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "9ce3a9ee863bf987e348e8f5a93a5a704472e61c12fc80da345ae3cb95c759be",
-        "pixelSha256": "e4c46b31b2977f4da543a58da0baa1bcacf040aab2dff0e5663a4ffe9d96a115",
+        "sha256": "29f9fdc0a1092744812a0222a6be404a0ba0da880d03cbd76aa0c526f45c203d",
+        "pixelSha256": "e81c7ad2ccc13c923de0bc66cff07e6faa7565ae58944c9c0fdfc9b81ce6a339",
         "perceptualHashes": [
           "0001010101011011011001100010110001111011001001110010000110010101",
           "0001110101011011011001100101110001010011011010100010100110010001",
-          "0000110111010010111001101001110101010101011010100010100100011001"
+          "0000110101010010111001101101110101010101011010100010100100011001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-deadpools-throne",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-deadpools-throne.webp",
+      "image": "data/memes/GB/images/gb-deadpools-throne-1280-52612e1db1c9.webp",
       "source": "https://commons.wikimedia.org/wiki/File:LSCC_2016_-_Deadpools_on_the_Iron_Throne_(25057706012).jpg",
       "title": "Dos Deadpool comparten el trono con un unicornio",
       "location": "Londres, London Super Comic Con 2016",
@@ -65,7 +111,7 @@
         "statement": "La descripción identifica London Super Comic Con 2016 y el Trono de Hierro.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/LSCC_2016_-_Deadpools_on_the_Iron_Throne_%2825057706012%29.jpg/960px-LSCC_2016_-_Deadpools_on_the_Iron_Throne_%2825057706012%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/1487/25057706012_b0a5d51c99_o.jpg",
       "creator": "BatCam Photography",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -76,14 +122,60 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 3312,
+        "height": 4968
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/batcam90/25057706012/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Dos Deadpool comparten el trono con un unicornio",
-      "width": 512,
-      "height": 768,
-      "bytes": 76364,
+      "width": 853,
+      "height": 1280,
+      "sourceWidth": 3312,
+      "sourceHeight": 4968,
+      "bytes": 314360,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 427,
+          "height": 640,
+          "sha256": "fcd55b4d066242d2e7ae5235f37925d715cd0a6daacb65ed6481ba90d5ee01a9",
+          "image": "data/memes/GB/images/gb-deadpools-throne-640-fcd55b4d0662.webp",
+          "bytes": 90714
+        },
+        {
+          "edge": 1280,
+          "width": 853,
+          "height": 1280,
+          "sha256": "52612e1db1c9af23b3f500535ca261e5b70f48b733e97614dd79771d58ddb21a",
+          "image": "data/memes/GB/images/gb-deadpools-throne-1280-52612e1db1c9.webp",
+          "bytes": 314360
+        },
+        {
+          "edge": 1920,
+          "width": 1280,
+          "height": 1920,
+          "sha256": "da9dee05eb196a9dd308078513a7e323215bd527d08ef3e7d00326110cc23bd7",
+          "image": "data/memes/GB/images/gb-deadpools-throne-1920-da9dee05eb19.webp",
+          "bytes": 733916
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "a2cc4e99ae23822c1caf2dccfb44e179ee108149d2b16903e3dee7b97f9e059d",
-        "pixelSha256": "f3c9ce705484fc5e280f1f8fa82c0b3629067a995e72a1e02298c1aee7521479",
+        "sha256": "16936060176aa2ea35d4c1c3bc2c34af7f1f2edd4764d31160488de0ac836eaa",
+        "pixelSha256": "37c0ecb8a575eb28f2c4dc67cd65df263192a68bdfc00a6995729772cdcc0b02",
         "perceptualHashes": [
           "0111101011000101100011001001100011110011111000001001111100100000",
           "0111101011000111100011001001100011110000111000001001111100100100",
@@ -91,20 +183,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "ff7b7966952eff5de5c07cbb5fc22b35b80d770d5a28e8773fe08e8f291fee34",
-        "pixelSha256": "b4aa3f4f510f580baaad52049359619156c8a6ab244d514bb8e12b63f98c98c4",
+        "sha256": "52612e1db1c9af23b3f500535ca261e5b70f48b733e97614dd79771d58ddb21a",
+        "pixelSha256": "ee0d981c2617c36f06686d3ebaef959be1503638242c4538091ffc05ee9205c7",
         "perceptualHashes": [
-          "0111101011000111100011001001100011110010111000001001111100100000",
-          "0111101011000111100011001001100011110000111000001001111100100100",
-          "0111110011000010100011011001100011110001110110101101100010100000"
+          "0111101011000101100011001001100011110011111000001001111100100000",
+          "0111111011000101100011001001100011110000111000001001111100100100",
+          "0111010111000010100011011001100011110001110110101101100010100000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-spider-tube",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-spider-tube.webp",
+      "image": "data/memes/GB/images/gb-spider-tube-1280-4420b81f0aaf.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Gloucester_Road_-_Spider-Man_(2539882747).jpg",
       "title": "Spider-Man da una entrevista con una lata en la mano",
       "location": "Londres, estación Gloucester Road",
@@ -113,7 +205,7 @@
         "statement": "La fuente del fotógrafo y las categorías identifican Gloucester Road, Londres, en la fiesta de la Circle line del 31 de mayo de 2008.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Gloucester_Road_-_Spider-Man_%282539882747%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "imageURL": "https://live.staticflickr.com/2128/2539882747_b043dc2f55_c.jpg",
       "creator": "Annie Mole from London, UK",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -124,13 +216,51 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 610,
+        "height": 800
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/anniemole/2539882747/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Archivo nativo limitado a 610×800 y enfoque suave; presentación máxima de 305px para DPR2. No se inventa un original más nítido.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man da una entrevista con una lata en la mano",
-      "width": 586,
-      "height": 768,
-      "bytes": 34036,
+      "width": 610,
+      "height": 800,
+      "sourceWidth": 610,
+      "sourceHeight": 800,
+      "bytes": 79268,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 488,
+          "height": 640,
+          "sha256": "cdc2d9da99fea18dcf137a538fa08d801eb47b182588484ecd08b245ab018f9b",
+          "image": "data/memes/GB/images/gb-spider-tube-640-cdc2d9da99fe.webp",
+          "bytes": 58782
+        },
+        {
+          "edge": 1280,
+          "width": 610,
+          "height": 800,
+          "sha256": "4420b81f0aaf1ad843d8e018a46bbf5ea8dd081bae452f8aa822625513240b73",
+          "image": "data/memes/GB/images/gb-spider-tube-1280-4420b81f0aaf.webp",
+          "bytes": 79268
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "214b1aa5d7d914cec8fceaaa668fe0c58c5d071c4b1aca5576d8c3bcd51966a0",
+        "sha256": "15e5e04c60cdfdb47e344854efd6780eafa59ab5919a90ed2fbc5b3f855863e0",
         "pixelSha256": "d11c6c6f96c0da2a3164794e263bcc55fec9aa9617220a3a84e10076c40a0252",
         "perceptualHashes": [
           "0100010110110000100011010010011110110010110101100101100100101011",
@@ -139,20 +269,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "0b94bca6dc9cb3dc093cf14369b7532efd6b74441c31d6f912557bb867d98020",
-        "pixelSha256": "ca309e5de204b6c170e3a743033dd5930757d8884cd58111242527ba929e31f8",
+        "sha256": "4420b81f0aaf1ad843d8e018a46bbf5ea8dd081bae452f8aa822625513240b73",
+        "pixelSha256": "add15c22666ce293fb0c372fbc030269fc418e25aac6b89d659e31742187514a",
         "perceptualHashes": [
           "0100010110110000100011010010011110110010110101100101100100101011",
           "0100001110111100100011010010001110010110110101000101111100001001",
           "0100001100111100100011110010001010110101110101110100111100001000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-deadpool-captain",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-deadpool-captain.webp",
+      "image": "data/memes/GB/images/gb-deadpool-captain-1280-f926be422fd9.webp",
       "source": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Deadpool_(17435591233).jpg",
       "title": "Deadpool capitán se impone a sus dobles",
       "location": "Londres, MCM London Comic Con, ExCeL",
@@ -161,7 +291,7 @@
         "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/London_Comic_Con_2015_-_Deadpool_%2817435591233%29.jpg/960px-London_Comic_Con_2015_-_Deadpool_%2817435591233%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/5347/17435591233_cffb1bed79_o.jpg",
       "creator": "Pete Sheffield",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -172,35 +302,81 @@
       "visualGag": "Deadpool con escudo y traje de Capitán América posa con un pie sobre otro Deadpool, junto a dos dobles tumbados.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 2077,
+        "height": 3121
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/twosheffs/17435591233/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool con escudo y traje de Capitán América posa con un pie sobre otro Deadpool, junto a dos dobles tumbados.",
-      "width": 511,
-      "height": 768,
-      "bytes": 58408,
+      "width": 852,
+      "height": 1280,
+      "sourceWidth": 2077,
+      "sourceHeight": 3121,
+      "bytes": 218056,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 426,
+          "height": 640,
+          "sha256": "b790ee2f38fa4e6283deac929e3ed35ebf94e11ce55021854f747129ea949ca4",
+          "image": "data/memes/GB/images/gb-deadpool-captain-640-b790ee2f38fa.webp",
+          "bytes": 76762
+        },
+        {
+          "edge": 1280,
+          "width": 852,
+          "height": 1280,
+          "sha256": "f926be422fd9d8f47262c3d9808fd8bbae579e9bdd1202de34bc63e3bc868ec2",
+          "image": "data/memes/GB/images/gb-deadpool-captain-1280-f926be422fd9.webp",
+          "bytes": 218056
+        },
+        {
+          "edge": 1920,
+          "width": 1278,
+          "height": 1920,
+          "sha256": "cbce4b6b28301b2df9fbf2c4dca7d30b62cca7b6da8b26ad7af1306ca5c86db6",
+          "image": "data/memes/GB/images/gb-deadpool-captain-1920-cbce4b6b2830.webp",
+          "bytes": 391126
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "5f3e71517026cf7a323eb67fa6926d6691a82f4737602cd9fd7aee1510b42c68",
-        "pixelSha256": "59e48674f1e133a025ec7b7faa8b6f673d97e01604ebd7bdf3d9144ef19fb809",
+        "sha256": "480e9479ed1b60079a49deaf7c557c6ef6c8193a12ea4738e62f7ea0116bec4c",
+        "pixelSha256": "f93f16de9e89c1929f55cca5916db8f0afb95d84de3cb6ff99a6111e03434c41",
+        "perceptualHashes": [
+          "0111110001101100110001111101000110101000010110100000010011001101",
+          "0111110001101111110000111001000111011000000110101000010001001101",
+          "0110110001101111110000111011100011011000000101101010011000001100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "f926be422fd9d8f47262c3d9808fd8bbae579e9bdd1202de34bc63e3bc868ec2",
+        "pixelSha256": "1f2e5fbf11752bf0dd964f3b6e04951ce681f433ba58d565ea188a086feb6718",
         "perceptualHashes": [
           "0111110001101100110000111101100110101000010110100000010011001101",
           "0111110001101110110000111001000111011000010110101000010001001101",
           "0110110001101111110000111011100011011000000101101010011000001100"
         ]
       },
-      "outputFingerprint": {
-        "sha256": "19b6e72a811875b28e5889535ec2b23cfb0a6a1044cffcafdc91d293751fa0ae",
-        "pixelSha256": "a55b7d86bbd1f3f6f34095d75ecbd90ed587c1cebb5b3eecd0c7987b948bbb15",
-        "perceptualHashes": [
-          "0111110001101100110001111101000110101000010110100000010011001101",
-          "0111110001101110110000111001000111011000000111101000010001001101",
-          "0110110001101111110000111011100011011000000101101010011000001100"
-        ]
-      },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-deadpool-sombrero",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-deadpool-sombrero.webp",
+      "image": "data/memes/GB/images/gb-deadpool-sombrero-1280-c1fc0c71e82e.webp",
       "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Sombrero_Deadpool_(18241070682).jpg",
       "title": "Deadpool cambia las katanas por poncho y sombrero",
       "location": "Londres, MCM London Comic Con, ExCeL",
@@ -209,7 +385,7 @@
         "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg/960px-MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/79/MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "big-ashb",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -219,14 +395,59 @@
       "visualGag": "Deadpool lleva un gran sombrero rosa y un poncho mientras charla sentado entre asistentes.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 4147,
+        "height": 2962
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Deadpool lleva un gran sombrero rosa y un poncho mientras charla sentado entre asistentes.",
-      "width": 768,
-      "height": 549,
-      "bytes": 48900,
+      "width": 1280,
+      "height": 914,
+      "sourceWidth": 4147,
+      "sourceHeight": 2962,
+      "bytes": 159360,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 457,
+          "sha256": "77615779b138d38a83c83162f1d1e709740c93e891083c7fe305e6dc4e5098e5",
+          "image": "data/memes/GB/images/gb-deadpool-sombrero-640-77615779b138.webp",
+          "bytes": 59526
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 914,
+          "sha256": "c1fc0c71e82e4dd1e19bd43661c871fdfe6f731c3847c2a4d79f1d8a44b108c3",
+          "image": "data/memes/GB/images/gb-deadpool-sombrero-1280-c1fc0c71e82e.webp",
+          "bytes": 159360
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1371,
+          "sha256": "3a4c6030a38b4d876fab4e43d33d998a09115dc6f2b5e1144c27c48f49aa9a31",
+          "image": "data/memes/GB/images/gb-deadpool-sombrero-1920-3a4c6030a38b.webp",
+          "bytes": 284232
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "ff90d09751fbc74dfcda179334787a38497926e892c14a03752a072a2c15bc25",
-        "pixelSha256": "738de418ef13722ad6c28fffaf655e6048860da4bb162acf99c22e15fd199fdd",
+        "sha256": "f3d9c7ca9379e740196cfad93191bdf45e478561d28bed78bf95e4ee22684d89",
+        "pixelSha256": "0ca2715fc9a23b07f9b0ba04d31f503b072cb17bcdd9935b98d67c9988e9b67d",
         "perceptualHashes": [
           "0010010001011110010010010011101111001100111111011000000001110010",
           "0010010001011110010010010011101111001101100110011010101000110100",
@@ -234,20 +455,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "253a5f329911d7d7b364899073aea267d8513e29612319790810f3a800ae2b69",
-        "pixelSha256": "c54622e5e0314ef9e8467325d79251bef362102f2aaf0f27a57999a2d884c641",
+        "sha256": "c1fc0c71e82e4dd1e19bd43661c871fdfe6f731c3847c2a4d79f1d8a44b108c3",
+        "pixelSha256": "0fcfeb49c7148be7fb7a4ccd9e64fa2ee92ec6e3fa75e2eb319c742386912985",
         "perceptualHashes": [
           "0010010001011110010010010011101111001100111111011000000001110010",
           "0010010001011110010010010011101111001101100110011010101000110100",
           "0010111111000111010110010001101101000101100010011010101000101100"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-deadpool-wedding",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-deadpool-wedding.webp",
+      "image": "data/memes/GB/images/gb-deadpool-wedding-1280-f2d814e82a03.webp",
       "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Deadpools_(18218154216).jpg",
       "title": "La boda de Deadpool tiene invitados inesperados",
       "location": "Londres, MCM London Comic Con, ExCeL",
@@ -256,7 +477,7 @@
         "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg/960px-MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/55/MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "big-ashb",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -266,14 +487,59 @@
       "visualGag": "Deadpool con vestido blanco y peluca rubia recibe una propuesta de otro Deadpool de rodillas, entre invitados con máscara de V.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 5184,
+        "height": 3456
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Deadpool con vestido blanco y peluca rubia recibe una propuesta de otro Deadpool de rodillas, entre invitados con máscara de V.",
-      "width": 768,
-      "height": 512,
-      "bytes": 69832,
+      "width": 1280,
+      "height": 853,
+      "sourceWidth": 5184,
+      "sourceHeight": 3456,
+      "bytes": 215796,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 427,
+          "sha256": "96180b316afe6ee6bd98b036fa1111179fd4d137f1516e4eaa055f4fcb699254",
+          "image": "data/memes/GB/images/gb-deadpool-wedding-640-96180b316afe.webp",
+          "bytes": 80854
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 853,
+          "sha256": "f2d814e82a03c79d7e8427594654f0b798327ca7b4fcf521b3b774a25ad2e73a",
+          "image": "data/memes/GB/images/gb-deadpool-wedding-1280-f2d814e82a03.webp",
+          "bytes": 215796
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1280,
+          "sha256": "1ba833c0e0fb0ba2f4d7f7b3d00e5d8fa6b69324b2c261eb0690d99854d568fd",
+          "image": "data/memes/GB/images/gb-deadpool-wedding-1920-1ba833c0e0fb.webp",
+          "bytes": 403876
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "cbc6e90921a46457eaf9d465eab1825e7b4404032be966f23f8cc120adbdbaf2",
-        "pixelSha256": "a3f4cae8ef5d95cec48cd2c814a779d1d26d2a465c9e1d19a3b323d2d70018b7",
+        "sha256": "12e4760c637258afba68202d7b24f8ed2d655b5bbeed352daf44623fdd96555a",
+        "pixelSha256": "e96afe1073504507a7c98202a50defe0d15a5804526e7605f9b090296b47b240",
         "perceptualHashes": [
           "0001011111000110100010011110001100000101001101100110110100101101",
           "0001011111000111100010001110001010000001101101101110100101100011",
@@ -281,20 +547,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "51808436975de7c006a821a7ebd78b5ea85093c3b60e4dd8cab898dd92f62a6d",
-        "pixelSha256": "aeeb419898e00e3fc1a386b906a01f032bdce33bd04e75eb194f59a7ba83b890",
+        "sha256": "f2d814e82a03c79d7e8427594654f0b798327ca7b4fcf521b3b774a25ad2e73a",
+        "pixelSha256": "5122f3dbf0ab455811916042b6d5f95b17e9e5175ede14fa0faf57170dc08e3e",
         "perceptualHashes": [
           "0001011111000110100010011110001100000101001101100110110100101101",
           "0001011111000111100010001110001010000001101101101110100101100011",
           "0001010111001111110111101111001010000001100101001100100001100010"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-deadpool-kimono",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-deadpool-kimono.webp",
+      "image": "data/memes/GB/images/gb-deadpool-kimono-1280-58ec443f0ef9.webp",
       "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Deadpool_(17417809783).jpg",
       "title": "Deadpool despliega su abanico",
       "location": "Londres, MCM London Comic Con, ExCeL",
@@ -303,7 +569,7 @@
         "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/MCM_London_May_2015_-_Deadpool_%2817417809783%29.jpg/960px-MCM_London_May_2015_-_Deadpool_%2817417809783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/7696/17417809783_7f31aff8ea_k.jpg",
       "creator": "Cosplay Vogue1",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -313,35 +579,81 @@
       "visualGag": "Deadpool combina su máscara roja con kimono floral, abanico abierto y sombrero de paja.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 1356,
+        "height": 2047
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/cosplaytango/17417809783/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Deadpool combina su máscara roja con kimono floral, abanico abierto y sombrero de paja.",
-      "width": 509,
-      "height": 768,
-      "bytes": 66186,
+      "width": 848,
+      "height": 1280,
+      "sourceWidth": 1356,
+      "sourceHeight": 2047,
+      "bytes": 213410,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 424,
+          "height": 640,
+          "sha256": "59fc5a4629f63ab50de66dae05926aa0625b659a17f972e2e149f3aa1fece58c",
+          "image": "data/memes/GB/images/gb-deadpool-kimono-640-59fc5a4629f6.webp",
+          "bytes": 82858
+        },
+        {
+          "edge": 1280,
+          "width": 848,
+          "height": 1280,
+          "sha256": "58ec443f0ef97334f0af0dec4930b975c8d76d1faf910f36438898fe9df605d2",
+          "image": "data/memes/GB/images/gb-deadpool-kimono-1280-58ec443f0ef9.webp",
+          "bytes": 213410
+        },
+        {
+          "edge": 1920,
+          "width": 1272,
+          "height": 1920,
+          "sha256": "adbe4361cd4ddc1aa3a2c56ad88565dbf844b900b8ec165b86e2efc03dd3ac88",
+          "image": "data/memes/GB/images/gb-deadpool-kimono-1920-adbe4361cd4d.webp",
+          "bytes": 372120
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "ca8a183928929aee860115fa4423d2e0ff76a3f51177a737e819cfbd8260d626",
-        "pixelSha256": "8a38df42aa23724f47c8d5712a3f01366b3766dc6c0faad83bb430fc01e92786",
+        "sha256": "e453a563fbb7711550a364b48b1140912a9ca2ad782f9fe6098578d99b9d2d0b",
+        "pixelSha256": "dde99a1a0881dcb5ea40ffa6423851dbdd67615ae6bfe5fc6a0fc584c13d1868",
         "perceptualHashes": [
           "0011100110010111100000110100110000110110001110011001001011011001",
           "0011100110010111110000010100111001100111000110010011001010011001",
-          "0011100110010111110010000100111001100110010111100011001010011000"
+          "0011100110010111110000000100111001100111010111100011001010011000"
         ]
       },
       "outputFingerprint": {
-        "sha256": "2c74b3e6fd53464ba559bc40153c2c44e42e14218f79cd2519ea1348acce3e52",
-        "pixelSha256": "527691ebe5d59ee40934361d136e6960f424dacaae677db05f3313d3458091f0",
+        "sha256": "58ec443f0ef97334f0af0dec4930b975c8d76d1faf910f36438898fe9df605d2",
+        "pixelSha256": "7199f9103b92979d822fc5f8eb31bb17fcfaaff40703734b3d4a80f77053636d",
         "perceptualHashes": [
           "0011100110010111100000110100110000110110001110011001001011011001",
           "0011100110010111110000010100111001100111000110010011001010011001",
-          "0011100110010111110010000100111001100111010011100011001010011000"
+          "0011100110010111110000000100111001100111010111100011001010011000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-deadpool-maid",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-deadpool-maid.webp",
+      "image": "data/memes/GB/images/gb-deadpool-maid-1280-b4cd58917930.webp",
       "source": "https://commons.wikimedia.org/wiki/File:At_your_service_(34671100260).jpg",
       "title": "Deadpool ofrece servicio de limpieza",
       "location": "Londres, MCM London Comic Con, ExCeL",
@@ -350,7 +662,7 @@
         "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/At_your_service_%2834671100260%29.jpg/960px-At_your_service_%2834671100260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/2/29/At_your_service_%2834671100260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "m4mystery from London, United Kingdom",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -360,14 +672,59 @@
       "visualGag": "Deadpool con vestido de criada y delantal blanco muestra una mochila de sí mismo.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 5388,
+        "height": 3592
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Deadpool con vestido de criada y delantal blanco muestra una mochila de sí mismo.",
-      "width": 768,
-      "height": 512,
-      "bytes": 68254,
+      "width": 1280,
+      "height": 853,
+      "sourceWidth": 5388,
+      "sourceHeight": 3592,
+      "bytes": 218898,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 427,
+          "sha256": "a9766ee33d4ef8b2e1a02f33680c7411c4b9e9b567ebb11b05da43f01421511e",
+          "image": "data/memes/GB/images/gb-deadpool-maid-640-a9766ee33d4e.webp",
+          "bytes": 82558
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 853,
+          "sha256": "b4cd5891793001f63dbf9d8d5a698668f832970a526b9ae4a7cd833c9a39e495",
+          "image": "data/memes/GB/images/gb-deadpool-maid-1280-b4cd58917930.webp",
+          "bytes": 218898
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1280,
+          "sha256": "23fb12ce919d1168233cd621974596fca804cdeb9b3ac286dd80bff5a3498c9e",
+          "image": "data/memes/GB/images/gb-deadpool-maid-1920-23fb12ce919d.webp",
+          "bytes": 391378
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "b6a25005b3b53bdabeaa7a0a013c908aba208c941a3f54d70a7b11c1d53a7df4",
-        "pixelSha256": "f51e90aff4d580b74461b3de9b1ac6f0e667f9533e622fd7e80e0f6a1bbcd5d9",
+        "sha256": "871931bf1efbb4e919552e27670beff6644972acba056cc58fbb89a5aa730758",
+        "pixelSha256": "0f27612825e006231bd1e79ffac71212600b0da99968a542ce41d5f416c2ef07",
         "perceptualHashes": [
           "0011010111100010000111000111101100011101000110001011001011010001",
           "0010010111100110000111000111101100001001001110100011011010011001",
@@ -375,20 +732,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "594a4e3a9e732b422828db9aae2fded1d4c2b10af417290d3187f7970d2ce98c",
-        "pixelSha256": "1e4d5aa0cfa52d2b577fccfa6925fd0205ede7f48c9dee7073fa6d2c3ed8e8b3",
+        "sha256": "b4cd5891793001f63dbf9d8d5a698668f832970a526b9ae4a7cd833c9a39e495",
+        "pixelSha256": "d6efce9f1bc26b579633b48c44281f86a1024241e3057a1d2b7ad254811ba041",
         "perceptualHashes": [
           "0011010111100010000111000111101100011101000110001011001011010001",
           "0010010111100110000111000111101100001001001110100011011010011001",
           "0010010111100110000111010100101100001011000111100001111100011001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-pikachu-thor",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-pikachu-thor.webp",
+      "image": "data/memes/GB/images/gb-pikachu-thor-1280-3b49f128e834.webp",
       "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Pikachu_Thor_(18011811396).jpg",
       "title": "Pikachu se convierte en el dios del trueno",
       "location": "Londres, MCM London Comic Con, ExCeL",
@@ -397,7 +754,7 @@
         "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/MCM_London_May_2015_-_Pikachu_Thor_%2818011811396%29.jpg/960px-MCM_London_May_2015_-_Pikachu_Thor_%2818011811396%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://live.staticflickr.com/8885/18011811396_204c1b0968_k.jpg",
       "creator": "Cosplay Vogue1",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -408,14 +765,60 @@
       "visualGag": "Pikachu lleva peluca rubia, armadura de Thor, capa roja y martillo sobre el hombro.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "sourceResolution": {
+        "width": 2047,
+        "height": 1356
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/cosplaytango/18011811396/",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Pikachu lleva peluca rubia, armadura de Thor, capa roja y martillo sobre el hombro.",
-      "width": 768,
-      "height": 509,
-      "bytes": 41776,
+      "width": 1280,
+      "height": 848,
+      "sourceWidth": 2047,
+      "sourceHeight": 1356,
+      "bytes": 132696,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 424,
+          "sha256": "703379ef678de38be6194006f6793582cda8fab606508022203923c5a3d25fb8",
+          "image": "data/memes/GB/images/gb-pikachu-thor-640-703379ef678d.webp",
+          "bytes": 53246
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 848,
+          "sha256": "3b49f128e83413ba4889449eafd2eb47b0ee8ca91604ea24ed26599f03a85a5b",
+          "image": "data/memes/GB/images/gb-pikachu-thor-1280-3b49f128e834.webp",
+          "bytes": 132696
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1272,
+          "sha256": "8bc6eb0199a47f5544fc2fb87c54d78b661f7f7df19f308f930badb77e1fd6c4",
+          "image": "data/memes/GB/images/gb-pikachu-thor-1920-8bc6eb0199a4.webp",
+          "bytes": 221106
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "ec092b543ce54079df3348c2e001c652ba202d43c302987346bebab7f06e9f25",
-        "pixelSha256": "8abf8b861df2d0cf8eb016da491117fa79d39a138e37edb607e09d0afdfee726",
+        "sha256": "00c44f624f4c89fb013446d9097c0f4b45406555a418967cb2348153d6abda21",
+        "pixelSha256": "2087793e282163609ccb5a294f24142c264b760a2323a3f3409818ce030cc9b0",
         "perceptualHashes": [
           "0000111111011000011000100001011011000001101111000100001011111101",
           "0000101111011000011101100001011010000001101101100101000111101101",
@@ -423,20 +826,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "e11af8974846a20d653ffbabb0bd5402d8688e83e27ec2bea654f97a6529e64f",
-        "pixelSha256": "05c8c0949fd3df8f5acf2d6ec7d7e614d04d77b77b071625653125d005680995",
+        "sha256": "3b49f128e83413ba4889449eafd2eb47b0ee8ca91604ea24ed26599f03a85a5b",
+        "pixelSha256": "ee29608770054b13ef2610127fb9e70e1ede3e0fc0e824e1df3fc1ce2f07ef5b",
         "perceptualHashes": [
           "0000111111011000011000100001011011000001101111000100001011111101",
-          "0000101111011000011101100001011010000001101101100101001111101001",
+          "0000101111011000011101100001011010000001101101100101000111101101",
           "0000101111011011001101110101011110100000001001000101000111101010"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "gb-thor-bike",
       "country": "GB",
-      "image": "data/memes/GB/images/gb-thor-bike.webp",
+      "image": "data/memes/GB/images/gb-thor-bike-1280-2e971ecaad63.webp",
       "source": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Thor_on_a_bike_(17868517180).jpg",
       "title": "Thor posa sobre una moto",
       "location": "Londres, MCM London Comic Con, ExCeL",
@@ -445,7 +848,7 @@
         "statement": "La descripción y la categoría de la fuente sitúan esta foto en MCM London Comic Con en Londres.",
         "verifiedOn": "2026-10-11"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg/960px-London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/d/d2/London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "Pete Sheffield",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -455,30 +858,75 @@
       "visualGag": "Thor levanta el martillo mientras posa sobre una motocicleta Triumph en el puesto de Metal Gear Solid.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 4274,
+        "height": 2845
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Thor levanta el martillo mientras posa sobre una motocicleta Triumph en el puesto de Metal Gear Solid.",
-      "width": 640,
-      "height": 426,
-      "bytes": 78446,
+      "width": 1280,
+      "height": 852,
+      "sourceWidth": 4274,
+      "sourceHeight": 2845,
+      "bytes": 401314,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 426,
+          "sha256": "73d39aaa5d025edcd0923376e24d663d7b39a23444dfbd3ebd7ae37cec12a7c6",
+          "image": "data/memes/GB/images/gb-thor-bike-640-73d39aaa5d02.webp",
+          "bytes": 115228
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 852,
+          "sha256": "2e971ecaad63a1b4270e56219cb4f4650e2705d2fe546e7ae25c0b0a5d3ed145",
+          "image": "data/memes/GB/images/gb-thor-bike-1280-2e971ecaad63.webp",
+          "bytes": 401314
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1278,
+          "sha256": "3787b564f071492ec9032026fb10e5806610e07fdb1444f330cec8f4bfd34172",
+          "image": "data/memes/GB/images/gb-thor-bike-1920-3787b564f071.webp",
+          "bytes": 827880
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "50d32779c2af65df79414313f52c8452f2c25f7eeed769a327986e127e079fff",
-        "pixelSha256": "91e0e7a6ac7c566f7a72da7ad9a09c48898b11e5e8444220f4876ed53c48aa2a",
+        "sha256": "fc3974bc790bc15afd905f0e16cca74fb9bb2bec95c378e00c9178674a4f91cf",
+        "pixelSha256": "8687b160c94bebbd8f40c6fd29e944fbb44e42fb4801b131083b5fb92e5f5e0d",
         "perceptualHashes": [
           "0100001110011011000010000110011011111001111110110110011001000000",
-          "0100001010011011000110000110011110111001101010100111110001001001",
-          "0101001010010010000111100110010110011001101000101011110101101001"
+          "0100001110011011000110000110011010111001101010100111110001001001",
+          "0101001010010011000011100110010110011001101000101011100101111001"
         ]
       },
       "outputFingerprint": {
-        "sha256": "db0af45238e2c4dd659371dd08045e9dd85a601372551fb4a95053b417c7d353",
-        "pixelSha256": "04f9ca9ce862d2b2a201485d87f60000d4b8b8575f8193a4cd38c23a95314e84",
+        "sha256": "2e971ecaad63a1b4270e56219cb4f4650e2705d2fe546e7ae25c0b0a5d3ed145",
+        "pixelSha256": "62cc022288388b899b5a79896bd78f84f1f13b57d30614960af1aed4123dacef",
         "perceptualHashes": [
           "0100001110011011000010000110011011111001111110110110011001000000",
-          "0100001010011011000110000110011110111001101010100111110001001001",
-          "0101001010010011000011100110010110011001101000101011110101101001"
+          "0100001110011011000010000110011110111001101010100111110001001001",
+          "0101001010010010000011100110010110011001101000101011110101111001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

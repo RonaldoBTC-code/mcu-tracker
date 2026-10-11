@@ -8,7 +8,7 @@
     {
       "id": "br-spider-circle-sp",
       "country": "BR",
-      "image": "data/memes/BR/images/br-spider-circle-sp.webp",
+      "image": "data/memes/BR/images/br-spider-circle-sp-1280-1e0c64ef9472.webp",
       "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
       "title": "Un círculo de Spider-Man se señala en el cine",
       "location": "São Paulo",
@@ -28,10 +28,39 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Gshow / reproducción Twitter",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "El archivo editorial de 984px amplía un recorte de 680px documentado en la URL de la fuente; limitar variantes a 680px y presentación a 340px. El acceso a la URL nativa publicada expiró por timeout; no afirmar recuperación del original.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "detailMaxEdge": 680,
       "alt": "Un círculo de Spider-Man se señala en el cine",
-      "width": 768,
-      "height": 404,
-      "bytes": 30208,
+      "width": 680,
+      "height": 357,
+      "sourceWidth": 680,
+      "sourceHeight": 357,
+      "bytes": 48778,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 336,
+          "sha256": "ebd43e7d9253ffb147ff4c04a16345f320f1147b03de6f6e52d1ef88f5fe7043",
+          "image": "data/memes/BR/images/br-spider-circle-sp-640-ebd43e7d9253.webp",
+          "bytes": 45788
+        },
+        {
+          "edge": 1280,
+          "width": 680,
+          "height": 357,
+          "sha256": "1e0c64ef947259582f948fba23341926f4f7770cd8d62865ebb9954a88913883",
+          "image": "data/memes/BR/images/br-spider-circle-sp-1280-1e0c64ef9472.webp",
+          "bytes": 48778
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "446e2c99a944a63d44bb7d83ec2e3cd378afa2e49bf5a3962e06c5e178e3eacb",
@@ -43,20 +72,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "8c52e7a55f23f0af79dbf99caf6633ed8280c212fff3e77e667eb91fda9ef40d",
-        "pixelSha256": "8fa464b37f99b591ed94026c8f559bf03987e7d09d3d3bafcb112b27fe63686c",
+        "sha256": "1e0c64ef947259582f948fba23341926f4f7770cd8d62865ebb9954a88913883",
+        "pixelSha256": "22330eec860795aabd588a4d823be9c616566020f69c32943b060a3a34a1e332",
         "perceptualHashes": [
           "0000001010101101010101010101100001101100001110110001101101100111",
           "0001001110101100101001010101110001101100000111000011100011100111",
-          "0001001110101000101000010101110001101110000111011111100000100111"
+          "0001001110101100101000010101110001101110000111011111100000100101"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "br-spider-circle-bh",
       "country": "BR",
-      "image": "data/memes/BR/images/br-spider-circle-bh.webp",
+      "image": "data/memes/BR/images/br-spider-circle-bh-1280-5e1393017c0e.webp",
       "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
       "title": "Cinco Spider-Man intentan averiguar quién es el original",
       "location": "Belo Horizonte, Minas Gerais",
@@ -76,10 +105,38 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Gshow / reproducción Twitter",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Cinco Spider-Man intentan averiguar quién es el original",
-      "width": 768,
-      "height": 693,
-      "bytes": 90272,
+      "width": 984,
+      "height": 888,
+      "sourceWidth": 984,
+      "sourceHeight": 888,
+      "bytes": 268672,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 578,
+          "sha256": "1f5315a4046468a71248cc3699355a8632c9c6c587fe7a640941e31eddd012f3",
+          "image": "data/memes/BR/images/br-spider-circle-bh-640-1f5315a40464.webp",
+          "bytes": 120738
+        },
+        {
+          "edge": 1280,
+          "width": 984,
+          "height": 888,
+          "sha256": "5e1393017c0e1c9d53d13a8aa3b21385089ed3258888f15740859f835ddae658",
+          "image": "data/memes/BR/images/br-spider-circle-bh-1280-5e1393017c0e.webp",
+          "bytes": 268672
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "2f3c19b32d7e80aafddedb2d3ce549ffac6740bc395347b3107ff242b2f1aea4",
@@ -91,20 +148,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "228756f47380de2179ee0377451e0218750ced44bbe6dfbdd4646155d62db68b",
-        "pixelSha256": "ce8915f34c64f19e7e9ec188f6e6bd5b121af88359c0ab950e4605a3b332b040",
+        "sha256": "5e1393017c0e1c9d53d13a8aa3b21385089ed3258888f15740859f835ddae658",
+        "pixelSha256": "91a37c02d5c450147b987da4883310c5880698253b77908da82cc9569ebe607c",
         "perceptualHashes": [
           "0000001001111100111111011100101010001001010110000101011010100101",
-          "0000001000111101111111111100101010001010010110100010000011001110",
+          "0000001000111101111111111100101010001011010110100010000011000110",
           "0100000000101111111001111100001010001011010101011110100011001010"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "br-spider-embrace",
       "country": "BR",
-      "image": "data/memes/BR/images/br-spider-embrace.webp",
+      "image": "data/memes/BR/images/br-spider-embrace-1280-40e6996bedd0.webp",
       "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
       "title": "Spider-Man termina cargando a otro Spider-Man",
       "location": "Santarém, Pará",
@@ -124,10 +181,39 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Gshow / reproducción Twitter",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "El archivo editorial de 984px amplía un recorte de 680px documentado en la URL de la fuente; limitar variantes a 680px y presentación a 340px. El acceso a la URL nativa publicada expiró por timeout; no afirmar recuperación del original.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "detailMaxEdge": 680,
       "alt": "Spider-Man termina cargando a otro Spider-Man",
-      "width": 768,
-      "height": 768,
-      "bytes": 31060,
+      "width": 680,
+      "height": 680,
+      "sourceWidth": 680,
+      "sourceHeight": 680,
+      "bytes": 58500,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 640,
+          "sha256": "1c08c3159c4c824d6aafcb1df4151fa0c9794dbd22372c013a3015a1d1aaaf23",
+          "image": "data/memes/BR/images/br-spider-embrace-640-1c08c3159c4c.webp",
+          "bytes": 55708
+        },
+        {
+          "edge": 1280,
+          "width": 680,
+          "height": 680,
+          "sha256": "40e6996bedd0931de9d37db3d9cd37e9ee4ce2f9c789871e92bb1b9b5a6d1d57",
+          "image": "data/memes/BR/images/br-spider-embrace-1280-40e6996bedd0.webp",
+          "bytes": 58500
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "3e981e9e57c9210e18eacf0c9f2785e1eba6a0d3e9baeb9259906837d340fdb2",
@@ -139,15 +225,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "cdc83f01405dfb882ecb60cda56e527897c694e06e7f8ee60c59246fa22ce9d1",
-        "pixelSha256": "306b6e9f569a8c40b0f3cc68f2293109f95242fb7827f770d05dd326fe5adc1d",
+        "sha256": "40e6996bedd0931de9d37db3d9cd37e9ee4ce2f9c789871e92bb1b9b5a6d1d57",
+        "pixelSha256": "7e6a307fb6ca71018b2d951896b155d474a86233b1601cf172a6b247bb3a9945",
         "perceptualHashes": [
           "0001111001100001100111011001101010101001101000111111001000100001",
           "0001111001100000100011011001110010111001101000101011110010100011",
           "0001011001101101100010111001110010101001100101011001110010010010"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

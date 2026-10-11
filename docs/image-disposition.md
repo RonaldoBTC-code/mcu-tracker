@@ -1,6 +1,6 @@
 # Qué pasó con las otras imágenes
 
-Ecuador tiene exactamente una foto publicada: ec-spider-bus, Spider-Man en un bus de Guayaquil. No hay nueve fotos ecuatorianas escondidas por el scroll. Las nueve restantes aún deben encontrarse, revisarse y acreditarse. Las 65 fotos globales no son 65 fotos de Ecuador: pertenecen a 22 países diferentes.
+Ecuador tiene exactamente una foto publicada: ec-spider-bus, Spider-Man en un bus de Guayaquil. No hay nueve fotos ecuatorianas escondidas por el scroll. Las nueve restantes aún deben encontrarse, revisarse y acreditarse. Las 61 fotos globales no son 61 fotos de Ecuador: pertenecen a 19 países diferentes.
 
 ## Fotos que sí se retiraron del catálogo compartido
 
@@ -35,4 +35,6 @@ Pistas pendientes: Spider-Man en Durán (Ecuavisa), descarga 403 sin foto recupe
 
 ## Inventario y curación pendientes
 
-65 fotos únicas en 22 países; CA/GB/US tienen diez, BE seis, FR cuatro y EC una. Faltan 445 fotos en 48 países; 29 están vacíos. Complete:false. Las 18 licencias anteriores siguen sin acreditar; no se presentan como nuevas licencias obtenidas. Prioridad de curación: las nueve fotos adicionales de Ecuador, manteniendo búsqueda y revisión por cada país. No recuperar anime, relleno, duplicados ni el pool compartido para simular cumplimiento.
+61 fotos únicas en 19 países; CA/GB/US tienen diez, BE seis, FR cuatro y EC una. Faltan 449 fotos en 48 países; 32 están vacíos. Complete:false. Las 14 licencias activas siguen sin acreditar; no se presentan como nuevas licencias obtenidas. Prioridad de curación: las nueve fotos adicionales de Ecuador, manteniendo búsqueda y revisión por cada país. No recuperar anime, relleno, duplicados ni el pool compartido para simular cumplimiento.
+
+Revisión de calidad del 11 de octubre: cuatro capturas de vídeo retiradas del catálogo activo; sus identidades y datos históricos se conservan. La nueva foto mexicana usa mx-spider-errands y permanece preparada junto a ec-spider-bin hasta registrar ambos IDs. Leer [auditoría de calidad](photo-quality-audit.md); cualquier descripción de las fotos retiradas en este documento registra procedencia histórica, no publicación activa.

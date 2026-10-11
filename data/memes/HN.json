@@ -8,7 +8,7 @@
     {
       "id": "hn-spider-graduate",
       "country": "HN",
-      "image": "data/memes/HN/images/hn-spider-graduate.webp",
+      "image": "data/memes/HN/images/hn-spider-graduate-1280-e82567e949ff.webp",
       "source": "https://www.tunota.com/honduras-hoy/spiderman-graduado-unah-psicologia-2023-11-28",
       "title": "Spider-Man recoge su título de psicología",
       "location": "Tegucigalpa, Universidad Nacional Autónoma de Honduras",
@@ -28,10 +28,38 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Tunota / imagen compartida por UNAH",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man recoge su título de psicología",
-      "width": 768,
-      "height": 432,
-      "bytes": 33070,
+      "width": 1280,
+      "height": 720,
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "bytes": 116132,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 360,
+          "sha256": "6d42cad7de9e7e20cdc33fc8e39a16a82305e329a388970d993c59c7b0cf98d2",
+          "image": "data/memes/HN/images/hn-spider-graduate-640-6d42cad7de9e.webp",
+          "bytes": 51152
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 720,
+          "sha256": "e82567e949ffc7f8c47bcf861563630d8807dd9ce981bf2f744ba2fc9c34d897",
+          "image": "data/memes/HN/images/hn-spider-graduate-1280-e82567e949ff.webp",
+          "bytes": 116132
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "de30da807272e5367ae99d4d2bf0a74843d7c30c069c5bb9cccbea66c8eabf31",
@@ -43,15 +71,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "db85091b5b2c937d9f81c4b01128baf7a8ea1d0986747205fcecb8cec01460cb",
-        "pixelSha256": "57d2bfcf8c7dd617ee38d5fa841174e5ef2b728306706bdf7fdb3f7c9a10a5dd",
+        "sha256": "e82567e949ffc7f8c47bcf861563630d8807dd9ce981bf2f744ba2fc9c34d897",
+        "pixelSha256": "7fa7ea0166c23edc1ae5c9a0430c20d662b1612f30d5777bc0e1ce98b3dcd9b7",
         "perceptualHashes": [
           "0000110010110011111111111100110001011001000010010010100100101001",
-          "0000110010110011111011101100110001011011010110010100100100001001",
+          "0000110010110011111001101100110001011011010110011100100100001001",
           "0000110010110011101001101100111011010010010101101100100001011001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

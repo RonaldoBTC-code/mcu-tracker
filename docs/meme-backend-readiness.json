@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-11T16:29:55.885Z",
+  "checkedAt": "2026-10-11T18:08:39.212Z",
   "result": "PASS",
   "rpc": "get_meme_stats",
   "parameter": "p_ids",
@@ -10,9 +10,9 @@
   ],
   "batchSizes": [
     50,
-    15
+    11
   ],
-  "reviewedCatalogueIds": 65,
+  "reviewedCatalogueIds": 61,
   "exactIdSetVerified": true,
   "nonnegativeCountsVerified": true,
   "guestFlagsFalse": true,
@@ -43,20 +43,6 @@
     },
     {
       "meme_id": "ec-spider-bus",
-      "likes_count": 0,
-      "views_count": 0,
-      "liked": false,
-      "seen": false
-    },
-    {
-      "meme_id": "mx-spider-class",
-      "likes_count": 0,
-      "views_count": 0,
-      "liked": false,
-      "seen": false
-    },
-    {
-      "meme_id": "pe-spider-dance-bus",
       "likes_count": 0,
       "views_count": 0,
       "liked": false,
@@ -210,13 +196,6 @@
       "seen": false
     },
     {
-      "meme_id": "cl-spider-cueca",
-      "likes_count": 0,
-      "views_count": 0,
-      "liked": false,
-      "seen": false
-    },
-    {
       "meme_id": "cu-spider-nerf",
       "likes_count": 0,
       "views_count": 0,
@@ -274,13 +253,6 @@
     },
     {
       "meme_id": "es-spider-smoking",
-      "likes_count": 0,
-      "views_count": 0,
-      "liked": false,
-      "seen": false
-    },
-    {
-      "meme_id": "at-spider-dance",
       "likes_count": 0,
       "views_count": 0,
       "liked": false,

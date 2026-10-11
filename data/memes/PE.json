@@ -6,57 +6,9 @@
   "minimumPerCountry": 10,
   "memes": [
     {
-      "id": "pe-spider-dance-bus",
-      "country": "PE",
-      "image": "data/memes/PE/images/pe-spider-dance-bus.webp",
-      "source": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-spiderman-baila-cumple-reto-dura-challenge-colectivo-lima-video-nnda-noticia-537172-noticia/",
-      "title": "Spider-Man convierte el pasillo del bus en pista de baile",
-      "location": "Lima, avenida Salaverry",
-      "countryEvidence": {
-        "url": "https://elcomercio.pe/redes-sociales/facebook/facebook-viral-spiderman-baila-cumple-reto-dura-challenge-colectivo-lima-video-nnda-noticia-537172-noticia/",
-        "statement": "El artículo describe el reto Dura Challenge dentro de un colectivo que recorría la avenida Salaverry en Lima.",
-        "verifiedOn": "2026-10-10"
-      },
-      "imageURL": "https://arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/TENJK4FBPRHM3D6PAB7NUF74IM.jpg",
-      "creator": "Cristhian Rojas Rosas (crédito del medio)",
-      "license": null,
-      "licenseUrl": null,
-      "characters": [
-        "Spider-Man"
-      ],
-      "visualGag": "Spider-Man convierte el pasillo del bus en pista de baile",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "publisher": "El Comercio / Facebook",
-      "alt": "Spider-Man convierte el pasillo del bus en pista de baile",
-      "width": 619,
-      "height": 347,
-      "bytes": 8554,
-      "scope": "geographic",
-      "originalFingerprint": {
-        "sha256": "51c34107251a6432ba9fedc3e1b68c14ca1e58dd8563cfcad7eac10bf76ccde3",
-        "pixelSha256": "4fd70838db4692cbfd8dc9e35ba2b9ab6acc9acecdcd13c1373386aa42005dbf",
-        "perceptualHashes": [
-          "0001011110010110100100000110011101100011111000110010011011100100",
-          "0001010110010110100100000000011111100011101100110011011110110100",
-          "0000000110010111100101000000010111110001101100111011001110110011"
-        ]
-      },
-      "outputFingerprint": {
-        "sha256": "d84b106c6d542c28a9fac5895e0cf5c1efd9ae72ec4da3d19da46da622df18ae",
-        "pixelSha256": "26ec6ed9f94c02bfb9992c2beb668bbb9589b08b748974cb2a47d981280f34fb",
-        "perceptualHashes": [
-          "0001011110010110100100000110011101100011111000110010011011100100",
-          "0001010110010110100100000000011111100011101100110011011110110100",
-          "0000000110010111100101000000110111110001001100111011001110110011"
-        ]
-      },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
-    },
-    {
       "id": "pe-spider-yoyo",
       "country": "PE",
-      "image": "data/memes/PE/images/pe-spider-yoyo.webp",
+      "image": "data/memes/PE/images/pe-spider-yoyo-1280-6ae023fbf044.webp",
       "source": "https://trome.com/actualidad/spiderman-mi-superheroe-me-ayuda-a-llevar-dinero-a-casa-y-pagar-estudios-de-mis-hijos-dice-hombre-arana-peruano-spiderman-en-lima-alegria-a-ninos-y-lanza-yo-yo-foto-video-noticia/",
       "title": "Spider-Man carga una bolsa de yoyós en vez de telarañas",
       "location": "Lima, centro histórico",
@@ -76,10 +28,38 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Trome",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man carga una bolsa de yoyós en vez de telarañas",
-      "width": 768,
-      "height": 510,
-      "bytes": 48494,
+      "width": 1153,
+      "height": 765,
+      "sourceWidth": 1153,
+      "sourceHeight": 765,
+      "bytes": 169500,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 425,
+          "sha256": "a0e9b2a285df39132972df4b4a1f112c55836de61f81fb9b4970754f744b816d",
+          "image": "data/memes/PE/images/pe-spider-yoyo-640-a0e9b2a285df.webp",
+          "bytes": 75242
+        },
+        {
+          "edge": 1280,
+          "width": 1153,
+          "height": 765,
+          "sha256": "6ae023fbf0446828c1cc65113fabb68dfd6135bfd9f4a9453f55e20d9c996e05",
+          "image": "data/memes/PE/images/pe-spider-yoyo-1280-6ae023fbf044.webp",
+          "bytes": 169500
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "a37c5b8dec503120242a02c310fedad8966f5cca35e99dc3e47bd4a33dc2e17c",
@@ -91,15 +71,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "af7a9c30de96c94ac7aa69b15253df15909fdfcd850c47c92c6a952a393b69a3",
-        "pixelSha256": "f46f96493dfcecb87c2feba518681accb45077ad655b5d902b08b626d5cc4780",
+        "sha256": "6ae023fbf0446828c1cc65113fabb68dfd6135bfd9f4a9453f55e20d9c996e05",
+        "pixelSha256": "4ba040c22623d0ffae6372840e468668aaa24e4d0ae18d6744ae9cb35d998188",
         "perceptualHashes": [
           "0110010000010010001110111010111011100101010100010001011000110111",
           "0110010000010110000110101010111011101111010111010000010100010101",
-          "0110110000010101000100101010011011001111111110010000110100011001"
+          "0110110000010111000100101010011011001111111110000000110100011001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

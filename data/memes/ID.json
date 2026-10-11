@@ -8,7 +8,7 @@
     {
       "id": "id-spider-vegetables",
       "country": "ID",
-      "image": "data/memes/ID/images/id-spider-vegetables.webp",
+      "image": "data/memes/ID/images/id-spider-vegetables-1280-5903dc843e59.webp",
       "source": "https://suaraindonesia.co.id/news/news/67ad8c369d7ba/Kenakan-Kostum-Spider-Man-Cara-Unik-Penjual-Sayur-Keliling-di-Banyuwangi-Gaet-Pelanggan",
       "title": "Spider-Man vende verduras desde su moto",
       "location": "Banyuwangi, Jawa Timur",
@@ -28,10 +28,38 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Suara Indonesia",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man vende verduras desde su moto",
       "width": 750,
       "height": 440,
-      "bytes": 54230,
+      "sourceWidth": 750,
+      "sourceHeight": 440,
+      "bytes": 102442,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 375,
+          "sha256": "9e2c8bf466e5145f6d73034e6cf8ad6c77acbca4b7f2d90cdbac190d55936850",
+          "image": "data/memes/ID/images/id-spider-vegetables-640-9e2c8bf466e5.webp",
+          "bytes": 78710
+        },
+        {
+          "edge": 1280,
+          "width": 750,
+          "height": 440,
+          "sha256": "5903dc843e594c33262c15d5be621bc333dc39f068b68dac269922b3de7a8a71",
+          "image": "data/memes/ID/images/id-spider-vegetables-1280-5903dc843e59.webp",
+          "bytes": 102442
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "4ffbd8743aba5237d9d9e298b5a2ef57779d0d0664337ed5378f4c8043c50b11",
@@ -43,15 +71,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "d6425091aa2499240cbf6d46fe0183ff8209a8c4b872cd12958bd57603ca99d7",
-        "pixelSha256": "f3af365e3a35a9a11d9da378429ca9661d63861599b16e498ac9346655cd5480",
+        "sha256": "5903dc843e594c33262c15d5be621bc333dc39f068b68dac269922b3de7a8a71",
+        "pixelSha256": "97b8a9877d47dcb9e2e41970bd03f15d7cab531bad24087d591ef86690298540",
         "perceptualHashes": [
           "0110111111010001110000101000001101111101001001001101000101100100",
           "0100111111111001110000101001001100101100101001001001110100100100",
           "0100101010111011110101111001000100101110100100011000110000100101"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

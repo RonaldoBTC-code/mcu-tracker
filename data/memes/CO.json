@@ -8,7 +8,7 @@
     {
       "id": "co-spider-handstand",
       "country": "CO",
-      "image": "data/memes/CO/images/co-spider-handstand.webp",
+      "image": "data/memes/CO/images/co-spider-handstand-1280-aa8bde2ac3e8.webp",
       "source": "https://www.publimetro.co/entretenimiento/2022/10/05/la-policia-capturo-al-hombre-arana-en-el-metro-medellin-y-revelo-su-identidad/",
       "title": "Spider-Man se pone de cabeza en el metro",
       "location": "Medellín, estación Parque Berrío",
@@ -28,10 +28,38 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Publimetro / captura de @BarneyStinsonWt",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man se pone de cabeza en el metro",
-      "width": 768,
-      "height": 432,
-      "bytes": 11160,
+      "width": 1200,
+      "height": 675,
+      "sourceWidth": 1200,
+      "sourceHeight": 675,
+      "bytes": 40354,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 360,
+          "sha256": "8e7094aaf0fcc508d2d240f578ad13e124610344798e960e77524f6f5366fbda",
+          "image": "data/memes/CO/images/co-spider-handstand-640-8e7094aaf0fc.webp",
+          "bytes": 18816
+        },
+        {
+          "edge": 1280,
+          "width": 1200,
+          "height": 675,
+          "sha256": "aa8bde2ac3e8101a0f3f7b9758cf64cbc91f1eb2a3ecd70875bc4410f4f1da30",
+          "image": "data/memes/CO/images/co-spider-handstand-1280-aa8bde2ac3e8.webp",
+          "bytes": 40354
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "0f0506838c973dc9d46fd39b96762085d972323074af261512298b194c9254d7",
@@ -43,15 +71,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "a93012ec383a693b726dd2dc98c2c56fa03e53e94644de03ec82ec9984386d8b",
-        "pixelSha256": "0572e32d7cc8b66a03d40fe1c49a9a3724afa762d52b3a02d7afb3b39b0292d1",
+        "sha256": "aa8bde2ac3e8101a0f3f7b9758cf64cbc91f1eb2a3ecd70875bc4410f4f1da30",
+        "pixelSha256": "b77abe30c6b9fb59ed79fe8b6b201152f7adaf122361460920c91589ae4d4c4b",
         "perceptualHashes": [
           "0010001000101010000010010001110111001110010111011101010001110111",
           "0010001000101010000010011001110111001110010111011101010101010101",
           "0010001000101011000010111001110111101010010111011100010001010101"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

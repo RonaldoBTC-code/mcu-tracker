@@ -1,0 +1,1360 @@
+{
+  "reviewedAt": "2026-10-11T18:09:38.410Z",
+  "initialPhotosReviewed": 65,
+  "active": 61,
+  "withdrawn": [
+    {
+      "id": "mx-spider-class",
+      "country": "MX",
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura de vídeo borrosa, sin detalle suficiente del personaje",
+      "preserveIdentityAndInteractions": true
+    },
+    {
+      "id": "pe-spider-dance-bus",
+      "country": "PE",
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura pequeña y borrosa del baile en un colectivo",
+      "preserveIdentityAndInteractions": true
+    },
+    {
+      "id": "cl-spider-cueca",
+      "country": "CL",
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura previamente ampliada, con detalle aparente superior al real",
+      "preserveIdentityAndInteractions": true
+    },
+    {
+      "id": "at-spider-dance",
+      "country": "AT",
+      "reviewedOn": "2026-10-11",
+      "reason": "Captura de vídeo con desenfoque de movimiento y detalle limitado del traje",
+      "preserveIdentityAndInteractions": true
+    }
+  ],
+  "commonsOriginalsRecovered": 46,
+  "publisherLargerFilesRecovered": 3,
+  "licensedActive": 47,
+  "licenseUnverifiedActive": 14,
+  "sourceSheets": [
+    "docs/quality-review/source-sheet-0.jpg",
+    "docs/quality-review/source-sheet-1.jpg",
+    "docs/quality-review/source-sheet-2.jpg",
+    "docs/quality-review/source-sheet-3.jpg",
+    "docs/quality-review/source-sheet-4.jpg",
+    "docs/quality-review/source-sheet-5.jpg"
+  ],
+  "rows": [
+    {
+      "id": "br-spider-circle-sp",
+      "country": "BR",
+      "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+      "imageURL": "https://s2-gshow.glbimg.com/n_E1rBW6YnTfYMii3VhWrkLchmU=/0x0:680x357/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/Z/i/wHJC8sS3ShE4YD47TLBg/homem-aranha-em-sao-paulo.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": 680,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "El archivo editorial de 984px amplía un recorte de 680px documentado en la URL de la fuente; limitar variantes a 680px y presentación a 340px. El acceso a la URL nativa publicada expiró por timeout; no afirmar recuperación del original.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "br-spider-circle-bh",
+      "country": "BR",
+      "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+      "imageURL": "https://s2-gshow.glbimg.com/2pJVta6H4rrn0jVZ3ETLRkzNnkk=/0x662:1536x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/m/x/MGoSBXTSSImVrbrsoeHg/homem-aranha-em-bh.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "br-spider-embrace",
+      "country": "BR",
+      "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+      "imageURL": "https://s2-gshow.glbimg.com/Uc3F4zVTcHyuT5Qwcgl46s3B9HY=/0x0:680x680/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/X/X/6YDDJLQNiTBlgcpk8oKw/homem-aranha-em-santarem.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": 680,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "El archivo editorial de 984px amplía un recorte de 680px documentado en la URL de la fuente; limitar variantes a 680px y presentación a 340px. El acceso a la URL nativa publicada expiró por timeout; no afirmar recuperación del original.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ec-spider-bus",
+      "country": "EC",
+      "source": "https://www.extra.ec/noticia/buena-vida/spiderman-personajes-curiosidades-marvel-guayaquil-2758846-7330.html",
+      "imageURL": "https://imagenes.extra.ec/uploads/2020/08/04/5f291f425b217.jpeg",
+      "license": null,
+      "creator": "Álex Lima / EXTRA",
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "th-spider-student",
+      "country": "TH",
+      "source": "https://www.sanook.com/men/13421/",
+      "imageURL": "https://s.isanook.com/me/0/ud/2/13421/y29udgvudhmlmkzmawxlcyuyrju3mjm1otyxnjywnjkuanbn.jpg",
+      "license": null,
+      "creator": "Chutima Sonkhong (crédito del medio)",
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "th-spider-yogurt",
+      "country": "TH",
+      "source": "https://www.nationthailand.com/in-focus/40006400",
+      "imageURL": "https://media.nationthailand.com/uploads/images/contents/w1024/2021/09/CwHUh8uSOatlqs54iX6s.jpg?x-image-process=style/lg-webp",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "th-spider-vegetables",
+      "country": "TH",
+      "source": "https://www.dailynews.co.th/news/180414/",
+      "imageURL": "https://www.dailynews.co.th/wp-content/uploads/2021/08/IMG_8202.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Original or larger publisher file explicitly linked in primary article",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ph-spider-commute",
+      "country": "PH",
+      "source": "https://philnews.ph/2017/03/17/viral-photo-spiderman-inside-philippine-jeepney/",
+      "imageURL": "https://philnews.ph/wp-content/uploads/2017/03/spiderman.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Publisher full image replacing WordPress 375x500 derivative",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Recuperado archivo editorial 750×1000 en lugar de miniatura 375×500; foto callejera con luz desigual y enfoque modesto. Máximo 375px de presentación para DPR2, sin mejora artificial de nitidez.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ph-spider-dragon",
+      "country": "PH",
+      "source": "https://commons.wikimedia.org/wiki/File:Superhero_in_action.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Superhero_in_action.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "creator": "EMMAN A. FORONDA",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-iron-board",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+      "imageURL": "https://live.staticflickr.com/3432/3299551134_c0eccb6e53_o.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Michael Miller",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/millermz/3299551134/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Escenario oscuro intencional; se conservan color y encuadre. El gag de la tabla de planchar es visible en la revisión ampliada, sin afirmar nitidez o exposición perfectas.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-captain-dorito",
+      "country": "US",
+      "source": "https://zmyaro.com/cosplay/captaindorito/",
+      "imageURL": "https://zmyaro.com/cosplay/captaindorito/imgs/toracon2018_shield_out.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-deadpool-iron",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC0",
+      "creator": "LostplanetKD73",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-iron-pikachu",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Iron_Pikachu.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/04/Iron_Pikachu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "GabboT",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia Commons imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-iron-buzz",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8978219177).jpg",
+      "imageURL": "https://live.staticflickr.com/5340/8978219177_d87448edf6_o.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Roger Murmann from Eppertshausen, Deutschland",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/starcadet/8978219177/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Fondo de escenario negro, traje iluminado; no confundir fondo oscuro con subexposición del personaje.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "be-deadpool-throne",
+      "country": "BE",
+      "source": "https://commons.wikimedia.org/wiki/File:Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_(26675225495).jpg",
+      "imageURL": "https://live.staticflickr.com/1630/26675225495_b534d639cd_6k.jpg",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart from Bruxelles, Belgique",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/26675225495/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "be-deadpool-duff",
+      "country": "BE",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_(51979055573).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/2/28/Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "be-deadpool-spider",
+      "country": "BE",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_(52159179688).jpg",
+      "imageURL": "https://live.staticflickr.com/65535/52159179688_550f8ca007_6k.jpg",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/52159179688/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-iron-fanexpo",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Fan_Expo_Canada_2016_Iron_Man.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Fan_Expo_Canada_2016_Iron_Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "creator": "Nicholas Moreau",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-deadpools-throne",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:LSCC_2016_-_Deadpools_on_the_Iron_Throne_(25057706012).jpg",
+      "imageURL": "https://live.staticflickr.com/1487/25057706012_b0a5d51c99_o.jpg",
+      "license": "CC BY 2.0",
+      "creator": "BatCam Photography",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/batcam90/25057706012/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-spider-tube",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:Gloucester_Road_-_Spider-Man_(2539882747).jpg",
+      "imageURL": "https://live.staticflickr.com/2128/2539882747_b043dc2f55_c.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Annie Mole from London, UK",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/anniemole/2539882747/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Archivo nativo limitado a 610×800 y enfoque suave; presentación máxima de 305px para DPR2. No se inventa un original más nítido.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "fr-spider-hospital",
+      "country": "FR",
+      "source": "https://commons.wikimedia.org/wiki/File:Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/50/Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "creator": "Globe Zero",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-deadpool-maid",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_(27633930493).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_%2827633930493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pikawil from Laval, Canada",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "id-spider-vegetables",
+      "country": "ID",
+      "source": "https://suaraindonesia.co.id/news/news/67ad8c369d7ba/Kenakan-Kostum-Spider-Man-Cara-Unik-Penjual-Sayur-Keliling-di-Banyuwangi-Gaet-Pelanggan",
+      "imageURL": "https://cdn.suaranetwork.com/images/2025/02/13/01386f5dd28e.jpg",
+      "license": null,
+      "creator": "Muhammad Nurul Yaqin / Suara Indonesia",
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "hn-spider-graduate",
+      "country": "HN",
+      "source": "https://www.tunota.com/honduras-hoy/spiderman-graduado-unah-psicologia-2023-11-28",
+      "imageURL": "https://www.tunota.com/wp-content/uploads/2023/11/principal_spider_man_unah_graduacion.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "co-spider-handstand",
+      "country": "CO",
+      "source": "https://www.publimetro.co/entretenimiento/2022/10/05/la-policia-capturo-al-hombre-arana-en-el-metro-medellin-y-revelo-su-identidad/",
+      "imageURL": "https://www.publimetro.co/resizer/v2/4HFPNEDQ6BEFNNOBRBMZAIXEW4.jpg?smart=true&auth=f33951900d6bd769acc89fd4f3c3b568f2d5ee57599a69887b89fd9c39325846&width=1200&height=675",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "cu-spider-nerf",
+      "country": "CU",
+      "source": "https://www.dvidshub.net/image/2433478/residents-embrace",
+      "imageURL": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1603/2433478/2000w_q95.jpg",
+      "license": "Public domain",
+      "creator": "Sgt. LeAnne Withrow / DVIDS",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Original or larger publisher file explicitly linked in primary article",
+        "original": false
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "fr-deadpool-sailor",
+      "country": "FR",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_female_Deadpool_at_Japan_Expo_2016_(29105603664).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "fr-deadpool-2019",
+      "country": "FR",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Japan_Expo_2019_(48381081197).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/06/Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "jp-deadpool-market",
+      "country": "JP",
+      "source": "https://commons.wikimedia.org/wiki/File:Comic_Market_96_Day_2_Cosplayers_(48600288981).jpg",
+      "imageURL": "https://live.staticflickr.com/65535/48600288981_1c5e6851f7_6k.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Dick Thomas Johnson from Tokyo, Japan",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/31029865@N06/48600288981/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "jp-spider-crossing",
+      "country": "JP",
+      "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_(53083700164).jpg",
+      "imageURL": "https://live.staticflickr.com/65535/53083700164_73b384c5df_6k.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Dick Thomas Johnson from Tokyo, Japan",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/31029865@N06/53083700164/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "sv-stan-spider",
+      "country": "SV",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_Stan_Lee.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Cosplay_Stan_Lee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "creator": "LuisaBustillo",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "il-spider-purim",
+      "country": "IL",
+      "source": "https://commons.wikimedia.org/wiki/File:Purim_2018_(25749998627).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Purim_2018_%2825749998627%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "IgorZed from Tel Aviv, ISRAEL",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "es-spider-plaza",
+      "country": "ES",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Cosplayer_de_Spider-Man_en_la_Plaza_Mayor_de_Madrid.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "creator": "Fsoguero",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "es-spider-smoking",
+      "country": "ES",
+      "source": "https://commons.wikimedia.org/wiki/File:Fat_Spider-Man.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/05/Fat_Spider-Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "creator": "רנדום",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "in-spider-hood",
+      "country": "IN",
+      "source": "https://www.hindustantimes.com/trending/spider-man-rides-on-car-bonnet-in-delhi-police-book-him-for-violating-traffic-101721815820089.html",
+      "imageURL": "https://images.hindustantimes.com/img/2024/07/24/1600x900/spider-man-delhi-police-car-bonnet_1721818522095_1721818535429.jpg",
+      "license": null,
+      "creator": null,
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "pe-spider-yoyo",
+      "country": "PE",
+      "source": "https://trome.com/actualidad/spiderman-mi-superheroe-me-ayuda-a-llevar-dinero-a-casa-y-pagar-estudios-de-mis-hijos-dice-hombre-arana-peruano-spiderman-en-lima-alegria-a-ninos-y-lanza-yo-yo-foto-video-noticia/",
+      "imageURL": "https://trome.com/resizer/v2/ZLJLK7GFTRDC7CB4PAWGCQZI6I.jpg?auth=491ec33b72cf6dfb98b11d4d9150e7bc067dc6004f5d11f5c0e0f0a7507fdaf7&width=1153&height=765&quality=75&smart=true",
+      "license": null,
+      "creator": "Fernando Sangama / Trome",
+      "detailMaxEdge": null,
+      "sourceRetrieval": null,
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-spider-hawaiian",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_(18855860674).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/04/Montreal_Comiccon_2015_-_Hawaiian_Spider-Man_%2818855860674%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pikawil from Laval, Canada",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-miku-maid",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_(28181536851).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/59/Montreal_Comiccon_2016_-_Daredevil_as_Hatsune_Miku_and_Maid_Spider-Man_%2828181536851%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pikawil from Laval, Canada",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-deadpool-redhood",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_(19292146559).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Montreal_Comiccon_2015_-_Little_Red_Riding_Deadpool_and_Spider-Man_%2819292146559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pikawil from Laval, Canada",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-deadpool-brainslug",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015_-_Brainslugged_Deadpool_(19432425756).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Montreal_Comiccon_2015_-_Brainslugged_Deadpool_%2819432425756%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pikawil from Laval, Canada",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-deadpool-chicken",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_(27633865783).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Montreal_Comiccon_2016_-_Deadpool_and_his_chicken_buddy_%2827633865783%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pikawil from Laval, Canada",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-photobomb-pileup",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2015-_Photobomb_pileup,_part_5_(18835967574).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/60/Montreal_Comiccon_2015-_Photobomb_pileup%2C_part_5_%2818835967574%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pikawil from Laval, Canada",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-deadpool-pope",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:NYCC_2016_Cosplay_of_Pope_Deadpool.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/e4/NYCC_2016_Cosplay_of_Pope_Deadpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 4.0",
+      "creator": "LostplanetKD73",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-deadpool-lego",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:Big_Apple_Comic_Con_2016_-_Lego_Deadpool.jpg",
+      "imageURL": "https://live.staticflickr.com/1620/25251031320_a74b7eb73d_b.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Richie S",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/94565827@N05/25251031320/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Original nativo 934×724; capar presentación a 467px para DPR2.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-spider-frog",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:SDCC_15_-_Spider-Frog_(19652841226).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/c/cf/SDCC_15_-_Spider-Frog_%2819652841226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "William Tung from USA",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "ca-deadpool-lantern",
+      "country": "CA",
+      "source": "https://commons.wikimedia.org/wiki/File:Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Green_Lantern_Deadpool_Cosplay_Fan_Expo_Canada_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Maria Casacalenda",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-spider-thor",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:Captain_America_and_Spider_Thor%3F_C2E2_2014_(14254757313).jpg",
+      "imageURL": "https://live.staticflickr.com/5489/14254757313_963bdca397_3k.jpg",
+      "license": "CC BY-SA 2.0",
+      "creator": "Chris Favero from USA",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/cfavero/14254757313/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-deadtrooper",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:SWCA_-_Deadtrooper_(16580465874).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/8/8c/SWCA_-_Deadtrooper_%2816580465874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "William Tung from USA",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-captain-spider",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:C2E2_2015_-_Captain_Spider-Man_(17118870150).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/6/6a/C2E2_2015_-_Captain_Spider-Man_%2817118870150%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "GabboT",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "us-deadpool-elsa",
+      "country": "US",
+      "source": "https://commons.wikimedia.org/wiki/File:C2E2_(Day_2)_2014,_Superior_Spider-Man_and_Deadpool_as_Elsa.jpg",
+      "imageURL": "https://live.staticflickr.com/7302/14062998863_252f565f75_4k.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Lauren Jankowski",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/lauren-j/14062998863/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-deadpool-captain",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Deadpool_(17435591233).jpg",
+      "imageURL": "https://live.staticflickr.com/5347/17435591233_cffb1bed79_o.jpg",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pete Sheffield",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/twosheffs/17435591233/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-deadpool-sombrero",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Sombrero_Deadpool_(18241070682).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/79/MCM_London_May_15_-_Sombrero_Deadpool_%2818241070682%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "creator": "big-ashb",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-deadpool-wedding",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_15_-_Deadpools_(18218154216).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/55/MCM_London_May_15_-_Deadpools_%2818218154216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "creator": "big-ashb",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-deadpool-kimono",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Deadpool_(17417809783).jpg",
+      "imageURL": "https://live.staticflickr.com/7696/17417809783_7f31aff8ea_k.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Cosplay Vogue1",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/cosplaytango/17417809783/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-deadpool-maid",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:At_your_service_(34671100260).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/2/29/At_your_service_%2834671100260%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "creator": "m4mystery from London, United Kingdom",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-pikachu-thor",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_London_May_2015_-_Pikachu_Thor_(18011811396).jpg",
+      "imageURL": "https://live.staticflickr.com/8885/18011811396_204c1b0968_k.jpg",
+      "license": "CC BY 2.0",
+      "creator": "Cosplay Vogue1",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/cosplaytango/18011811396/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "gb-thor-bike",
+      "country": "GB",
+      "source": "https://commons.wikimedia.org/wiki/File:London_Comic_Con_2015_-_Thor_on_a_bike_(17868517180).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/d/d2/London_Comic_Con_2015_-_Thor_on_a_bike_%2817868517180%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Pete Sheffield",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "be-deadpool-hood",
+      "country": "BE",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_(51968415859).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/d/de/Cosplay_of_Deadpool_at_Brussels_Comic_Con_2022_%2851968415859%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Kiri Karma",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "be-captain-wolverine",
+      "country": "BE",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Captain_America_and_Wolverine_at_Made_in_Asia_2022_(52117205294).jpg",
+      "imageURL": "https://live.staticflickr.com/65535/52117205294_25a26e2a02_5k.jpg",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/52117205294/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "be-captain-fett",
+      "country": "BE",
+      "source": "https://commons.wikimedia.org/wiki/File:Captain_Fett_aka_Captain_America_and_Mandalorian_Cosplay_mash-up_at_Comiccon_Brussels_2023.jpg",
+      "imageURL": "https://live.staticflickr.com/65535/53443777080_044d02c122_6k.jpg",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Largest public author Flickr size linked by Commons Credit",
+        "authorPhoto": "https://www.flickr.com/photos/miguel_discart/53443777080/",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    },
+    {
+      "id": "fr-pikachu-captain",
+      "country": "FR",
+      "source": "https://commons.wikimedia.org/wiki/File:2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_(52413392884).jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/ba/2022-07-16_10-21-36_ILCE-7C_DSCCR0302_DxO_%2852413392884%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 2.0",
+      "creator": "Miguel Discart",
+      "detailMaxEdge": null,
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "review": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      }
+    }
+  ],
+  "publisherOriginalFilesMarked": 2
+}

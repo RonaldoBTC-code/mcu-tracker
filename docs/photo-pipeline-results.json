@@ -1,12 +1,15 @@
 {
-  "checkedAt": "2026-10-11T16:22:13.024Z",
+  "checkedAt": "2026-10-11T18:09:03.805Z",
   "result": "PASS",
   "checks": [
     "byte duplicate rejected",
     "reencoded/resized duplicate flagged",
     "missing location rejected",
     "incomplete coverage gate rejected",
-    "all rejections precede public writes"
+    "all rejections precede public writes",
+    "responsive sizes never enlarge native pixels",
+    "large source retains 640/1280/1920 variants at quality90",
+    "variants preserve full aspect ratio"
   ],
   "perceptualResizeDistance": 0,
   "collectionCoverageComplete": false

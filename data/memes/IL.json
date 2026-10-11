@@ -8,7 +8,7 @@
     {
       "id": "il-spider-purim",
       "country": "IL",
-      "image": "data/memes/IL/images/il-spider-purim.webp",
+      "image": "data/memes/IL/images/il-spider-purim-1280-abb84f5e406f.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Purim_2018_(25749998627).jpg",
       "title": "Spider-Man sale con llaves, teléfono y bolso",
       "location": "Tel Aviv, celebración de Purim 2018",
@@ -17,7 +17,7 @@
         "statement": "El fotógrafo identifica Purim 2018 en Tel Aviv; la categoría identifica Spider-Man en Israel.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Purim_2018_%2825749998627%29.jpg/960px-Purim_2018_%2825749998627%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Purim_2018_%2825749998627%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "IgorZed from Tel Aviv, ISRAEL",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -27,30 +27,75 @@
       "visualGag": "Spider-Man sale con llaves, teléfono y bolso",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
+      "sourceResolution": {
+        "width": 2146,
+        "height": 3219
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
       "alt": "Spider-Man sale con llaves, teléfono y bolso",
-      "width": 512,
-      "height": 768,
-      "bytes": 64056,
+      "width": 853,
+      "height": 1280,
+      "sourceWidth": 2146,
+      "sourceHeight": 3219,
+      "bytes": 243532,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 427,
+          "height": 640,
+          "sha256": "c87025fbee9e715487db3cd1c9365af5d4f9f50a77bd34a29c5d73a966f0bc2c",
+          "image": "data/memes/IL/images/il-spider-purim-640-c87025fbee9e.webp",
+          "bytes": 71738
+        },
+        {
+          "edge": 1280,
+          "width": 853,
+          "height": 1280,
+          "sha256": "abb84f5e406ff62bd11fb35052c957e183a9550d3ae728836d8a3c5c1430b95a",
+          "image": "data/memes/IL/images/il-spider-purim-1280-abb84f5e406f.webp",
+          "bytes": 243532
+        },
+        {
+          "edge": 1920,
+          "width": 1280,
+          "height": 1920,
+          "sha256": "f4b6537b43557f900e668561ca4713eab0726aba2ddd40ffee618fd5d5d95c50",
+          "image": "data/memes/IL/images/il-spider-purim-1920-f4b6537b4355.webp",
+          "bytes": 437946
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "4bd227e18bf6d1cf342234e3cb26bf203849faa7b25d042cc36e927e7ba2f00f",
-        "pixelSha256": "89b85539052e8d305453a90fc0a0d3d1b23d61425d9d4b0b67c52142e383f957",
-        "perceptualHashes": [
-          "0011100010001001100000011000001110110101101111001110101101101100",
-          "0011100010001000100000011000001110101101101111011110001110111100",
-          "0011111111001100100000001000000110111101101110011000000110011101"
-        ]
-      },
-      "outputFingerprint": {
-        "sha256": "2eead5dd5c3c6d5ea14d4466e848c462b4e49fcaa8bf58cabad893ee7ac13968",
-        "pixelSha256": "e45e7a5647c86491bd67e1def7de9119420bd691ac778221b06d84d56adf2c3a",
+        "sha256": "687e5eb5378c21b4691f5817a6170c6d827eaf287824eafdc7a36ed415f40772",
+        "pixelSha256": "38b60779ab03fd4f58f1abd9096c3281032966b7d3a6f7649e83873f7b5d9c11",
         "perceptualHashes": [
           "0011100010001001100000011000001110110101101111001110101101101100",
           "0011100010001000100000011000001110101101101111011110100110111100",
           "0011111111001100100000001000000110111101101110011000000110011101"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "outputFingerprint": {
+        "sha256": "abb84f5e406ff62bd11fb35052c957e183a9550d3ae728836d8a3c5c1430b95a",
+        "pixelSha256": "b1c00e5c91dd783150db43865fd8b212af8694b7160153273326ab8aad3f19e7",
+        "perceptualHashes": [
+          "0011100010001001100000011000001110110101101111001110101101101100",
+          "0011100010001000100000011000001110101101101111011110100110111100",
+          "0011111111001100100000001000000110111101101110011000000110011101"
+        ]
+      },
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

@@ -3228,7 +3228,7 @@ window.MapMemes = (() => {
   function cancel(){
     controller?.abort();controller=null;clearTimeout(timer);timer=null;
     observer?.disconnect();observer=null;
-    document.querySelectorAll('#memeList img').forEach(img=>{img.removeAttribute('src');img.removeAttribute('data-src');});
+    document.querySelectorAll('#memeList img').forEach(img=>{img.removeAttribute('src');img.removeAttribute('srcset');img.removeAttribute('data-src');img.removeAttribute('data-srcset');img.removeAttribute('data-sizes');});
   }
   function imageURL(code,value){
     if(typeof value!=='string')return null;
@@ -3243,7 +3243,7 @@ window.MapMemes = (() => {
     const activate=img=>{
       if(epoch!==window.MapView.generation||!img.isConnected)return;
       const src=img.dataset.src;if(!src)return;
-      img.src=src;delete img.dataset.src;
+      activateImage(img);delete img.dataset.src;
     };
     if(typeof IntersectionObserver==='function'){
       observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
@@ -3260,6 +3260,22 @@ window.MapMemes = (() => {
   function parseCatalogue(code,data){
     if(data.country!==code||data.scope!=='geographic'||!Array.isArray(data.memes))throw Error('Formato de país inválido');
     return data.memes.slice(0,50).map(item=>({item,url:imageURL(code,item?.image)})).filter(x=>x.url&&x.item.country===code&&x.item.countryEvidence?.statement&&typeof x.item.location==='string'&&typeof x.item.title==='string');
+  }
+  function configureImage(img,item,code,heightLimit=70){
+    img.dataset.src=imageURL(code,item.image);
+    const w=item.sourceWidth,h=item.sourceHeight;
+    if(!Number.isSafeInteger(w)||!Number.isSafeInteger(h)||w<1||h<1||w>20000||h>20000)return;
+    // Width is the actual drawn photo, capped at native pixels for DPR 2.
+    const cap=Math.floor(w/2),heightWidth=(heightLimit*w/h).toFixed(4)+'svh';
+    img.style.maxWidth='min(100%, '+cap+'px, '+heightWidth+')';img.style.marginInline='auto';
+    const responsive=(Array.isArray(item.variants)?item.variants:[]).filter(v=>Number.isSafeInteger(v.width)&&Number.isSafeInteger(v.height)&&v.width>0&&v.height>0&&v.width<=w&&v.height<=h&&Math.abs(v.width/v.height-w/h)<.02&&imageURL(code,v.image));
+    if(!responsive.length)return;
+    img.dataset.srcset=responsive.map(v=>imageURL(code,v.image)+' '+v.width+'w').join(', ');
+    img.dataset.sizes='(max-width: 560px) min(calc(100vw - 28px), '+cap+'px, '+heightWidth+'), min(708px, '+cap+'px, '+heightWidth+')';
+  }
+  function activateImage(img){
+    if(img.dataset.srcset){img.sizes=img.dataset.sizes;img.srcset=img.dataset.srcset;delete img.dataset.sizes;delete img.dataset.srcset;}
+    if(img.dataset.src)img.src=img.dataset.src;
   }
   function creditCaption(item,countryLabel){
         const caption=document.createElement('figcaption');caption.textContent=item.title+(typeof item.creator==='string'?' · '+item.creator:'');
@@ -3311,7 +3327,7 @@ window.MapMemes = (() => {
       let remaining=[],previous=-1;const seen=new Set();
       const draw=()=>{
         observer?.disconnect();observer=null;
-        list.querySelectorAll('img').forEach(img=>img.removeAttribute('src'));list.replaceChildren();
+        list.querySelectorAll('img').forEach(img=>{img.removeAttribute('srcset');img.removeAttribute('src')});list.replaceChildren();
         if(!remaining.length)remaining=memes.map((_,i)=>i);
         const available=remaining.map((value,i)=>i).filter(i=>memes.length===1||remaining[i]!==previous);
         const index=remaining.splice(available[Math.floor(Math.random()*available.length)],1)[0];previous=index;seen.add(index);
@@ -3320,8 +3336,8 @@ window.MapMemes = (() => {
         const img=document.createElement('img');img.alt=typeof item.alt==='string'?item.alt:item.title;
         img.width=Number.isInteger(item.width)&&item.width>0&&item.width<=2048?item.width:768;
         img.height=Number.isInteger(item.height)&&item.height>0&&item.height<=2048?item.height:512;
-        img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto;max-height:55vh;object-fit:contain';
-        img.onerror=()=>{img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
+        img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='display:block;width:100%;height:auto;max-height:55vh;object-fit:contain';configureImage(img,item,code,55);
+        img.onerror=()=>{img.removeAttribute('srcset');img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
         const caption=creditCaption(item,select.selectedOptions[0].textContent);
         figure.append(img,caption);list.appendChild(figure);
         lazyImages(list,epoch);
@@ -3333,7 +3349,7 @@ window.MapMemes = (() => {
       if(epoch===window.MapView.generation)status.textContent='No se pudieron cargar los memes. Vuelve a seleccionar el país para reintentar.';
     }finally{if(controller===request){clearTimeout(timer);timer=null;controller=null;}}
   }
-  return {open,cancel,resolveCountry,valid,imageURL,parseCatalogue,creditCaption};
+  return {open,cancel,resolveCountry,valid,imageURL,parseCatalogue,creditCaption,configureImage,activateImage};
 })();
 /* ══ TITULOS LOCALIZADOS ══
    La identidad de cada pelicula es su id numerico (estable).

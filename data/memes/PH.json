@@ -8,7 +8,7 @@
     {
       "id": "ph-spider-commute",
       "country": "PH",
-      "image": "data/memes/PH/images/ph-spider-commute.webp",
+      "image": "data/memes/PH/images/ph-spider-commute-1280-9ea027bbb6af.webp",
       "source": "https://philnews.ph/2017/03/17/viral-photo-spiderman-inside-philippine-jeepney/",
       "title": "Spider-Man viaja sentado en el jeepney",
       "location": "Filipinas; ciudad no acreditada",
@@ -17,7 +17,7 @@
         "statement": "Philnews documenta esta fotografía de un pasajero vestido de Spider-Man en un jeepney filipino; no se atribuye una ciudad que la fuente no identifica.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://philnews.ph/wp-content/uploads/2017/03/spiderman-375x500.jpg",
+      "imageURL": "https://philnews.ph/wp-content/uploads/2017/03/spiderman.jpg",
       "creator": null,
       "license": null,
       "licenseUrl": null,
@@ -28,14 +28,51 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Philnews / reproducción de redes",
+      "sourceResolution": {
+        "width": 750,
+        "height": 1000
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Publisher full image replacing WordPress 375x500 derivative",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Recuperado archivo editorial 750×1000 en lugar de miniatura 375×500; foto callejera con luz desigual y enfoque modesto. Máximo 375px de presentación para DPR2, sin mejora artificial de nitidez.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man viaja sentado en el jeepney",
-      "width": 375,
-      "height": 500,
-      "bytes": 13828,
+      "width": 750,
+      "height": 1000,
+      "sourceWidth": 750,
+      "sourceHeight": 1000,
+      "bytes": 63716,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 480,
+          "height": 640,
+          "sha256": "434a982a30916e78aa481c04f6a303762f4a1636319b10b611f3371fa0f9e6bd",
+          "image": "data/memes/PH/images/ph-spider-commute-640-434a982a3091.webp",
+          "bytes": 37484
+        },
+        {
+          "edge": 1280,
+          "width": 750,
+          "height": 1000,
+          "sha256": "9ea027bbb6af6b60ba216f27feb0c4c01462400bc88395faf85af914204fe58c",
+          "image": "data/memes/PH/images/ph-spider-commute-1280-9ea027bbb6af.webp",
+          "bytes": 63716
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "68ac2f5f5bb559228011012ac84aa7507c7e8700328a3997f7dc53f400993188",
-        "pixelSha256": "3139a1d0919f80b102961f8aeac92ba38e1ba28e1261a23bb2b9d1d29676e526",
+        "sha256": "356fe52486b00d74d94988d684b445ebeef6cebd01ba634eb1b74073a049c759",
+        "pixelSha256": "6887ae89e1c07236495a6b28d4831379892e76b2d29bcd50b97c48b181ce1e99",
         "perceptualHashes": [
           "0100110111001010011100111001110111011100001010000010011100100001",
           "0100010011000010011100111001010111011100010111010010011101100001",
@@ -43,20 +80,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "6ad1e1c70a9bf2ef547eb047ae098273cd3d9d538db4b7fd9810b3c128582c00",
-        "pixelSha256": "934b2b897024607957296a7786acb623457e122c4a5c741ed3af3dfa369e515f",
+        "sha256": "9ea027bbb6af6b60ba216f27feb0c4c01462400bc88395faf85af914204fe58c",
+        "pixelSha256": "9ba04e0e0c6435f8fdc92e451ab3ae0cf91392bf73dcee8aec5c490e89173813",
         "perceptualHashes": [
           "0100110111001010011100111001110111011100001010000010011100100001",
           "0100010011000010011100111001010111011100010111010010011101100001",
           "0100000011000110011100101001011111001100110011100010010111101001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "ph-spider-dragon",
       "country": "PH",
-      "image": "data/memes/PH/images/ph-spider-dragon.webp",
+      "image": "data/memes/PH/images/ph-spider-dragon-1280-a4877c0280c0.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Superhero_in_action.jpg",
       "title": "Spider-Man dirige un dragón entre los petardos",
       "location": "Binondo, Manila",
@@ -65,7 +102,7 @@
         "statement": "La descripción del fotógrafo en Commons ubica a Spider-Man en la celebración del Año Nuevo chino en Binondo, Manila, el 25 de enero de 2020.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://commons.wikimedia.org/wiki/File:Superhero_in_action.jpg",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Superhero_in_action.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "creator": "EMMAN A. FORONDA",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -76,30 +113,75 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Wikimedia Commons",
+      "sourceResolution": {
+        "width": 4625,
+        "height": 3057
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Wikimedia imageinfo original URL",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man dirige un dragón entre los petardos",
-      "width": 768,
-      "height": 508,
-      "bytes": 62606,
+      "width": 1280,
+      "height": 846,
+      "sourceWidth": 4625,
+      "sourceHeight": 3057,
+      "bytes": 251740,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 423,
+          "sha256": "be05ea9ad52ee8ba3d49ec073954265397a7a2e2e48f5b32fdc3173528773ce8",
+          "image": "data/memes/PH/images/ph-spider-dragon-640-be05ea9ad52e.webp",
+          "bytes": 76194
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 846,
+          "sha256": "a4877c0280c0fc3650e4214bc93e0a70812cbd7b9e9f72db1da84ff88988b13e",
+          "image": "data/memes/PH/images/ph-spider-dragon-1280-a4877c0280c0.webp",
+          "bytes": 251740
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1269,
+          "sha256": "f52ac1d2b07999a9e319c7efccd3f5ebe09c7fad55aa4e4ff4fafe3153b7ecc9",
+          "image": "data/memes/PH/images/ph-spider-dragon-1920-f52ac1d2b079.webp",
+          "bytes": 590214
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "c5bad0183871f649fdf5fd27788c80128d1a1bce4673db69678ff5f5b4741fb1",
-        "pixelSha256": "4de9855466f0e8cc0620d8925678fc93d62a2066d667c0fd12b91251f221dca3",
+        "sha256": "45a4e654f2c64ae04869a54772e4e1fc795b5088ef80548d2b70a1f4bd2cafae",
+        "pixelSha256": "285b3b97fb1553817aa673b1b9e27bc18040eab2dba9e4fa047f2a96e7980645",
         "perceptualHashes": [
           "0000111111001111011001100011000000110001001100010111001101111000",
           "0000111111001111011011110111000000110000001000110011001101110000",
-          "0000011011001111010001111111010010110000001000110011011000110101"
+          "0000011011001111010001111111010010110000001000110011001100110101"
         ]
       },
       "outputFingerprint": {
-        "sha256": "b856e03527f03740c2f714a1a794c9a72fb270df74d040d4483e7c065811da8c",
-        "pixelSha256": "c6d24fa695c6140eb68e4e88139d5fbc2319df582ccea1ef78b55474aa9fb3f5",
+        "sha256": "a4877c0280c0fc3650e4214bc93e0a70812cbd7b9e9f72db1da84ff88988b13e",
+        "pixelSha256": "179b13f9996455e2a9e654a41fa2aef9e67370544b405253e016e317824c38e0",
         "perceptualHashes": [
           "0000111111001111011001100011000000110001001100010111001101111000",
-          "0000111111001111011011110111000000110000001000110011001101110000",
-          "0000011011001111010001111111010000110000001000110011011100110101"
+          "0000111111001111011001110111000000110000001100110011001101110000",
+          "0000011011001111010001111111010010110000001000110011001100110101"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

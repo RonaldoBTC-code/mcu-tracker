@@ -8,7 +8,7 @@
     {
       "id": "th-spider-student",
       "country": "TH",
-      "image": "data/memes/TH/images/th-spider-student.webp",
+      "image": "data/memes/TH/images/th-spider-student-1280-a9ee16b46796.webp",
       "source": "https://www.sanook.com/men/13421/",
       "title": "Spider-Man también llega a clase con mochila",
       "location": "Bangkok, University of the Thai Chamber of Commerce",
@@ -28,10 +28,38 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Sanook / PPTV",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man también llega a clase con mochila",
-      "width": 576,
-      "height": 768,
-      "bytes": 53206,
+      "width": 720,
+      "height": 960,
+      "sourceWidth": 720,
+      "sourceHeight": 960,
+      "bytes": 138664,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 480,
+          "height": 640,
+          "sha256": "995e9badb22ce930c1cb1cf65b39e18582f1a455e173ac777da94d6106c5d8fe",
+          "image": "data/memes/TH/images/th-spider-student-640-995e9badb22c.webp",
+          "bytes": 81076
+        },
+        {
+          "edge": 1280,
+          "width": 720,
+          "height": 960,
+          "sha256": "a9ee16b46796443880f70de9ec0d65a0b57a9e1e71a16d4c210c3bb8714d6815",
+          "image": "data/memes/TH/images/th-spider-student-1280-a9ee16b46796.webp",
+          "bytes": 138664
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "d71a0cb1cb096b26bbb49a2ee189c9dd3d8bc4ffd534e253244ea6504761adcf",
@@ -43,20 +71,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "f2dd0a07485b4592db0405514deaed34c929cbd5e51190ad439781dcc0d479dd",
-        "pixelSha256": "01ae71c0641ad4f1cc4d6beea50c087ea1140ca8ba1ec1e5e36606d866633cdd",
+        "sha256": "a9ee16b46796443880f70de9ec0d65a0b57a9e1e71a16d4c210c3bb8714d6815",
+        "pixelSha256": "79145a656b12fdd91be991889e5039f404fa8c0122fd4c8e39976fab64e69644",
         "perceptualHashes": [
-          "0010001100110110101111000010010100000110101001111111010101001001",
-          "0011101100110110101111000011100100000110101001101101010100001001",
+          "0010001100110110101111000010010100000110101011101111010101001001",
+          "0010101100110110101111000011100100000111101001101101010100001001",
           "0010001100110101101111000011101100000111101001101010010100001011"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "th-spider-yogurt",
       "country": "TH",
-      "image": "data/memes/TH/images/th-spider-yogurt.webp",
+      "image": "data/memes/TH/images/th-spider-yogurt-1280-1c58bc2657e6.webp",
       "source": "https://www.nationthailand.com/in-focus/40006400",
       "title": "Spider-Man vende yogur por la ventanilla del auto",
       "location": "Sukhothai, cruce Krachong, distrito Mueang",
@@ -76,10 +104,46 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "The Nation Thailand",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man vende yogur por la ventanilla del auto",
-      "width": 768,
-      "height": 433,
-      "bytes": 24038,
+      "width": 1280,
+      "height": 721,
+      "sourceWidth": 2000,
+      "sourceHeight": 1127,
+      "bytes": 94934,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 361,
+          "sha256": "f9174374247b9777e997d8e89b0f555c645e6fbdc887d00622f37d17016729ef",
+          "image": "data/memes/TH/images/th-spider-yogurt-640-f9174374247b.webp",
+          "bytes": 35972
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 721,
+          "sha256": "1c58bc2657e6eef717b1abd48da18145e7d1b74e3ee2ffc67213d44ffd81833b",
+          "image": "data/memes/TH/images/th-spider-yogurt-1280-1c58bc2657e6.webp",
+          "bytes": 94934
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1082,
+          "sha256": "3fd818ca043e660b6fe8595dca7102b334d6b2807c05aab5ac608964b60c0555",
+          "image": "data/memes/TH/images/th-spider-yogurt-1920-3fd818ca043e.webp",
+          "bytes": 163338
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "0bda77777fb33de99dee588a6fc3d40194784bc1c9db0364904d02ce77afa6e3",
@@ -91,20 +155,20 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "0d88edef09430f894eaf54accb8a182370082090f5d90b063cf66efd8d293205",
-        "pixelSha256": "d1f32fc22d2fc92112ff14ca9660634f3bc5775dd626cb9aef545546dea42022",
+        "sha256": "1c58bc2657e6eef717b1abd48da18145e7d1b74e3ee2ffc67213d44ffd81833b",
+        "pixelSha256": "ad0f0a4a63e158233222fe9f774631490fffe5ffaba6384c5b3ed1c8c3b83da0",
         "perceptualHashes": [
           "0000100001111100111001011011001111000110101100011010001110001100",
           "0000100001111100101010010011001111000110101100111110001110110000",
           "0000100001001100101010110001011111001110001100111100011110111000"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     },
     {
       "id": "th-spider-vegetables",
       "country": "TH",
-      "image": "data/memes/TH/images/th-spider-vegetables.webp",
+      "image": "data/memes/TH/images/th-spider-vegetables-1280-51ca346b6413.webp",
       "source": "https://www.dailynews.co.th/news/180414/",
       "title": "Spider-Man atiende su puesto de verduras",
       "location": "Sanam Chai, Mueang, Suphan Buri",
@@ -113,7 +177,7 @@
         "statement": "Daily News identifica el mercado de Sanam Chai, distrito Mueang, provincia de Suphan Buri, en el primer párrafo del reportaje sobre Montri Pho Thong.",
         "verifiedOn": "2026-10-10"
       },
-      "imageURL": "https://www.dailynews.co.th/wp-content/uploads/2021/08/IMG_8202-1024x883.jpg",
+      "imageURL": "https://www.dailynews.co.th/wp-content/uploads/2021/08/IMG_8202.jpg",
       "creator": null,
       "license": null,
       "licenseUrl": null,
@@ -124,14 +188,51 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "Daily News",
+      "sourceResolution": {
+        "width": 1253,
+        "height": 1080
+      },
+      "sourceRetrieval": {
+        "verifiedOn": "2026-10-11",
+        "method": "Original or larger publisher file explicitly linked in primary article",
+        "original": true
+      },
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": true,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man atiende su puesto de verduras",
-      "width": 768,
-      "height": 662,
-      "bytes": 73380,
+      "width": 1253,
+      "height": 1080,
+      "sourceWidth": 1253,
+      "sourceHeight": 1080,
+      "bytes": 296024,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 552,
+          "sha256": "ab4a24f72daa3e2cf104c813a897f2b443739c4452e45e86fa93a73f4e2568bf",
+          "image": "data/memes/TH/images/th-spider-vegetables-640-ab4a24f72daa.webp",
+          "bytes": 117288
+        },
+        {
+          "edge": 1280,
+          "width": 1253,
+          "height": 1080,
+          "sha256": "51ca346b64138e07a7bf3a60e83dd615379c4880d86aa1b9adfe1297d5060d5d",
+          "image": "data/memes/TH/images/th-spider-vegetables-1280-51ca346b6413.webp",
+          "bytes": 296024
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
-        "sha256": "7a58dea33831653b050559a1f2201d185616e686247373991b37d103879b99f9",
-        "pixelSha256": "9a5a32a6d7590bbe6fdc4efce49056aaffd1b8f79438df3aea909e8ba3e8e9da",
+        "sha256": "a0bb7c453f59a9b46169d9fd38c16b5a55c538af2f42c07349485c4a2a840f8b",
+        "pixelSha256": "438013f731cbcbe4c50c555bd62c1d55eebb3fa6d1e22c2d65343dd351ae1ecc",
         "perceptualHashes": [
           "0110000110010101100101110100111001001011010000000001110111110110",
           "0110101010100101100101010100111001001011010010010000110111100110",
@@ -139,15 +240,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "69d321176cbe5e97bd57afd041220d3890056087ccbfcdd7581b4bb9ed2c4e1b",
-        "pixelSha256": "58e79872e18c8f4b314c7236349ad55e4a3db01ceb6ec4cc44c8df847c8094b4",
+        "sha256": "51ca346b64138e07a7bf3a60e83dd615379c4880d86aa1b9adfe1297d5060d5d",
+        "pixelSha256": "d91841019d2be592e39cb6dbd951e83f49aa4c59e4d3b52b8c1cbb5236919865",
         "perceptualHashes": [
           "0110000110010101100101110100111001001011010000000001110111110110",
           "0110101010100101100101010100111001001011010010010000110111100110",
           "0110100010100100100101110100111011000010010110010100101111000111"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }

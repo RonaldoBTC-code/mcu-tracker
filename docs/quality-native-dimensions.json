@@ -1,0 +1,375 @@
+{
+  "checkedAt": "2026-10-11T18:11:06.809Z",
+  "commonsFiles": 46,
+  "checks": [
+    {
+      "id": "ph-spider-dragon",
+      "expectedWidth": 4625,
+      "expectedHeight": 3057,
+      "actualWidth": 4625,
+      "actualHeight": 3057,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-iron-board",
+      "expectedWidth": 1987,
+      "expectedHeight": 2896,
+      "actualWidth": 1987,
+      "actualHeight": 2896,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-deadpool-iron",
+      "expectedWidth": 1186,
+      "expectedHeight": 1553,
+      "actualWidth": 1186,
+      "actualHeight": 1553,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-iron-pikachu",
+      "expectedWidth": 2873,
+      "expectedHeight": 2051,
+      "actualWidth": 2873,
+      "actualHeight": 2051,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-iron-buzz",
+      "expectedWidth": 1424,
+      "expectedHeight": 2144,
+      "actualWidth": 1424,
+      "actualHeight": 2144,
+      "exactDimensions": true
+    },
+    {
+      "id": "be-deadpool-throne",
+      "expectedWidth": 3376,
+      "expectedHeight": 6000,
+      "actualWidth": 3376,
+      "actualHeight": 6000,
+      "exactDimensions": true
+    },
+    {
+      "id": "be-deadpool-duff",
+      "expectedWidth": 3072,
+      "expectedHeight": 5158,
+      "actualWidth": 3072,
+      "actualHeight": 5158,
+      "exactDimensions": true
+    },
+    {
+      "id": "be-deadpool-spider",
+      "expectedWidth": 6001,
+      "expectedHeight": 3376,
+      "actualWidth": 6001,
+      "actualHeight": 3376,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-iron-fanexpo",
+      "expectedWidth": 2448,
+      "expectedHeight": 3264,
+      "actualWidth": 2448,
+      "actualHeight": 3264,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-deadpools-throne",
+      "expectedWidth": 3312,
+      "expectedHeight": 4968,
+      "actualWidth": 3312,
+      "actualHeight": 4968,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-spider-tube",
+      "expectedWidth": 610,
+      "expectedHeight": 800,
+      "actualWidth": 610,
+      "actualHeight": 800,
+      "exactDimensions": true
+    },
+    {
+      "id": "fr-spider-hospital",
+      "expectedWidth": 4032,
+      "expectedHeight": 3024,
+      "actualWidth": 4032,
+      "actualHeight": 3024,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-deadpool-maid",
+      "expectedWidth": 2513,
+      "expectedHeight": 4272,
+      "actualWidth": 2513,
+      "actualHeight": 4272,
+      "exactDimensions": true
+    },
+    {
+      "id": "fr-deadpool-sailor",
+      "expectedWidth": 3376,
+      "expectedHeight": 6001,
+      "actualWidth": 3376,
+      "actualHeight": 6001,
+      "exactDimensions": true
+    },
+    {
+      "id": "fr-deadpool-2019",
+      "expectedWidth": 3269,
+      "expectedHeight": 5472,
+      "actualWidth": 3269,
+      "actualHeight": 5472,
+      "exactDimensions": true
+    },
+    {
+      "id": "jp-deadpool-market",
+      "expectedWidth": 4000,
+      "expectedHeight": 6000,
+      "actualWidth": 4000,
+      "actualHeight": 6000,
+      "exactDimensions": true
+    },
+    {
+      "id": "jp-spider-crossing",
+      "expectedWidth": 4000,
+      "expectedHeight": 6000,
+      "actualWidth": 4000,
+      "actualHeight": 6000,
+      "exactDimensions": true
+    },
+    {
+      "id": "sv-stan-spider",
+      "expectedWidth": 2592,
+      "expectedHeight": 4608,
+      "actualWidth": 2592,
+      "actualHeight": 4608,
+      "exactDimensions": true
+    },
+    {
+      "id": "il-spider-purim",
+      "expectedWidth": 2146,
+      "expectedHeight": 3219,
+      "actualWidth": 2146,
+      "actualHeight": 3219,
+      "exactDimensions": true
+    },
+    {
+      "id": "es-spider-plaza",
+      "expectedWidth": 2418,
+      "expectedHeight": 3446,
+      "actualWidth": 2418,
+      "actualHeight": 3446,
+      "exactDimensions": true
+    },
+    {
+      "id": "es-spider-smoking",
+      "expectedWidth": 2258,
+      "expectedHeight": 3454,
+      "actualWidth": 2258,
+      "actualHeight": 3454,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-spider-hawaiian",
+      "expectedWidth": 2848,
+      "expectedHeight": 4272,
+      "actualWidth": 2848,
+      "actualHeight": 4272,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-miku-maid",
+      "expectedWidth": 2848,
+      "expectedHeight": 4272,
+      "actualWidth": 2848,
+      "actualHeight": 4272,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-deadpool-redhood",
+      "expectedWidth": 2848,
+      "expectedHeight": 4272,
+      "actualWidth": 2848,
+      "actualHeight": 4272,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-deadpool-brainslug",
+      "expectedWidth": 2848,
+      "expectedHeight": 4272,
+      "actualWidth": 2848,
+      "actualHeight": 4272,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-deadpool-chicken",
+      "expectedWidth": 2848,
+      "expectedHeight": 4272,
+      "actualWidth": 2848,
+      "actualHeight": 4272,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-photobomb-pileup",
+      "expectedWidth": 4272,
+      "expectedHeight": 2848,
+      "actualWidth": 4272,
+      "actualHeight": 2848,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-deadpool-pope",
+      "expectedWidth": 2448,
+      "expectedHeight": 3264,
+      "actualWidth": 2448,
+      "actualHeight": 3264,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-deadpool-lego",
+      "expectedWidth": 934,
+      "expectedHeight": 724,
+      "actualWidth": 934,
+      "actualHeight": 724,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-spider-frog",
+      "expectedWidth": 5184,
+      "expectedHeight": 3456,
+      "actualWidth": 5184,
+      "actualHeight": 3456,
+      "exactDimensions": true
+    },
+    {
+      "id": "ca-deadpool-lantern",
+      "expectedWidth": 2048,
+      "expectedHeight": 1365,
+      "actualWidth": 2048,
+      "actualHeight": 1365,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-spider-thor",
+      "expectedWidth": 2454,
+      "expectedHeight": 3068,
+      "actualWidth": 2454,
+      "actualHeight": 3068,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-deadtrooper",
+      "expectedWidth": 5184,
+      "expectedHeight": 3456,
+      "actualWidth": 5184,
+      "actualHeight": 3456,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-captain-spider",
+      "expectedWidth": 2441,
+      "expectedHeight": 3158,
+      "actualWidth": 2441,
+      "actualHeight": 3158,
+      "exactDimensions": true
+    },
+    {
+      "id": "us-deadpool-elsa",
+      "expectedWidth": 3000,
+      "expectedHeight": 4000,
+      "actualWidth": 3000,
+      "actualHeight": 4000,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-deadpool-captain",
+      "expectedWidth": 2077,
+      "expectedHeight": 3121,
+      "actualWidth": 2077,
+      "actualHeight": 3121,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-deadpool-sombrero",
+      "expectedWidth": 4147,
+      "expectedHeight": 2962,
+      "actualWidth": 4147,
+      "actualHeight": 2962,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-deadpool-wedding",
+      "expectedWidth": 5184,
+      "expectedHeight": 3456,
+      "actualWidth": 5184,
+      "actualHeight": 3456,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-deadpool-kimono",
+      "expectedWidth": 1356,
+      "expectedHeight": 2047,
+      "actualWidth": 1356,
+      "actualHeight": 2047,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-deadpool-maid",
+      "expectedWidth": 5388,
+      "expectedHeight": 3592,
+      "actualWidth": 5388,
+      "actualHeight": 3592,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-pikachu-thor",
+      "expectedWidth": 2047,
+      "expectedHeight": 1356,
+      "actualWidth": 2047,
+      "actualHeight": 1356,
+      "exactDimensions": true
+    },
+    {
+      "id": "gb-thor-bike",
+      "expectedWidth": 4274,
+      "expectedHeight": 2845,
+      "actualWidth": 4274,
+      "actualHeight": 2845,
+      "exactDimensions": true
+    },
+    {
+      "id": "be-deadpool-hood",
+      "expectedWidth": 2265,
+      "expectedHeight": 5314,
+      "actualWidth": 2265,
+      "actualHeight": 5314,
+      "exactDimensions": true
+    },
+    {
+      "id": "be-captain-wolverine",
+      "expectedWidth": 2730,
+      "expectedHeight": 4958,
+      "actualWidth": 2730,
+      "actualHeight": 4958,
+      "exactDimensions": true
+    },
+    {
+      "id": "be-captain-fett",
+      "expectedWidth": 3782,
+      "expectedHeight": 5791,
+      "actualWidth": 3782,
+      "actualHeight": 5791,
+      "exactDimensions": true
+    },
+    {
+      "id": "fr-pikachu-captain",
+      "expectedWidth": 2934,
+      "expectedHeight": 5616,
+      "actualWidth": 2934,
+      "actualHeight": 5616,
+      "exactDimensions": true
+    }
+  ],
+  "result": "PASS"
+}

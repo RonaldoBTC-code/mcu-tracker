@@ -8,7 +8,7 @@
     {
       "id": "ec-spider-bus",
       "country": "EC",
-      "image": "data/memes/EC/images/ec-spider-bus.webp",
+      "image": "data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp",
       "source": "https://www.extra.ec/noticia/buena-vida/spiderman-personajes-curiosidades-marvel-guayaquil-2758846-7330.html",
       "title": "Spider-Man cambia la telaraña por un bus urbano",
       "location": "Guayaquil, avenida del Periodista",
@@ -28,10 +28,46 @@
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
       "publisher": "EXTRA",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "notes": "Gag y encuadre visibles en revisión completa; conservar originales, proporción y detalle al tamaño de dibujo.",
+        "sourceOriginalRecovered": false,
+        "displayEvidence": "docs/browser-quality-results.json"
+      },
       "alt": "Spider-Man cambia la telaraña por un bus urbano",
-      "width": 768,
-      "height": 512,
-      "bytes": 24660,
+      "width": 1280,
+      "height": 853,
+      "sourceWidth": 2000,
+      "sourceHeight": 1333,
+      "bytes": 94914,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 640,
+          "height": 426,
+          "sha256": "6f3777d8090db5c81683e9d973640f3ec676c0c755f1169fa89ce56438cdc6a7",
+          "image": "data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp",
+          "bytes": 36820
+        },
+        {
+          "edge": 1280,
+          "width": 1280,
+          "height": 853,
+          "sha256": "b3bf13a06776d83688885185883a762e2245eafd417a87c4ec93af41c0bf5858",
+          "image": "data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp",
+          "bytes": 94914
+        },
+        {
+          "edge": 1920,
+          "width": 1920,
+          "height": 1280,
+          "sha256": "57317011295d036387e3154578e588698d0f4f70cc7cb30542b8c761d82211cb",
+          "image": "data/memes/EC/images/ec-spider-bus-1920-57317011295d.webp",
+          "bytes": 167918
+        }
+      ],
       "scope": "geographic",
       "originalFingerprint": {
         "sha256": "9bf9bb889b2240a104b9712c992e10ead76e8da0ac111da3331ff177248d74a8",
@@ -43,15 +79,15 @@
         ]
       },
       "outputFingerprint": {
-        "sha256": "96671622ff8f5617963bff131c80504785bd49f9f6b8c84d6dce1226a8c1d057",
-        "pixelSha256": "744b52e76e7d1580a144755ddac18f79ac77c0311a780d32577a4e7a8d109f30",
+        "sha256": "b3bf13a06776d83688885185883a762e2245eafd417a87c4ec93af41c0bf5858",
+        "pixelSha256": "1e6238c42b55a1c012c525f43eddf3c8d1829d186618d123843412c7405465d7",
         "perceptualHashes": [
           "0110101100110100110011001010011001111001001000110000100110110110",
           "0110001100110100110011001000011101111011001000010010100110110101",
-          "0110001000111101110011001000011101111111000000000011100100111001"
+          "0010001000111101110011011000011101111111000000000011100100111001"
         ]
       },
-      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
     }
   ]
 }
