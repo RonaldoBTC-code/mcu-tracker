@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-11T01:13:24.256Z",
+  "result": "PASS",
+  "network": "simulated; no production writes",
+  "checks": [
+    {
+      "name": "Landing: lote inicial, país único, scroll sin duplicados y fin real",
+      "status": "PASS"
+    },
+    {
+      "name": "Doble clic: una petición, estado confirmado, retirar y recargar",
+      "status": "PASS"
+    },
+    {
+      "name": "Cambio A→B: JWT capturado, respuesta tardía no cambia B",
+      "status": "PASS"
+    },
+    {
+      "name": "Vista: menos de un segundo no cuenta; reentrada y recarga deduplicadas",
+      "status": "PASS"
+    },
+    {
+      "name": "Guía superpuesta e invitado no generan vistas",
+      "status": "PASS"
+    },
+    {
+      "name": "Fallo de red: sin éxito ficticio; reconsulta recupera estado",
+      "status": "PASS"
+    },
+    {
+      "name": "Cambiar país cancela colección antigua y rechaza contadores inválidos",
+      "status": "PASS"
+    }
+  ]
+}

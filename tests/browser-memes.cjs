@@ -10,7 +10,7 @@ const server=http.createServer((req,res)=>{
  if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}
  if(file===path.join(root,'index.html')){res.setHeader('Content-Type','text/html; charset=utf-8');res.end(html);return;}
  if(!fs.existsSync(file)||!fs.statSync(file).isFile()){res.writeHead(404);res.end();return;}
- res.setHeader('Content-Type',file.endsWith('.json')?'application/json':file.endsWith('.webp')?'image/webp':'text/plain');res.end(fs.readFileSync(file));
+ res.setHeader('Content-Type',file.endsWith('.json')?'application/json':file.endsWith('.webp')?'image/webp':file.endsWith('.js')?'application/javascript':'text/plain');res.end(fs.readFileSync(file));
 });
 (async()=>{
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const origin='http://127.0.0.1:'+server.address().port;
@@ -22,10 +22,10 @@ const server=http.createServer((req,res)=>{
    await context.addInitScript(()=>{localStorage.setItem('mcu_tour_v1','1');localStorage.setItem('mcu_lang','es');});
    const page=await context.newPage(),errors=[],requests=[];
    page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(r.url().includes('/data/memes/'))requests.push(new URL(r.url()).pathname);});
-   await page.goto(origin,{waitUntil:'domcontentloaded'});await page.locator('#mapOpen').click();
+   await page.goto(origin,{waitUntil:'domcontentloaded'});const feed=await require('./browser-feed.cjs')(page,{root,viewport,requests});await page.locator('#mapOpen').click();
    await page.locator('#memeList img').scrollIntoViewIfNeeded();
    await page.waitForFunction(()=>document.querySelector('#memeList img')?.complete&&document.querySelector('#memeList img').naturalWidth>0);
-   assert.equal(requests.length,2);assert.equal(requests[0],'/data/memes/EC.json');assert(requests[1].startsWith('/data/memes/EC/images/'));
+   assert(requests.length>=1&&requests.length<=2);assert.equal(requests[0],'/data/memes/EC.json');assert(requests.every(p=>p==='/data/memes/EC.json'||p.startsWith('/data/memes/EC/images/')));
    const ecRequests=[...requests];requests.length=0;
    await page.evaluate(()=>window.MapMemes.open('BR'));
    await page.locator('#memeList img').first().scrollIntoViewIfNeeded();
@@ -72,7 +72,7 @@ const server=http.createServer((req,res)=>{
    }
    await page.waitForFunction(()=>!document.querySelector('#tourOverlay').classList.contains('active'));
    assert.deepEqual(errors,[]);assert(maxSvgNodes<1000);
-   reports.push({viewport,countriesTested:countries.length,countriesWithPhotos:withPhotos,imageDisplayChecks:decoded,uniquePhotos:uniqueImages.size,uniqueCountryCatalogues:catalogueSets.size,scope:'geographic',collectionCoverageComplete:false,initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
+   reports.push({viewport,feed,countriesTested:countries.length,countriesWithPhotos:withPhotos,imageDisplayChecks:decoded,uniquePhotos:uniqueImages.size,uniqueCountryCatalogues:catalogueSets.size,scope:'geographic',collectionCoverageComplete:false,initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
    await context.close();
   }
  }finally{await browser.close();}

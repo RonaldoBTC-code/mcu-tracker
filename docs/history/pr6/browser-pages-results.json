@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T00:25:42.641Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 7,
+    "imageDisplayChecks": 28,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 8,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
+    ],
+    "maxCountryOpenMs": 145,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-11T00:26:06.973Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 7,
+    "imageDisplayChecks": 28,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 8,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
+    ],
+    "maxCountryOpenMs": 128,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

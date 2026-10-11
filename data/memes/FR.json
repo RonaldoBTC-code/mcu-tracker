@@ -2,7 +2,150 @@
   "country": "FR",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "complete",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "fr-spider-hospital",
+      "country": "FR",
+      "image": "data/memes/FR/images/fr-spider-hospital.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg",
+      "title": "Spider-Man visita el hospital colgado boca abajo",
+      "location": "Lille, Centre Oscar-Lambret",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg",
+        "statement": "La descripción identifica el norte de Francia; la categoría geográfica ubica Centre Oscar-Lambret, Lille.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg/960px-Rope_Access_SpiderMan_on_a_child_hospital_in_Northern_France.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Globe Zero",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man visita el hospital colgado boca abajo",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Spider-Man visita el hospital colgado boca abajo",
+      "width": 768,
+      "height": 576,
+      "bytes": 40392,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "3d1d70973b063c1758500e9748368042992829f7600a40dda8fe7d00d797f3e4",
+        "pixelSha256": "3c1f5f39216e52e4d503905ecb122bb60256e682166ed32d5c60c55cffa0feda",
+        "perceptualHashes": [
+          "0110010100110010010010110000110000001111101000111011000111110011",
+          "0110010000110010010010110001110001001111100111111000100110100110",
+          "0110110000110001010110100001110001001111100010111000100110100111"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "8be3a9421ae0bb5aa572a3ea25aa0816b49544c7a8dd8fa36c0ebd57a4e97a6b",
+        "pixelSha256": "392e63878cc65efd56fa62b05a1984ef9c630d7c8f2d0d147b259012de4df2cd",
+        "perceptualHashes": [
+          "0110010100110010010010110000110000001111101000111011000111100111",
+          "0110010000110010010010110001110001001111100111111000100110100110",
+          "0110110000110001010110100001110001001111100010111000100110100111"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "fr-deadpool-sailor",
+      "country": "FR",
+      "image": "data/memes/FR/images/fr-deadpool-sailor.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_female_Deadpool_at_Japan_Expo_2016_(29105603664).jpg",
+      "title": "Deadpool se disfraza de Sailor Moon",
+      "location": "Paris-Nord Villepinte, Japan Expo 2016",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Cosplay_of_female_Deadpool_at_Japan_Expo_2016_(29105603664).jpg",
+        "statement": "La descripción ubica Japan Expo en Paris-Nord Villepinte, Francia; la categoría identifica la mezcla con Sailor Moon.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg/960px-Cosplay_of_female_Deadpool_at_Japan_Expo_2016_%2829105603664%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool se disfraza de Sailor Moon",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool se disfraza de Sailor Moon",
+      "width": 432,
+      "height": 768,
+      "bytes": 28080,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "2bd7fa6c95bcad6b519d172f389a818e66fa8268a4282a0b3bfa920dc198430a",
+        "pixelSha256": "9776f6cadfa20fbc2c28a3633c99232c52934d78cb6c6e64820381d59e036d51",
+        "perceptualHashes": [
+          "0111111010000111110100000101101001111001011100000100011000100110",
+          "0110111010000111110101101001100000111001011110000100011000100110",
+          "0110010010100010110101101001101000011000110110010110011101101100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "5bff910de0958a00d7ec51bc687c259dc2db2aa19ce6403b82f530bd87b55df2",
+        "pixelSha256": "c9db8d95fef0177361cbc12cc096e66743b11e930b1927aa4d76cb3542abc4ba",
+        "perceptualHashes": [
+          "0111111010000111110100000101101001111001011100000100011000100110",
+          "0110111010000111110101101001100000111001011110000100011000100110",
+          "0110010010100010110101101001101000011000110110010110011101111000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "fr-deadpool-2019",
+      "country": "FR",
+      "image": "data/memes/FR/images/fr-deadpool-2019.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Japan_Expo_2019_(48381081197).jpg",
+      "title": "Deadpool cambia las espadas por una falda de hula",
+      "location": "Paris-Nord Villepinte, Japan Expo 2019",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Deadpool_at_Japan_Expo_2019_(48381081197).jpg",
+        "statement": "La descripción del fotógrafo sitúa Japan Expo 2019 en Paris-Nord Villepinte, Francia.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg/960px-Cosplay_of_Deadpool_at_Japan_Expo_2019_%2848381081197%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool cambia las espadas por una falda de hula",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool cambia las espadas por una falda de hula",
+      "width": 459,
+      "height": 768,
+      "bytes": 77964,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "83ccebe2dc9087258cbe745fafc8846b6fc04728f642c5a384b33c3abf155957",
+        "pixelSha256": "dd5553397ff058c2c068064c1e6f046876f7569f8f77109179f9647c5295f759",
+        "perceptualHashes": [
+          "0111010001000011100011001111100001001011101111000001001101011010",
+          "0111010001000011101011001111000001001001101101001001101111010010",
+          "0111010001000011101011001111000101100001101011001001100011010110"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "abcfb594e07fee74d1e0acf602d19817d4780ba7aa72342afa772ce9d9d37fdc",
+        "pixelSha256": "23d7ad579bbc6a0722a90559d0effaa82c7abcf06c9d2b553746c3792fac7477",
+        "perceptualHashes": [
+          "0111010001000011100011001111100001001011101111000001001101011010",
+          "0111010001000011101011001111000001001001101101001001101111010010",
+          "0111010001000011101011001111000101100001101011001001100011010110"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

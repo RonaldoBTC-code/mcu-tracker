@@ -2,7 +2,56 @@
   "country": "CL",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "cl-spider-cueca",
+      "country": "CL",
+      "image": "data/memes/CL/images/cl-spider-cueca.webp",
+      "source": "https://www.13.cl/ar13/viral/dr-simi-y-spiderman-se-lucen-con-pie-de-cueca-en-pleno-centro-de-santiago",
+      "title": "Spider-Man baila cueca con el Dr. Simi",
+      "location": "Santiago, Paseo Bandera",
+      "countryEvidence": {
+        "url": "https://www.13.cl/ar13/viral/dr-simi-y-spiderman-se-lucen-con-pie-de-cueca-en-pleno-centro-de-santiago",
+        "statement": "Canal 13 sitúa el baile de cueca de Spider-Man y Dr. Simi en Paseo Bandera, centro de Santiago.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://s.13.cl/sites/default/files/styles/manualcrop_1600x800/public/ar13/field-imagen/2019-09/simi.jpg.jpeg?itok=-lIV4H7G",
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man baila cueca con el Dr. Simi",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Canal 13 / captura del video",
+      "alt": "Spider-Man baila cueca con el Dr. Simi",
+      "width": 768,
+      "height": 482,
+      "bytes": 20166,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "0e12d7487d4d826b3ee896b88dc25106701e5dec88a8f8638dee83fd623ba4da",
+        "pixelSha256": "352995068bf84c6f3d64ccc79acba8ef8fe592444bdca6b78efd6c2121892f9d",
+        "perceptualHashes": [
+          "0001011001110111111010010111000001100011110010110111000000001001",
+          "0001010001110110111010000111010001100011111011101111000000001001",
+          "0001010001100111110010000011010101100001011101111111000100110001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "e39f1b11fa91e3f0f6fc77d7d444fea78d0f38e76ed50428593fa1f3e40724ff",
+        "pixelSha256": "d0f6382ea9b5d34ab30bcad1c59607cf55f282fc7ac0e7288059ce7a683ff4ac",
+        "perceptualHashes": [
+          "0001011001110111111010010111000001100011110010110111000000001001",
+          "0001010001110110111010000111010001100011111011101111000000001001",
+          "0001010001100111110010000011010101100001011101111111000100110001"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

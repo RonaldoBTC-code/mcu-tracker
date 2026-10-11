@@ -2,7 +2,104 @@
   "country": "JP",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "jp-deadpool-market",
+      "country": "JP",
+      "image": "data/memes/JP/images/jp-deadpool-market.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Comic_Market_96_Day_2_Cosplayers_(48600288981).jpg",
+      "title": "Deadpool se pone orejas de conejo junto a Spider-Man",
+      "location": "Tokio, Comic Market 96",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Comic_Market_96_Day_2_Cosplayers_(48600288981).jpg",
+        "statement": "La categoría sitúa la foto en Comic Market 96, segundo día; el evento es en Tokio, Japón.",
+        "verifiedOn": "2026-10-10",
+        "corroboratingUrl": "https://www.comiket.co.jp/info-a/TAFO/C96TAFO/cmkfor_eng.html"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Comic_Market_96_Day_2_Cosplayers_%2848600288981%29.jpg/960px-Comic_Market_96_Day_2_Cosplayers_%2848600288981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Dick Thomas Johnson from Tokyo, Japan",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "characters": [
+        "Deadpool",
+        "Spider-Man"
+      ],
+      "visualGag": "Deadpool se pone orejas de conejo junto a Spider-Man",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Deadpool se pone orejas de conejo junto a Spider-Man",
+      "width": 512,
+      "height": 768,
+      "bytes": 74970,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "d6aae7801f4fe2e0198e2edf3b3742f577c80cde489feaa67e2743626e693209",
+        "pixelSha256": "8516062278b695c87be61e66803b4b8becb8855a8d4a7653ee817d995cd69c71",
+        "perceptualHashes": [
+          "0111110111000000110001110111110011000011100101001001011000101000",
+          "0011110111100000110101110110010111100001100100011001011000100100",
+          "0011110011100011100101010110011101100000100100011011010110100100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "3a29348fdff5d00e41c9ff1321a02f62f37871133cbbae38a57710ff9f601eda",
+        "pixelSha256": "08aee8a056977bea948120abb05705ab1f5bd18fb1c3c27cdbe9f3e70a7b35d3",
+        "perceptualHashes": [
+          "0111110111000000110001110111110011000011100101001001011000101000",
+          "0011110111100000110101110110010111100011100100011001011000000100",
+          "0011110011100011100101010110011101100000100100011011010110100100"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "jp-spider-crossing",
+      "country": "JP",
+      "image": "data/memes/JP/images/jp-spider-crossing.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_(53083700164).jpg",
+      "title": "Spider-Man hace equilibrio sobre una bicicleta",
+      "location": "Tokio, cruce de Shibuya",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing_(53083700164).jpg",
+        "statement": "Descripción y categorías identifican el cruce de Shibuya, Tokio, Japón, y la actuación callejera de Spider-Man.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Shibuya_Crossing_%2853083700164%29.jpg/960px-Shibuya_Crossing_%2853083700164%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Dick Thomas Johnson from Tokyo, Japan",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man hace equilibrio sobre una bicicleta",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Spider-Man hace equilibrio sobre una bicicleta",
+      "width": 512,
+      "height": 768,
+      "bytes": 91588,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "729f009835bcdc84c2093cf287035cfe64104ddd9a32a2fa1403d869f341cf5e",
+        "pixelSha256": "09b60804f67e9c234b32a4e6c0b2d6209c3be7487b2e1477afc6278ddd5e1117",
+        "perceptualHashes": [
+          "0100110110001101110011000011100111000000011001101101011010101100",
+          "0100110111001001100011010011100111000000001100001101011010101111",
+          "0100100111001001100011010011100111101000001101001110011000011011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "a004db0e9271a45e19ed1b5ee6d10754149902ab8a5e40b4f2218505d019595e",
+        "pixelSha256": "38ec7fd42cf29f5d5ac67477e77808af8b30f97443a8c01517471c5065e53adf",
+        "perceptualHashes": [
+          "0100110110001101110011000011100111000000011001101101011010101100",
+          "0100110111001001100011010011100111000000001100001101011010101111",
+          "0100100111001001100011010011100111101000001101001110011000011011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

@@ -2,7 +2,153 @@
   "country": "CA",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "complete",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "ca-iron-pikachu",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-iron-pikachu.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Iron_Pikachu.jpg",
+      "title": "Iron Man mezcla su armadura con Pikachu",
+      "location": "Toronto, Fan Expo Canada 2012",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Iron_Pikachu.jpg",
+        "statement": "Las categorías de Commons identifican Fan Expo Canada 2012 y los personajes en Canadá.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Iron_Pikachu.jpg/960px-Iron_Pikachu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "GabboT",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Iron Man",
+        "Deadpool"
+      ],
+      "visualGag": "Iron Man mezcla su armadura con Pikachu",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Iron Man mezcla su armadura con Pikachu",
+      "width": 768,
+      "height": 548,
+      "bytes": 56428,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "88e8c4c1bb3c4b73c5de7532d50f14746fb223b26e93e025809bd3b698139da6",
+        "pixelSha256": "9c4e37bf28f2b9e1644be399ed865b1999e353a740b663091b9c3e9cfc9fc687",
+        "perceptualHashes": [
+          "0101000111010110110001101001111010010110111101000000100100100101",
+          "0111000011000110110001111001011010110111110101000000100010100101",
+          "0111000011100000110001111000011110110111110101000000010110110100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "0a37ca0dc53cc0024e655b3035a84eb206883fecced80c048933523afc33c23d",
+        "pixelSha256": "4b47afe79931bc4596ace83fa62b14ba40a52cb6b9072f7e8ddf42c5f75d953e",
+        "perceptualHashes": [
+          "0101000111010110110001101001111010010110111101000000100100100101",
+          "0111000011000110110001111001011010110111110101000000100010100101",
+          "0111000011100000110001111000011110110111110101000000010110110100"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-iron-fanexpo",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-iron-fanexpo.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Fan_Expo_Canada_2016_Iron_Man.jpg",
+      "title": "Iron Man cambia la armadura por un vestido de gala",
+      "location": "Toronto, Fan Expo Canada 2016",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Fan_Expo_Canada_2016_Iron_Man.jpg",
+        "statement": "La descripción de Commons identifica a Dianne Da Rosa con una variante de vestido de Iron Man en Fan Expo Canada 2016.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Fan_Expo_Canada_2016_Iron_Man.jpg/960px-Fan_Expo_Canada_2016_Iron_Man.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Nicholas Moreau",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Iron Man cambia la armadura por un vestido de gala",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Iron Man cambia la armadura por un vestido de gala",
+      "width": 576,
+      "height": 768,
+      "bytes": 61314,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "89c27df760b412651dbb34d69eabe606fe905d9c9832e93a557daa2f35bc1c52",
+        "pixelSha256": "387abb3f9d8cbc955fc63d1319e901f79c64cbee61620271cd303efebbf79ded",
+        "perceptualHashes": [
+          "0010011001011001010110010111011000111001000011011000110111011000",
+          "0010011001011001110110010111011100111011000011000000110001011100",
+          "0010011011011001110110011110011100110011000001010001110000011100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "64e9f0836486190210daa1e711a5c7324a0ccaad8c7f2c070e236fe7c97f09c7",
+        "pixelSha256": "df4370f801b9a4543201303692b48d9dcd4e2311fe1f70d5b46b68c20cbc67b2",
+        "perceptualHashes": [
+          "0010011001011001010110010111011000111001000011011000110111011000",
+          "0010011001011001110110010111011100111011000011000000110001011100",
+          "0010011011011001110110011110011100110011000001010001110000011100"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "ca-deadpool-maid",
+      "country": "CA",
+      "image": "data/memes/CA/images/ca-deadpool-maid.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_(27633930493).jpg",
+      "title": "Deadpool se vuelve gigante y sale con un unicornio",
+      "location": "Montreal, Comiccon 2016",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_(27633930493).jpg",
+        "statement": "La descripción y categorías identifican Montreal Comiccon 2016, Canadá.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_%2827633930493%29.jpg/960px-Montreal_Comiccon_2016_-_Maid_Deadpool_and_his_new_unicorn_buddy_%2827633930493%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Pikawil from Laval, Canada",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool se vuelve gigante y sale con un unicornio",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Deadpool se vuelve gigante y sale con un unicornio",
+      "width": 452,
+      "height": 768,
+      "bytes": 25856,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "39d6dff991f0a9cc4431772910b454b8de5332e9088e0225ddc6d3c52a1484fa",
+        "pixelSha256": "d011494b4eacb36e6d9f74f301376f654fb35e1eee27c1c119677f86eb50e5b2",
+        "perceptualHashes": [
+          "0100011111001011101011001010010010010010110000011111001010110100",
+          "0100010111010001001011011010010110010110110000101111001010110100",
+          "0100000011010010010011011000010110010111110000101111001010111101"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "c54bb890ed75cd7b162608a07d72d3add4f86e2b5fbd29c005b0ead10843dc7f",
+        "pixelSha256": "cb6541f6844a5e919d6d77079a0c0d9dfda7ef01976c59da555c768723ec2b24",
+        "perceptualHashes": [
+          "0100011111001011101011001010010010010010110000011111001010110100",
+          "0100010111010001001011011010010110010110110000101111001010110100",
+          "0100000011010010010011011000010110010111110000101111001010111101"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

@@ -2,7 +2,152 @@
   "country": "GB",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "complete",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "gb-iron-buzz",
+      "country": "GB",
+      "image": "data/memes/GB/images/gb-iron-buzz.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8978219177).jpg",
+      "title": "Iron Man se convierte en Buzz Lightyear",
+      "location": "Londres, ExCeL, MCM 2013",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:MCM_2013_-_Buzz_Lightyear_Iron_Man_(8978219177).jpg",
+        "statement": "La descripción sitúa esta fotografía en MCM London Comic Con, ExCeL Exhibition Centre.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/MCM_2013_-_Buzz_Lightyear_Iron_Man_%288978219177%29.jpg/960px-MCM_2013_-_Buzz_Lightyear_Iron_Man_%288978219177%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Roger Murmann from Eppertshausen, Deutschland",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "characters": [
+        "Iron Man"
+      ],
+      "visualGag": "Iron Man se convierte en Buzz Lightyear",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Iron Man se convierte en Buzz Lightyear",
+      "width": 510,
+      "height": 768,
+      "bytes": 31094,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "9baf515ebd6577a27bcda558a20da9f96e28775cf706dc09d23fdcff38ae5c09",
+        "pixelSha256": "ffd569401d3c0fa7008187f0844557eafe460661d81618cda8d41de0f9c204f1",
+        "perceptualHashes": [
+          "0001010101011011011001100010110001111011001001110010000110010101",
+          "0001110101011011011001100101110001010011011010100010100110010001",
+          "0000110101010010111001101101110101010101011010100010100100011001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "9ce3a9ee863bf987e348e8f5a93a5a704472e61c12fc80da345ae3cb95c759be",
+        "pixelSha256": "e4c46b31b2977f4da543a58da0baa1bcacf040aab2dff0e5663a4ffe9d96a115",
+        "perceptualHashes": [
+          "0001010101011011011001100010110001111011001001110010000110010101",
+          "0001110101011011011001100101110001010011011010100010100110010001",
+          "0000110111010010111001101001110101010101011010100010100100011001"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "gb-deadpools-throne",
+      "country": "GB",
+      "image": "data/memes/GB/images/gb-deadpools-throne.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:LSCC_2016_-_Deadpools_on_the_Iron_Throne_(25057706012).jpg",
+      "title": "Dos Deadpool comparten el trono con un unicornio",
+      "location": "Londres, London Super Comic Con 2016",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:LSCC_2016_-_Deadpools_on_the_Iron_Throne_(25057706012).jpg",
+        "statement": "La descripción identifica London Super Comic Con 2016 y el Trono de Hierro.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/LSCC_2016_-_Deadpools_on_the_Iron_Throne_%2825057706012%29.jpg/960px-LSCC_2016_-_Deadpools_on_the_Iron_Throne_%2825057706012%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "BatCam Photography",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Dos Deadpool comparten el trono con un unicornio",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Dos Deadpool comparten el trono con un unicornio",
+      "width": 512,
+      "height": 768,
+      "bytes": 76364,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "a2cc4e99ae23822c1caf2dccfb44e179ee108149d2b16903e3dee7b97f9e059d",
+        "pixelSha256": "f3c9ce705484fc5e280f1f8fa82c0b3629067a995e72a1e02298c1aee7521479",
+        "perceptualHashes": [
+          "0111101011000101100011001001100011110011111000001001111100100000",
+          "0111101011000111100011001001100011110000111000001001111100100100",
+          "0111010111000010100011011001100011110001110110101101100010100000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "ff7b7966952eff5de5c07cbb5fc22b35b80d770d5a28e8773fe08e8f291fee34",
+        "pixelSha256": "b4aa3f4f510f580baaad52049359619156c8a6ab244d514bb8e12b63f98c98c4",
+        "perceptualHashes": [
+          "0111101011000111100011001001100011110010111000001001111100100000",
+          "0111101011000111100011001001100011110000111000001001111100100100",
+          "0111110011000010100011011001100011110001110110101101100010100000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "gb-spider-tube",
+      "country": "GB",
+      "image": "data/memes/GB/images/gb-spider-tube.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Gloucester_Road_-_Spider-Man_(2539882747).jpg",
+      "title": "Spider-Man da una entrevista con una lata en la mano",
+      "location": "Londres, estación Gloucester Road",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Gloucester_Road_-_Spider-Man_(2539882747).jpg",
+        "statement": "La fuente del fotógrafo y las categorías identifican Gloucester Road, Londres, en la fiesta de la Circle line del 31 de mayo de 2008.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Gloucester_Road_-_Spider-Man_%282539882747%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "creator": "Annie Mole from London, UK",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man da una entrevista con una lata en la mano",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Spider-Man da una entrevista con una lata en la mano",
+      "width": 586,
+      "height": 768,
+      "bytes": 34036,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "214b1aa5d7d914cec8fceaaa668fe0c58c5d071c4b1aca5576d8c3bcd51966a0",
+        "pixelSha256": "d11c6c6f96c0da2a3164794e263bcc55fec9aa9617220a3a84e10076c40a0252",
+        "perceptualHashes": [
+          "0100010110110000100011010010011110110010110101100101100100101011",
+          "0100001110111100100011010010001110010110110101000101111100001001",
+          "0100001100111100100011110010001010110101110101110100111100001000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "0b94bca6dc9cb3dc093cf14369b7532efd6b74441c31d6f912557bb867d98020",
+        "pixelSha256": "ca309e5de204b6c170e3a743033dd5930757d8884cd58111242527ba929e31f8",
+        "perceptualHashes": [
+          "0100010110110000100011010010011110110010110101100101100100101011",
+          "0100001110111100100011010010001110010110110101000101111100001001",
+          "0100001100111100100011110010001010110101110101110100111100001000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

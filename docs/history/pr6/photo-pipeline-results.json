@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-11T00:18:28.535Z",
+  "result": "PASS",
+  "checks": [
+    "byte duplicate rejected",
+    "reencoded/resized duplicate flagged",
+    "missing location rejected",
+    "incomplete coverage gate rejected",
+    "all rejections precede public writes"
+  ],
+  "perceptualResizeDistance": 0,
+  "collectionCoverageComplete": false
+}

@@ -90,3 +90,9 @@ MIT — ver [LICENSE](LICENSE).
 La revisión del 2 de octubre de 2026 corrige el arranque con almacenamiento corrupto o bloqueado, las estrellas de la primera carga, las secciones colapsables, el foco y Escape de la guía, el enlace de acceso y errores de sincronización al cambiar de cuenta. El catálogo sigue disponible si falla la nube.
 
 Consultar [correcciones y límites](docs/entry-fixes.md), [resultados de regresión](docs/entry-fixes-results.json) y [AGENTS.md](AGENTS.md). Con Node.js 24 o posterior: `npm ci --ignore-scripts` y `npm test`. Estas pruebas no envían correos ni escriben datos reales. La validación de OTP real y navegador móvil/WebGL sigue pendiente.
+
+## Descubrimiento Marvel
+
+La portada incluye un feed vertical con país detectado/selector, imágenes progresivas y fin real. Hay 40 fotos geográficas únicas en 22 países; 44 países siguen por debajo del mínimo de tres. [Cobertura](docs/country-coverage.md) y [auditoría](docs/memes-audit.md).
+
+[Me gusta y vistas compartidas](docs/meme-feed.md) tienen frontend, migración aditiva y pruebas SQL/DOM. La persistencia real está pendiente de despliegue de Supabase. Las vistas de memes identifican cuentas autenticadas para deduplicar: una cuenta/foto de por vida; esto es distinto de site_visits. Sin backend no se muestran cifras inventadas.

@@ -1,38 +1,38 @@
-# Cobertura pendiente por país
+# Cobertura por país
 
-El mínimo operativo es tres fotos distintas con ubicación documentada. Esta solicitud sigue incompleta.
+40 fotos únicas en 22 países; siete cumplen el mínimo operativo de tres. Faltan 44 países y 29 están vacíos. La solicitud de varias fotos en cada uno de los 51 países sigue incompleta.
 
 | País | Fotos | Estado |
 |---|---:|---|
 | AE | 0 | Curación pendiente |
 | AR | 0 | Curación pendiente |
-| AT | 0 | Curación pendiente |
+| AT | 1 | Ampliación pendiente |
 | AU | 0 | Curación pendiente |
-| BE | 0 | Curación pendiente |
+| BE | 3 | Mínimo cubierto |
 | BO | 0 | Curación pendiente |
 | BR | 3 | Mínimo cubierto |
-| CA | 0 | Curación pendiente |
+| CA | 3 | Mínimo cubierto |
 | CH | 0 | Curación pendiente |
-| CL | 0 | Curación pendiente |
-| CO | 0 | Curación pendiente |
+| CL | 1 | Ampliación pendiente |
+| CO | 1 | Ampliación pendiente |
 | CR | 0 | Curación pendiente |
-| CU | 0 | Curación pendiente |
+| CU | 1 | Ampliación pendiente |
 | DE | 0 | Curación pendiente |
 | DK | 0 | Curación pendiente |
 | DO | 0 | Curación pendiente |
 | EC | 1 | Ampliación pendiente |
-| ES | 0 | Curación pendiente |
+| ES | 2 | Ampliación pendiente |
 | FI | 0 | Curación pendiente |
-| FR | 0 | Curación pendiente |
-| GB | 0 | Curación pendiente |
+| FR | 3 | Mínimo cubierto |
+| GB | 3 | Mínimo cubierto |
 | GT | 0 | Curación pendiente |
-| HN | 0 | Curación pendiente |
-| ID | 0 | Curación pendiente |
+| HN | 1 | Ampliación pendiente |
+| ID | 1 | Ampliación pendiente |
 | IE | 0 | Curación pendiente |
-| IL | 0 | Curación pendiente |
-| IN | 0 | Curación pendiente |
+| IL | 1 | Ampliación pendiente |
+| IN | 1 | Ampliación pendiente |
 | IT | 0 | Curación pendiente |
-| JP | 0 | Curación pendiente |
+| JP | 2 | Ampliación pendiente |
 | KR | 0 | Curación pendiente |
 | MX | 1 | Ampliación pendiente |
 | NI | 0 | Curación pendiente |
@@ -40,7 +40,7 @@ El mínimo operativo es tres fotos distintas con ubicación documentada. Esta so
 | NO | 0 | Curación pendiente |
 | NZ | 0 | Curación pendiente |
 | PA | 0 | Curación pendiente |
-| PE | 1 | Ampliación pendiente |
+| PE | 2 | Ampliación pendiente |
 | PH | 2 | Ampliación pendiente |
 | PL | 0 | Curación pendiente |
 | PR | 0 | Curación pendiente |
@@ -48,7 +48,7 @@ El mínimo operativo es tres fotos distintas con ubicación documentada. Esta so
 | PY | 0 | Curación pendiente |
 | SE | 0 | Curación pendiente |
 | SG | 0 | Curación pendiente |
-| SV | 0 | Curación pendiente |
+| SV | 1 | Ampliación pendiente |
 | TH | 3 | Mínimo cubierto |
 | TR | 0 | Curación pendiente |
 | US | 3 | Mínimo cubierto |

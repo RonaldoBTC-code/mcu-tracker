@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-11T01:09:02.756Z",
+  "result": "PASS",
+  "engine": "PGlite embedded PostgreSQL; auth schema simulated",
+  "productionPersistenceVerified": false,
+  "checks": [
+    "migration executes with every reviewed stable ID",
+    "guest reads aggregates but cannot mutate likes/views",
+    "duplicate desired-state likes count once",
+    "duplicate views and reloads count once per account for life",
+    "account B cannot remove account A like",
+    "raw reads, spoofed ownership and direct writes denied",
+    "unknown IDs and excessive/mixed batches rejected atomically",
+    "unlike removes only the caller row and survives reread",
+    "RLS enabled on all private tables"
+  ]
+}

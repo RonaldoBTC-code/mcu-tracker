@@ -1,0 +1,44 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 7,
+    "imageDisplayChecks": 28,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 8,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
+    ],
+    "maxCountryOpenMs": 24,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 7,
+    "imageDisplayChecks": 28,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 8,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/EC/images/ec-spider-bus.webp"
+    ],
+    "maxCountryOpenMs": 38,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

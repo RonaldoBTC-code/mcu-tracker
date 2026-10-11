@@ -2,7 +2,56 @@
   "country": "ID",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "id-spider-vegetables",
+      "country": "ID",
+      "image": "data/memes/ID/images/id-spider-vegetables.webp",
+      "source": "https://suaraindonesia.co.id/news/news/67ad8c369d7ba/Kenakan-Kostum-Spider-Man-Cara-Unik-Penjual-Sayur-Keliling-di-Banyuwangi-Gaet-Pelanggan",
+      "title": "Spider-Man vende verduras desde su moto",
+      "location": "Banyuwangi, Jawa Timur",
+      "countryEvidence": {
+        "url": "https://suaraindonesia.co.id/news/news/67ad8c369d7ba/Kenakan-Kostum-Spider-Man-Cara-Unik-Penjual-Sayur-Keliling-di-Banyuwangi-Gaet-Pelanggan",
+        "statement": "El reportaje sitúa al vendedor Heri en Banyuwangi, provincia de Jawa Timur, Indonesia.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://cdn.suaranetwork.com/images/2025/02/13/01386f5dd28e.jpg",
+      "creator": "Muhammad Nurul Yaqin / Suara Indonesia",
+      "license": null,
+      "licenseUrl": null,
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man vende verduras desde su moto",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Suara Indonesia",
+      "alt": "Spider-Man vende verduras desde su moto",
+      "width": 750,
+      "height": 440,
+      "bytes": 54230,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "4ffbd8743aba5237d9d9e298b5a2ef57779d0d0664337ed5378f4c8043c50b11",
+        "pixelSha256": "ee5c6fce0d4c2c010fa9bc9aa98744b602a06f0b9794016af8f1291189d87839",
+        "perceptualHashes": [
+          "0110111111010001110000101000001101111101001001001101000101100100",
+          "0100111111111001110000101001001100101100101001001001110100100100",
+          "0100101010111011110101111001000100101110100100011000110000100101"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "d6425091aa2499240cbf6d46fe0183ff8209a8c4b872cd12958bd57603ca99d7",
+        "pixelSha256": "f3af365e3a35a9a11d9da378429ca9661d63861599b16e498ac9346655cd5480",
+        "perceptualHashes": [
+          "0110111111010001110000101000001101111101001001001101000101100100",
+          "0100111111111001110000101001001100101100101001001001110100100100",
+          "0100101010111011110101111001000100101110100100011000110000100101"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

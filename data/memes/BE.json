@@ -2,7 +2,153 @@
   "country": "BE",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "complete",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "be-deadpool-throne",
+      "country": "BE",
+      "image": "data/memes/BE/images/be-deadpool-throne.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_(26675225495).jpg",
+      "title": "Deadpool reclama el Trono de Hierro",
+      "location": "Bruselas, Comic Con 2016",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_(26675225495).jpg",
+        "statement": "La ficha identifica Comic Con Brussels 2016 y aporta coordenadas de Bruselas.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_%2826675225495%29.jpg/960px-Comic_Con_Brussels_2016_-_Deadpool_on_the_Iron_Throne_%2826675225495%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart from Bruxelles, Belgique",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool reclama el Trono de Hierro",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Deadpool reclama el Trono de Hierro",
+      "width": 432,
+      "height": 768,
+      "bytes": 59840,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "dd9eb393e3dfee68398fe9011491d6a345ffa4bcd25f1ecb329e55a2cb877f9b",
+        "pixelSha256": "1870c5fc5c474eeb433b215ed7f360dcbd33b42dd7815cc39c6c9b788351ad9a",
+        "perceptualHashes": [
+          "0101111010101101110011110000111011001100000110011000101000001010",
+          "0101110010101101100001101000011001001101100110011010101110000011",
+          "0001110110101101101100101010011001101111100000010011101110000000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "99c30a6e03577f81f5ecc5f2b1017d5075e6b89fdfc0986a9cf2a5fb49004967",
+        "pixelSha256": "c9ee72e37322e5f42c16314f4bd4437df899868ed1375d83c1b7cc3bd13d3cb7",
+        "perceptualHashes": [
+          "0101111010101101110011110000111011001100000110011000101000001010",
+          "0101110010101101100001101000011001001101100110011010101110000011",
+          "0001110110101101101100101010011001101111100000010011101110000000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "be-deadpool-duff",
+      "country": "BE",
+      "image": "data/memes/BE/images/be-deadpool-duff.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_(51979055573).jpg",
+      "title": "Deadpool lleva a Grogu en su mochila de pecho",
+      "location": "Bruselas, Comic Con 2022",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_(51979055573).jpg",
+        "statement": "La ficha ubica la Comic Con Brussels 2022 en Tour & Taxis, Bruselas.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg/960px-Cosplay_of_Duffman_and_Deadpool_at_Brussels_Comic_Con_2022_%2851979055573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool"
+      ],
+      "visualGag": "Deadpool lleva a Grogu en su mochila de pecho",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Deadpool lleva a Grogu en su mochila de pecho",
+      "width": 457,
+      "height": 768,
+      "bytes": 38228,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "6bc4f78db99076741cc01f1db86cc4d7deb05b387b978a8b2bef57044e699f7f",
+        "pixelSha256": "b0dabf498952793ca4700bf94f13d8d8f02b9c43c621118727b833e0fed5632d",
+        "perceptualHashes": [
+          "0101101101010110100101101100100011100000110100001111010011101000",
+          "0101101101010100100001011000100011000100110101101111111011001000",
+          "0101101100010110100000010001100101100100101101101011011111000011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "13641210a1a80fb76a12bfa81ce0aef59cd28c146d5b9ee095be345c9c27af6c",
+        "pixelSha256": "72bdcc5b6e4a1d25faf9d3772ebbabb578ce3483fca0684508257ac75bcde3c3",
+        "perceptualHashes": [
+          "0101101101010110100101101100100011100000110100001111010011101000",
+          "0101101101010100100001011000100011000100110101101111111011001000",
+          "0101101100010110100000010001100101100100101101101011011111000011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "be-deadpool-spider",
+      "country": "BE",
+      "image": "data/memes/BE/images/be-deadpool-spider.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_(52159179688).jpg",
+      "title": "Deadpool y Spider-Man intercambian uniforme",
+      "location": "Bruselas, Made in Asia 2022",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_(52159179688).jpg",
+        "statement": "Las categorías de Commons documentan Bélgica y Made in Asia 2022; la foto muestra uniformes combinados de los personajes.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_%2852159179688%29.jpg/960px-Cosplay_mash-up_of_Deadpool_and_Spider-Man_at_Made_in_Asia_2022_%2852159179688%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "Miguel Discart",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "characters": [
+        "Deadpool",
+        "Spider-Man"
+      ],
+      "visualGag": "Deadpool y Spider-Man intercambian uniforme",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Wikimedia Commons",
+      "alt": "Deadpool y Spider-Man intercambian uniforme",
+      "width": 768,
+      "height": 432,
+      "bytes": 46308,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "d999c8ca40a217b7f5d3cea3d7bebeed41d4395f221712118f5176e9a7ddd1bb",
+        "pixelSha256": "0b632cc9f2f9cb68249e88214040ab5f5b19c165af392af215f722fec55725e2",
+        "perceptualHashes": [
+          "0110000000000011010011101111111000110010100001101011000011101111",
+          "0110000000000001010011011001111100111111100001001011100011101110",
+          "0111101000010000010011000001111100011111100111111001110011000000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "5691dae22a8132af372ba69326c81f5a261de0abfc66922879001cf207305fe2",
+        "pixelSha256": "597fd7de1265a159f2100131532bfb8a333ddf1db4a7fb0cb947132e594a4485",
+        "perceptualHashes": [
+          "0110000000000011010011101111111000110010100001101011000011101111",
+          "0110000000000001010011011001111100111111100001001011100011101110",
+          "0111101000010000010011000001111100011111100111111001110011000000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

@@ -4,18 +4,28 @@
       "width": 1280,
       "height": 900
     },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 40,
+      "imageDisplayChecks": 40,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "manualSelectionSurvivesReload": true,
+      "result": "PASS"
+    },
     "countriesTested": 51,
-    "countriesWithPhotos": 7,
-    "imageDisplayChecks": 28,
-    "uniquePhotos": 14,
-    "uniqueCountryCatalogues": 8,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 80,
+    "uniquePhotos": 40,
+    "uniqueCountryCatalogues": 23,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
-      "/data/memes/EC.json",
-      "/data/memes/EC/images/ec-spider-bus.webp"
+      "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 24,
+    "maxCountryOpenMs": 48,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -25,18 +35,28 @@
       "width": 390,
       "height": 844
     },
+    "feed": {
+      "countriesTested": 51,
+      "uniquePhotos": 40,
+      "imageDisplayChecks": 40,
+      "initialRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus.webp"
+      ],
+      "manualSelectionSurvivesReload": true,
+      "result": "PASS"
+    },
     "countriesTested": 51,
-    "countriesWithPhotos": 7,
-    "imageDisplayChecks": 28,
-    "uniquePhotos": 14,
-    "uniqueCountryCatalogues": 8,
+    "countriesWithPhotos": 22,
+    "imageDisplayChecks": 80,
+    "uniquePhotos": 40,
+    "uniqueCountryCatalogues": 23,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
-      "/data/memes/EC.json",
-      "/data/memes/EC/images/ec-spider-bus.webp"
+      "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 38,
+    "maxCountryOpenMs": 40,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

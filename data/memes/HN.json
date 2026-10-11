@@ -2,7 +2,56 @@
   "country": "HN",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "hn-spider-graduate",
+      "country": "HN",
+      "image": "data/memes/HN/images/hn-spider-graduate.webp",
+      "source": "https://www.tunota.com/honduras-hoy/spiderman-graduado-unah-psicologia-2023-11-28",
+      "title": "Spider-Man recoge su título de psicología",
+      "location": "Tegucigalpa, Universidad Nacional Autónoma de Honduras",
+      "countryEvidence": {
+        "url": "https://www.tunota.com/honduras-hoy/spiderman-graduado-unah-psicologia-2023-11-28",
+        "statement": "Tunota identifica a Kevin Josué Zambrano en una graduación de la UNAH en Tegucigalpa. La fotografía muestra la máscara, la toga y un diploma de la UNAH.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://www.tunota.com/wp-content/uploads/2023/11/principal_spider_man_unah_graduacion.jpg",
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man recoge su título de psicología",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Tunota / imagen compartida por UNAH",
+      "alt": "Spider-Man recoge su título de psicología",
+      "width": 768,
+      "height": 432,
+      "bytes": 33070,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "de30da807272e5367ae99d4d2bf0a74843d7c30c069c5bb9cccbea66c8eabf31",
+        "pixelSha256": "62c9be7ec35dd43d368b8bedcb788cbde8acf0810977056d50e0237f0d731281",
+        "perceptualHashes": [
+          "0000110010110011111111111100110001011001000010010010100100101001",
+          "0000110010110011111001101100110001011011010110011100100100001001",
+          "0000110010110011101001101100111011010010010101101100100001011001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "db85091b5b2c937d9f81c4b01128baf7a8ea1d0986747205fcecb8cec01460cb",
+        "pixelSha256": "57d2bfcf8c7dd617ee38d5fa841174e5ef2b728306706bdf7fdb3f7c9a10a5dd",
+        "perceptualHashes": [
+          "0000110010110011111111111100110001011001000010010010100100101001",
+          "0000110010110011111011101100110001011011010110010100100100001001",
+          "0000110010110011101001101100111011010010010101101100100001011001"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }

@@ -2,7 +2,56 @@
   "country": "IN",
   "scope": "geographic",
   "catalogueRole": "scene-location",
-  "status": "pending",
+  "status": "partial",
   "minimumPerCountry": 3,
-  "memes": []
+  "memes": [
+    {
+      "id": "in-spider-hood",
+      "title": "Spider-Man termina junto a la policía de tránsito",
+      "location": "Delhi, caso de tránsito en Dwarka",
+      "publisher": "Hindustan Times / ANI",
+      "country": "IN",
+      "image": "data/memes/IN/images/in-spider-hood.webp",
+      "source": "https://www.hindustantimes.com/trending/spider-man-rides-on-car-bonnet-in-delhi-police-book-him-for-violating-traffic-101721815820089.html",
+      "countryEvidence": {
+        "url": "https://www.hindustantimes.com/trending/spider-man-rides-on-car-bonnet-in-delhi-police-book-him-for-violating-traffic-101721815820089.html",
+        "statement": "Hindustan Times informa sobre la intervención de Delhi Traffic Police por conducción peligrosa en Dwarka. La foto de ANI muestra al disfrazado junto a la policía y el vehículo; no muestra la conducción ni permite afirmar condena.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://images.hindustantimes.com/img/2024/07/24/1600x900/spider-man-delhi-police-car-bonnet_1721818522095_1721818535429.jpg",
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man termina junto a la policía de tránsito",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "alt": "Spider-Man termina junto a la policía de tránsito",
+      "width": 768,
+      "height": 432,
+      "bytes": 47344,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "ac635a45088ab932ed3c223e6c282a6195409b0611fead02809e08bf7d605650",
+        "pixelSha256": "0ae468e63a0648309859f6928c706a8177a2c07ea8b1824a1e181c8c3ebbfb01",
+        "perceptualHashes": [
+          "0010110011010001000110110001111111110101110110000100010000100101",
+          "0010100011110001000110110001111110110001110110001000011010110001",
+          "0010110011101001000100110000011010110001110101001001011110110011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "4768a2fc30ab5edfb230995274ccda595ba37ead21bad169473d39c4b148f6bb",
+        "pixelSha256": "0dfdd547cd56fef3a6280a3a5f5135b29a41d5570f92fb69a9b4acc62d79e109",
+        "perceptualHashes": [
+          "0010110011010001000110110001111111110101110110000100010000100101",
+          "0010100011110001000110110001111110110001110110001000011010110001",
+          "0010110011101001000100110000011010110001110101001001011110110011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    }
+  ]
 }
