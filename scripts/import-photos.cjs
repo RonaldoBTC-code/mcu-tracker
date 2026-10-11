@@ -15,7 +15,10 @@ const isURL=value=>{try{return new URL(value).protocol==='https:';}catch{return 
   const inputPath=path.resolve(root,source.image);
   if(!inputPath.startsWith(path.join(root,'scripts','reference-images')+path.sep))throw Error('Invalid input path: '+source.id);
   const input=await fs.readFile(inputPath),originalFingerprint=await fingerprint(input);
-  const bytes=await sharp(input).rotate().resize({width:768,height:768,fit:'inside',withoutEnlargement:true}).webp({quality:72}).toBuffer();
+  let bytes;for(const [edge,quality] of [[768,72],[768,64],[640,64],[640,56]]){
+   bytes=await sharp(input).rotate().resize({width:edge,height:edge,fit:'inside',withoutEnlargement:true}).webp({quality}).toBuffer();
+   if(bytes.length<100000)break;
+  }
   if(bytes.length>=100000)throw Error('Photo exceeds budget: '+source.id);
   const outputFingerprint=await fingerprint(bytes),size=await sharp(bytes).metadata();
   for(const prior of inventory){

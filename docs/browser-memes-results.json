@@ -6,8 +6,8 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 54,
-      "imageDisplayChecks": 54,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
       "initialRequests": [
         "/data/memes/EC.json",
         "/data/memes/EC/images/ec-spider-bus.webp"
@@ -20,15 +20,15 @@
     },
     "countriesTested": 51,
     "countriesWithPhotos": 22,
-    "imageDisplayChecks": 108,
-    "uniquePhotos": 54,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
     "uniqueCountryCatalogues": 23,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 41,
+    "maxCountryOpenMs": 38,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -40,8 +40,8 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 54,
-      "imageDisplayChecks": 54,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
       "initialRequests": [
         "/data/memes/EC.json",
         "/data/memes/EC/images/ec-spider-bus.webp"
@@ -54,15 +54,15 @@
     },
     "countriesTested": 51,
     "countriesWithPhotos": 22,
-    "imageDisplayChecks": 108,
-    "uniquePhotos": 54,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
     "uniqueCountryCatalogues": 23,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 45,
+    "maxCountryOpenMs": 49,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
