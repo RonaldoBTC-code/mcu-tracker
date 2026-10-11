@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-11T02:11:43.700Z",
+  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+  "result": "PASS",
+  "productionAggregateReadVerified": true,
+  "productionPersistenceVerified": false,
+  "writesBlocked": true,
+  "authenticatedSession": false,
+  "checks": [
+    {
+      "country": "EC",
+      "photos": 1,
+      "realCounterMatches": 1,
+      "guestLikesDisabled": true
+    },
+    {
+      "country": "BR",
+      "photos": 3,
+      "realCounterMatches": 3,
+      "guestLikesDisabled": true
+    },
+    {
+      "country": "US",
+      "photos": 10,
+      "realCounterMatches": 10,
+      "guestLikesDisabled": true
+    },
+    {
+      "country": "CA",
+      "photos": 10,
+      "realCounterMatches": 10,
+      "guestLikesDisabled": true
+    },
+    {
+      "country": "CA",
+      "photos": 10,
+      "realCounterMatches": 10,
+      "guestLikesDisabled": true
+    }
+  ],
+  "aggregateRequests": 11,
+  "uncaughtErrors": []
+}

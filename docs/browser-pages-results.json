@@ -1,7 +1,7 @@
 [
   {
     "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-    "checkedAt": "2026-10-11T02:20:19.449Z",
+    "checkedAt": "2026-10-11T15:35:14.071Z",
     "backendRequestsBlocked": true,
     "viewport": {
       "width": 1280,
@@ -9,36 +9,36 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 54,
-      "imageDisplayChecks": 54,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
       "initialRequests": [
         "/data/memes/EC.json",
         "/data/memes/EC/images/ec-spider-bus.webp"
       ],
-      "inlineMapVisible": true,
-      "mapMarkers": 51,
-      "mapClickAndKeyboardVerified": true,
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
       "result": "PASS"
     },
     "countriesTested": 51,
     "countriesWithPhotos": 22,
-    "imageDisplayChecks": 108,
-    "uniquePhotos": 54,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
     "uniqueCountryCatalogues": 23,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 55,
+    "maxCountryOpenMs": 365,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
   },
   {
     "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-    "checkedAt": "2026-10-11T02:20:59.125Z",
+    "checkedAt": "2026-10-11T15:35:56.977Z",
     "backendRequestsBlocked": true,
     "viewport": {
       "width": 390,
@@ -46,29 +46,29 @@
     },
     "feed": {
       "countriesTested": 51,
-      "uniquePhotos": 54,
-      "imageDisplayChecks": 54,
+      "uniquePhotos": 65,
+      "imageDisplayChecks": 65,
       "initialRequests": [
         "/data/memes/EC.json",
         "/data/memes/EC/images/ec-spider-bus.webp"
       ],
-      "inlineMapVisible": true,
-      "mapMarkers": 51,
-      "mapClickAndKeyboardVerified": true,
+      "inlineMapAbsent": true,
+      "originalMapEntryPreserved": true,
+      "countrySelectorOptions": 51,
       "manualSelectionSurvivesReload": true,
       "result": "PASS"
     },
     "countriesTested": 51,
     "countriesWithPhotos": 22,
-    "imageDisplayChecks": 108,
-    "uniquePhotos": 54,
+    "imageDisplayChecks": 130,
+    "uniquePhotos": 65,
     "uniqueCountryCatalogues": 23,
     "scope": "geographic",
     "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json"
     ],
-    "maxCountryOpenMs": 51,
+    "maxCountryOpenMs": 60,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

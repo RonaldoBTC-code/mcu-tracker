@@ -1,18 +1,479 @@
 {
-  "checkedAt": "2026-10-11T02:24:45.146Z",
-  "httpStatuses": [
-    {
-      "status": 200
-    },
-    {
-      "status": 200
-    }
-  ],
+  "checkedAt": "2026-10-11T15:34:31.188Z",
+  "result": "PASS",
+  "rpc": "get_meme_stats",
+  "parameter": "p_ids",
   "readOnly": true,
-  "expectedIds": 54,
-  "aggregateRows": 54,
-  "uniqueAggregateIds": 54,
+  "httpStatuses": [
+    200,
+    200
+  ],
+  "batchSizes": [
+    50,
+    15
+  ],
+  "reviewedCatalogueIds": 65,
+  "exactIdSetVerified": true,
+  "nonnegativeCountsVerified": true,
+  "guestFlagsFalse": true,
   "productionAggregateReadVerified": true,
   "productionPersistenceVerified": false,
-  "validCounters": true
+  "authenticatedWritesVerified": false,
+  "rows": [
+    {
+      "meme_id": "br-spider-circle-sp",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "br-spider-circle-bh",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "br-spider-embrace",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ec-spider-bus",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "mx-spider-class",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "pe-spider-dance-bus",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "th-spider-student",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "th-spider-yogurt",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "th-spider-vegetables",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ph-spider-commute",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ph-spider-dragon",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-iron-board",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-captain-dorito",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-deadpool-iron",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-iron-pikachu",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-iron-buzz",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "be-deadpool-throne",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "be-deadpool-duff",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "be-deadpool-spider",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-iron-fanexpo",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-deadpools-throne",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-spider-tube",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "fr-spider-hospital",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-deadpool-maid",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "id-spider-vegetables",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "hn-spider-graduate",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "co-spider-handstand",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "cl-spider-cueca",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "cu-spider-nerf",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "fr-deadpool-sailor",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "fr-deadpool-2019",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "jp-deadpool-market",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "jp-spider-crossing",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "sv-stan-spider",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "il-spider-purim",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "es-spider-plaza",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "es-spider-smoking",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "at-spider-dance",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "in-spider-hood",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "pe-spider-yoyo",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-spider-hawaiian",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-miku-maid",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-deadpool-redhood",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-deadpool-brainslug",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-deadpool-chicken",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-photobomb-pileup",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-deadpool-pope",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-deadpool-lego",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-spider-frog",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "ca-deadpool-lantern",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-spider-thor",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-deadtrooper",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-captain-spider",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "us-deadpool-elsa",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-deadpool-captain",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-deadpool-sombrero",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-deadpool-wedding",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-deadpool-kimono",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-deadpool-maid",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-pikachu-thor",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "gb-thor-bike",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "be-deadpool-hood",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "be-captain-wolverine",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "be-captain-fett",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    },
+    {
+      "meme_id": "fr-pikachu-captain",
+      "likes_count": 0,
+      "views_count": 0,
+      "liked": false,
+      "seen": false
+    }
+  ]
 }

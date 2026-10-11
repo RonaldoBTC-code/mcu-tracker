@@ -6,4 +6,6 @@ Se eliminan #feedMap, #feedMapCaption, su panel, estilos, generador WorldMap.dis
 
 Preparado, integrado y publicado: PR #9, commit c776829e1adc04fb4ae973a32c91c36763c90f45. Pages workflow 38150741122 terminó con éxito. La comprobación de bytes acreditó 107 archivos públicos idénticos. Chrome sobre Pages pasó en 1280×900 y 390×844: ausencia de mapa en el feed, mapa original, 51 países, 54 fotos y guía 7→8→fin. Evidencias de esta publicación en docs/history/pr9-*.json.
 
-Cobertura editorial sin cambios: 54 fotos en 22 países; CA/US tienen diez. Faltan 456 en 49 países; 29 vacíos. complete:false. Persisten 18 licencias no acreditadas y la validación de escrituras/persistencia autenticada en producción.
+Cobertura editorial al publicar el PR #9: 54 fotos en 22 países; CA/US tienen diez. Faltan 456 en 49 países; 29 vacíos. complete:false. Persisten 18 licencias no acreditadas y la validación de escrituras/persistencia autenticada en producción.
+
+El PR #10 amplía posteriormente a 65 fotos sin restaurar el mapa principal; consultar docs/curation-uk-20261011.md y docs/country-coverage.md para el estado actual.
