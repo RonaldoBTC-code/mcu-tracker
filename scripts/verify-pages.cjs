@@ -17,8 +17,8 @@ async function check(file){
   // Stop before requesting photos if the published HTML is still an earlier version.
   report.files.push(await check('index.html'));
   const inventory=JSON.parse(await fs.readFile(path.join(root,'docs/photo-inventory.json'),'utf8'));
-  const countries=JSON.parse(await fs.readFile(path.join(root,'docs/photo-coverage.json'),'utf8')).countries;
-  if(countries.length!==51||inventory.length<8)throw Error('Unexpected audited coverage');
+  const coverage=JSON.parse(await fs.readFile(path.join(root,'docs/photo-coverage.json'),'utf8'));const countries=coverage.countries;report.collectionCoverageComplete=coverage.complete;
+  if(countries.length!==51||inventory.length===0)throw Error('Unexpected audited coverage');
   for(const code of countries)report.files.push(await check('data/memes/'+code+'.json'));
   for(const item of inventory)report.files.push(await check(item.image));
   report.result='PASS';

@@ -1,27 +1,5 @@
 {
-  "status": "published-verified",
-  "checkedAt": "2026-10-10T21:01:32.168Z",
-  "approvedPRHead": "a395201597e5c394b95209267541318b385b674d",
-  "mergeCommit": "32ecc016482df31d3d0fedadd994e9b497956319",
-  "pullRequest": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/5",
-  "deploymentRun": "https://github.com/RonaldoBTC-code/mcu-tracker/actions/runs/38085685978",
-  "deploymentConclusion": "success",
-  "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
-  "filesVerified": 66,
-  "photosPerCountry": 8,
-  "uniquePhotos": 14,
-  "uniqueCountryCatalogues": 51,
-  "catalogueEntries": 408,
-  "scope": "international",
-  "catalogueRole": "audience",
-  "browserChecksPerViewport": 816,
-  "fullCyclesPerCountry": 2,
-  "productionBrowserResults": "browser-pages-results.json",
-  "limitations": [
-    "Los catálogos comparten fotografías; no son 408 fotos únicas",
-    "País de origen documentado para una foto; desconocido para trece",
-    "Trece fotos no tienen licencia documentada; no se inventa licencia",
-    "Supabase/OTP reales no probados; servicios externos bloqueados",
-    "Móvil emulado; dispositivos físicos no probados"
-  ]
+  "status": "pending-new-deployment",
+  "collectionCoverageComplete": false,
+  "historicalProof": "docs/history/pr5/publication-results.json"
 }

@@ -3191,7 +3191,7 @@ window.WorldMap = (() => {
 /* Memes are requested from one country file; never load a global catalogue. */
 window.MapMemes = (() => {
   const KEY='mcu_map_country';
-  const sourceHosts=new Set(['www.pinterest.com','commons.wikimedia.org','pt.memedroid.com','imgur.com','vocal.media','zmyaro.com','iruntheinternet.com','www.bordeaux-tourism.co.uk']);
+  const sourceHosts=new Set(['www.pinterest.com','commons.wikimedia.org','pt.memedroid.com','imgur.com','vocal.media','zmyaro.com','iruntheinternet.com','www.bordeaux-tourism.co.uk','gshow.globo.com','tn.com.ar','www.infobae.com','elcomercio.pe','www.ecuavisa.com','www.sanook.com','www.nationthailand.com','philnews.ph','thesmartlocal.ph','everydaypeople.sg','www.elobservador.com.uy','www.extra.ec','www.dailynews.co.th']);
   let controller=null,observer=null,timer=null;
   const valid=code=>window.Region.countries().some(c=>c[0]===code);
   function resolveCountry(){
@@ -3205,10 +3205,10 @@ window.MapMemes = (() => {
     observer?.disconnect();observer=null;
     document.querySelectorAll('#memeList img').forEach(img=>{img.removeAttribute('src');img.removeAttribute('data-src');});
   }
-  function imageURL(code,value,scope){
+  function imageURL(code,value){
     if(typeof value!=='string')return null;
     try{
-      const base=new URL('data/memes/'+(scope==='international'?'international':code)+'/images/',document.baseURI);
+      const base=new URL('data/memes/'+code+'/images/',document.baseURI);
       const url=new URL(value,document.baseURI);
       const file=url.pathname.startsWith(base.pathname)?url.pathname.slice(base.pathname.length):'';
       return url.origin===base.origin&&!url.search&&!url.hash&&/^[a-z0-9][a-z0-9._-]*\.(?:png|jpe?g|webp|gif)$/i.test(file)?url.href:null;
@@ -3248,7 +3248,7 @@ window.MapMemes = (() => {
     code=valid(code)?code:null;select.value=code||'';
     select.onchange=()=>{const next=select.value;if(valid(next))window.SafeStorage.setItem(KEY,next);else window.SafeStorage.removeItem(KEY);open(next);};
     label.appendChild(select);body.appendChild(label);
-    const hint=document.createElement('p');hint.textContent='Fotos Marvel con humor visual. Cada país tiene su selección; la procedencia de cada foto se indica cuando está documentada.';body.appendChild(hint);
+    const hint=document.createElement('p');hint.textContent='Fotos Marvel con humor visual tomadas en el país seleccionado. Las colecciones todavía están en ampliación.';body.appendChild(hint);
     const map=document.createElement('div');map.id='memeMap';map.className='meme-country-map';map.innerHTML=code?window.WorldMap.countryMap(code):'';body.appendChild(map);
     const status=document.createElement('p');status.id='memeStatus';status.setAttribute('role','status');body.appendChild(status);
     const list=document.createElement('div');list.id='memeList';list.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px';body.appendChild(list);
@@ -3262,9 +3262,9 @@ window.MapMemes = (() => {
       if(!response.ok)throw Error('HTTP '+response.status);
       const data=await response.json();
       if(epoch!==window.MapView.generation)return;
-      if(data.country!==code||!Array.isArray(data.memes))throw Error('Formato de país inválido');
+      if(data.country!==code||data.scope!=='geographic'||!Array.isArray(data.memes))throw Error('Formato de país inválido');
       // Reject invalid/cross-country image paths before adding an img to the DOM.
-      const memes=data.memes.slice(0,50).map(item=>({item,url:imageURL(code,item?.image,data.scope)})).filter(x=>x.url&&typeof x.item.title==='string');
+      const memes=data.memes.slice(0,50).map(item=>({item,url:imageURL(code,item?.image)})).filter(x=>x.url&&x.item.country===code&&x.item.countryEvidence?.statement&&typeof x.item.location==='string'&&typeof x.item.title==='string');
       if(!memes.length){status.textContent='Todavía no hay memes disponibles para este país.';return;}
       let remaining=[],previous=-1;const seen=new Set();
       const draw=()=>{
@@ -3281,7 +3281,7 @@ window.MapMemes = (() => {
         img.loading='lazy';img.decoding='async';img.dataset.src=url;img.style.cssText='width:100%;height:auto;max-height:55vh;object-fit:contain';
         img.onerror=()=>{img.removeAttribute('src');img.alt='No se pudo cargar esta imagen';};
         const caption=document.createElement('figcaption');caption.textContent=item.title+(typeof item.creator==='string'?' · '+item.creator:'');
-        if(item.scope==='international')caption.append(valid(item.country)?' · Origen documentado: '+window.Region.countries().find(c=>c[0]===item.country)[1]:' · País de origen no acreditado');
+        caption.append(' · '+item.location+' · '+select.selectedOptions[0].textContent);
         let sourceHost=null;try{const host=new URL(item.source).hostname;if(sourceHosts.has(host))sourceHost=host;}catch(e){}
         const licenseHost=item.license==='Public domain'&&item.licenseUrl===item.source?'commons.wikimedia.org':'creativecommons.org';
         for(const [label,value,host]of [['Fuente',item.source,sourceHost],[item.license||'Licencia',item.licenseUrl,licenseHost]]){
@@ -3292,7 +3292,7 @@ window.MapMemes = (() => {
         if(item.changes)caption.append(' · ',String(item.changes));
         figure.append(img,caption);list.appendChild(figure);
         lazyImages(list,epoch);
-        status.textContent=memes.length+' fotos en la selección de '+select.selectedOptions[0].textContent+'. Vistas: '+seen.size+' de '+memes.length+'.';
+        status.textContent=memes.length+' fotos en la selección de '+select.selectedOptions[0].textContent+'. Vistas: '+seen.size+' de '+memes.length+'.'+(data.status==='partial'?' Colección en ampliación.':'');
       };
       draw();
       const next=document.createElement('button');next.className='tab';next.id='memeRandom';next.textContent='Otra foto aleatoria';next.disabled=memes.length<2;next.onclick=()=>{if(epoch===window.MapView.generation)draw();};body.appendChild(next);

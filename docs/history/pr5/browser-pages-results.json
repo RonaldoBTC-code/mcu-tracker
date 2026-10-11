@@ -1,0 +1,48 @@
+[
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-10T20:59:08.680Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 51,
+    "imageDisplayChecks": 816,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 51,
+    "scope": "international",
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/international/images/deadpool-bridal.webp"
+    ],
+    "maxCountryOpenMs": 360,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  },
+  {
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "checkedAt": "2026-10-10T21:00:49.478Z",
+    "backendRequestsBlocked": true,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "countriesTested": 51,
+    "countriesWithPhotos": 51,
+    "imageDisplayChecks": 816,
+    "uniquePhotos": 14,
+    "uniqueCountryCatalogues": 51,
+    "scope": "international",
+    "initialECRequests": [
+      "/data/memes/EC.json",
+      "/data/memes/international/images/maid-duel.webp"
+    ],
+    "maxCountryOpenMs": 367,
+    "maxSvgNodes": 619,
+    "uncaughtErrors": [],
+    "result": "PASS"
+  }
+]

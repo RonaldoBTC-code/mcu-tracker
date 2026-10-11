@@ -1,208 +1,153 @@
 {
   "country": "TH",
-  "scope": "international",
-  "catalogueRole": "audience",
+  "scope": "geographic",
+  "catalogueRole": "scene-location",
+  "status": "complete",
+  "minimumPerCountry": 3,
   "memes": [
     {
-      "id": "iron-man-costumes",
-      "title": "Dos Iron Man, dos presupuestos",
-      "image": "data/memes/international/images/iron-man-costumes.webp",
-      "source": "https://www.pinterest.com/pin/392516923774440652/",
-      "publisher": "Metro / metrouk",
-      "creator": null,
+      "id": "th-spider-student",
+      "country": "TH",
+      "image": "data/memes/TH/images/th-spider-student.webp",
+      "source": "https://www.sanook.com/men/13421/",
+      "title": "Spider-Man también llega a clase con mochila",
+      "location": "Bangkok, University of the Thai Chamber of Commerce",
+      "countryEvidence": {
+        "url": "https://www.sanook.com/men/13421/",
+        "statement": "Sanook identifica a Krit Pongchaiatsawin como alumno de esta universidad de Bangkok y reproduce la fotografía de su llegada vestido de Spider-Man.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://s.isanook.com/me/0/ud/2/13421/y29udgvudhmlmkzmawxlcyuyrju3mjm1otyxnjywnjkuanbn.jpg",
+      "creator": "Chutima Sonkhong (crédito del medio)",
       "license": null,
-      "country": null,
-      "characters": [
-        "Iron Man"
-      ],
-      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
-      "width": 660,
-      "height": 495,
-      "bytes": 36748,
-      "scope": "international",
-      "countryEvidence": null,
       "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "avengers-cardboard",
-      "title": "Los Avengers resolvieron la armadura con cajas",
-      "image": "data/memes/international/images/avengers-cardboard.webp",
-      "source": "https://pt.memedroid.com/memes/detail/752608",
-      "publisher": "pt.memedroid.com",
-      "creator": null,
-      "license": null,
-      "country": null,
       "characters": [
-        "Captain America",
-        "Thor",
-        "Iron Man",
-        "Hulk"
-      ],
-      "visualGag": "Iron Man con cajas de cartón y Thor con martillo improvisado de periódico.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Iron Man con cajas de cartón y Thor con martillo improvisado de periódico.",
-      "width": 600,
-      "height": 448,
-      "bytes": 21152,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "avengers-livingroom",
-      "title": "La reunión de los Avengers fue de disfraces caseros",
-      "image": "data/memes/international/images/avengers-livingroom.webp",
-      "source": "https://imgur.com/gallery/really-horrible-avengers-costumes-zTntlWx",
-      "publisher": "imgur.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Captain America",
-        "Iron Man",
-        "Thor",
-        "Hulk"
-      ],
-      "visualGag": "Trajes improvisados con pintura corporal, máscara, peluca y pantalones cortos en un salón.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Trajes improvisados con pintura corporal, máscara, peluca y pantalones cortos en un salón.",
-      "width": 650,
-      "height": 487,
-      "bytes": 25814,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "avengers-foil",
-      "title": "Iron Man acaba de descubrir el papel aluminio",
-      "image": "data/memes/international/images/avengers-foil.webp",
-      "source": "https://imgur.com/gallery/really-horrible-avengers-costumes-zTntlWx",
-      "publisher": "imgur.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Iron Man",
-        "Thor",
-        "Captain America",
-        "Loki"
-      ],
-      "visualGag": "Armadura de papel aluminio junto a martillo de juguete y escudo inflable.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Armadura de papel aluminio junto a martillo de juguete y escudo inflable.",
-      "width": 728,
-      "height": 409,
-      "bytes": 41244,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "captain-dorito",
-      "title": "Capitán América cambió el escudo por un Dorito",
-      "image": "data/memes/international/images/captain-dorito.webp",
-      "source": "https://zmyaro.com/cosplay/captaindorito/",
-      "publisher": "zmyaro.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Captain America"
-      ],
-      "visualGag": "Escudo triangular de cartón con una bolsa de Doritos pegada en el centro.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Escudo triangular de cartón con una bolsa de Doritos pegada en el centro.",
-      "width": 512,
-      "height": 768,
-      "bytes": 48710,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "deadpool-maid",
-      "title": "Deadpool consiguió un uniforme nuevo",
-      "image": "data/memes/international/images/deadpool-maid.webp",
-      "source": "https://www.pinterest.com/pin/331436853810817205/",
-      "publisher": "www.pinterest.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Deadpool"
-      ],
-      "visualGag": "Traje de Deadpool combinado con delantal, encaje, cofia y una rosa.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Traje de Deadpool combinado con delantal, encaje, cofia y una rosa.",
-      "width": 576,
-      "height": 768,
-      "bytes": 29960,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "maid-duel",
-      "title": "Spider-Man y Deadpool discuten quién limpia",
-      "image": "data/memes/international/images/maid-duel.webp",
-      "source": "https://iruntheinternet.com/04193",
-      "publisher": "iruntheinternet.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Deadpool",
         "Spider-Man"
       ],
-      "visualGag": "Duelo juguetón con pelucas, tacones y uniformes de servicio doméstico sobre los trajes Marvel.",
+      "visualGag": "Spider-Man también llega a clase con mochila",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "alt": "Duelo juguetón con pelucas, tacones y uniformes de servicio doméstico sobre los trajes Marvel.",
-      "width": 435,
-      "height": 440,
-      "bytes": 25974,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
+      "publisher": "Sanook / PPTV",
+      "alt": "Spider-Man también llega a clase con mochila",
+      "width": 576,
+      "height": 768,
+      "bytes": 53206,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "d71a0cb1cb096b26bbb49a2ee189c9dd3d8bc4ffd534e253244ea6504761adcf",
+        "pixelSha256": "9aa9a0aaaa28a3f68d71dacd36a2d2c0c747266092aacaf7ebc7ef5cde80dcd6",
+        "perceptualHashes": [
+          "0010001100110110101111000010010100000110101011101111010101001001",
+          "0011101100110110101111000011100100000110101001101101010100001001",
+          "0010001100110101101111000011101100000111101001101010010100001011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "f2dd0a07485b4592db0405514deaed34c929cbd5e51190ad439781dcc0d479dd",
+        "pixelSha256": "01ae71c0641ad4f1cc4d6beea50c087ea1140ca8ba1ec1e5e36606d866633cdd",
+        "perceptualHashes": [
+          "0010001100110110101111000010010100000110101001111111010101001001",
+          "0011101100110110101111000011100100000110101001101101010100001001",
+          "0010001100110101101111000011101100000111101001101010010100001011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     },
     {
-      "title": "Iron Man se tomó lo de la plancha literalmente",
-      "alt": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
-      "image": "data/memes/international/images/iron-ironing-board.webp",
-      "width": 527,
-      "height": 768,
-      "creator": "Michael Miller",
-      "source": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "ConNooga 2009, Chattanooga, Tennessee",
-      "country": "US",
-      "bytes": 12564,
-      "id": "iron-ironing-board",
+      "id": "th-spider-yogurt",
+      "country": "TH",
+      "image": "data/memes/TH/images/th-spider-yogurt.webp",
+      "source": "https://www.nationthailand.com/in-focus/40006400",
+      "title": "Spider-Man vende yogur por la ventanilla del auto",
+      "location": "Sukhothai, cruce Krachong, distrito Mueang",
+      "countryEvidence": {
+        "url": "https://www.nationthailand.com/in-focus/40006400",
+        "statement": "The Nation sitúa la venta de yogur del joven Ratchapol en el cruce Krachong de Sukhothai; esta foto acompaña esa actuación.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://media.nationthailand.com/uploads/images/contents/w1024/2021/09/CwHUh8uSOatlqs54iX6s.jpg?x-image-process=style/lg-webp",
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
       "characters": [
-        "Iron Man"
+        "Spider-Man"
       ],
-      "visualGag": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
+      "visualGag": "Spider-Man vende yogur por la ventanilla del auto",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "scope": "international"
+      "publisher": "The Nation Thailand",
+      "alt": "Spider-Man vende yogur por la ventanilla del auto",
+      "width": 768,
+      "height": 433,
+      "bytes": 24038,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "0bda77777fb33de99dee588a6fc3d40194784bc1c9db0364904d02ce77afa6e3",
+        "pixelSha256": "a6061e982869cef0ba7da2a6ca67373af4a36ea844edc64567be47e54d2b50b6",
+        "perceptualHashes": [
+          "0000100001111100111001011011001111000110101100011010001110001100",
+          "0000100001111100101010010011001111000110101100111110001110110000",
+          "0000100001001100101010110001011111001110001100111100011110111000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "0d88edef09430f894eaf54accb8a182370082090f5d90b063cf66efd8d293205",
+        "pixelSha256": "d1f32fc22d2fc92112ff14ca9660634f3bc5775dd626cb9aef545546dea42022",
+        "perceptualHashes": [
+          "0000100001111100111001011011001111000110101100011010001110001100",
+          "0000100001111100101010010011001111000110101100111110001110110000",
+          "0000100001001100101010110001011111001110001100111100011110111000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
+    },
+    {
+      "id": "th-spider-vegetables",
+      "country": "TH",
+      "image": "data/memes/TH/images/th-spider-vegetables.webp",
+      "source": "https://www.dailynews.co.th/news/180414/",
+      "title": "Spider-Man atiende su puesto de verduras",
+      "location": "Sanam Chai, Mueang, Suphan Buri",
+      "countryEvidence": {
+        "url": "https://www.dailynews.co.th/news/180414/",
+        "statement": "Daily News identifica el mercado de Sanam Chai, distrito Mueang, provincia de Suphan Buri, en el primer párrafo del reportaje sobre Montri Pho Thong.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://www.dailynews.co.th/wp-content/uploads/2021/08/IMG_8202-1024x883.jpg",
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man atiende su puesto de verduras",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Daily News",
+      "alt": "Spider-Man atiende su puesto de verduras",
+      "width": 768,
+      "height": 662,
+      "bytes": 73380,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "7a58dea33831653b050559a1f2201d185616e686247373991b37d103879b99f9",
+        "pixelSha256": "9a5a32a6d7590bbe6fdc4efce49056aaffd1b8f79438df3aea909e8ba3e8e9da",
+        "perceptualHashes": [
+          "0110000110010101100101110100111001001011010000000001110111110110",
+          "0110101010100101100101010100111001001011010010010000110111100110",
+          "0110100010100100100101110100111011000010010110010100101111000111"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "69d321176cbe5e97bd57afd041220d3890056087ccbfcdd7581b4bb9ed2c4e1b",
+        "pixelSha256": "58e79872e18c8f4b314c7236349ad55e4a3db01ceb6ec4cc44c8df847c8094b4",
+        "perceptualHashes": [
+          "0110000110010101100101110100111001001011010000000001110111110110",
+          "0110101010100101100101010100111001001011010010010000110111100110",
+          "0110100010100100100101110100111011000010010110010100101111000111"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     }
   ]
 }
