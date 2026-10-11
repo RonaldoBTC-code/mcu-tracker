@@ -5,16 +5,17 @@
       "height": 900
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 51,
-    "imageDisplayChecks": 816,
+    "countriesWithPhotos": 7,
+    "imageDisplayChecks": 28,
     "uniquePhotos": 14,
-    "uniqueCountryCatalogues": 51,
-    "scope": "international",
+    "uniqueCountryCatalogues": 8,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json",
-      "/data/memes/international/images/peevengers.webp"
+      "/data/memes/EC/images/ec-spider-bus.webp"
     ],
-    "maxCountryOpenMs": 46,
+    "maxCountryOpenMs": 24,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"
@@ -25,16 +26,17 @@
       "height": 844
     },
     "countriesTested": 51,
-    "countriesWithPhotos": 51,
-    "imageDisplayChecks": 816,
+    "countriesWithPhotos": 7,
+    "imageDisplayChecks": 28,
     "uniquePhotos": 14,
-    "uniqueCountryCatalogues": 51,
-    "scope": "international",
+    "uniqueCountryCatalogues": 8,
+    "scope": "geographic",
+    "collectionCoverageComplete": false,
     "initialECRequests": [
       "/data/memes/EC.json",
-      "/data/memes/international/images/iron-man-costumes.webp"
+      "/data/memes/EC/images/ec-spider-bus.webp"
     ],
-    "maxCountryOpenMs": 37,
+    "maxCountryOpenMs": 38,
     "maxSvgNodes": 619,
     "uncaughtErrors": [],
     "result": "PASS"

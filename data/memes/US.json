@@ -1,208 +1,155 @@
 {
   "country": "US",
-  "scope": "international",
-  "catalogueRole": "audience",
+  "scope": "geographic",
+  "catalogueRole": "scene-location",
+  "status": "complete",
+  "minimumPerCountry": 3,
   "memes": [
     {
-      "title": "Iron Man se tomó lo de la plancha literalmente",
-      "alt": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
-      "image": "data/memes/international/images/iron-ironing-board.webp",
-      "width": 527,
-      "height": 768,
-      "creator": "Michael Miller",
+      "id": "us-iron-board",
+      "country": "US",
+      "image": "data/memes/US/images/us-iron-board.webp",
       "source": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+      "title": "Iron Man se tomó lo de la plancha literalmente",
+      "location": "ConNooga 2009, Chattanooga, Tennessee",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+        "statement": "La fotografía de Michael Miller está identificada como ConNooga 2009 en Chattanooga, Tennessee.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
+      "creator": "Michael Miller",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "ConNooga 2009, Chattanooga, Tennessee",
-      "country": "US",
-      "bytes": 12564,
-      "id": "iron-ironing-board",
       "characters": [
         "Iron Man"
       ],
       "visualGag": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "scope": "international"
-    },
-    {
-      "id": "avengers-office",
-      "title": "Los Avengers también tienen reuniones que pudieron ser un correo",
-      "image": "data/memes/international/images/avengers-office.webp",
-      "source": "https://www.pinterest.com/pin/678636237574158906/",
-      "publisher": "musclegeekonline",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Captain America",
-        "Thor",
-        "Doctor Strange",
-        "Spider-Man",
-        "Black Widow",
-        "Hawkeye",
-        "Falcon"
-      ],
-      "visualGag": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Superhéroes en una reunión de oficina; poses y aburrimiento de una reunión cotidiana.",
-      "width": 735,
-      "height": 512,
-      "bytes": 40528,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "avengers-foil",
-      "title": "Iron Man acaba de descubrir el papel aluminio",
-      "image": "data/memes/international/images/avengers-foil.webp",
-      "source": "https://imgur.com/gallery/really-horrible-avengers-costumes-zTntlWx",
-      "publisher": "imgur.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Iron Man",
-        "Thor",
-        "Captain America",
-        "Loki"
-      ],
-      "visualGag": "Armadura de papel aluminio junto a martillo de juguete y escudo inflable.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Armadura de papel aluminio junto a martillo de juguete y escudo inflable.",
-      "width": 728,
-      "height": 409,
-      "bytes": 41244,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "deadpool-burrito",
-      "title": "Deadpool tiene un burrito de tamaño superheroico",
-      "image": "data/memes/international/images/deadpool-burrito.webp",
-      "source": "https://vocal.media/geeks/logan-easter-egg-you-probably-didn-t-notice",
-      "publisher": "vocal.media",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Deadpool"
-      ],
-      "visualGag": "Burrito enorme delante de Deadpool sentado en un sofá.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Burrito enorme delante de Deadpool sentado en un sofá.",
-      "width": 720,
-      "height": 449,
-      "bytes": 19286,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "spideypool-selfie",
-      "title": "Spider-Man y Deadpool cambian la batalla por un selfie",
-      "image": "data/memes/international/images/spideypool-selfie.webp",
-      "source": "https://www.pinterest.com/pin/850617448347659197/",
-      "publisher": "www.pinterest.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Spider-Man",
-        "Deadpool"
-      ],
-      "visualGag": "Abrazo en un baño mientras Spider-Man toma un selfie con el móvil.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Abrazo en un baño mientras Spider-Man toma un selfie con el móvil.",
-      "width": 614,
+      "alt": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
+      "width": 527,
       "height": 768,
-      "bytes": 42296,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
+      "bytes": 12564,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "089061b5bd31128fbe5d3cdd6dba1bf0b7d8662bd0b273310747c1b31e7a5c7c",
+        "pixelSha256": "0e7e34142fffe4fc9cadcf3fd14712dda7ffc3cf684c9b5786b93c576ffd6850",
+        "perceptualHashes": [
+          "0001111011110001001100011001101001110001001110011101110001100000",
+          "0001111011100001001001001001011101110000000110110111110001100011",
+          "0001111011101001001011001001011101100000100100110011100010110011"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "66ed7c53c905c16c4c0ee8db06e1f13056e37491a0c3e082bcc46a2ae3b0f8bb",
+        "pixelSha256": "7cfc8c73bc41d154c064d170b065471227117566fd55e8f1c7dee701aec48eee",
+        "perceptualHashes": [
+          "0001111011110001001100011001101001110001001110001101110011100000",
+          "0001111011100001001001001001011101110000000110110111110001100011",
+          "0001111011101001001011001001011101100000100100110011100010110011"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     },
     {
-      "id": "deadpool-bridal",
-      "title": "Deadpool ya está listo para la boda",
-      "image": "data/memes/international/images/deadpool-bridal.webp",
-      "source": "https://imgur.com/gallery/its-cake-day-so-have-this-picture-of-deadpool-wedding-dress-WqMXk",
-      "publisher": "imgur.com",
+      "id": "us-captain-dorito",
+      "country": "US",
+      "image": "data/memes/US/images/us-captain-dorito.webp",
+      "source": "https://zmyaro.com/cosplay/captaindorito/",
+      "title": "Capitán América cambió el escudo por un Dorito",
+      "location": "Tora-Con 2018, RIT, Rochester, Nueva York",
+      "countryEvidence": {
+        "url": "https://zmyaro.com/cosplay/captaindorito/",
+        "additionalSources": [
+          "https://www.rit.edu/news/photo-spotlights?keys=&news%2Fcampus-spotlight-archive=&page=52"
+        ],
+        "statement": "La galería del cosplayer identifica Tora-Con 2018 y el archivo toracon2018_shield_out.jpg; la cobertura oficial de RIT documenta esta edición en su campus de Rochester, Nueva York.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://zmyaro.com/cosplay/captaindorito/imgs/toracon2018_shield_out.jpg",
       "creator": null,
       "license": null,
-      "country": null,
+      "licenseUrl": null,
       "characters": [
-        "Deadpool"
+        "Captain America"
       ],
-      "visualGag": "Máscara y guantes de Deadpool combinados con vestido de novia y velo.",
+      "visualGag": "Escudo triangular de cartón con una bolsa de Doritos pegada en el centro.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "alt": "Máscara y guantes de Deadpool combinados con vestido de novia y velo.",
-      "width": 576,
+      "publisher": "Zachary Yaro (cosplayer)",
+      "alt": "Escudo triangular de cartón con una bolsa de Doritos pegada en el centro.",
+      "width": 512,
       "height": 768,
-      "bytes": 24696,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
+      "bytes": 48710,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "6be66654a0ac042d87a99f7af6aa898962af0559e955bbfb2c3cfcdccc17ff90",
+        "pixelSha256": "93e2b4338506b4c77a1f92029db30a22e83df500ad0f017cd8da59b0f2e2ca49",
+        "perceptualHashes": [
+          "0110011000011010111001101011000100001100000111011001111011100010",
+          "0111010100011100111001101011000100000100000110011001111011110010",
+          "0111010100011110111001111111100101000000000010010001110011110000"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "85a89672204200cf563b654cec32fcce3b64e3d51be9ca20106f0793da8c9a43",
+        "pixelSha256": "5f555479c5bfc012dfd0a00b696598b33d77771730c6b600d6f524f92ecd08a3",
+        "perceptualHashes": [
+          "0110011000011010111001101011000100001100000111011001111011100010",
+          "0111010100011100111001101011000100000100000110011001111011110010",
+          "0111010100011110111001111111100101000000000010010001110011110000"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     },
     {
-      "id": "deadpool-maid",
-      "title": "Deadpool consiguió un uniforme nuevo",
-      "image": "data/memes/international/images/deadpool-maid.webp",
-      "source": "https://www.pinterest.com/pin/331436853810817205/",
-      "publisher": "www.pinterest.com",
-      "creator": null,
-      "license": null,
-      "country": null,
+      "id": "us-deadpool-iron",
+      "country": "US",
+      "image": "data/memes/US/images/us-deadpool-iron.webp",
+      "title": "Deadpool cambia de armadura y de presupuesto",
+      "source": "https://commons.wikimedia.org/wiki/File:Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg",
+      "location": "New York Comic Con 2015, Nueva York",
+      "countryEvidence": {
+        "url": "https://commons.wikimedia.org/wiki/File:Day_4_at_NYCC_2015_Cosplay_of_Iron_Man_Deadpool.jpg",
+        "statement": "La fotografía en Commons identifica expresamente New York Comic Con 2015.",
+        "verifiedOn": "2026-10-10"
+      },
+      "creator": "LostplanetKD73",
+      "publisher": "Wikimedia Commons",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "characters": [
-        "Deadpool"
+        "Deadpool",
+        "Iron Man"
       ],
-      "visualGag": "Traje de Deadpool combinado con delantal, encaje, cofia y una rosa.",
+      "visualGag": "Deadpool lleva una versión de tela de la armadura de Iron Man y sostiene un cartel físico sobre su cambio de disfraz; no hay texto digital superpuesto.",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "alt": "Traje de Deadpool combinado con delantal, encaje, cofia y una rosa.",
-      "width": 576,
+      "alt": "Deadpool lleva una versión de tela de la armadura de Iron Man y sostiene un cartel físico sobre su cambio de disfraz; no hay texto digital superpuesto.",
+      "width": 587,
       "height": 768,
-      "bytes": 29960,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "bordeaux-maids",
-      "title": "Deadpool necesita ayuda para mantener el uniforme",
-      "image": "data/memes/international/images/bordeaux-maids.webp",
-      "source": "https://www.bordeaux-tourism.co.uk/events/bordeaux-geek-festival.html",
-      "publisher": "www.bordeaux-tourism.co.uk",
-      "creator": "Mandora Cosplay Photo (crédito en la imagen)",
-      "license": null,
-      "country": null,
-      "characters": [
-        "Deadpool"
-      ],
-      "visualGag": "Un Deadpool sostiene a otro con uniforme de encaje y un lazo rosa gigante.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Un Deadpool sostiene a otro con uniforme de encaje y un lazo rosa gigante.",
-      "width": 700,
-      "height": 467,
-      "bytes": 32688,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
+      "bytes": 62554,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "dc1f66f98577e6b2a24d82d51977c5da60ae5a3dbfc19400f0686c8fcd96671d",
+        "pixelSha256": "de3e8550e4762863abc747a8a43fe58e7207c29ff6305ea81bd5036d833d0583",
+        "perceptualHashes": [
+          "0010001001010110010110110101100101011011101010011001110010010100",
+          "0010010001000110010110111101101001001010111110111000110010100100",
+          "0010010011000100010110100101000001011010011110111000111111101100"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "f0859bcd8b68b2a12775dd501c0650edd7d970722eacef6a25e053cbfe1e1d5a",
+        "pixelSha256": "25528983b6b0677bad6f2e882db36605c21cbcce2d39e45f887d8618734feecb",
+        "perceptualHashes": [
+          "0010001001010110010110110101100101011011101010011001110010010100",
+          "0010010001000110010110111101101001001010111110111000110010100100",
+          "0010010011000100010110100101000001011010011110111000111111101100"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     }
   ]
 }

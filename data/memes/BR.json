@@ -1,208 +1,153 @@
 {
   "country": "BR",
-  "scope": "international",
-  "catalogueRole": "audience",
+  "scope": "geographic",
+  "catalogueRole": "scene-location",
+  "status": "complete",
+  "minimumPerCountry": 3,
   "memes": [
     {
-      "id": "iron-man-costumes",
-      "title": "Dos Iron Man, dos presupuestos",
-      "image": "data/memes/international/images/iron-man-costumes.webp",
-      "source": "https://www.pinterest.com/pin/392516923774440652/",
-      "publisher": "Metro / metrouk",
+      "id": "br-spider-circle-sp",
+      "country": "BR",
+      "image": "data/memes/BR/images/br-spider-circle-sp.webp",
+      "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+      "title": "Un círculo de Spider-Man se señala en el cine",
+      "location": "São Paulo",
+      "countryEvidence": {
+        "url": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+        "statement": "Gshow identifica expresamente São Paulo en el pie de esta fotografía de la preestrena de diciembre de 2021.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://s2-gshow.glbimg.com/n_E1rBW6YnTfYMii3VhWrkLchmU=/0x0:680x357/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/Z/i/wHJC8sS3ShE4YD47TLBg/homem-aranha-em-sao-paulo.jpg",
       "creator": null,
       "license": null,
-      "country": null,
-      "characters": [
-        "Iron Man"
-      ],
-      "visualGag": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Contraste de dos disfraces de Iron Man y gesto de incredulidad.",
-      "width": 660,
-      "height": 495,
-      "bytes": 36748,
-      "scope": "international",
-      "countryEvidence": null,
       "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "peevengers",
-      "title": "Los Avengers también hacen fila en el baño",
-      "image": "data/memes/international/images/peevengers.webp",
-      "source": "https://www.pinterest.com/pin/534028468308237493/",
-      "publisher": "www.pinterest.com",
-      "creator": null,
-      "license": null,
-      "country": null,
       "characters": [
-        "Spider-Man",
-        "Hawkeye",
-        "Captain America"
-      ],
-      "visualGag": "Superhéroes con el traje completo y sus accesorios frente a urinarios.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Superhéroes con el traje completo y sus accesorios frente a urinarios.",
-      "width": 640,
-      "height": 640,
-      "bytes": 24050,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "spideypool-selfie",
-      "title": "Spider-Man y Deadpool cambian la batalla por un selfie",
-      "image": "data/memes/international/images/spideypool-selfie.webp",
-      "source": "https://www.pinterest.com/pin/850617448347659197/",
-      "publisher": "www.pinterest.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Spider-Man",
-        "Deadpool"
-      ],
-      "visualGag": "Abrazo en un baño mientras Spider-Man toma un selfie con el móvil.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Abrazo en un baño mientras Spider-Man toma un selfie con el móvil.",
-      "width": 614,
-      "height": 768,
-      "bytes": 42296,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "avengers-livingroom",
-      "title": "La reunión de los Avengers fue de disfraces caseros",
-      "image": "data/memes/international/images/avengers-livingroom.webp",
-      "source": "https://imgur.com/gallery/really-horrible-avengers-costumes-zTntlWx",
-      "publisher": "imgur.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Captain America",
-        "Iron Man",
-        "Thor",
-        "Hulk"
-      ],
-      "visualGag": "Trajes improvisados con pintura corporal, máscara, peluca y pantalones cortos en un salón.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Trajes improvisados con pintura corporal, máscara, peluca y pantalones cortos en un salón.",
-      "width": 650,
-      "height": 487,
-      "bytes": 25814,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "avengers-foil",
-      "title": "Iron Man acaba de descubrir el papel aluminio",
-      "image": "data/memes/international/images/avengers-foil.webp",
-      "source": "https://imgur.com/gallery/really-horrible-avengers-costumes-zTntlWx",
-      "publisher": "imgur.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Iron Man",
-        "Thor",
-        "Captain America",
-        "Loki"
-      ],
-      "visualGag": "Armadura de papel aluminio junto a martillo de juguete y escudo inflable.",
-      "reviewedVisually": true,
-      "hasMemeTextOverlay": false,
-      "alt": "Armadura de papel aluminio junto a martillo de juguete y escudo inflable.",
-      "width": 728,
-      "height": 409,
-      "bytes": 41244,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
-    },
-    {
-      "id": "maid-duel",
-      "title": "Spider-Man y Deadpool discuten quién limpia",
-      "image": "data/memes/international/images/maid-duel.webp",
-      "source": "https://iruntheinternet.com/04193",
-      "publisher": "iruntheinternet.com",
-      "creator": null,
-      "license": null,
-      "country": null,
-      "characters": [
-        "Deadpool",
         "Spider-Man"
       ],
-      "visualGag": "Duelo juguetón con pelucas, tacones y uniformes de servicio doméstico sobre los trajes Marvel.",
+      "visualGag": "Un círculo de Spider-Man se señala en el cine",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "alt": "Duelo juguetón con pelucas, tacones y uniformes de servicio doméstico sobre los trajes Marvel.",
-      "width": 435,
-      "height": 440,
-      "bytes": 25974,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
+      "publisher": "Gshow / reproducción Twitter",
+      "alt": "Un círculo de Spider-Man se señala en el cine",
+      "width": 768,
+      "height": 404,
+      "bytes": 30208,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "446e2c99a944a63d44bb7d83ec2e3cd378afa2e49bf5a3962e06c5e178e3eacb",
+        "pixelSha256": "91c2f0a09b43acd28ab97d98d9a6ac6d1ff73a64d54c05001e43cdc21369d178",
+        "perceptualHashes": [
+          "0000001010101101010101010101100001101100001110110001101101100111",
+          "0001001110101100101001010101110001101100000111000011100011100111",
+          "0001001110101100101000010101110001101110000111011111100000100101"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "8c52e7a55f23f0af79dbf99caf6633ed8280c212fff3e77e667eb91fda9ef40d",
+        "pixelSha256": "8fa464b37f99b591ed94026c8f559bf03987e7d09d3d3bafcb112b27fe63686c",
+        "perceptualHashes": [
+          "0000001010101101010101010101100001101100001110110001101101100111",
+          "0001001110101100101001010101110001101100000111000011100011100111",
+          "0001001110101000101000010101110001101110000111011111100000100111"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     },
     {
-      "id": "bordeaux-maids",
-      "title": "Deadpool necesita ayuda para mantener el uniforme",
-      "image": "data/memes/international/images/bordeaux-maids.webp",
-      "source": "https://www.bordeaux-tourism.co.uk/events/bordeaux-geek-festival.html",
-      "publisher": "www.bordeaux-tourism.co.uk",
-      "creator": "Mandora Cosplay Photo (crédito en la imagen)",
+      "id": "br-spider-circle-bh",
+      "country": "BR",
+      "image": "data/memes/BR/images/br-spider-circle-bh.webp",
+      "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+      "title": "Cinco Spider-Man intentan averiguar quién es el original",
+      "location": "Belo Horizonte, Minas Gerais",
+      "countryEvidence": {
+        "url": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+        "statement": "Gshow identifica expresamente Belo Horizonte, Minas Gerais en el pie de esta fotografía de la preestrena de diciembre de 2021.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://s2-gshow.glbimg.com/2pJVta6H4rrn0jVZ3ETLRkzNnkk=/0x662:1536x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/m/x/MGoSBXTSSImVrbrsoeHg/homem-aranha-em-bh.jpg",
+      "creator": null,
       "license": null,
-      "country": null,
+      "licenseUrl": null,
       "characters": [
-        "Deadpool"
+        "Spider-Man"
       ],
-      "visualGag": "Un Deadpool sostiene a otro con uniforme de encaje y un lazo rosa gigante.",
+      "visualGag": "Cinco Spider-Man intentan averiguar quién es el original",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "alt": "Un Deadpool sostiene a otro con uniforme de encaje y un lazo rosa gigante.",
-      "width": 700,
-      "height": 467,
-      "bytes": 32688,
-      "scope": "international",
-      "countryEvidence": null,
-      "licenseUrl": null,
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido"
+      "publisher": "Gshow / reproducción Twitter",
+      "alt": "Cinco Spider-Man intentan averiguar quién es el original",
+      "width": 768,
+      "height": 693,
+      "bytes": 90272,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "2f3c19b32d7e80aafddedb2d3ce549ffac6740bc395347b3107ff242b2f1aea4",
+        "pixelSha256": "c75732a3e849c4dabfd6572313a9fde331e8300875e47ea209b38a62f0354eb1",
+        "perceptualHashes": [
+          "0000001001111100111111011100101010001001010110000101011010100101",
+          "0000001000111101111111111100101010001011010110100010000011000110",
+          "0100000000101111111001111100001010001011010101011110100011001010"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "228756f47380de2179ee0377451e0218750ced44bbe6dfbdd4646155d62db68b",
+        "pixelSha256": "ce8915f34c64f19e7e9ec188f6e6bd5b121af88359c0ab950e4605a3b332b040",
+        "perceptualHashes": [
+          "0000001001111100111111011100101010001001010110000101011010100101",
+          "0000001000111101111111111100101010001010010110100010000011001110",
+          "0100000000101111111001111100001010001011010101011110100011001010"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     },
     {
-      "title": "Iron Man se tomó lo de la plancha literalmente",
-      "alt": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
-      "image": "data/memes/international/images/iron-ironing-board.webp",
-      "width": 527,
-      "height": 768,
-      "creator": "Michael Miller",
-      "source": "https://commons.wikimedia.org/wiki/File:Original_%27Iron_Man%27_Cosplayer_@_ConNooga_%2709_Masquerade.jpg",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "changes": "Redimensionada y convertida a WebP; sin texto añadido",
-      "countryEvidence": "ConNooga 2009, Chattanooga, Tennessee",
-      "country": "US",
-      "bytes": 12564,
-      "id": "iron-ironing-board",
+      "id": "br-spider-embrace",
+      "country": "BR",
+      "image": "data/memes/BR/images/br-spider-embrace.webp",
+      "source": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+      "title": "Spider-Man termina cargando a otro Spider-Man",
+      "location": "Santarém, Pará",
+      "countryEvidence": {
+        "url": "https://gshow.globo.com/cultura-pop/viralizou/noticia/homem-aranha-sem-volta-para-casa-fas-se-fantasiam-como-o-super-heroi-para-assistir-a-estreia-do-filme.ghtml",
+        "statement": "Gshow identifica expresamente Santarém, Pará en el pie de esta fotografía de la preestrena de diciembre de 2021.",
+        "verifiedOn": "2026-10-10"
+      },
+      "imageURL": "https://s2-gshow.glbimg.com/Uc3F4zVTcHyuT5Qwcgl46s3B9HY=/0x0:680x680/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/X/X/6YDDJLQNiTBlgcpk8oKw/homem-aranha-em-santarem.jpg",
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
       "characters": [
-        "Iron Man"
+        "Spider-Man"
       ],
-      "visualGag": "Armadura de Iron Man convertida en una tabla de planchar con casco y reactor.",
+      "visualGag": "Spider-Man termina cargando a otro Spider-Man",
       "reviewedVisually": true,
       "hasMemeTextOverlay": false,
-      "scope": "international"
+      "publisher": "Gshow / reproducción Twitter",
+      "alt": "Spider-Man termina cargando a otro Spider-Man",
+      "width": 768,
+      "height": 768,
+      "bytes": 31060,
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "3e981e9e57c9210e18eacf0c9f2785e1eba6a0d3e9baeb9259906837d340fdb2",
+        "pixelSha256": "d26e435e55ba51d7c927fc2bb6b1a455736fe89c0ca7f3f4939804f3d9ff90e5",
+        "perceptualHashes": [
+          "0001111001100001100111011001101010101001101000111111001000100001",
+          "0001111001100000100011011001110010111001101000101011110010100011",
+          "0001011001101101100010111001110010101001100101011001110010010010"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "cdc83f01405dfb882ecb60cda56e527897c694e06e7f8ee60c59246fa22ce9d1",
+        "pixelSha256": "306b6e9f569a8c40b0f3cc68f2293109f95242fb7827f770d05dd326fe5adc1d",
+        "perceptualHashes": [
+          "0001111001100001100111011001101010101001101000111111001000100001",
+          "0001111001100000100011011001110010111001101000101011110010100011",
+          "0001011001101101100010111001110010101001100101011001110010010010"
+        ]
+      },
+      "changes": "Redimensionada y convertida a WebP; sin recorte ni texto añadido"
     }
   ]
 }

@@ -1,29 +1,42 @@
-# Auditoría de variedad de memes Marvel por país
+# Auditoría de procedencia y duplicados de memes Marvel
 
-## Corrección del alcance
+## Alcance y estado
 
-Los dos pines aceptados eran referencias del estilo, no una colección completa. El PR #4 publicó solo dos fotos compartidas y no resolvió la variedad pedida. Esta revisión prepara 51 catálogos diferentes, con ocho fotos diferentes en cada uno. Son 408 entradas que utilizan 14 fotografías únicas; no se presentan como 408 fotos distintas ni como 51 colecciones de procedencia local comprobada.
+El PR #5 publicó 14 fotos compartidas en 51 combinaciones. Esa organización no cumplía la precisión posterior: varias fotos propias y diferentes por país. Esta corrección elimina la biblioteca compartida de los manifiestos y exige que el país sea la ubicación acreditada de la escena. Las dos referencias de Pinterest no se asignan a ningún país porque su procedencia no está demostrada.
 
-Los catálogos se dirigen al país seleccionado (catalogueRole: audience). Comparten imágenes cuando corresponde. La procedencia de la foto se registra aparte: una está documentada en Estados Unidos y las otras trece tienen country null. No se deduce el origen de un dominio, del idioma de un artículo, del fotógrafo o de un pin.
+La colección actual sigue incompleta: 14 fotos únicas en siete países, con tres en BR, TH y US, dos en PH y una en EC, MX y PE. Los otros 44 catálogos están vacíos. Hay 48 países por debajo del mínimo operativo de tres fotos. Esa cifra es un umbral elegido para interpretar varias; no se presenta como un número solicitado por el usuario. El campo complete de docs/photo-coverage.json permanece false. PASS en pruebas de software no significa que la petición de contenido esté completa.
 
-## Revisión editorial
+## Corrección técnica
 
-Se revisaron visualmente completas las 14 fotos: las dos referencias originales, Avengers frente a urinarios, selfie de Spider-Man y Deadpool, burrito gigante, Avengers con cajas, pintura corporal o papel aluminio, Capitán Dorito, Deadpool con vestido de novia, uniformes domésticos y un Iron Man convertido en tabla de planchar. Se mantiene solo fotografía real Marvel con un gag visible, sin texto de meme superpuesto. Marcas de agua, etiquetas de productos y carteles presentes físicamente en la escena no se eliminan ni se añaden.
+Cada manifiesto identifica scope: geographic y catalogueRole: scene-location. Las fotos tienen country igual al código del archivo, ubicación, fuente y una explicación comprobable de la ubicación. La interfaz rechaza archivos de la biblioteca internacional, fotos de otro país y entradas sin evidencia. El importador deriva los catálogos de las fuentes, evitando mantener 51 listas independientes a mano. Conserva los manifiestos vacíos y no aplica un reemplazo global.
 
-Se descartaron productos, ilustraciones/IA, plantillas, collages, fotos que solo mostraban poses y descargas que resultaron ser placeholders del medio. Una foto del conjunto antiguo se volvió a evaluar individualmente: el Iron Man con forma de tabla de planchar cumple el gag literal y conserva su fuente Commons, autor Michael Miller y licencia CC BY 2.0. No se restaura el conjunto anterior de 96 imágenes.
+El importador calcula SHA-256 de archivo original, píxeles decodificados y WebP final. Añade pHash de 64 posiciones mediante DCT, para imagen completa y recortes centrales al 90% y 80%. Compara pares entre todos los países. Coincidencias exactas abortan; distancia perceptual <=8 exige revisar el par completo y registrar por qué son fotografías distintas. El conjunto actual no tiene coincidencias ni pares cercanos. Estos controles no prueban que cualquier recorte arbitrario sea detectable ni que una fotografía sea auténtica: la revisión visual sigue siendo necesaria.
 
-Fuentes y descripción concreta del gag: scripts/photo-sources.json. Selecciones explícitas por país: scripts/country-memes.json. Atribución del archivo final: docs/photo-inventory.json. Pinterest, Imgur y artículos identifican fuentes/publicadores; no acreditan automáticamente al fotógrafo o una licencia. Los trece casos sin licencia documentada siguen con license null. Captain Dorito identifica al cosplayer, no necesariamente al autor de la fotografía. El crédito Mandora se conserva como aparece en la imagen; no se inventa una licencia.
+La validación ocurre antes de escribir archivos públicos. Un catálogo incompleto se exporta con estado partial o pending para no fingir cobertura. npm run check:coverage exige tres por cada uno de los 51 países y falla en la revisión actual. La aplicación carga únicamente el JSON elegido y una imagen local diferida. Conserva cancelación, timeout, atribución con textContent, enlaces con host validado, ciclos completos y selección manual persistente.
 
-## Aleatoriedad y carga
+## Procedencia editorial
 
-Cada ciclo recorre todas las fotos del catálogo antes de repetir. Al comenzar otro ciclo se evita que la primera coincida con la última anterior, sin excluir esa imagen del ciclo completo. El algoritmo previo excluía la última foto de todo el ciclo siguiente; ese comportamiento fue corregido. La interfaz muestra cuántas fotos se han visto del catálogo.
+- Brasil: Gshow identifica São Paulo, Belo Horizonte y Santarém en los pies de tres fotografías distintas de la preestrena de 2021. Se inspeccionaron las fotografías completas, separándolas del dibujo animado y los carteles de la película del mismo artículo.
+- Ecuador: EXTRA identifica al artista en un bus de Guayaquil, avenida del Periodista. Su nacionalidad peruana no convierte la fotografía en una escena de Perú. Se conserva el crédito Álex Lima / EXTRA.
+- México: El Comercio identifica al alumno disfrazado que interrumpe su clase en México. La sede peruana del medio no determina el origen. La ciudad queda sin acreditar.
+- Perú: El Comercio documenta el baile de Spider-Man dentro de un colectivo de la avenida Salaverry, Lima. Se conserva el crédito del medio a Cristhian Rojas Rosas.
+- Tailandia: Sanook/PPTV identifica al alumno que llega disfrazado a su universidad de Bangkok; The Nation identifica al vendedor de yogur en Sukhothai; Daily News identifica al vendedor de verduras en Sanam Chai, Suphan Buri. Son situaciones distintas, no tres ángulos de la misma actuación.
+- Filipinas: Philnews documenta el pasajero disfrazado en un jeepney; no se inventa una ciudad. Commons describe a Spider-Man dirigiendo la danza del dragón en Binondo, Manila, con licencia CC BY-SA 4.0.
+- Estados Unidos: se revalidaron individualmente Iron Man como tabla de planchar en ConNooga 2009 y Deadpool con traje de Iron Man en NYCC 2015. El cartel del segundo es físico, no texto digital superpuesto. Captain Dorito está identificado por su cosplayer como Tora-Con 2018; la cobertura de RIT acredita la sede en Rochester. El cosplayer no se identifica automáticamente como fotógrafo.
 
-Solo se pide el JSON del país elegido y una foto local diferida. Los siguientes clics reutilizan el JSON. No se descargan los otros 50 catálogos, un inventario global ni imágenes de Pinterest. Las 14 WebP suman 425.710 bytes; la mayor pesa 48.710 bytes. La biblioteca completa no se descarga al entrar.
+Fuentes individuales, URLs de imágenes, evidencia geográfica, créditos y licencias: scripts/photo-sources.json. Huellas de los originales y archivos publicados: docs/photo-inventory.json. Hay tres fotografías con licencia documentada y once sin licencia acreditada. Registrar una fuente accesible no concede derechos de redistribución; esas licencias permanecen null y su autorización sigue sin acreditar.
 
-Se mantienen país validado, rutas locales planas, cancelación, generación y timeout. Enlaces de fuente con host permitido expresamente, Pinterest limitado a /pin/ID/ y noopener noreferrer. Título y atribución siguen con textContent. El nombre del catálogo no se usa como país de origen.
+## Descartes y pistas pendientes
 
-## Verificación y estado
+Los collages de Spidergaucho y del votante argentino no entran como fotos completas independientes. Tampoco el collage con titular de Daily News, las capturas de publicaciones con texto de Facebook, dibujos/IA, poses genéricas, productos o logos que un servidor devuelve con HTTP 200. El resizer de El Comercio devolvió un logo en lugar de una foto antigua; se inspeccionó por separado el archivo público original enlazado en el artículo.
 
-33 pruebas de regresión PASS: ocho entradas distintas por país, 51 conjuntos distintos, metadatos conservados, XSS/rutas, un elemento a la vez, ciclos completos sin repetición inmediata y sin nuevos fetch por botón, además de entrada, cuentas y guía. Chrome recorre dos ciclos completos por país en 1280×900 y 390×844. Resultados en entry-fixes-results.json y browser-memes-results.json.
+La actuación de Avenida Italia y Bolonia en Montevideo fue difundida erróneamente como argentina; El Observador documenta Uruguay. La pista queda pendiente porque no se recuperó una foto completa adecuada. El artículo de Ecuavisa acredita Durán, pero su descarga devolvió 403; no se fabricó una URL o foto de sustitución. Las fuentes Cuartoscuro requieren licencia; no se importaron sus imágenes.
 
-Ampliación publicada y verificada el 10 de octubre de 2026. PR #5 fusionado como 32ecc016482df31d3d0fedadd994e9b497956319. Pages completó correctamente el workflow 38085685978. Se contrastaron los bytes de los 66 archivos publicados (HTML, 51 manifiestos y 14 WebP). Chrome comprobó 51 catálogos diferentes en escritorio y móvil emulado, con 816 comprobaciones de imagen por tamaño y dos ciclos completos por país, sin errores no capturados. Guía 7→8→fin, contador, persistencia y selección aleatoria: PASS. Evidencia en docs/pages-verification-results.json y docs/browser-pages-results.json. La evidencia histórica del PR #4 corresponde a la selección anterior de dos fotos. Supabase/OTP reales y dispositivos físicos siguen fuera de las pruebas.
+La búsqueda se amplió a medios de virales locales, Commons, Reddit, sitios de creadores y páginas de memes que se habían consultado para el PR #5. No se afirma haber revisado todas las páginas de Internet ni haber encontrado colecciones válidas para los países todavía pendientes. Las pistas de otros países requieren fotografía completa, evidencia de ubicación, revisión editorial y comparación de duplicados antes de entrar.
+
+## Verificación
+
+34 regresiones PASS: entrada, aislamiento de cuentas, guía 7→8→fin, rechazo del pool compartido, ruta local, origen ausente/distinto, XSS/atribución, cancelación y aleatoriedad. Chrome revisa los 51 selectores, los siete países con fotos y los 44 vacíos, en escritorio y móvil emulado: 28 comprobaciones de imagen por tamaño, 14 fotos únicas, sin errores no capturados. La guía conserva el resaltado y el avance en 7 y 8. Las pruebas adversariales comprueban duplicados exactos, versiones recomprimidas/redimensionadas, evidencia ausente y cobertura incompleta; cada rechazo precede la escritura pública.
+
+Las pruebas de OTP/Supabase real, dispositivos físicos y sincronización entre dispositivos siguen pendientes. No se enviaron correos ni se escribieron datos reales. Los resultados de publicación del PR #5 están preservados bajo docs/history/pr5 y no acreditan esta revisión.
+

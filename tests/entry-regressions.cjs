@@ -25,6 +25,8 @@ function mock({readError=null,progress=[],reviews=[]}={}){
  })};
 }
 async function test(name,fn){let f;try{f=await fixture();await fn(f);results.push({name,status:'PASS'})}catch(e){process.exitCode=1;results.push({name,status:'FAIL',detail:e.stack})}finally{await pause(60);f?.close()}}
+
+const localCatalogue=data=>({scope:'geographic',status:'partial',...data,memes:data.memes.map(item=>({country:data.country,location:'Ubicación de prueba',countryEvidence:{url:'https://example.org/evidence',statement:'Ubicación simulada para esta prueba'},...item}))});
 const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
 (async()=>{
  await test('Primera carga offline: catálogo, 445 estrellas y búsqueda',async({d,errors})=>{assert.equal(d.querySelectorAll('.row').length,89);assert.equal(d.querySelectorAll('.st').length,445);assert.equal(errors.length,0);const q=d.querySelector('#q');q.value='IRON MAN';q.dispatchEvent(new d.defaultView.Event('input'));assert.equal(d.querySelectorAll('.row').length,3)});
@@ -84,12 +86,12 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
  });
  await test('Memes Ecuador: solo archivo EC e imágenes EC diferidas, nunca catálogo global/MX',async({w,d})=>{
   const requests=[],images=[];let intersect;
-  w.fetch=async url=>{requests.push(new URL(url).pathname);return {ok:true,json:async()=>({country:'EC',memes:[
+  w.fetch=async url=>{requests.push(new URL(url).pathname);return {ok:true,json:async()=>(localCatalogue({country:'EC',memes:[
    {title:'EC de prueba',image:'data/memes/EC/images/fixture.webp'},
    {title:'MX no permitido',image:'data/memes/MX/images/fixture.webp'},
    {title:'Externo no permitido',image:'https://example.org/image.webp'},
    {title:'Ruta codificada no permitida',image:'data/memes/EC/images/%2f..%2fMX/fixture.webp'},
-   {title:'Subcarpeta no permitida',image:'data/memes/EC/images/../MX/fixture.webp'}]})};};
+   {title:'Subcarpeta no permitida',image:'data/memes/EC/images/../MX/fixture.webp'}]}))};};
   const src=Object.getOwnPropertyDescriptor(w.HTMLImageElement.prototype,'src');
   Object.defineProperty(w.HTMLImageElement.prototype,'src',{get:src.get,set(value){images.push(new URL(value,d.baseURI).pathname);src.set.call(this,value)}});
   w.IntersectionObserver=class{constructor(cb){intersect=cb;}observe(){}unobserve(){}disconnect(){}};
@@ -102,10 +104,10 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   const requests=[];let finish,oldSignal;
   w.fetch=(url,options)=>{const country=new URL(url).pathname.endsWith('/EC.json')?'EC':'MX';requests.push(country);
    if(country==='EC'){oldSignal=options.signal;return new Promise(resolve=>finish=resolve);}
-   return Promise.resolve({ok:true,json:async()=>({country:'MX',memes:[]})});};
+   return Promise.resolve({ok:true,json:async()=>(localCatalogue({country:'MX',memes:[]}))});};
   const old=w.MapMemes.open('EC');const select=d.querySelector('#memeCountry');select.value='MX';select.dispatchEvent(new w.Event('change'));await pause(20);
   assert(oldSignal.aborted);assert.equal(w.SafeStorage.getItem('mcu_map_country'),'MX');
-  finish({ok:true,json:async()=>({country:'EC',memes:[{title:'Antiguo',image:'data/memes/EC/images/fixture.webp'}]})});await old;
+  finish({ok:true,json:async()=>(localCatalogue({country:'EC',memes:[{title:'Antiguo',image:'data/memes/EC/images/fixture.webp'}]}))});await old;
   assert.equal(d.querySelector('#memeCountry').value,'MX');assert.equal(d.querySelectorAll('#memeList img').length,0);
   w.WorldMap.close();await w.MapMemes.open();assert.equal(d.querySelector('#memeCountry').value,'MX');assert.deepEqual(requests,['EC','MX','MX']);
  });
@@ -120,39 +122,46 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   w.SafeStorage.removeItem('mcu_region');w.SafeStorage.removeItem('mcu_map_country');
   w.fetch=(url,options)=>{requests.push(new URL(url).pathname);signal=options.signal;return new Promise(resolve=>finish=resolve)};
   d.querySelector('#mapOpen').click();assert.equal(d.querySelector('#memeCountry').value,'EC');assert.deepEqual(requests,['/tracker/data/memes/EC.json']);
-  w.WorldMap.close();finish({ok:true,json:async()=>({country:'EC',memes:[]})});await pause(20);
+  w.WorldMap.close();finish({ok:true,json:async()=>(localCatalogue({country:'EC',memes:[]}))});await pause(20);
   assert(signal.aborted);assert(!d.querySelector('#mapwrap').classList.contains('open'));assert(!d.querySelector('#memeStatus').textContent.includes('Todavía'));
  });
  await test('Memes: país incorrecto rechazado y ausencia de observer no precarga',async({w,d})=>{
-  w.fetch=async()=>({ok:true,json:async()=>({country:'MX',memes:[{title:'MX',image:'data/memes/MX/images/fixture.webp'}]})});
+  w.fetch=async()=>({ok:true,json:async()=>(localCatalogue({country:'MX',memes:[{title:'MX',image:'data/memes/MX/images/fixture.webp'}]}))});
   await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList img').length,0);assert(d.querySelector('#memeStatus').textContent.includes('No se pudieron'));
-  w.IntersectionObserver=undefined;w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[{title:'EC',image:'data/memes/EC/images/fixture.webp'}]})});
+  w.IntersectionObserver=undefined;w.fetch=async()=>({ok:true,json:async()=>(localCatalogue({country:'EC',memes:[{title:'EC',image:'data/memes/EC/images/fixture.webp'}]}))});
   await w.MapMemes.open('EC');assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert.equal(d.querySelector('#memeList button').textContent,'Cargar imagen');
  });
- await test('Variedad por país: ocho fotos diferentes y 51 catálogos distintos, sin inventar procedencia',async({w})=>{
-  const codes=w.Region.countries().map(c=>c[0]),paths=new Set(),catalogues=new Set();assert.equal(codes.length,51);
+ await test('Procedencia por país: fotos únicas, hashes y cobertura incompleta explícita',async({w})=>{
+  const codes=w.Region.countries().map(c=>c[0]),paths=new Set(),contentHashes=new Set();assert.equal(codes.length,51);
   const sources=JSON.parse(fs.readFileSync(path.join(__dirname,'../scripts/photo-sources.json'),'utf8'));
+  const coverage=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/photo-coverage.json'),'utf8'));
   for(const code of codes){const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/memes',code+'.json'),'utf8'));
-   assert.equal(data.country,code);assert.equal(data.catalogueRole,'audience');assert(data.memes.length>=8);assert.equal(new Set(data.memes.map(item=>item.id)).size,data.memes.length);catalogues.add(data.memes.map(item=>item.id).sort().join(','));
-   for(const item of data.memes){const source=sources.find(s=>s.id===item.id);assert(source);assert.equal(item.country,source.country);assert.equal(item.creator,source.creator);assert.equal(item.license,source.license);if(!item.country)assert.equal(item.countryEvidence,null);else assert(item.countryEvidence);assert.equal(item.hasMemeTextOverlay,false);assert(item.reviewedVisually&&item.visualGag&&item.characters.length);assert(item.image.startsWith('data/memes/international/images/'));assert.equal(item.source,source.source);assert(item.width>0&&item.width<=768);assert(item.height>0&&item.height<=768);
-    const bytes=fs.readFileSync(path.join(__dirname,'..',item.image));assert(bytes.length<100000);assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');paths.add(item.image);
+   assert.equal(data.country,code);assert.equal(data.scope,'geographic');assert.equal(data.catalogueRole,'scene-location');assert.equal(data.status,data.memes.length>=3?'complete':data.memes.length?'partial':'pending');
+   for(const item of data.memes){const source=sources.find(s=>s.id===item.id);assert(source);assert.equal(item.country,code);assert.equal(item.country,source.country);assert.equal(item.creator,source.creator);assert.equal(item.license,source.license);assert.deepEqual(item.countryEvidence,source.countryEvidence);assert(item.location&&item.countryEvidence.statement&&new URL(item.countryEvidence.url).protocol==='https:');assert.equal(item.hasMemeTextOverlay,false);assert(item.reviewedVisually&&item.visualGag&&item.characters.length);assert(item.image.startsWith('data/memes/'+code+'/images/'));assert.equal(item.source,source.source);assert(item.width>0&&item.width<=768);assert(item.height>0&&item.height<=768);
+    const bytes=fs.readFileSync(path.join(__dirname,'..',item.image));assert(bytes.length<100000);assert.equal(bytes.toString('ascii',0,4),'RIFF');assert.equal(bytes.toString('ascii',8,12),'WEBP');assert(!paths.has(item.image));paths.add(item.image);assert(!contentHashes.has(item.outputFingerprint.sha256));contentHashes.add(item.outputFingerprint.sha256);
    }
+   assert.equal(coverage.perCountry[code],data.memes.length);
   }
-  assert.equal(paths.size,sources.length);assert.equal(sources.length,14);assert.equal(catalogues.size,51);
+  assert.equal(paths.size,sources.length);assert.equal(coverage.photos,sources.length);assert.equal(coverage.complete,coverage.pendingCountries.length===0);assert.equal(coverage.crossCountryDuplicatePhotos,0);
  });
- await test('Selección internacional: una foto local diferida, atribución Pinterest y sin país inventado',async({w,d})=>{
-  const calls=[];w.fetch=async url=>{calls.push(new URL(url).pathname);return {ok:true,json:async()=>({country:'EC',scope:'international',memes:[{title:'Marvel <script>bad()</script>',scope:'international',country:null,creator:null,license:null,image:'data/memes/international/images/avengers-office.webp',source:'https://www.pinterest.com/pin/678636237574158906/'},{title:'Ruta externa',image:'https://www.pinterest.com/photo.webp'},{title:'Otro país',image:'data/memes/MX/images/photo.webp'}]})};};
-  await w.MapMemes.open('EC');assert.deepEqual(calls,['/tracker/data/memes/EC.json']);assert.equal(d.querySelectorAll('#memeList img').length,1);assert.equal(d.querySelector('#memeList img').getAttribute('src'),null);assert(d.querySelector('#memeStatus').textContent.includes('selección de Ecuador'));assert(d.querySelector('#memeStatus').textContent.includes('Vistas: 1 de 1'));assert(d.querySelector('figcaption').textContent.includes('País de origen no acreditado'));assert.equal(d.querySelector('figcaption script'),null);
-  const link=d.querySelector('figcaption a');assert.equal(link.href,'https://www.pinterest.com/pin/678636237574158906/');assert.equal(link.rel,'noopener noreferrer');assert.equal(d.querySelectorAll('figcaption a').length,1);
+ await test('Sin reciclaje internacional: rechaza el catálogo compartido del PR 5',async({w,d})=>{
+  w.fetch=async()=>({ok:true,json:async()=>({country:'EC',scope:'international',memes:[{title:'Marvel',image:'data/memes/international/images/avengers-office.webp'}]})});
+  await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList img').length,0);assert(d.querySelector('#memeStatus').textContent.includes('No se pudieron'));
+ });
+ await test('Origen sin acreditar o distinto se excluye aunque la ruta sea local',async({w,d})=>{
+  w.fetch=async()=>({ok:true,json:async()=>({country:'EC',scope:'geographic',memes:[
+   {title:'Sin evidencia',country:'EC',image:'data/memes/EC/images/missing.webp'},
+   {title:'Otro país',country:'MX',location:'México',countryEvidence:{statement:'México'},image:'data/memes/EC/images/cross.webp'}]})});
+  await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList img').length,0);assert(d.querySelector('#memeStatus').textContent.includes('Todavía'));
  });
  await test('Atribución: dominio público enlaza su declaración y rechaza HTML y hosts externos',async({w,d})=>{
   const source='https://commons.wikimedia.org/wiki/File:Example.jpg';let item={title:'Foto <img src=x>',creator:'<script>bad()</script>',image:'data/memes/EC/images/photo-1.webp',source,license:'Public domain',licenseUrl:source};
-  w.fetch=async()=>({ok:true,json:async()=>({country:'EC',memes:[item]})});await w.MapMemes.open('EC');
+  w.fetch=async()=>({ok:true,json:async()=>(localCatalogue({country:'EC',memes:[item]}))});await w.MapMemes.open('EC');
   const links=d.querySelectorAll('#memeList figcaption a');assert.equal(links.length,2);assert.equal(links[1].href,source);assert.equal(links[1].textContent,'Public domain');assert.equal(links[1].rel,'noopener noreferrer');assert.equal(d.querySelectorAll('#memeList figcaption script,#memeList figcaption img').length,0);
   item={...item,source:'javascript:bad()',licenseUrl:'https://example.org/license'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,0);
  });
  await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{
-  let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))})};};
+  let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>(localCatalogue({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))}))};};
   await w.MapMemes.open('EC');let last='';const cycle=[];for(let i=0;i<12;i++){const images=d.querySelectorAll('#memeList img');assert.equal(images.length,1);const current=images[0].dataset.src;assert.notEqual(current,last);last=current;cycle.push(current);if(cycle.length===3){assert.equal(new Set(cycle).size,3);cycle.length=0;}d.querySelector('#memeRandom').click();}assert.equal(calls,1);
  });
  console.log(JSON.stringify(results,null,2));

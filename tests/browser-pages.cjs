@@ -15,13 +15,13 @@ const root=path.join(__dirname,'..'),reports=[];
    await page.goto(base,{waitUntil:'domcontentloaded'});await page.locator('#mapOpen').click();
    await page.locator('#memeList img').scrollIntoViewIfNeeded();
    await page.waitForFunction(()=>document.querySelector('#memeList img')?.complete&&document.querySelector('#memeList img').naturalWidth>0);
-   assert.equal(requests.length,2);assert.equal(requests[0],'/data/memes/EC.json');assert(requests[1].startsWith('/data/memes/international/images/'));
+   assert.equal(requests.length,2);assert.equal(requests[0],'/data/memes/EC.json');assert(requests[1].startsWith('/data/memes/EC/images/'));
    const ecRequests=[...requests];requests.length=0;
-   await page.evaluate(()=>window.MapMemes.open('CA'));
+   await page.evaluate(()=>window.MapMemes.open('BR'));
    await page.locator('#memeList img').first().scrollIntoViewIfNeeded();
    await page.locator('#memeList img').last().scrollIntoViewIfNeeded();
    await page.waitForFunction(()=>[...document.querySelectorAll('#memeList img')].every(i=>i.complete&&i.naturalWidth>0));
-   assert(requests.length>=1&&requests.length<=2);assert.equal(requests[0],'/data/memes/CA.json');assert(requests.every(p=>p==='/data/memes/CA.json'||p.startsWith('/data/memes/international/images/')),JSON.stringify(requests));
+   assert(requests.length>=1&&requests.length<=2);assert.equal(requests[0],'/data/memes/BR.json');assert(requests.every(p=>p==='/data/memes/BR.json'||p.startsWith('/data/memes/BR/images/')),JSON.stringify(requests));
    const closeBox=await page.locator('#mapClose').boundingBox();assert(closeBox&&closeBox.y>=0&&closeBox.y+closeBox.height<=viewport.height);
    await page.evaluate(async()=>{await Promise.all([...document.querySelectorAll('#memeList img')].map(img=>img.decode()));await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));});
    await page.waitForTimeout(500); // Allow the dialog's opening transition to finish before visual QA.
@@ -38,17 +38,17 @@ const root=path.join(__dirname,'..'),reports=[];
      for(let i=0;i<manifest.memes.length*2;i++){
       await page.locator('#memeList img').scrollIntoViewIfNeeded();
       await page.waitForFunction(()=>document.querySelector('#memeList img')?.complete&&document.querySelector('#memeList img').naturalWidth>0);
-      const src=await page.locator('#memeList img').getAttribute('src');assert.notEqual(src,previous);previous=src;decoded++;uniqueImages.add(src);assert(!cycle.has(src),code+': repeated before complete cycle');cycle.add(src);if(cycle.size===manifest.memes.length)cycle=new Set();
-      if(i+1<manifest.memes.length*2)await page.locator('#memeRandom').click();
+      const src=await page.locator('#memeList img').getAttribute('src');if(manifest.memes.length>1)assert.notEqual(src,previous);previous=src;decoded++;uniqueImages.add(src);assert(!cycle.has(src),code+': repeated before complete cycle');cycle.add(src);if(cycle.size===manifest.memes.length)cycle=new Set();
+      if(manifest.memes.length>1&&i+1<manifest.memes.length*2)await page.locator('#memeRandom').click();
      }
     }else{assert.equal(await page.locator('#memeList img').count(),0);assert((await page.locator('#memeStatus').textContent()).includes('Todavía'));}
-    assert(requests.every(p=>p==='/data/memes/'+code+'.json'||p.startsWith('/data/memes/international/images/')),code+': '+JSON.stringify(requests));
+    assert(requests.every(p=>p==='/data/memes/'+code+'.json'||p.startsWith('/data/memes/'+code+'/images/')),code+': '+JSON.stringify(requests));
     maxSvgNodes=Math.max(maxSvgNodes,await page.locator('#memeMap circle').count());
-    if(withPhotos%10===0)console.log(JSON.stringify({viewport:viewport.width,countriesChecked:withPhotos,imageChecks:decoded}));
+    if(countries.indexOf(code)%10===0)console.log(JSON.stringify({viewport:viewport.width,countriesChecked:withPhotos,imageChecks:decoded}));
    }
-   await page.selectOption('#memeCountry','CA');await page.waitForFunction(()=>document.querySelector('#memeStatus').textContent.includes('8 fotos'));
+   await page.selectOption('#memeCountry','BR');await page.waitForFunction(()=>document.querySelector('#memeStatus').textContent.includes('3 fotos'));
    await page.locator('#mapClose').click();await page.reload({waitUntil:'domcontentloaded'});await page.locator('#mapOpen').click();
-   await page.waitForFunction(()=>document.querySelector('#memeCountry')?.value==='CA');
+   await page.waitForFunction(()=>document.querySelector('#memeCountry')?.value==='BR');
    await page.locator('#mapClose').click();
    // Guide remains usable and highlighted above page wrappers.
    await page.locator('#guideOpen').click();for(let i=0;i<6;i++)await page.locator('#tourNext').click();
@@ -62,7 +62,7 @@ const root=path.join(__dirname,'..'),reports=[];
    }
    await page.waitForFunction(()=>!document.querySelector('#tourOverlay').classList.contains('active'));
    assert.deepEqual(errors,[]);assert(maxSvgNodes<1000);
-   reports.push({url:base,checkedAt:new Date().toISOString(),backendRequestsBlocked:true,viewport,countriesTested:countries.length,countriesWithPhotos:withPhotos,imageDisplayChecks:decoded,uniquePhotos:uniqueImages.size,uniqueCountryCatalogues:catalogueSets.size,scope:'international',initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
+   reports.push({url:base,checkedAt:new Date().toISOString(),backendRequestsBlocked:true,viewport,countriesTested:countries.length,countriesWithPhotos:withPhotos,imageDisplayChecks:decoded,uniquePhotos:uniqueImages.size,uniqueCountryCatalogues:catalogueSets.size,scope:'geographic',collectionCoverageComplete:false,initialECRequests:ecRequests,maxCountryOpenMs:Math.round(maxOpenMs),maxSvgNodes,uncaughtErrors:errors,result:'PASS'});
    await context.close();
   }
  }finally{await browser.close();}

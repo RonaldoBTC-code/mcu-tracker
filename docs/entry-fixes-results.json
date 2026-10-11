@@ -116,11 +116,15 @@
     "status": "PASS"
   },
   {
-    "name": "Variedad por país: ocho fotos diferentes y 51 catálogos distintos, sin inventar procedencia",
+    "name": "Procedencia por país: fotos únicas, hashes y cobertura incompleta explícita",
     "status": "PASS"
   },
   {
-    "name": "Selección internacional: una foto local diferida, atribución Pinterest y sin país inventado",
+    "name": "Sin reciclaje internacional: rechaza el catálogo compartido del PR 5",
+    "status": "PASS"
+  },
+  {
+    "name": "Origen sin acreditar o distinto se excluye aunque la ruta sea local",
     "status": "PASS"
   },
   {

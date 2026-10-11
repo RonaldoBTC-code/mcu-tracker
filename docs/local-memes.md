@@ -1,11 +1,15 @@
-# Catálogos Marvel por país
+# Catálogos geográficos de memes Marvel
 
-Las dos fotos del PR #4 son referencias, no un límite ni una colección suficiente. Hay ocho fotos por cada uno de los 51 países y 51 conjuntos diferentes. La base contiene 14 fotos únicas con fuentes registradas; algunas se comparten. La selección está destinada a una audiencia, no acredita procedencia geográfica.
+Cada país contiene solo fotos tomadas en ese país con ubicación acreditada. No compartir fotos entre países ni deducir procedencia del dominio, idioma o nacionalidad del artista. Estado actual: 14 fotos, siete países con contenido, tres con al menos tres fotos y 48 por completar. Los países sin contenido muestran un mensaje de catálogo pendiente. El contador y el botón aleatorio funcionan con el contenido disponible, sin repetición inmediata para catálogos de dos o más fotos.
 
-Fuentes: scripts/photo-sources.json. Catálogos: scripts/country-memes.json (listas de IDs explícitas). Originales: scripts/reference-images/. Importador sin red: scripts/import-photos.cjs con Node.js y sharp 0.35.5. Exige al menos ocho IDs únicos y conocidos por país; se pueden ampliar las listas, sin límite de dos fotos. Mantener metadatos desconocidos como null y conservar licencias documentadas.
+## Mantenimiento
 
-El navegador recibe únicamente el manifiesto elegido y una imagen diferida. El botón recorre un ciclo completo y evita repeticiones inmediatas incluso entre ciclos. La interfaz indica Vistas: X de N. No duplicar los archivos por país ni descargar toda la base al entrar.
+1. Guardar el original completo en scripts/reference-images y registrar source, country, location, countryEvidence, crédito/licencia comprobados y gag en scripts/photo-sources.json. Los valores desconocidos permanecen null.
+2. Revisar la foto completa: persona real, personaje Marvel, gag visible y sin texto digital de meme. No quitar marcas de agua ni completar huecos con imágenes de otro país.
+3. Ejecutar npm ci --ignore-scripts, npm run import:photos y npm test. El importador genera country-memes.json y los manifiestos a partir de las fuentes.
+4. Revisar las similitudes que detecte pHash. Una coincidencia exacta no se puede aprobar; un par parecido solo puede pasar con una explicación de su revisión en visual-distinctness.json.
+5. Ejecutar npm run check:coverage antes de afirmar que las 51 colecciones están completas. Actualmente falla porque faltan fotos; no modificar el mínimo ni falsear la evidencia para convertir ese fallo en PASS.
+6. Ejecutar tests/browser-memes.cjs con Playwright/Chrome. Tras publicar, scripts/verify-pages.cjs y tests/browser-pages.cjs verifican archivos e interfaz reales. Diferenciar éxito de despliegue, funcionamiento y cobertura editorial.
 
-Ejecutar npm test y tests/browser-memes.cjs; revisar 51 catálogos, dos ciclos completos y guía 7→8→fin en dos tamaños. Tras publicar, scripts/verify-pages.cjs contrasta HTML, 51 manifiestos y fotos del inventario; tests/browser-pages.cjs prueba el sitio real con servicios externos bloqueados. No usar evidencia del PR #4 para afirmar que esta ampliación está publicada.
+Los archivos WebP actuales suman 543.204 bytes; el mayor pesa 90.272. El navegador carga una imagen del país elegido por vez. La información completa de fuentes y huellas permanece en docs/photo-inventory.json. La evidencia del PR #5 es histórica y corresponde a un conjunto compartido que fue corregido.
 
-Ampliación publicada y verificada el 10 de octubre de 2026. PR #5 fusionado como 32ecc016482df31d3d0fedadd994e9b497956319. Pages completó correctamente el workflow 38085685978. Se contrastaron los bytes de los 66 archivos publicados (HTML, 51 manifiestos y 14 WebP). Chrome comprobó 51 catálogos diferentes en escritorio y móvil emulado, con 816 comprobaciones de imagen por tamaño y dos ciclos completos por país, sin errores no capturados. Guía 7→8→fin, contador, persistencia y selección aleatoria: PASS. Evidencia en docs/pages-verification-results.json y docs/browser-pages-results.json.
