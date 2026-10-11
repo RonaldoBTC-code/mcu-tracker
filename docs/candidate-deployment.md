@@ -1,4 +1,6 @@
-# Activación pendiente de las dos fotografías revisadas
+# Activación de las dos fotografías revisadas
+
+> Actualización posterior: ambos IDs ya respondieron HTTP 200 y se incorporaron al lote de 63 fotos. Leer candidate-activation.md y candidate-backend-readiness.json. El procedimiento y bloqueo inicial conservados abajo son históricos. No se ejecutó SQL desde esta sesión.
 
 Estado: preparada y probada localmente; **no ejecutada en producción**. La comprobación real `candidate-backend-readiness.json` confirma 61 IDs activos HTTP 200 y `Unknown meme` HTTP 400 para `ec-spider-bin` y `mx-spider-errands`.
 

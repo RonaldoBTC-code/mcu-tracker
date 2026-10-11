@@ -1,6 +1,6 @@
 # Cobertura por país
 
-Mínimo explícito: **10 fotos distintas por cada uno de los 51 países**. 61 fotos únicas en 19 países; CA, GB y US alcanzan diez. Faltan 449 fotos en 48 países, de los cuales 32 siguen vacíos. `complete:false`. Las cuatro retiradas por calidad no cuentan como activas; las dos candidatas pendientes de SQL tampoco.
+Mínimo: **10 fotos distintas por cada uno de los 51 países**. Hay 63 fotos en 20 países; CA, GB y US alcanzan diez. Faltan 447 fotos en 48 países; 31 vacíos. Ecuador: dos; México: una. `complete:false`. ec-spider-bin y mx-spider-errands se incorporan tras confirmar sus IDs reales HTTP 200; ver docs/candidate-activation.md.
 
 | País | Fotos | Faltan para 10 | Estado |
 |---|---:|---:|---|
@@ -20,7 +20,7 @@ Mínimo explícito: **10 fotos distintas por cada uno de los 51 países**. 61 fo
 | DE | 0 | 10 | Curación pendiente |
 | DK | 0 | 10 | Curación pendiente |
 | DO | 0 | 10 | Curación pendiente |
-| EC | 1 | 9 | Ampliación pendiente |
+| EC | 2 | 8 | Ampliación pendiente |
 | ES | 2 | 8 | Ampliación pendiente |
 | FI | 0 | 10 | Curación pendiente |
 | FR | 4 | 6 | Ampliación pendiente |
@@ -34,7 +34,7 @@ Mínimo explícito: **10 fotos distintas por cada uno de los 51 países**. 61 fo
 | IT | 0 | 10 | Curación pendiente |
 | JP | 2 | 8 | Ampliación pendiente |
 | KR | 0 | 10 | Curación pendiente |
-| MX | 0 | 10 | Curación pendiente |
+| MX | 1 | 9 | Ampliación pendiente |
 | NI | 0 | 10 | Curación pendiente |
 | NL | 0 | 10 | Curación pendiente |
 | NO | 0 | 10 | Curación pendiente |
@@ -56,4 +56,4 @@ Mínimo explícito: **10 fotos distintas por cada uno de los 51 países**. 61 fo
 | VE | 0 | 10 | Curación pendiente |
 | ZA | 0 | 10 | Curación pendiente |
 
-No reutilizar fotos de otro país ni identidades históricas para simular cobertura. Fuentes, autores/licencias y huellas: photo-inventory.json. Revisión y límites: photo-quality-audit.md.
+No compartir fotos entre países ni reutilizar identidades históricas para otras fotos. Fuentes y huellas: photo-inventory.json. Evidencia de calidad histórica del PR #13 en photo-quality-audit.md; ampliación posterior en candidate-activation.md.

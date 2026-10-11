@@ -1,0 +1,700 @@
+{
+  "checkedAt": "2026-10-11T21:41:20.317Z",
+  "phase": "PR14-security-publication-verified-before-candidate-activation",
+  "pr": "https://github.com/RonaldoBTC-code/mcu-tracker/pull/14",
+  "sourceCommit": "ae2576206811d6c57b8f0fb069c3658fb4536eba",
+  "sourceTree": "ec0d08aa170adb3cdfe0750d9d9745b73128d413",
+  "workflow": {
+    "id": 38176918332,
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "publicFilesVerified": 224,
+  "publicPhotoCount": 61,
+  "publicCountryCollections": 51,
+  "productionWritesPerformed": false,
+  "sourcePhotosOriginalsChanged": false,
+  "publicMaplibreResults": [
+    {
+      "checkedAt": "2026-10-11T21:40:28.157Z",
+      "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+      "result": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "version": "6.4.1",
+      "publicHTMLUnmodified": true,
+      "realModuleHashesVerified": [
+        "maplibre-gl-shared.mjs",
+        "maplibre-gl-worker.mjs",
+        "maplibre-gl.css",
+        "maplibre-gl.mjs"
+      ],
+      "realTileResponses": 4,
+      "markers": 29,
+      "softwareWebGL": true,
+      "WikipediaPhotosSimulated": true,
+      "productionWritesBlocked": true,
+      "uncaughtErrors": []
+    },
+    {
+      "checkedAt": "2026-10-11T21:40:33.611Z",
+      "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+      "result": "PASS",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "version": "6.4.1",
+      "publicHTMLUnmodified": true,
+      "realModuleHashesVerified": [
+        "maplibre-gl-shared.mjs",
+        "maplibre-gl-worker.mjs",
+        "maplibre-gl.css",
+        "maplibre-gl.mjs"
+      ],
+      "realTileResponses": 8,
+      "markers": 29,
+      "softwareWebGL": true,
+      "WikipediaPhotosSimulated": true,
+      "productionWritesBlocked": true,
+      "uncaughtErrors": []
+    }
+  ],
+  "publicPageResults": [
+    {
+      "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+      "checkedAt": "2026-10-11T21:36:51.493Z",
+      "backendRequestsBlocked": true,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "feed": {
+        "countriesTested": 51,
+        "uniquePhotos": 61,
+        "imageDisplayChecks": 61,
+        "initialRequests": [
+          "/data/memes/EC.json",
+          "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
+        ],
+        "inlineMapAbsent": true,
+        "originalMapEntryPreserved": true,
+        "countrySelectorOptions": 51,
+        "manualSelectionSurvivesReload": true,
+        "trackerInitialAndReloadVerified": true,
+        "hashDoesNotOpenMemes": true,
+        "noInitialMemeRequests": true,
+        "progressSurvivesNavigation": true,
+        "result": "PASS"
+      },
+      "countriesTested": 51,
+      "countriesWithPhotos": 19,
+      "imageDisplayChecks": 122,
+      "uniquePhotos": 61,
+      "uniqueCountryCatalogues": 20,
+      "scope": "geographic",
+      "collectionCoverageComplete": false,
+      "initialECRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus-1280-b3bf13a06776.webp"
+      ],
+      "maxCountryOpenMs": 153,
+      "maxSvgNodes": 619,
+      "uncaughtErrors": [],
+      "result": "PASS"
+    },
+    {
+      "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+      "checkedAt": "2026-10-11T21:37:27.491Z",
+      "backendRequestsBlocked": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "feed": {
+        "countriesTested": 51,
+        "uniquePhotos": 61,
+        "imageDisplayChecks": 61,
+        "initialRequests": [
+          "/data/memes/EC.json",
+          "/data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp"
+        ],
+        "inlineMapAbsent": true,
+        "originalMapEntryPreserved": true,
+        "countrySelectorOptions": 51,
+        "manualSelectionSurvivesReload": true,
+        "trackerInitialAndReloadVerified": true,
+        "hashDoesNotOpenMemes": true,
+        "noInitialMemeRequests": true,
+        "progressSurvivesNavigation": true,
+        "result": "PASS"
+      },
+      "countriesTested": 51,
+      "countriesWithPhotos": 19,
+      "imageDisplayChecks": 122,
+      "uniquePhotos": 61,
+      "uniqueCountryCatalogues": 20,
+      "scope": "geographic",
+      "collectionCoverageComplete": false,
+      "initialECRequests": [
+        "/data/memes/EC.json",
+        "/data/memes/EC/images/ec-spider-bus-640-6f3777d8090d.webp"
+      ],
+      "maxCountryOpenMs": 91,
+      "maxSvgNodes": 619,
+      "uncaughtErrors": [],
+      "result": "PASS"
+    }
+  ],
+  "candidateReadiness": {
+    "checkedAt": "2026-10-11T21:37:45.116Z",
+    "rpc": "get_meme_stats",
+    "parameter": "p_ids",
+    "readOnly": true,
+    "productionWritesPerformed": false,
+    "productionPersistenceVerified": false,
+    "activeCatalogueReady": true,
+    "pendingCatalogueReady": true,
+    "results": [
+      {
+        "ids": [
+          "br-spider-circle-sp",
+          "br-spider-circle-bh",
+          "br-spider-embrace",
+          "ec-spider-bus",
+          "th-spider-student",
+          "th-spider-yogurt",
+          "th-spider-vegetables",
+          "ph-spider-commute",
+          "ph-spider-dragon",
+          "us-iron-board",
+          "us-captain-dorito",
+          "us-deadpool-iron",
+          "ca-iron-pikachu",
+          "gb-iron-buzz",
+          "be-deadpool-throne",
+          "be-deadpool-duff",
+          "be-deadpool-spider",
+          "ca-iron-fanexpo",
+          "gb-deadpools-throne",
+          "gb-spider-tube",
+          "fr-spider-hospital",
+          "ca-deadpool-maid",
+          "id-spider-vegetables",
+          "hn-spider-graduate",
+          "co-spider-handstand",
+          "cu-spider-nerf",
+          "fr-deadpool-sailor",
+          "fr-deadpool-2019",
+          "jp-deadpool-market",
+          "jp-spider-crossing",
+          "sv-stan-spider",
+          "il-spider-purim",
+          "es-spider-plaza",
+          "es-spider-smoking",
+          "in-spider-hood",
+          "pe-spider-yoyo",
+          "ca-spider-hawaiian",
+          "ca-miku-maid",
+          "ca-deadpool-redhood",
+          "ca-deadpool-brainslug",
+          "ca-deadpool-chicken",
+          "ca-photobomb-pileup",
+          "us-deadpool-pope",
+          "us-deadpool-lego",
+          "us-spider-frog",
+          "ca-deadpool-lantern",
+          "us-spider-thor",
+          "us-deadtrooper",
+          "us-captain-spider",
+          "us-deadpool-elsa"
+        ],
+        "status": "ready",
+        "httpStatus": 200,
+        "rows": [
+          {
+            "meme_id": "br-spider-circle-sp",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "br-spider-circle-bh",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "br-spider-embrace",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ec-spider-bus",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "th-spider-student",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "th-spider-yogurt",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "th-spider-vegetables",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ph-spider-commute",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ph-spider-dragon",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-iron-board",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-captain-dorito",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-deadpool-iron",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-iron-pikachu",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-iron-buzz",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "be-deadpool-throne",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "be-deadpool-duff",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "be-deadpool-spider",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-iron-fanexpo",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-deadpools-throne",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-spider-tube",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "fr-spider-hospital",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-deadpool-maid",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "id-spider-vegetables",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "hn-spider-graduate",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "co-spider-handstand",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "cu-spider-nerf",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "fr-deadpool-sailor",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "fr-deadpool-2019",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "jp-deadpool-market",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "jp-spider-crossing",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "sv-stan-spider",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "il-spider-purim",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "es-spider-plaza",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "es-spider-smoking",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "in-spider-hood",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "pe-spider-yoyo",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-spider-hawaiian",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-miku-maid",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-deadpool-redhood",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-deadpool-brainslug",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-deadpool-chicken",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-photobomb-pileup",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-deadpool-pope",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-deadpool-lego",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-spider-frog",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "ca-deadpool-lantern",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-spider-thor",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-deadtrooper",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-captain-spider",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "us-deadpool-elsa",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          }
+        ]
+      },
+      {
+        "ids": [
+          "gb-deadpool-captain",
+          "gb-deadpool-sombrero",
+          "gb-deadpool-wedding",
+          "gb-deadpool-kimono",
+          "gb-deadpool-maid",
+          "gb-pikachu-thor",
+          "gb-thor-bike",
+          "be-deadpool-hood",
+          "be-captain-wolverine",
+          "be-captain-fett",
+          "fr-pikachu-captain"
+        ],
+        "status": "ready",
+        "httpStatus": 200,
+        "rows": [
+          {
+            "meme_id": "gb-deadpool-captain",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-deadpool-sombrero",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-deadpool-wedding",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-deadpool-kimono",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-deadpool-maid",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-pikachu-thor",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "gb-thor-bike",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "be-deadpool-hood",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "be-captain-wolverine",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "be-captain-fett",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          },
+          {
+            "meme_id": "fr-pikachu-captain",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          }
+        ]
+      },
+      {
+        "ids": [
+          "ec-spider-bin"
+        ],
+        "status": "ready",
+        "httpStatus": 200,
+        "rows": [
+          {
+            "meme_id": "ec-spider-bin",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          }
+        ]
+      },
+      {
+        "ids": [
+          "mx-spider-errands"
+        ],
+        "status": "ready",
+        "httpStatus": 200,
+        "rows": [
+          {
+            "meme_id": "mx-spider-errands",
+            "likes_count": 0,
+            "views_count": 0,
+            "liked": false,
+            "seen": false
+          }
+        ]
+      }
+    ],
+    "result": "PASS"
+  }
+}

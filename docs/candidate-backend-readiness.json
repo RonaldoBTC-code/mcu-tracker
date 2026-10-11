@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-11T21:20:57.045Z",
+  "checkedAt": "2026-10-11T21:44:40.628Z",
   "rpc": "get_meme_stats",
   "parameter": "p_ids",
   "readOnly": true,
   "productionWritesPerformed": false,
   "productionPersistenceVerified": false,
   "activeCatalogueReady": true,
-  "pendingCatalogueReady": false,
+  "pendingCatalogueReady": true,
   "results": [
     {
       "ids": [
@@ -428,7 +428,9 @@
         "be-deadpool-hood",
         "be-captain-wolverine",
         "be-captain-fett",
-        "fr-pikachu-captain"
+        "fr-pikachu-captain",
+        "ec-spider-bin",
+        "mx-spider-errands"
       ],
       "status": "ready",
       "httpStatus": 200,
@@ -509,23 +511,23 @@
           "views_count": 0,
           "liked": false,
           "seen": false
+        },
+        {
+          "meme_id": "ec-spider-bin",
+          "likes_count": 0,
+          "views_count": 0,
+          "liked": false,
+          "seen": false
+        },
+        {
+          "meme_id": "mx-spider-errands",
+          "likes_count": 0,
+          "views_count": 0,
+          "liked": false,
+          "seen": false
         }
       ]
-    },
-    {
-      "ids": [
-        "ec-spider-bin"
-      ],
-      "status": "unknown-id",
-      "httpStatus": 400
-    },
-    {
-      "ids": [
-        "mx-spider-errands"
-      ],
-      "status": "unknown-id",
-      "httpStatus": 400
     }
   ],
-  "result": "BLOCKED"
+  "result": "PASS"
 }

@@ -161,6 +161,9 @@ const session=id=>({user:{id,email:id.toLowerCase()+'@example.org'}});
   item={...item,source:'https://www.dvidshub.net/image/2433478/residents-embrace',licenseUrl:'https://www.dvidshub.net/about/copyright',rightsNotice:'Aviso <img src=x onerror=bad()>'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,2);assert(d.querySelector('#memeList figcaption').textContent.includes(item.rightsNotice));assert.equal(d.querySelectorAll('#memeList figcaption img').length,0);
   item={...item,licenseUrl:'https://www.dvidshub.net/about/copyright?redirect=https://example.org'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,1);
   item={...item,source:'javascript:bad()',licenseUrl:'https://example.org/license'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,0);
+  item={...item,source:'https://www.flickr.com/photos/200225254@N06/53569762773',license:'CC BY-ND 2.0',licenseUrl:'https://creativecommons.org/licenses/by-nd/2.0/'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,2);
+  item={...item,source:'https://www.flickr.com.evil.invalid/photos/200225254@N06/53569762773'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,1);
+  item={...item,source:'https://attacker@www.flickr.com/photos/200225254@N06/53569762773'};await w.MapMemes.open('EC');assert.equal(d.querySelectorAll('#memeList figcaption a').length,1);
  });
  await test('Foto aleatoria: un solo elemento, sin repetición inmediata ni otro fetch',async({w,d})=>{
   let calls=0;w.Math.random=()=>0;w.fetch=async()=>{calls++;return {ok:true,json:async()=>(localCatalogue({country:'EC',memes:[1,2,3].map(n=>({title:'Foto real de prueba '+n,image:'data/memes/EC/images/photo-'+n+'.webp'}))}))};};

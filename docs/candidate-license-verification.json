@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-10-11T21:42:30.372Z",
+  "ec": {
+    "id": "ec-spider-bin",
+    "source": "https://www.flickr.com/photos/200225254@N06/53569762773",
+    "licenseURLFound": "https://creativecommons.org/licenses/by-nd/2.0/",
+    "pageSHA256": "6424ccdcc48aab09a5650e5ac39c379153d22938fe4b1ea7d62ec2f3e134544f"
+  },
+  "mx": {
+    "id": "mx-spider-errands",
+    "metadata": {
+      "size": 3187540,
+      "width": 3656,
+      "height": 2415,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Late_for_Work_Tarde_pal_trabajo_%282522135992%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Late_for_Work_Tarde_pal_trabajo_(2522135992).jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=24678008",
+      "extmetadata": {
+        "DateTime": {
+          "value": "2013-02-15 21:47:45",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "Late for Work Tarde pal trabajo (2522135992)",
+          "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Taken with Nikon D80|Plaza de la Constitución (Mexico City)|Families of Mexico|Flickr images reviewed by File Upload Bot (Magnus Manske)|May 2008 in Mexico City|2008 in cosplay|Files with coordinates missing SDC location of creation|Mexico photographs taken on 2008-05-25|Photos in Flickr Explore|Cosplay of Spider-Man|Photographs by Eneas De Troya",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "GPSLatitude": {
+          "value": "19.431851",
+          "source": "commons-desc-page"
+        },
+        "GPSLongitude": {
+          "value": "-99.133597",
+          "source": "commons-desc-page"
+        },
+        "GPSMapDatum": {
+          "value": "WGS-84",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "ImageDescription": {
+          "value": "<p>Being a superhero is NO easy task when you have to face daily activities... like walking around with the family.\n</p>\n<hr>\nSer un superhéroe no sirve de mucho cuando tienes que enfrentarte a las actividades diarias... como pasear con la familia.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2008-05-25 09:54",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/eneas/2522135992/\">Late for Work / Tarde pa'l trabajo</a>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/99479626@N00\">Eneas De Troya</a> from Mexico City, México",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "CC BY 2.0",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Creative Commons Attribution 2.0",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://creativecommons.org/licenses/by/2.0",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "cc-by-2.0",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      }
+    }
+  }
+}

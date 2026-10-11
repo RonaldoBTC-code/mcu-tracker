@@ -8,7 +8,7 @@ module.exports=async function checkFeed(page,{root,viewport,requests}){
  await page.locator('.chk').first().click();const progress=await page.evaluate(()=>window.SafeStorage.getItem('mcu_v4'));
  await page.locator('#feedOpen').click();await page.waitForFunction(()=>document.querySelector('#feedCountry').value==='EC');assert(await page.locator('#trackerView').isHidden());
  await page.locator('#memeFeed').scrollIntoViewIfNeeded();assert(await page.locator('#feedCountry').isVisible());
- await page.locator('#feedList img').scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);
+ await page.locator('#feedList img').first().scrollIntoViewIfNeeded();await page.waitForFunction(()=>document.querySelector('#feedList img')?.naturalWidth>0);
  assert(requests.every(p=>p==='/data/memes/EC.json'||p.startsWith('/data/memes/EC/images/')));const initialRequests=[...requests];
  assert.equal(await page.locator('#feedMap, #feedMapCaption, .feed-map-panel').count(),0);assert.equal(await page.locator('#memeFeed svg').count(),0);
  assert.equal(await page.locator('#mapOpen').count(),1);assert.equal(await page.locator('#mapwrap').count(),1);assert(await page.locator('#mapwrap').isHidden());

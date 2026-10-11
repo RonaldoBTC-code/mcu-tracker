@@ -1,5 +1,7 @@
 # Continuación de auditoría y correcciones — 11 de octubre de 2026
 
+> Este documento describe el PR #14 (61 fotos), publicado y verificado. Después cambió la disponibilidad real de los dos IDs y se incorporaron las candidatas: 63 fotos, 20 países, 176 variantes y 447 faltantes. Leer candidate-activation.md. Las líneas de bloqueo del lote inicial no describen ese estado posterior. La auditoría general permanece abierta.
+
 La auditoría general sigue abierta. Se corrige H05 de la auditoría original actualizando conjuntamente módulos y CSS de MapLibre de 4.7.1 a **6.4.1**, la primera versión corregida según el [aviso oficial](https://github.com/maplibre/maplibre-gl-js/security/advisories/GHSA-jrc7-96c5-q579). La [guía oficial de migración](https://github.com/maplibre/maplibre-gl-js/blob/v6.0.0/docs/guides/v5-to-v6-migration-guide.md) exige módulos ESM y un worker separado; cambiar solo el número de la URL `.js` habría producido un 404.
 
 ## Cambios implementados

@@ -35,12 +35,25 @@ const root=path.join(__dirname,'..'),base=process.env.MCU_AUDIT_BASE||'https://r
    }
    try{await page.waitForFunction(()=>[...document.querySelectorAll('.feed-actions span')].every(e=>/^\d+ vistas de cuentas únicas$/.test(e.textContent)));}
    catch(e){const diagnostic={checkedAt:new Date().toISOString(),url:base,result:'FAIL',country,writesBlocked:true,productionAggregateBrowserReadVerified:false,productionPersistenceVerified:false,requests,errors,states:await page.locator('#feedList article').allTextContents(),reason:'Browser did not display aggregate before timeout; investigate transport and application. Direct RPC is a separate check.'};fs.writeFileSync(path.join(root,'docs/browser-shared-stats-results.json'),JSON.stringify(diagnostic,null,2)+'\n');console.error(JSON.stringify(diagnostic));throw e;}
-   const shown=await page.locator('#feedList article').evaluateAll(cards=>cards.map(card=>({id:card.dataset.memeId,views:card.querySelector('.feed-actions span').textContent,like:card.querySelector('.feed-like').textContent,disabled:card.querySelector('.feed-like').disabled})));
+   const shown=await page.locator('#feedList article').evaluateAll(cards=>cards.map(card=>({id:card.dataset.memeId,views:card.querySelector('.feed-actions span').textContent,like:card.querySelector('.feed-like').textContent,disabled:card.querySelector('.feed-like').disabled,caption:card.querySelector('figcaption').textContent,links:[...card.querySelectorAll('figcaption a')].map(a=>a.href)})));
    assert.equal(shown.length,count);
    for(const card of shown){const row=totals.get(card.id);assert(row);assert.equal(row.liked,false);assert.equal(row.seen,false);assert.equal(card.views,row.views_count+' vistas de cuentas únicas');assert.equal(card.like,'Me gusta · '+row.likes_count);assert(card.disabled);}
+   for(const card of shown.filter(c=>['ec-spider-bin','mx-spider-errands'].includes(c.id))){
+    const item=JSON.parse(fs.readFileSync(path.join(root,'data/memes',country+'.json'),'utf8')).memes.find(p=>p.id===card.id);
+    assert(card.caption.includes(item.creator));assert(card.caption.includes(item.title));assert(card.caption.includes(item.license));
+    assert(card.links.includes(new URL(item.source).href));assert(card.links.includes(new URL(item.licenseUrl).href));
+    if(item.rightsNotice)assert(card.caption.includes(item.rightsNotice));
+    const figure=page.locator('article[data-meme-id="'+card.id+'"]');await figure.scrollIntoViewIfNeeded();
+    await page.waitForFunction(id=>{const img=document.querySelector('article[data-meme-id="'+id+'"] img');return img?.complete&&img.naturalWidth>0;},card.id);
+    await figure.screenshot({path:path.join(root,'docs/pages-candidate-'+card.id+'.png')});
+   }
    checks.push({country,photos:count,realCounterMatches:count,guestLikesDisabled:true});
   }
-  await page.goto(base,{waitUntil:'domcontentloaded'});await page.locator('#feedOpen').click();await check('EC',1);await check('BR',3);await check('US',10);await check('CA',10);await check('GB',10);await check('BE',6);await check('FR',4);
+  await page.goto(base,{waitUntil:'domcontentloaded'});await page.locator('#feedOpen').click();
+  for(const country of ['EC','MX','BR','US','CA','GB','BE','FR']){
+   const manifest=JSON.parse(fs.readFileSync(path.join(root,'data/memes',country+'.json'),'utf8'));
+   await check(country,manifest.memes.length);
+  }
   await page.reload({waitUntil:'domcontentloaded'});assert(await page.locator('#memeFeed').isHidden());await page.locator('#feedOpen').click();await check('FR',4);
   assert(requests.length>0);assert(requests.every(r=>r.url===rpc&&['POST','OPTIONS'].includes(r.method)));assert.deepEqual(errors,[]);
   const report={checkedAt:new Date().toISOString(),url:base,result:'PASS',productionAggregateReadVerified:true,productionPersistenceVerified:false,writesBlocked:true,authenticatedSession:false,checks,aggregateRequests:requests.length,uncaughtErrors:errors};

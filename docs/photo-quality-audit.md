@@ -1,5 +1,7 @@
 # Auditoría y corrección de calidad fotográfica
 
+> Registro histórico del PR #13 y sus 61 fotos. Después se confirmaron dos IDs reales y se incorporaron fotos licenciadas de EC/MX: total actual 63, 176 variantes, 447 faltantes. Leer candidate-activation.md y country-coverage.md para el estado posterior; no interpretar los bloqueos o métricas históricos de abajo como actuales.
+
 Fecha: 11 de octubre de 2026. Base publicada: PR #12, commit `d5e299738fea20f5fe46b2f811e881fe427b502b`. Corrección publicada mediante PR #13, commit `759ee9df69c6e8aa78527cb9356d5b592b6b1bff`; Pages 38163719214 success. Verificación pública: 224 archivos idénticos, Chrome PASS en dos tamaños y cuatro configuraciones DPR1/2. Evidencia: `publication-results.json`.
 
 Se revisaron las 65 fotos anteriores. Se conservan 61 fotos distintas en 19 países y se retiran cuatro capturas de vídeo con detalle deficiente. Se recuperaron los 46 originales de Commons y tres archivos editoriales mayores (dos marcados como originales y una reproducción editorial mayor) desde las fuentes acreditadas. No se generó nitidez, se inventaron píxeles ni se sustituyeron fotos bajo identificadores históricos.

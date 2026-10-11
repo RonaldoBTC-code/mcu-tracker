@@ -108,3 +108,5 @@ La entrada siempre muestra el rastreador. Memes se abre con navegación explíci
 ## Continuación de seguridad y despliegue pendiente
 
 Leer [correcciones de seguridad y límites](docs/security-continuation.md), [activación de candidatas](docs/candidate-deployment.md) y [permisos de fotos pendientes](docs/unverified-photo-permissions.md). `npm run check:backend` consulta exclusivamente agregados reales: 0 listo, 2 candidatas aún bloqueadas, 1 fallo. La migración 20261011040000 está preparada, no desplegada. MapLibre usa ESM/CSS/worker 6.4.1; pruebas `node tests/browser-maplibre.cjs` y `node tests/browser-maplibre.cjs --live` requieren Chrome/Playwright. Los cuatro archivos de prueba están en research/maplibre-6.4.1 y sus hashes en docs/maplibre-assets.json.
+
+Actualización posterior al PR #14: las dos identidades se confirmaron por RPC real y se activaron fotos EC/MX. Estado actual: 63 fotos, 20 países, 176 variantes y 447 faltantes. [Activación y pruebas](docs/candidate-activation.md). La lectura de 63 IDs no verifica persistencia autenticada ni cierra las 14 licencias pendientes.

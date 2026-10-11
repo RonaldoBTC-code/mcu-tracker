@@ -16,12 +16,14 @@ function psnr(a,b){let sum=0;for(let i=0;i<a.length;i++)sum+=(a[i]-b[i])**2;retu
   if(!draw)throw Error('No measured rendering for '+item.id);
   const width=Math.round(draw.drawnWidth*2),height=Math.round(draw.drawnHeight*2);
   const original=await rgb(path.join(root,source.image),width,height);
-  const before=await rgb(path.join(root,'research/quality-before',item.id+'.webp'),width,height);
+  const previousFile=path.join(root,'research/quality-before',item.id+'.webp');
+  const previousAvailable=await fs.access(previousFile).then(()=>true).catch(error=>{if(error.code==='ENOENT')return false;throw error;});
+  const before=previousAvailable?await rgb(previousFile,width,height):null;
   const after=await rgb(path.join(root,draw.selectedFile),width,height);
-  rows.push({id:item.id,country:item.country,comparedWidth:width,comparedHeight:height,drawnWidth:draw.drawnWidth,drawnHeight:draw.drawnHeight,dpr:2,previousPSNR:psnr(original,before),currentPSNR:psnr(original,after),sourceOriginalRecovered:source.sourceRetrieval?.original===true,sourceURL:source.source,imageURL:source.imageURL,review:source.qualityReview});
-  if(samples.has(item.id))await sharp({create:{width:width*3,height,channels:3,background:'white'}}).composite([original,before,after].map((input,i)=>({input,raw:{width,height,channels:3},left:width*i,top:0}))).webp({lossless:true}).toFile(path.join(root,'docs/quality-comparisons',item.id+'-desktop-2x.webp'));
+  rows.push({id:item.id,country:item.country,comparedWidth:width,comparedHeight:height,drawnWidth:draw.drawnWidth,drawnHeight:draw.drawnHeight,dpr:2,previousAvailable,previousPSNR:before?psnr(original,before):null,currentPSNR:psnr(original,after),sourceOriginalRecovered:source.sourceRetrieval?.original===true,sourceURL:source.source,imageURL:source.imageURL,review:source.qualityReview});
+  if(samples.has(item.id)&&before)await sharp({create:{width:width*3,height,channels:3,background:'white'}}).composite([original,before,after].map((input,i)=>({input,raw:{width,height,channels:3},left:width*i,top:0}))).webp({lossless:true}).toFile(path.join(root,'docs/quality-comparisons',item.id+'-desktop-2x.webp'));
  }
- const report={checkedAt:new Date().toISOString(),method:'Source | previous published WebP | current browser-selected WebP, full aspect ratio at measured desktop DPR2; PSNR measures reproduction error from resolution/encoding, not source focus, exposure or composition',initialPhotosReviewed:65,activePhotos:inventory.length,rows};
+ const report={checkedAt:new Date().toISOString(),method:'Source | previous published WebP if one exists | current browser-selected WebP, full aspect ratio at measured desktop DPR2; new photos have no prior version and no invented improvement; PSNR measures reproduction error from resolution/encoding, not source focus, exposure or composition',initialPhotosReviewed:65,activePhotos:inventory.length,newPhotosWithoutPriorVersion:rows.filter(r=>!r.previousAvailable).length,rows};
  await fs.writeFile(path.join(root,'docs/photo-quality-comparison.json'),JSON.stringify(report,null,2)+'\n');
- console.log(JSON.stringify({photos:rows.length,nativeSampleComparisons:samples.size,compressionImproved:rows.filter(r=>r.currentPSNR>r.previousPSNR).length}));
+ console.log(JSON.stringify({photos:rows.length,nativeSampleComparisons:samples.size,newPhotosWithoutPriorVersion:report.newPhotosWithoutPriorVersion,compressionImproved:rows.filter(r=>r.previousAvailable&&r.currentPSNR>r.previousPSNR).length}));
 })().catch(error=>{console.error(error);process.exitCode=1;});

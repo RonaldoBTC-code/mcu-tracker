@@ -2411,5 +2411,79 @@
       "method": "Wikimedia imageinfo original URL",
       "original": true
     }
+  },
+  {
+    "id": "ec-spider-bin",
+    "country": "EC",
+    "image": "scripts/reference-images/ec-spider-bin.jpg",
+    "source": "https://www.flickr.com/photos/200225254@N06/53569762773",
+    "title": "Guaya💀",
+    "alt": "Spider-Man agazapado sobre una papelera junto a un taxi en Guayaquil",
+    "location": "Guayaquil, Ecuador",
+    "countryEvidence": {
+      "url": "https://www.flickr.com/photos/200225254@N06/53569762773",
+      "statement": "El fotógrafo etiqueta esta escena guayaquil, spiderman, streets y taxis; el álbum Ecuador trips describe sus viajes a Ecuador.",
+      "album": "https://www.flickr.com/photos/200225254@N06/albums/72177720315256843/",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://live.staticflickr.com/65535/53569762773_23a109d206_b.jpg",
+    "creator": "Joan Briones (joanbrionesjim)",
+    "license": "CC BY-ND 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nd/2.0/",
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man usa una papelera urbana como plataforma para su pose, junto a un taxi",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "publisher": "Joan Briones / Flickr",
+    "changes": "Solo reducción proporcional y cambio técnico a WebP; conservar encuadre, colores y título original.",
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "fullFrameContactReviewed": true,
+      "sourceOriginalRecovered": false,
+      "notes": "Archivo público Flickr de 665x1024; conservar el encuadre íntegro y conversiones técnicas. No acreditar recuperación de un original mayor."
+    }
+  },
+  {
+    "id": "mx-spider-errands",
+    "country": "MX",
+    "image": "scripts/reference-images/mx-spider-errands.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Late_for_Work_Tarde_pal_trabajo_(2522135992).jpg",
+    "title": "Spider-Man también hace recados con la familia",
+    "location": "Plaza de la Constitución, Ciudad de México",
+    "countryEvidence": {
+      "url": "https://commons.wikimedia.org/wiki/File:Late_for_Work_Tarde_pal_trabajo_(2522135992).jpg",
+      "statement": "La ficha de Commons clasifica esta fotografía en Plaza de la Constitución (Mexico City), documenta coordenadas 19.431851, -99.133597 y fecha 25 de mayo de 2008.",
+      "verifiedOn": "2026-10-11"
+    },
+    "imageURL": "https://live.staticflickr.com/2322/2522135992_1db3a426c1_4k.jpg",
+    "creator": "Eneas De Troya",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "characters": [
+      "Spider-Man"
+    ],
+    "visualGag": "Spider-Man lleva un bolso mientras un niño camina con los guantes del traje",
+    "reviewedVisually": true,
+    "hasMemeTextOverlay": false,
+    "publisher": "Eneas De Troya / Flickr / Wikimedia Commons",
+    "sourceResolution": {
+      "width": 3656,
+      "height": 2415
+    },
+    "sourceRetrieval": {
+      "verifiedOn": "2026-10-11",
+      "method": "Largest public author Flickr size linked from Commons Credit",
+      "authorPhoto": "https://www.flickr.com/photos/eneas/2522135992/",
+      "original": true
+    },
+    "qualityReview": {
+      "reviewedOn": "2026-10-11",
+      "decision": "accepted",
+      "notes": "Encuadre íntegro con gag visible y detalle útil; ligero movimiento de una foto callejera, no captura de vídeo ampliada."
+    },
+    "rightsNotice": "Título original: Late for Work / Tarde pa'l trabajo"
   }
 ]

@@ -88,6 +88,82 @@
         ]
       },
       "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido"
+    },
+    {
+      "id": "ec-spider-bin",
+      "country": "EC",
+      "image": "data/memes/EC/images/ec-spider-bin-1280-6122a0e281ba.webp",
+      "source": "https://www.flickr.com/photos/200225254@N06/53569762773",
+      "title": "Guaya💀",
+      "alt": "Spider-Man usa una papelera urbana como plataforma para su pose, junto a un taxi",
+      "location": "Guayaquil, Ecuador",
+      "countryEvidence": {
+        "url": "https://www.flickr.com/photos/200225254@N06/53569762773",
+        "statement": "El fotógrafo etiqueta esta escena guayaquil, spiderman, streets y taxis; el álbum Ecuador trips describe sus viajes a Ecuador.",
+        "album": "https://www.flickr.com/photos/200225254@N06/albums/72177720315256843/",
+        "verifiedOn": "2026-10-11"
+      },
+      "imageURL": "https://live.staticflickr.com/65535/53569762773_23a109d206_b.jpg",
+      "creator": "Joan Briones (joanbrionesjim)",
+      "license": "CC BY-ND 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nd/2.0/",
+      "characters": [
+        "Spider-Man"
+      ],
+      "visualGag": "Spider-Man usa una papelera urbana como plataforma para su pose, junto a un taxi",
+      "reviewedVisually": true,
+      "hasMemeTextOverlay": false,
+      "publisher": "Joan Briones / Flickr",
+      "changes": "Fotografía completa; conversión de formato, sin recorte ni texto añadido",
+      "qualityReview": {
+        "reviewedOn": "2026-10-11",
+        "decision": "accepted",
+        "fullFrameContactReviewed": true,
+        "sourceOriginalRecovered": false,
+        "notes": "Archivo público Flickr de 665x1024; conservar el encuadre íntegro y conversiones técnicas. No acreditar recuperación de un original mayor."
+      },
+      "width": 665,
+      "height": 1024,
+      "sourceWidth": 665,
+      "sourceHeight": 1024,
+      "bytes": 141108,
+      "variants": [
+        {
+          "edge": 640,
+          "width": 416,
+          "height": 640,
+          "sha256": "5731b7407db08e2feebd4698a4cd6b14d2eec462e2d2d7eaffc08d17443fad96",
+          "image": "data/memes/EC/images/ec-spider-bin-640-5731b7407db0.webp",
+          "bytes": 59740
+        },
+        {
+          "edge": 1280,
+          "width": 665,
+          "height": 1024,
+          "sha256": "6122a0e281ba913b3822583947e81354a5995dc33f1624dbab4b13a20043bf4e",
+          "image": "data/memes/EC/images/ec-spider-bin-1280-6122a0e281ba.webp",
+          "bytes": 141108
+        }
+      ],
+      "scope": "geographic",
+      "originalFingerprint": {
+        "sha256": "fcdab816c52b199b28c8db1e0ebc4994e57afa8d17ec1545591b39e3fa1a2425",
+        "pixelSha256": "f3223890177af81e5be626494bf59f524ce7864cc19bbf9933d41feb2dd9e7c6",
+        "perceptualHashes": [
+          "0111100011101001111010110111110010101000000001110000011010000110",
+          "0111110011011001111000111111110010101000011000110000011000000010",
+          "0111110011011000110000111011110011001010011000010000010101101001"
+        ]
+      },
+      "outputFingerprint": {
+        "sha256": "6122a0e281ba913b3822583947e81354a5995dc33f1624dbab4b13a20043bf4e",
+        "pixelSha256": "def1863f02b65c5b6d7bd3ad234fc43f68f60406697c2302599ad608dfd8eaa0",
+        "perceptualHashes": [
+          "0111100011101001111010110111110010101000000001110000011010000110",
+          "0111110011011001111000111111110010101000011000110000011000000010",
+          "0111110011011000110000111011110011001010011000010000010101101001"
+        ]
+      }
     }
   ]
 }

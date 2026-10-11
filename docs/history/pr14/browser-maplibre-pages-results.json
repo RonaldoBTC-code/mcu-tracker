@@ -1,0 +1,48 @@
+[
+  {
+    "checkedAt": "2026-10-11T21:40:28.157Z",
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "result": "PASS",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "version": "6.4.1",
+    "publicHTMLUnmodified": true,
+    "realModuleHashesVerified": [
+      "maplibre-gl-shared.mjs",
+      "maplibre-gl-worker.mjs",
+      "maplibre-gl.css",
+      "maplibre-gl.mjs"
+    ],
+    "realTileResponses": 4,
+    "markers": 29,
+    "softwareWebGL": true,
+    "WikipediaPhotosSimulated": true,
+    "productionWritesBlocked": true,
+    "uncaughtErrors": []
+  },
+  {
+    "checkedAt": "2026-10-11T21:40:33.611Z",
+    "url": "https://ronaldobtc-code.github.io/mcu-tracker/",
+    "result": "PASS",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "6.4.1",
+    "publicHTMLUnmodified": true,
+    "realModuleHashesVerified": [
+      "maplibre-gl-shared.mjs",
+      "maplibre-gl-worker.mjs",
+      "maplibre-gl.css",
+      "maplibre-gl.mjs"
+    ],
+    "realTileResponses": 8,
+    "markers": 29,
+    "softwareWebGL": true,
+    "WikipediaPhotosSimulated": true,
+    "productionWritesBlocked": true,
+    "uncaughtErrors": []
+  }
+]
